@@ -1,110 +1,1081 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit7_assessment_plan.html
-     Path: hygwsksdf/nbfuwew/assessment_plans/unit7_assessment_plan/unit7_assessment_plan.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit7_assessment_plan/unit7_assessment_plan.html
-
-     Teacher-only assessment plan for Unit 7. Contains formative checkpoints, summative schedule, and DoK breakdown.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment Plan — Unit 7 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 7 Assessment Plan and Bank</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+
+
+/* ======================= RESET / PAGE ======================= */
+@page { size: letter; margin: 0.45in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  font-size: 11pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.container { max-width: 980px; margin: 0 auto; }
+.page-break { page-break-before: always; break-before: page; }
+.unbreakable, .assessment-card, .outline-card, .rubric-card, .ladder-table, .progress-tracker { break-inside: avoid; page-break-inside: avoid; }
+
+/* ======================= HEADER / TITLES ======================= */
+h1 { color: #00003d; font-size: 26pt; line-height: 1.1; margin-bottom: 8px; }
+h2 { color: #00003d; font-size: 17pt; margin: 18px 0 10px 0; border-left: 6px solid #00003d; padding-left: 10px; }
+h3 { color: #004d99; font-size: 13pt; margin: 12px 0 6px 0; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px 28px; }
+li { margin-bottom: 4px; }
+.small-note { font-size: 9.5pt; color: #555; font-style: italic; }
+
+/* ======================= OUTLINE CARDS ======================= */
+.outline-card {
+  border: 1px solid #9aa9bd;
+  border-left: 7px solid #00003d;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.outline-card-title { color: #00003d; font-weight: 800; font-size: 13.5pt; margin-bottom: 4px; }
+.essential-standard { font-size: 12pt; border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+
+/* ======================= TABLES ======================= */
+table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; }
+th, td { border: 1px solid #777; padding: 7px 8px; vertical-align: top; }
+th { background: #eaf1fb; color: #00003d; font-weight: 800; text-align: left; }
+.ladder-table th { background: #00003d; color: #fff; }
+.ladder-table .dok4 { background: #eef4ff; }
+.ladder-table .dok3 { background: #f6fbff; }
+.ladder-table .dok2 { background: #fffdf2; }
+.ladder-table .dok1 { background: #ffffff; }
+.table-block, .parent-table, table.values { width: auto; margin: 10px auto 12px auto; border-collapse: collapse; }
+.table-block td, .table-block th, .parent-table td, .parent-table th, table.values td, table.values th { border: 1px solid #777; padding: 6px 14px; text-align: center; vertical-align: middle; }
+
+/* ======================= PROGRESS TRACKING ======================= */
+.progress-tracker { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 12px 0 18px 0; }
+.progress-box { border: 1px solid #777; padding: 12px; min-height: 0.8in; }
+.progress-box strong { color: #00003d; }
+
+/* ======================= DOK SECTIONS ======================= */
+.dok-bar {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15pt;
+  padding: 9px 12px;
+  margin: 22px 0 12px 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dok-method-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0 16px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+.assessment-ideas { margin-left: 24px; }
+.assessment-ideas a { color: #005aa0; font-weight: 800; text-decoration: underline; }
+.timing-label { display: inline-block; background: #fff7cf; border: 1px solid #d1c27a; border-radius: 4px; padding: 1px 6px; font-weight: 800; color: #4a3f17; margin-left: 6px; }
+.what-tells { border-left: 5px solid #777; padding-left: 10px; margin-top: 10px; color: #333; }
+
+/* ======================= SUMMATIVE / RUBRIC ======================= */
+.summative-card { border: 2px solid #00003d; padding: 12px 14px; margin: 14px 0; background: #f8fbff; break-inside: avoid; page-break-inside: avoid; }
+.summative-card a { color: #005aa0; font-weight: 800; }
+.rubric-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0; }
+.rubric-level { color: #00003d; font-weight: 900; font-size: 12.5pt; }
+
+/* ======================= ASSESSMENT BANK ======================= */
+.bank-intro { border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+.assessment-card {
+  border: 1px solid #777;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.problem-number { font-weight: 900; color: #00003d; font-size: 13pt; margin-bottom: 8px; }
+.problem-meta { color: #555; font-weight: 700; font-size: 10.5pt; margin-left: 8px; }
+.assessment-card p { margin-bottom: 7px; }
+.assessment-card ol, .assessment-card ul { margin-left: 26px; }
+.assessment-card li { margin-bottom: 6px; }
+.performance-notes { border-left: 5px solid #444; background: #f7f7f7; padding: 8px 10px; margin-top: 10px; font-size: 10pt; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+
+/* ======================= FIGURE / GRAPH SYSTEM ======================= */
+.figure-block, .graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { max-width: 100%; height: auto; border: 1px solid #ccc; background: #fff; }
+.figure-xs img { max-width: 1.4in; }
+.figure-sm img { max-width: 2.1in; }
+.figure-md img { max-width: 2.8in; }
+.figure-lg img { max-width: 3.8in; }
+.figure-xl img { max-width: 4.7in; }
+.graph-xs img { max-width: 2.0in; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.2in; }
+.graph-lg img { max-width: 4.1in; }
+.graph-xl img { max-width: 5.1in; }
+
+/* ======================= PRINT CONTROL ======================= */
+@media print {
+  body { font-size: 10.5pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  .assessment-card { padding: 10px 12px; }
+}
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 7</div>
-        <h1 class="course-title">Assessment Plan</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit7_assessment_plan.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/assessment_plans/unit7_assessment_plan/unit7_assessment_plan.html<br>
-            <strong>Purpose:</strong> Teacher-only assessment plan for Unit 7. Contains formative checkpoints, summative schedule, and DoK breakdown.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit7_assessment_plan/unit7_assessment_plan.html
-        </div>
-    </div>
+<div class="container">
+<!-- ======================= UNIT 7 OUTLINE START ======================= -->
+<h1>Algebra 1 - Unit 7: Exponential Functions and Modeling</h1>
+<h2>Essential Standard</h2>
+<div class="essential-standard">Students will analyze, represent, and model exponential relationships in order to interpret growth and decay, compare function behavior, and make predictions using equations, graphs, tables, and contexts.</div>
+<!-- ======================= SECTION OUTLINE START ======================= -->
+<section class="outline-card">
+<div class="outline-card-title">Section 7.1: Recognizing Growth and Decay</div>
+<p><strong>Learning Target: Students will identify exponential relationships from patterns, tables, graphs, and situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can recognize exponential patterns.</li><li>I can distinguish exponential and linear growth.</li><li>I can identify growth and decay situations.</li><li>I can describe how exponential relationships change over time.</li><li>I can identify repeated multiplication in tables and contexts.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Graphs</li><li>Equations</li><li>Contexts</li><li>Sequences</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>populations</li><li>bacteria growth</li><li>social media growth</li><li>depreciation</li><li>doubling and halving situations</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 7.2: Writing Exponential Equations</div>
+<p><strong>Learning Target: Students will write exponential equations from tables, graphs, and situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can determine the initial value of an exponential model.</li><li>I can determine the multiplier of an exponential model.</li><li>I can write exponential equations from data.</li><li>I can interpret parameters in context.</li><li>I can connect percent change to growth or decay factors.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Equations</li><li>Graphs</li><li>Contexts</li><li>Percent-change descriptions</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>inflation</li><li>population growth</li><li>depreciation</li><li>investment growth</li><li>ticket prices</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 7.3: Graphing and Analyzing Exponential Functions</div>
+<p><strong>Learning Target: Students will graph exponential functions and analyze key features.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can graph exponential functions.</li><li>I can identify growth and decay behavior.</li><li>I can compare exponential graphs.</li><li>I can identify important graph features.</li><li>I can explain why exponential graphs change by multiplication instead of addition.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Equations</li><li>Tables</li><li>Contexts</li><li>Technology-generated graphs</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>growth simulations</li><li>depreciation models</li><li>rebound-height decay</li><li>population graphs</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 7.4: Comparing Function Families</div>
+<p><strong>Learning Target: Students will compare linear, quadratic, and exponential functions using multiple representations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can compare linear, quadratic, and exponential behavior.</li><li>I can determine which model best fits a situation.</li><li>I can justify model selection.</li><li>I can explain differences in long-term behavior.</li><li>I can use tables and graphs to compare growth patterns.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Graphs</li><li>Equations</li><li>Contexts</li><li>Function-family comparisons</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>population comparisons</li><li>investment comparisons</li><li>transportation comparisons</li><li>model-selection tasks</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 7.5: Exponential Modeling with Data</div>
+<p><strong>Learning Target: Students will create and analyze exponential models using real-world data.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can create an exponential model from data.</li><li>I can use exponential models to make predictions.</li><li>I can interpret exponential parameters in context.</li><li>I can evaluate whether an exponential model is reasonable.</li><li>I can communicate conclusions using mathematical evidence.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Scatterplots</li><li>Equations</li><li>Graphs</li><li>Tables</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>cooling curves</li><li>bounce-height decay</li><li>population growth</li><li>radioactive decay simulations</li><li>bacterial growth</li></ul>
+</section>
+<section class="outline-card"><div class="outline-card-title">Unit Modeling Themes</div><ul><li>growth and decay situations</li><li>repeated multiplication</li><li>percent increase and percent decrease</li><li>comparing linear, quadratic, and exponential behavior</li><li>using models to make predictions</li><li>evaluating reasonableness of long-term extrapolation</li></ul></section>
+
+<!-- ======================= SECTION OUTLINE END ======================= -->
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr>
+<tr class="dok4"><td>8</td><td>I can create and analyze exponential models from data or contexts, use them to make predictions, and justify whether the model and prediction are reasonable.</td><td>MP4 Model with Mathematics / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok4"><td>7</td><td>I can compare exponential models with linear and quadratic models, critique model choices, and defend which function family best represents a situation.</td><td>MP1 Make Sense and Persevere / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok3"><td>6</td><td>I can analyze exponential growth and decay across graphs, tables, equations, and contexts and explain how repeated multiplication controls the behavior.</td><td>MP7 Look for Structure / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok3"><td>5</td><td>I can justify an exponential equation or graph by connecting initial value, multiplier, percent change, and contextual meaning.</td><td>MP2 Reason Abstractly and Quantitatively / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok2"><td>4</td><td>I can write exponential equations from tables, graphs, and situations and interpret the meaning of parameters.</td><td>MP4 Model with Mathematics / MP7 Look for Structure</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok2"><td>3</td><td>I can graph exponential functions, identify growth or decay, and compare basic exponential representations.</td><td>MP5 Use Appropriate Tools Strategically / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok1"><td>2</td><td>I can identify initial values, multipliers, growth factors, decay factors, and percent change in exponential situations.</td><td>MP6 Attend to Precision</td><td>DOK 1</td><td>Essential</td></tr>
+<tr class="dok1"><td>1</td><td>I can recognize exponential relationships from tables, graphs, equations, and contexts and distinguish them from non-exponential patterns.</td><td>MP1 Make Sense of Problems</td><td>DOK 1</td><td>Essential</td></tr>
+</table>
+<h2>Progress Tracking</h2>
+<div class="progress-tracker"><div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div><div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div><div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div></div>
+
+<h2>Assessment Methods by DOK Level</h2>
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card"><p><strong>Format: 3-5 minute warm-up, vocabulary check, table-pattern check, graph recognition, or exit ticket</strong></p>
+<p>Purpose: Check whether students can recognize exponential patterns, identify growth and decay, use vocabulary, and name initial values, multipliers, growth factors, and decay factors.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit7_formative/unit7_dok1-1.html">Growth and Decay Recognition Check</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students classify patterns and situations as growth, decay, or not exponential.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok1-2.html">Multiplier and Initial Value Check</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students identify initial values, multipliers, and percent changes from tables and equations.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok1-3.html">Exponential Graph Recognition Check</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students recognize exponential graphs and distinguish growth from decay.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok1-4.html">Function Family Sorting Check</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students sort linear, quadratic, and exponential representations.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>Students who struggle here need additional support seeing repeated multiplication and connecting exponential vocabulary to tables, graphs, and contexts.</div></section>
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card"><p><strong>Format: Exit ticket, partner check, mini-quiz, graph/table task, or short written task</strong></p>
+<p>Purpose: Check whether students can write exponential equations, graph exponential relationships, calculate values, and make routine predictions.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit7_formative/unit7_dok2-1.html">Write an Exponential Equation Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students write an equation from a table, graph, or percent-change context.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok2-2.html">Graph and Interpret an Exponential Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students graph an exponential function and interpret growth or decay.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok2-3.html">Compare Function Families Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students compare linear, quadratic, and exponential tables or graphs.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok2-4.html">Exponential Prediction Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students use an exponential model to make and interpret a prediction.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>Students at this level can generally use exponential procedures and representations, but the assessment reveals whether they connect the calculations to meaning.</div></section>
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card"><p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p>
+<p>Purpose: Check whether students can justify exponential models, explain growth and decay behavior, compare function families, and critique unreasonable predictions.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit7_formative/unit7_dok3-1.html">Repeated Multiplication Justification Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students explain why a relationship is exponential using tables, equations, or contexts.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok3-2.html">Parameter Interpretation Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students justify the meaning of initial value and multiplier in context.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok3-3.html">Linear vs Exponential Argument Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students compare representations and defend a model choice.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok3-4.html">Prediction Reasonableness Critique</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students critique a prediction made from an exponential model.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>This level reveals whether students understand exponential functions as connected models rather than just formulas for repeated calculation.</div></section>
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p>
+<p>Purpose: Check whether students can transfer exponential reasoning to unfamiliar situations, create models, compare model families, and justify decisions.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit7_formative/unit7_dok4-1.html">Design a Growth or Decay Model Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students design an exponential situation and equation, then interpret parameters.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok4-2.html">Model Selection Challenge</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students choose between linear, quadratic, and exponential models and justify the choice.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok4-3.html">Exponential Data Modeling Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students create a model from data and communicate a prediction with limitations.</li>
+<li><a href="../../formative/unit7_formative/unit7_dok4-4.html">Critique and Revise a Prediction Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students critique an exponential prediction and revise the conclusion.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can design, critique, compare, and make decisions with exponential models. These should remain short performance tasks rather than large projects.</div></section>
+
+<h2>Summative Assessment Plan</h2><section class="summative-card">
+<p><a href="../../summative/unit7_summative/unit7_summative_assessment.html">Unit 7 Summative Assessment</a> <span class="timing-label">Unit 7 Assessed During Future Course / Final Exam</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of exponential recognition tasks, equation-writing tasks, graph and table interpretation tasks, function-family comparison tasks, and short reasoning prompts aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize growth and decay, initial values, multipliers, percent change, exponential equations, graph behavior, model comparison, prediction, representation connections, mathematical communication, and justification of reasoning.</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>Because of the spiraling course structure, Unit 7 is assessed during a future course checkpoint or final exam after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction.</p>
+</section>
+
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>The student demonstrates a strong and flexible understanding of Unit 7 concepts: exponential growth and decay, exponential equations, graph behavior, function-family comparison, and exponential modeling. Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects equations, graphs, tables, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>The student demonstrates solid understanding of the essential Unit 7 concepts. Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, though they may lack some precision or depth.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>The student demonstrates partial but passable understanding of Unit 7 concepts. The student can complete many routine tasks but may need support with notation, reasoning, restrictions, representations, or multi-step problem solving. Work may contain errors or incomplete explanations, but there is enough evidence that the student understands the main ideas.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>The student does not yet demonstrate sufficient understanding of the essential Unit 7 concepts. Work shows major errors, missing reasoning, weak conceptual understanding, or inability to connect representations. The student may need reteaching, additional practice, or reassessment to demonstrate proficiency.</p></section>
+
+<!-- ======================= UNIT 7 OUTLINE END ======================= -->
+<div class="page-break"></div>
+<!-- ======================= ASSESSMENT BANK START ======================= -->
+<h1>Assessment Bank</h1>
+<div class="bank-intro"><p><strong>Unit 7 Assessment Bank:</strong> Problems are organized by Depth of Knowledge and designed as source items for formative assessments, reassessments, summative assessment versions, practice sets, intervention, and enrichment.</p><p class="small-note">Rolling timing: Unit 7 is assessed during a future course checkpoint or final exam.</p></div>
+<div class="dok-bar">Assessment Bank DOK 1</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 1 items provide evidence of foundational vocabulary, representation recognition, growth and decay recognition, and basic parameter awareness.</p><p><strong>Bank Design Principles:</strong></p><ul><li>recognize exponential growth and decay</li><li>identify initial values and multipliers</li><li>read exponential tables and graphs</li><li>distinguish repeated multiplication from repeated addition</li><li>use exponential vocabulary precisely</li></ul></section>
+<h2>Recognizing Growth and Decay</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.001">
+<div class="problem-number">Assessment Bank DOK 1.001<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Classify the pattern as linear, exponential, or neither.</p><table class="values"><tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>Amount</td><td>3</td><td>6</td><td>12</td><td>24</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.002">
+<div class="problem-number">Assessment Bank DOK 1.002<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Classify the pattern as growth or decay.</p><table class="values"><tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>Amount</td><td>80</td><td>40</td><td>20</td><td>10</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.003">
+<div class="problem-number">Assessment Bank DOK 1.003<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Use the graph below. Does the relationship show growth or decay?</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_growth_basic.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.004">
+<div class="problem-number">Assessment Bank DOK 1.004<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Use the graph below. Does the relationship show growth or decay?</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_decay_basic.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.005">
+<div class="problem-number">Assessment Bank DOK 1.005<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Which phrase best describes exponential growth?</p><ol class="lower-alpha"><li>add the same amount each step</li><li>multiply by the same factor each step</li><li>subtract the same amount each step</li><li>alternate between adding and subtracting</li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.006">
+<div class="problem-number">Assessment Bank DOK 1.006<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 1</span></div>
+<p>Identify the common multiplier in the sequence: $4, 12, 36, 108$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 END ======================= -->
+<h2>Writing Exponential Equations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.007">
+<div class="problem-number">Assessment Bank DOK 1.007<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>For the model $y=5(2)^x$, identify the initial value.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.008">
+<div class="problem-number">Assessment Bank DOK 1.008<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>For the model $y=5(2)^x$, identify the multiplier.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.009">
+<div class="problem-number">Assessment Bank DOK 1.009<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>For the model $A=100(0.8)^t$, identify whether it represents growth or decay.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.010">
+<div class="problem-number">Assessment Bank DOK 1.010<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>A quantity increases by $12$ percent each year. What growth factor should be used?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.011">
+<div class="problem-number">Assessment Bank DOK 1.011<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>A quantity decreases by $15$ percent each year. What decay factor should be used?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.012">
+<div class="problem-number">Assessment Bank DOK 1.012<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 1</span></div>
+<p>Use the table below. Identify the starting amount.</p><div class="graph-block figure-lg"><img alt="growth table" src="figures/unit7_growth_table.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 END ======================= -->
+<h2>Graphing and Analyzing Exponentials</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.013">
+<div class="problem-number">Assessment Bank DOK 1.013<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 1</span></div>
+<p>Which graph appears exponential?</p><div class="graph-block graph-lg"><img alt="function family comparison graph" src="figures/unit7_family_compare.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.014">
+<div class="problem-number">Assessment Bank DOK 1.014<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 1</span></div>
+<p>For $f(x)=3(1.5)^x$, find $f(0)$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.015">
+<div class="problem-number">Assessment Bank DOK 1.015<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 1</span></div>
+<p>For $g(x)=64(0.5)^x$, find $g(1)$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.016">
+<div class="problem-number">Assessment Bank DOK 1.016<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 1</span></div>
+<p>Use the graph below. Is the output increasing or decreasing as $x$ increases?</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_growth_percent.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.017">
+<div class="problem-number">Assessment Bank DOK 1.017<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 1</span></div>
+<p>Use the graph below. Is the output increasing or decreasing as $x$ increases?</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_decay_percent.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 END ======================= -->
+<h2>Comparing Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.018">
+<div class="problem-number">Assessment Bank DOK 1.018<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 1</span></div>
+<p>Which table is more likely exponential?</p><ol class="lower-alpha"><li><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>2</td><td>4</td><td>6</td><td>8</td></tr></table></li><li><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>2</td><td>4</td><td>8</td><td>16</td></tr></table></li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.019">
+<div class="problem-number">Assessment Bank DOK 1.019<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 1</span></div>
+<p>Choose the function family for $y=4x+7$: linear, quadratic, or exponential.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.020">
+<div class="problem-number">Assessment Bank DOK 1.020<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 1</span></div>
+<p>Choose the function family for $y=x^2+7$: linear, quadratic, or exponential.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.021">
+<div class="problem-number">Assessment Bank DOK 1.021<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 1</span></div>
+<p>Choose the function family for $y=7(1.2)^x$: linear, quadratic, or exponential.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.022">
+<div class="problem-number">Assessment Bank DOK 1.022<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 1</span></div>
+<p>Identify one visible feature that helps Graph C look exponential.</p><div class="graph-block graph-lg"><img alt="function family comparison graph" src="figures/unit7_family_compare.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 END ======================= -->
+<h2>Exponential Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.023">
+<div class="problem-number">Assessment Bank DOK 1.023<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>A population starts at $500$ and doubles each year. Identify the initial value and multiplier.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.024">
+<div class="problem-number">Assessment Bank DOK 1.024<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>A car is worth 24000 dollars and loses $10$ percent of its value each year. Identify the decay factor.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.025">
+<div class="problem-number">Assessment Bank DOK 1.025<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>Use the scatterplot below. Does the data appear to show growth or decay?</p><div class="graph-block graph-md"><img alt="growth scatterplot" src="figures/unit7_exp_scatter_growth.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.026">
+<div class="problem-number">Assessment Bank DOK 1.026<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>Use the scatterplot below. Does the data appear to show growth or decay?</p><div class="graph-block graph-md"><img alt="decay scatterplot" src="figures/unit7_exp_scatter_decay.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.027">
+<div class="problem-number">Assessment Bank DOK 1.027<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>What does a prediction from an exponential model represent?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U7-DOK1.028">
+<div class="problem-number">Assessment Bank DOK 1.028<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 1</span></div>
+<p>Why should long-term exponential predictions be checked for reasonableness?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 2</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 2 items provide evidence of procedural understanding, graphing, equation writing, routine prediction, and representation connections.</p><p><strong>Bank Design Principles:</strong></p><ul><li>write equations from tables, graphs, and situations</li><li>graph exponential functions</li><li>calculate values from exponential models</li><li>connect percent change to multipliers</li><li>make routine predictions</li></ul></section>
+<h2>Recognizing Growth and Decay</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.001">
+<div class="problem-number">Assessment Bank DOK 2.001<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>Determine whether the table shows repeated addition or repeated multiplication. Explain briefly.</p><table class="values"><tr><th>Step</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Amount</td><td>6</td><td>9</td><td>13.5</td><td>20.25</td><td>30.375</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.002">
+<div class="problem-number">Assessment Bank DOK 2.002<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>Complete the exponential growth table.</p><table class="values"><tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Amount</td><td>7</td><td>14</td><td></td><td></td><td></td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.003">
+<div class="problem-number">Assessment Bank DOK 2.003<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>Complete the exponential decay table.</p><table class="values"><tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Amount</td><td>96</td><td>48</td><td></td><td></td><td></td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.004">
+<div class="problem-number">Assessment Bank DOK 2.004<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>Use the graph to create a table with at least four approximate ordered pairs.</p><div class="graph-block graph-md"><img alt="exponential growth graph" src="figures/unit7_growth_basic.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.005">
+<div class="problem-number">Assessment Bank DOK 2.005<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>A bacteria culture triples every hour. Starting with $4$ bacteria, make a table for hours $0$ through $4$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.006">
+<div class="problem-number">Assessment Bank DOK 2.006<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 2</span></div>
+<p>A sample halves every hour. Starting with $128$ grams, make a table for hours $0$ through $4$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 END ======================= -->
+<h2>Writing Exponential Equations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.007">
+<div class="problem-number">Assessment Bank DOK 2.007<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>Write an exponential equation for the table.</p><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>5</td><td>15</td><td>45</td><td>135</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.008">
+<div class="problem-number">Assessment Bank DOK 2.008<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>Write an exponential equation for the table.</p><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>80</td><td>40</td><td>20</td><td>10</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.009">
+<div class="problem-number">Assessment Bank DOK 2.009<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>A population starts at $1200$ and increases by $8$ percent per year. Write a model for the population after $t$ years.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.010">
+<div class="problem-number">Assessment Bank DOK 2.010<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>A laptop originally costs 900 dollars and loses $20$ percent of its value each year. Write a model for the value after $t$ years.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.011">
+<div class="problem-number">Assessment Bank DOK 2.011<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>Use $A=500(1.06)^t$ to estimate $A$ when $t=3$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.012">
+<div class="problem-number">Assessment Bank DOK 2.012<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 2</span></div>
+<p>Use $V=2000(0.75)^t$ to estimate $V$ when $t=4$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 END ======================= -->
+<h2>Graphing and Analyzing Exponentials</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.013">
+<div class="problem-number">Assessment Bank DOK 2.013<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 2</span></div>
+<p>Graph $y=2(2)^x$ for $x=0,1,2,3,4$ on the blank grid.</p><div class="graph-block graph-md"><img alt="blank coordinate grid" src="figures/unit7_blank_exp_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.014">
+<div class="problem-number">Assessment Bank DOK 2.014<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 2</span></div>
+<p>Graph $y=64(0.5)^x$ for $x=0,1,2,3,4,5$ on the blank grid.</p><div class="graph-block graph-md"><img alt="blank coordinate grid" src="figures/unit7_blank_exp_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.015">
+<div class="problem-number">Assessment Bank DOK 2.015<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 2</span></div>
+<p>Use the graph below to estimate the value when $x=5$.</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_growth_percent.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.016">
+<div class="problem-number">Assessment Bank DOK 2.016<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 2</span></div>
+<p>Use the graph below to estimate the value when $x=4$.</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_decay_percent.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.017">
+<div class="problem-number">Assessment Bank DOK 2.017<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 2</span></div>
+<p>Describe how the graph of $y=3(2)^x$ changes as $x$ increases.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 END ======================= -->
+<h2>Comparing Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.018">
+<div class="problem-number">Assessment Bank DOK 2.018<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 2</span></div>
+<p>Compare the linear and exponential graphs below. Which model grows faster later in the displayed window?</p><div class="graph-block graph-lg"><img alt="linear and exponential comparison graph" src="figures/unit7_linear_vs_exp.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.019">
+<div class="problem-number">Assessment Bank DOK 2.019<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 2</span></div>
+<p>Use the tables to decide which relationship is exponential. Explain briefly.</p><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>Table A</td><td>4</td><td>7</td><td>10</td><td>13</td></tr><tr><td>Table B</td><td>4</td><td>8</td><td>16</td><td>32</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.020">
+<div class="problem-number">Assessment Bank DOK 2.020<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 2</span></div>
+<p>Compare $y=5x+10$ and $y=10(1.25)^x$ by evaluating both when $x=0$, $x=2$, and $x=4$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.021">
+<div class="problem-number">Assessment Bank DOK 2.021<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 2</span></div>
+<p>Use the comparison graph. Identify one difference between the linear model and the exponential model.</p><div class="graph-block graph-lg"><img alt="linear exponential comparison graph" src="figures/unit7_linear_vs_exp.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.022">
+<div class="problem-number">Assessment Bank DOK 2.022<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 2</span></div>
+<p>Determine whether the situation is better modeled by a linear or exponential function: a bank account earns $5$ percent interest each year.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 END ======================= -->
+<h2>Exponential Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.023">
+<div class="problem-number">Assessment Bank DOK 2.023<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>Use the scatterplot to decide whether an exponential model seems reasonable. Explain using the shape of the data.</p><div class="graph-block graph-md"><img alt="exponential scatterplot" src="figures/unit7_exp_scatter_growth.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.024">
+<div class="problem-number">Assessment Bank DOK 2.024<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>Use the scatterplot to decide whether an exponential decay model seems reasonable. Explain using the shape of the data.</p><div class="graph-block graph-md"><img alt="exponential decay scatterplot" src="figures/unit7_exp_scatter_decay.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.025">
+<div class="problem-number">Assessment Bank DOK 2.025<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>A medicine level is modeled by $M=80(0.7)^t$. Find the amount after $5$ hours and interpret it.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.026">
+<div class="problem-number">Assessment Bank DOK 2.026<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>A social-media post is modeled by $S=200(1.4)^t$. Find the predicted number of shares after $4$ days and interpret it.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.027">
+<div class="problem-number">Assessment Bank DOK 2.027<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>Use the model and data below. Name one data point that appears above the model and one that appears below the model.</p><div class="graph-block graph-md"><img alt="model and data graph" src="figures/unit7_model_data.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U7-DOK2.028">
+<div class="problem-number">Assessment Bank DOK 2.028<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 2</span></div>
+<p>Create a short context that could be modeled by $y=40(0.9)^x$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 3</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 3 items provide evidence of reasoning, justification, model critique, function-family comparison, and mathematical communication.</p><p><strong>Bank Design Principles:</strong></p><ul><li>justify why a relationship is exponential</li><li>interpret parameters in context</li><li>compare function-family behavior</li><li>critique model choices and predictions</li><li>defend conclusions with evidence</li></ul></section>
+<h2>Recognizing Growth and Decay</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.001">
+<div class="problem-number">Assessment Bank DOK 3.001<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 3</span></div>
+<p>A student says, "This table is exponential because the numbers get bigger." Critique the reasoning and give a better explanation.</p><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>3</td><td>6</td><td>12</td><td>24</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.002">
+<div class="problem-number">Assessment Bank DOK 3.002<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 3</span></div>
+<p>Explain why repeated multiplication is the key evidence for an exponential relationship.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.003">
+<div class="problem-number">Assessment Bank DOK 3.003<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 3</span></div>
+<p>Use the table to determine whether the pattern is linear, exponential, or neither. Justify your answer.</p><table class="values"><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>y</td><td>5</td><td>8</td><td>13</td><td>20</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.004">
+<div class="problem-number">Assessment Bank DOK 3.004<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 3</span></div>
+<p>Compare a situation that doubles each step with a situation that adds $10$ each step. Explain how their tables would differ.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.005">
+<div class="problem-number">Assessment Bank DOK 3.005<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 3</span></div>
+<p>Use the graph below to justify whether the relationship appears exponential. Cite visual evidence.</p><div class="graph-block graph-md"><img alt="exponential growth graph" src="figures/unit7_growth_basic.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 END ======================= -->
+<h2>Writing Exponential Equations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.006">
+<div class="problem-number">Assessment Bank DOK 3.006<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>A student writes $y=100(15)^x$ for a $15$ percent yearly increase. Analyze the error and write the correct model.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.007">
+<div class="problem-number">Assessment Bank DOK 3.007<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>A student writes $V=20000(0.15)^t$ for a car losing $15$ percent of its value each year. Analyze the error and revise the model.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.008">
+<div class="problem-number">Assessment Bank DOK 3.008<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>Explain how the initial value and multiplier appear in the equation $P=800(1.12)^t$ and in the context.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.009">
+<div class="problem-number">Assessment Bank DOK 3.009<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>Write two different exponential equations with the same initial value but different multipliers. Explain how their graphs would differ.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.010">
+<div class="problem-number">Assessment Bank DOK 3.010<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>Use the table to write a model and justify why your multiplier is correct.</p><table class="values"><tr><th>Year</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td>Price</td><td>50</td><td>55</td><td>60.5</td><td>66.55</td></tr></table>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.011">
+<div class="problem-number">Assessment Bank DOK 3.011<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 3</span></div>
+<p>Compare $A=500(1.1)^t$ and $B=800(1.04)^t$. Explain which starts larger and which grows faster.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 END ======================= -->
+<h2>Graphing and Analyzing Exponentials</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.012">
+<div class="problem-number">Assessment Bank DOK 3.012<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 3</span></div>
+<p>Use the growth and decay graphs below. Explain how the multiplier affects the direction and shape of each graph.</p><div class="graph-block graph-md"><img alt="growth graph" src="figures/unit7_growth_percent.png"/></div><div class="graph-block graph-md"><img alt="decay graph" src="figures/unit7_decay_percent.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.013">
+<div class="problem-number">Assessment Bank DOK 3.013<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 3</span></div>
+<p>A student claims an exponential decay graph eventually becomes negative. Critique the statement using graph behavior.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.014">
+<div class="problem-number">Assessment Bank DOK 3.014<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 3</span></div>
+<p>Explain why the graph of an exponential function is not a straight line even when the input increases by equal steps.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.015">
+<div class="problem-number">Assessment Bank DOK 3.015<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 3</span></div>
+<p>Use the graph below to describe the behavior for small and large input values in the displayed window.</p><div class="graph-block graph-md"><img alt="exponential graph" src="figures/unit7_growth_basic.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.016">
+<div class="problem-number">Assessment Bank DOK 3.016<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 3</span></div>
+<p>Create a table for $y=3(2)^x$ and use it to explain the graph shape.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 END ======================= -->
+<h2>Comparing Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.017">
+<div class="problem-number">Assessment Bank DOK 3.017<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>Use the comparison graph. Explain why the exponential model may eventually overtake the linear model.</p><div class="graph-block graph-lg"><img alt="comparison graph" src="figures/unit7_linear_vs_exp.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.018">
+<div class="problem-number">Assessment Bank DOK 3.018<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>Compare the long-term behavior of a linear model and an exponential model using a context of your choice.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.019">
+<div class="problem-number">Assessment Bank DOK 3.019<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>A student chooses a linear model for a population that increases by $8$ percent each year. Critique the model choice.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.020">
+<div class="problem-number">Assessment Bank DOK 3.020<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>Use the function family set below to explain how linear, quadratic, and exponential behavior differ.</p><div class="graph-block graph-lg"><img alt="function family comparison graph" src="figures/unit7_family_compare.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.021">
+<div class="problem-number">Assessment Bank DOK 3.021<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>Determine which model better fits the context: a savings account earns interest on the current balance each year. Justify your answer.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.022">
+<div class="problem-number">Assessment Bank DOK 3.022<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 3</span></div>
+<p>Compare $y=x^2$ and $y=2^x$ using a table for $x=0$ through $5$. Explain what the comparison shows.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 END ======================= -->
+<h2>Exponential Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.023">
+<div class="problem-number">Assessment Bank DOK 3.023<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>Use the data below to argue whether an exponential model is reasonable. Include evidence from ratios or graph shape.</p><div class="graph-block graph-md"><img alt="scatterplot" src="figures/unit7_exp_scatter_growth.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.024">
+<div class="problem-number">Assessment Bank DOK 3.024<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>A prediction model says a town will have 8 million people in 200 years. Critique the prediction even if the equation was calculated correctly.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.025">
+<div class="problem-number">Assessment Bank DOK 3.025<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>Use the model and data graph. Explain whether the model overpredicts or underpredicts at selected data points.</p><div class="graph-block graph-md"><img alt="model data graph" src="figures/unit7_model_data.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.026">
+<div class="problem-number">Assessment Bank DOK 3.026<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>Create a decay situation, write a model, and explain what the multiplier means in context.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.027">
+<div class="problem-number">Assessment Bank DOK 3.027<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>Compare two possible exponential models for the same data. Explain what evidence would help you choose between them.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U7-DOK3.028">
+<div class="problem-number">Assessment Bank DOK 3.028<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 3</span></div>
+<p>Explain why an exponential model can be useful for short-term prediction but risky for long-term prediction.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 4</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 4 items provide evidence of transfer, modeling, design, critique, synthesis, and decision-making with exponential relationships.</p><p><strong>Bank Design Principles:</strong></p><ul><li>design exponential models</li><li>model unfamiliar data or contexts</li><li>compare and select function families</li><li>critique and revise predictions</li><li>communicate limitations and assumptions</li></ul></section>
+<h2>Recognizing Growth and Decay</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.001">
+<div class="problem-number">Assessment Bank DOK 4.001<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 4</span></div>
+<p>Design two short contexts: one exponential growth and one exponential decay. For each, include a table and explain the repeated multiplication.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.002">
+<div class="problem-number">Assessment Bank DOK 4.002<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 4</span></div>
+<p>Create a table that looks like it might be exponential at first but is not. Explain how another student could detect the issue.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.003">
+<div class="problem-number">Assessment Bank DOK 4.003<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 4</span></div>
+<p>Design a card-sort challenge where students must distinguish linear, quadratic, and exponential patterns. Include the answer key and reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.004">
+<div class="problem-number">Assessment Bank DOK 4.004<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 4</span></div>
+<p>Create a "Which One Does Not Belong?" set using four tables, where one table is not exponential. Identify the mismatch and justify it.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.005">
+<div class="problem-number">Assessment Bank DOK 4.005<span class="problem-meta">Unit 7 | Recognizing Growth and Decay | DoK 4</span></div>
+<p>Use the graph below to create a realistic growth context, then explain one limitation of the context.</p><div class="graph-block graph-md"><img alt="growth graph" src="figures/unit7_growth_basic.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 END ======================= -->
+<h2>Writing Exponential Equations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.006">
+<div class="problem-number">Assessment Bank DOK 4.006<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Design an exponential equation with an initial value of $250$ and a growth rate between $5$ percent and $20$ percent. Create a context and interpret each parameter.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.007">
+<div class="problem-number">Assessment Bank DOK 4.007<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Design a depreciation model for an item of your choice. Include an equation, a table for four years, and a statement about reasonableness.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.008">
+<div class="problem-number">Assessment Bank DOK 4.008<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Critique and revise this model: A $30$ percent increase from $400$ is modeled by $y=400(30)^t$.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.009">
+<div class="problem-number">Assessment Bank DOK 4.009<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Create two exponential models that start at the same value but lead to very different predictions after $10$ steps. Explain why.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.010">
+<div class="problem-number">Assessment Bank DOK 4.010<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Write a real-world situation that matches $y=120(0.82)^x$. Then create one question that could be answered using the model.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.011">
+<div class="problem-number">Assessment Bank DOK 4.011<span class="problem-meta">Unit 7 | Writing Exponential Equations | DoK 4</span></div>
+<p>Create a model for a price that increases by a constant percent each year. Explain why an additive model would not match the situation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 END ======================= -->
+<h2>Graphing and Analyzing Exponentials</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.012">
+<div class="problem-number">Assessment Bank DOK 4.012<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 4</span></div>
+<p>Use the blank grid to create two exponential graphs with different multipliers. Explain how the multiplier affects the graph.</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit7_blank_exp_grid.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.013">
+<div class="problem-number">Assessment Bank DOK 4.013<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 4</span></div>
+<p>Design a graph-based prompt where another student must decide whether a graph shows growth or decay without being told the equation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.014">
+<div class="problem-number">Assessment Bank DOK 4.014<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 4</span></div>
+<p>Use the growth graph below to write a matching equation and context. Explain how the graph supports your choices.</p><div class="graph-block graph-md"><img alt="growth graph" src="figures/unit7_growth_percent.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.015">
+<div class="problem-number">Assessment Bank DOK 4.015<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 4</span></div>
+<p>Use the decay graph below to write a matching equation and context. Explain how the graph supports your choices.</p><div class="graph-block graph-md"><img alt="decay graph" src="figures/unit7_decay_percent.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.016">
+<div class="problem-number">Assessment Bank DOK 4.016<span class="problem-meta">Unit 7 | Graphing and Analyzing Exponentials | DoK 4</span></div>
+<p>Critique this statement: "Exponential graphs are easy because they all look the same." Use examples or counterexamples.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 END ======================= -->
+<h2>Comparing Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.017">
+<div class="problem-number">Assessment Bank DOK 4.017<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Use the comparison graph to make a recommendation about which model is more appropriate for short-term versus long-term prediction.</p><div class="graph-block graph-lg"><img alt="comparison graph" src="figures/unit7_linear_vs_exp.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.018">
+<div class="problem-number">Assessment Bank DOK 4.018<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Design three contexts: one linear, one quadratic, and one exponential. Explain what feature makes each model appropriate.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.019">
+<div class="problem-number">Assessment Bank DOK 4.019<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Use the function family set below to create a classification challenge with clues that do not directly name each family.</p><div class="graph-block graph-lg"><img alt="function family graph set" src="figures/unit7_family_compare.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.020">
+<div class="problem-number">Assessment Bank DOK 4.020<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Create a scenario where a linear model seems reasonable at first but an exponential model becomes better later. Justify the switch.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.021">
+<div class="problem-number">Assessment Bank DOK 4.021<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Critique a student who says, "The bigger starting value always wins." Use exponential comparison to respond.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.022">
+<div class="problem-number">Assessment Bank DOK 4.022<span class="problem-meta">Unit 7 | Comparing Function Families | DoK 4</span></div>
+<p>Compare an exponential model and a quadratic model for growth. Explain what evidence would help decide which model is better.</p><div class="graph-block graph-lg"><img alt="quadratic and exponential comparison graph" src="figures/unit7_quad_vs_exp.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 END ======================= -->
+<h2>Exponential Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.023">
+<div class="problem-number">Assessment Bank DOK 4.023<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Use the data set below to propose an exponential model. Explain your assumptions and one limitation.</p><div class="graph-block graph-md"><img alt="growth data" src="figures/unit7_exp_scatter_growth.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.024">
+<div class="problem-number">Assessment Bank DOK 4.024<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Use the data set below to propose a decay model. Explain your assumptions and one limitation.</p><div class="graph-block graph-md"><img alt="decay data" src="figures/unit7_exp_scatter_decay.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.025">
+<div class="problem-number">Assessment Bank DOK 4.025<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Design a short investigation using bounce-height decay, cooling, or population growth. Include what data students would collect and how they would model it.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.026">
+<div class="problem-number">Assessment Bank DOK 4.026<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Critique and revise a prediction from an exponential model that is mathematically correct but unrealistic in context.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.027">
+<div class="problem-number">Assessment Bank DOK 4.027<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Create a decision-making problem involving two exponential models. Explain what recommendation should be made and what evidence supports it.</p><div class="graph-block graph-lg"><img alt="two exponential models" src="figures/unit7_two_models.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U7-DOK4.028">
+<div class="problem-number">Assessment Bank DOK 4.028<span class="problem-meta">Unit 7 | Exponential Modeling | DoK 4</span></div>
+<p>Design a multi-representation exponential modeling task involving a table, graph, equation, and context. Include expected student reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 END ======================= -->
+
+<!-- ======================= ASSESSMENT BANK END ======================= -->
+</div>
 </body>
 </html>

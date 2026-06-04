@@ -1,110 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit1_assessment_plan.html
-     Path: hygwsksdf/nbfuwew/assessment_plans/unit1_assessment_plan/unit1_assessment_plan.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit1_assessment_plan/unit1_assessment_plan.html
-
-     Teacher-only assessment plan for Unit 1. Contains formative checkpoints, summative schedule, and DoK breakdown.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment Plan — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 1 Assessment Plan and Bank</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+
+/* ======================= RESET / PAGE ======================= */
+@page { size: letter; margin: 0.45in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  font-size: 11pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.container { max-width: 980px; margin: 0 auto; }
+.page-break { page-break-before: always; break-before: page; }
+.unbreakable, .assessment-card, .outline-card, .rubric-card, .ladder-table, .progress-tracker { break-inside: avoid; page-break-inside: avoid; }
+
+/* ======================= HEADER / TITLES ======================= */
+h1 { color: #00003d; font-size: 26pt; line-height: 1.1; margin-bottom: 8px; }
+h2 { color: #00003d; font-size: 17pt; margin: 18px 0 10px 0; border-left: 6px solid #00003d; padding-left: 10px; }
+h3 { color: #004d99; font-size: 13pt; margin: 12px 0 6px 0; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px 28px; }
+li { margin-bottom: 4px; }
+.small-note { font-size: 9.5pt; color: #555; font-style: italic; }
+
+/* ======================= OUTLINE CARDS ======================= */
+.outline-card {
+  border: 1px solid #9aa9bd;
+  border-left: 7px solid #00003d;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.outline-card-title { color: #00003d; font-weight: 800; font-size: 13.5pt; margin-bottom: 4px; }
+.essential-standard { font-size: 12pt; border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+
+/* ======================= TABLES ======================= */
+table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; }
+th, td { border: 1px solid #777; padding: 7px 8px; vertical-align: top; }
+th { background: #eaf1fb; color: #00003d; font-weight: 800; text-align: left; }
+.ladder-table th { background: #00003d; color: #fff; }
+.ladder-table .dok4 { background: #eef4ff; }
+.ladder-table .dok3 { background: #f6fbff; }
+.ladder-table .dok2 { background: #fffdf2; }
+.ladder-table .dok1 { background: #ffffff; }
+.table-block, .parent-table, table.values { width: auto; margin: 10px auto 12px auto; border-collapse: collapse; }
+.table-block td, .table-block th, .parent-table td, .parent-table th, table.values td, table.values th { border: 1px solid #777; padding: 6px 14px; text-align: center; vertical-align: middle; }
+
+/* ======================= PROGRESS TRACKING ======================= */
+.progress-tracker { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 12px 0 18px 0; }
+.progress-box { border: 1px solid #777; padding: 12px; min-height: 0.8in; }
+.progress-box strong { color: #00003d; }
+
+/* ======================= DOK SECTIONS ======================= */
+.dok-bar {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15pt;
+  padding: 9px 12px;
+  margin: 22px 0 12px 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dok-method-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0 16px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+.assessment-ideas { margin-left: 24px; }
+.assessment-ideas a { color: #005aa0; font-weight: 800; text-decoration: underline; }
+.timing-label { display: inline-block; background: #fff7cf; border: 1px solid #d1c27a; border-radius: 4px; padding: 1px 6px; font-weight: 800; color: #4a3f17; margin-left: 6px; }
+.what-tells { border-left: 5px solid #777; padding-left: 10px; margin-top: 10px; color: #333; }
+
+/* ======================= SUMMATIVE / RUBRIC ======================= */
+.summative-card { border: 2px solid #00003d; padding: 12px 14px; margin: 14px 0; background: #f8fbff; break-inside: avoid; page-break-inside: avoid; }
+.summative-card a { color: #005aa0; font-weight: 800; }
+.rubric-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0; }
+.rubric-level { color: #00003d; font-weight: 900; font-size: 12.5pt; }
+
+/* ======================= ASSESSMENT BANK ======================= */
+.bank-intro { border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+.assessment-card {
+  border: 1px solid #777;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.problem-number { font-weight: 900; color: #00003d; font-size: 13pt; margin-bottom: 8px; }
+.problem-meta { color: #555; font-weight: 700; font-size: 10.5pt; margin-left: 8px; }
+.assessment-card p { margin-bottom: 7px; }
+.assessment-card ol, .assessment-card ul { margin-left: 26px; }
+.assessment-card li { margin-bottom: 6px; }
+.performance-notes { border-left: 5px solid #444; background: #f7f7f7; padding: 8px 10px; margin-top: 10px; font-size: 10pt; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+
+/* ======================= FIGURE / GRAPH SYSTEM ======================= */
+.figure-block, .graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { max-width: 100%; height: auto; border: 1px solid #ccc; background: #fff; }
+.figure-xs img { max-width: 1.4in; }
+.figure-sm img { max-width: 2.1in; }
+.figure-md img { max-width: 2.8in; }
+.figure-lg img { max-width: 3.8in; }
+.figure-xl img { max-width: 4.7in; }
+.graph-xs img { max-width: 2.0in; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.2in; }
+.graph-lg img { max-width: 4.1in; }
+.graph-xl img { max-width: 5.1in; }
+
+/* ======================= PRINT CONTROL ======================= */
+@media print {
+  body { font-size: 10.5pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  .assessment-card { padding: 10px 12px; }
+}
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1</div>
-        <h1 class="course-title">Assessment Plan</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit1_assessment_plan.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/assessment_plans/unit1_assessment_plan/unit1_assessment_plan.html<br>
-            <strong>Purpose:</strong> Teacher-only assessment plan for Unit 1. Contains formative checkpoints, summative schedule, and DoK breakdown.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit1_assessment_plan/unit1_assessment_plan.html
-        </div>
-    </div>
+<div class="container">
+<!-- ======================= UNIT 1 OUTLINE START ======================= -->
+<h1>Algebra 1 - Unit 1: Foundations of Functions and Algebra</h1>
+<h2>Essential Standard</h2>
+<div class="essential-standard">Students will analyze relationships using functions and multiple representations in order to interpret patterns, communicate mathematical structure, and connect equations, tables, graphs, and contexts.</div>
+<!-- ======================= SECTION OUTLINE START ======================= -->
+<section class="outline-card">
+<div class="outline-card-title">Section 1.1: Multiple Representations of Relationships</div>
+<p><strong>Learning Target: Students will connect tables, graphs, equations, and contexts that represent the same relationship.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify when different representations describe the same relationship.</li><li>I can match tables, graphs, equations, and situations.</li><li>I can describe how two quantities are related.</li><li>I can determine what quantities are changing.</li><li>I can justify how representations are connected.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Graphs</li><li>Equations</li><li>Contextual situations</li><li>Verbal descriptions</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>cost vs quantity</li><li>distance vs time</li><li>earnings vs hours</li><li>matching cards across representations</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 1.2: Inputs, Outputs, and Functions</div>
+<p><strong>Learning Target: Students will interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can determine outputs from given inputs.</li><li>I can evaluate a function rule.</li><li>I can identify inputs and outputs in a situation.</li><li>I can describe how a function changes values.</li><li>I can decide whether a rule gives exactly one output for each input.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Function machines</li><li>Tables</li><li>Equations</li><li>Mappings</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>pricing rules</li><li>tax calculations</li><li>unit conversions</li><li>points or rewards systems</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 1.3: Function Families</div>
+<p><strong>Learning Target: Students will recognize common function families from graphs, tables, equations, and contexts.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify common function families from graphs.</li><li>I can identify common function families from equations.</li><li>I can describe how function families behave.</li><li>I can compare different function families.</li><li>I can distinguish classification from full modeling.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Equations</li><li>Tables</li><li>Contexts</li><li>Parent function sketches</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>classification activities</li><li>matching graph shapes to equations</li><li>comparing growth patterns</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 1.4: Expressions and Structure</div>
+<p><strong>Learning Target: Students will interpret and rewrite algebraic expressions by identifying structure, meaning, and equivalent forms.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify parts of an expression.</li><li>I can simplify expressions.</li><li>I can write equivalent expressions.</li><li>I can explain what an expression means in context.</li><li>I can use structure to choose an efficient rewrite.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Symbolic expressions</li><li>Verbal descriptions</li><li>Area models</li><li>Tables</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>geometry formulas</li><li>cost formulas</li><li>pattern rules</li><li>quantity relationships</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 1.5: Equations as Models</div>
+<p><strong>Learning Target: Students will write, solve, and interpret equations that model situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can write equations to represent situations.</li><li>I can solve equations and interpret solutions.</li><li>I can determine whether a solution is reasonable.</li><li>I can explain what a solution means in context.</li><li>I can compare equation solving with other solution strategies.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Tables</li><li>Contexts</li><li>Verbal descriptions</li><li>Graphs</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>break-even situations</li><li>ticket sales</li><li>geometry contexts</li><li>proportional situations</li></ul>
+</section>
+<section class="outline-card"><div class="outline-card-title">Unit Modeling Themes</div>
+<ul><li>matching representations of the same relationship</li><li>cost and quantity situations</li><li>distance and time relationships</li><li>earnings and hours worked</li><li>function-rule situations</li><li>classification of relationship types</li><li>equations that model decisions</li></ul>
+</section>
+<!-- ======================= SECTION OUTLINE END ======================= -->
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr>
+<tr class="dok4"><td>8</td><td>I can analyze and model relationships using functions, expressions, equations, graphs, tables, and contexts, then justify conclusions and evaluate whether solutions are reasonable.</td><td>MP4 Model with Mathematics / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok4"><td>7</td><td>I can create, compare, and revise mathematical models across multiple representations and critique whether the representations accurately describe the same relationship.</td><td>MP1 Make Sense and Persevere / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok3"><td>6</td><td>I can analyze functions, expressions, and equations to explain structure, identify function-family behavior, and connect features across representations.</td><td>MP7 Look for Structure / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok3"><td>5</td><td>I can justify whether representations match, explain input-output relationships, and defend conclusions using evidence from tables, graphs, equations, and contexts.</td><td>MP2 Reason Abstractly and Quantitatively / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok2"><td>4</td><td>I can write and rewrite expressions and equations to represent relationships, functions, and situations.</td><td>MP4 Model with Mathematics / MP7 Look for Structure</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok2"><td>3</td><td>I can evaluate function rules, use inputs and outputs, classify common function families, and connect basic representations.</td><td>MP8 Look for and Express Regularity in Repeated Reasoning</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok1"><td>2</td><td>I can identify and use vocabulary, notation, and features for functions, inputs, outputs, expressions, equations, tables, graphs, and contexts.</td><td>MP6 Attend to Precision</td><td>DOK 1</td><td>Essential</td></tr>
+<tr class="dok1"><td>1</td><td>I can recognize tables, graphs, equations, expressions, contexts, and basic function-family shapes as different ways to represent mathematical relationships.</td><td>MP1 Make Sense of Problems / MP5 Use Appropriate Tools Strategically</td><td>DOK 1</td><td>Essential</td></tr>
+</table>
+<h2>Progress Tracking</h2>
+<div class="progress-tracker"><div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div><div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div><div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div></div>
+<h2>Assessment Methods by DOK Level</h2>
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, representation match, graph/equation identification, or exit ticket</strong></p>
+<p>Purpose: Check whether students can recall vocabulary, recognize representations, identify inputs and outputs, classify basic function-family shapes, and use notation correctly.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit1_formative/unit1_dok1-1.html">Representation Vocabulary Check</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students identify tables, graphs, equations, contexts, variables, and representation features.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok1-2.html">Input-Output Fluency Check</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students identify inputs and outputs and evaluate simple function rules.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok1-3.html">Function Family Recognition Check</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students recognize common function families from basic graphs and equations.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok1-4.html">Expression and Equation Notation Check</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students identify expression parts, equation structure, variables, and solutions.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students who struggle here need additional support with the language and notation of functions, representations, expressions, and equations before moving into deeper modeling and justification.</div>
+</section>
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card">
+<p><strong>Format: Exit ticket, partner check, whiteboard response, mini-quiz, matching task, or short written task</strong></p>
+<p>Purpose: Check whether students can evaluate function rules, match representations, rewrite expressions, classify function families, and write equations from situations.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit1_formative/unit1_dok2-1.html">Multiple Representation Match Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students match a table, graph, equation, and context that represent the same relationship.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok2-2.html">Function Rule Evaluation Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students evaluate a function rule for several inputs and interpret the outputs.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok2-3.html">Function Family Sorting Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students sort graphs and equations into function families and explain simple features.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok2-4.html">Equation Model Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students write and solve an equation from a context and interpret the solution.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students at this level can generally use procedures and representations, but the assessment reveals whether they understand how relationships, rules, expression structure, and equations connect.</div>
+</section>
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, representation analysis, strategy comparison, error analysis, or discourse prompt</strong></p>
+<p>Purpose: Check whether students can justify representation matches, analyze function behavior, explain expression structure, and defend the reasonableness of equations as models.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit1_formative/unit1_dok3-1.html">Representation Justification Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students justify whether multiple representations describe the same relationship using mathematical evidence.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok3-2.html">Function Behavior Explanation Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students compare two function families and explain differences in graph, table, and equation behavior.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok3-3.html">Expression Structure Analysis Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students analyze equivalent expressions and explain why different forms reveal different information.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok3-4.html">Equation Model Critique Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students critique an equation model or solution interpretation and revise the reasoning.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>This level reveals whether students understand functions and algebraic relationships as connected systems of representations rather than isolated procedures. These tasks identify reasoning gaps and readiness for later linear modeling.</div>
+</section>
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p>
+<p>Purpose: Check whether students can transfer function and algebra foundations to unfamiliar situations, create coherent models, and justify conclusions across multiple representations.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit1_formative/unit1_dok4-1.html">Build a Relationship Web Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students create a table, graph, equation, and context for the same relationship and justify the connections.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok4-2.html">Design a Function Rule Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students design a function rule for a situation, evaluate it, and explain the meaning of inputs and outputs.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok4-3.html">Function Family Classification Challenge</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students create examples and non-examples of function families and defend classifications.</li>
+<li><a href="../../formative/unit1_formative/unit1_dok4-4.html">Equation as a Model Performance Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students create, solve, interpret, and critique an equation model for a real-world situation.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can design, connect, critique, and revise representations and models. These should remain short performance tasks rather than large projects.</div>
+</section>
+<h2>Summative Assessment Plan</h2><section class="summative-card">
+<p><a href="../../summative/unit1_summative/unit1_summative_assessment.html">Unit 1 Summative Assessment</a> <span class="timing-label">Unit 1 Assessed During Unit 3</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of representation tasks, function-rule tasks, expression and equation tasks, and short reasoning prompts aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize multiple representations, function notation and input-output reasoning, function-family recognition, expression structure, equation modeling, representation connections, mathematical communication, and justification of reasoning.</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>Because of the spiraling course structure, Unit 1 is assessed during Unit 3 after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction.</p>
+</section>
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>The student demonstrates a strong and flexible understanding of Unit 1 concepts: functions, multiple representations, expression structure, and equations as models. Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects equations, graphs, tables, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>The student demonstrates solid understanding of the essential Unit 1 concepts. Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, though they may lack some precision or depth.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>The student demonstrates partial but passable understanding of Unit 1 concepts. The student can complete many routine tasks but may need support with notation, reasoning, restrictions, representations, or multi-step problem solving. Work may contain errors or incomplete explanations, but there is enough evidence that the student understands the main ideas.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>The student does not yet demonstrate sufficient understanding of the essential Unit 1 concepts. Work shows major errors, missing reasoning, weak conceptual understanding, or inability to connect representations. The student may need reteaching, additional practice, or reassessment to demonstrate proficiency.</p></section>
+<!-- ======================= UNIT 1 OUTLINE END ======================= -->
+<div class="page-break"></div>
+<!-- ======================= ASSESSMENT BANK START ======================= -->
+<h1>Assessment Bank</h1>
+<div class="bank-intro"><p><strong>Unit 1 Assessment Bank:</strong> Problems are organized by Depth of Knowledge and designed as source items for formative assessments, reassessments, summative assessment versions, practice sets, intervention, and enrichment.</p><p class="small-note">Rolling timing: Unit 1 is assessed during Unit 3.</p></div>
+<div class="dok-bar">Assessment Bank DOK 1</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 1 items provide evidence of foundational vocabulary, representation recognition, function notation, input-output fluency, expression vocabulary, and basic equation-model awareness. These items are designed for quick retrieval practice, warm-ups, proficiency checks, exit tickets, and foundational formative assessment.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>identify features in graphs, tables, equations, and contexts</li><li>read coordinates and ordered pairs</li><li>determine inputs and outputs</li><li>recognize basic function families</li><li>identify expression parts</li><li>recognize equations as models</li></ul>
+</section>
+<h2>Multiple Representations of Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.001">
+<div class="problem-number">Assessment Bank DOK 1.001<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Use the coordinate plane below. State the coordinates of points A and C.</p><div class="graph-block graph-md"><img alt="Coordinate plane with labeled points" src="figures/unit1_coord_points.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.002">
+<div class="problem-number">Assessment Bank DOK 1.002<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Complete the table for the relationship $y=x+2$.</p><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.003">
+<div class="problem-number">Assessment Bank DOK 1.003<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Which table value appears on the graph below when $x=3$?</p><div class="graph-block graph-md"><img alt="Linear relationship shown with points" src="figures/unit1_linear_points.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.004">
+<div class="problem-number">Assessment Bank DOK 1.004<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Use the graph below. What quantity is shown on the horizontal axis? What quantity is shown on the vertical axis?</p><div class="graph-block graph-lg"><img alt="Distance over time graph" src="figures/unit1_distance_time.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.005">
+<div class="problem-number">Assessment Bank DOK 1.005<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Identify the representation type: table, graph, equation, or context.</p><p>$y=4x+1$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.006">
+<div class="problem-number">Assessment Bank DOK 1.006<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 1</span></div>
+<p>Match the phrase to a representation type: <em>The cost is 5 dollars for each ticket plus a 10 dollar fee.</em></p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 END ======================= -->
+<h2>Inputs, Outputs, and Functions</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.007">
+<div class="problem-number">Assessment Bank DOK 1.007<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>Use the function machine. If the input is $4$, what is the output?</p><div class="graph-block figure-lg"><img alt="Function machine with rule 2x plus 3" src="figures/unit1_function_machine.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.008">
+<div class="problem-number">Assessment Bank DOK 1.008<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>For the rule $f(x)=3x-2$, find $f(5)$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.009">
+<div class="problem-number">Assessment Bank DOK 1.009<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>In the ordered pair $(6,11)$, identify the input and the output.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.010">
+<div class="problem-number">Assessment Bank DOK 1.010<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>Does each input in Relation R have exactly one output?</p><div class="graph-block graph-md"><img alt="Discrete relation with one output per input" src="figures/unit1_relation_function.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.011">
+<div class="problem-number">Assessment Bank DOK 1.011<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>Complete the output row for the rule: multiply the input by 2.</p><table class="values"><tr><th>Input</th><td>1</td><td>3</td><td>5</td></tr><tr><th>Output</th><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.012">
+<div class="problem-number">Assessment Bank DOK 1.012<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 1</span></div>
+<p>State whether $x$ or $f(x)$ represents the output in function notation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 END ======================= -->
+<h2>Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.013">
+<div class="problem-number">Assessment Bank DOK 1.013<span class="problem-meta">Unit 1 | Function Families | DoK 1</span></div>
+<p>Identify the family shown in Graph A: linear, quadratic, absolute value, or exponential.</p><div class="graph-block graph-xl"><img alt="Four basic function family graphs" src="figures/unit1_family_set.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.014">
+<div class="problem-number">Assessment Bank DOK 1.014<span class="problem-meta">Unit 1 | Function Families | DoK 1</span></div>
+<p>Identify the family shown below.</p><div class="graph-block graph-md"><img alt="Parabola graph" src="figures/unit1_parabola.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.015">
+<div class="problem-number">Assessment Bank DOK 1.015<span class="problem-meta">Unit 1 | Function Families | DoK 1</span></div>
+<p>Identify the family shown below.</p><div class="graph-block graph-md"><img alt="Absolute value graph" src="figures/unit1_abs_value.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.016">
+<div class="problem-number">Assessment Bank DOK 1.016<span class="problem-meta">Unit 1 | Function Families | DoK 1</span></div>
+<p>Classify the equation as linear, quadratic, or exponential: $$y=2x+7$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.017">
+<div class="problem-number">Assessment Bank DOK 1.017<span class="problem-meta">Unit 1 | Function Families | DoK 1</span></div>
+<p>Classify the equation as linear, quadratic, or exponential: $$y=x^2-4$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 END ======================= -->
+<h2>Expressions and Structure</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.018">
+<div class="problem-number">Assessment Bank DOK 1.018<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 1</span></div>
+<p>Identify the coefficient in the expression $7x+4$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.019">
+<div class="problem-number">Assessment Bank DOK 1.019<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 1</span></div>
+<p>Identify the constant term in the expression $3n-8$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.020">
+<div class="problem-number">Assessment Bank DOK 1.020<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 1</span></div>
+<p>Combine like terms: $$4x+6x$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.021">
+<div class="problem-number">Assessment Bank DOK 1.021<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 1</span></div>
+<p>The area model below represents an expression. Which term represents the constant part?</p><div class="graph-block figure-lg"><img alt="Area model with 3x and 12 regions" src="figures/unit1_area_model.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.022">
+<div class="problem-number">Assessment Bank DOK 1.022<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 1</span></div>
+<p>Determine whether $2(x+5)$ and $2x+10$ are equivalent.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 END ======================= -->
+<h2>Equations as Models</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.023">
+<div class="problem-number">Assessment Bank DOK 1.023<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>A taxi charges 4 dollars plus 2 dollars per mile. Which expression models the total cost for $m$ miles?</p><ol class="lower-alpha"><li>$4m+2$</li><li>$2m+4$</li><li>$6m$</li><li>$m+6$</li></ol>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.024">
+<div class="problem-number">Assessment Bank DOK 1.024<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>Use the graph. What is the starting cost when 0 tickets are purchased?</p><div class="graph-block graph-lg"><img alt="Ticket cost graph" src="figures/unit1_ticket_cost.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.025">
+<div class="problem-number">Assessment Bank DOK 1.025<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>In the equation $C=8h+20$, identify what $h$ could represent if $C$ is total cost.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.026">
+<div class="problem-number">Assessment Bank DOK 1.026<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>For the equation $y=5x+3$, identify the value added after multiplying by 5.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.027">
+<div class="problem-number">Assessment Bank DOK 1.027<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>Determine whether $x=4$ makes the equation true: $$3x+2=14$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U1-DOK1.028">
+<div class="problem-number">Assessment Bank DOK 1.028<span class="problem-meta">Unit 1 | Equations as Models | DoK 1</span></div>
+<p>What does a solution to an equation represent in a real-world model?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 2</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 2 items provide evidence of procedural understanding, representation skills, organization, and connections among tables, graphs, equations, contexts, function rules, expressions, and models.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>move between tables, graphs, equations, and contexts</li><li>evaluate and interpret function rules</li><li>recognize functions from representations</li><li>classify function families using evidence</li><li>rewrite expressions using structure</li><li>write and solve simple equations from situations</li></ul>
+</section>
+<h2>Multiple Representations of Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.001">
+<div class="problem-number">Assessment Bank DOK 2.001<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>The graph below shows a relationship. Complete a table with at least four ordered pairs from the graph.</p><div class="graph-block graph-md"><img alt="Linear graph with plotted points" src="figures/unit1_linear_points.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.002">
+<div class="problem-number">Assessment Bank DOK 2.002<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>Graph the points from the table on the grid.</p><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>3</td><td>5</td><td>7</td></tr></table><div class="graph-block graph-md"><img alt="Blank coordinate grid" src="figures/unit1_blank_grid.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.003">
+<div class="problem-number">Assessment Bank DOK 2.003<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>Write a verbal description for the table.</p><table class="values"><tr><th>Hours</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Total dollars</th><td>10</td><td>18</td><td>26</td><td>34</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.004">
+<div class="problem-number">Assessment Bank DOK 2.004<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>Use the graph to write a sentence describing how distance changes as time increases.</p><div class="graph-block graph-lg"><img alt="Distance over time graph" src="figures/unit1_distance_time.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.005">
+<div class="problem-number">Assessment Bank DOK 2.005<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>Determine whether the equation $y=2x+1$ matches the table.</p><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>3</td><td>5</td><td>7</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.006">
+<div class="problem-number">Assessment Bank DOK 2.006<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 2</span></div>
+<p>A relationship is described by the equation $y=4x$. Create a table and describe a possible context.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 END ======================= -->
+<h2>Inputs, Outputs, and Functions</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.007">
+<div class="problem-number">Assessment Bank DOK 2.007<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>Evaluate the function rule for each input.</p><p>$f(x)=2x+5$</p><table class="values"><tr><th>$x$</th><td>-1</td><td>0</td><td>3</td></tr><tr><th>$f(x)$</th><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.008">
+<div class="problem-number">Assessment Bank DOK 2.008<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>Determine whether Relation S is a function. Explain using the graph.</p><div class="graph-block graph-md"><img alt="Discrete relation with repeated input" src="figures/unit1_relation_nonfunction.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.009">
+<div class="problem-number">Assessment Bank DOK 2.009<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>A function has rule $g(x)=x^2+1$. Find $g(-3)$ and $g(4)$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.010">
+<div class="problem-number">Assessment Bank DOK 2.010<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>Use the graph below to estimate the output when the input is 4.</p><div class="graph-block graph-lg"><img alt="Graph of input-output relationship" src="figures/unit1_mixed_growth.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.011">
+<div class="problem-number">Assessment Bank DOK 2.011<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>Write a rule for the table.</p><table class="values"><tr><th>Input</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Output</th><td>4</td><td>7</td><td>10</td><td>13</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.012">
+<div class="problem-number">Assessment Bank DOK 2.012<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 2</span></div>
+<p>Create three input-output pairs for the rule $y=5x-2$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 END ======================= -->
+<h2>Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.013">
+<div class="problem-number">Assessment Bank DOK 2.013<span class="problem-meta">Unit 1 | Function Families | DoK 2</span></div>
+<p>Match each graph A-D to its likely function family: linear, quadratic, absolute value, or exponential.</p><div class="graph-block graph-xl"><img alt="Four function family graphs" src="figures/unit1_family_set.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.014">
+<div class="problem-number">Assessment Bank DOK 2.014<span class="problem-meta">Unit 1 | Function Families | DoK 2</span></div>
+<p>Classify each equation by function family.</p><ol class="lower-alpha"><li>$y=3x-4$</li><li>$y=x^2+2$</li><li>$y=2^x$</li></ol>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.015">
+<div class="problem-number">Assessment Bank DOK 2.015<span class="problem-meta">Unit 1 | Function Families | DoK 2</span></div>
+<p>Use the table to decide whether the pattern appears linear. Explain briefly.</p><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>5</td><td>8</td><td>11</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.016">
+<div class="problem-number">Assessment Bank DOK 2.016<span class="problem-meta">Unit 1 | Function Families | DoK 2</span></div>
+<p>Use the graph below to identify the family and one visible feature.</p><div class="graph-block graph-md"><img alt="Quadratic graph" src="figures/unit1_parabola.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.017">
+<div class="problem-number">Assessment Bank DOK 2.017<span class="problem-meta">Unit 1 | Function Families | DoK 2</span></div>
+<p>Give one feature that helps distinguish a linear graph from a quadratic graph.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 END ======================= -->
+<h2>Expressions and Structure</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.018">
+<div class="problem-number">Assessment Bank DOK 2.018<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 2</span></div>
+<p>Simplify the expression and identify the terms that were combined.</p><p>$$5x+3+2x-1$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.019">
+<div class="problem-number">Assessment Bank DOK 2.019<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 2</span></div>
+<p>Use the distributive property to rewrite the expression.</p><p>$$4(x+6)$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.020">
+<div class="problem-number">Assessment Bank DOK 2.020<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 2</span></div>
+<p>Write an expression represented by the area model.</p><div class="graph-block figure-lg"><img alt="Area model with algebraic regions" src="figures/unit1_area_model.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.021">
+<div class="problem-number">Assessment Bank DOK 2.021<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 2</span></div>
+<p>Determine whether $3(x+2)$ and $3x+6$ are equivalent. Use substitution to check.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.022">
+<div class="problem-number">Assessment Bank DOK 2.022<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 2</span></div>
+<p>A student rewrites $6x+9$ as $3(2x+3)$. Verify that the expressions are equivalent.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 END ======================= -->
+<h2>Equations as Models</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.023">
+<div class="problem-number">Assessment Bank DOK 2.023<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>Use the ticket-cost graph to write an equation for total cost $C$ in terms of tickets $t$.</p><div class="graph-block graph-lg"><img alt="Ticket cost graph" src="figures/unit1_ticket_cost.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.024">
+<div class="problem-number">Assessment Bank DOK 2.024<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>Write and solve an equation for the situation: A gym charges 20 dollars to join and 15 dollars each month. The total cost is 80 dollars.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.025">
+<div class="problem-number">Assessment Bank DOK 2.025<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>The model $C=12+4m$ represents a monthly cost. Interpret the 12 and the 4 in context.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.026">
+<div class="problem-number">Assessment Bank DOK 2.026<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>Solve the equation and explain what the solution could represent in a context.</p><p>$$5x+10=40$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.027">
+<div class="problem-number">Assessment Bank DOK 2.027<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>Compare Plan A and Plan B at 4 months using the graph.</p><div class="graph-block graph-lg"><img alt="Two linear cost plans" src="figures/unit1_two_plans.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U1-DOK2.028">
+<div class="problem-number">Assessment Bank DOK 2.028<span class="problem-meta">Unit 1 | Equations as Models | DoK 2</span></div>
+<p>Create a table for the model $y=3x+2$ and use it to answer: what is $y$ when $x=6$?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 3</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 3 items provide evidence of reasoning, justification, strategy comparison, error analysis, representation analysis, and mathematical communication across functions and algebraic models.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>justify connections among representations</li><li>critique incorrect reasoning</li><li>compare strategies and representations</li><li>explain function-family evidence</li><li>interpret structure in expressions and equations</li><li>defend conclusions using mathematical evidence</li></ul>
+</section>
+<h2>Multiple Representations of Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.001">
+<div class="problem-number">Assessment Bank DOK 3.001<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 3</span></div>
+<p>A student claims the graph below matches the table shown. Determine whether the student is correct and justify your reasoning.</p><div class="graph-block graph-md"><img alt="Graph of y equals 2x plus 1" src="figures/unit1_graph_2x_plus1.png"/></div><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>2</td><td>5</td><td>7</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.002">
+<div class="problem-number">Assessment Bank DOK 3.002<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 3</span></div>
+<p>Compare the equation $y=3x+2$ and the context: A delivery company charges 3 dollars per mile plus a 2 dollar fee. Explain how each part of the equation appears in the context.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.003">
+<div class="problem-number">Assessment Bank DOK 3.003<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 3</span></div>
+<p>Use the distance-time graph to explain why time should be the input and distance should be the output in this situation.</p><div class="graph-block graph-lg"><img alt="Distance over time graph" src="figures/unit1_distance_time.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.004">
+<div class="problem-number">Assessment Bank DOK 3.004<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 3</span></div>
+<p>Create a table, equation, and context that all represent the same relationship. Explain how someone could verify that all three match.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.005">
+<div class="problem-number">Assessment Bank DOK 3.005<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 3</span></div>
+<p>Use the graph below to write a possible story. Explain which parts of the graph support your story.</p><div class="graph-block graph-lg"><img alt="Graph of changing relationship" src="figures/unit1_mixed_growth.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 END ======================= -->
+<h2>Inputs, Outputs, and Functions</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.006">
+<div class="problem-number">Assessment Bank DOK 3.006<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 3</span></div>
+<p>Relation S is not a function. Explain the issue using the meaning of input and output, not just by naming a rule.</p><div class="graph-block graph-md"><img alt="Non-function relation graph" src="figures/unit1_relation_nonfunction.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.007">
+<div class="problem-number">Assessment Bank DOK 3.007<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 3</span></div>
+<p>A student says, “Every table is a function.” Critique the statement using an example.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.008">
+<div class="problem-number">Assessment Bank DOK 3.008<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 3</span></div>
+<p>Two function rules are $f(x)=2x+1$ and $g(x)=x+4$. Compare the outputs when $x=0$, $x=3$, and $x=6$. Explain what you notice.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.009">
+<div class="problem-number">Assessment Bank DOK 3.009<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 3</span></div>
+<p>Use Relation R to explain why a relation can be a function even if the outputs repeat.</p><div class="graph-block graph-md"><img alt="Discrete relation with possible repeated outputs" src="figures/unit1_relation_function.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.010">
+<div class="problem-number">Assessment Bank DOK 3.010<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 3</span></div>
+<p>Design a relation that is not a function. Explain the exact feature that makes it fail to be a function.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 END ======================= -->
+<h2>Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.011">
+<div class="problem-number">Assessment Bank DOK 3.011<span class="problem-meta">Unit 1 | Function Families | DoK 3</span></div>
+<p>Compare Graph A and Graph B. Explain how their shapes show different function families.</p><div class="graph-block graph-xl"><img alt="Four function family graphs" src="figures/unit1_family_set.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.012">
+<div class="problem-number">Assessment Bank DOK 3.012<span class="problem-meta">Unit 1 | Function Families | DoK 3</span></div>
+<p>A student claims $y=x^2+3$ is linear because the equation has an $x$. Explain the misconception and correct it.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.013">
+<div class="problem-number">Assessment Bank DOK 3.013<span class="problem-meta">Unit 1 | Function Families | DoK 3</span></div>
+<p>Use a table of values to explain why $y=2x+1$ behaves differently from $y=x^2+1$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.014">
+<div class="problem-number">Assessment Bank DOK 3.014<span class="problem-meta">Unit 1 | Function Families | DoK 3</span></div>
+<p>Use the graph to identify the function family and justify your answer with at least two features.</p><div class="graph-block graph-md"><img alt="Absolute value graph" src="figures/unit1_abs_value.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.015">
+<div class="problem-number">Assessment Bank DOK 3.015<span class="problem-meta">Unit 1 | Function Families | DoK 3</span></div>
+<p>Explain why recognizing a function family can help you predict graph behavior before graphing exact points.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 END ======================= -->
+<h2>Expressions and Structure</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.016">
+<div class="problem-number">Assessment Bank DOK 3.016<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>Explain why $4(x+5)$ and $4x+20$ are equivalent using both the distributive property and a context.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.017">
+<div class="problem-number">Assessment Bank DOK 3.017<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>Use the area model to explain why multiplying can create an equivalent expression rather than a new unrelated expression.</p><div class="graph-block figure-lg"><img alt="Area model showing equivalent expressions" src="figures/unit1_area_model.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.018">
+<div class="problem-number">Assessment Bank DOK 3.018<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>A student simplifies $3x+4+2x$ as $9x$. Analyze the error and write a correction that would help the student.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.019">
+<div class="problem-number">Assessment Bank DOK 3.019<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>Compare simplifying first versus substituting first for $2(x+3)+4$ when $x=5$. Which method is more efficient and why?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.020">
+<div class="problem-number">Assessment Bank DOK 3.020<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>Create two equivalent expressions. Explain how structure shows they are equivalent.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.021">
+<div class="problem-number">Assessment Bank DOK 3.021<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 3</span></div>
+<p>Explain why $5x+2$ and $5(x+2)$ are not equivalent, even though both contain 5, $x$, and 2.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 END ======================= -->
+<h2>Equations as Models</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.022">
+<div class="problem-number">Assessment Bank DOK 3.022<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>Use the graph of the two plans. Which plan is cheaper at first? Which plan becomes cheaper later? Justify using the graph.</p><div class="graph-block graph-lg"><img alt="Two linear cost plans" src="figures/unit1_two_plans.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.023">
+<div class="problem-number">Assessment Bank DOK 3.023<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>A student solves $4x+12=40$ and says the answer means “7 dollars.” Critique the interpretation and explain what information is needed to interpret correctly.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.024">
+<div class="problem-number">Assessment Bank DOK 3.024<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>Write a situation for the equation $6x+15=51$. Solve it and explain why the solution is reasonable in your situation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.025">
+<div class="problem-number">Assessment Bank DOK 3.025<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>Use the ticket-cost graph to explain how an equation, graph, and context can all show the same starting value.</p><div class="graph-block graph-lg"><img alt="Ticket cost graph" src="figures/unit1_ticket_cost.png"/></div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.026">
+<div class="problem-number">Assessment Bank DOK 3.026<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>Compare two methods for solving $3x+9=30$: using inverse operations and using a table. Explain strengths of each method.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.027">
+<div class="problem-number">Assessment Bank DOK 3.027<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>A student says an equation model only gives an answer, not meaning. Respond using a real-world example.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U1-DOK3.028">
+<div class="problem-number">Assessment Bank DOK 3.028<span class="problem-meta">Unit 1 | Equations as Models | DoK 3</span></div>
+<p>Create an equation model that has a solution that would not make sense in context. Explain why the mathematical solution must be rejected or revised.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 4</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 4 items provide evidence of transfer, modeling, design, critique, synthesis, and decision-making across multiple representations of relationships and algebraic models.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>design and connect multiple representations</li><li>model unfamiliar situations</li><li>critique and revise representations</li><li>justify model choices</li><li>synthesize function, expression, graph, table, and context reasoning</li><li>communicate conclusions with evidence</li></ul>
+</section>
+<h2>Multiple Representations of Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.001">
+<div class="problem-number">Assessment Bank DOK 4.001<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 4</span></div>
+<p>Create a relationship that can be represented with a table, graph, equation, and context. Include all four representations and explain how each one shows the same relationship.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.002">
+<div class="problem-number">Assessment Bank DOK 4.002<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 4</span></div>
+<p>Design a context that could match the graph below. Then identify one limitation of your model.</p><div class="graph-block graph-lg"><img alt="Graph for modeling context" src="figures/unit1_mixed_growth.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.003">
+<div class="problem-number">Assessment Bank DOK 4.003<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 4</span></div>
+<p>Create a “Which Representation Does Not Belong?” task using one table, one graph description, one equation, and one context. Identify the mismatch and justify your answer.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.004">
+<div class="problem-number">Assessment Bank DOK 4.004<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 4</span></div>
+<p>Use the graph below to create a matching table and equation. Then write a short explanation that would convince another student they all represent the same relationship.</p><div class="graph-block graph-md"><img alt="Linear graph with points" src="figures/unit1_linear_points.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.005">
+<div class="problem-number">Assessment Bank DOK 4.005<span class="problem-meta">Unit 1 | Multiple Representations of Relationships | DoK 4</span></div>
+<p>Design a representation-matching activity for another student involving cost, time, or distance. Include the answer key and explain the reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 END ======================= -->
+<h2>Inputs, Outputs, and Functions</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.006">
+<div class="problem-number">Assessment Bank DOK 4.006<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 4</span></div>
+<p>Create two relations: one that is a function and one that is not a function. Represent each with either a table or graph, and explain the difference using inputs and outputs.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.007">
+<div class="problem-number">Assessment Bank DOK 4.007<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 4</span></div>
+<p>Critique and revise Relation S so that it becomes a function while changing as few points as possible. Explain your revision.</p><div class="graph-block graph-md"><img alt="Non-function relation graph" src="figures/unit1_relation_nonfunction.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.008">
+<div class="problem-number">Assessment Bank DOK 4.008<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 4</span></div>
+<p>Create a function rule for a real-world situation. Choose three inputs, compute the outputs, and explain what the ordered pairs mean.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.009">
+<div class="problem-number">Assessment Bank DOK 4.009<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 4</span></div>
+<p>Design a function-machine puzzle where the rule is hidden. Include at least four input-output pairs and explain how the rule can be discovered.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.010">
+<div class="problem-number">Assessment Bank DOK 4.010<span class="problem-meta">Unit 1 | Inputs, Outputs, and Functions | DoK 4</span></div>
+<p>A student believes any repeated output means a relation is not a function. Create a counterexample and explain why the student is wrong.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 END ======================= -->
+<h2>Function Families</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.011">
+<div class="problem-number">Assessment Bank DOK 4.011<span class="problem-meta">Unit 1 | Function Families | DoK 4</span></div>
+<p>Create a classification challenge using the four graph families below. Write one clue for each graph that does not directly name the family.</p><div class="graph-block graph-xl"><img alt="Function family graph set" src="figures/unit1_family_set.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.012">
+<div class="problem-number">Assessment Bank DOK 4.012<span class="problem-meta">Unit 1 | Function Families | DoK 4</span></div>
+<p>Design two different situations: one that would be better modeled by a linear function and one that would be better modeled by a quadratic function. Explain how the behavior is different.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.013">
+<div class="problem-number">Assessment Bank DOK 4.013<span class="problem-meta">Unit 1 | Function Families | DoK 4</span></div>
+<p>Create a table that looks linear at first but is not linear. Explain how a student can detect the difference.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.014">
+<div class="problem-number">Assessment Bank DOK 4.014<span class="problem-meta">Unit 1 | Function Families | DoK 4</span></div>
+<p>Use the graph below to create a context. Then explain why this context fits the function family better than a linear model.</p><div class="graph-block graph-md"><img alt="Quadratic graph" src="figures/unit1_parabola.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.015">
+<div class="problem-number">Assessment Bank DOK 4.015<span class="problem-meta">Unit 1 | Function Families | DoK 4</span></div>
+<p>Critique this statement: “Function families are just graph shapes to memorize.” Use at least two representations in your response.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 END ======================= -->
+<h2>Expressions and Structure</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.016">
+<div class="problem-number">Assessment Bank DOK 4.016<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Create an expression that can be interpreted in two different ways, such as a cost model and an area model. Explain both interpretations.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.017">
+<div class="problem-number">Assessment Bank DOK 4.017<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Design a different area model that is equivalent to the expression represented below. Explain why both models have the same total value.</p><div class="graph-block figure-lg"><img alt="Area model with algebraic structure" src="figures/unit1_area_model.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.018">
+<div class="problem-number">Assessment Bank DOK 4.018<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Create an error-analysis problem involving equivalent expressions. Include incorrect student work, the misconception, and a corrected explanation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.019">
+<div class="problem-number">Assessment Bank DOK 4.019<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Write three expressions that are equivalent but look different. Explain how structure, substitution, or a model could prove they are equivalent.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.020">
+<div class="problem-number">Assessment Bank DOK 4.020<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Create a real-world scenario that could be represented by both $4x+12$ and $4(x+3)$. Explain why both forms are useful.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.021">
+<div class="problem-number">Assessment Bank DOK 4.021<span class="problem-meta">Unit 1 | Expressions and Structure | DoK 4</span></div>
+<p>Design a short “convince me” task where another student must prove two expressions are or are not equivalent.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 END ======================= -->
+<h2>Equations as Models</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.022">
+<div class="problem-number">Assessment Bank DOK 4.022<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Use the two-plan graph to write a recommendation for a customer. Your recommendation must depend on the number of months and cite evidence from the graph.</p><div class="graph-block graph-lg"><img alt="Two cost plans graph" src="figures/unit1_two_plans.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.023">
+<div class="problem-number">Assessment Bank DOK 4.023<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Create a break-even situation represented by an equation. Solve it and explain what the break-even point means.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.024">
+<div class="problem-number">Assessment Bank DOK 4.024<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Design a flawed equation model for a real-world situation. Then critique and revise it so the equation correctly represents the situation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.025">
+<div class="problem-number">Assessment Bank DOK 4.025<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Create a scenario matching the ticket-cost graph. Then write a question that would require solving an equation using the model.</p><div class="graph-block graph-lg"><img alt="Ticket cost graph" src="figures/unit1_ticket_cost.png"/></div> 
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.026">
+<div class="problem-number">Assessment Bank DOK 4.026<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Compare an equation model and a table model for the same situation. Explain when each representation would be more useful.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.027">
+<div class="problem-number">Assessment Bank DOK 4.027<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Create a situation where the mathematical solution is correct but must be rounded or interpreted carefully in context. Explain the decision.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U1-DOK4.028">
+<div class="problem-number">Assessment Bank DOK 4.028<span class="problem-meta">Unit 1 | Equations as Models | DoK 4</span></div>
+<p>Design a multi-representation modeling task involving an equation, graph, table, and context. Include the expected student reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5–10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 END ======================= -->
+<!-- ======================= ASSESSMENT BANK END ======================= -->
+
+</div>
 </body>
 </html>

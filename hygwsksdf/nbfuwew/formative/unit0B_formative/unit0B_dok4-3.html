@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit0B_dok4-3.html
-     Path: hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-3.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-3.html
-
-     Formative assessment at Depth of Knowledge level 4, assessment 3 for Unit 0B.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoK 4 Formative Assessment 3 — Unit 0B — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0B DOK 4.3 Critique and Redesign</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.5in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; color:#111; background:#fff; font-size:11pt; line-height:1.38; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page { min-height:10in; page-break-after:always; break-after:page; display:flex; flex-direction:column; }
+.page:last-child { page-break-after:auto; }
+.header-row { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #00003d; padding-bottom:3px; margin-bottom:6px; flex-shrink:0; gap:12px; }
+.assessment-title { color:#00003d; font-size:14px; font-weight:800; }
+.name-line { font-weight:700; font-size:13px; white-space:nowrap; }
+.name-line span { display:inline-block; border-bottom:1px solid #111; height:12px; margin-left:6px; width:2.2in; vertical-align:bottom; }
+.directions { color:#444; font-size:10.5pt; margin:0 0 10px 0; flex-shrink:0; }
+.task { flex:1; padding:6px 2px 0 2px; }
+.qnum { color:#00003d; font-size:14pt; font-weight:800; margin:4px 0 6px 0; }
+p { margin-bottom:8px; }
+ol, ul { margin-left:26px; margin-bottom:10px; }
+li { margin-bottom:7px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin:10px 0 12px 0; }
+th, td { border:1px solid #777; padding:7px 8px; text-align:center; vertical-align:middle; font-size:11pt; }
+th { font-weight:800; background:#f4f4f4; }
+.left td, .left th { text-align:left; }
+.data-table { width:auto; margin:10px auto 12px auto; }
+.data-table th, .data-table td { min-width:0.55in; }
+.word-bank { border:1px solid #aaa; background:#f7f7f7; padding:8px 10px; margin:8px 0 12px 0; }
+.note { font-style:italic; color:#333; }
+.tight li { margin-bottom:4px; }
+.scenario { background:#f8fbff; border-left:5px solid #00003d; padding:8px 10px; margin:8px 0 12px 0; }
+.graph-block { margin: 12px 0 12px 0; text-align:center; break-inside:avoid; page-break-inside:avoid; }
+.graph-block img { max-width:100%; height:auto; border:1px solid #bbb; background:#fff; }
+.graph-md img { max-width:3.7in; }
+.graph-lg img { max-width:4.7in; }
+.graph-xl img { max-width:5.3in; }
+
+@media print { body { font-size:11pt; } }
+
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 0B</div>
-        <h1 class="course-title">DoK 4 Formative Assessment 3</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit0B_dok4-3.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-3.html<br>
-            <strong>Purpose:</strong> Formative assessment at Depth of Knowledge level 4, assessment 3 for Unit 0B.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-3.html
-        </div>
-    </div>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V1</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A context says: A club starts with 12 members and gains 5 members each week. A student creates the rule $M=12w+5$ and the table below.</div><table class="data-table"><tr><th>Week</th><td>0</td><td>1</td><td>2</td></tr><tr><th>Members</th><td>5</td><td>17</td><td>29</td></tr></table><ol type="a"><li>Identify what is wrong with the rule.</li><li>Identify what is wrong with the table.</li><li>Revise both so they match the context.</li><li>Explain how your corrected representations agree.</li><li>Write feedback to the student.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V2</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Use the graph below. A student table shows outputs 3, 10, 17, 24.</div><div class="graph-block graph-lg"><img src="figures/line_y_3x_7.png" alt="coordinate graph"/></div><ol type="a"><li>Identify the mismatch.</li><li>Write the equation for the graph.</li><li>Revise the table to match.</li><li>Explain the starting value and rate in the corrected table.</li><li>Describe how to check the graph, table, and equation.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V3</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A table for a tile pattern is shown, but one entry is wrong.</div><table class="data-table"><tr><th>Figure</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Tiles</th><td>6</td><td>10</td><td>14</td><td>21</td><td>22</td></tr></table><ol type="a"><li>Identify the intended rate if the pattern is linear.</li><li>Find the incorrect entry.</li><li>Correct the table.</li><li>Write a matching rule.</li><li>Explain how the error could mislead someone.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V4</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A student writes a context for $y=4x+9$: "Start with 4 and add 9 each time."</div><ol type="a"><li>Critique the context.</li><li>Write a corrected context.</li><li>Create a matching table.</li><li>Explain the meaning of 4 and 9 in your corrected context.</li><li>Use the model for one prediction.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V5</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A set of representations should match: table starts at 2 and adds 6; equation is $y=2x+6$; context says 2-dollar fee plus 6 dollars each item.</div><ol type="a"><li>Identify which representation does not belong.</li><li>Explain the error.</li><li>Revise the equation or the context so all match.</li><li>Create one ordered pair that supports the corrected set.</li><li>Justify your revision.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V6</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A student claims a table is linear and writes $y=5x+1$.</div><table class="data-table"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>6</td><td>12</td><td>16</td></tr></table><ol type="a"><li>Check whether the table is linear.</li><li>Identify any inconsistent value.</li><li>Revise the table to match the equation.</li><li>Or revise the equation to match a consistent table; explain your choice.</li><li>Write a final corrected representation set.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V7</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A real-world model for ticket cost has labels reversed: the table lists tickets in the cost row and cost in the ticket row.</div><table class="data-table"><tr><th>Cost</th><td>0</td><td>1</td><td>2</td></tr><tr><th>Tickets</th><td>5</td><td>9</td><td>13</td></tr></table><ol type="a"><li>Explain why the labels are misleading.</li><li>Rewrite the table with correct labels.</li><li>Write a matching equation.</li><li>Interpret the starting value and rate.</li><li>Explain how labels affect interpretation.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.3 Critique and Redesign &nbsp; V8</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A graph, table, and rule are supposed to show the same relationship. Use the graph below. The table starts at 10 and grows by 2. The rule is $y=10x+2$.</div><div class="graph-block graph-lg"><img src="figures/line_y_2x_10.png" alt="coordinate graph"/></div><ol type="a"><li>Identify the mismatch.</li><li>Write the corrected rule.</li><li>Explain why the original rule would produce a different table.</li><li>Create two ordered pairs from the corrected rule.</li><li>Explain how all representations now agree.</li></ol>
+</div>
+</section>
 </body>
 </html>
