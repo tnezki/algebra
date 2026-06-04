@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit0B_dok4-2.html
-     Path: hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-2.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-2.html
-
-     Formative assessment at Depth of Knowledge level 4, assessment 2 for Unit 0B.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoK 4 Formative Assessment 2 — Unit 0B — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0B DOK 4.2 Compare Two Plans</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.5in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; color:#111; background:#fff; font-size:11pt; line-height:1.38; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page { min-height:10in; page-break-after:always; break-after:page; display:flex; flex-direction:column; }
+.page:last-child { page-break-after:auto; }
+.header-row { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #00003d; padding-bottom:3px; margin-bottom:6px; flex-shrink:0; gap:12px; }
+.assessment-title { color:#00003d; font-size:14px; font-weight:800; }
+.name-line { font-weight:700; font-size:13px; white-space:nowrap; }
+.name-line span { display:inline-block; border-bottom:1px solid #111; height:12px; margin-left:6px; width:2.2in; vertical-align:bottom; }
+.directions { color:#444; font-size:10.5pt; margin:0 0 10px 0; flex-shrink:0; }
+.task { flex:1; padding:6px 2px 0 2px; }
+.qnum { color:#00003d; font-size:14pt; font-weight:800; margin:4px 0 6px 0; }
+p { margin-bottom:8px; }
+ol, ul { margin-left:26px; margin-bottom:10px; }
+li { margin-bottom:7px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin:10px 0 12px 0; }
+th, td { border:1px solid #777; padding:7px 8px; text-align:center; vertical-align:middle; font-size:11pt; }
+th { font-weight:800; background:#f4f4f4; }
+.left td, .left th { text-align:left; }
+.data-table { width:auto; margin:10px auto 12px auto; }
+.data-table th, .data-table td { min-width:0.55in; }
+.word-bank { border:1px solid #aaa; background:#f7f7f7; padding:8px 10px; margin:8px 0 12px 0; }
+.note { font-style:italic; color:#333; }
+.tight li { margin-bottom:4px; }
+.scenario { background:#f8fbff; border-left:5px solid #00003d; padding:8px 10px; margin:8px 0 12px 0; }
+.graph-block { margin: 12px 0 12px 0; text-align:center; break-inside:avoid; page-break-inside:avoid; }
+.graph-block img { max-width:100%; height:auto; border:1px solid #bbb; background:#fff; }
+.graph-md img { max-width:3.7in; }
+.graph-lg img { max-width:4.7in; }
+.graph-xl img { max-width:5.3in; }
+
+@media print { body { font-size:11pt; } }
+
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 0B</div>
-        <h1 class="course-title">DoK 4 Formative Assessment 2</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit0B_dok4-2.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-2.html<br>
-            <strong>Purpose:</strong> Formative assessment at Depth of Knowledge level 4, assessment 2 for Unit 0B.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit0B_formative/unit0B_dok4-2.html
-        </div>
-    </div>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V1</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two phone plans are offered. Plan A charges 20 dollars to start and 8 dollars per month. Plan B charges 50 dollars to start and 3 dollars per month.</div><ol type="a"><li>Write an equation for each plan.</li><li>Make a table for months 0, 5, and 10.</li><li>Determine which plan is cheaper at first.</li><li>Determine which plan is cheaper for a long time.</li><li>Write a recommendation for a customer and justify it.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V2</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two fundraising options are available. Option A starts with 30 dollars and adds 6 dollars per sponsor. Option B starts with 10 dollars and adds 11 dollars per sponsor.</div><ol type="a"><li>Write equations for both options.</li><li>Find when Option B becomes greater than Option A.</li><li>Use a table or equations to support your work.</li><li>Explain which option you would choose for 3 sponsors and for 10 sponsors.</li><li>Justify the recommendation.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V3</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">A gym offers two memberships. Basic has no joining fee and costs 18 dollars per month. Premium has a 60-dollar joining fee and costs 9 dollars per month.</div><ol type="a"><li>Write both cost rules.</li><li>Compare costs at 0, 4, and 8 months.</li><li>Find the break-even month if there is one.</li><li>Explain why the better plan depends on time.</li><li>Write a recommendation.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V4</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two tile patterns are competing for a display. Pattern A has 40 tiles at Figure 0 and grows by 2. Pattern B has 10 tiles at Figure 0 and grows by 7.</div><ol type="a"><li>Write rules for both patterns.</li><li>Find which pattern has more tiles at Figure 5.</li><li>Find which pattern has more tiles at Figure 10.</li><li>Explain how starting value and rate affect the comparison.</li><li>Make a justified decision for a large display.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V5</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two delivery services charge differently. Service A charges 5 dollars plus 4 dollars per mile. Service B charges 17 dollars plus 2 dollars per mile.</div><ol type="a"><li>Write equations for both services.</li><li>Compare costs for 2 miles and 8 miles.</li><li>Find when the costs are equal.</li><li>Explain which service is better for short distances and long distances.</li><li>Justify using mathematical evidence.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V6</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two savings accounts are tracked. Account A starts with 100 dollars and adds 15 dollars per week. Account B starts with 40 dollars and adds 25 dollars per week.</div><ol type="a"><li>Write an equation for each account.</li><li>Make a table for weeks 0, 3, and 6.</li><li>Determine when Account B catches up.</li><li>Explain which account has the larger starting value and which has the larger rate.</li><li>Write a conclusion.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V7</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two students are collecting cans. Student A already has 75 cans and collects 6 per day. Student B already has 30 cans and collects 15 per day.</div><ol type="a"><li>Write rules for both students.</li><li>Find who has more after 3 days.</li><li>Find who has more after 8 days.</li><li>Determine when the totals are equal.</li><li>Explain how the comparison changes.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 0B DOK 4.2 Compare Two Plans &nbsp; V8</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+<div class="scenario">Two amusement park passes are available. Pass A costs 12 dollars per ride. Pass B costs 45 dollars plus 5 dollars per ride.</div><ol type="a"><li>Write cost equations.</li><li>Compare at 3 rides and 10 rides.</li><li>Find the number of rides where costs are equal.</li><li>Recommend a pass for someone who will ride many rides.</li><li>Explain the reasoning clearly.</li></ol>
+</div>
+</section>
 </body>
 </html>

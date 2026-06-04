@@ -1,110 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Unit 8 DOK 3.4 Model Limitation Critique</title><script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; color:#000; background:#fff; font-size: 12pt; line-height:1.35; }
+.version { page-break-after: always; break-after: page; }
+.header { display:flex; align-items:flex-end; gap:16px; border-bottom:2px solid #000; padding-bottom:4px; margin-bottom:8px; }
+.title { font-weight:700; font-size:14pt; flex:1; }
+.name { font-weight:700; white-space:nowrap; }
+.name-line { display:inline-block; width:2.4in; border-bottom:2px solid #000; height:0.18in; vertical-align:bottom; }
+.directions { margin:8px 0 18px 0; }
+.problem-number { font-weight:700; font-size:20pt; margin:0 0 12px 0; }
+p { margin: 8px 0; }
+ol { margin: 8px 0 8px 24px; padding-left: 10px; }
+li { margin: 6px 0; }
+.values { border-collapse: collapse; margin: 10px auto 12px auto; }
+.values th, .values td { border:1px solid #000; padding:6px 12px; text-align:center; min-width:0.42in; }
+.graph-block, .figure-block { text-align:center; margin: 10px 0 12px 0; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img, .figure-block img { max-height:4in; max-width:6.2in; width:auto; height:auto; border:1px solid #999; }
+.graph-sm img { max-height:3.1in; }
+.graph-lg img { max-height:4in; }
+.two-col { display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:start; }
+.caption { font-size:10pt; text-align:center; margin-top:2px; }
+@media print { body { font-size:11.5pt; } .version:last-child { page-break-after:auto; break-after:auto; } }
 
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit8_dok3-4.html
-     Path: hygwsksdf/nbfuwew/formative/unit8_formative/unit8_dok3-4.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit8_formative/unit8_dok3-4.html
-
-     Formative assessment at Depth of Knowledge level 3, assessment 4 for Unit 8.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoK 3 Formative Assessment 4 — Unit 8 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 8</div>
-        <h1 class="course-title">DoK 3 Formative Assessment 4</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit8_dok3-4.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/formative/unit8_formative/unit8_dok3-4.html<br>
-            <strong>Purpose:</strong> Formative assessment at Depth of Knowledge level 3, assessment 4 for Unit 8.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/formative/unit8_formative/unit8_dok3-4.html
-        </div>
-    </div>
-</body>
-</html>
+</style></head><body><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V1</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/data_growth_v1.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V2</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/projectile_data_v2.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V3</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/model_compare_v3.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V4</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/cooling_data_v4.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V5</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/data_growth_v5.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V6</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/projectile_data_v6.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V7</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/model_compare_v7.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section><section class="version">
+<div class="header"><div class="title">Unit 8 DOK 3.4 Model Limitation Critique &nbsp; V8</div><div class="name">Name: <span class="name-line"></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="problem-number">1.</div>
+<p>A student makes a prediction from the model shown. Critique the conclusion before trusting it.</p><div class="graph-block graph-md"><img src="figures/cooling_data_v8.png" alt="graph"></div><ol type="a"><li>State what model type seems reasonable in the displayed data range.</li><li>Name one prediction that might be reasonable.</li><li>Name one prediction that might be risky or outside the model limits.</li><li>Revise the conclusion to include a limitation or assumption.</li></ol>
+</section></body></html>

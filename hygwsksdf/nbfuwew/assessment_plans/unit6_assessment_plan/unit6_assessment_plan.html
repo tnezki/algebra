@@ -1,110 +1,1072 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit6_assessment_plan.html
-     Path: hygwsksdf/nbfuwew/assessment_plans/unit6_assessment_plan/unit6_assessment_plan.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit6_assessment_plan/unit6_assessment_plan.html
-
-     Teacher-only assessment plan for Unit 6. Contains formative checkpoints, summative schedule, and DoK breakdown.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment Plan — Unit 6 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 6 Assessment Plan and Bank</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+
+/* ======================= RESET / PAGE ======================= */
+@page { size: letter; margin: 0.45in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  font-size: 11pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.container { max-width: 980px; margin: 0 auto; }
+.page-break { page-break-before: always; break-before: page; }
+.unbreakable, .assessment-card, .outline-card, .rubric-card, .ladder-table, .progress-tracker { break-inside: avoid; page-break-inside: avoid; }
+
+/* ======================= HEADER / TITLES ======================= */
+h1 { color: #00003d; font-size: 26pt; line-height: 1.1; margin-bottom: 8px; }
+h2 { color: #00003d; font-size: 17pt; margin: 18px 0 10px 0; border-left: 6px solid #00003d; padding-left: 10px; }
+h3 { color: #004d99; font-size: 13pt; margin: 12px 0 6px 0; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px 28px; }
+li { margin-bottom: 4px; }
+.small-note { font-size: 9.5pt; color: #555; font-style: italic; }
+
+/* ======================= OUTLINE CARDS ======================= */
+.outline-card {
+  border: 1px solid #9aa9bd;
+  border-left: 7px solid #00003d;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.outline-card-title { color: #00003d; font-weight: 800; font-size: 13.5pt; margin-bottom: 4px; }
+.essential-standard { font-size: 12pt; border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+
+/* ======================= TABLES ======================= */
+table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; }
+th, td { border: 1px solid #777; padding: 7px 8px; vertical-align: top; }
+th { background: #eaf1fb; color: #00003d; font-weight: 800; text-align: left; }
+.ladder-table th { background: #00003d; color: #fff; }
+.ladder-table .dok4 { background: #eef4ff; }
+.ladder-table .dok3 { background: #f6fbff; }
+.ladder-table .dok2 { background: #fffdf2; }
+.ladder-table .dok1 { background: #ffffff; }
+.table-block, .parent-table, table.values { width: auto; margin: 10px auto 12px auto; border-collapse: collapse; }
+.table-block td, .table-block th, .parent-table td, .parent-table th, table.values td, table.values th { border: 1px solid #777; padding: 6px 14px; text-align: center; vertical-align: middle; }
+
+/* ======================= PROGRESS TRACKING ======================= */
+.progress-tracker { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 12px 0 18px 0; }
+.progress-box { border: 1px solid #777; padding: 12px; min-height: 0.8in; }
+.progress-box strong { color: #00003d; }
+
+/* ======================= DOK SECTIONS ======================= */
+.dok-bar {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15pt;
+  padding: 9px 12px;
+  margin: 22px 0 12px 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dok-method-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0 16px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+.assessment-ideas { margin-left: 24px; }
+.assessment-ideas a { color: #005aa0; font-weight: 800; text-decoration: underline; }
+.timing-label { display: inline-block; background: #fff7cf; border: 1px solid #d1c27a; border-radius: 4px; padding: 1px 6px; font-weight: 800; color: #4a3f17; margin-left: 6px; }
+.what-tells { border-left: 5px solid #777; padding-left: 10px; margin-top: 10px; color: #333; }
+
+/* ======================= SUMMATIVE / RUBRIC ======================= */
+.summative-card { border: 2px solid #00003d; padding: 12px 14px; margin: 14px 0; background: #f8fbff; break-inside: avoid; page-break-inside: avoid; }
+.summative-card a { color: #005aa0; font-weight: 800; }
+.rubric-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0; }
+.rubric-level { color: #00003d; font-weight: 900; font-size: 12.5pt; }
+
+/* ======================= ASSESSMENT BANK ======================= */
+.bank-intro { border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+.assessment-card {
+  border: 1px solid #777;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.problem-number { font-weight: 900; color: #00003d; font-size: 13pt; margin-bottom: 8px; }
+.problem-meta { color: #555; font-weight: 700; font-size: 10.5pt; margin-left: 8px; }
+.assessment-card p { margin-bottom: 7px; }
+.assessment-card ol, .assessment-card ul { margin-left: 26px; }
+.assessment-card li { margin-bottom: 6px; }
+.performance-notes { border-left: 5px solid #444; background: #f7f7f7; padding: 8px 10px; margin-top: 10px; font-size: 10pt; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+
+/* ======================= FIGURE / GRAPH SYSTEM ======================= */
+.figure-block, .graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { max-width: 100%; height: auto; border: 1px solid #ccc; background: #fff; }
+.figure-xs img { max-width: 1.4in; }
+.figure-sm img { max-width: 2.1in; }
+.figure-md img { max-width: 2.8in; }
+.figure-lg img { max-width: 3.8in; }
+.figure-xl img { max-width: 4.7in; }
+.graph-xs img { max-width: 2.0in; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.2in; }
+.graph-lg img { max-width: 4.1in; }
+.graph-xl img { max-width: 5.1in; }
+
+/* ======================= PRINT CONTROL ======================= */
+@media print {
+  body { font-size: 10.5pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  .assessment-card { padding: 10px 12px; }
+}
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 6</div>
-        <h1 class="course-title">Assessment Plan</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit6_assessment_plan.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/assessment_plans/unit6_assessment_plan/unit6_assessment_plan.html<br>
-            <strong>Purpose:</strong> Teacher-only assessment plan for Unit 6. Contains formative checkpoints, summative schedule, and DoK breakdown.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/assessment_plans/unit6_assessment_plan/unit6_assessment_plan.html
-        </div>
-    </div>
+<div class="container">
+<!-- ======================= UNIT 6 OUTLINE START ======================= -->
+<h1>Algebra 1 - Unit 6: Solving and Modeling with Quadratics</h1>
+<h2>Essential Standard</h2>
+<div class="essential-standard">Students will solve, analyze, and model quadratic relationships in order to interpret solutions, compare representations, and make decisions using equations, graphs, tables, and contexts.</div>
+<!-- ======================= SECTION OUTLINE START ======================= -->
+<section class="outline-card">
+<div class="outline-card-title">Section 6.1: Solving Quadratics by Factoring</div>
+<p><strong>Learning Target: Students will solve quadratic equations using factored form and interpret solutions.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can solve quadratic equations by factoring.</li><li>I can apply the zero product property.</li><li>I can connect solutions to x-intercepts.</li><li>I can interpret solutions in context.</li><li>I can verify solutions algebraically or graphically.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Graphs</li><li>Tables</li><li>Factored form</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>projectile motion</li><li>area problems</li><li>revenue models</li><li>zero-product contexts</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 6.2: Completing the Square</div>
+<p><strong>Learning Target: Students will solve quadratic equations by completing the square and connect the process to vertex form.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can complete the square.</li><li>I can solve quadratic equations using completing the square.</li><li>I can rewrite standard form into vertex form.</li><li>I can explain why completing the square works.</li><li>I can connect completed-square form to the vertex of a graph.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Graphs</li><li>Diagrams</li><li>Vertex form</li><li>Tables</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>optimization situations</li><li>projectile motion</li><li>geometric square diagrams</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 6.3: Quadratic Formula</div>
+<p><strong>Learning Target: Students will solve quadratic equations using the quadratic formula and interpret solutions.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify $a$, $b$, and $c$ in a quadratic equation.</li><li>I can use the quadratic formula to solve equations.</li><li>I can determine the number of real solutions.</li><li>I can interpret solutions in context.</li><li>I can verify solutions using graphs, tables, or substitution.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Graphs</li><li>Formula organizers</li><li>Tables</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>projectile motion</li><li>area optimization</li><li>situations with non-factorable quadratics</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 6.4: Choosing and Defending Solution Methods</div>
+<p><strong>Learning Target: Students will compare factoring, completing the square, and the quadratic formula and select efficient solution methods.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can choose an efficient solution method.</li><li>I can justify my choice of strategy.</li><li>I can compare multiple solution methods.</li><li>I can critique incorrect solutions.</li><li>I can explain when a method is useful or inefficient.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Graphs</li><li>Tables</li><li>Strategy comparisons</li><li>Written explanations</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>compare solution methods in context</li><li>error analysis</li><li>strategy-selection discussions</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 6.5: Quadratic Modeling and Optimization</div>
+<p><strong>Learning Target: Students will use quadratic functions to model real-world situations and interpret maximums, minimums, and intercepts.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can create a quadratic model from data.</li><li>I can interpret the vertex in context.</li><li>I can interpret intercepts in context.</li><li>I can use a quadratic model to answer questions and make predictions.</li><li>I can evaluate whether a quadratic model is reasonable.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Equations</li><li>Tables</li><li>Contexts</li><li>Data displays</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>ball toss analysis</li><li>projectile motion</li><li>launch experiments</li><li>area optimization</li><li>revenue and profit models</li></ul>
+</section>
+<section class="outline-card"><div class="outline-card-title">Unit Modeling Themes</div><ul><li>projectile height over time</li><li>area and optimization situations</li><li>revenue and profit models</li><li>choosing efficient solution methods</li><li>interpreting zeros, vertices, and constraints</li><li>connecting exact solutions to contextual decisions</li></ul></section>
+
+<!-- ======================= SECTION OUTLINE END ======================= -->
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr><tr class="dok4"><td>8</td><td>I can create and analyze quadratic models, interpret solutions and key features in context, and justify conclusions using equations, graphs, tables, and constraints.</td><td>MP4 Model with Mathematics / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr><tr class="dok4"><td>7</td><td>I can compare and critique multiple solution methods or models, revise reasoning, and defend which approach is most appropriate for a given quadratic situation.</td><td>MP1 Make Sense and Persevere / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr><tr class="dok3"><td>6</td><td>I can analyze quadratic equations and graphs to explain why a solution method works and how algebraic solutions connect to graph features.</td><td>MP7 Look for Structure / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 3</td><td>Essential</td></tr><tr class="dok3"><td>5</td><td>I can justify solution choices, verify solutions, interpret roots and vertices, and critique errors in quadratic reasoning.</td><td>MP2 Reason Abstractly and Quantitatively / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr><tr class="dok2"><td>4</td><td>I can solve quadratic equations using completing the square or the quadratic formula and connect solutions to graphs or contexts.</td><td>MP7 Look for Structure / MP6 Attend to Precision</td><td>DOK 2</td><td>Essential</td></tr><tr class="dok2"><td>3</td><td>I can solve quadratic equations by factoring, apply the zero product property, and identify solutions from factored forms and graphs.</td><td>MP8 Look for and Express Regularity in Repeated Reasoning</td><td>DOK 2</td><td>Essential</td></tr><tr class="dok1"><td>2</td><td>I can identify vocabulary, notation, and features for roots, zeros, intercepts, vertices, discriminants, and quadratic models.</td><td>MP6 Attend to Precision</td><td>DOK 1</td><td>Essential</td></tr><tr class="dok1"><td>1</td><td>I can recognize quadratic equations, graphs, tables, and contextual models as different representations of the same type of relationship.</td><td>MP1 Make Sense of Problems / MP5 Use Appropriate Tools Strategically</td><td>DOK 1</td><td>Essential</td></tr></table>
+<h2>Progress Tracking</h2>
+<div class="progress-tracker"><div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div><div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div><div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div></div>
+
+<h2>Assessment Methods by DOK Level</h2>
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card"><p><strong>Format: 3-5 minute warm-up, vocabulary check, graph-feature check, formula identification, or exit ticket</strong></p>
+<p>Purpose: Check whether students can recall vocabulary, identify equation features, recognize graph features, identify $a$, $b$, and $c$, and connect solutions to zeros or intercepts.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit6_formative/unit6_dok1-1.html">Zero Product Property Check</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students identify factored equations, possible zeros, and when the Zero Product Property applies.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok1-2.html">Completing the Square Vocabulary Check</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students identify square structure, vertex form, and completing-the-square components.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok1-3.html">Quadratic Formula Setup Check</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students identify $a$, $b$, $c$, and the discriminant expression without completing the full solve.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok1-4.html">Quadratic Model Feature Check</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students identify roots, intercepts, vertices, maximums, minimums, and context features.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>Students who struggle here need support with notation, vocabulary, graph features, and recognizing when a solution method is available before deeper quadratic reasoning can occur.</div></section>
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card"><p><strong>Format: Exit ticket, mini-quiz, graph/equation task, method-practice task, partner check, or short written task</strong></p>
+<p>Purpose: Check whether students can solve quadratic equations using factoring, completing the square, the quadratic formula, and routine graph/model interpretation.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit6_formative/unit6_dok2-1.html">Solving by Factoring Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students solve by factoring and verify using substitution or graph features.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok2-2.html">Completing the Square Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students complete the square, solve, and connect the result to vertex form.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok2-3.html">Quadratic Formula Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students use the quadratic formula to solve a quadratic equation and interpret the number of real solutions.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok2-4.html">Quadratic Model Interpretation Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students use a graph or equation to answer routine modeling questions.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>Students at this level can generally execute solution methods and read quadratic models, but the assessment reveals whether they connect algebraic solutions to graphs and contexts.</div></section>
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card"><p><strong>Format: Constructed response, strategy comparison, error analysis, model interpretation, or discourse prompt</strong></p>
+<p>Purpose: Check whether students can justify solution methods, critique errors, compare strategies, and explain how solutions, vertices, and intercepts connect across representations.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit6_formative/unit6_dok3-1.html">Zero Product Reasoning Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students explain why the equation must equal zero before using the Zero Product Property.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok3-2.html">Completing the Square Explanation Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students justify the square-completion step and connect it to graph features.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok3-3.html">Method Choice Defense Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students compare factoring, completing the square, and the quadratic formula for efficiency and reliability.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok3-4.html">Quadratic Model Critique Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students critique an interpretation of roots, vertices, or predictions in context.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>This level reveals whether students understand quadratic solving as connected reasoning rather than a collection of disconnected procedures.</div></section>
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p>
+<p>Purpose: Check whether students can transfer quadratic-solving tools to unfamiliar situations, select appropriate methods, build models, and justify decisions.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit6_formative/unit6_dok4-1.html">Design a Quadratic Equation Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students design equations requiring different solution methods and justify why each method fits.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok4-2.html">Critique and Revise a Solution Method Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students critique a flawed method choice or algebraic solution and revise the reasoning.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok4-3.html">Projectile or Area Model Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students interpret roots, vertex, and constraints in a short contextual model.</li>
+<li><a href="../../formative/unit6_formative/unit6_dok4-4.html">Quadratic Decision-Making Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students use a quadratic model to make and justify a recommendation.</li>
+</ol><div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can design, critique, model, and make decisions with quadratic relationships. These should remain short performance tasks rather than large projects.</div></section>
+
+
+<h2>Summative Assessment Plan</h2><section class="summative-card">
+<p><a href="../../summative/unit6_summative/unit6_summative_assessment.html">Unit 6 Summative Assessment</a> <span class="timing-label">Unit 6 Assessed During Unit 8</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of quadratic solving tasks, graph interpretation tasks, method-selection tasks, modeling tasks, and short reasoning prompts aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize solving by factoring, completing the square, using the quadratic formula, interpreting the discriminant, choosing efficient methods, connecting roots and intercepts, interpreting vertices, quadratic modeling, mathematical communication, and justification of reasoning.</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>Because of the spiraling course structure, Unit 6 is assessed during Unit 8 after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction.</p>
+</section>
+
+
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>The student demonstrates a strong and flexible understanding of Unit 6 concepts: solving quadratic equations, selecting efficient methods, interpreting solutions, and modeling quadratic situations. Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects equations, graphs, tables, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>The student demonstrates solid understanding of the essential Unit 6 concepts. Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, though they may lack some precision or depth.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>The student demonstrates partial but passable understanding of Unit 6 concepts. The student can complete many routine tasks but may need support with notation, reasoning, restrictions, representations, or multi-step problem solving. Work may contain errors or incomplete explanations, but there is enough evidence that the student understands the main ideas.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>The student does not yet demonstrate sufficient understanding of the essential Unit 6 concepts. Work shows major errors, missing reasoning, weak conceptual understanding, or inability to connect representations. The student may need reteaching, additional practice, or reassessment to demonstrate proficiency.</p></section>
+
+<!-- ======================= UNIT 6 OUTLINE END ======================= -->
+<div class="page-break"></div>
+<!-- ======================= ASSESSMENT BANK START ======================= -->
+<h1>Assessment Bank</h1>
+<div class="bank-intro"><p><strong>Unit 6 Assessment Bank:</strong> Problems are organized by Depth of Knowledge and designed as source items for formative assessments, reassessments, summative assessment versions, practice sets, intervention, and enrichment.</p><p class="small-note">Rolling timing: Unit 6 is assessed during Unit 8.</p></div>
+<div class="dok-bar">Assessment Bank DOK 1</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 1 items provide evidence of foundational vocabulary, notation, graph-feature recognition, and basic quadratic-solution awareness.</p><p><strong>Bank Design Principles:</strong></p><ul><li>recognize quadratic equations and graph features</li><li>identify zeros, roots, intercepts, and vertices</li><li>identify $a$, $b$, and $c$</li><li>recognize when a method is available</li><li>connect basic graph features to solution language</li></ul></section>
+<h2>Solving by Factoring</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.001">
+<div class="problem-number">Assessment Bank DOK 1.001<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>Which equation is ready for the Zero Product Property?</p><ol class="lower-alpha"><li>$(x-4)(x+2)=0$</li><li>$(x-4)(x+2)=7$</li><li>$x^2+3x=10$</li><li>$x^2=16$</li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.002">
+<div class="problem-number">Assessment Bank DOK 1.002<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>For $(x-5)(x+3)=0$, list the two factors.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.003">
+<div class="problem-number">Assessment Bank DOK 1.003<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>Use the graph below. How many $x$-intercepts are visible?</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_factoring_a.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.004">
+<div class="problem-number">Assessment Bank DOK 1.004<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>Complete the statement: A zero of a quadratic function appears on the graph as an ________.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.005">
+<div class="problem-number">Assessment Bank DOK 1.005<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>Identify whether $x=2$ is a solution to $(x-2)(x+6)=0$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.006">
+<div class="problem-number">Assessment Bank DOK 1.006<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 1</span></div>
+<p>In the equation $x(x-7)=0$, what are the factors?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 END ======================= -->
+<h2>Completing the Square</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.007">
+<div class="problem-number">Assessment Bank DOK 1.007<span class="problem-meta">Unit 6 | Completing the Square | DoK 1</span></div>
+<p>Which expression is a perfect square trinomial?</p><ol class="lower-alpha"><li>$x^2+8x+16$</li><li>$x^2+8x+12$</li><li>$x^2-16$</li><li>$x^2+4x+3$</li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.008">
+<div class="problem-number">Assessment Bank DOK 1.008<span class="problem-meta">Unit 6 | Completing the Square | DoK 1</span></div>
+<p>In $x^2+10x+\_\_$, identify the term that would be added to complete the square.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.009">
+<div class="problem-number">Assessment Bank DOK 1.009<span class="problem-meta">Unit 6 | Completing the Square | DoK 1</span></div>
+<p>Use the diagram below. Which region is missing?</p><div class="graph-block figure-lg"><img alt="completing square diagram" src="figures/unit6_completing_square_diagram.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.010">
+<div class="problem-number">Assessment Bank DOK 1.010<span class="problem-meta">Unit 6 | Completing the Square | DoK 1</span></div>
+<p>Identify the vertex form: standard form, factored form, or vertex form.</p><p>$$y=(x-3)^2-4$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.011">
+<div class="problem-number">Assessment Bank DOK 1.011<span class="problem-meta">Unit 6 | Completing the Square | DoK 1</span></div>
+<p>State the vertex of $y=(x+2)^2+1$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 END ======================= -->
+<h2>Quadratic Formula</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.012">
+<div class="problem-number">Assessment Bank DOK 1.012<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>For $2x^2-5x+3=0$, identify $a$, $b$, and $c$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.013">
+<div class="problem-number">Assessment Bank DOK 1.013<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>Write the discriminant expression for $ax^2+bx+c=0$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.014">
+<div class="problem-number">Assessment Bank DOK 1.014<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>Use the organizer below. Fill in $a$, $b$, and $c$ for $x^2+4x-12=0$.</p><div class="graph-block figure-lg"><img alt="quadratic formula organizer" src="figures/unit6_formula_organizer.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.015">
+<div class="problem-number">Assessment Bank DOK 1.015<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>If the discriminant is positive, how many real solutions does the quadratic equation have?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.016">
+<div class="problem-number">Assessment Bank DOK 1.016<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>If the discriminant is zero, how many real solutions does the quadratic equation have?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.017">
+<div class="problem-number">Assessment Bank DOK 1.017<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 1</span></div>
+<p>Identify whether the graph below appears to have zero, one, or two real roots.</p><div class="graph-block graph-md"><img alt="quadratic graph with no visible x intercepts" src="figures/unit6_quad_formula_none.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 END ======================= -->
+<h2>Choosing Methods</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.018">
+<div class="problem-number">Assessment Bank DOK 1.018<span class="problem-meta">Unit 6 | Choosing Methods | DoK 1</span></div>
+<p>Which method would likely be most efficient for $x^2-9=0$: factoring, completing the square, or the quadratic formula?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.019">
+<div class="problem-number">Assessment Bank DOK 1.019<span class="problem-meta">Unit 6 | Choosing Methods | DoK 1</span></div>
+<p>Which method always works for any quadratic equation with real or complex solutions?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.020">
+<div class="problem-number">Assessment Bank DOK 1.020<span class="problem-meta">Unit 6 | Choosing Methods | DoK 1</span></div>
+<p>For $x^2+6x+9=0$, identify a method that uses the perfect-square structure.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.021">
+<div class="problem-number">Assessment Bank DOK 1.021<span class="problem-meta">Unit 6 | Choosing Methods | DoK 1</span></div>
+<p>Use the graph below. Which solution method could verify the visible zeros quickly?</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_compare_methods.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.022">
+<div class="problem-number">Assessment Bank DOK 1.022<span class="problem-meta">Unit 6 | Choosing Methods | DoK 1</span></div>
+<p>Identify one reason a student might choose the quadratic formula instead of factoring.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 END ======================= -->
+<h2>Quadratic Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.023">
+<div class="problem-number">Assessment Bank DOK 1.023<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>Use the projectile graph. What is the maximum height shown approximately?</p><div class="graph-block graph-md"><img alt="projectile quadratic graph" src="figures/unit6_projectile_path.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.024">
+<div class="problem-number">Assessment Bank DOK 1.024<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>Use the graph. At what two times is the height approximately zero?</p><div class="graph-block graph-md"><img alt="projectile quadratic graph" src="figures/unit6_projectile_path.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.025">
+<div class="problem-number">Assessment Bank DOK 1.025<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>In a projectile model, what does the vertex usually represent?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.026">
+<div class="problem-number">Assessment Bank DOK 1.026<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>In a revenue model, what might the $x$-intercepts represent?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.027">
+<div class="problem-number">Assessment Bank DOK 1.027<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>Use the revenue graph. Does the model have a maximum or minimum?</p><div class="graph-block graph-md"><img alt="revenue quadratic graph" src="figures/unit6_revenue_model.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U6-DOK1.028">
+<div class="problem-number">Assessment Bank DOK 1.028<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 1</span></div>
+<p>Identify one limitation of a quadratic model in a real-world context.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 2</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 2 items provide evidence of procedural understanding, representation skills, method execution, and routine interpretation.</p><p><strong>Bank Design Principles:</strong></p><ul><li>solve quadratic equations using multiple methods</li><li>organize work accurately</li><li>connect algebraic solutions to graphs</li><li>interpret routine model features</li><li>verify solutions</li></ul></section>
+<h2>Solving by Factoring</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.001">
+<div class="problem-number">Assessment Bank DOK 2.001<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Solve by factoring.</p><p>$$x^2-5x+6=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.002">
+<div class="problem-number">Assessment Bank DOK 2.002<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Solve using the Zero Product Property.</p><p>$$(x+4)(x-1)=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.003">
+<div class="problem-number">Assessment Bank DOK 2.003<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Solve by factoring.</p><p>$$2x^2-8x=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.004">
+<div class="problem-number">Assessment Bank DOK 2.004<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Use the graph below to estimate the solutions. Then verify with factoring if possible.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_factoring_b.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.005">
+<div class="problem-number">Assessment Bank DOK 2.005<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Rewrite $x^2+3x=10$ so one side equals zero, then solve by factoring.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.006">
+<div class="problem-number">Assessment Bank DOK 2.006<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 2</span></div>
+<p>Solve and check.</p><p>$$x^2-16=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 END ======================= -->
+<h2>Completing the Square</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.007">
+<div class="problem-number">Assessment Bank DOK 2.007<span class="problem-meta">Unit 6 | Completing the Square | DoK 2</span></div>
+<p>Complete the square to rewrite the expression.</p><p>$$x^2+8x+\_\_$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.008">
+<div class="problem-number">Assessment Bank DOK 2.008<span class="problem-meta">Unit 6 | Completing the Square | DoK 2</span></div>
+<p>Solve by completing the square.</p><p>$$x^2+6x-7=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.009">
+<div class="problem-number">Assessment Bank DOK 2.009<span class="problem-meta">Unit 6 | Completing the Square | DoK 2</span></div>
+<p>Rewrite in vertex form by completing the square.</p><p>$$y=x^2-4x+1$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.010">
+<div class="problem-number">Assessment Bank DOK 2.010<span class="problem-meta">Unit 6 | Completing the Square | DoK 2</span></div>
+<p>Use the graph below to identify the vertex, then connect it to vertex form.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_square_a.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.011">
+<div class="problem-number">Assessment Bank DOK 2.011<span class="problem-meta">Unit 6 | Completing the Square | DoK 2</span></div>
+<p>Solve by completing the square.</p><p>$$x^2-10x+9=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 END ======================= -->
+<h2>Quadratic Formula</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.012">
+<div class="problem-number">Assessment Bank DOK 2.012<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Use the quadratic formula to solve.</p><p>$$x^2+2x-8=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.013">
+<div class="problem-number">Assessment Bank DOK 2.013<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Set up the quadratic formula for $2x^2+3x-5=0$ before simplifying.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.014">
+<div class="problem-number">Assessment Bank DOK 2.014<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Calculate the discriminant for $x^2-6x+9=0$ and state the number of real solutions.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.015">
+<div class="problem-number">Assessment Bank DOK 2.015<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Solve using the quadratic formula.</p><p>$$x^2-4x-1=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.016">
+<div class="problem-number">Assessment Bank DOK 2.016<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Use the graph below to predict the number of real solutions, then confirm with the discriminant.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_formula_one.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.017">
+<div class="problem-number">Assessment Bank DOK 2.017<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 2</span></div>
+<p>Solve using the quadratic formula and round to the nearest tenth.</p><p>$$x^2+3x-2=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 END ======================= -->
+<h2>Choosing Methods</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.018">
+<div class="problem-number">Assessment Bank DOK 2.018<span class="problem-meta">Unit 6 | Choosing Methods | DoK 2</span></div>
+<p>Choose an efficient method and solve.</p><p>$$x^2-7x+12=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.019">
+<div class="problem-number">Assessment Bank DOK 2.019<span class="problem-meta">Unit 6 | Choosing Methods | DoK 2</span></div>
+<p>Choose an efficient method and solve.</p><p>$$x^2+4x+1=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.020">
+<div class="problem-number">Assessment Bank DOK 2.020<span class="problem-meta">Unit 6 | Choosing Methods | DoK 2</span></div>
+<p>Choose an efficient method and solve.</p><p>$$3x^2+5x-2=0$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.021">
+<div class="problem-number">Assessment Bank DOK 2.021<span class="problem-meta">Unit 6 | Choosing Methods | DoK 2</span></div>
+<p>Compare factoring and the quadratic formula for $x^2-9x+20=0$. Which is more efficient here?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.022">
+<div class="problem-number">Assessment Bank DOK 2.022<span class="problem-meta">Unit 6 | Choosing Methods | DoK 2</span></div>
+<p>Use the graph below to choose a solution method and explain your choice briefly.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_compare_methods.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 END ======================= -->
+<h2>Quadratic Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.023">
+<div class="problem-number">Assessment Bank DOK 2.023<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>A ball is modeled by $h=-t^2+6t+7$. Find when the ball reaches the ground by solving $h=0$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.024">
+<div class="problem-number">Assessment Bank DOK 2.024<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>Use the projectile graph to estimate when the object is at its maximum height.</p><div class="graph-block graph-md"><img alt="projectile graph" src="figures/unit6_projectile_path.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.025">
+<div class="problem-number">Assessment Bank DOK 2.025<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>The area of a rectangle is modeled by $A=-x^2+10x$. Find the zeros and explain what they represent.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.026">
+<div class="problem-number">Assessment Bank DOK 2.026<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>Use the revenue graph to estimate the input value that gives maximum revenue.</p><div class="graph-block graph-md"><img alt="revenue graph" src="figures/unit6_revenue_model.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.027">
+<div class="problem-number">Assessment Bank DOK 2.027<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>For $p(x)=-2x^2+12x+5$, determine whether the graph opens up or down and explain how that affects the vertex.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U6-DOK2.028">
+<div class="problem-number">Assessment Bank DOK 2.028<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 2</span></div>
+<p>Create a table for $y=-x^2+4x+5$ using $x=0,1,2,3,4$ and identify the highest table value.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 3</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 3 items provide evidence of reasoning, justification, strategy comparison, error analysis, and mathematical communication.</p><p><strong>Bank Design Principles:</strong></p><ul><li>justify method choices</li><li>critique incorrect reasoning</li><li>explain connections across forms and graphs</li><li>interpret roots and vertices in context</li><li>defend conclusions with evidence</li></ul></section>
+<h2>Solving by Factoring</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.001">
+<div class="problem-number">Assessment Bank DOK 3.001<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 3</span></div>
+<p>A student solves $(x-4)(x+2)=6$ by saying $x=4$ or $x=-2$. Explain the error and correct the process.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.002">
+<div class="problem-number">Assessment Bank DOK 3.002<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 3</span></div>
+<p>Explain why the Zero Product Property can be used for $(x-3)(x+5)=0$ but not directly for $(x-3)(x+5)=12$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.003">
+<div class="problem-number">Assessment Bank DOK 3.003<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 3</span></div>
+<p>Solve $x^2+2x-15=0$ and explain how each solution appears on the graph of $y=x^2+2x-15$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.004">
+<div class="problem-number">Assessment Bank DOK 3.004<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 3</span></div>
+<p>Use the graph below to justify whether the equation has one, two, or no real solutions.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_factoring_a.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.005">
+<div class="problem-number">Assessment Bank DOK 3.005<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 3</span></div>
+<p>Compare solving $x^2-25=0$ by factoring and by square roots. Which is clearer and why?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 END ======================= -->
+<h2>Completing the Square</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.006">
+<div class="problem-number">Assessment Bank DOK 3.006<span class="problem-meta">Unit 6 | Completing the Square | DoK 3</span></div>
+<p>Explain why adding $16$ completes the square in $x^2+8x+\_\_$. Use structure, not just a rule.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.007">
+<div class="problem-number">Assessment Bank DOK 3.007<span class="problem-meta">Unit 6 | Completing the Square | DoK 3</span></div>
+<p>A student rewrites $x^2+6x+5$ as $(x+6)^2+5$. Analyze the error and correct the rewrite.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.008">
+<div class="problem-number">Assessment Bank DOK 3.008<span class="problem-meta">Unit 6 | Completing the Square | DoK 3</span></div>
+<p>Use the completing-square diagram below to explain the missing piece.</p><div class="graph-block figure-lg"><img alt="completing square diagram" src="figures/unit6_completing_square_diagram.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.009">
+<div class="problem-number">Assessment Bank DOK 3.009<span class="problem-meta">Unit 6 | Completing the Square | DoK 3</span></div>
+<p>Compare completing the square and graphing for finding the vertex of $y=x^2-6x+2$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.010">
+<div class="problem-number">Assessment Bank DOK 3.010<span class="problem-meta">Unit 6 | Completing the Square | DoK 3</span></div>
+<p>Explain how completing the square changes standard form into a form that reveals the vertex.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 END ======================= -->
+<h2>Quadratic Formula</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.011">
+<div class="problem-number">Assessment Bank DOK 3.011<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 3</span></div>
+<p>Explain what the discriminant tells you before you finish solving a quadratic equation.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.012">
+<div class="problem-number">Assessment Bank DOK 3.012<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 3</span></div>
+<p>A student identifies $a=1$, $b=5$, $c=6$ for $2x^2+5x+6=0$. Critique the setup.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.013">
+<div class="problem-number">Assessment Bank DOK 3.013<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 3</span></div>
+<p>Use the graph below and the discriminant idea to explain why the equation has no real solutions.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_formula_none.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.014">
+<div class="problem-number">Assessment Bank DOK 3.014<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 3</span></div>
+<p>For $x^2-4x+7=0$, use the discriminant to justify the number of real solutions without solving fully.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.015">
+<div class="problem-number">Assessment Bank DOK 3.015<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 3</span></div>
+<p>Explain why the quadratic formula is reliable even when factoring is difficult.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 END ======================= -->
+<h2>Choosing Methods</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.016">
+<div class="problem-number">Assessment Bank DOK 3.016<span class="problem-meta">Unit 6 | Choosing Methods | DoK 3</span></div>
+<p>Choose a method for each equation and justify your choices: $x^2-9=0$, $x^2+6x+2=0$, and $3x^2+7x-6=0$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.017">
+<div class="problem-number">Assessment Bank DOK 3.017<span class="problem-meta">Unit 6 | Choosing Methods | DoK 3</span></div>
+<p>A student always uses the quadratic formula for every quadratic. Critique this strategy fairly.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.018">
+<div class="problem-number">Assessment Bank DOK 3.018<span class="problem-meta">Unit 6 | Choosing Methods | DoK 3</span></div>
+<p>Use the graph below to explain how a visual estimate can support, but not replace, an exact algebraic solution.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_compare_methods.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.019">
+<div class="problem-number">Assessment Bank DOK 3.019<span class="problem-meta">Unit 6 | Choosing Methods | DoK 3</span></div>
+<p>Compare factoring and completing the square for $x^2+10x+25=0$. What does each method reveal?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.020">
+<div class="problem-number">Assessment Bank DOK 3.020<span class="problem-meta">Unit 6 | Choosing Methods | DoK 3</span></div>
+<p>Explain why method choice depends on the structure of the equation, not just personal preference.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 END ======================= -->
+<h2>Quadratic Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.021">
+<div class="problem-number">Assessment Bank DOK 3.021<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Use the projectile graph. Explain what the zeros and vertex mean in the context of the object.</p><div class="graph-block graph-md"><img alt="projectile graph" src="figures/unit6_projectile_path.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.022">
+<div class="problem-number">Assessment Bank DOK 3.022<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>A student says the negative time solution in a projectile model is always useful. Critique the statement.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.023">
+<div class="problem-number">Assessment Bank DOK 3.023<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Use the revenue graph to justify a recommendation for maximizing revenue.</p><div class="graph-block graph-md"><img alt="revenue graph" src="figures/unit6_revenue_model.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.024">
+<div class="problem-number">Assessment Bank DOK 3.024<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Explain why the vertex of a quadratic model can represent either a maximum or a minimum.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.025">
+<div class="problem-number">Assessment Bank DOK 3.025<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Compare the equation and graph of $A=-x^2+6x$. Explain how each representation helps answer an optimization question.</p><div class="graph-block graph-md"><img alt="area optimization graph" src="figures/unit6_area_optimization.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.026">
+<div class="problem-number">Assessment Bank DOK 3.026<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>A model predicts a height of $-3$ feet. Explain why the algebra may be correct but the context needs interpretation.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.027">
+<div class="problem-number">Assessment Bank DOK 3.027<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Use the two models below. Which model has the greater maximum? Justify using visible features.</p><div class="graph-block graph-lg"><img alt="two quadratic models" src="figures/unit6_two_models.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U6-DOK3.028">
+<div class="problem-number">Assessment Bank DOK 3.028<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 3</span></div>
+<p>Design a short explanation showing how roots, vertex, and opening direction work together in a quadratic model.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 4</div><section class="dok-method-card"><p><strong>Purpose:</strong> Assessment Bank DOK 4 items provide evidence of transfer, modeling, design, critique, synthesis, and decision-making.</p><p><strong>Bank Design Principles:</strong></p><ul><li>design and critique quadratic models</li><li>make decisions using roots and vertices</li><li>compare methods strategically</li><li>synthesize equations, graphs, tables, and contexts</li><li>communicate conclusions clearly</li></ul></section>
+<h2>Solving by Factoring</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.001">
+<div class="problem-number">Assessment Bank DOK 4.001<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 4</span></div>
+<p>Create a quadratic equation that can be solved by factoring and has two integer solutions. Solve it and explain how you designed it.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.002">
+<div class="problem-number">Assessment Bank DOK 4.002<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 4</span></div>
+<p>Design a flawed Zero Product Property solution. Then write feedback that would help a student revise the reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.003">
+<div class="problem-number">Assessment Bank DOK 4.003<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 4</span></div>
+<p>Create a graph-and-equation pair where the equation solutions match the graph intercepts. Explain how someone can verify the match.</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit6_blank_grid.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.004">
+<div class="problem-number">Assessment Bank DOK 4.004<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 4</span></div>
+<p>Write a contextual problem that leads to a factored quadratic equation. Solve it and interpret both solutions.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.005">
+<div class="problem-number">Assessment Bank DOK 4.005<span class="problem-meta">Unit 6 | Solving by Factoring | DoK 4</span></div>
+<p>Compare two quadratic equations: one where both solutions make sense in context and one where only one solution makes sense. Explain.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 END ======================= -->
+<h2>Completing the Square</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.006">
+<div class="problem-number">Assessment Bank DOK 4.006<span class="problem-meta">Unit 6 | Completing the Square | DoK 4</span></div>
+<p>Create a quadratic expression that is best rewritten by completing the square. Rewrite it and explain what the new form reveals.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.007">
+<div class="problem-number">Assessment Bank DOK 4.007<span class="problem-meta">Unit 6 | Completing the Square | DoK 4</span></div>
+<p>Use a square diagram or words to explain completing the square to a student who only memorized the rule.</p><div class="graph-block figure-lg"><img alt="completing square diagram" src="figures/unit6_completing_square_diagram.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.008">
+<div class="problem-number">Assessment Bank DOK 4.008<span class="problem-meta">Unit 6 | Completing the Square | DoK 4</span></div>
+<p>Design a quadratic with a chosen vertex. Write it in vertex form and then expand it to standard form.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.009">
+<div class="problem-number">Assessment Bank DOK 4.009<span class="problem-meta">Unit 6 | Completing the Square | DoK 4</span></div>
+<p>Critique a solution where a student completes the square by adding the wrong value to both sides. Explain the correction.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.010">
+<div class="problem-number">Assessment Bank DOK 4.010<span class="problem-meta">Unit 6 | Completing the Square | DoK 4</span></div>
+<p>Create a situation where vertex form is more useful than factored form. Explain why.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 END ======================= -->
+<h2>Quadratic Formula</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.011">
+<div class="problem-number">Assessment Bank DOK 4.011<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 4</span></div>
+<p>Create a quadratic equation that is not easily factorable but has two real solutions. Solve or approximate using the quadratic formula.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.012">
+<div class="problem-number">Assessment Bank DOK 4.012<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 4</span></div>
+<p>Design three quadratics: one with two real solutions, one with one real solution, and one with no real solutions. Justify using the discriminant.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.013">
+<div class="problem-number">Assessment Bank DOK 4.013<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 4</span></div>
+<p>Critique a quadratic formula setup error involving signs. Write a corrected version and explain the sign issue.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.014">
+<div class="problem-number">Assessment Bank DOK 4.014<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 4</span></div>
+<p>Create a context where rounded quadratic-formula solutions must be interpreted carefully. Explain the rounding decision.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.015">
+<div class="problem-number">Assessment Bank DOK 4.015<span class="problem-meta">Unit 6 | Quadratic Formula | DoK 4</span></div>
+<p>Use the graph below to design a possible quadratic equation. Then explain why your equation is reasonable, even if not unique.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_quad_formula_two.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 END ======================= -->
+<h2>Choosing Methods</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.016">
+<div class="problem-number">Assessment Bank DOK 4.016<span class="problem-meta">Unit 6 | Choosing Methods | DoK 4</span></div>
+<p>Design a method-choice flowchart for solving quadratic equations. Include factoring, completing the square, and the quadratic formula.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.017">
+<div class="problem-number">Assessment Bank DOK 4.017<span class="problem-meta">Unit 6 | Choosing Methods | DoK 4</span></div>
+<p>Given the equations $x^2-12x+36=0$, $x^2+2x-7=0$, and $5x^2-3x-2=0$, choose methods and defend your choices.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.018">
+<div class="problem-number">Assessment Bank DOK 4.018<span class="problem-meta">Unit 6 | Choosing Methods | DoK 4</span></div>
+<p>Create two different correct solutions to the same quadratic equation using different methods. Compare their efficiency and clarity.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.019">
+<div class="problem-number">Assessment Bank DOK 4.019<span class="problem-meta">Unit 6 | Choosing Methods | DoK 4</span></div>
+<p>Write a critique of the statement: “The best method is always the one with the fewest steps.” Use examples.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.020">
+<div class="problem-number">Assessment Bank DOK 4.020<span class="problem-meta">Unit 6 | Choosing Methods | DoK 4</span></div>
+<p>Use the graph below to choose a method, solve exactly, and explain why the graph alone may not be enough.</p><div class="graph-block graph-md"><img alt="quadratic graph" src="figures/unit6_compare_methods.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 END ======================= -->
+<h2>Quadratic Modeling</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.021">
+<div class="problem-number">Assessment Bank DOK 4.021<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Create a projectile-motion scenario using a quadratic model. Identify what the roots and vertex mean in your scenario.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.022">
+<div class="problem-number">Assessment Bank DOK 4.022<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Use the projectile graph below to write a model-based recommendation or conclusion. Include one limitation.</p><div class="graph-block graph-md"><img alt="projectile graph" src="figures/unit6_projectile_path.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.023">
+<div class="problem-number">Assessment Bank DOK 4.023<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Create an area optimization problem that can be modeled by a quadratic. Identify the maximum or minimum and interpret it.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.024">
+<div class="problem-number">Assessment Bank DOK 4.024<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Use the revenue graph below to write a business recommendation. Your answer should use the vertex and at least one intercept.</p><div class="graph-block graph-md"><img alt="revenue graph" src="figures/unit6_revenue_model.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.025">
+<div class="problem-number">Assessment Bank DOK 4.025<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Compare the two quadratic models below and decide which better fits a situation you design. Justify your choice.</p><div class="graph-block graph-lg"><img alt="two quadratic models" src="figures/unit6_two_models.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.026">
+<div class="problem-number">Assessment Bank DOK 4.026<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Design a data table that could reasonably be modeled by a quadratic. Explain how the pattern suggests a quadratic relationship.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.027">
+<div class="problem-number">Assessment Bank DOK 4.027<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Critique a quadratic model that makes a prediction outside a reasonable context. Explain how to restrict or revise the model.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U6-DOK4.028">
+<div class="problem-number">Assessment Bank DOK 4.028<span class="problem-meta">Unit 6 | Quadratic Modeling | DoK 4</span></div>
+<p>Create a multi-representation quadratic modeling task involving an equation, graph, table, and context. Include the expected student reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 END ======================= -->
+
+<!-- ======================= ASSESSMENT BANK END ======================= -->
+</div>
 </body>
 </html>
