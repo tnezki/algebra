@@ -1,110 +1,1001 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: unit0A_summative_assessment.html
-     Path: hygwsksdf/nbfuwew/summative/unit0A_summative/unit0A_summative_assessment.html
-     Hosted at: tnezki.github.io/algebra/hygwsksdf/nbfuwew/summative/unit0A_summative/unit0A_summative_assessment.html
-
-     Summative assessment for Unit 0A. End-of-unit exam or performance task.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summative Assessment — Unit 0A — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0A Summative Assessment</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+/* ======================= PRINT PAGE + RESET ======================= */
+:root {
+  --pad: 0.13in;
+  --img-col-max: 3.45in;
+}
+@page { size: letter; margin: 0.5in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.34;
+  color: #111;
+  background: #fff;
+  font-size: 11.5pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page { height: 10in; display: flex; flex-direction: column; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page-header { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 var(--pad) 4px var(--pad); border-bottom: 2px solid #111; }
+.page-title { font-weight: 900; font-size: 13.5pt; color: #000; white-space: nowrap; }
+.name-line { font-size: 11.5pt; font-weight: 800; white-space: nowrap; }
+.name-line span { display: inline-block; width: 2.6in; height: 13px; border-bottom: 1.5px solid #111; margin-left: 6px; vertical-align: bottom; }
+.problem-row { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: row; }
+.problem { display: flex; flex-direction: column; overflow: hidden; padding: 8px var(--pad) var(--pad) var(--pad); align-self: stretch; }
+.problem.half { flex: 1 1 0; min-width: 0; }
+.problem.half + .problem.half { border-left: 1px solid #777; }
+.problem.full { flex: 0 0 100%; width: 100%; }
+.problem-number { flex: 0 0 auto; font-weight: 900; color: #000; font-size: 12.5pt; margin-bottom: 5px; }
+.section-tag { color: #555; font-size: 10.5pt; font-weight: 800; margin-left: 8px; }
+.note { font-size: 9.5pt; color: #555; font-style: italic; }
+p { margin-bottom: 6px; }
+ol, ul { margin-left: 0.24in; margin-bottom: 5px; }
+li { margin-bottom: 3px; }
+.ws-area { flex: 1 1 auto; min-height: 0.35in; margin-top: 6px; }
+.ans-block { flex: 0 0 auto; margin-top: auto; border-top: 2px solid #111; padding-top: 4px; }
+.ans-line { min-height: 0.24in; padding: 3px 0 2px 0; border-bottom: 1px solid #ddd; }
+.ans-line:last-child { border-bottom: none; }
+.ans-label { font-weight: 900; font-size: 10.5pt; }
+.graph-block { flex: 0 0 auto; margin: 6px 0 5px 0; text-align: left; }
+.question-graph, .answer-plane { display: block; width: 100%; max-width: var(--img-col-max); height: auto; margin: 0; border: 0; background: #fff; }
+.number-line-img { display: block; width: 100%; max-width: 3.55in; height: auto; margin: 4px 0 2px 0; }
+.data-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 6px 0 7px 0; flex-shrink: 0; }
+.data-table th, .data-table td { border: 1px solid #777; padding: 4px 5px; text-align: center; vertical-align: middle; font-size: 10.5pt; }
+.data-table th:first-child, .data-table td:first-child { font-weight: 900; width: 0.62in; }
+@media print { body { font-size: 11.5pt; } }
+
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 0A</div>
-        <h1 class="course-title">Summative Assessment</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> unit0A_summative_assessment.html<br>
-            <strong>Location:</strong> hygwsksdf/nbfuwew/summative/unit0A_summative/unit0A_summative_assessment.html<br>
-            <strong>Purpose:</strong> Summative assessment for Unit 0A. End-of-unit exam or performance task.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/hygwsksdf/nbfuwew/summative/unit0A_summative/unit0A_summative_assessment.html
-        </div>
-    </div>
+<!-- ======================= VERSION 1 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V1</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 1 START -->
+<div class="problem half" id="v1-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$-6+3(8)-14$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 1 END -->
+<!-- VERSION 1 PROBLEM 2 START -->
+<div class="problem half" id="v1-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $x=-2$ and $y=5$. $$4x^2-3y$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 1 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V1</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 3 START -->
+<div class="problem half" id="v1-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$3(2x-5)+4x$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 3 END -->
+<!-- VERSION 1 PROBLEM 4 START -->
+<div class="problem half" id="v1-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$5x-7=28$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 1 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V1</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 5 START -->
+<div class="problem half" id="v1-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A movie theater charges a $6$ dollar service fee plus $9$ dollars per ticket. Write and solve an equation to find the number of tickets if the total cost is $51$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of tickets:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 5 END -->
+<!-- VERSION 1 PROBLEM 6 START -->
+<div class="problem half" id="v1-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$x+4\le 9$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 1 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V1</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 7 START -->
+<div class="problem half" id="v1-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $2x-3>7$.<ol type='a'><li>$x=4$</li><li>$x=5$</li><li>$x=6$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 7 END -->
+<!-- VERSION 1 PROBLEM 8 START -->
+<div class="problem half" id="v1-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.3</span></div>
+  <p>A student says $2(x+6)=2x+6$. Identify the error and write the correct equivalent expression.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">error:</span></div>
+    <div class="ans-line"><span class="ans-label">correct expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 1 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V1</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 9 START -->
+<div class="problem half" id="v1-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.4</span></div>
+  <p>A bank account starts at $-18$ dollars. A deposit of $45$ dollars is made, then a $12$ dollar fee is charged. Write an expression and determine the final balance.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">expression:</span></div>
+    <div class="ans-line"><span class="ans-label">final balance:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 9 END -->
+<!-- VERSION 1 PROBLEM 10 START -->
+<div class="problem half" id="v1-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.5</span></div>
+  <p>Compare $x<3$ and $x\le 3$. Explain how the solution sets and graphs are different.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">explanation:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 5 END ======================= -->
+<!-- ======================= VERSION 2 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V2</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 2 PROBLEM 1 START -->
+<div class="problem half" id="v2-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$-4(7)+18-5$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 1 END -->
+<!-- VERSION 2 PROBLEM 2 START -->
+<div class="problem half" id="v2-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $a=3$ and $b=-4$. $$2a^2+b$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 2 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 2 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V2</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 2 PROBLEM 3 START -->
+<div class="problem half" id="v2-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$5(x-3)+2x+1$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 3 END -->
+<!-- VERSION 2 PROBLEM 4 START -->
+<div class="problem half" id="v2-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$4x+9=33$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 2 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 2 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V2</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 2 PROBLEM 5 START -->
+<div class="problem half" id="v2-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A gym charges a $20$ dollar sign-up fee plus $15$ dollars per month. Write and solve an equation to find the number of months if the total cost is $95$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of months:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 5 END -->
+<!-- VERSION 2 PROBLEM 6 START -->
+<div class="problem half" id="v2-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$3x>18$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 2 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 2 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V2</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 2 PROBLEM 7 START -->
+<div class="problem half" id="v2-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $x+2\le -1$.<ol type='a'><li>$x=-4$</li><li>$x=-3$</li><li>$x=0$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 7 END -->
+<!-- VERSION 2 PROBLEM 8 START -->
+<div class="problem half" id="v2-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.2</span></div>
+  <p>A student evaluates $18-2(3^2)$ and gets $144$. Identify the mistake and evaluate the expression correctly.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">mistake:</span></div>
+    <div class="ans-line"><span class="ans-label">correct value:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 2 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 2 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V2</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 2 PROBLEM 9 START -->
+<div class="problem half" id="v2-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.4</span></div>
+  <p>A temperature is $-7^\circ$F in the morning. It rises $19^\circ$F and then drops $5^\circ$F. Write an expression and determine the final temperature.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">expression:</span></div>
+    <div class="ans-line"><span class="ans-label">final temperature:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 9 END -->
+<!-- VERSION 2 PROBLEM 10 START -->
+<div class="problem half" id="v2-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.5</span></div>
+  <p>Explain why the inequality $x>6$ has many solutions while the equation $x=6$ has one solution.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">explanation:</span></div>
+  </div>
+</div>
+<!-- VERSION 2 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 2 PAGE 5 END ======================= -->
+<!-- ======================= VERSION 3 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V3</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 3 PROBLEM 1 START -->
+<div class="problem half" id="v3-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$12-5(3)+(-8)$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 1 END -->
+<!-- VERSION 3 PROBLEM 2 START -->
+<div class="problem half" id="v3-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $m=-3$ and $n=2$. $$m^2+6n$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 3 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 3 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V3</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 3 PROBLEM 3 START -->
+<div class="problem half" id="v3-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$-2(4y-1)+7y$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 3 END -->
+<!-- VERSION 3 PROBLEM 4 START -->
+<div class="problem half" id="v3-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$\frac{x}{3}+5=11$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 3 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 3 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V3</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 3 PROBLEM 5 START -->
+<div class="problem half" id="v3-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A taxi ride costs a $4$ dollar starting fee plus $3$ dollars per mile. Write and solve an equation to find the number of miles if the total cost is $25$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of miles:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 5 END -->
+<!-- VERSION 3 PROBLEM 6 START -->
+<div class="problem half" id="v3-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$2x-1\ge 7$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 3 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 3 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V3</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 3 PROBLEM 7 START -->
+<div class="problem half" id="v3-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $5-x<2$.<ol type='a'><li>$x=2$</li><li>$x=3$</li><li>$x=4$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 7 END -->
+<!-- VERSION 3 PROBLEM 8 START -->
+<div class="problem half" id="v3-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.3</span></div>
+  <p>A student combines $6x+4$ and writes $10x$. Identify the misconception and explain the correct simplification.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">misconception:</span></div>
+    <div class="ans-line"><span class="ans-label">correct reasoning:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 3 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 3 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V3</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 3 PROBLEM 9 START -->
+<div class="problem half" id="v3-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.4</span></div>
+  <p>A diver is $11$ meters below sea level and rises $6.5$ meters. Write an expression and determine the diver's new position relative to sea level.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">expression:</span></div>
+    <div class="ans-line"><span class="ans-label">position:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 9 END -->
+<!-- VERSION 3 PROBLEM 10 START -->
+<div class="problem half" id="v3-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.4</span></div>
+  <p>A student solves $3x+2=17$ and says $x=5$. Explain how to verify whether the solution is correct.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 3 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 3 PAGE 5 END ======================= -->
+<!-- ======================= VERSION 4 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V4</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 4 PROBLEM 1 START -->
+<div class="problem half" id="v4-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$-9+2(11)-6$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 1 END -->
+<!-- VERSION 4 PROBLEM 2 START -->
+<div class="problem half" id="v4-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $p=4$ and $q=-2$. $$3p-q^2$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 4 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 4 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V4</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 4 PROBLEM 3 START -->
+<div class="problem half" id="v4-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$4(3a+2)-5a$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 3 END -->
+<!-- VERSION 4 PROBLEM 4 START -->
+<div class="problem half" id="v4-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$7x-10=25$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 4 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 4 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V4</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 4 PROBLEM 5 START -->
+<div class="problem half" id="v4-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A school order includes a $12$ dollar delivery fee plus $4$ dollars per notebook. Write and solve an equation to find the number of notebooks if the total cost is $68$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of notebooks:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 5 END -->
+<!-- VERSION 4 PROBLEM 6 START -->
+<div class="problem half" id="v4-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$x-6< -2$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 4 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 4 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V4</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 4 PROBLEM 7 START -->
+<div class="problem half" id="v4-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $-2x\le 8$.<ol type='a'><li>$x=-5$</li><li>$x=-4$</li><li>$x=1$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 7 END -->
+<!-- VERSION 4 PROBLEM 8 START -->
+<div class="problem half" id="v4-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.5</span></div>
+  <p>A student graphs $x\ge -2$ with an open circle at $-2$. Identify the error and describe the correct graph.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">error:</span></div>
+    <div class="ans-line"><span class="ans-label">correct graph:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 4 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 4 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V4</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 4 PROBLEM 9 START -->
+<div class="problem half" id="v4-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.4</span></div>
+  <p>A player loses $8$ points, gains $15$ points, then loses $4$ points. Write an expression and determine the player's net change.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">expression:</span></div>
+    <div class="ans-line"><span class="ans-label">net change:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 9 END -->
+<!-- VERSION 4 PROBLEM 10 START -->
+<div class="problem half" id="v4-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.3</span></div>
+  <p>Explain why $3(x+4)$ and $3x+12$ are equivalent, but $3x+4$ is not equivalent to $3(x+4)$.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">explanation:</span></div>
+  </div>
+</div>
+<!-- VERSION 4 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 4 PAGE 5 END ======================= -->
+<!-- ======================= VERSION 5 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V5</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 5 PROBLEM 1 START -->
+<div class="problem half" id="v5-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$20-3(9)+4$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 1 END -->
+<!-- VERSION 5 PROBLEM 2 START -->
+<div class="problem half" id="v5-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $r=-5$ and $s=2$. $$r^2-4s$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 5 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 5 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V5</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 5 PROBLEM 3 START -->
+<div class="problem half" id="v5-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$6b-2(3b-5)$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 3 END -->
+<!-- VERSION 5 PROBLEM 4 START -->
+<div class="problem half" id="v5-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$2(x+6)=30$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 5 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 5 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V5</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 5 PROBLEM 5 START -->
+<div class="problem half" id="v5-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A streaming service charges $8$ dollars per month after a $14$ dollar setup fee. Write and solve an equation to find the number of months if the total cost is $62$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of months:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 5 END -->
+<!-- VERSION 5 PROBLEM 6 START -->
+<div class="problem half" id="v5-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$4+x\ge 1$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 5 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 5 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V5</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 5 PROBLEM 7 START -->
+<div class="problem half" id="v5-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $4x+1\le 13$.<ol type='a'><li>$x=2$</li><li>$x=3$</li><li>$x=4$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 7 END -->
+<!-- VERSION 5 PROBLEM 8 START -->
+<div class="problem half" id="v5-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.2</span></div>
+  <p>A student evaluates $2^3+5(2)$ as $26$. Identify the mistake and evaluate correctly.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">mistake:</span></div>
+    <div class="ans-line"><span class="ans-label">correct value:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 5 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 5 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V5</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 5 PROBLEM 9 START -->
+<div class="problem half" id="v5-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.5</span></div>
+  <p>A student has $35$ dollars and wants to buy notebooks that cost $6$ dollars each. Write an inequality for the number of notebooks the student can buy and interpret the solution.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">inequality:</span></div>
+    <div class="ans-line"><span class="ans-label">interpretation:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 9 END -->
+<!-- VERSION 5 PROBLEM 10 START -->
+<div class="problem half" id="v5-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.4</span></div>
+  <p>Write an equation that has solution $x=7$. Then explain how another student could verify your equation.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">verification explanation:</span></div>
+  </div>
+</div>
+<!-- VERSION 5 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 5 PAGE 5 END ======================= -->
+<!-- ======================= VERSION 6 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V6</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 6 PROBLEM 1 START -->
+<div class="problem half" id="v6-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section 0A.1</span></div>
+  <p>Evaluate. Show your order of operations. $$-15+4(6)-3$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 1 END -->
+<!-- VERSION 6 PROBLEM 2 START -->
+<div class="problem half" id="v6-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section 0A.2</span></div>
+  <p>Evaluate when $u=2$ and $v=-3$. $$5u^2+v$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">value:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 6 PAGE 1 END ======================= -->
+<!-- ======================= VERSION 6 PAGE 2 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V6</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 6 PROBLEM 3 START -->
+<div class="problem half" id="v6-problem-3">
+  <div class="problem-number">3.<span class="section-tag">Section 0A.3</span></div>
+  <p>Simplify the expression. $$8c+3(2c-4)$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">simplified expression:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 3 END -->
+<!-- VERSION 6 PROBLEM 4 START -->
+<div class="problem half" id="v6-problem-4">
+  <div class="problem-number">4.<span class="section-tag">Section 0A.4</span></div>
+  <p>Solve and verify. $$9+\frac{x}{2}=17$$</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution:</span></div>
+    <div class="ans-line"><span class="ans-label">verification:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 4 END -->
+</div>
+</section>
+<!-- ======================= VERSION 6 PAGE 2 END ======================= -->
+<!-- ======================= VERSION 6 PAGE 3 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V6</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 6 PROBLEM 5 START -->
+<div class="problem half" id="v6-problem-5">
+  <div class="problem-number">5.<span class="section-tag">Section 0A.4</span></div>
+  <p>A fundraiser has already collected $30$ dollars and earns $5$ dollars per bracelet sold. Write and solve an equation to find the number of bracelets needed to reach $85$ dollars.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">number of bracelets:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 5 END -->
+<!-- VERSION 6 PROBLEM 6 START -->
+<div class="problem half" id="v6-problem-6">
+  <div class="problem-number">6.<span class="section-tag">Section 0A.5</span></div>
+  <p>Solve the inequality and graph the solution on the number line. $$5x+2<17$$<div class='graph-block'><img class='number-line-img' src='figures/number_line_blank.png' alt='blank number line'></div></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">solution set:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 6 END -->
+</div>
+</section>
+<!-- ======================= VERSION 6 PAGE 3 END ======================= -->
+<!-- ======================= VERSION 6 PAGE 4 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V6</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 6 PROBLEM 7 START -->
+<div class="problem half" id="v6-problem-7">
+  <div class="problem-number">7.<span class="section-tag">Section 0A.5</span></div>
+  <p>Determine whether each value satisfies $x-5\ge -9$.<ol type='a'><li>$x=-5$</li><li>$x=-4$</li><li>$x=0$</li></ol></p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">a.</span></div>
+    <div class="ans-line"><span class="ans-label">b.</span></div>
+    <div class="ans-line"><span class="ans-label">c.</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 7 END -->
+<!-- VERSION 6 PROBLEM 8 START -->
+<div class="problem half" id="v6-problem-8">
+  <div class="problem-number">8.<span class="section-tag">Section 0A.4</span></div>
+  <p>A student solves $2(x-3)=14$ by first writing $2x-3=14$. Identify the error and solve correctly.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">error:</span></div>
+    <div class="ans-line"><span class="ans-label">correct solution:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 8 END -->
+</div>
+</section>
+<!-- ======================= VERSION 6 PAGE 4 END ======================= -->
+<!-- ======================= VERSION 6 PAGE 5 START ======================= -->
+<section class="page">
+<div class="page-header">
+  <div class="page-title">Unit 0A Summative Assessment &nbsp; V6</div>
+  <div class="name-line">Name:<span></span></div>
+</div>
+<div class="problem-row">
+<!-- VERSION 6 PROBLEM 9 START -->
+<div class="problem half" id="v6-problem-9">
+  <div class="problem-number">9.<span class="section-tag">Section 0A.1 / 0A.5</span></div>
+  <p>A parking garage charges $5$ dollars to enter and $2$ dollars per hour. A driver wants to spend at most $17$ dollars. Write and solve an inequality for the number of hours.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">inequality:</span></div>
+    <div class="ans-line"><span class="ans-label">solution in context:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 9 END -->
+<!-- VERSION 6 PROBLEM 10 START -->
+<div class="problem half" id="v6-problem-10">
+  <div class="problem-number">10.<span class="section-tag">Section 0A.3</span></div>
+  <p>Create two different expressions that are equivalent to $4x+12$. Explain why each one is equivalent.</p>
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">expressions:</span></div>
+    <div class="ans-line"><span class="ans-label">explanation:</span></div>
+  </div>
+</div>
+<!-- VERSION 6 PROBLEM 10 END -->
+</div>
+</section>
+<!-- ======================= VERSION 6 PAGE 5 END ======================= -->
 </body>
 </html>
