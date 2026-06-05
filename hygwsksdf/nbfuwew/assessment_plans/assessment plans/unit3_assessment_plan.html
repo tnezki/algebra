@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 3 Assessment Plan and Bank</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+
+
+/* ======================= RESET / PAGE ======================= */
+@page { size: letter; margin: 0.45in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  font-size: 11pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.container { max-width: 980px; margin: 0 auto; }
+.page-break { page-break-before: always; break-before: page; }
+.unbreakable, .assessment-card, .outline-card, .rubric-card, .ladder-table, .progress-tracker { break-inside: avoid; page-break-inside: avoid; }
+
+/* ======================= HEADER / TITLES ======================= */
+h1 { color: #00003d; font-size: 26pt; line-height: 1.1; margin-bottom: 8px; }
+h2 { color: #00003d; font-size: 17pt; margin: 18px 0 10px 0; border-left: 6px solid #00003d; padding-left: 10px; }
+h3 { color: #004d99; font-size: 13pt; margin: 12px 0 6px 0; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px 28px; }
+li { margin-bottom: 4px; }
+.small-note { font-size: 9.5pt; color: #555; font-style: italic; }
+
+/* ======================= OUTLINE CARDS ======================= */
+.outline-card {
+  border: 1px solid #9aa9bd;
+  border-left: 7px solid #00003d;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.outline-card-title { color: #00003d; font-weight: 800; font-size: 13.5pt; margin-bottom: 4px; }
+.essential-standard { font-size: 12pt; border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+
+/* ======================= TABLES ======================= */
+table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; }
+th, td { border: 1px solid #777; padding: 7px 8px; vertical-align: top; }
+th { background: #eaf1fb; color: #00003d; font-weight: 800; text-align: left; }
+.ladder-table th { background: #00003d; color: #fff; }
+.ladder-table .dok4 { background: #eef4ff; }
+.ladder-table .dok3 { background: #f6fbff; }
+.ladder-table .dok2 { background: #fffdf2; }
+.ladder-table .dok1 { background: #ffffff; }
+.table-block, .parent-table, table.values { width: auto; margin: 10px auto 12px auto; border-collapse: collapse; }
+.table-block td, .table-block th, .parent-table td, .parent-table th, table.values td, table.values th { border: 1px solid #777; padding: 6px 14px; text-align: center; vertical-align: middle; }
+
+/* ======================= PROGRESS TRACKING ======================= */
+.progress-tracker { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 12px 0 18px 0; }
+.progress-box { border: 1px solid #777; padding: 12px; min-height: 0.8in; }
+.progress-box strong { color: #00003d; }
+
+/* ======================= DOK SECTIONS ======================= */
+.dok-bar {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15pt;
+  padding: 9px 12px;
+  margin: 22px 0 12px 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dok-method-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0 16px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+.assessment-ideas { margin-left: 24px; }
+.assessment-ideas a { color: #005aa0; font-weight: 800; text-decoration: underline; }
+.timing-label { display: inline-block; background: #fff7cf; border: 1px solid #d1c27a; border-radius: 4px; padding: 1px 6px; font-weight: 800; color: #4a3f17; margin-left: 6px; }
+.what-tells { border-left: 5px solid #777; padding-left: 10px; margin-top: 10px; color: #333; }
+
+/* ======================= SUMMATIVE / RUBRIC ======================= */
+.summative-card { border: 2px solid #00003d; padding: 12px 14px; margin: 14px 0; background: #f8fbff; break-inside: avoid; page-break-inside: avoid; }
+.summative-card a { color: #005aa0; font-weight: 800; }
+.rubric-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0; }
+.rubric-level { color: #00003d; font-weight: 900; font-size: 12.5pt; }
+
+/* ======================= ASSESSMENT BANK ======================= */
+.bank-intro { border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+.assessment-card {
+  border: 1px solid #777;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.problem-number { font-weight: 900; color: #00003d; font-size: 13pt; margin-bottom: 8px; }
+.problem-meta { color: #555; font-weight: 700; font-size: 10.5pt; margin-left: 8px; }
+.assessment-card p { margin-bottom: 7px; }
+.assessment-card ol, .assessment-card ul { margin-left: 26px; }
+.assessment-card li { margin-bottom: 6px; }
+.performance-notes { border-left: 5px solid #444; background: #f7f7f7; padding: 8px 10px; margin-top: 10px; font-size: 10pt; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+
+/* ======================= FIGURE / GRAPH SYSTEM ======================= */
+.figure-block, .graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { max-width: 100%; height: auto; border: 1px solid #ccc; background: #fff; }
+.figure-xs img { max-width: 1.4in; }
+.figure-sm img { max-width: 2.1in; }
+.figure-md img { max-width: 2.8in; }
+.figure-lg img { max-width: 3.8in; }
+.figure-xl img { max-width: 4.7in; }
+.graph-xs img { max-width: 2.0in; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.2in; }
+.graph-lg img { max-width: 4.1in; }
+.graph-xl img { max-width: 5.1in; }
+
+/* ======================= PRINT CONTROL ======================= */
+@media print {
+  body { font-size: 10.5pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  .assessment-card { padding: 10px 12px; }
+}
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+</style>
+</head>
+<body>
+<div class="container">
+<!-- ======================= UNIT 3 OUTLINE START ======================= -->
+<h1>Algebra 1 - Unit 3: Systems and Constraints</h1>
+<h2>Essential Standard</h2>
+<div class="essential-standard">Students will solve and interpret systems of equations and inequalities in order to model situations, analyze constraints, and justify solutions using equations, graphs, tables, and contexts.</div>
+<!-- ======================= SECTION OUTLINE START ======================= -->
+<section class="outline-card">
+<div class="outline-card-title">Section 3.1: Graphing and Elimination</div>
+<p><strong>Learning Target: Students will solve systems graphically and by elimination while interpreting the meaning of different solution types.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can solve a system using a graph.</li><li>I can solve a system using elimination.</li><li>I can identify one solution, no solution, and infinitely many solutions.</li><li>I can explain how graphs and equations show the same solution behavior.</li><li>I can verify whether an ordered pair satisfies both equations.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Systems of equations</li><li>Tables</li><li>Algebraic elimination</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>intersection of two cost plans</li><li>mixture or combination situations</li><li>checking solutions with graphs</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 3.2: Solving Systems by Substitution</div>
+<p><strong>Learning Target: Students will solve systems using substitution and choose efficient forms for solving.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can solve systems using substitution.</li><li>I can rewrite equations to prepare for substitution.</li><li>I can verify solutions.</li><li>I can choose when substitution is an efficient strategy.</li><li>I can connect substitution steps to a graph or context.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Equations</li><li>Graphs</li><li>Tables</li><li>Substitution expressions</li><li>Ordered pairs</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>one equation already solved for a variable</li><li>cost and quantity relationships</li><li>comparison of equivalent forms</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 3.3: Writing and Solving Systems from Situations</div>
+<p><strong>Learning Target: Students will create and solve systems that model real-world situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can define variables.</li><li>I can write equations from situations.</li><li>I can create a system from a context.</li><li>I can solve a system and interpret the meaning of the solution.</li><li>I can decide whether the solution is reasonable in context.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Contexts</li><li>Equations</li><li>Tables</li><li>Graphs</li><li>Verbal descriptions</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>ticket and admission models</li><li>two-rate work situations</li><li>sales or fundraising comparisons</li><li>mixture and count problems</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 3.4: Graphing Linear Inequalities</div>
+<p><strong>Learning Target: Students will graph and interpret linear inequalities.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can graph linear inequalities.</li><li>I can determine which region satisfies an inequality.</li><li>I can use test points to verify solutions.</li><li>I can interpret inequality solutions in context.</li><li>I can distinguish solid and dashed boundary lines.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Inequalities</li><li>Graphs</li><li>Boundary lines</li><li>Shaded half-planes</li><li>Test points</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>spending limits</li><li>minimum and maximum requirements</li><li>resource restrictions</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 3.5: Linear Systems of Inequalities</div>
+<p><strong>Learning Target: Students will analyze and interpret systems of linear inequalities.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can graph systems of inequalities.</li><li>I can identify the feasible region.</li><li>I can determine whether a point satisfies all constraints.</li><li>I can interpret feasible regions in context.</li><li>I can justify decisions using constraints.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Systems of inequalities</li><li>Graphs</li><li>Feasible regions</li><li>Candidate points</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>budget constraints</li><li>production planning</li><li>ingredient limits</li><li>decision-making with restrictions</li></ul>
+</section>
+<section class="outline-card"><div class="outline-card-title">Unit Modeling Themes</div><ul><li>intersection as shared solution</li><li>constraints and feasible choices</li><li>comparing plans or rates</li><li>ticket sales and cost models</li><li>resource limits</li><li>decision-making with systems</li><li>graphical and algebraic verification</li></ul></section>
+<!-- ======================= SECTION OUTLINE END ======================= -->
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr><tr class="dok4"><td>8</td><td>I can analyze systems and constraints in real-world situations, justify conclusions using equations, graphs, tables, and contexts, and evaluate whether solutions are reasonable.</td><td>MP4 Model with Mathematics / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr><tr class="dok4"><td>7</td><td>I can create, compare, and revise systems of equations or inequalities, then defend which representations and solution methods best support a decision.</td><td>MP1 Make Sense and Persevere / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr><tr class="dok3"><td>6</td><td>I can analyze solution behavior, constraints, and feasible regions to explain one solution, no solution, infinitely many solutions, and valid solution sets.</td><td>MP7 Look for Structure / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr><tr class="dok3"><td>5</td><td>I can justify solution methods, verify ordered pairs, critique reasoning, and connect algebraic solutions to graphs and contexts.</td><td>MP2 Reason Abstractly and Quantitatively / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr><tr class="dok2"><td>4</td><td>I can write and solve systems from graphs, equations, tables, and situations using graphing, substitution, or elimination.</td><td>MP4 Model with Mathematics / MP7 Look for Structure</td><td>DOK 2</td><td>Essential</td></tr><tr class="dok2"><td>3</td><td>I can graph linear inequalities, solve routine systems, use test points, and interpret basic solution sets.</td><td>MP5 Use Appropriate Tools Strategically / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 2</td><td>Essential</td></tr><tr class="dok1"><td>2</td><td>I can identify solution types, ordered-pair solutions, boundary lines, shaded regions, and system vocabulary.</td><td>MP6 Attend to Precision</td><td>DOK 1</td><td>Essential</td></tr><tr class="dok1"><td>1</td><td>I can recognize systems of equations, systems of inequalities, graphs, tables, and contexts as ways to represent relationships and constraints.</td><td>MP1 Make Sense of Problems / MP5 Use Appropriate Tools Strategically</td><td>DOK 1</td><td>Essential</td></tr></table>
+<h2>Progress Tracking</h2>
+<div class="progress-tracker"><div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div><div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div><div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div></div>
+
+<h2>Assessment Methods by DOK Level</h2>
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, graph identification, ordered-pair check, or exit ticket</strong></p>
+<p>Purpose: Check whether students can recognize systems, identify solution behavior from graphs, verify ordered pairs, use system vocabulary, and identify boundary-line or shading features.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit3_formative/unit3_dok1-1.html">System Solution Vocabulary Check</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students identify system vocabulary, ordered-pair solutions, and solution types.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok1-2.html">Substitution and Elimination Readiness Check</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students identify equations prepared for substitution or elimination and verify simple ordered pairs.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok1-3.html">Linear Inequality Graph Features Check</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students identify boundary lines, shading, and test-point meaning.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok1-4.html">Constraint Vocabulary and Feasible Point Check</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students identify feasible regions, candidate points, and constraints.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students who struggle here need support with the language and visual meaning of systems, constraints, solution sets, and feasibility before moving into solving and modeling.</div>
+</section>
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card">
+<p><strong>Format: Exit ticket, partner check, whiteboard response, mini-quiz, graphing task, or short written task</strong></p>
+<p>Purpose: Check whether students can solve routine systems, graph inequalities, write systems from straightforward situations, and connect graphical and algebraic solution methods.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit3_formative/unit3_dok2-1.html">Graphing and Elimination Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students solve a system by graphing or elimination and verify the solution.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok2-2.html">Substitution Solving Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students solve systems using substitution and check ordered pairs.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok2-3.html">Writing Systems from Situations Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students define variables, write a system, solve, and interpret the solution.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok2-4.html">Graphing Inequalities and Feasible Region Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students graph inequalities, test points, and identify feasible solutions.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students at this level can generally carry out system-solving and graphing procedures. These assessments reveal whether students can organize equations, graphs, and contexts accurately.</div>
+</section>
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, representation analysis, strategy comparison, error analysis, or discourse prompt</strong></p>
+<p>Purpose: Check whether students can justify solution methods, explain solution behavior, critique incorrect reasoning, and connect algebraic work to graphs and contexts.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit3_formative/unit3_dok3-1.html">Solution Type Justification Task</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students justify one solution, no solution, or infinitely many solutions using graphs and equations.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok3-2.html">Strategy Comparison Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students compare graphing, substitution, and elimination for efficiency and meaning.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok3-3.html">Model Interpretation and Critique Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students critique a system model or interpretation and revise the reasoning.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok3-4.html">Feasible Region Reasoning Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students defend whether points satisfy all constraints and explain the meaning of a feasible region.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>This level reveals whether students understand systems and constraints as connected representations rather than isolated procedures. These tasks identify reasoning gaps, misconception patterns, and readiness for more complex modeling.</div>
+</section>
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p>
+<p>Purpose: Check whether students can transfer systems and constraints to unfamiliar situations, design coherent models, make decisions, and justify conclusions using mathematical evidence.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit3_formative/unit3_dok4-1.html">Design a System Model Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students create a situation, write a system, solve it, and explain the solution in context.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok4-2.html">Choose the Best Method Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students select and defend a solving strategy for a system based on structure.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok4-3.html">Constraint Decision Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students use inequalities and feasible regions to recommend a valid choice.</li>
+<li><a href="../../formative/unit3_formative/unit3_dok4-4.html">Critique and Redesign Constraint Model</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students evaluate a flawed system or inequality model and revise it to fit the situation.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can design, connect, critique, and revise systems and constraints. These should remain short performance tasks rather than large projects.</div>
+</section>
+
+
+<h2>Summative Assessment Plan</h2><section class="summative-card">
+<p><a href="../../summative/unit3_summative/unit3_summative_assessment.html">Unit 3 Summative Assessment</a> <span class="timing-label">Unit 3 Assessed During Unit 5</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of system-solving tasks, graphing tasks, modeling tasks, inequality tasks, and short reasoning prompts aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize graphing and solving systems, substitution, elimination, writing systems from situations, graphing linear inequalities, identifying feasible regions, interpreting constraints, mathematical communication, and justification of reasoning.</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>Because of the spiraling course structure, Unit 3 is assessed during Unit 5 after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction.</p>
+</section>
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>The student demonstrates a strong and flexible understanding of Unit 3 concepts: systems of equations, substitution, elimination, systems from situations, linear inequalities, and constraints. Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects equations, graphs, tables, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>The student demonstrates solid understanding of the essential Unit 3 concepts. Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, though they may lack some precision or depth.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>The student demonstrates partial but passable understanding of Unit 3 concepts. The student can complete many routine tasks but may need support with notation, reasoning, restrictions, representations, or multi-step problem solving. Work may contain errors or incomplete explanations, but there is enough evidence that the student understands the main ideas.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>The student does not yet demonstrate sufficient understanding of the essential Unit 3 concepts. Work shows major errors, missing reasoning, weak conceptual understanding, or inability to connect representations. The student may need reteaching, additional practice, or reassessment to demonstrate proficiency.</p></section>
+
+<!-- ======================= UNIT 3 OUTLINE END ======================= -->
+<div class="page-break"></div>
+<!-- ======================= ASSESSMENT BANK START ======================= -->
+<h1>Assessment Bank</h1>
+<div class="bank-intro"><p><strong>Unit 3 Assessment Bank:</strong> Problems are organized by Depth of Knowledge and designed as source items for formative assessments, reassessments, summative assessment versions, practice sets, intervention, and enrichment.</p><p class="small-note">Rolling timing: Unit 3 is assessed during Unit 5.</p></div><div class="dok-bar">Assessment Bank DOK 1</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 1 items provide evidence of foundational vocabulary, representation recognition, ordered-pair checking, solution-type identification, and basic inequality/constraint graph awareness. These items are designed for quick retrieval practice, warm-ups, proficiency checks, exit tickets, and foundational formative assessment.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>identify system vocabulary and solution behavior</li><li>read intersections and ordered pairs from graphs</li><li>verify ordered pairs in equations</li><li>recognize substitution and elimination setups</li><li>identify boundary lines, shading, and feasible regions</li><li>recognize constraints in contexts</li></ul>
+</section>
+<h2>Graphing and Elimination</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.001">
+<div class="problem-number">Assessment Bank DOK 1.001<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>Use the graph below. Estimate the ordered pair where the two lines intersect.</p><div class="graph-block graph-md"><img alt="intersecting system graph" src="figures/unit3_intersecting_system.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.002">
+<div class="problem-number">Assessment Bank DOK 1.002<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>Use the graph below. Do the two lines appear to intersect, stay parallel, or represent the same line?</p><div class="graph-block graph-md"><img alt="parallel system graph" src="figures/unit3_parallel_system.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.003">
+<div class="problem-number">Assessment Bank DOK 1.003<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>Use the graph below. Do the equations appear to have one solution, no solution, or infinitely many solutions?</p><div class="graph-block graph-md"><img alt="same line system graph" src="figures/unit3_same_line_system.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.004">
+<div class="problem-number">Assessment Bank DOK 1.004<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>Determine whether $(2,3)$ is a solution to both equations.</p><p>$$\begin{aligned}x+y&=5\\2x-y&=1\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.005">
+<div class="problem-number">Assessment Bank DOK 1.005<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>Which method is suggested by the setup below: graphing, substitution, or elimination?</p><div class="graph-block figure-lg"><img alt="elimination setup" src="figures/unit3_elimination_setup.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.006">
+<div class="problem-number">Assessment Bank DOK 1.006<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 1</span></div>
+<p>For a system of equations, what does an ordered-pair solution represent on a graph?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 END ======================= -->
+<h2>Substitution</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.007">
+<div class="problem-number">Assessment Bank DOK 1.007<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Which equation is already solved for $y$?</p><ol class="lower-alpha"><li>$y=3x-4$</li><li>$2x+y=10$</li><li>$x-4y=8$</li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.008">
+<div class="problem-number">Assessment Bank DOK 1.008<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Use the setup below. Which expression could replace $y$ in the second equation?</p><div class="graph-block figure-lg"><img alt="substitution setup" src="figures/unit3_substitution_setup.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.009">
+<div class="problem-number">Assessment Bank DOK 1.009<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Check whether $(3,5)$ satisfies the equation $y=2x-1$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.010">
+<div class="problem-number">Assessment Bank DOK 1.010<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Identify the input and output variable in the equation $y=4x+2$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.011">
+<div class="problem-number">Assessment Bank DOK 1.011<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Substitute $x=2$ into $y=3x+1$. What is $y$?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.012">
+<div class="problem-number">Assessment Bank DOK 1.012<span class="problem-meta">Unit 3 | Substitution | DoK 1</span></div>
+<p>Does the ordered pair $(1,4)$ satisfy $y=2x+2$?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 END ======================= -->
+<h2>Writing and Solving Systems from Situations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.013">
+<div class="problem-number">Assessment Bank DOK 1.013<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 1</span></div>
+<p>A ticket costs 8 dollars for adults and 5 dollars for students. Which variables could represent the numbers of adult and student tickets?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.014">
+<div class="problem-number">Assessment Bank DOK 1.014<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 1</span></div>
+<p>Write an equation for the statement: The total number of adult tickets $a$ and student tickets $s$ is 30.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.015">
+<div class="problem-number">Assessment Bank DOK 1.015<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 1</span></div>
+<p>Write an equation for the statement: Adult tickets cost 8 dollars each, student tickets cost 5 dollars each, and the total is 195 dollars.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.016">
+<div class="problem-number">Assessment Bank DOK 1.016<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 1</span></div>
+<p>Use the graph below. Which line has the larger starting value?</p><div class="graph-block graph-lg"><img alt="two cost models graph" src="figures/unit3_two_cost_models.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.017">
+<div class="problem-number">Assessment Bank DOK 1.017<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 1</span></div>
+<p>What does the intersection of two cost models usually represent in context?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 END ======================= -->
+<h2>Graphing Linear Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.018">
+<div class="problem-number">Assessment Bank DOK 1.018<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>For the inequality $y\le 2x+1$, should the boundary line be solid or dashed?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.019">
+<div class="problem-number">Assessment Bank DOK 1.019<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>For the inequality $y> -x+3$, should the boundary line be solid or dashed?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.020">
+<div class="problem-number">Assessment Bank DOK 1.020<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>Use the graph below. Is the boundary line solid or dashed?</p><div class="graph-block graph-md"><img alt="dashed inequality graph" src="figures/unit3_single_inequality_dashed.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.021">
+<div class="problem-number">Assessment Bank DOK 1.021<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>Use the graph below. Is point P inside the shaded region?</p><div class="graph-block graph-md"><img alt="inequality with point P" src="figures/unit3_test_point.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.022">
+<div class="problem-number">Assessment Bank DOK 1.022<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>State one test point commonly used to check which side of a boundary line should be shaded.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.023">
+<div class="problem-number">Assessment Bank DOK 1.023<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 1</span></div>
+<p>What does the shaded region of a linear inequality graph represent?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 END ======================= -->
+<h2>Linear Systems of Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.024">
+<div class="problem-number">Assessment Bank DOK 1.024<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 1</span></div>
+<p>Use the graph below. How many boundary lines are shown?</p><div class="graph-block graph-md"><img alt="system of inequalities graph" src="figures/unit3_feasible_region.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.025">
+<div class="problem-number">Assessment Bank DOK 1.025<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 1</span></div>
+<p>Use the graph below. Which point appears to be a candidate solution: A, B, C, or D?</p><div class="graph-block graph-md"><img alt="candidate feasible points graph" src="figures/unit3_candidate_points.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.026">
+<div class="problem-number">Assessment Bank DOK 1.026<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 1</span></div>
+<p>What does a feasible region represent in a system of inequalities?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.027">
+<div class="problem-number">Assessment Bank DOK 1.027<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 1</span></div>
+<p>Determine whether $(2,4)$ satisfies both inequalities: $y\le 6$ and $x\ge 1$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U3-DOK1.028">
+<div class="problem-number">Assessment Bank DOK 1.028<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 1</span></div>
+<p>Which symbol means “less than or equal to”?</p><ol class="lower-alpha"><li>$<$</li><li>$\le$</li><li>$>$</li><li>$\ge$</li></ol>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 2</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 2 items provide evidence of procedural understanding, graphing skills, representation connections, routine system solving, and basic modeling with systems and inequalities.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>solve systems by graphing, substitution, and elimination</li><li>write systems from straightforward situations</li><li>graph linear inequalities</li><li>use test points to verify shaded regions</li><li>identify feasible points in systems of inequalities</li><li>connect equations, graphs, and contexts</li></ul>
+</section>
+<h2>Graphing and Elimination</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.001">
+<div class="problem-number">Assessment Bank DOK 2.001<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Solve the system by graphing using the graph below.</p><div class="graph-block graph-md"><img alt="intersecting system graph" src="figures/unit3_intersecting_system.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.002">
+<div class="problem-number">Assessment Bank DOK 2.002<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Solve the system algebraically using elimination.</p><p>$$\begin{aligned}x+y&=9\\x-y&=1\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.003">
+<div class="problem-number">Assessment Bank DOK 2.003<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Use elimination to solve.</p><p>$$\begin{aligned}2x+3y&=18\\-2x+y&=6\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.004">
+<div class="problem-number">Assessment Bank DOK 2.004<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Classify each graph as one solution, no solution, or infinitely many solutions.</p><div class="graph-block graph-xl"><img alt="three system graphs" src="figures/unit3_three_system_types.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.005">
+<div class="problem-number">Assessment Bank DOK 2.005<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Graph both equations on the grid and estimate the solution.</p><p>$$y=x+1\qquad y=-x+5$$</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit3_blank_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.006">
+<div class="problem-number">Assessment Bank DOK 2.006<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 2</span></div>
+<p>Verify whether your solution to the system satisfies both equations.</p><p>$$\begin{aligned}3x+y&=11\\x-y&=1\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 END ======================= -->
+<h2>Substitution</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.007">
+<div class="problem-number">Assessment Bank DOK 2.007<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Solve using substitution.</p><p>$$\begin{aligned}y&=2x+3\\3x+y&=18\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.008">
+<div class="problem-number">Assessment Bank DOK 2.008<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Solve using substitution.</p><p>$$\begin{aligned}x&=y+4\\2x+y&=19\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.009">
+<div class="problem-number">Assessment Bank DOK 2.009<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Rewrite the first equation so it can be substituted into the second equation.</p><p>$$\begin{aligned}y&=x-5\\4x+2y&=22\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.010">
+<div class="problem-number">Assessment Bank DOK 2.010<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Use the graph below to estimate the solution, then verify algebraically.</p><div class="graph-block graph-md"><img alt="system graph for substitution" src="figures/unit3_substitution_graph.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.011">
+<div class="problem-number">Assessment Bank DOK 2.011<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Determine whether $(4,7)$ is the solution to the system. Show verification.</p><p>$$\begin{aligned}y&=2x-1\\x+y&=11\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.012">
+<div class="problem-number">Assessment Bank DOK 2.012<span class="problem-meta">Unit 3 | Substitution | DoK 2</span></div>
+<p>Solve the system and state the ordered pair.</p><p>$$\begin{aligned}y&=-x+6\\y&=3x-2\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 END ======================= -->
+<h2>Writing and Solving Systems from Situations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.013">
+<div class="problem-number">Assessment Bank DOK 2.013<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 2</span></div>
+<p>Define variables and write a system for the situation: Adult tickets cost 8 dollars, student tickets cost 5 dollars, 40 total tickets were sold, and 260 dollars was collected.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.014">
+<div class="problem-number">Assessment Bank DOK 2.014<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 2</span></div>
+<p>Write and solve a system: Two numbers have a sum of 22 and a difference of 4.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.015">
+<div class="problem-number">Assessment Bank DOK 2.015<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 2</span></div>
+<p>Use the graph below to estimate when the two cost models are equal. Interpret the meaning in context.</p><div class="graph-block graph-lg"><img alt="two cost models graph" src="figures/unit3_two_cost_models.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.016">
+<div class="problem-number">Assessment Bank DOK 2.016<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 2</span></div>
+<p>A school sells $x$ raffle tickets and $y$ meal tickets. Write an equation for 75 total tickets sold.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.017">
+<div class="problem-number">Assessment Bank DOK 2.017<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 2</span></div>
+<p>A school sells raffle tickets for 3 dollars and meal tickets for 7 dollars. Write an equation for 385 dollars total revenue.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 END ======================= -->
+<h2>Graphing Linear Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.018">
+<div class="problem-number">Assessment Bank DOK 2.018<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Graph the inequality on the grid.</p><p>$$y\le x+2$$</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit3_blank_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.019">
+<div class="problem-number">Assessment Bank DOK 2.019<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Graph the inequality on the grid.</p><p>$$y> -2x+4$$</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit3_blank_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.020">
+<div class="problem-number">Assessment Bank DOK 2.020<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Use a test point to determine whether $(0,0)$ satisfies $y\le -x+5$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.021">
+<div class="problem-number">Assessment Bank DOK 2.021<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Use the graph below. Write one inequality that could match the graph.</p><div class="graph-block graph-md"><img alt="solid boundary inequality graph" src="figures/unit3_single_inequality_solid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.022">
+<div class="problem-number">Assessment Bank DOK 2.022<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Explain why the boundary line for $y<3x-1$ is dashed.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.023">
+<div class="problem-number">Assessment Bank DOK 2.023<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 2</span></div>
+<p>Use the graph below. Decide whether point P satisfies the inequality and explain how you know.</p><div class="graph-block graph-md"><img alt="test point graph" src="figures/unit3_test_point.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 END ======================= -->
+<h2>Linear Systems of Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.024">
+<div class="problem-number">Assessment Bank DOK 2.024<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 2</span></div>
+<p>Graph the system of inequalities on the grid.</p><p>$$\begin{aligned}y&\le -x+7\\y&>2\end{aligned}$$</p><div class="graph-block graph-md"><img alt="blank grid" src="figures/unit3_blank_grid.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.025">
+<div class="problem-number">Assessment Bank DOK 2.025<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 2</span></div>
+<p>Use the graph below. List two points that appear to satisfy both constraints.</p><div class="graph-block graph-md"><img alt="feasible region graph" src="figures/unit3_feasible_region.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.026">
+<div class="problem-number">Assessment Bank DOK 2.026<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 2</span></div>
+<p>Determine whether $(3,4)$ satisfies both inequalities: $y\le -x+8$ and $y\ge 2$.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.027">
+<div class="problem-number">Assessment Bank DOK 2.027<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 2</span></div>
+<p>Use the graph below. Determine which labeled points satisfy both inequalities.</p><div class="graph-block graph-md"><img alt="candidate points graph" src="figures/unit3_candidate_points.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U3-DOK2.028">
+<div class="problem-number">Assessment Bank DOK 2.028<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 2</span></div>
+<p>Write a system of inequalities for: $x$ and $y$ are nonnegative, and their total is at most 12.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 3</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 3 items provide evidence of reasoning, justification, strategy comparison, error analysis, representation analysis, and mathematical communication across systems and constraints.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>justify solution types and methods</li><li>critique incorrect system-solving work</li><li>compare graphing, substitution, and elimination</li><li>interpret ordered pairs in context</li><li>explain boundary and shading decisions</li><li>defend feasible-region conclusions</li></ul>
+</section>
+<h2>Graphing and Elimination</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.001">
+<div class="problem-number">Assessment Bank DOK 3.001<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 3</span></div>
+<p>A student says System B has one solution because both equations have lines. Use the graph to critique the claim.</p><div class="graph-block graph-md"><img alt="parallel system graph" src="figures/unit3_parallel_system.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.002">
+<div class="problem-number">Assessment Bank DOK 3.002<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 3</span></div>
+<p>Explain how a graph can show one solution, no solution, or infinitely many solutions. Use the three graphs below as evidence.</p><div class="graph-block graph-xl"><img alt="three system types" src="figures/unit3_three_system_types.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.003">
+<div class="problem-number">Assessment Bank DOK 3.003<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 3</span></div>
+<p>Compare graphing and elimination for the system below. Which method seems more efficient and why?</p><p>$$\begin{aligned}4x+2y&=16\\-4x+3y&=9\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.004">
+<div class="problem-number">Assessment Bank DOK 3.004<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 3</span></div>
+<p>A student solved a system and got $(2,5)$ but only checked one equation. Explain why checking both equations matters.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.005">
+<div class="problem-number">Assessment Bank DOK 3.005<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 3</span></div>
+<p>Use the graph below to explain how the intersection represents a solution to both equations.</p><div class="graph-block graph-md"><img alt="system graph" src="figures/unit3_elimination_graph.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 END ======================= -->
+<h2>Substitution</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.006">
+<div class="problem-number">Assessment Bank DOK 3.006<span class="problem-meta">Unit 3 | Substitution | DoK 3</span></div>
+<p>A student substitutes $2x+3$ for $x$ instead of for $y$ in the system below. Analyze the error and correct the setup.</p><p>$$\begin{aligned}y&=2x+3\\3x+y&=18\end{aligned}$$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.007">
+<div class="problem-number">Assessment Bank DOK 3.007<span class="problem-meta">Unit 3 | Substitution | DoK 3</span></div>
+<p>Explain why substitution is especially useful when one equation is already solved for a variable.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.008">
+<div class="problem-number">Assessment Bank DOK 3.008<span class="problem-meta">Unit 3 | Substitution | DoK 3</span></div>
+<p>Compare solving the system by substitution and by graphing. What information does each method make easier to see?</p><div class="graph-block graph-md"><img alt="substitution system graph" src="figures/unit3_substitution_graph.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.009">
+<div class="problem-number">Assessment Bank DOK 3.009<span class="problem-meta">Unit 3 | Substitution | DoK 3</span></div>
+<p>Determine whether the following work is valid. If not, revise it.</p><p>System: $y=x+4$ and $2x+y=13$<br/>Student work: $2x+x+4=13$</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.010">
+<div class="problem-number">Assessment Bank DOK 3.010<span class="problem-meta">Unit 3 | Substitution | DoK 3</span></div>
+<p>Create a system where substitution would be more efficient than elimination. Explain your design choice.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 END ======================= -->
+<h2>Writing and Solving Systems from Situations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.011">
+<div class="problem-number">Assessment Bank DOK 3.011<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 3</span></div>
+<p>A student writes only one equation for a two-ticket situation. Explain why a system may be needed and what each equation should represent.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.012">
+<div class="problem-number">Assessment Bank DOK 3.012<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 3</span></div>
+<p>Use the two cost models below. Write a context and explain what the intersection means in your context.</p><div class="graph-block graph-lg"><img alt="two cost models graph" src="figures/unit3_two_cost_models.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.013">
+<div class="problem-number">Assessment Bank DOK 3.013<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 3</span></div>
+<p>Critique this interpretation: “The solution $(6,60)$ means the answer is 60.” Explain what both coordinates must represent.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.014">
+<div class="problem-number">Assessment Bank DOK 3.014<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 3</span></div>
+<p>Write a system for a real-world situation, solve it, and explain how you know the solution is reasonable.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.015">
+<div class="problem-number">Assessment Bank DOK 3.015<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 3</span></div>
+<p>Compare a table strategy and an algebraic system strategy for solving a two-plan problem. When might each be useful?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 END ======================= -->
+<h2>Graphing Linear Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.016">
+<div class="problem-number">Assessment Bank DOK 3.016<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 3</span></div>
+<p>A student graphs $y<2x+1$ with a solid boundary line. Analyze the error and explain the correction.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.017">
+<div class="problem-number">Assessment Bank DOK 3.017<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 3</span></div>
+<p>Use the graph below. Explain how a test point can verify which side of the boundary should be shaded.</p><div class="graph-block graph-md"><img alt="test point graph" src="figures/unit3_test_point.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.018">
+<div class="problem-number">Assessment Bank DOK 3.018<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 3</span></div>
+<p>Explain how graphing a linear inequality is similar to graphing a linear equation and how it is different.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.019">
+<div class="problem-number">Assessment Bank DOK 3.019<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 3</span></div>
+<p>Create two different inequalities with the same boundary line but opposite shaded regions. Explain how they differ.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.020">
+<div class="problem-number">Assessment Bank DOK 3.020<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 3</span></div>
+<p>Use the graph below to write a possible inequality and justify your choice of boundary and shading.</p><div class="graph-block graph-md"><img alt="dashed inequality graph" src="figures/unit3_single_inequality_dashed.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 END ======================= -->
+<h2>Linear Systems of Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.021">
+<div class="problem-number">Assessment Bank DOK 3.021<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>A student says any point between the two boundary lines is a solution. Use the graph to critique the claim.</p><div class="graph-block graph-md"><img alt="feasible region graph" src="figures/unit3_feasible_region.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.022">
+<div class="problem-number">Assessment Bank DOK 3.022<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Use the candidate points below. Defend which point or points satisfy all constraints.</p><div class="graph-block graph-md"><img alt="candidate points graph" src="figures/unit3_candidate_points.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.023">
+<div class="problem-number">Assessment Bank DOK 3.023<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Explain why a feasible region may contain infinitely many possible solutions.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.024">
+<div class="problem-number">Assessment Bank DOK 3.024<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Compare solving a system of equations and graphing a system of inequalities. How is the meaning of “solution” different?</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.025">
+<div class="problem-number">Assessment Bank DOK 3.025<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Create a real-world constraint situation and explain why more than one answer can be valid.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.026">
+<div class="problem-number">Assessment Bank DOK 3.026<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Use the budget-region graph below to make a recommendation and justify it with at least two constraints.</p><div class="graph-block graph-md"><img alt="budget feasible region" src="figures/unit3_budget_region.png"/></div>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.027">
+<div class="problem-number">Assessment Bank DOK 3.027<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>A student tests only one inequality and decides a point is feasible. Explain the flaw and provide a better checking process.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U3-DOK3.028">
+<div class="problem-number">Assessment Bank DOK 3.028<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 3</span></div>
+<p>Design a short explanation for a classmate that distinguishes a boundary line from the feasible region.</p>
+
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 4</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 4 items provide evidence of transfer, modeling, design, critique, synthesis, and decision-making across systems of equations, systems of inequalities, and real-world constraints.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>design and connect multiple representations</li><li>model unfamiliar situations with systems</li><li>critique and revise equations or inequalities</li><li>make decisions using feasible regions</li><li>justify method choice and interpretation</li><li>communicate conclusions with evidence</li></ul>
+</section>
+<h2>Graphing and Elimination</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.001">
+<div class="problem-number">Assessment Bank DOK 4.001<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 4</span></div>
+<p>Create three systems: one with one solution, one with no solution, and one with infinitely many solutions. Include equations and explain how the graphs would behave.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.002">
+<div class="problem-number">Assessment Bank DOK 4.002<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 4</span></div>
+<p>Design a “Which System Does Not Belong?” task using three systems of equations. Include your answer key and reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.003">
+<div class="problem-number">Assessment Bank DOK 4.003<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 4</span></div>
+<p>Use the graph below to create a system-solving question for another student. Include the expected reasoning, but do not label the solution on the graph.</p><div class="graph-block graph-md"><img alt="intersecting system graph" src="figures/unit3_intersecting_system.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.004">
+<div class="problem-number">Assessment Bank DOK 4.004<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 4</span></div>
+<p>Create a system where elimination is efficient because one variable cancels immediately. Solve it and explain your design.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.005">
+<div class="problem-number">Assessment Bank DOK 4.005<span class="problem-meta">Unit 3 | Graphing and Elimination | DoK 4</span></div>
+<p>Critique this statement: “Graphing is only useful when the answer is an integer.” Use a system example to respond.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 END ======================= -->
+<h2>Substitution</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.006">
+<div class="problem-number">Assessment Bank DOK 4.006<span class="problem-meta">Unit 3 | Substitution | DoK 4</span></div>
+<p>Create a real-world situation that naturally produces one equation solved for a variable and one equation in standard form. Solve using substitution.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.007">
+<div class="problem-number">Assessment Bank DOK 4.007<span class="problem-meta">Unit 3 | Substitution | DoK 4</span></div>
+<p>Design a system where substitution works but creates fractions. Explain whether substitution is still a reasonable method.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.008">
+<div class="problem-number">Assessment Bank DOK 4.008<span class="problem-meta">Unit 3 | Substitution | DoK 4</span></div>
+<p>Use the setup below to write a full solution and a short teaching explanation for another student.</p><div class="graph-block figure-lg"><img alt="substitution setup" src="figures/unit3_substitution_setup.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.009">
+<div class="problem-number">Assessment Bank DOK 4.009<span class="problem-meta">Unit 3 | Substitution | DoK 4</span></div>
+<p>Create an error-analysis task about substitution. Include incorrect student work, the misconception, and a corrected solution.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.010">
+<div class="problem-number">Assessment Bank DOK 4.010<span class="problem-meta">Unit 3 | Substitution | DoK 4</span></div>
+<p>Compare substitution and elimination for a system you create. Defend which method you would recommend.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 END ======================= -->
+<h2>Writing and Solving Systems from Situations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.011">
+<div class="problem-number">Assessment Bank DOK 4.011<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 4</span></div>
+<p>Design a ticket-sales situation that requires a system of equations. Define variables, write equations, solve, and interpret the ordered pair.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.012">
+<div class="problem-number">Assessment Bank DOK 4.012<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 4</span></div>
+<p>Create a two-plan comparison situation represented by the graph below. Write equations for both plans and make a recommendation for a customer.</p><div class="graph-block graph-lg"><img alt="two cost models graph" src="figures/unit3_two_cost_models.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.013">
+<div class="problem-number">Assessment Bank DOK 4.013<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 4</span></div>
+<p>Design a flawed system model for a real-world situation. Then critique and revise the model so it matches the situation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.014">
+<div class="problem-number">Assessment Bank DOK 4.014<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 4</span></div>
+<p>Create a situation where the algebraic solution is correct but one coordinate must be interpreted carefully. Explain the decision.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.015">
+<div class="problem-number">Assessment Bank DOK 4.015<span class="problem-meta">Unit 3 | Writing and Solving Systems from Situations | DoK 4</span></div>
+<p>Build a multi-representation system task using a context, table, graph, and equations. Include the expected student reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 END ======================= -->
+<h2>Graphing Linear Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.016">
+<div class="problem-number">Assessment Bank DOK 4.016<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 4</span></div>
+<p>Create a real-world situation modeled by a single linear inequality. Graph it and explain the meaning of the shaded region.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.017">
+<div class="problem-number">Assessment Bank DOK 4.017<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 4</span></div>
+<p>Design two inequalities with the same boundary line but different restrictions. Explain how the graphs and contexts differ.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.018">
+<div class="problem-number">Assessment Bank DOK 4.018<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 4</span></div>
+<p>Use the graph below to create a context that matches the inequality. Explain what the boundary and shaded region mean.</p><div class="graph-block graph-md"><img alt="linear inequality graph" src="figures/unit3_single_inequality_solid.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.019">
+<div class="problem-number">Assessment Bank DOK 4.019<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 4</span></div>
+<p>Create a test-point challenge where a student must decide which side of a line to shade. Include an answer explanation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.020">
+<div class="problem-number">Assessment Bank DOK 4.020<span class="problem-meta">Unit 3 | Graphing Linear Inequalities | DoK 4</span></div>
+<p>Critique the statement: “A dashed line means there are no solutions on the graph.” Use a graph or example in your response.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 END ======================= -->
+<h2>Linear Systems of Inequalities</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.021">
+<div class="problem-number">Assessment Bank DOK 4.021<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Create a decision-making problem involving two constraints. Graph the system and recommend one feasible choice.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.022">
+<div class="problem-number">Assessment Bank DOK 4.022<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Use the feasible-region graph below to write a realistic constraint story and identify two valid choices.</p><div class="graph-block graph-md"><img alt="system of inequalities graph" src="figures/unit3_feasible_region.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.023">
+<div class="problem-number">Assessment Bank DOK 4.023<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Design a constraint model where changing one inequality changes the feasible region. Explain the impact of your change.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.024">
+<div class="problem-number">Assessment Bank DOK 4.024<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Create a “best choice” task using candidate points and constraints. Include the criteria for deciding which feasible point is best.</p><div class="graph-block graph-md"><img alt="candidate feasible points graph" src="figures/unit3_candidate_points.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.025">
+<div class="problem-number">Assessment Bank DOK 4.025<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Critique and revise a system of inequalities that does not match a budget situation. Explain why your revision is better.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.026">
+<div class="problem-number">Assessment Bank DOK 4.026<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Create a system of inequalities with no feasible solution. Explain how the graph shows this.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.027">
+<div class="problem-number">Assessment Bank DOK 4.027<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Use the budget-region graph below to write a recommendation memo. Your conclusion must cite both constraints and explain why at least one alternative is not feasible.</p><div class="graph-block graph-md"><img alt="budget feasible region graph" src="figures/unit3_budget_region.png"/></div>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U3-DOK4.028">
+<div class="problem-number">Assessment Bank DOK 4.028<span class="problem-meta">Unit 3 | Linear Systems of Inequalities | DoK 4</span></div>
+<p>Design a short performance task that asks students to connect equations, inequalities, graphs, and a real-world constraint situation. Include expected reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 END ======================= -->
+<!-- ======================= ASSESSMENT BANK END ======================= -->
+
+</div>
+</body>
+</html>
