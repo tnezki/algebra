@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Practice Set 1.2.2</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.45in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.45; color:#222; background:#fff; font-size:11pt; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.container { max-width: 930px; margin:0 auto; }
+h1 { color:#00003d; font-size:25pt; line-height:1.1; margin-bottom:6px; }
+h2 { color:#00003d; font-size:16pt; margin:16px 0 8px 0; border-left:6px solid #00003d; padding-left:10px; }
+.unit-intro { border:2px solid #00003d; padding:10px 12px; margin:10px 0 14px 0; background:#f8fbff; }
+.section-label { background:#eaf1fb; border:1px solid #a9b9cf; color:#22354d; font-weight:800; font-size:11pt; padding:8px 12px; margin:16px 0 10px 0; border-radius:4px; break-after:avoid; }
+.problem { border:1px solid #777; padding:12px 14px; margin:10px 0 13px 0; break-inside:avoid; page-break-inside:avoid; background:#fff; }
+.problem-number { font-weight:900; color:#00003d; font-size:12.5pt; margin-bottom:7px; }
+.problem-meta { color:#555; font-weight:700; font-size:9.5pt; margin-left:6px; }
+p { margin:6px 0; }
+ol, ul { margin:6px 0 8px 28px; }
+li { margin-bottom:5px; }
+.lower-alpha { list-style-type: lower-alpha; }
+table.values, .table-block, .rep-table { width:auto; margin:10px auto 12px auto; border-collapse:collapse; }
+table.values th, table.values td, .table-block th, .table-block td, .rep-table th, .rep-table td { border:1px solid #777; padding:7px 15px; text-align:center; vertical-align:middle; min-width:42px; }
+table.values th, .table-block th, .rep-table th { background:#eaf1fb; color:#00003d; font-weight:800; }
+.graph-block, .figure-block { margin:10px 0 8px 0; text-align:center; break-inside:avoid; page-break-inside:avoid; }
+.graph-block img, .figure-block img { max-width:100%; height:auto; border:1px solid #ccc; background:#fff; }
+.graph-sm img { max-width:2.3in; } .graph-md img { max-width:3.0in; } .graph-lg img { max-width:3.8in; }
+.workspace { height:380px; border:1px dashed #aaa; margin-top:10px; }
+.workspace-sm { height:250px; border:1px dashed #aaa; margin-top:10px; }
+.page-break { page-break-before:always; break-before:page; }
+blockquote { border-left:5px solid #777; margin:8px 0 10px 10px; padding:6px 10px; background:#f7f7f7; font-style:italic; }
+.match-grid { display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin:8px 0; }
+.match-card { border:1px solid #aaa; padding:8px; min-height:56px; }
+.machine-row { display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap; margin:10px 0; }
+.machine { border:2px solid #00003d; border-radius:10px; padding:10px 14px; min-width:150px; text-align:center; background:#f8fbff; font-weight:700; }
+.arrow { font-size:18pt; font-weight:900; color:#00003d; }
+.mini-note { font-size:9.5pt; color:#555; font-style:italic; }
+@media print { body { font-size:10.5pt; } h1 { font-size:23pt; } .problem { padding:10px 12px; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Practice Set 1.2.2</h1>
+<div class="unit-intro">Developing Spiral: more function notation, consistent-output reasoning, and continued prerequisite practice.</div>
+<div class="section-label">Unit 1.2 — Inputs, Outputs, and Functions</div>
+<section class="problem" id="p01">
+<div class="problem-number">1.<span class="problem-meta">Unit 1.2 | DoK 1 | Input-output pair</span></div>
+<p>In the ordered pair $(6,11)$, identify the input and the output.</p>
+</section>
+<section class="problem" id="p02">
+<div class="problem-number">2.<span class="problem-meta">Unit 1.2 | DoK 1 | Function notation</span></div>
+<p>For $g(x)=x^2+1$, find $g(-3)$ and $g(4)$.</p>
+</section>
+<section class="problem" id="p03">
+<div class="problem-number">3.<span class="problem-meta">Unit 1.2 | DoK 2 | Function machine chain</span></div>
+<p>The output of the first machine becomes the input of the second machine. Find the final output.</p><div class="machine-row"><div class="machine">Start<br/>$x=5$</div><div class="arrow">&rarr;</div><div class="machine">Machine A<br/>$y=4x-7$</div><div class="arrow">&rarr;</div><div class="machine">Machine B<br/>$y=x+9$</div><div class="arrow">&rarr;</div><div class="machine">Final output</div></div>
+</section>
+<section class="problem" id="p04">
+<div class="problem-number">4.<span class="problem-meta">Unit 1.2 | DoK 3 | Critique a claim</span></div>
+<p>A student says, “This table is not a function because the output $5$ appears twice.” Critique the claim.</p><table class="values"><tr><th>Input</th><td>-2</td><td>0</td><td>3</td><td>6</td></tr><tr><th>Output</th><td>5</td><td>1</td><td>5</td><td>9</td></tr></table>
+</section>
+<div class="section-label">Unit A.2 Spiral — Order of Operations and Evaluating Expressions</div>
+<section class="problem" id="p05">
+<div class="problem-number">5.<span class="problem-meta">Unit 0A.2 | DoK 1 | Order of operations</span></div>
+<p>Evaluate: $$7+4(10-3)$$</p>
+</section>
+<section class="problem" id="p06">
+<div class="problem-number">6.<span class="problem-meta">Unit 0A.2 | DoK 1 | Substitution</span></div>
+<p>Evaluate $2p-9$ when $p=-6$.</p>
+</section>
+<section class="problem" id="p07">
+<div class="problem-number">7.<span class="problem-meta">Unit 0A.2 | DoK 1 | Exponents</span></div>
+<p>Evaluate: $$3^3-4^2$$</p>
+</section>
+<section class="problem" id="p08">
+<div class="problem-number">8.<span class="problem-meta">Unit 0A.2 | DoK 1 | Expression value</span></div>
+<p>Evaluate $r+s^2$ when $r=-8$ and $s=6$.</p>
+</section>
+<section class="problem" id="p09">
+<div class="problem-number">9.<span class="problem-meta">Unit 0A.2 | DoK 2 | Context expression</span></div>
+<p>A phone repair costs 35 dollars plus 18 dollars per hour. Write and evaluate an expression for a repair that takes 4 hours.</p>
+</section>
+<section class="problem" id="p10">
+<div class="problem-number">10.<span class="problem-meta">Unit 0A.2 | DoK 2 | Multi-step expression</span></div>
+<p>Evaluate $48\div(2^3)+5(3)$.</p>
+</section>
+<section class="problem" id="p11">
+<div class="problem-number">11.<span class="problem-meta">Unit 0A.2 | DoK 3 | Compare strategies</span></div>
+<p>Two students evaluate $3(8+4)-5$. One distributes first and one simplifies inside the parentheses first. Show both methods and explain why they agree.</p>
+</section>
+<section class="problem" id="p12">
+<div class="problem-number">12.<span class="problem-meta">Unit 0A.2 | DoK 4 | Create and test</span></div>
+<p>Create a real-world situation that can be represented by $12+4h$. Choose a value for $h$, evaluate the expression, and explain the meaning of the result.</p>
+</section>
+<div class="section-label">Unit B.2 Spiral — Patterns and Input-Output Rules</div>
+<section class="problem" id="p13">
+<div class="problem-number">13.<span class="problem-meta">Unit 0B.2 | DoK 1 | Rule output</span></div>
+<p>For $y=2x+6$, find the output when $x=7$.</p>
+</section>
+<section class="problem" id="p14">
+<div class="problem-number">14.<span class="problem-meta">Unit 0B.2 | DoK 1 | Missing output</span></div>
+<p>Complete the missing output.</p><table class="values"><tr><th>Input</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Output</th><td>8</td><td>11</td><td></td><td>17</td></tr></table>
+</section>
+<section class="problem" id="p15">
+<div class="problem-number">15.<span class="problem-meta">Unit 0B.2 | DoK 2 | Write a rule</span></div>
+<p>A rule triples the input and then adds 2. Write the equation and find the output when the input is 9.</p>
+</section>
+<section class="problem" id="p16">
+<div class="problem-number">16.<span class="problem-meta">Unit 0B.2 | DoK 3 | Justify linear pattern</span></div>
+<p>The outputs are $2, 6, 10, 14$ for inputs $0,1,2,3$. Explain how you know the pattern has constant change and write a rule.</p>
+</section>
+</div>
+</body>
+</html>
