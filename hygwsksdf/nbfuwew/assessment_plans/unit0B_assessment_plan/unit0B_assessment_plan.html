@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0B Assessment Plan and Bank</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+/* ======================= RESET / PAGE ======================= */
+@page { size: letter; margin: 0.45in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: #fff;
+  font-size: 11pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.container { max-width: 980px; margin: 0 auto; }
+.page-break { page-break-before: always; break-before: page; }
+.unbreakable, .assessment-card, .outline-card, .rubric-card, .ladder-table, .progress-tracker { break-inside: avoid; page-break-inside: avoid; }
+
+/* ======================= HEADER / TITLES ======================= */
+h1 { color: #00003d; font-size: 26pt; line-height: 1.1; margin-bottom: 8px; }
+h2 { color: #00003d; font-size: 17pt; margin: 18px 0 10px 0; border-left: 6px solid #00003d; padding-left: 10px; }
+h3 { color: #004d99; font-size: 13pt; margin: 12px 0 6px 0; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px 28px; }
+li { margin-bottom: 4px; }
+.small-note { font-size: 9.5pt; color: #555; font-style: italic; }
+
+/* ======================= OUTLINE CARDS ======================= */
+.outline-card {
+  border: 1px solid #9aa9bd;
+  border-left: 7px solid #00003d;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.outline-card-title { color: #00003d; font-weight: 800; font-size: 13.5pt; margin-bottom: 4px; }
+.essential-standard { font-size: 12pt; border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+
+/* ======================= TABLES ======================= */
+table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; }
+th, td { border: 1px solid #777; padding: 7px 8px; vertical-align: top; }
+th { background: #eaf1fb; color: #00003d; font-weight: 800; text-align: left; }
+.ladder-table th { background: #00003d; color: #fff; }
+.ladder-table .dok4 { background: #eef4ff; }
+.ladder-table .dok3 { background: #f6fbff; }
+.ladder-table .dok2 { background: #fffdf2; }
+.ladder-table .dok1 { background: #ffffff; }
+.table-block, .parent-table, table.values { width: auto; margin: 10px auto 12px auto; border-collapse: collapse; }
+.table-block td, .table-block th, .parent-table td, .parent-table th, table.values td, table.values th { border: 1px solid #777; padding: 6px 14px; text-align: center; vertical-align: middle; }
+
+/* ======================= PROGRESS TRACKING ======================= */
+.progress-tracker { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 12px 0 18px 0; }
+.progress-box { border: 1px solid #777; padding: 12px; min-height: 0.8in; }
+.progress-box strong { color: #00003d; }
+
+/* ======================= DOK SECTIONS ======================= */
+.dok-bar {
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15pt;
+  padding: 9px 12px;
+  margin: 22px 0 12px 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.dok-method-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0 16px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
+.assessment-ideas { margin-left: 24px; }
+.assessment-ideas a { color: #005aa0; font-weight: 800; text-decoration: underline; }
+.timing-label { display: inline-block; background: #fff7cf; border: 1px solid #d1c27a; border-radius: 4px; padding: 1px 6px; font-weight: 800; color: #4a3f17; margin-left: 6px; }
+.what-tells { border-left: 5px solid #777; padding-left: 10px; margin-top: 10px; color: #333; }
+
+/* ======================= SUMMATIVE / RUBRIC ======================= */
+.summative-card { border: 2px solid #00003d; padding: 12px 14px; margin: 14px 0; background: #f8fbff; break-inside: avoid; page-break-inside: avoid; }
+.summative-card a { color: #005aa0; font-weight: 800; }
+.rubric-card { border: 1px solid #777; padding: 12px 14px; margin: 10px 0; }
+.rubric-level { color: #00003d; font-weight: 900; font-size: 12.5pt; }
+
+/* ======================= ASSESSMENT BANK ======================= */
+.bank-intro { border: 2px solid #00003d; padding: 12px 14px; margin: 12px 0 16px 0; background: #f8fbff; }
+.assessment-card {
+  border: 1px solid #777;
+  padding: 12px 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+.problem-number { font-weight: 900; color: #00003d; font-size: 13pt; margin-bottom: 8px; }
+.problem-meta { color: #555; font-weight: 700; font-size: 10.5pt; margin-left: 8px; }
+.assessment-card p { margin-bottom: 7px; }
+.assessment-card ol, .assessment-card ul { margin-left: 26px; }
+.assessment-card li { margin-bottom: 6px; }
+.performance-notes { border-left: 5px solid #444; background: #f7f7f7; padding: 8px 10px; margin-top: 10px; font-size: 10pt; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+
+/* ======================= FIGURE / GRAPH SYSTEM ======================= */
+.figure-block, .graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { max-width: 100%; height: auto; border: 1px solid #ccc; background: #fff; }
+.figure-xs img { max-width: 1.4in; }
+.figure-sm img { max-width: 2.1in; }
+.figure-md img { max-width: 2.8in; }
+.figure-lg img { max-width: 3.8in; }
+.figure-xl img { max-width: 4.7in; }
+.graph-xs img { max-width: 2.0in; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.2in; }
+.graph-lg img { max-width: 4.1in; }
+.graph-xl img { max-width: 5.1in; }
+
+/* ======================= PRINT CONTROL ======================= */
+@media print {
+  body { font-size: 10.5pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  .assessment-card { padding: 10px 12px; }
+}
+
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ======================= UNIT 0B OUTLINE START ======================= -->
+<h1>Algebra 1 - Unit 0B: Functions and Linear Readiness</h1>
+<h2>Essential Standard</h2>
+<div class="essential-standard">Students will analyze patterns, relationships, and linear representations in order to prepare for function analysis, modeling, and systems of equations.</div>
+<!-- ======================= SECTION OUTLINE START ======================= -->
+<section class="outline-card">
+<div class="outline-card-title">Section 0B.1: Coordinate Plane and Graph Interpretation</div>
+<p><strong>Learning Target: Students will interpret and create graphs on the coordinate plane while connecting points, axes, intercepts, and graphical information to mathematical situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can plot points on a coordinate plane.</li><li>I can identify coordinates from a graph.</li><li>I can interpret information from graphs.</li><li>I can connect graphs and tables.</li><li>I can describe what points and intercepts mean in context.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Coordinate planes</li><li>Ordered pairs</li><li>Graphs</li><li>Tables</li><li>Contextual situations</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>distance versus time graphs</li><li>map and location contexts</li><li>data displayed on coordinate grids</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 0B.2: Patterns and Input-Output Rules</div>
+<p><strong>Learning Target: Students will identify patterns and represent relationships using input-output rules, tables, words, and symbols.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify patterns in tables.</li><li>I can determine outputs from rules.</li><li>I can determine rules from patterns.</li><li>I can describe relationships using words and symbols.</li><li>I can explain what an input and output represent.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Input-output rules</li><li>Equations</li><li>Verbal descriptions</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>pricing rules</li><li>points earned over time</li><li>tiles or figures growing by a rule</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 0B.3: Linear Patterns and Rate of Change</div>
+<p><strong>Learning Target: Students will recognize constant rate of change in tables, graphs, visual patterns, and situations.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can identify constant rate of change.</li><li>I can compare rates of change.</li><li>I can recognize linear relationships.</li><li>I can explain how quantities change.</li><li>I can use a pattern to make predictions.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Tables</li><li>Graphs</li><li>Equations</li><li>Tile patterns</li><li>Contexts</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>growing tile patterns</li><li>walking distance</li><li>earnings over time</li><li>savings plans</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 0B.4: Writing Linear Relationships</div>
+<p><strong>Learning Target: Students will represent linear relationships using tables, graphs, equations, and contextual descriptions.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can create tables for linear relationships.</li><li>I can graph linear relationships.</li><li>I can write equations from tables and graphs.</li><li>I can interpret equations in context.</li><li>I can identify starting values and constant change.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Tables</li><li>Equations</li><li>Contexts</li><li>Visual patterns</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>subscription costs</li><li>ticket or admission costs</li><li>linear tile patterns</li><li>constant-rate savings</li></ul>
+</section>
+<section class="outline-card">
+<div class="outline-card-title">Section 0B.5: Comparing Representations</div>
+<p><strong>Learning Target: Students will compare relationships using equations, graphs, tables, visual patterns, and contexts, then justify conclusions using mathematical evidence.</strong></p>
+<h3>I Can Statements</h3>
+<ul><li>I can compare multiple representations.</li><li>I can determine whether representations match.</li><li>I can identify important features from representations.</li><li>I can justify conclusions using mathematical evidence.</li><li>I can decide which representation is most useful for a question.</li></ul>
+<h3>Key Representations</h3>
+<ul><li>Graphs</li><li>Tables</li><li>Equations</li><li>Contexts</li><li>Visual patterns</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>comparing plans or rates</li><li>matching patterns to rules</li><li>choosing representations for decisions</li></ul>
+</section>
+<section class="outline-card"><div class="outline-card-title">Unit Modeling Themes</div>
+<ul><li>growing tile patterns</li><li>coordinate graph stories</li><li>input-output rules</li><li>pricing and membership plans</li><li>distance-time situations</li><li>savings and earnings patterns</li><li>matching tables, graphs, equations, and contexts</li></ul>
+</section>
+<!-- ======================= SECTION OUTLINE END ======================= -->
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr>
+<tr class="dok4"><td>8</td><td>I can analyze and model real-world relationships using graphs, tables, equations, and contexts, justify the reasonableness of conclusions, and communicate my reasoning clearly.</td><td>MP4 Model with Mathematics / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok4"><td>7</td><td>I can create or revise representations of a relationship, compare multiple strategies, and critique whether different representations describe the same situation.</td><td>MP1 Make Sense and Persevere / MP3 Construct Viable Arguments</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok3"><td>6</td><td>I can analyze linear relationships across graphs, tables, equations, visual patterns, and contexts to explain structure, rate of change, and starting value.</td><td>MP7 Look for Structure / MP8 Look for Regularity in Repeated Reasoning</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok3"><td>5</td><td>I can justify whether a relationship is linear, explain how quantities change, and defend conclusions using evidence from more than one representation.</td><td>MP2 Reason Abstractly and Quantitatively / MP6 Attend to Precision</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok2"><td>4</td><td>I can write and use linear relationships from tables, graphs, visual patterns, and situations.</td><td>MP4 Model with Mathematics / MP7 Look for Structure</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok2"><td>3</td><td>I can identify and use input-output rules, patterns, constant change, and coordinate information to answer questions.</td><td>MP8 Look for and Express Regularity in Repeated Reasoning</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok1"><td>2</td><td>I can identify coordinates, plot points, read tables, and recognize basic graph features such as axes and intercepts.</td><td>MP5 Use Appropriate Tools Strategically / MP6 Attend to Precision</td><td>DOK 1</td><td>Essential</td></tr>
+<tr class="dok1"><td>1</td><td>I can use vocabulary and notation for coordinate planes, ordered pairs, inputs, outputs, patterns, and linear relationships correctly.</td><td>MP1 Make Sense of Problems</td><td>DOK 1</td><td>Essential</td></tr>
+</table>
+<h2>Progress Tracking</h2>
+<div class="progress-tracker"><div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div><div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div><div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div></div>
+<h2>Assessment Methods by DOK Level</h2>
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, quick check, vocabulary check, graph-reading check, or exit ticket</strong></p>
+<p>Purpose: Check whether students can recall vocabulary, identify coordinates, read basic tables and graphs, and recognize foundational features of patterns and relationships.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit0B_formative/unit0B_dok1-1.html">Coordinate Plane Fluency Check</a> <span class="timing-label">Can Be Assessed After Section 1</span> - Students identify axes, quadrants, ordered pairs, intercepts, and plotted points.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok1-2.html">Input-Output Vocabulary Check</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students identify inputs, outputs, rules, and missing values in simple tables.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok1-3.html">Linear Pattern Recognition Check</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students recognize constant change and basic linear pattern features.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok1-4.html">Representation Match Quick Check</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students match simple graphs, tables, equations, and descriptions.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students who struggle here need more support with graph vocabulary, table reading, coordinate notation, and the basic language of relationships before they can reason about linear models.</div>
+</section>
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card">
+<p><strong>Format: Exit ticket, partner check, whiteboard response, short written task, mini-quiz, or graph-table task</strong></p>
+<p>Purpose: Check whether students can apply input-output rules, determine constant rates of change, write linear relationships, and connect graphs, tables, equations, and contexts.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit0B_formative/unit0B_dok2-1.html">Input-Output Rule Task</a> <span class="timing-label">Can Be Assessed After Section 2</span> - Students complete a table, use a rule, and explain what the input and output represent.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok2-2.html">Rate of Change Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students determine constant change from a table, graph, or visual pattern.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok2-3.html">Writing a Linear Rule Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students write an equation from a table, graph, context, or growing pattern.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok2-4.html">Comparing Representations Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students determine whether two representations describe the same relationship and support the decision.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>Students at this level can generally use procedures and representations, but the assessment reveals whether they understand how starting value, constant change, and representation features connect.</div>
+</section>
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, representation analysis, strategy comparison, discourse prompt, or error analysis</strong></p>
+<p>Purpose: Check whether students can justify linearity, explain rate of change, analyze representation structure, and defend conclusions using mathematical evidence.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit0B_formative/unit0B_dok3-1.html">Linearity Justification Task</a> <span class="timing-label">Can Be Assessed After Section 3</span> - Students decide whether a relationship is linear and justify the conclusion from a table, graph, or context.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok3-2.html">Representation Analysis Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students analyze a graph, table, equation, and context to explain which features match.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok3-3.html">Strategy Comparison Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students compare two ways to write a linear relationship and explain which is clearer or more efficient.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok3-4.html">Misleading Representation Critique</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students critique a flawed graph, table, or rule and correct the reasoning.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>This level reveals whether students understand relationships as connected representations rather than isolated procedures. These tasks identify who can explain, justify, critique, and transfer linear readiness concepts.</div>
+</section>
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, design task, critique-and-revise task, or decision-making task</strong></p>
+<p>Purpose: Check whether students can transfer graph, table, pattern, rule, and linear relationship understanding to unfamiliar situations and justify decisions.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../../formative/unit0B_formative/unit0B_dok4-1.html">Design a Linear Pattern Task</a> <span class="timing-label">Can Be Assessed After Section 4</span> - Students create a pattern, table, graph, and rule that all represent the same relationship.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok4-2.html">Compare Two Plans Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students model and compare two linear situations and justify a recommendation.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok4-3.html">Critique and Redesign Representation Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students evaluate a flawed representation and revise it so the table, graph, rule, and context agree.</li>
+<li><a href="../../formative/unit0B_formative/unit0B_dok4-4.html">Multi-Representation Modeling Task</a> <span class="timing-label">Can Be Assessed After Section 5</span> - Students create and analyze multiple representations for an unfamiliar relationship and communicate conclusions using evidence.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can use multiple representations to make decisions, design models, critique reasoning, and communicate conclusions. These should remain short performance tasks rather than large projects.</div>
+</section>
+<h2>Summative Assessment Plan</h2><section class="summative-card">
+<p><a href="../../summative/unit0B_summative/unit0B_summative_assessment.html">Unit 0B Summative Assessment</a> <span class="timing-label">Unit 0B Assessed During Unit 2</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of graph interpretation, table and rule work, linear pattern analysis, representation tasks, and short reasoning prompts aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize coordinate-plane fluency, input-output reasoning, constant rate of change, writing linear relationships, comparing representations, interpreting contexts, mathematical communication, and justification of reasoning.</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>Because of the spiraling course structure, Unit 0B is assessed during Unit 2 after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction.</p>
+</section>
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>The student demonstrates a strong and flexible understanding of Unit 0B concepts: coordinate graphs, input-output rules, patterns, linear relationships, and comparing representations. Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects graphs, tables, equations, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>The student demonstrates solid understanding of the essential Unit 0B concepts. Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, and the student demonstrates appropriate use of notation, representations, and linear relationship reasoning.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>The student demonstrates partial but passable understanding of Unit 0B concepts. The student can complete many routine tasks but may need support with graph interpretation, notation, rate of change, writing rules, comparing representations, or mathematical communication. Work may contain errors or incomplete explanations, but there is sufficient evidence that the student understands the major concepts.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>The student does not yet demonstrate sufficient understanding of the essential Unit 0B concepts. Work shows major errors, missing reasoning, weak graph or table fluency, misunderstanding of input-output relationships, or difficulty connecting graphs, tables, equations, and contexts. Additional instruction, practice, and reassessment may be needed before proficiency can be demonstrated.</p></section>
+<!-- ======================= UNIT 0B OUTLINE END ======================= -->
+<div class="page-break"></div>
+<!-- ======================= ASSESSMENT BANK START ======================= -->
+<h1>Assessment Bank</h1>
+<div class="bank-intro"><p><strong>Unit 0B Assessment Bank:</strong> Problems are organized by Depth of Knowledge and designed as source items for formative assessments, reassessments, summative assessment versions, practice sets, intervention, and enrichment.</p><p class="small-note">Rolling timing: Unit 0B is assessed during Unit 2.</p></div>
+<div class="dok-bar">Assessment Bank DOK 1</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 1 items provide evidence of foundational graph vocabulary, coordinate notation, table reading, pattern recognition, and basic relationship fluency. These items are designed for quick retrieval practice, warm-ups, proficiency checks, exit tickets, and foundational formative assessment.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>coordinate plane vocabulary</li><li>ordered pairs and axes</li><li>inputs and outputs</li><li>simple table reading</li><li>basic pattern recognition</li><li>constant change recognition</li><li>matching simple representations</li><li>foundational linear readiness</li></ul>
+</section>
+<h2>Coordinate Plane and Graph Interpretation</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.001">
+<div class="problem-number">Assessment Bank DOK 1.001<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>Identify the x-coordinate and y-coordinate of the point $$(4,-2)$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.002">
+<div class="problem-number">Assessment Bank DOK 1.002<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>Name the quadrant containing $$(-3,5)$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.003">
+<div class="problem-number">Assessment Bank DOK 1.003<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>State whether the point $$(0,6)$$ lies on the $x$-axis, the $y$-axis, or neither.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.004">
+<div class="problem-number">Assessment Bank DOK 1.004<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>Identify the $x$-intercept from this description: a graph crosses the $x$-axis at $$(5,0)$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.005">
+<div class="problem-number">Assessment Bank DOK 1.005<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>Plot the point $$(2,3)$$ on a coordinate plane.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 005 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.006">
+<div class="problem-number">Assessment Bank DOK 1.006<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 1</span></div>
+<p>Complete the sentence: In an ordered pair $$(x,y)$$, the first number tells the __________ direction.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 006 END ======================= -->
+<h2>Patterns and Input-Output Rules</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.007">
+<div class="problem-number">Assessment Bank DOK 1.007<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>For the rule $$y=x+4$$, find the output when $$x=6$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.008">
+<div class="problem-number">Assessment Bank DOK 1.008<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>For the rule $$y=3x$$, find the output when $$x=5$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.009">
+<div class="problem-number">Assessment Bank DOK 1.009<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>In the table below, identify the inputs.</p>
+<table class="table-block"><tr><th>Input</th><td>1</td><td>2</td><td>3</td></tr><tr><th>Output</th><td>5</td><td>6</td><td>7</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.010">
+<div class="problem-number">Assessment Bank DOK 1.010<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>Complete the table for the rule $$y=x+2$$</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 010 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.011">
+<div class="problem-number">Assessment Bank DOK 1.011<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>A pattern starts at 4 and increases by 3 each step. State the next three values after 4.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.012">
+<div class="problem-number">Assessment Bank DOK 1.012<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 1</span></div>
+<p>Complete the sentence: An output depends on the __________.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 012 END ======================= -->
+<h2>Linear Patterns and Rate of Change</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.013">
+<div class="problem-number">Assessment Bank DOK 1.013<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>Determine the constant change in the sequence: $$5, 8, 11, 14$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.014">
+<div class="problem-number">Assessment Bank DOK 1.014<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>Determine whether the sequence appears linear: $$2, 4, 8, 16$$</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.015">
+<div class="problem-number">Assessment Bank DOK 1.015<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>A table increases by 6 each time the input increases by 1. State the rate of change.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.016">
+<div class="problem-number">Assessment Bank DOK 1.016<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>A tile pattern has 7 tiles in Figure 1 and 10 tiles in Figure 2. How many tiles were added?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 016 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.017">
+<div class="problem-number">Assessment Bank DOK 1.017<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>State whether the relationship has constant change.</p>
+<table class="table-block"><tr><th>$x$</th><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>4</td><td>7</td><td>10</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.018">
+<div class="problem-number">Assessment Bank DOK 1.018<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 1</span></div>
+<p>Fill in the blank: A linear pattern changes by a __________ amount each step.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 018 END ======================= -->
+<h2>Writing Linear Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.019">
+<div class="problem-number">Assessment Bank DOK 1.019<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>For the rule $$y=2x+5$$, identify the starting value.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.020">
+<div class="problem-number">Assessment Bank DOK 1.020<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>For the rule $$y=4x+1$$, identify the constant change.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.021">
+<div class="problem-number">Assessment Bank DOK 1.021<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>Write a rule for: start at 3 and add 2 for each figure number $$x$$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.022">
+<div class="problem-number">Assessment Bank DOK 1.022<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>Complete the table for $$y=2x+1$$</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 022 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.023">
+<div class="problem-number">Assessment Bank DOK 1.023<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>Which equation has a starting value of 6?</p>
+<ol class="lower-alpha"><li>$y=2x+6$</li><li>$y=6x+2$</li><li>$y=x-6$</li></ol>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.024">
+<div class="problem-number">Assessment Bank DOK 1.024<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 1</span></div>
+<p>A pattern has Figure 0 equal to 5 and grows by 4 each figure. Write the rule in words.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 024 END ======================= -->
+<h2>Comparing Representations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.025">
+<div class="problem-number">Assessment Bank DOK 1.025<span class="problem-meta">Unit 0B | Comparing Representations | DoK 1</span></div>
+<p>Do the rule $$y=x+3$$ and the table below match?</p>
+<table class="table-block"><tr><th>$x$</th><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>4</td><td>5</td><td>6</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.026">
+<div class="problem-number">Assessment Bank DOK 1.026<span class="problem-meta">Unit 0B | Comparing Representations | DoK 1</span></div>
+<p>Which representation shows a starting value of 2?</p>
+<ol class="lower-alpha"><li>$y=5x+2$</li><li>$y=2x+5$</li><li>$y=x-2$</li></ol>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.027">
+<div class="problem-number">Assessment Bank DOK 1.027<span class="problem-meta">Unit 0B | Comparing Representations | DoK 1</span></div>
+<p>A graph crosses the $y$-axis at 4. What is the starting value?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U0B-DOK1.028">
+<div class="problem-number">Assessment Bank DOK 1.028<span class="problem-meta">Unit 0B | Comparing Representations | DoK 1</span></div>
+<p>A table has outputs 3, 7, 11, 15. What is the constant change?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 1 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 2</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 2 items provide evidence of procedural understanding, representation skills, pattern analysis, and connections between graphs, tables, equations, visual patterns, and contexts. These items require students to organize information, apply rules, and interpret features of relationships.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>using input-output rules</li><li>completing and interpreting tables</li><li>finding rate of change</li><li>writing linear rules</li><li>connecting starting value and constant change</li><li>graphing ordered pairs</li><li>matching representations</li><li>interpreting context</li></ul>
+</section>
+<h2>Coordinate Plane and Graph Interpretation</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.001">
+<div class="problem-number">Assessment Bank DOK 2.001<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 2</span></div>
+<p>Plot the points $$(0,2), (1,4), (2,6), (3,8)$$ and describe the pattern you see.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.002">
+<div class="problem-number">Assessment Bank DOK 2.002<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 2</span></div>
+<p>A graph crosses the $y$-axis at $$(0,5)$$ and increases by 2 each step to the right. Make a table for $$x=0,1,2,3$$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.003">
+<div class="problem-number">Assessment Bank DOK 2.003<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 2</span></div>
+<p>Use the table to identify two ordered pairs and describe what changes as $x$ increases.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td>3</td><td>6</td><td>9</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.004">
+<div class="problem-number">Assessment Bank DOK 2.004<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 2</span></div>
+<p>A point $$(4,12)$$ appears on a distance-time graph where $x$ is time in seconds and $y$ is distance in feet. Interpret the point in context.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.005">
+<div class="problem-number">Assessment Bank DOK 2.005<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 2</span></div>
+<p>A relationship includes the points $$(1,7)$$ and $$(3,11)$$. Determine how much $y$ changes when $x$ increases by 2.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 005 END ======================= -->
+<h2>Patterns and Input-Output Rules</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.006">
+<div class="problem-number">Assessment Bank DOK 2.006<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 2</span></div>
+<p>Complete the table for $$y=3x+2$$ and explain how each output is found.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.007">
+<div class="problem-number">Assessment Bank DOK 2.007<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 2</span></div>
+<p>A rule takes each input, doubles it, and subtracts 1. Write an equation and find the output when the input is 8.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.008">
+<div class="problem-number">Assessment Bank DOK 2.008<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 2</span></div>
+<p>A table has outputs 6, 10, 14, 18 for inputs 0, 1, 2, 3. Describe the rule in words.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.009">
+<div class="problem-number">Assessment Bank DOK 2.009<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 2</span></div>
+<p>A pattern starts with 9 tiles and adds 4 tiles each figure. Complete Figures 0 through 4 in a table.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.010">
+<div class="problem-number">Assessment Bank DOK 2.010<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 2</span></div>
+<p>Determine the missing output if the rule is $$y=x^2+1$$ and $$x=5$$. Explain why this rule is not linear.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 010 END ======================= -->
+<h2>Linear Patterns and Rate of Change</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.011">
+<div class="problem-number">Assessment Bank DOK 2.011<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>Find the constant rate of change from the table.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>7</td><td>10</td><td>13</td><td>16</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.012">
+<div class="problem-number">Assessment Bank DOK 2.012<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>A tile pattern has 6 tiles in Figure 1 and 18 tiles in Figure 4. If the pattern is linear, determine the growth per figure.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.013">
+<div class="problem-number">Assessment Bank DOK 2.013<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>A runner travels 12 feet every 2 seconds. Determine the rate in feet per second and explain what it means.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.014">
+<div class="problem-number">Assessment Bank DOK 2.014<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>Determine whether the table appears linear and explain using differences.</p>
+<table class="table-block"><tr><th>$x$</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>2</td><td>5</td><td>10</td><td>17</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.015">
+<div class="problem-number">Assessment Bank DOK 2.015<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>A pattern has Figure 0 equal to 4 and grows by 5 each figure. Predict Figure 10.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.016">
+<div class="problem-number">Assessment Bank DOK 2.016<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 2</span></div>
+<p>Compare the rates of change for Pattern A and Pattern B.</p>
+<table class="table-block"><tr><th>Figure</th><td>0</td><td>1</td><td>2</td></tr><tr><th>Pattern A</th><td>2</td><td>5</td><td>8</td></tr><tr><th>Pattern B</th><td>6</td><td>8</td><td>10</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 016 END ======================= -->
+<h2>Writing Linear Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.017">
+<div class="problem-number">Assessment Bank DOK 2.017<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>Write an equation for a relationship with starting value 8 and constant change 3.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.018">
+<div class="problem-number">Assessment Bank DOK 2.018<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>Write a rule for the table.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>5</td><td>9</td><td>13</td><td>17</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.019">
+<div class="problem-number">Assessment Bank DOK 2.019<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>A phone company charges a $20 start fee and $15 per month. Write an equation for total cost $$C$$ after $$m$$ months.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.020">
+<div class="problem-number">Assessment Bank DOK 2.020<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>A tile pattern has 11 tiles in Figure 2 and grows by 4 tiles per figure. Write a rule for Figure $$x$$.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.021">
+<div class="problem-number">Assessment Bank DOK 2.021<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>A graph crosses the $y$-axis at 6 and rises 2 units for every 1 unit right. Write a possible equation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.022">
+<div class="problem-number">Assessment Bank DOK 2.022<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 2</span></div>
+<p>Use the equation $$y=4x+7$$ to make a table for $$x=0,1,2,3$$ and identify the starting value and constant change.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 022 END ======================= -->
+<h2>Comparing Representations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.023">
+<div class="problem-number">Assessment Bank DOK 2.023<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>Determine whether the equation $$y=3x+2$$ matches the table.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td>2</td><td>5</td><td>8</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.024">
+<div class="problem-number">Assessment Bank DOK 2.024<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>Compare the starting values and rates of change.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>A</th><td>4</td><td>7</td><td>10</td></tr><tr><th>B</th><td>1</td><td>5</td><td>9</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.025">
+<div class="problem-number">Assessment Bank DOK 2.025<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>A rule is $$y=2x+6$$. A graph has $y$-intercept 6 and rate of change 2. Explain whether they match.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.026">
+<div class="problem-number">Assessment Bank DOK 2.026<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>A table shows a starting value of 10 and a rate of change of 3. Write a matching equation and a matching verbal description.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.027">
+<div class="problem-number">Assessment Bank DOK 2.027<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>Choose which representation is most useful for finding Figure 50: a drawing, table, graph, or equation. Explain briefly.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U0B-DOK2.028">
+<div class="problem-number">Assessment Bank DOK 2.028<span class="problem-meta">Unit 0B | Comparing Representations | DoK 2</span></div>
+<p>Two students represent the same pattern. One uses a table and one uses $$y=5x+1$$. What evidence would show that the representations match?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 2 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 3</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 3 items provide evidence of reasoning, justification, strategic thinking, representation analysis, mathematical communication, and critique. Students must explain why relationships are linear or not linear, compare representations, analyze errors, and defend conclusions with evidence.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>justifying linearity</li><li>explaining rate of change</li><li>connecting representations</li><li>critiquing graph or table errors</li><li>comparing strategies</li><li>interpreting structure</li><li>defending conclusions</li><li>using precise mathematical language</li></ul>
+</section>
+<h2>Coordinate Plane and Graph Interpretation</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.001">
+<div class="problem-number">Assessment Bank DOK 3.001<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 3</span></div>
+<p>A student says:</p>
+<blockquote>The point $(3,8)$ means the graph goes right 8 and up 3.</blockquote>
+<p>Critique the statement and explain the correct interpretation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.002">
+<div class="problem-number">Assessment Bank DOK 3.002<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 3</span></div>
+<p>Explain how the $x$-intercept and $y$-intercept of a graph can help you understand a situation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.003">
+<div class="problem-number">Assessment Bank DOK 3.003<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 3</span></div>
+<p>A graph of a relationship passes through $$(0,4)$$ and $$(3,10)$$. Explain what these points reveal about the starting value and change.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.004">
+<div class="problem-number">Assessment Bank DOK 3.004<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 3</span></div>
+<p>A student plots $$(2,-5)$$ in Quadrant I. Identify the error and explain how to plot the point correctly.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.005">
+<div class="problem-number">Assessment Bank DOK 3.005<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 3</span></div>
+<p>Create a context for the point $$(6,18)$$ on a graph and explain what the coordinates mean.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 005 END ======================= -->
+<h2>Patterns and Input-Output Rules</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.006">
+<div class="problem-number">Assessment Bank DOK 3.006<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 3</span></div>
+<p>A student claims that every input-output rule is linear. Use examples to critique the claim.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.007">
+<div class="problem-number">Assessment Bank DOK 3.007<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 3</span></div>
+<p>Compare the rules $$y=2x+3$$ and $$y=x^2+3$$. Explain how their tables would grow differently.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.008">
+<div class="problem-number">Assessment Bank DOK 3.008<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 3</span></div>
+<p>A table has outputs 5, 9, 13, 17. Explain how you know the relationship is linear and identify the rule.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.009">
+<div class="problem-number">Assessment Bank DOK 3.009<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 3</span></div>
+<p>Create two different input-output rules that produce the same output when $$x=4$$. Explain why this does not mean they are the same rule.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.010">
+<div class="problem-number">Assessment Bank DOK 3.010<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 3</span></div>
+<p>A student uses the rule $$y=x+5$$ for a pattern that starts at 5 and adds 5 each time. Explain the misconception and correct the rule.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 010 END ======================= -->
+<h2>Linear Patterns and Rate of Change</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.011">
+<div class="problem-number">Assessment Bank DOK 3.011<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>Determine whether the relationship is linear and justify your answer using differences.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>6</td><td>12</td><td>20</td></tr></table>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.012">
+<div class="problem-number">Assessment Bank DOK 3.012<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>A tile pattern has 8 tiles in Figure 2 and 14 tiles in Figure 5. If the pattern is linear, explain how to find the growth per figure and the Figure 0 value.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.013">
+<div class="problem-number">Assessment Bank DOK 3.013<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>Compare a pattern that adds 3 tiles each figure with a pattern that doubles each figure. Explain how their long-term behavior differs.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.014">
+<div class="problem-number">Assessment Bank DOK 3.014<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>A student says:</p>
+<blockquote>If a graph is increasing, it must be linear.</blockquote>
+<p>Critique the statement using an example.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.015">
+<div class="problem-number">Assessment Bank DOK 3.015<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>Explain why constant rate of change is the key evidence for a linear relationship.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.016">
+<div class="problem-number">Assessment Bank DOK 3.016<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 3</span></div>
+<p>A table skips from Figure 2 to Figure 6. Explain how you can still determine the rate of change if the pattern is linear.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 016 END ======================= -->
+<h2>Writing Linear Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.017">
+<div class="problem-number">Assessment Bank DOK 3.017<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>A student writes $$y=3x+5$$ for a pattern with Figure 0 equal to 3 and growth of 5. Identify the error and write the correct equation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.018">
+<div class="problem-number">Assessment Bank DOK 3.018<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>Compare two methods for writing a rule from a table: using Figure 0 first versus using the rate of change first. Which is clearer and why?</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.019">
+<div class="problem-number">Assessment Bank DOK 3.019<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>A relationship has equation $$y=4x+7$$. Explain what 4 and 7 could represent in a real-world situation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.020">
+<div class="problem-number">Assessment Bank DOK 3.020<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>Write two different contexts that could be modeled by $$y=2x+10$$. Explain how the same equation can describe different situations.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.021">
+<div class="problem-number">Assessment Bank DOK 3.021<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>A graph and a table both represent a linear relationship. Explain how you can use each representation to identify the equation.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.022">
+<div class="problem-number">Assessment Bank DOK 3.022<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 3</span></div>
+<p>A tile pattern rule is $$T=6n+2$$. Explain what the rule tells you about Figure 0, growth, and how to predict later figures.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 022 END ======================= -->
+<h2>Comparing Representations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.023">
+<div class="problem-number">Assessment Bank DOK 3.023<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>A table has starting value 4 and rate 3. A graph has $y$-intercept 3 and rate 4. Explain whether they represent the same relationship.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.024">
+<div class="problem-number">Assessment Bank DOK 3.024<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>A student matches a graph to $$y=2x+5$$ because both numbers 2 and 5 appear on the graph. Critique the reasoning.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.025">
+<div class="problem-number">Assessment Bank DOK 3.025<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>Compare the relationships $$y=5x+1$$ and $$y=x+5$$. Explain how their graphs, tables, and contexts would differ.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.026">
+<div class="problem-number">Assessment Bank DOK 3.026<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>A pattern is shown by a drawing, table, and equation. Describe what evidence would convince you that all three representations match.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.027">
+<div class="problem-number">Assessment Bank DOK 3.027<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>Explain why an equation is often more efficient than a drawing for predicting Figure 100, but a drawing may be better for understanding the structure.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U0B-DOK3.028">
+<div class="problem-number">Assessment Bank DOK 3.028<span class="problem-meta">Unit 0B | Comparing Representations | DoK 3</span></div>
+<p>Create a mismatched table and equation, then explain the evidence that shows they do not represent the same relationship.</p>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 3 PROBLEM 028 END ======================= -->
+<div class="dok-bar">Assessment Bank DOK 4</div>
+<section class="dok-method-card">
+<p><strong>Purpose:</strong> Assessment Bank DOK 4 items provide evidence of transfer, modeling, critique, design, decision-making, and application in unfamiliar situations. Students synthesize graphs, tables, equations, patterns, and contexts while justifying conclusions using mathematical evidence.</p>
+<p><strong>Bank Design Principles:</strong></p>
+<ul><li>mathematical modeling</li><li>designing representations</li><li>critique and redesign</li><li>multi-representation reasoning</li><li>decision-making with linear relationships</li><li>interpreting parameters</li><li>communicating conclusions</li><li>transfer to unfamiliar situations</li></ul>
+</section>
+<h2>Coordinate Plane and Graph Interpretation</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.001">
+<div class="problem-number">Assessment Bank DOK 4.001<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 4</span></div>
+<p>Create a coordinate-plane situation involving at least four points. Include a table, describe what the points represent, and explain one pattern in the graph.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 001 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.002">
+<div class="problem-number">Assessment Bank DOK 4.002<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 4</span></div>
+<p>Design a graph-reading task where a student must interpret an intercept and a point in context. Then provide the correct interpretation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 002 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.003">
+<div class="problem-number">Assessment Bank DOK 4.003<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 4</span></div>
+<p>Create a flawed coordinate graph by placing one point incorrectly. Explain the error and redesign the graph correctly.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 003 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.004">
+<div class="problem-number">Assessment Bank DOK 4.004<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 4</span></div>
+<p>Invent a distance-time context that includes the point $$(4,12)$$. Explain what the point means and what a second point could reveal.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 004 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.005">
+<div class="problem-number">Assessment Bank DOK 4.005<span class="problem-meta">Unit 0B | Coordinate Plane and Graph Interpretation | DoK 4</span></div>
+<p>Create two different contexts that could use the same ordered pair. Explain how the meaning changes even though the coordinates stay the same.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 005 END ======================= -->
+<h2>Patterns and Input-Output Rules</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.006">
+<div class="problem-number">Assessment Bank DOK 4.006<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 4</span></div>
+<p>Design an input-output rule task with a table, a rule, and a context. Explain how all three parts represent the same relationship.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 006 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.007">
+<div class="problem-number">Assessment Bank DOK 4.007<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 4</span></div>
+<p>Create one linear input-output rule and one non-linear input-output rule that begin with the same first two outputs. Explain how a student could eventually tell them apart.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 007 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.008">
+<div class="problem-number">Assessment Bank DOK 4.008<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 4</span></div>
+<p>Create a missing-value table where students must determine the rule. Then solve your own task and justify the rule.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 008 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.009">
+<div class="problem-number">Assessment Bank DOK 4.009<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 4</span></div>
+<p>Design a rule that produces only even outputs for whole-number inputs. Explain why the rule works.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 009 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.010">
+<div class="problem-number">Assessment Bank DOK 4.010<span class="problem-meta">Unit 0B | Patterns and Input-Output Rules | DoK 4</span></div>
+<p>Create a real-world input-output relationship and explain whether it should be modeled as linear. Justify your decision.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 010 END ======================= -->
+<h2>Linear Patterns and Rate of Change</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.011">
+<div class="problem-number">Assessment Bank DOK 4.011<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Design a growing tile pattern with a constant rate of change. Provide a table, describe the growth, and write a rule.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 011 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.012">
+<div class="problem-number">Assessment Bank DOK 4.012<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Create two linear patterns where one starts higher but grows more slowly. Decide which pattern is larger at Figure 10 and justify your conclusion.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 012 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.013">
+<div class="problem-number">Assessment Bank DOK 4.013<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Critique this claim:</p>
+<blockquote>The pattern with the larger starting value will always have more tiles.</blockquote>
+<p>Use a counterexample and explain the reasoning.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 013 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.014">
+<div class="problem-number">Assessment Bank DOK 4.014<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Create a pattern scenario where the rate of change matters more than the starting value for a long-term decision.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 014 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.015">
+<div class="problem-number">Assessment Bank DOK 4.015<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Design a short investigation where students determine whether a visual pattern is linear. Include what evidence they should collect.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 015 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.016">
+<div class="problem-number">Assessment Bank DOK 4.016<span class="problem-meta">Unit 0B | Linear Patterns and Rate of Change | DoK 4</span></div>
+<p>Create a table for a linear pattern that skips some figure numbers. Explain how to recover the missing figures and determine the rule.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 016 END ======================= -->
+<h2>Writing Linear Relationships</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.017">
+<div class="problem-number">Assessment Bank DOK 4.017<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Create a real-world situation represented by $$y=4x+9$$. Define the variables, make a table, and interpret both numbers in the equation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 017 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.018">
+<div class="problem-number">Assessment Bank DOK 4.018<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Design a tile-pattern problem that can be solved by writing a linear equation. Then solve it and explain why the equation works.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 018 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.019">
+<div class="problem-number">Assessment Bank DOK 4.019<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Create two equations with the same rate of change but different starting values. Describe a context where comparing them would matter.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 019 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.020">
+<div class="problem-number">Assessment Bank DOK 4.020<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Create two equations with the same starting value but different rates of change. Explain how their graphs and tables would compare.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 020 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.021">
+<div class="problem-number">Assessment Bank DOK 4.021<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Design an error-analysis problem where a student switches the starting value and rate of change. Include the incorrect work, correction, and feedback.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 021 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.022">
+<div class="problem-number">Assessment Bank DOK 4.022<span class="problem-meta">Unit 0B | Writing Linear Relationships | DoK 4</span></div>
+<p>Create a context where the equation is useful for prediction but the table is useful for checking reasonableness. Explain both uses.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 022 END ======================= -->
+<h2>Comparing Representations</h2>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.023">
+<div class="problem-number">Assessment Bank DOK 4.023<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Create a table, graph description, equation, and context that all represent the same linear relationship. Explain how each representation shows the starting value and rate of change.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 023 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.024">
+<div class="problem-number">Assessment Bank DOK 4.024<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Create a compare-two-plans problem involving a starting fee and a constant rate. Use equations or tables to recommend one plan and justify the recommendation.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 024 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.025">
+<div class="problem-number">Assessment Bank DOK 4.025<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Design a mismatched set of representations. Include a table, equation, and context where one does not belong. Identify the mismatch and revise it.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 025 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.026">
+<div class="problem-number">Assessment Bank DOK 4.026<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Create a decision-making problem where a graph is helpful at first but an equation is more efficient for a later prediction. Explain why.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 026 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.027">
+<div class="problem-number">Assessment Bank DOK 4.027<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Critique this claim:</p>
+<blockquote>If two representations have one matching point, they must represent the same relationship.</blockquote>
+<p>Use an example to explain why this is not enough evidence.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 027 END ======================= -->
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 START ======================= -->
+<section class="assessment-card" id="U0B-DOK4.028">
+<div class="problem-number">Assessment Bank DOK 4.028<span class="problem-meta">Unit 0B | Comparing Representations | DoK 4</span></div>
+<p>Design a multi-representation challenge where students must decide whether a tile pattern, table, graph, and equation all match. Provide the evidence they should use.</p>
+<div class="performance-notes"><strong>Performance Task Planning / Notes:</strong> Use this as a short 5-10 minute performance check, extension, or discussion-based task. Students should justify choices, connect representations, and explain decisions rather than only produce an answer.</div>
+</section>
+<!-- ======================= ASSESSMENT BANK DOK 4 PROBLEM 028 END ======================= -->
+<!-- ======================= ASSESSMENT BANK END ======================= -->
+</div>
+</body>
+</html>
