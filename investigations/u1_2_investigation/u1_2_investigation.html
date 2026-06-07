@@ -1,110 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_2_investigation.html
-     Path: investigations/u1_2_investigation/u1_2_investigation.html
-     Hosted at: tnezki.github.io/algebra/investigations/u1_2_investigation/u1_2_investigation.html
-
-     Inquiry-based investigation for Unit 1, Section 2. Students explore concepts before formal instruction.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigation — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>u1_2_investigation</title>
+<script>
+window.MathJax = {tex: {inlineMath: [['$', '$']], displayMath: [['$$', '$$']]}};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.38;color:#222;background:#fff;padding:18px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.container{max-width:960px;margin:0 auto;}
+.page{min-height:720px;margin:0 auto 24px auto;break-after:page;page-break-after:always;position:relative;}
+.page:last-child{break-after:auto;page-break-after:auto;}
+.title-page{min-height:720px;display:flex;flex-direction:column;justify-content:center;text-align:center;border:4px solid #00003d;padding:42px;break-inside:avoid;page-break-inside:avoid;}
+h1{color:#00003d;font-size:2.1rem;margin-bottom:10px;}
+h2{color:#00003d;font-size:1.4rem;margin:0 0 10px 0;border-left:5px solid #00003d;padding-left:10px;}
+h3{color:#004d99;font-size:1.08rem;margin:8px 0;}
+p{margin-bottom:8px;}
+ul,ol{margin-left:25px;margin-bottom:8px;}
+li{margin-bottom:6px;}
+strong{color:#00003d;}
+.course{font-size:1rem;text-transform:uppercase;letter-spacing:2px;color:#555;margin-bottom:18px;}
+.title-page h1{font-size:2.5rem;line-height:1.15;margin-bottom:18px;}
+.subtitle{font-size:1.35rem;color:#004d99;font-weight:700;margin-bottom:24px;}
+.details{font-size:1.05rem;color:#333;margin-top:18px;}
+.header-strip{background:#00003d;color:#fff;padding:11px 16px;margin:0 0 14px 0;font-weight:800;font-size:1.16rem;break-after:avoid;}
+.problem,.teacher-box,.key-point{border:1px solid #777;padding:14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
+.problem-number{font-weight:800;color:#00003d;margin-bottom:8px;font-size:1.03rem;}
+.small-note{font-size:.92rem;color:#555;}
+.teacher-note{background:#f7f7f7;border-left:4px solid #777;padding:8px 10px;margin:10px 0;}
+.workspace{width:100%;margin-top:8px;border-top:1px solid #777;break-inside:avoid;page-break-inside:avoid;}
+.workspace-50{height:50px}.workspace-60{height:60px}.workspace-75{height:75px}.workspace-90{height:90px}.workspace-110{height:110px}.workspace-130{height:130px}.workspace-160{height:160px}
+.workspace-label{margin-top:8px;font-size:.86rem;font-weight:700;color:#444;}
+table{width:100%;border-collapse:collapse;margin:9px 0;break-inside:avoid;page-break-inside:avoid;}
+th,td{border:1px solid #888;padding:7px;text-align:center;vertical-align:middle;height:2.2em;}
+th{background:#eaf1fb;color:#00003d;}
+td.left,th.left{text-align:left;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0;align-items:start;}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0;align-items:start;}
+.card{border:2px dashed #666;padding:14px;min-height:205px;background:#fff;break-inside:avoid;page-break-inside:avoid;overflow:visible;}
+.card.compact{min-height:170px;}
+.card.tall{min-height:245px;}
+.card-title{text-align:center;font-weight:900;color:#00003d;text-transform:uppercase;font-size:1.05rem;letter-spacing:.4px;margin-bottom:10px;}
+.card p{font-size:1.04rem;line-height:1.32;margin-bottom:8px;}
+.pill{display:inline-block;border:1px solid #777;border-radius:18px;padding:4px 10px;margin:3px 3px;background:#f7f7f7;white-space:nowrap;}
+.machine{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin:8px 0 10px 0;}
+.io{border:1px solid #777;border-radius:6px;padding:8px;text-align:center;background:#fafafa;min-height:46px;display:flex;align-items:center;justify-content:center;}
+.rule{border:2px solid #00003d;border-radius:12px;padding:10px 12px;text-align:center;font-weight:800;color:#00003d;background:#fff;min-width:120px;}
+.arrow{font-size:1.4rem;color:#00003d;font-weight:900;}
+.sort-zones{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0;}
+.sort-zone{border:2px solid #777;min-height:118px;padding:12px;background:#fafafa;}
+.map-row{display:grid;grid-template-columns:1fr 32px 1fr;align-items:center;gap:4px;margin:6px 0;font-size:1.04rem;}
+.map-left{text-align:right;}.map-arrow{text-align:center;color:#00003d;font-weight:900;}.map-right{text-align:left;}
+.teacher-only{background:#fffdf2;}
+.cut-note{font-size:.95rem;border:1px dashed #555;padding:8px 10px;margin:8px 0;background:#fafafa;}
+@media print{
+  body{padding:10px;}
+  .container{max-width:100%;}
+  .page{min-height:9.55in;margin-bottom:0;}
+  .title-page{min-height:9.55in;}
+  .card{min-height:200px;}
+  .card.compact{min-height:165px;}
+}
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 2</div>
-        <h1 class="course-title">Investigation</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> u1_2_investigation.html<br>
-            <strong>Location:</strong> investigations/u1_2_investigation/u1_2_investigation.html<br>
-            <strong>Purpose:</strong> Inquiry-based investigation for Unit 1, Section 2. Students explore concepts before formal instruction.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/investigations/u1_2_investigation/u1_2_investigation.html
-        </div>
-    </div>
-</body>
-</html>
+<div class="container">
+<section class="page title-page">
+<div class="course">Algebra 1 - Unit 1</div>
+<h1>Section 1.2 Investigation</h1>
+<div class="subtitle">Inputs, Outputs, and Functions</div>
+<p><strong>Investigation:</strong> The Function Machine Mystery</p>
+<p><strong>Time:</strong> 15-20 minutes</p>
+<p><strong>Format:</strong> Function-machine exploration, relationship card sort, matching task, create-a-rule challenge, and class synthesis</p>
+<div class="details">Learning Target: Interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</div>
+</section>
+<section class="page">
+<div class="header-strip">Investigation Directions</div>
+
+<div class="problem">
+<h2>Setup</h2>
+<ul>
+<li><strong>Grouping:</strong> Partners or groups of 3.</li>
+<li><strong>Materials:</strong> Investigation handout, pencil, and scissors only if using physical cut cards.</li>
+<li><strong>Teacher setup:</strong> Project a simple function machine: Input → add 4 → Output. Ask, “What would come out if I put in 6? What about 10? How do you know?”</li>
+<li><strong>Timing:</strong> Launch 2-3 min, Part 1 4 min, Part 2 5 min, Part 3 4 min, Part 4 3 min, synthesis 3-4 min.</li>
+</ul>
+</div>
+<div class="problem">
+<h2>Student Goal</h2>
+<p>Today you will investigate how an input is changed into an output.</p>
+<p style="text-align:center;font-size:1.2rem;">Input → Rule → Output</p>
+<p>By the end, you should be able to explain what makes a rule a function and why one input cannot have two different outputs in the same function.</p>
+</div>
+<div class="problem">
+<h2>Norms</h2>
+<ul><li>Predict before calculating.</li><li>Test more than one input before deciding on a rule.</li><li>Look for what stays consistent.</li><li>Use evidence from the table, context, mapping, or rule.</li></ul>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 1: Mystery Machines</div>
+
+<div class="problem">
+<h2>What to Do</h2>
+<p>Each machine uses one rule. Predict the missing outputs, then test the rule with at least one input of your own.</p>
+<div class="two-col">
+<div class="problem">
+<h3>Machine A</h3><div class="machine"><div class="io">Input</div><div class="rule">Add 3</div><div class="io">Output</div></div>
+<table><tr><th>Input</th><th>Output</th></tr><tr><td>1</td><td></td></tr><tr><td>4</td><td></td></tr><tr><td>10</td><td></td></tr><tr><td>Your choice</td><td></td></tr></table>
+</div>
+<div class="problem">
+<h3>Machine B</h3><div class="machine"><div class="io">Input</div><div class="rule">Multiply by 2</div><div class="io">Output</div></div>
+<table><tr><th>Input</th><th>Output</th></tr><tr><td>1</td><td></td></tr><tr><td>4</td><td></td></tr><tr><td>10</td><td></td></tr><tr><td>Your choice</td><td></td></tr></table>
+</div>
+</div>
+<div class="workspace-label">Discovery: What does every machine do to an input?</div><div class="workspace workspace-90"></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 1: One More Machine</div>
+
+<div class="problem">
+<h2>Machine C</h2>
+<p>This machine may create a larger output than the first two machines.</p>
+<div class="machine"><div class="io">Input</div><div class="rule">Square the input</div><div class="io">Output</div></div>
+<table><tr><th>Input</th><th>Output</th><th>How did the rule change the input?</th></tr><tr><td>1</td><td></td><td></td></tr><tr><td>4</td><td></td><td></td></tr><tr><td>10</td><td></td><td></td></tr><tr><td>Your choice</td><td></td><td></td></tr></table>
+<div class="workspace-label">Compare Machines A, B, and C. What is the same about all three?</div><div class="workspace workspace-130"></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 2: Sort the Relationship Cards</div>
+
+<div class="problem">
+<h2>Sorting Directions</h2>
+<p><strong>What to do:</strong> Cut out the cards or label each card. Sort them into the two zones below. A card belongs in “Works Like a Function” only if each input has exactly one output.</p>
+<div class="sort-zones"><div class="sort-zone"><h3>Works Like a Function</h3><p class="small-note">Put card letters here.</p></div><div class="sort-zone"><h3>Does Not Work Like a Function</h3><p class="small-note">Put card letters here.</p></div></div>
+<div class="workspace-label">Choose one card from each zone and explain your evidence.</div><div class="workspace workspace-110"></div>
+</div>
+<div class="cut-note"><strong>Teacher note:</strong> The relationship cards are spread across multiple pages on purpose so the page can be projected clearly and printed without overlap.</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 2: Relationship Cards A-D</div>
+
+<div class="card-grid">
+<div class="card compact"><div class="card-title">Card A</div><table><tr><th>Input</th><th>Output</th></tr><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>11</td></tr><tr><td>3</td><td>14</td></tr></table></div>
+<div class="card compact"><div class="card-title">Card B</div><table><tr><th>Input</th><th>Output</th></tr><tr><td>2</td><td>9</td></tr><tr><td>2</td><td>12</td></tr><tr><td>3</td><td>15</td></tr><tr><td>4</td><td>18</td></tr></table></div>
+<div class="card compact"><div class="card-title">Card C</div><div class="map-row"><div class="map-left">3</div><div class="map-arrow">→</div><div class="map-right">7</div></div><div class="map-row"><div class="map-left">4</div><div class="map-arrow">→</div><div class="map-right">7</div></div><div class="map-row"><div class="map-left">5</div><div class="map-arrow">→</div><div class="map-right">7</div></div><p>Every input goes to the same output.</p></div>
+<div class="card compact"><div class="card-title">Card D</div><div class="map-row"><div class="map-left">6</div><div class="map-arrow">→</div><div class="map-right">2 and 10</div></div><div class="map-row"><div class="map-left">7</div><div class="map-arrow">→</div><div class="map-right">11</div></div><div class="map-row"><div class="map-left">8</div><div class="map-arrow">→</div><div class="map-right">12</div></div><p>One input points to two outputs.</p></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 2: Relationship Cards E-F</div>
+
+<div class="card-grid">
+<div class="card tall"><div class="card-title">Card E</div><p>A parking garage charges &#36;4 to enter and &#36;2 for each hour parked.</p><p><span class="pill">0 hours → &#36;4</span></p><p><span class="pill">1 hour → &#36;6</span></p><p><span class="pill">2 hours → &#36;8</span></p></div>
+<div class="card tall"><div class="card-title">Card F</div><p>A vending machine button B7 sometimes gives water and sometimes gives chips.</p><p><span class="pill">B7 → water</span></p><p><span class="pill">B7 → chips</span></p><p class="small-note">The same button does not always give the same output.</p></div>
+</div>
+<div class="problem"><p><strong>Quick check:</strong> Which card is predictable for each input? Which card is not?</p><div class="workspace workspace-110"></div></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 2: Relationship Cards G-H</div>
+
+<div class="card-grid">
+<div class="card tall"><div class="card-title">Card G</div><p>Rule: $y=x^2$</p><table><tr><th>Input</th><th>Output</th></tr><tr><td>$-2$</td><td>4</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>9</td></tr></table><p class="small-note">Notice: two different inputs can share one output.</p></div>
+<div class="card tall"><div class="card-title">Card H</div><p>A student lists two different total costs for buying exactly 3 identical notebooks at the same store on the same day.</p><p><span class="pill">3 notebooks → &#36;6</span></p><p><span class="pill">3 notebooks → &#36;9</span></p></div>
+</div>
+<div class="problem"><div class="workspace-label">Revise your rule: What is allowed in a function? What is not allowed?</div><div class="workspace workspace-130"></div></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 3: Match the Rule</div>
+
+<div class="problem"><h2>Rewards Program Match-Up</h2><p><strong>What to do:</strong> These four representations describe one relationship. Explain how the input becomes the output in each representation.</p></div>
+<div class="card-grid">
+<div class="card compact"><div class="card-title">Context</div><p>A game app gives you 10 points when you join. You earn 2 more points for each level you complete.</p></div>
+<div class="card compact"><div class="card-title">Function Machine</div><div class="machine"><div class="io">Levels completed</div><div class="rule">Multiply by 2, then add 10</div><div class="io">Total points</div></div></div>
+<div class="card compact"><div class="card-title">Table</div><table><tr><th>Levels ($x$)</th><th>Points ($y$)</th></tr><tr><td>0</td><td>10</td></tr><tr><td>1</td><td>12</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>16</td></tr></table></div>
+<div class="card compact"><div class="card-title">Equation</div><p style="font-size:1.7rem;text-align:center;margin-top:40px;">$y=2x+10$</p></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 3: Explain the Match</div>
+
+<div class="problem">
+<ol>
+<li>What is the input in this situation?</li>
+<li>What is the output?</li>
+<li>Where do you see the starting 10 in the context, machine, table, and equation?</li>
+<li>Where do you see the “2 more each level” idea?</li>
+</ol>
+<div class="workspace-label">Explain how all four representations show the same function.</div><div class="workspace workspace-160"></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 4: Create Your Own Function Machine</div>
+
+<div class="problem"><h2>Design Challenge</h2><p>Create a machine that works like a function. Your rule can be simple, but it must give exactly one output for each input.</p>
+<div class="machine"><div class="io">Input</div><div class="rule">Your rule</div><div class="io">Output</div></div>
+<p><strong>Write your rule in words:</strong></p><div class="workspace workspace-75"></div>
+<table><tr><th>Input</th><th>Output</th></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></table>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 4: Partner Test</div>
+
+<div class="problem"><h2>Trade and Test</h2><p>Trade with another group. Can they use your rule to predict two more outputs?</p>
+<table><tr><th>New Input</th><th>Predicted Output</th><th>Do both groups agree?</th></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>
+<div class="workspace-label">How do you know your machine is a function?</div><div class="workspace workspace-130"></div>
+</div>
+
+</section>
+<section class="page">
+<div class="header-strip">Part 5: Build the Definition</div>
+
+<div class="problem"><p>Use the investigation to complete each statement.</p><ol><li>An <strong>input</strong> is ______________________________.</li><li>An <strong>output</strong> is ______________________________.</li><li>A <strong>rule</strong> tells us ______________________________.</li><li>A <strong>function</strong> must give each input ______________________________.</li><li>A relationship is <strong>not a function</strong> if ______________________________.</li></ol><div class="workspace-label">Final definition in your own words:</div><div class="workspace workspace-130"></div></div>
+<div class="problem"><h2>Exit Check</h2><table><tr><th>Relationship</th><th>Function?</th></tr><tr><td class="left">1 → 4, 2 → 5, 3 → 6</td><td>Yes / No</td></tr><tr><td class="left">5 → 8, 5 → 9, 6 → 10</td><td>Yes / No</td></tr><tr><td class="left">$-2$ → 4, 2 → 4, 3 → 9</td><td>Yes / No</td></tr></table></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Discussion Questions</div>
+
+<div class="problem"><ol><li>What evidence convinced you that a relationship works like a function?</li><li>Why can two different inputs have the same output and still be a function?</li><li>Why can one input not have two different outputs in the same function?</li><li>Which representation made the function idea easiest to see: machine, table, mapping, context, or equation? Why?</li><li>How is the equation $y=2x+10$ like a function machine?</li></ol><div class="workspace-label">Class Notes / Final Discovery</div><div class="workspace workspace-160"></div></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Teaching Resource 1: Teacher Script</div>
+
+<div class="teacher-box teacher-only"><h2>Purpose</h2><p>This investigation helps students discover the function idea before formal vocabulary becomes the focus. Students should leave with the idea that a function is a rule that assigns exactly one output to each input. Domain and range language is intentionally avoided.</p></div>
+<div class="teacher-box teacher-only"><h2>Launch: 2-3 minutes</h2><p><strong>Say:</strong> “Today we are investigating machines. Each machine takes something in, follows a rule, and sends something out. Your job is to decide what makes a machine reliable enough to be called a function.”</p><p><strong>Display:</strong> Input → add 4 → Output.</p><p><strong>Ask:</strong> “If I put in 6, what comes out? If I put in 6 again, should I get the same output or can it change?”</p></div>
+<div class="teacher-box teacher-only"><h2>Teacher Moves</h2><ol><li><strong>Part 1:</strong> Ask students to verbalize the rule rather than only calculate.</li><li><strong>Part 2:</strong> Let students sort before defining function. When groups disagree, ask, “Which input should we check?”</li><li><strong>Part 3:</strong> Push students to identify input and output in the context, not just in the table.</li><li><strong>Part 4:</strong> Check that student rules do not assign two outputs to the same input.</li></ol></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Teaching Resource 2: Observations and Misconceptions</div>
+
+<div class="teacher-box teacher-only"><h2>Expected Student Observations</h2><ul><li>A machine can be written as a table, equation, context, or mapping.</li><li>The input is the value chosen or put into the rule.</li><li>The output is the result after the rule is applied.</li><li>Different inputs can share an output. For example, $-2$ and 2 both give 4 in $y=x^2$.</li><li>The problem happens when the same input has two different outputs.</li></ul></div>
+<div class="teacher-box teacher-only"><h2>Common Misconceptions</h2><ul><li><strong>“Outputs have to be different.”</strong> Point to Card C or Card G and ask which input repeats.</li><li><strong>“A function has to be an equation.”</strong> Ask students to identify function behavior in a context or mapping.</li><li><strong>“If a number appears twice anywhere, it is not a function.”</strong> Ask whether the repeated number is an input or an output.</li><li><strong>Students reverse input and output.</strong> Re-read the context and label what is chosen first.</li></ul></div>
+<div class="teacher-box teacher-only"><h2>Closure</h2><div class="teacher-note"><p><strong>Final consensus statement:</strong> A function is a rule that assigns exactly one output to each input.</p></div></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Teaching Resource 3: Answer Key</div>
+
+<div class="problem"><div class="problem-number">Part 1: Mystery Machines</div><p><strong>Original task:</strong> Predict the outputs for Machines A, B, and C.</p><table><tr><th>Input</th><th>Add 3</th><th>Multiply by 2</th><th>Square</th></tr><tr><td>1</td><td>4</td><td>2</td><td>1</td></tr><tr><td>4</td><td>7</td><td>8</td><td>16</td></tr><tr><td>10</td><td>13</td><td>20</td><td>100</td></tr></table><p><strong>Explanation:</strong> Each machine uses the same rule every time.</p></div>
+<div class="problem"><div class="problem-number">Part 2: Sort</div><table><tr><th>Card</th><th>Classification</th><th>Reason</th></tr><tr><td>A</td><td>Function</td><td>Each input has one output.</td></tr><tr><td>B</td><td>Not a function</td><td>Input 2 has two outputs.</td></tr><tr><td>C</td><td>Function</td><td>Different inputs can share output 7.</td></tr><tr><td>D</td><td>Not a function</td><td>Input 6 points to two outputs.</td></tr><tr><td>E</td><td>Function</td><td>Each number of hours gives one cost.</td></tr><tr><td>F</td><td>Not a function</td><td>B7 gives two possible items.</td></tr><tr><td>G</td><td>Function</td><td>Different inputs can share output 4.</td></tr><tr><td>H</td><td>Not a function</td><td>3 notebooks has two total costs.</td></tr></table></div>
+
+</section>
+<section class="page">
+<div class="header-strip">Teaching Resource 4: Answer Key Continued</div>
+
+<div class="problem"><div class="problem-number">Part 3: Match the Rule</div><p><strong>Original task:</strong> Explain how the rewards program context, machine, table, and equation show the same function.</p><p><strong>Answer:</strong> The input is levels completed. The output is total points. The 10 is the starting amount, the table output when $x=0$, and the constant in $y=2x+10$. The 2 is the points earned for each level, the repeated table increase, and the coefficient of $x$.</p></div>
+<div class="problem"><div class="problem-number">Part 4: Create a Machine</div><p><strong>Sample answer:</strong> Rule: multiply by 3, then subtract 1. Table: 0 → -1, 1 → 2, 2 → 5, 5 → 14. This is a function because each input has exactly one output.</p></div>
+<div class="problem"><div class="problem-number">Part 5 and Exit Check</div><ol><li>An input is the value chosen or put into a rule.</li><li>An output is the result after the rule is applied.</li><li>A rule tells how to change the input into the output.</li><li>A function must give each input exactly one output.</li><li>Not a function: the same input has more than one output.</li></ol><p><strong>Exit Check:</strong> Function; Not a function; Function.</p></div>
+
+</section>
+</div></body></html>

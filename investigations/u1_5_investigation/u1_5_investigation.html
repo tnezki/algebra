@@ -1,110 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_5_investigation.html
-     Path: investigations/u1_5_investigation/u1_5_investigation.html
-     Hosted at: tnezki.github.io/algebra/investigations/u1_5_investigation/u1_5_investigation.html
-
-     Inquiry-based investigation for Unit 1, Section 5. Students explore concepts before formal instruction.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigation — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>u1_5_investigation</title>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']]
+  }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.42;color:#222;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.container{max-width:900px;margin:0 auto;}
+.page-break{page-break-before:always;}
+h1{color:#00003d;font-size:2rem;margin-bottom:8px;}
+h2{color:#00003d;font-size:1.42rem;margin:10px 0;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;}
+h3{color:#004d99;font-size:1.08rem;margin:8px 0 6px 0;break-after:avoid;}
+h4{color:#00003d;font-size:1rem;margin:8px 0 5px 0;}
+p{margin-bottom:8px;} ul,ol{margin-left:24px;margin-bottom:8px;} li{margin-bottom:6px;} strong{color:#00003d;}
+.title-page{min-height:9.5in;display:flex;flex-direction:column;justify-content:center;text-align:center;border:4px solid #00003d;padding:42px;break-inside:avoid;page-break-inside:avoid;}
+.title-page .course{font-size:1rem;text-transform:uppercase;letter-spacing:2px;color:#555;margin-bottom:18px;}
+.title-page h1{font-size:2.35rem;line-height:1.15;margin-bottom:18px;}
+.title-page .subtitle{font-size:1.35rem;color:#004d99;font-weight:700;margin-bottom:24px;}
+.title-page .details{font-size:1.05rem;color:#333;margin-top:18px;}
+.header-strip{background:#00003d;color:#fff;padding:10px 14px;margin:0 0 14px 0;font-weight:700;font-size:1.1rem;break-after:avoid;}
+.problem,.teacher-box,.key-point{border:1px solid #777;padding:14px 14px 12px 14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
+.problem-number{font-weight:700;color:#00003d;margin-bottom:8px;font-size:1.03rem;}
+.small-note{font-size:.92rem;color:#555;}
+.teacher-note{background:#f7f7f7;border-left:4px solid #777;padding:8px 10px;margin:10px 0;}
+.rule-box{background:#f7f7f7;border-left:4px solid #00003d;padding:10px;margin:10px 0;break-inside:avoid;}
+.workspace{width:100%;margin-top:8px;border-top:1px solid #777;break-inside:avoid;page-break-inside:avoid;}
+.workspace-60{height:60px}.workspace-80{height:80px}.workspace-100{height:100px}.workspace-120{height:120px}.workspace-150{height:150px}.workspace-180{height:180px}.workspace-220{height:220px}.workspace-260{height:260px}
+.workspace-label{margin-top:8px;font-size:.85rem;font-weight:600;color:#444;}
+table{width:100%;border-collapse:collapse;margin:10px 0;break-inside:avoid;page-break-inside:avoid;}
+th,td{border:1px solid #888;padding:7px;text-align:center;vertical-align:middle;}
+th{background:#eaf1fb;color:#00003d;} td.left,th.left{text-align:left;}
+.student-table td.blank{height:60px;min-height:60px;}
+.tall-table td{height:58px;min-height:58px;}
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;align-items:stretch;}
+.model-card{border:1px solid #999;padding:12px;min-height:130px;break-inside:avoid;page-break-inside:avoid;background:#fff;}
+.model-card h3{margin-top:0;}
+.big-question{font-size:1.12rem;font-weight:700;color:#00003d;margin:8px 0;}
+.prompt-box{border:1px dashed #555;background:#fafafa;padding:10px;margin:8px 0;break-inside:avoid;}
+.graph-box{text-align:center;border:1px solid #999;padding:10px;margin:10px 0;break-inside:avoid;page-break-inside:avoid;}
+.graph-box img{max-width:100%;max-height:520px;object-fit:contain;}
+.equation-center{text-align:center;font-size:1.35rem;margin:10px 0;}
+.blank-line{display:inline-block;border-bottom:1px solid #555;min-width:160px;height:1.2em;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;}
+.answer-box{border:1px solid #bbb;padding:10px;margin:8px 0;}
+@media print{body{padding:10px}.container{max-width:100%}.title-page{min-height:9.75in}.model-grid,.two-col{grid-template-columns:1fr 1fr;gap:10px}.graph-box img{max-height:500px}.student-table td.blank{height:60px}.tall-table td{height:58px}}
+</style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 5</div>
-        <h1 class="course-title">Investigation</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> u1_5_investigation.html<br>
-            <strong>Location:</strong> investigations/u1_5_investigation/u1_5_investigation.html<br>
-            <strong>Purpose:</strong> Inquiry-based investigation for Unit 1, Section 5. Students explore concepts before formal instruction.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/investigations/u1_5_investigation/u1_5_investigation.html
-        </div>
+<div class="container">
+
+<section class="title-page">
+  <div class="course">Algebra 1 - Unit 1</div>
+  <h1>Section 1.5 Investigation</h1>
+  <div class="subtitle">Equations as Models</div>
+  <p><strong>Investigation:</strong> Model Toolbox: Which Form Answers the Question?</p>
+  <p><strong>Time:</strong> 15-20 minutes</p>
+  <p><strong>Format:</strong> Decision situation, representation comparison, exact equation model, and interpretation check</p>
+  <div class="details">Learning Target: Write, solve, and interpret equations that model situations.</div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Investigation Directions</div>
+  <div class="problem">
+    <h2>Setup</h2>
+    <ul>
+      <li><strong>Grouping:</strong> Partners or groups of 3.</li>
+      <li><strong>Materials:</strong> Student handout, pencil, and optional calculator.</li>
+      <li><strong>Teacher display:</strong> Project the park situation on Page 3. Do not begin with an equation.</li>
+      <li><strong>Timing:</strong> 3 minutes launch, 8-10 minutes building models, 4 minutes interpretation check, 3-5 minutes discussion.</li>
+    </ul>
+  </div>
+  <div class="problem">
+    <h2>Student Goal</h2>
+    <p>Today you will investigate which representation is most useful for answering different questions about the same situation.</p>
+    <p class="equation-center">$\text{Words} \qquad \text{Table} \qquad \text{Graph} \qquad \text{Equation} \qquad \text{Interpretation}$</p>
+    <p>By the end, you should be able to explain why an equation is a useful model when we need an exact answer.</p>
+  </div>
+  <div class="problem">
+    <h2>Norms for the Investigation</h2>
+    <ul>
+      <li>Choose a tool for a reason.</li>
+      <li>Explain what your representation helps you see.</li>
+      <li>Keep units attached to your answer.</li>
+      <li>A solution is not finished until it answers the original question.</li>
+    </ul>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Launch: Same Situation, Different Questions</div>
+  <div class="problem">
+    <h2>The Park Decision</h2>
+    <p>Two amusement parks charge different prices.</p>
+    <div class="model-grid">
+      <div class="model-card"><h3>Park A</h3><p>Park A charges <strong>8 dollars for admission</strong> plus <strong>3 dollars per ride</strong>.</p></div>
+      <div class="model-card"><h3>Park B</h3><p>Park B charges <strong>2 dollars for admission</strong> plus <strong>5 dollars per ride</strong>.</p></div>
     </div>
+    <p class="big-question">Before writing an equation, discuss these questions with your group.</p>
+    <table class="student-table">
+      <tr><th class="left">Question</th><th>Prediction / Reasoning</th></tr>
+      <tr><td class="left">Which park is cheaper if you ride 1 ride?</td><td class="blank"></td></tr>
+      <tr><td class="left">Which park is cheaper if you ride 5 rides?</td><td class="blank"></td></tr>
+      <tr><td class="left">Which park gets expensive faster? How can you tell?</td><td class="blank"></td></tr>
+      <tr><td class="left">Is there a number of rides where the costs are the same?</td><td class="blank"></td></tr>
+    </table>
+  </div>
+  <div class="prompt-box"><strong>Investigation question:</strong> Which form of the model helps answer each question best?</div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 1: Choose Your Tool</div>
+  <div class="problem">
+    <h2>Toolbox Choices</h2>
+    <p>For each question, choose the representation you think would help the most. You may choose more than one if you can explain why.</p>
+    <p class="equation-center">$\text{context} \quad \text{table} \quad \text{graph} \quad \text{equation} \quad \text{written interpretation}$</p>
+    <table class="student-table">
+      <tr><th class="left">Question</th><th>Tool I would use</th><th class="left">Why this tool helps</th></tr>
+      <tr><td class="left">Which park is cheaper for 1 ride?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left">Which park is cheaper for 5 rides?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left">Which park gets expensive faster?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left">When do the parks cost the same?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left">What does the answer mean in the situation?</td><td class="blank"></td><td class="blank left"></td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 2: Build a Table Model</div>
+  <div class="problem">
+    <h2>Test Several Ride Counts</h2>
+    <p>Complete the table for 0 through 6 rides. Use the table to look for patterns.</p>
+    <table class="student-table">
+      <tr><th>Rides ($r$)</th><th>Park A Cost</th><th>Park B Cost</th><th>Which is cheaper?</th></tr>
+      <tr><td>0</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>1</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>2</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>3</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>4</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>5</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>6</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    </table>
+  </div>
+  <div class="problem">
+    <h2>What Did the Table Help You See?</h2>
+    <ol>
+      <li>For which ride counts is Park A cheaper?</li>
+      <li>For which ride counts is Park B cheaper?</li>
+      <li>At what ride count do the costs match?</li>
+      <li>What does the table make easy? What does it make harder?</li>
+    </ol>
+    <div class="workspace-label">Notes and observations:</div>
+    <div class="workspace workspace-150"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 3: Build a Graph Model</div>
+  <div class="problem">
+    <h2>Compare Both Cost Models</h2>
+    <p>The graph shows the same situation from the table. Both lines belong on the same coordinate plane because we are comparing the two parks.</p>
+    <div class="graph-box"><img src="figures/park_cost_graph.png" alt="Graph comparing Park A and Park B cost models"></div>
+    <ol>
+      <li>Where do the lines appear to meet?</li>
+      <li>What does the intersection mean in the park situation?</li>
+      <li>Why is the graph useful?</li>
+      <li>Why might the graph not be enough if we need an exact answer?</li>
+    </ol>
+    <div class="workspace-label">Graph observations:</div>
+    <div class="workspace workspace-150"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 4: Build an Equation Model</div>
+  <div class="problem">
+    <h2>Define the Variable</h2>
+    <p>Let $r$ represent the number of rides.</p>
+    <div class="model-grid">
+      <div class="model-card"><h3>Park A Expression</h3><p>Admission plus ride cost:</p><p class="equation-center">$8+3r$</p></div>
+      <div class="model-card"><h3>Park B Expression</h3><p>Admission plus ride cost:</p><p class="equation-center">$2+5r$</p></div>
+    </div>
+    <p class="big-question">If we want the costs to be the same, what equation should we write?</p>
+    <p><strong>Equation:</strong> <span class="blank-line"></span></p>
+  </div>
+  <div class="problem">
+    <h2>Solve the Equation</h2>
+    <p>Use algebra to find the exact ride count where the costs are equal.</p>
+    <div class="workspace workspace-260"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 5: Interpret the Solution</div>
+  <div class="problem">
+    <h2>Do Not Stop at the Number</h2>
+    <p>Suppose your equation gave the solution $r=3$.</p>
+    <table class="student-table">
+      <tr><th class="left">Question</th><th class="left">Interpretation</th></tr>
+      <tr><td class="left">What does $r=3$ mean in the story?</td><td class="blank left"></td></tr>
+      <tr><td class="left">What is the cost at 3 rides?</td><td class="blank left"></td></tr>
+      <tr><td class="left">Which park is cheaper before 3 rides?</td><td class="blank left"></td></tr>
+      <tr><td class="left">Which park is cheaper after 3 rides?</td><td class="blank left"></td></tr>
+      <tr><td class="left">Why is the equation the best tool for the exact equal-cost question?</td><td class="blank left"></td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 6: Model Match / Reasonableness Check</div>
+  <div class="problem">
+    <h2>Match the Model to Its Meaning</h2>
+    <p>A community center has two club options.</p>
+    <div class="model-grid">
+      <div class="model-card"><h3>Club A</h3><p>Club A charges 12 dollars to join plus 4 dollars per meeting.</p></div>
+      <div class="model-card"><h3>Club B</h3><p>Club B charges 6 dollars to join plus 6 dollars per meeting.</p></div>
+    </div>
+    <p>The equal-cost equation is:</p>
+    <p class="equation-center">$12+4m=6+6m$</p>
+    <p>The solution is $m=3$.</p>
+  </div>
+  <div class="problem">
+    <h2>Which Interpretation Is Correct?</h2>
+    <div class="model-grid">
+      <div class="model-card"><h3>Interpretation A</h3><p>After 3 meetings, the two clubs cost the same amount.</p></div>
+      <div class="model-card"><h3>Interpretation B</h3><p>Each meeting costs 3 dollars.</p></div>
+    </div>
+    <p><strong>Correct interpretation:</strong> <span class="blank-line"></span></p>
+    <div class="workspace-label">Explain why the other interpretation is wrong.</div>
+    <div class="workspace workspace-150"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 7: Which Model Would You Use?</div>
+  <div class="problem">
+    <h2>Choose the Best Representation</h2>
+    <p>For each situation, choose the representation that best answers the question. Then explain your choice.</p>
+    <table class="student-table">
+      <tr><th class="left">Situation and Question</th><th>Best Tool</th><th class="left">Why?</th></tr>
+      <tr><td class="left"><strong>A.</strong> A phone plan costs $20+5g$ dollars. What does the $5$ mean?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left"><strong>B.</strong> Two plans are shown in a table. Which plan is cheaper for exactly 4 uses?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left"><strong>C.</strong> Two costs are modeled by $15+2x=5+4x$. When are they equal?</td><td class="blank"></td><td class="blank left"></td></tr>
+      <tr><td class="left"><strong>D.</strong> A graph shows two lines crossing. What does the crossing point tell you?</td><td class="blank"></td><td class="blank left"></td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Build the Big Idea</div>
+  <div class="problem">
+    <h2>Complete the Statements</h2>
+    <ol>
+      <li>A table is useful when ______________________________________________.</li>
+      <li>A graph is useful when ______________________________________________.</li>
+      <li>An equation is useful when ___________________________________________.</li>
+      <li>A written interpretation is useful when _________________________________.</li>
+      <li>The best representation depends on ____________________________________.</li>
+    </ol>
+    <div class="workspace-label">In my own words, equations are useful models because...</div>
+    <div class="workspace workspace-180"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Discussion Questions</div>
+  <div class="problem">
+    <ol>
+      <li>Why was the table useful at the beginning?</li>
+      <li>Why was the graph useful but not perfect?</li>
+      <li>Why did the equation give the exact answer?</li>
+      <li>Why does the variable definition matter?</li>
+      <li>What mistake could happen if we solve but do not interpret?</li>
+    </ol>
+    <div class="workspace-label">Class Notes / Final Discovery</div>
+    <div class="workspace workspace-180"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 1: Teacher Script</div>
+  <div class="teacher-box">
+    <h2>Purpose</h2>
+    <p>This investigation helps students discover why equations are useful models. The goal is not only to solve $8+3r=2+5r$, but to understand why that equation is the right tool for the exact equal-cost question.</p>
+  </div>
+  <div class="teacher-box">
+    <h2>Launch: 2-3 minutes</h2>
+    <p><strong>Say:</strong> “Today the question is not just can we solve an equation. The question is when is an equation the right tool?”</p>
+    <p><strong>Display:</strong> Park A and Park B prices. Ask students to answer the 1-ride and 5-ride questions mentally or with quick arithmetic before writing equations.</p>
+  </div>
+  <div class="teacher-box">
+    <h2>Investigation Moves</h2>
+    <ol>
+      <li><strong>Choose Your Tool:</strong> Push students to name why a representation helps. Do not accept “because it is easy” without more detail.</li>
+      <li><strong>Table:</strong> Ask, “What specific values can the table check quickly?” and “When would the table become inefficient?”</li>
+      <li><strong>Graph:</strong> Ask, “What does the intersection mean?” and “How exact is our graph?”</li>
+      <li><strong>Equation:</strong> Ask, “Why are we setting these expressions equal instead of adding them?”</li>
+      <li><strong>Interpretation:</strong> Require units. The solution $r=3$ means 3 rides, not 3 dollars.</li>
+    </ol>
+  </div>
+  <div class="teacher-box">
+    <h2>Closure / Synthesis</h2>
+    <div class="teacher-note"><p>Final summary: We change representations because different representations answer different questions well. Tables help test values, graphs show trends and approximate intersections, equations give exact answers, and context gives the answer meaning.</p></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 2: Expected Observations and Misconceptions</div>
+  <div class="teacher-box">
+    <h2>Expected Student Observations</h2>
+    <ul>
+      <li>Park B starts cheaper because its admission cost is lower.</li>
+      <li>Park A increases more slowly because its per-ride cost is lower.</li>
+      <li>The table is useful for checking individual ride counts.</li>
+      <li>The graph makes the equal-cost point visible, but the equation confirms it exactly.</li>
+      <li>The solution must be interpreted in the context of rides and total cost.</li>
+    </ul>
+  </div>
+  <div class="teacher-box">
+    <h2>Common Misconceptions to Watch For</h2>
+    <ul>
+      <li>Students may say $r=3$ means 3 dollars instead of 3 rides.</li>
+      <li>Students may write $8+3r+2+5r$ instead of setting the costs equal.</li>
+      <li>Students may forget to define the variable.</li>
+      <li>Students may think the graph is more exact than an algebraic solution.</li>
+      <li>Students may solve correctly but not answer the original decision question.</li>
+    </ul>
+  </div>
+  <div class="teacher-box">
+    <h2>Discussion Prompts</h2>
+    <ul>
+      <li>Which tool was most useful first? Which tool became most useful later?</li>
+      <li>What changed when we moved from table to graph to equation?</li>
+      <li>What information would be lost if we only wrote $r=3$?</li>
+    </ul>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 3: Answer Key</div>
+  <div class="problem">
+    <div class="problem-number">Launch: Same Situation, Different Questions</div>
+    <p><strong>Original task:</strong> Compare Park A, which charges 8 dollars admission plus 3 dollars per ride, and Park B, which charges 2 dollars admission plus 5 dollars per ride.</p>
+    <table>
+      <tr><th>Question</th><th>Answer</th><th class="left">Explanation</th></tr>
+      <tr><td>1 ride</td><td>Park B</td><td class="left">Park A costs $8+3(1)=11$. Park B costs $2+5(1)=7$.</td></tr>
+      <tr><td>5 rides</td><td>Park A</td><td class="left">Park A costs $8+3(5)=23$. Park B costs $2+5(5)=27$.</td></tr>
+      <tr><td>Gets expensive faster</td><td>Park B</td><td class="left">Park B increases by 5 dollars per ride. Park A increases by 3 dollars per ride.</td></tr>
+      <tr><td>Same cost?</td><td>Yes</td><td class="left">They are the same at 3 rides.</td></tr>
+    </table>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 1: Choose Your Tool</div>
+    <p><strong>Original task:</strong> Choose the best representation for each question.</p>
+    <table>
+      <tr><th class="left">Question</th><th>Good Tool</th><th class="left">Why</th></tr>
+      <tr><td class="left">Cheaper for 1 ride?</td><td>Table or mental arithmetic</td><td class="left">A single specific value is easy to test.</td></tr>
+      <tr><td class="left">Cheaper for 5 rides?</td><td>Table</td><td class="left">The table compares exact costs for a listed ride count.</td></tr>
+      <tr><td class="left">Gets expensive faster?</td><td>Context, expression, or graph</td><td class="left">The per-ride amount or graph steepness shows rate of increase.</td></tr>
+      <tr><td class="left">When are costs the same?</td><td>Equation</td><td class="left">Setting the expressions equal gives an exact value.</td></tr>
+      <tr><td class="left">What does the answer mean?</td><td>Context / written interpretation</td><td class="left">The context gives units and meaning.</td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 3: Answer Key Continued</div>
+  <div class="problem">
+    <div class="problem-number">Part 2: Table Model</div>
+    <p><strong>Original task:</strong> Complete the table for 0 through 6 rides.</p>
+    <table>
+      <tr><th>Rides ($r$)</th><th>Park A Cost</th><th>Park B Cost</th><th>Which is cheaper?</th></tr>
+      <tr><td>0</td><td>8</td><td>2</td><td>Park B</td></tr>
+      <tr><td>1</td><td>11</td><td>7</td><td>Park B</td></tr>
+      <tr><td>2</td><td>14</td><td>12</td><td>Park B</td></tr>
+      <tr><td>3</td><td>17</td><td>17</td><td>Same</td></tr>
+      <tr><td>4</td><td>20</td><td>22</td><td>Park A</td></tr>
+      <tr><td>5</td><td>23</td><td>27</td><td>Park A</td></tr>
+      <tr><td>6</td><td>26</td><td>32</td><td>Park A</td></tr>
+    </table>
+    <p><strong>Explanation:</strong> The table is useful for checking specific values and seeing that the comparison changes at 3 rides.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 3: Graph Model</div>
+    <p><strong>Original task:</strong> Use the graph to compare both cost models.</p>
+    <p><strong>Answer:</strong> The lines meet at approximately $(3,17)$. This means 3 rides cost 17 dollars at both parks. The graph shows the trend and intersection visually, but the equation is better for proving the exact value.</p>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 3: Answer Key Continued</div>
+  <div class="problem">
+    <div class="problem-number">Part 4: Equation Model</div>
+    <p><strong>Original task:</strong> Let $r$ represent the number of rides. Write and solve the equation for when the two parks cost the same.</p>
+    <p><strong>Equation:</strong> $8+3r=2+5r$</p>
+    <p><strong>Solution:</strong></p>
+    <p class="equation-center">$8+3r=2+5r$</p>
+    <p class="equation-center">$6=2r$</p>
+    <p class="equation-center">$r=3$</p>
+    <p><strong>Check:</strong> Park A: $8+3(3)=17$. Park B: $2+5(3)=17$.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 5: Interpret the Solution</div>
+    <table>
+      <tr><th class="left">Question</th><th class="left">Answer</th></tr>
+      <tr><td class="left">What does $r=3$ mean?</td><td class="left">The parks cost the same when a person rides 3 rides.</td></tr>
+      <tr><td class="left">What is the cost?</td><td class="left">17 dollars.</td></tr>
+      <tr><td class="left">Before 3 rides?</td><td class="left">Park B is cheaper.</td></tr>
+      <tr><td class="left">After 3 rides?</td><td class="left">Park A is cheaper.</td></tr>
+      <tr><td class="left">Why equation?</td><td class="left">The equation gives an exact equal-cost ride count.</td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 3: Answer Key Continued</div>
+  <div class="problem">
+    <div class="problem-number">Part 6: Model Match / Reasonableness Check</div>
+    <p><strong>Original task:</strong> Interpret $m=3$ for $12+4m=6+6m$.</p>
+    <p><strong>Correct interpretation:</strong> After 3 meetings, the two clubs cost the same amount.</p>
+    <p><strong>Why the other interpretation is wrong:</strong> The variable $m$ represents the number of meetings, not the cost per meeting. The number 3 is a meeting count, not a dollar amount.</p>
+    <p><strong>Check:</strong> Club A: $12+4(3)=24$. Club B: $6+6(3)=24$.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 7: Which Model Would You Use?</div>
+    <table>
+      <tr><th>Situation</th><th>Best Tool</th><th class="left">Reason</th></tr>
+      <tr><td>A</td><td>Context / expression</td><td class="left">The $5$ means the cost increases by 5 dollars for each gigabyte.</td></tr>
+      <tr><td>B</td><td>Table</td><td class="left">A table is best for comparing a specific listed input such as 4 uses.</td></tr>
+      <tr><td>C</td><td>Equation</td><td class="left">An equation gives the exact value when the costs are equal.</td></tr>
+      <tr><td>D</td><td>Graph and context</td><td class="left">The intersection shows where two quantities are equal, and context explains what the coordinates mean.</td></tr>
+    </table>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Build the Big Idea</div>
+    <p><strong>Sample final statement:</strong> Equations are useful models because they represent a situation exactly and can help us find the input value that makes two quantities equal. We still need the context to explain what the solution means.</p>
+  </div>
+</section>
+
+</div>
 </body>
 </html>
