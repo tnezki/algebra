@@ -1,110 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_4_investigation.html
-     Path: investigations/u1_4_investigation/u1_4_investigation.html
-     Hosted at: tnezki.github.io/algebra/investigations/u1_4_investigation/u1_4_investigation.html
-
-     Inquiry-based investigation for Unit 1, Section 4. Students explore concepts before formal instruction.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigation — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>u1_4_investigation</title>
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']]
+  }
+};
+</script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.45;color:#222;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.container{max-width:900px;margin:0 auto;}
+.page-break{page-break-before:always;}
+h1{color:#00003d;font-size:2rem;margin-bottom:8px;}
+h2{color:#00003d;font-size:1.45rem;margin-top:10px;margin-bottom:10px;border-left:5px solid #00003d;padding-left:10px;}
+h3{color:#004d99;font-size:1.08rem;margin-top:8px;margin-bottom:8px;}
+h4{color:#00003d;font-size:1rem;margin:10px 0 6px 0;}
+p{margin-bottom:8px;}
+ul,ol{margin-left:24px;margin-bottom:8px;}
+li{margin-bottom:6px;}
+strong{color:#00003d;}
+.title-page{min-height:9.5in;display:flex;flex-direction:column;justify-content:center;text-align:center;border:4px solid #00003d;padding:42px;break-inside:avoid;page-break-inside:avoid;}
+.title-page .course{font-size:1rem;text-transform:uppercase;letter-spacing:2px;color:#555;margin-bottom:18px;}
+.title-page h1{font-size:2.35rem;line-height:1.15;margin-bottom:18px;}
+.title-page .subtitle{font-size:1.35rem;color:#004d99;font-weight:700;margin-bottom:24px;}
+.title-page .details{font-size:1.05rem;color:#333;margin-top:18px;}
+.header-strip{background:#00003d;color:#fff;padding:10px 14px;margin:0 0 14px 0;font-weight:700;font-size:1.1rem;break-after:avoid;}
+.problem,.teacher-box,.key-point{border:1px solid #777;padding:14px 14px 12px 14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
+.problem-number{font-weight:700;color:#00003d;margin-bottom:8px;font-size:1.03rem;}
+.small-note{font-size:.92rem;color:#555;}
+.teacher-note{background:#f7f7f7;border-left:4px solid #777;padding:8px 10px;margin:10px 0;}
+.workspace{width:100%;margin-top:8px;border-top:1px solid #777;break-inside:avoid;page-break-inside:avoid;}
+.workspace-60{height:60px}.workspace-80{height:80px}.workspace-100{height:100px}.workspace-120{height:120px}.workspace-150{height:150px}.workspace-180{height:180px}.workspace-220{height:220px}.workspace-260{height:260px}
+.workspace-label{margin-top:8px;font-size:.85rem;font-weight:600;color:#444;}
+.cut-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 8px 0;align-items:stretch;}
+.cut-card-grid.three{grid-template-columns:1fr;}
+.cut-card{border:1.5px dashed #555;padding:13px;min-height:205px;height:205px;display:flex;flex-direction:column;justify-content:flex-start;break-inside:avoid;page-break-inside:avoid;background:#fff;overflow:hidden;}
+.cut-card.tall{min-height:250px;height:250px;}
+.cut-card-title{text-align:center;font-weight:800;color:#00003d;text-transform:uppercase;font-size:1rem;letter-spacing:.4px;margin-bottom:10px;}
+.cut-card p{font-size:1.04rem;line-height:1.35;margin:0 0 8px 0;}
+.equation-card{display:flex;align-items:center;justify-content:center;flex:1;font-size:1.75rem;}
+.cut-line-note{font-size:.95rem;border:1px dashed #555;padding:6px 8px;margin:8px 0;background:#fafafa;}
+.card-page-title{font-weight:800;color:#00003d;margin:4px 0 8px 0;font-size:1.08rem;}
+.rule-box{background:#f7f7f7;border-left:4px solid #00003d;padding:10px;margin:10px 0;}
+.challenge-title{font-size:1.18rem;font-weight:800;color:#00003d;margin-bottom:8px;}
+.given-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;align-items:stretch;}
+.given-box{border:1px solid #999;padding:10px;break-inside:avoid;page-break-inside:avoid;}
+.given-box h3{margin-top:0;}
+table{width:100%;border-collapse:collapse;margin:10px 0;break-inside:avoid;page-break-inside:avoid;}
+th,td{border:1px solid #888;padding:7px;text-align:center;vertical-align:middle;}
+th{background:#eaf1fb;color:#00003d;}
+td.left,th.left{text-align:left;}
+.student-table td{height:58px;vertical-align:middle;}
+.student-table .evidence-cell{height:76px;}
+.blank-line{display:inline-block;border-bottom:1px solid #555;min-width:190px;height:1.2em;}
+.model{border:1px solid #333;margin:8px auto;max-width:360px;display:grid;grid-template-columns:2fr 1fr;height:95px;background:#fff;}
+.model .piece{border-right:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.model .piece:last-child{border-right:none;}
+.model-row{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:6px;}
+.group-chip{border:1px solid #555;padding:7px 12px;min-width:66px;text-align:center;background:#fafafa;font-size:1.05rem;}
+.arrow{font-weight:800;font-size:1.2rem;color:#00003d;}
+.pair-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pair-card{border:1px solid #777;padding:12px;min-height:116px;break-inside:avoid;page-break-inside:avoid;}
+.wodb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;}
+.wodb-card{border:1px solid #777;min-height:125px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.45rem;padding:10px;break-inside:avoid;page-break-inside:avoid;}
+.big-formula{font-size:1.35rem;text-align:center;margin:10px 0;}
+@media print{body{padding:10px}.container{max-width:100%}.title-page{min-height:9.75in}.cut-card-grid{grid-template-columns:1fr 1fr;gap:10px}.cut-card-grid.three{grid-template-columns:1fr}.cut-card{height:205px;min-height:205px;padding:11px}.cut-card.tall{height:250px;min-height:250px}.student-table td{height:58px}.student-table .evidence-cell{height:76px}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 4</div>
-        <h1 class="course-title">Investigation</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
-        </div>
-        <div class="meta">
-            <strong>File:</strong> u1_4_investigation.html<br>
-            <strong>Location:</strong> investigations/u1_4_investigation/u1_4_investigation.html<br>
-            <strong>Purpose:</strong> Inquiry-based investigation for Unit 1, Section 4. Students explore concepts before formal instruction.
-        </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/investigations/u1_4_investigation/u1_4_investigation.html
-        </div>
+<div class="container">
+<section class="title-page">
+  <div class="course">Algebra 1 - Unit 1</div>
+  <h1>Section 1.4 Investigation</h1>
+  <div class="subtitle">Expressions and Structure</div>
+  <p><strong>Investigation:</strong> Expression Match-Up Lab</p>
+  <p><strong>Question:</strong> Can different expressions tell the same story?</p>
+  <p><strong>Time:</strong> 15-20 minutes</p>
+  <p><strong>Format:</strong> Match-up lab, structure hunt, same-or-different debate, and whole-class synthesis</p>
+  <div class="details">Learning Target: Interpret and rewrite algebraic expressions by identifying structure, meaning, and equivalent forms.</div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Investigation Directions</div>
+  <div class="problem">
+    <h2>Setup</h2>
+    <ul>
+      <li><strong>Grouping:</strong> Partners or groups of 3.</li>
+      <li><strong>Materials:</strong> Student handout, pencil, and scissors if students physically cut and sort cards.</li>
+      <li><strong>Teacher display:</strong> Project Page 3 before students cut cards.</li>
+      <li><strong>Timing:</strong> 3 minutes for launch, 7 minutes for match-up lab, 5 minutes for same-or-different debate, and 5 minutes for discussion and synthesis.</li>
+    </ul>
+  </div>
+  <div class="problem">
+    <h2>Student Goal</h2>
+    <p>Today you will investigate how expressions can look different but still represent the same quantity.</p>
+    <p style="text-align:center;font-size:1.12rem;">$\text{Context} \qquad \text{Grouped Form} \qquad \text{Expanded Form} \qquad \text{Model}$</p>
+    <p>By the end, you should be able to explain how structure can prove that expressions are equivalent.</p>
+  </div>
+  <div class="problem">
+    <h2>Norms for the Investigation</h2>
+    <ul>
+      <li>Match by meaning, not by surface features only.</li>
+      <li>Use evidence from at least two representations.</li>
+      <li>Be ready to explain why expressions are equivalent or not equivalent.</li>
+      <li>Revise your thinking when a counterexample appears.</li>
+    </ul>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Launch: Same Numbers, Same Meaning?</div>
+  <div class="problem">
+    <h2>Opening Task</h2>
+    <p>Look at the expressions below. They use many of the same symbols. Decide which pairs have the same meaning and which pairs have different meanings.</p>
+    <div class="big-formula">$3(x+4) \qquad 3x+4 \qquad 3x+12$</div>
+    <table class="student-table">
+      <tr><th>Pair</th><th>Same or Different?</th><th class="left">Why do you think so?</th></tr>
+      <tr><td>$3(x+4)$ and $3x+12$</td><td></td><td class="left evidence-cell"></td></tr>
+      <tr><td>$3(x+4)$ and $3x+4$</td><td></td><td class="left evidence-cell"></td></tr>
+      <tr><td>$3x+4$ and $3x+12$</td><td></td><td class="left evidence-cell"></td></tr>
+    </table>
+    <div class="workspace-label">What are you wondering about parentheses, coefficients, and terms?</div>
+    <div class="workspace workspace-80"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 1: Expression Match-Up Lab</div>
+  <div class="problem">
+    <h2>Directions</h2>
+    <p>Cut apart the cards. Each complete set has four cards:</p>
+    <ol>
+      <li>a context card,</li>
+      <li>a grouped expression card,</li>
+      <li>an expanded expression card, and</li>
+      <li>a structure/model card.</li>
+    </ol>
+    <p>Your job is to create <strong>three complete expression sets</strong>. Do not match only because the numbers look similar. Match because the meaning is the same.</p>
+    <div class="cut-line-note"><strong>Important:</strong> The cards are mixed. Use evidence from the context, model, and expressions.</div>
+    <table class="student-table">
+      <tr><th>Set</th><th class="left">Context Summary</th><th>Two Equivalent Expressions</th><th class="left">Evidence</th></tr>
+      <tr><td>A</td><td class="left"></td><td></td><td class="left evidence-cell"></td></tr>
+      <tr><td>B</td><td class="left"></td><td></td><td class="left evidence-cell"></td></tr>
+      <tr><td>C</td><td class="left"></td><td></td><td class="left evidence-cell"></td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Cut Cards Page 1: Context Cards</div>
+  <div class="problem">
+    <div class="card-page-title">Cut out these context cards.</div>
+    <div class="cut-card-grid three">
+      <div class="cut-card tall"><div class="cut-card-title">Context</div><p>A teacher buys 4 identical packs. Each pack contains $x$ pencils and 3 erasers.</p><p><strong>Question:</strong> How many total items are in all 4 packs?</p></div>
+      <div class="cut-card tall"><div class="cut-card-title">Context</div><p>A gym charges 5 students the same amount. Each student pays an entry fee of $x$ dollars plus 2 dollars for a locker.</p><p><strong>Question:</strong> What is the total cost for the 5 students?</p></div>
+      <div class="cut-card tall"><div class="cut-card-title">Context</div><p>Two identical shelves each hold $x$ books and 6 notebooks.</p><p><strong>Question:</strong> How many total books and notebooks are on the 2 shelves?</p></div>
     </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Cut Cards Page 2: Expression Cards</div>
+  <div class="problem">
+    <div class="card-page-title">Cut out these expression cards. They are intentionally mixed.</div>
+    <div class="cut-card-grid">
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$5x+10$</div></div>
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$2(x+6)$</div></div>
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$4(x+3)$</div></div>
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$2x+12$</div></div>
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$5(x+2)$</div></div>
+      <div class="cut-card"><div class="cut-card-title">Expression</div><div class="equation-card">$4x+12$</div></div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Cut Cards Page 3: Structure / Model Cards</div>
+  <div class="problem">
+    <div class="card-page-title">Cut out these model cards.</div>
+    <div class="cut-card-grid three">
+      <div class="cut-card tall"><div class="cut-card-title">Model</div><p>Four identical groups.</p><div class="model-row"><div class="group-chip">$x+3$</div><div class="group-chip">$x+3$</div><div class="group-chip">$x+3$</div><div class="group-chip">$x+3$</div></div><p class="small-note">Same structure as 4 groups of $x+3$.</p></div>
+      <div class="cut-card tall"><div class="cut-card-title">Model</div><p>Five identical groups.</p><div class="model-row"><div class="group-chip">$x+2$</div><div class="group-chip">$x+2$</div><div class="group-chip">$x+2$</div><div class="group-chip">$x+2$</div><div class="group-chip">$x+2$</div></div><p class="small-note">Same structure as 5 groups of $x+2$.</p></div>
+      <div class="cut-card tall"><div class="cut-card-title">Model</div><p>Two identical groups.</p><div class="model-row"><div class="group-chip">$x+6$</div><div class="group-chip">$x+6$</div></div><p class="small-note">Same structure as 2 groups of $x+6$.</p></div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 2: Structure Hunt</div>
+  <div class="problem">
+    <h2>Look Inside the Expressions</h2>
+    <p>Choose the three matched sets you built. For each set, explain what the structure shows.</p>
+    <table class="student-table">
+      <tr><th>Expression Set</th><th class="left">What do the parentheses show?</th><th class="left">What does the outside coefficient mean?</th><th class="left">What changed when expanded?</th></tr>
+      <tr><td>Set 1</td><td class="left evidence-cell"></td><td class="left evidence-cell"></td><td class="left evidence-cell"></td></tr>
+      <tr><td>Set 2</td><td class="left evidence-cell"></td><td class="left evidence-cell"></td><td class="left evidence-cell"></td></tr>
+      <tr><td>Set 3</td><td class="left evidence-cell"></td><td class="left evidence-cell"></td><td class="left evidence-cell"></td></tr>
+    </table>
+    <div class="rule-box"><strong>Think about it:</strong> If the expressions are equivalent, what stayed the same even though the expression changed form?</div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Part 3: Convince Me — Same or Different?</div>
+  <div class="problem">
+    <h2>Expression-Pair Debate</h2>
+    <p>Sort each pair into one of three groups: <strong>definitely equivalent</strong>, <strong>definitely not equivalent</strong>, or <strong>need more evidence</strong>. Then choose at least three pairs to prove.</p>
+    <div class="pair-card-grid">
+      <div class="pair-card"><strong>Pair 1</strong><p>$2(x+5)$ and $2x+10$</p></div>
+      <div class="pair-card"><strong>Pair 2</strong><p>$5x+2$ and $5(x+2)$</p></div>
+      <div class="pair-card"><strong>Pair 3</strong><p>$3x+4+2x$ and $5x+4$</p></div>
+      <div class="pair-card"><strong>Pair 4</strong><p>$3x+4+2x$ and $9x$</p></div>
+      <div class="pair-card"><strong>Pair 5</strong><p>$7+x+x$ and $7+2x$</p></div>
+      <div class="pair-card"><strong>Pair 6</strong><p>$4(x+1)$ and $4x+1$</p></div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Proof Tools</div>
+  <div class="problem">
+    <h2>Choose a Tool to Prove Your Decision</h2>
+    <ul>
+      <li><strong>Substitute:</strong> Pick one or two values for $x$ and compare.</li>
+      <li><strong>Rewrite:</strong> Use distribution or combine like terms.</li>
+      <li><strong>Explain the structure:</strong> Tell what each expression means.</li>
+      <li><strong>Model:</strong> Use groups or an area model.</li>
+    </ul>
+    <table class="student-table">
+      <tr><th>Expression Pair</th><th>Tool Used</th><th class="left">Evidence</th><th>Decision</th></tr>
+      <tr><td></td><td></td><td class="left evidence-cell"></td><td></td></tr>
+      <tr><td></td><td></td><td class="left evidence-cell"></td><td></td></tr>
+      <tr><td></td><td></td><td class="left evidence-cell"></td><td></td></tr>
+      <tr><td></td><td></td><td class="left evidence-cell"></td><td></td></tr>
+    </table>
+    <div class="teacher-note"><p><strong>Important idea:</strong> Finding one value where two expressions are different proves they are not equivalent. Matching for one value can support a guess, but it does not prove equivalence for every input.</p></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Which One Doesn't Belong?</div>
+  <div class="problem">
+    <h2>Multiple Answers Are Possible</h2>
+    <p>Choose one expression that does not belong. Your reasoning matters more than the choice.</p>
+    <div class="wodb-grid">
+      <div class="wodb-card">$3(x+4)$</div>
+      <div class="wodb-card">$3x+12$</div>
+      <div class="wodb-card">$12+3x$</div>
+      <div class="wodb-card">$3x+4$</div>
+    </div>
+    <ol>
+      <li>Which expression does not belong?</li>
+      <li>What makes it different?</li>
+      <li>Could another expression also not belong for a different reason?</li>
+    </ol>
+    <div class="workspace workspace-180"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Build the Big Idea</div>
+  <div class="problem">
+    <p>Use today's investigation to complete each statement.</p>
+    <ol>
+      <li>Parentheses can show <span class="blank-line"></span>.</li>
+      <li>The distributive property lets us <span class="blank-line"></span>.</li>
+      <li>Like terms can be combined when <span class="blank-line"></span>.</li>
+      <li>Two expressions are equivalent when <span class="blank-line"></span>.</li>
+      <li>A substitution check can show <span class="blank-line"></span>, but to prove equivalence we need <span class="blank-line"></span>.</li>
+    </ol>
+    <div class="workspace-label">In my own words, equivalent expressions are...</div>
+    <div class="workspace workspace-180"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Discussion Questions</div>
+  <div class="problem">
+    <ol>
+      <li>Why are $4(x+3)$ and $4x+12$ equivalent?</li>
+      <li>Why are $3(x+4)$ and $3x+4$ not equivalent?</li>
+      <li>What does an area model or grouping model help us see?</li>
+      <li>When is substituting a value useful?</li>
+      <li>Why is structure more reliable than just noticing the same numbers?</li>
+    </ol>
+    <div class="workspace-label">Class Notes / Final Discovery</div>
+    <div class="workspace workspace-180"></div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 1: Teacher Script</div>
+  <div class="teacher-box">
+    <h2>Purpose</h2>
+    <p>This investigation helps students discover that expressions can be rewritten without changing value when the structure is preserved. The emphasis is not speed simplifying; it is interpreting why forms such as $4(x+3)$ and $4x+12$ represent the same quantity.</p>
+  </div>
+  <div class="teacher-box">
+    <h2>Launch: 2-3 minutes</h2>
+    <p><strong>Say:</strong> “These expressions use many of the same symbols. Before calculating, decide whether they really tell the same story.”</p>
+    <p><strong>Display:</strong> $3(x+4)$, $3x+4$, and $3x+12$. Have students make a quick prediction, then ask for one reason on each side.</p>
+    <p><strong>Do not say yet:</strong> “Distribute the 3.” Instead, ask what the 3 is multiplying.</p>
+  </div>
+  <div class="teacher-box">
+    <h2>Investigation: 10-12 minutes</h2>
+    <ol>
+      <li><strong>Part 1:</strong> Let groups cut and sort the context, expression, and model cards. Ask students to point to the part of the story that matches each symbol.</li>
+      <li><strong>Part 2:</strong> Use the structure table to slow down reasoning. Students should explain the outside coefficient, the group inside parentheses, and the expanded terms.</li>
+      <li><strong>Part 3:</strong> Move to the same-or-different debate. Require students to prove at least one equivalent pair and one non-equivalent pair.</li>
+      <li><strong>WODB:</strong> Accept more than one answer when the reasoning is valid. Highlight that $3x+4$ is the only expression not equivalent to $3(x+4)$, but other choices can be defended by form or order.</li>
+    </ol>
+  </div>
+  <div class="teacher-box">
+    <h2>Teacher Moves</h2>
+    <ul>
+      <li>“What is being repeated?”</li>
+      <li>“Where do you see that group in the story?”</li>
+      <li>“What did the expanded form make visible?”</li>
+      <li>“Can you find a counterexample?”</li>
+      <li>“Can you rewrite one expression so it matches the other?”</li>
+    </ul>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 2: Expected Observations and Misconceptions</div>
+  <div class="teacher-box">
+    <h2>Expected Student Observations</h2>
+    <ul>
+      <li>Parentheses show a group that is being repeated.</li>
+      <li>The outside coefficient tells how many copies of the group there are.</li>
+      <li>Expanded form separates the repeated parts into like terms.</li>
+      <li>Combining like terms changes the form but not the value.</li>
+      <li>Same numbers do not always mean same structure.</li>
+    </ul>
+  </div>
+  <div class="teacher-box">
+    <h2>Common Misconceptions to Watch For</h2>
+    <ul>
+      <li>Students may think $3(x+4)=3x+4$ because they distribute only to the variable.</li>
+      <li>Students may think $5x+2=5(x+2)$ because the same numbers appear.</li>
+      <li>Students may combine unlike terms, such as treating $3x+4+2x$ as $9x$.</li>
+      <li>Students may believe one matching substitution value proves equivalence for all values.</li>
+      <li>Students may ignore context and match cards by numbers only.</li>
+    </ul>
+  </div>
+  <div class="teacher-box">
+    <h2>Closure / Synthesis</h2>
+    <div class="teacher-note"><p><strong>Final summary:</strong> Equivalent expressions may look different, but they have the same value for every input because their structure represents the same quantity.</p></div>
+    <p><strong>Closure prompt:</strong> “Choose one matched set from today and explain why the grouped form and expanded form are equivalent.”</p>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 3: Answer Key</div>
+  <div class="problem">
+    <div class="problem-number">Launch: Same Numbers, Same Meaning?</div>
+    <p><strong>Original task:</strong> Compare $3(x+4)$, $3x+4$, and $3x+12$.</p>
+    <table>
+      <tr><th>Pair</th><th>Answer</th><th class="left">Explanation</th></tr>
+      <tr><td>$3(x+4)$ and $3x+12$</td><td>Same</td><td class="left">Distributing gives $3x+12$. Both mean 3 groups of $x+4$.</td></tr>
+      <tr><td>$3(x+4)$ and $3x+4$</td><td>Different</td><td class="left">The 3 multiplies both $x$ and 4 in $3(x+4)$, so the constant part should become 12, not 4.</td></tr>
+      <tr><td>$3x+4$ and $3x+12$</td><td>Different</td><td class="left">They have the same variable term but different constant terms.</td></tr>
+    </table>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 1: Expression Match-Up Lab</div>
+    <p><strong>Original task:</strong> Sort context, expression, and model cards into three complete expression sets.</p>
+    <table>
+      <tr><th>Set</th><th class="left">Context</th><th>Grouped Form</th><th>Expanded Form</th><th class="left">Model Evidence</th></tr>
+      <tr><td>Teacher Packs</td><td class="left">4 packs, each with $x$ pencils and 3 erasers.</td><td>$4(x+3)$</td><td>$4x+12$</td><td class="left">4 identical groups of $x+3$.</td></tr>
+      <tr><td>Gym Students</td><td class="left">5 students each pay $x$ dollars plus 2 dollars.</td><td>$5(x+2)$</td><td>$5x+10$</td><td class="left">5 identical groups of $x+2$.</td></tr>
+      <tr><td>Shelves</td><td class="left">2 shelves each have $x$ books and 6 notebooks.</td><td>$2(x+6)$</td><td>$2x+12$</td><td class="left">2 identical groups of $x+6$.</td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 4: Answer Key Continued</div>
+  <div class="problem">
+    <div class="problem-number">Part 2: Structure Hunt</div>
+    <p><strong>Original task:</strong> Explain what the parentheses, outside coefficient, and expanded form show.</p>
+    <table>
+      <tr><th>Example</th><th class="left">Expected Explanation</th></tr>
+      <tr><td>$4(x+3)$</td><td class="left">The parentheses show one pack with $x+3$ items. The 4 means there are 4 packs. Expanded form $4x+12$ shows 4 groups of $x$ and 4 groups of 3.</td></tr>
+      <tr><td>$5(x+2)$</td><td class="left">The parentheses show one student's cost. The 5 means 5 students. Expanded form $5x+10$ shows 5 entry fees plus 5 locker fees of 2 dollars.</td></tr>
+      <tr><td>$2(x+6)$</td><td class="left">The parentheses show one shelf. The 2 means 2 shelves. Expanded form $2x+12$ shows two groups of books and 12 notebooks total.</td></tr>
+    </table>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Part 3: Convince Me — Same or Different?</div>
+    <table>
+      <tr><th>Pair</th><th>Decision</th><th class="left">Reason</th></tr>
+      <tr><td>$2(x+5)$ and $2x+10$</td><td>Equivalent</td><td class="left">Distribute 2 to both terms inside parentheses.</td></tr>
+      <tr><td>$5x+2$ and $5(x+2)$</td><td>Not equivalent</td><td class="left">$5(x+2)=5x+10$, not $5x+2$.</td></tr>
+      <tr><td>$3x+4+2x$ and $5x+4$</td><td>Equivalent</td><td class="left">Combine like terms: $3x+2x=5x$.</td></tr>
+      <tr><td>$3x+4+2x$ and $9x$</td><td>Not equivalent</td><td class="left">$3x+4+2x=5x+4$. The constant 4 cannot combine with $x$ terms.</td></tr>
+      <tr><td>$7+x+x$ and $7+2x$</td><td>Equivalent</td><td class="left">$x+x=2x$.</td></tr>
+      <tr><td>$4(x+1)$ and $4x+1$</td><td>Not equivalent</td><td class="left">$4(x+1)=4x+4$, not $4x+1$.</td></tr>
+    </table>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section>
+  <div class="header-strip">Teaching Resource 5: Answer Key Continued</div>
+  <div class="problem">
+    <div class="problem-number">Which One Doesn't Belong?</div>
+    <p><strong>Original task:</strong> Choose which expression does not belong from $3(x+4)$, $3x+12$, $12+3x$, and $3x+4$.</p>
+    <p><strong>Most important mathematical answer:</strong> $3x+4$ does not belong because it is not equivalent to the other three expressions.</p>
+    <p><strong>Explanation:</strong> $3(x+4)=3x+12$, and $3x+12=12+3x$ by the commutative property of addition. The expression $3x+4$ has a constant term of 4, not 12.</p>
+    <p><strong>Alternate acceptable reasoning:</strong> A student could say $3(x+4)$ does not belong because it is the only expression in grouped form. A student could say $12+3x$ does not belong because it is the only expression with the constant first. Accept these only if the reasoning is clear, then return to the equivalence question.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Build the Big Idea</div>
+    <ol>
+      <li>Parentheses can show <strong>a group or quantity being treated as one unit</strong>.</li>
+      <li>The distributive property lets us <strong>rewrite a grouped expression as an equivalent expanded expression</strong>.</li>
+      <li>Like terms can be combined when <strong>they have the same variable part</strong>.</li>
+      <li>Two expressions are equivalent when <strong>they have the same value for every input</strong>.</li>
+      <li>A substitution check can show <strong>whether expressions match for a chosen input</strong>, but to prove equivalence we need <strong>structure, rewriting, or a general argument</strong>.</li>
+    </ol>
+  </div>
+  <div class="problem">
+    <div class="problem-number">Discussion Questions</div>
+    <ol>
+      <li>$4(x+3)$ and $4x+12$ are equivalent because four groups of $x+3$ produce four $x$ terms and four groups of 3.</li>
+      <li>$3(x+4)$ and $3x+4$ are not equivalent because the 3 must multiply the 4 as well as the $x$.</li>
+      <li>A model helps show the repeated groups and why all parts must be counted.</li>
+      <li>Substitution is useful for testing and finding counterexamples.</li>
+      <li>Structure is more reliable because the same numbers can be arranged to mean different things.</li>
+    </ol>
+  </div>
+</section>
+</div>
 </body>
 </html>
