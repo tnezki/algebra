@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6 Warm Ups</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; color:#222; background:#fff; font-size: 11pt; line-height:1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.container { max-width: 980px; margin: 0 auto; }
+.warmup { page-break-after: always; break-after: page; padding-top: 4px; }
+.warmup:last-child { page-break-after: auto; break-after: auto; }
+h1 { color:#00003d; font-size: 29pt; margin: 0 0 4px 0; line-height:1.05; }
+.subtitle { color:#444; font-size: 14pt; font-weight:800; margin: 0 0 12px 0; padding-bottom: 8px; border-bottom: 2px solid #777; }
+.problem { border-left: 8px solid #00003d; padding: 10px 0 8px 18px; margin: 10px 0 14px 0; break-inside: avoid; page-break-inside: avoid; }
+.problem-title { color:#00003d; font-size: 14pt; font-weight:900; margin-bottom: 6px; }
+.prompt { font-size: 12pt; margin-bottom: 8px; }
+.workspace { height: 400px; border: 1px dashed #aaa; background: repeating-linear-gradient(to bottom, #fff, #fff 27px, #f1f1f1 28px); }
+.values { border-collapse: collapse; width: auto; margin: 10px auto 12px auto; }
+.values th, .values td { border: 1px solid #777; min-width: 0.55in; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.values th { background:#eaf1fb; color:#00003d; font-weight:800; }
+.figure-block { text-align:center; margin: 10px 0 12px 0; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img { max-width: 4.35in; width: auto; height: auto; border: 1px solid #bbb; background:white; }
+.note { font-size: 9pt; color:#555; }
+@media print { body { font-size:10.5pt; } h1 { font-size:27pt; } .prompt { font-size:11.5pt; } .workspace { height:400px; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+<section class="warmup" id="warmup-6-1-1">
+<h1>Warm Up Unit 6.1.1</h1>
+<div class="subtitle">Prior Knowledge for Solving Quadratics by Factoring</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Factor completely: $$x^2+7x+12$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Solve each linear equation: $x-4=0$ and $x+3=0$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-1-1-3.png?v=u6slow2" alt="quadratic graph with two x-intercepts and a vertex"></div>Use the graph to identify the $x$-intercepts. What do those points have in common?</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Spiral: Write the equation of a line with slope $3$ and $y$-intercept $-2$.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-1-2">
+<h1>Warm Up Unit 6.1.2</h1>
+<div class="subtitle">Current + Spiral Practice</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-1-2-1.png?v=u6slow2" alt="quadratic graph labeled y equals x plus 2 times x minus 4"></div>Solve $(x+2)(x-4)=0$ and connect your solutions to the graph.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Solve by factoring: $$x^2-5x+6=0$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Factor the trinomial: $$x^2+2x-35$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Use the table to decide whether the relationship is linear, quadratic, or neither.<table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>4</td><td>9</td><td>16</td></tr></table></div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-1-3">
+<h1>Warm Up Unit 6.1.3</h1>
+<div class="subtitle">Reasoning with Factored Form and Zeros</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">A student solves $(x-6)(x+1)=0$ and says the only solution is $x=6$. Identify the missing solution and explain the error.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-1-3-2.png?v=u6slow2" alt="downward quadratic graph with two ground intercepts and maximum"></div>A height model is $h(t)=-0.5(t+1)(t-5)$. Which zero makes sense for the time when the object lands? Explain why the other zero may not make sense in context.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Explain how factored form helps you identify zeros faster than standard form for $y=(x-2)(x+7)$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Create a quadratic equation in factored form with solutions $x=-3$ and $x=4$. Then expand it.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-2-1">
+<h1>Warm Up Unit 6.2.1</h1>
+<div class="subtitle">Prior Knowledge for Completing the Square</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Evaluate and simplify: $(x+5)^2$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Find half of $10$, then square the result. Explain how those two numbers are related to $x^2+10x$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-2-1-3.png?v=u6slow2" alt="area diagram completing the square for x squared plus six x"></div>The diagram represents $x^2+6x$. What value completes the square? Write the perfect square trinomial.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Spiral: Solve by factoring: $$x^2-9x+20=0$$</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-2-2">
+<h1>Warm Up Unit 6.2.2</h1>
+<div class="subtitle">Current + Spiral Practice</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Complete the square: $$x^2+8x+\underline{\hspace{0.35in}}$$ Then write the expression as a square.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-2-2-2.png?v=u6slow2" alt="quadratic graph y equals x minus 3 squared minus 4"></div>Use the graph of $y=(x-3)^2-4$ to identify the vertex and zeros.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Convert $y=x^2-6x+5$ to factored form and identify its zeros.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Determine whether $y=2x+5$ matches the table.<table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td>5</td><td>7</td><td>9</td></tr></table></div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-2-3">
+<h1>Warm Up Unit 6.2.3</h1>
+<div class="subtitle">Reasoning with Completing the Square</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-2-3-1.png?v=u6slow2" alt="quadratic graph y equals x squared plus six x plus five"></div>Rewrite $x^2+6x+5$ by completing the square. Use your form to explain why the vertex is $(-3,-4)$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">A student completes the square for $x^2+12x$ by adding $12^2$. Explain the mistake and correct it.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Choose whether factoring or completing the square is more efficient for $x^2+2x-15=0$. Justify your choice.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Explain why adding the same value to both sides is necessary when solving $x^2+6x=7$ by completing the square.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-3-1">
+<h1>Warm Up Unit 6.3.1</h1>
+<div class="subtitle">Prior Knowledge for the Quadratic Formula</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">For $2x^2-5x-3=0$, identify $a$, $b$, and $c$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Evaluate the discriminant expression $b^2-4ac$ when $a=1$, $b=-4$, and $c=3$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-3-1-3.png?v=u6slow2" alt="quadratic graph with irrational roots"></div>The graph shows a quadratic with roots that are not integers. Why might the quadratic formula be useful here?</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Spiral: Solve by factoring: $$x^2-16=0$$</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-3-2">
+<h1>Warm Up Unit 6.3.2</h1>
+<div class="subtitle">Current + Spiral Practice</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Use the quadratic formula to solve: $$x^2-5x+6=0$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">For $3x^2+2x-1=0$, identify $a$, $b$, and $c$, then write the quadratic formula setup before simplifying.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-3-2-3.png?v=u6slow2" alt="projectile graph with vertex and roots labeled"></div>Use the graph to estimate the positive solution of $-t^2+4t+1=0$. Then explain why an exact method may be needed.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Complete the square for $x^2-4x+\underline{\hspace{0.3in}}$ and write the square.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-3-3">
+<h1>Warm Up Unit 6.3.3</h1>
+<div class="subtitle">Reasoning with the Quadratic Formula</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-3-3-1.png?v=u6slow2" alt="quadratic graph above x-axis with no real zeros"></div>The graph of $y=(x-1)^2+2$ has no $x$-intercepts. Predict the sign of the discriminant for the equivalent standard-form equation and explain.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">A student says the quadratic formula only works when a quadratic cannot be factored. Critique the statement using an example.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Solve $x^2+6x+5=0$ two ways: factoring and completing the square. Compare the results.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Create a quadratic equation whose discriminant is $0$. Explain what its graph would look like near the $x$-axis.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-4-1">
+<h1>Warm Up Unit 6.4.1</h1>
+<div class="subtitle">Prior Knowledge for Choosing Solution Methods</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Match each equation to a likely method: factoring, completing the square, or quadratic formula. $x^2-9=0$, $x^2+6x=7$, $2x^2+3x-8=0$.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Solve by any method: $$x^2-4x-12=0$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Explain one advantage of seeing a quadratic in factored form.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Spiral: Identify the vertex of $y=(x+4)^2-9$.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-4-2">
+<h1>Warm Up Unit 6.4.2</h1>
+<div class="subtitle">Current + Spiral Practice</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-4-2-1.png?v=u6slow2" alt="four separate coordinate planes showing different quadratic solution situations"></div>For each graph A-D, choose a reasonable solution method: factoring, completing the square, quadratic formula, or no real solution reasoning. Give one reason for each choice.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">Choose an efficient method and solve: $$x^2+10x+25=0$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Solve by factoring: $$2x^2-8x=0$$</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: A student says $x^2+4x+4=0$ has two different solutions because it is quadratic. Explain the misconception.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-4-3">
+<h1>Warm Up Unit 6.4.3</h1>
+<div class="subtitle">Defending and Critiquing Solution Methods</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">Two students solve $x^2-6x+5=0$. Student A factors. Student B uses the quadratic formula. Compare the methods and explain which is more efficient for this equation.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">A student uses the quadratic formula on $x^2-25=0$ and gets stuck. Suggest a more efficient method and solve the equation.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Complete the square to rewrite $x^2-8x+3$ in vertex form.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: Create a quadratic equation where the quadratic formula is probably the most efficient method. Explain why.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-5-1">
+<h1>Warm Up Unit 6.5.1</h1>
+<div class="subtitle">Prior Knowledge for Quadratic Modeling and Optimization</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">For the model $h(t)=-16t^2+64t$, identify the input and output quantities.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">A quadratic graph opens downward. What does its vertex represent in a maximum situation?</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-5-1-3.png?v=u6slow2" alt="projectile height graph with launch, maximum, and landing labeled"></div>Use the graph to estimate when the object reaches its maximum height and when it lands.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Spiral: Solve $-16t(t-4)=0$ and interpret the two solutions as times.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-5-2">
+<h1>Warm Up Unit 6.5.2</h1>
+<div class="subtitle">Current + Spiral Practice</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-5-2-1.png?v=u6slow2" alt="revenue quadratic graph"></div>The graph models revenue. Estimate the input value that gives the greatest revenue and explain what the vertex means.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt">A ball is modeled by $h(t)=-16t^2+48t+4$. Find $h(1)$ and interpret the result.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Choose a method to solve $t^2-6t+8=0$ and justify your choice.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: The table shows height over time. Identify the maximum height shown in the table.<table class="values"><tr><th>time</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>height</th><td>0</td><td>48</td><td>64</td><td>48</td><td>0</td></tr></table></div>
+  <div class="workspace"></div>
+</section>
+</section>
+<section class="warmup" id="warmup-6-5-3">
+<h1>Warm Up Unit 6.5.3</h1>
+<div class="subtitle">Reasoning with Quadratic Models and Decisions</div>
+<section class="problem">
+  <div class="problem-title">Problem 1</div>
+  <div class="prompt">A model gives zeros at $t=-1$ and $t=6$ for a launched object. Explain which zero is meaningful in the situation and why.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 2</div>
+  <div class="prompt"><div class="figure-block"><img src="figures/wu6-5-3-2.png?v=u6slow2" alt="area optimization graph with zeros and maximum"></div>Use the graph to explain the meaning of the zeros and the maximum in an area situation.</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 3</div>
+  <div class="prompt">Spiral: Compare solving $x^2-10x+25=0$ by factoring and by completing the square. Which form reveals the vertex most clearly?</div>
+  <div class="workspace"></div>
+</section>
+<section class="problem">
+  <div class="problem-title">Problem 4</div>
+  <div class="prompt">Formative Spiral: A student predicts a ball will have negative height after it lands. Explain why the equation may continue mathematically even when the context no longer makes sense.</div>
+  <div class="workspace"></div>
+</section>
+</section>
+</div>
+</body>
+</html>
