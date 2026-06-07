@@ -1,110 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_2_notes.html
-     Path: notes/u1_2_notes/u1_2_notes.html
-     Hosted at: tnezki.github.io/algebra/notes/u1_2_notes/u1_2_notes.html
-
-     Lesson notes for Unit 1, Section 2. Student-facing notes for class work and reference.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Notes — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.2 Notes - Inputs, Outputs, and Functions</title>
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    .page-break{page-break-before:always;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .definition{background:#fffacd;border-left:5px solid #ffd700;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:120px;}.workspace-160{height:160px;}.workspace-180{height:180px;}.workspace-220{height:220px;}.workspace-260{height:260px;}.workspace-300{height:300px;}.workspace-340{height:340px;}.workspace-400{height:400px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:230px;}.workspace-context{height:300px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    .machine{display:flex;align-items:center;justify-content:center;gap:12px;margin:12px 0;break-inside:avoid;page-break-inside:avoid;}
+    .machine-box{border:2px solid #00003d;border-radius:8px;padding:14px 20px;background:#f6f8ff;text-align:center;font-weight:700;}
+    .arrow{font-size:1.8em;color:#00003d;}
+    .teacher-note{font-size:.92em;color:#555;}
+    @page{size:8.5in 17in;margin:0.75in;}
+    @media print{body{padding:12px;}.title-page{min-height:9.7in;}.two-column,.representation-grid{display:block;}.rep-card{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 2</div>
-        <h1 class="course-title">Student Notes</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 - Unit 1</div>
+      <div class="title-main">Section 1.2<br>Inputs, Outputs, and Functions</div>
+      <div class="title-sub">Following a rule from what goes in to what comes out.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A function is dependable: each input gets one output.</p></div>
+      <p class="title-note">Today we will read input-output relationships from rules, tables, graphs, and situations. We will also decide when a relationship is a function.</p>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can determine outputs from given inputs.</li>
+            <li>I can evaluate a function rule.</li>
+            <li>I can identify inputs and outputs in a situation.</li>
+            <li>I can describe how a function changes values.</li>
+            <li>I can decide whether a rule gives exactly one output for each input.</li>
+          </ul>
         </div>
-        <div class="meta">
-            <strong>File:</strong> u1_2_notes.html<br>
-            <strong>Location:</strong> notes/u1_2_notes/u1_2_notes.html<br>
-            <strong>Purpose:</strong> Lesson notes for Unit 1, Section 2. Student-facing notes for class work and reference.
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What’s To Come</h2>
+        <p>Later in this section, you will return to the task below. For now, do not solve it. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed.</p>
+        <p>As you annotate, ask yourself: What is the input? What is the output? Where do you see a rule? Where do you see evidence that each input has exactly one output? What information might make a relationship fail to be a function?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task</strong></p>
+          <p>A school store is testing a ticket reward system. A student says the context, equation, table, and graph below all describe the same function.</p>
+          <div class="representation-grid">
+            <div class="rep-card"><h4>Context</h4><p>A student starts with $6$ bonus points and earns $4$ points for each ticket turned in.</p></div>
+            <div class="rep-card"><h4>Equation</h4><p>$p=4t+6$, where $t$ is tickets and $p$ is points.</p></div>
+            <div class="rep-card"><h4>Table</h4><table class="table-block"><tr><th>Tickets</th><td>0</td><td>1</td><td>2</td><td>4</td></tr><tr><th>Points</th><td>6</td><td>10</td><td>14</td><td>22</td></tr></table></div>
+            <div class="rep-card"><h4>Graph</h4><div class="graph-block graph-sm"><img src="figures/u1_2_future_graph.png" alt="Graph of points starting at 6 and increasing by 4 for each ticket"></div></div>
+          </div>
+          <ol>
+            <li>Use evidence to decide whether all four representations match.</li>
+            <li>Explain what the input and output mean in this situation.</li>
+            <li>Create one change that would make the table no longer represent a function.</li>
+            <li>Explain why your change breaks the idea of one output for each input.</li>
+          </ol>
         </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/notes/u1_2_notes/u1_2_notes.html
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
         </div>
-    </div>
+        <div class="reading-box">
+          <p>An <strong>input</strong> is the value we start with. An <strong>output</strong> is the value we get after a rule, situation, table, or graph does something with the input.</p>
+          <p>For example, if a machine doubles a number and then adds $1$, the input $5$ becomes the output $11$. The input is not better or more important than the output. They work together as a pair.</p>
+          <p>A <strong>function</strong> is a relationship where each input has exactly one output. This does not mean every output has to be different. Two different inputs can share the same output. The problem happens when one input tries to go to two different outputs.</p>
+          <p>Functions help us make predictions. If we know the rule and the input, we can find the output. If we see a table or graph, we can look for the same idea: each input should lead to one clear answer.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>In your own words, what is the difference between an input and an output?</li>
+            <li>Why can two different inputs have the same output and still be a function?</li>
+            <li>What would make a relationship fail to be a function?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INPUTS AND OUTPUTS IN CONTEXT -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Inputs and Outputs Tell a Story</h2>
+        <p>In a situation, the input is usually the quantity we choose or control. The output is the quantity that depends on that input.</p>
+        <div class="definition"><p><strong>Input-output pair:</strong> A pair of values that go together. In an ordered pair $(x,y)$, the input is usually $x$ and the output is usually $y$.</p></div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 1</h3>
+          <p>A school club pays a one-time setup cost of \$5 and then pays \$3 for each poster printed.</p>
+          <ol>
+            <li>Identify the input and output.</li>
+            <li>Find the output when the input is $4$ posters.</li>
+            <li>Write the input-output pair.</li>
+          </ol>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 1</h3>
+          <p>A phone charger costs \$12 plus \$2 for gift wrapping. Identify the input and output, then find the output if a person buys $3$ chargers with gift wrapping.</p>
+          <div class="workspace-220"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Which quantity did you choose in Example 1?</li>
+            <li>Which quantity changed because of that choice?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: EVALUATING FUNCTION RULES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Function Rules Are Instructions</h2>
+        <p>Function notation is another way to show an input-output rule. In $f(x)$, the $x$ is the input. The value of $f(x)$ is the output.</p>
+        <div class="machine">
+          <div class="machine-box">Input<br>$x$</div>
+          <div class="arrow">&#8594;</div>
+          <div class="machine-box">Rule<br>$2x+5$</div>
+          <div class="arrow">&#8594;</div>
+          <div class="machine-box">Output<br>$f(x)$</div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 2</h3>
+          <p>Evaluate the function rule for each input.</p>
+          <p>$$f(x)=2x+5$$</p>
+          <table class="table-block"><tr><th>$x$</th><td>$-1$</td><td>$0$</td><td>$3$</td></tr><tr><th>$f(x)$</th><td></td><td></td><td></td></tr></table>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 2</h3>
+          <p>For $g(x)=3x-4$, find $g(-2)$, $g(1)$, and $g(5)$. Show the substitution step for at least one input.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: TABLES AND GRAPHS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Tables and Graphs Show the Same Input-Output Pairs</h2>
+        <p>A table lists input-output pairs in rows or columns. A graph shows each pair as a point. The input tells how far left or right to go, and the output tells how far up or down to go.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 3</h3>
+          <p>Use the graph to find the outputs for inputs $-2$, $0$, and $3$. Then record the values in the table.</p>
+          <div class="graph-block graph-md"><img src="figures/u1_2_read_graph.png" alt="Graph with labeled input-output points"></div>
+          <table class="table-block"><tr><th>Input</th><td>$-2$</td><td>$0$</td><td>$3$</td></tr><tr><th>Output</th><td></td><td></td><td></td></tr></table>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 3</h3>
+          <p>A graph includes the points $(-4,1)$, $(0,3)$, and $(2,4)$. Identify the input and output in each pair, then make a table from the points.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How does a table show the same information as plotted points?</li>
+            <li>When you read a graph, why do you need both coordinates?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: DECIDING WHETHER A RELATIONSHIP IS A FUNCTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>One Input Should Not Split Into Two Outputs</h2>
+        <p>A relationship is a function when each input has exactly one output. Repeated outputs are allowed. Repeated inputs are only a problem when the same input is paired with different outputs.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 4</h3>
+          <p>Decide whether each relation is a function. Explain using inputs and outputs.</p>
+          <div class="two-column">
+            <div>
+              <p><strong>Relation A</strong></p>
+              <div class="graph-block graph-sm"><img src="figures/u1_2_function_points.png" alt="Discrete relation where each input has one output"></div>
+            </div>
+            <div>
+              <p><strong>Relation B</strong></p>
+              <div class="graph-block graph-sm"><img src="figures/u1_2_nonfunction_points.png" alt="Discrete relation where one input has two outputs"></div>
+            </div>
+          </div>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 4</h3>
+          <p>A student says, “This table is not a function because the output $5$ appears twice.” Critique the claim.</p>
+          <table class="table-block"><tr><th>Input</th><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr><tr><th>Output</th><td>$5$</td><td>$8$</td><td>$5$</td><td>$11$</td></tr></table>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Why are repeated outputs allowed in a function?</li>
+            <li>What exact feature makes Relation B fail to be a function?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <ul>
+            <li>An input is the value that goes into a rule, table, graph, or situation.</li>
+            <li>An output is the value that comes out or depends on the input.</li>
+            <li>Function notation like $f(x)$ means “the output when the input is $x$.”</li>
+            <li>A table and a graph can show the same input-output pairs.</li>
+            <li>A function gives exactly one output for each input.</li>
+            <li>Repeated outputs do not automatically make a relationship not a function.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Switching input and output:</strong> In $(x,y)$, the input is usually $x$ and the output is usually $y$.</li>
+            <li><strong>Forgetting to substitute:</strong> To find $f(4)$, replace every $x$ in the rule with $4$.</li>
+            <li><strong>Thinking repeated outputs break a function:</strong> Different inputs may share an output.</li>
+            <li><strong>Missing repeated inputs:</strong> The same input cannot have two different outputs in a function.</li>
+            <li><strong>Reading only one coordinate from a graph:</strong> A point needs both the input and the output.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="annotation-box">
+          <p><strong>Do not solve the future task yet.</strong></p>
+          <p>Look back at the future task. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+        </div>
+        <div class="workspace-220"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUPPLEMENTAL NOTES PAGE 1 -->
+    <section class="page-break">
+      <div class="problem"><h2>Supplemental Notes</h2><div class="workspace-600"></div></div>
+    </section>
+
+    <!-- SECTION START: SUPPLEMENTAL NOTES PAGE 2 -->
+    <section class="page-break">
+      <div class="problem"><h2>Supplemental Notes</h2><div class="workspace-600"></div></div>
+    </section>
+  </div>
 </body>
 </html>
