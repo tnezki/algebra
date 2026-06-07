@@ -1,110 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_3_notes.html
-     Path: notes/u1_3_notes/u1_3_notes.html
-     Hosted at: tnezki.github.io/algebra/notes/u1_3_notes/u1_3_notes.html
-
-     Lesson notes for Unit 1, Section 3. Student-facing notes for class work and reference.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Notes — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.3 Notes - Function Families</title>
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    .page-break{page-break-before:always;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .definition{background:#fffacd;border-left:5px solid #ffd700;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}.graph-xl img{max-width:520px;}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    .family-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+    .family-card{border:1px solid #cfd6e6;border-radius:8px;padding:10px;background:#fff;}
+    .teacher-note{font-size:.92em;color:#555;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid,.family-list{display:block;}.rep-card,.family-card{margin-bottom:12px;}.graph-block img{max-width:320px;}.graph-xl img{max-width:500px;}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 3</div>
-        <h1 class="course-title">Student Notes</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 - Unit 1</div>
+      <div class="title-main">Section 1.3<br>Function Families</div>
+      <div class="title-sub">Recognizing the kind of relationship before doing every calculation.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A function family is like a pattern family. The members may look different, but they share important behavior.</p></div>
+      <p class="title-note">Today we will sort common function families using graphs, tables, equations, and contexts. The goal is classification and reasoning, not full modeling yet.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will recognize common function families from graphs, tables, equations, and contexts.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can identify common function families from graphs.</li>
+            <li>I can identify common function families from equations.</li>
+            <li>I can describe how function families behave.</li>
+            <li>I can compare different function families.</li>
+            <li>I can distinguish classification from full modeling.</li>
+          </ul>
         </div>
-        <div class="meta">
-            <strong>File:</strong> u1_3_notes.html<br>
-            <strong>Location:</strong> notes/u1_3_notes/u1_3_notes.html<br>
-            <strong>Purpose:</strong> Lesson notes for Unit 1, Section 3. Student-facing notes for class work and reference.
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What’s To Come</h2>
+        <p>Later in this unit, you will understand much more about the task below. For now, do not solve it. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed.</p>
+        <p>As you annotate, ask yourself: What family might each graph belong to? What evidence do you notice? What would you need from a table, equation, or context to be more confident? What would make two people disagree about the classification?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task</strong></p>
+          <p>A student creates a sorting challenge for four store reward plans. The student claims each plan belongs to a different function family.</p>
+          <div class="graph-block graph-xl"><img src="figures/u1_3_future_graphs.png" alt="Four store plan graphs with different function family shapes"></div>
+          <ol>
+            <li>Use graph evidence to make a first classification for each plan.</li>
+            <li>Describe what table evidence would support or weaken each classification.</li>
+            <li>Write one possible context clue for two of the families.</li>
+            <li>Explain why classification is not the same thing as proving a complete model.</li>
+          </ol>
         </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/notes/u1_3_notes/u1_3_notes.html
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
         </div>
-    </div>
+        <div class="reading-box">
+          <p>A <strong>function family</strong> is a group of functions that share a common shape or pattern. Families help us recognize what kind of relationship we are looking at before we know every detail.</p>
+          <p>Some function families are easy to spot from a graph. A linear function makes a straight line. A quadratic function makes a U-shape called a parabola. An absolute value function often makes a V-shape. An exponential function curves because it changes by multiplying instead of adding the same amount.</p>
+          <p>Tables and equations can also give clues. A table with the same change each step often points to a linear relationship. An equation with $x^2$ often points to a quadratic relationship. An equation with the variable in the exponent, such as $2^x$, points to an exponential relationship.</p>
+          <p>Today we are not trying to prove a perfect model for every situation. We are learning to classify, compare, and explain evidence. A good classification answer says more than the family name. It explains what feature helped you decide.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Why might it help to recognize a function family before doing calculations?</li>
+            <li>What is one graph clue and one equation clue from the reading?</li>
+            <li>Why should a classification answer include evidence, not just a family name?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: GRAPH SHAPES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Graphs Give Visual Clues</h2>
+        <p>Many function families have a shape that is useful for a first classification. The shape is not the whole story, but it is a strong place to start.</p>
+        <div class="key-point">
+          <div class="family-list">
+            <div class="family-card"><p><strong>Linear:</strong> straight-line behavior</p></div>
+            <div class="family-card"><p><strong>Quadratic:</strong> U-shaped parabola behavior</p></div>
+            <div class="family-card"><p><strong>Absolute value:</strong> V-shaped behavior</p></div>
+            <div class="family-card"><p><strong>Exponential:</strong> curved growth or decay behavior</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 1</h3>
+          <p>Match each graph to the most likely function family: linear, quadratic, absolute value, or exponential. Then write one piece of evidence for each match.</p>
+          <div class="graph-block graph-xl"><img src="figures/u1_3_family_set.png" alt="Four basic function family graphs"></div>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 1</h3>
+          <p>A graph is shaped like a V and has one clear turning point. Which function family is most likely? Explain the graph evidence you used.</p>
+          <div class="workspace-220"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Which graph family feels easiest to recognize? Why?</li>
+            <li>Which two families could be mixed up if you only looked quickly?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: EQUATION CLUES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Equations Give Structure Clues</h2>
+        <p>An equation can show the family by how the input is used. Look for structure: Is $x$ being multiplied by a constant, squared, inside an absolute value, or used as an exponent?</p>
+        <div class="definition"><p><strong>Structure clue:</strong> A part of an equation that helps you recognize how the function behaves.</p></div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 2</h3>
+          <p>Classify each equation by function family. Then underline or describe the structure clue.</p>
+          <ol>
+            <li>$y=5x-2$</li>
+            <li>$y=x^2+4$</li>
+            <li>$y=|x-3|+1$</li>
+            <li>$y=3\cdot 2^x$</li>
+          </ol>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 2</h3>
+          <p>A student says $y=4^x+1$ is linear because it has a $+1$ at the end. Critique the claim using the structure of the equation.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: TABLE PATTERNS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Tables Show How Outputs Change</h2>
+        <p>A table can show whether the outputs are changing by adding a steady amount or by multiplying by a steady factor. This does not tell every detail, but it can give strong evidence for a family.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 3</h3>
+          <p>Use the tables to decide which pattern looks more linear and which pattern looks more exponential. Explain using how the outputs change.</p>
+          <div class="two-column">
+            <div>
+              <p><strong>Table A</strong></p>
+              <table class="table-block"><tr><th>$x$</th><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr><tr><th>$y$</th><td>$2$</td><td>$5$</td><td>$8$</td><td>$11$</td><td>$14$</td></tr></table>
+            </div>
+            <div>
+              <p><strong>Table B</strong></p>
+              <table class="table-block"><tr><th>$x$</th><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr><tr><th>$y$</th><td>$1$</td><td>$2$</td><td>$4$</td><td>$8$</td><td>$16$</td></tr></table>
+            </div>
+          </div>
+          <div class="graph-block graph-lg"><img src="figures/u1_3_table_patterns.png" alt="Two graphs showing a steady additive pattern and a multiplying pattern"></div>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 3</h3>
+          <p>A table has outputs $10$, $15$, $20$, $25$, and $30$ as the inputs increase by $1$. Which family is most likely? Explain what stays the same.</p>
+          <div class="workspace-220"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How is adding the same amount different from multiplying by the same factor?</li>
+            <li>Why does a table give evidence instead of a full proof from just a few points?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: CLASSIFICATION AND MODELING -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Classification Is Not Full Modeling</h2>
+        <p>When we classify a function family, we decide what type of behavior seems most likely. A full model would need more information, like an exact equation, exact starting value, or a reason the pattern should continue.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 4</h3>
+          <p>A student sees the graph below and says, “This is definitely linear because it goes up as $x$ increases.” Critique the claim using graph evidence.</p>
+          <div class="graph-block graph-md"><img src="figures/u1_3_curve_vs_line.png" alt="Curved pattern compared with a straight-line guess"></div>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 4</h3>
+          <p>A student says, “If I can name the family, then I know the exact equation.” Do you agree? Explain the difference between classifying a family and finding a full model.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>What evidence could show that a graph is increasing but not linear?</li>
+            <li>What extra information would you need to write an exact equation?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <ul>
+            <li>A function family is a group of functions with shared behavior.</li>
+            <li>Linear functions have straight-line behavior.</li>
+            <li>Quadratic functions often have U-shaped parabola behavior.</li>
+            <li>Absolute value functions often have V-shaped behavior.</li>
+            <li>Exponential functions often curve because values multiply by a factor.</li>
+            <li>Graphs, tables, equations, and contexts can all give classification evidence.</li>
+            <li>Classification helps you identify the type of relationship, but it is not the same as finding a complete model.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Using only one clue:</strong> A graph shape is helpful, but tables, equations, and contexts can support or challenge your choice.</li>
+            <li><strong>Calling every increasing graph linear:</strong> Linear graphs are straight. Curved graphs can also increase.</li>
+            <li><strong>Mixing up quadratic and absolute value:</strong> Quadratic graphs are smooth U-shapes. Absolute value graphs are sharper V-shapes.</li>
+            <li><strong>Thinking repeated addition and repeated multiplication are the same:</strong> Adding the same amount often points to linear behavior. Multiplying by the same factor often points to exponential behavior.</li>
+            <li><strong>Confusing classification with a full model:</strong> Naming the family does not automatically give the exact equation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="annotation-box">
+          <p><strong>Do not solve the future task yet.</strong></p>
+          <p>Look back at the future task. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+        </div>
+        <div class="workspace-220"></div>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
