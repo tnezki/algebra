@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 5 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.equation-stack { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.equation-stack td { border: none; padding: 4px 18px; text-align: center; vertical-align: middle; }
+.graph-block, .figure-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img, .figure-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.figure-md img { max-width: 3.5in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block, .figure-block { break-inside: avoid; page-break-inside: avoid; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 5 Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, represent, factor, and solve quadratic relationships in order to connect algebraic structure, graphical behavior, and real-world applications.</p></section>
+
+  <section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>Students can recognize factoring structures, vocabulary, quadratic forms, zeros, roots, intercepts, and graph features.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>Students can factor expressions, verify factors, use area models, identify zeros from factored form, and connect equations to graphs.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>Students can justify factoring methods, analyze errors, connect algebraic forms to graph features, and defend useful forms.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>Students can create, connect, compare, critique, and revise quadratic models using algebraic structure and graph features.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody><tr><td class="rung-num">8</td><td>I can analyze quadratic relationships using factored, standard, and vertex forms, justify which form is most useful, and interpret conclusions in context.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">7</td><td>I can create and critique quadratic models that connect factors, zeros, graphs, tables, and contexts, then revise representations for clarity and accuracy.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">6</td><td>I can analyze algebraic structure to explain why factoring methods work and how equivalent forms reveal different features of a quadratic.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">5</td><td>I can justify connections among factors, zeros, intercepts, area models, and graphs using precise mathematical evidence.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">4</td><td>I can factor quadratic expressions, verify factors, and use factored form to identify zeros or graph features.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">3</td><td>I can factor out common factors, factor trinomials, recognize special patterns, and connect symbolic work to area models.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">2</td><td>I can identify vocabulary, notation, and features for factors, products, zeros, roots, intercepts, vertices, and quadratic forms.</td><td>DOK 1</td><td>Essential</td></tr><tr><td class="rung-num">1</td><td>I can recognize factored expressions, quadratic graphs, area models, and equivalent forms as representations of quadratic structure.</td><td>DOK 1</td><td>Essential</td></tr></tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 5 Practice by Depth of Knowledge</h2>
+  <div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">Students can recognize factoring structures, vocabulary, quadratic forms, zeros, roots, intercepts, and graph features.</span></div>
+<section class="dok-method-card"><p><strong>Format: 3&ndash;5 minute warm-up, vocabulary check, factor recognition, graph-feature check, or exit ticket</strong></p><p>Purpose: Check whether students can recall vocabulary, recognize factoring structures, identify quadratic graph features, and distinguish forms of quadratic expressions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>GCF and Factor Vocabulary Check <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students identify common factors, products, sums, terms, and factored forms.</li><li>Trinomial Pattern Recognition Check <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students recognize factor pairs, trinomial structure, and area-model parts.</li><li>Special Factoring Pattern Check <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students identify perfect square trinomials and differences of squares.</li><li>Zeros and Quadratic Feature Check <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students identify zeros, intercepts, vertices, and useful forms from equations and graphs.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need support with the language of factors, zeros, and quadratic features before deeper reasoning about forms and graph behavior can occur.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Identify the greatest common factor of $12x^2$ and $18x$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">2.</div><p>Which expression is in factored form?</p><ol class="lower-alpha"><li>$3x+12$</li><li>$3(x+4)$</li><li>$x^2+7x+10$</li><li>$x^2-9$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">3.</div><p>For $x^2+7x+10$, identify the constant term and the coefficient of $x$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">4.</div><p>Which pair of numbers has product $10$ and sum $7$?</p><ol class="lower-alpha"><li>$1$ and $10$</li><li>$2$ and $5$</li><li>$-2$ and $-5$</li><li>$3$ and $4$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">5.</div><p>Complete the statement: Factoring rewrites a sum as a __________.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+<section class="problem"><div class="problem-number">6.</div><p>Identify the special pattern: $x^2-25$.</p><ol class="lower-alpha"><li>perfect square trinomial</li><li>difference of squares</li><li>greatest common factor only</li><li>not a quadratic expression</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">7.</div><p>For $f(x)=(x-2)(x+5)$, state the zeros.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">8.</div><p>Use the graph. Identify the $x$-intercepts.</p><div class="graph-block graph-md"><img src="figures/unit5_factored_zeros.png" alt="quadratic graph with zeros"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">Students can factor expressions, verify factors, use area models, identify zeros from factored form, and connect equations to graphs.</span></div>
+<section class="dok-method-card"><p><strong>Format: Exit ticket, mini-quiz, area-model task, graph/equation match, partner check, or short written task</strong></p><p>Purpose: Check whether students can factor expressions, use area models, verify factors, identify zeros from factored form, and select useful forms for routine questions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>GCF and Structure Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students factor common factors and connect expanded and factored forms.</li><li>Trinomial Factoring Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students factor trinomials using product-sum reasoning or area models.</li><li>Special Pattern Factoring Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students factor special patterns and verify by multiplication.</li><li>Factored Form and Zeros Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students identify zeros and connect them to x-intercepts and graphs.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally carry out factoring procedures and connect them to representations, but the assessment reveals whether they understand the structure behind the procedure.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Factor out the greatest common factor.</p><p>$$6x^2+12x$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">2.</div><p>Factor completely.</p><p>$$9x^2-15x$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">3.</div><p>Factor the trinomial.</p><p>$$x^2+7x+10$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">4.</div><p>Factor and verify by multiplication.</p><p>$$x^2+8x+15$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+<section class="problem"><div class="problem-number">5.</div><p>Factor the difference of squares.</p><p>$$x^2-25$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">6.</div><p>Factor the perfect square trinomial.</p><p>$$x^2+10x+25$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">7.</div><p>Use the area model to write the total area as a sum and as a product.</p><div class="figure-block figure-md"><img src="figures/unit5_area_model.svg" alt="area model for factoring"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">8.</div><p>Use the graph of a quadratic function.</p><ol class="lower-alpha"><li>State the zeros.</li><li>Write a possible equation in factored form.</li><li>State whether the vertex is a maximum or minimum.</li></ol><div class="graph-block graph-md"><img src="figures/unit5_vertex_factored.png" alt="quadratic graph showing zeros and vertex"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">Students can justify factoring methods, analyze errors, connect algebraic forms to graph features, and defend useful forms.</span></div>
+<section class="dok-method-card"><p><strong>Format: Constructed response, representation analysis, strategy comparison, error analysis, or discourse prompt</strong></p><p>Purpose: Check whether students can justify factoring methods, analyze errors, connect algebraic forms to graph features, and defend which form is most useful.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Factoring Strategy Defense Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students compare factoring methods and justify an efficient strategy.</li><li>Special Pattern Explanation Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students explain why a special pattern works or why it does not apply.</li><li>Zeros and Graph Connection Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students justify how factored form, zeros, and x-intercepts represent the same information.</li><li>Quadratic Form Comparison Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students compare standard, vertex, and factored form and defend which is most useful for a given question.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students understand factoring and quadratic forms as connected representations rather than isolated symbolic moves.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>A student factors $12x^2+18x$ as $6(2x^2+3x)$.</p><p>Explain why the expression is equivalent but not fully factored.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">2.</div><p>A student factors $x^2+7x+10$ as $(x+1)(x+10)$.</p><p>Analyze the error and correct the factorization.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">3.</div><p>Use product-sum reasoning to explain why $x^2-x-12$ factors the way it does.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">4.</div><p>A student claims every trinomial with a positive constant is a perfect square trinomial.</p><p>Critique the claim using examples.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">5.</div><p>Explain why $x^2-49$ can be factored as a difference of squares but $x^2+49$ cannot be factored over the integers using that pattern.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">6.</div><p>For $f(x)=(x-3)(x+1)$, explain how the factors, zeros, and $x$-intercepts are connected.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">7.</div><p>Compare the forms below. Explain which form is most useful for finding zeros and which is most useful for finding the vertex.</p><table class="equation-stack"><tr><td>$f(x)=(x-1)^2-4$</td></tr><tr><td>$f(x)=(x+1)(x-3)$</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div></section>
+<section class="problem"><div class="problem-number">8.</div><p>Use the graph to explain why the quadratic has two real zeros. Then write a possible equation in factored form.</p><div class="graph-block graph-md"><img src="figures/unit5_vertex_factored.png" alt="quadratic graph with two zeros"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div></section>
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">Students can create, connect, compare, critique, and revise quadratic models using algebraic structure and graph features.</span></div>
+<section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p><p>Purpose: Check whether students can transfer factoring and quadratic-form reasoning to unfamiliar situations, create models, and justify conclusions using multiple representations.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Design a Factoring Challenge <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students create a trinomial with intended factors and justify the construction.</li><li>Special Pattern Critique Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students critique and revise a flawed special-pattern argument.</li><li>Zeros and Context Modeling Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students create a context where zeros or intercepts have meaning and explain limitations.</li><li>Choose the Best Quadratic Form Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students select and defend the most useful form for answering different modeling questions.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can design, connect, critique, and revise quadratic models using algebraic structure and graph features. These should remain short performance tasks rather than large projects.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Design a polynomial expression with at least three terms that has a greatest common factor. Factor it completely and explain how you designed it.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">2.</div><p>Create a trinomial that factors as $(x+4)(x-2)$. Explain how the factors determine the middle term.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+<section class="problem"><div class="problem-number">3.</div><p>Design one perfect square trinomial and one expression that is close but not a perfect square trinomial. Explain how to tell the difference.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">4.</div><p>Create a quadratic function with zeros at $x=-2$ and $x=5$. Write it in factored form and describe what its graph must show.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+<section class="problem"><div class="problem-number">5.</div><p>A ball is launched and lands after 6 seconds. The graph is shown.</p><ol class="lower-alpha"><li>Write a possible factored model for the height.</li><li>Interpret the zeros in context.</li><li>Interpret the maximum point.</li></ol><div class="graph-block graph-md"><img src="figures/unit5_projectile.png" alt="quadratic height graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">6.</div><p>Create two equivalent forms of the same quadratic: one in factored form and one in standard form. Explain what each form makes easier to see.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">7.</div><p>Critique this claim:</p><blockquote>If two quadratic equations have the same zeros, they must be exactly the same function.</blockquote><p>Use an example to support your response.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">8.</div><p>Choose the best form of a quadratic for each task: finding zeros, finding the vertex, and finding the $y$-intercept. Create an example and justify your choices.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+</div>
+</body>
+</html>

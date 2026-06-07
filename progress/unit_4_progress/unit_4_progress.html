@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 4 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: none; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.data-table { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.data-table th, .data-table td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-sm img { max-width: 2.5in; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.2in; }
+.graph-xl img { max-width: 6.4in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+.centered-equations { text-align:center; font-size: 1.1rem; margin: 8px 0 10px; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 4 Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze function families and transformations in order to identify key features, connect equations and graphs, and describe how parameters affect function behavior.</p></section>
+
+  <section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>Students can recognize function families, parent functions, transformation vocabulary, polynomial parts, area models, and basic graph features.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>Students can classify families, graph translations and transformations, perform polynomial operations, and connect quadratic equations to features.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>Students can justify classifications, explain transformation effects, analyze polynomial structure, and connect equivalent expressions to graph behavior.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>Students can design, compare, critique, and revise models involving function families, transformations, and polynomial structures.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody><tr><td class="rung-num">8</td><td>I can analyze transformed functions and polynomial structures across graphs, equations, tables, and contexts, then justify conclusions about features and behavior.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">7</td><td>I can create, compare, and revise models involving function families, transformations, and polynomial structures, then defend which representation best reveals important features.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">6</td><td>I can analyze how transformations and polynomial structure affect graph behavior, key features, and equivalent forms.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">5</td><td>I can justify function-family classifications, transformation descriptions, and polynomial operations using evidence from multiple representations.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">4</td><td>I can graph translated and transformed functions and perform polynomial operations using symbolic and visual models.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">3</td><td>I can classify function families, identify basic transformations, and connect equations to graphs and tables.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">2</td><td>I can identify vocabulary, notation, and features for parent functions, transformations, polynomials, and quadratic graphs.</td><td>DOK 1</td><td>Essential</td></tr><tr><td class="rung-num">1</td><td>I can recognize function families, polynomial expressions, area models, and basic graph features as representations of mathematical structure.</td><td>DOK 1</td><td>Essential</td></tr></tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 4 Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">Students can recognize function families, parent functions, transformation vocabulary, polynomial parts, area models, and basic graph features.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3&ndash;5 minute warm-up, vocabulary check, graph/equation identification, feature check, or exit ticket</strong></p><p>Purpose: Check whether students can recognize parent functions, transformation vocabulary, polynomial vocabulary, and basic quadratic graph features.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Function Family Recognition Check <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students identify common function families from graphs, equations, and tables.</li><li>Translation Vocabulary Check <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students identify horizontal shifts, vertical shifts, parent functions, and key points.</li><li>Transformation Feature Check <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students recognize reflections, stretches, compressions, and transformed graph features.</li><li>Polynomial and Quadratic Feature Check <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students identify polynomial terms, degree, area-model parts, and basic quadratic graph features.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need more support with vocabulary, notation, and visual recognition before deeper transformation and polynomial reasoning can occur.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Use the graph set below. Identify the family represented by Graph B.</p><div class="graph-block graph-xl"><img src="figures/unit4_family_set.png" alt="set of parent function family graphs"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Classify the equation as linear, quadratic, absolute value, square root, cubic, or exponential.</p><p>$$y=x^2+4$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Which function family is usually represented by a V-shaped graph?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+<section class="problem"><div class="problem-number">4.</div><p>Which expression represents a vertical translation of $f(x)$ upward by 3 units?</p><ol class="lower-alpha"><li>$f(x)+3$</li><li>$f(x-3)$</li><li>$3f(x)$</li><li>$f(3x)$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>  <section class="problem"><div class="problem-number">5.</div><p>Identify whether the equation suggests a horizontal or vertical shift.</p><p>$$g(x)=f(x-2)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Which transformation is suggested by multiplying the whole function by $-1$?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>For the polynomial <span class="tex2jax_ignore">$</span>4x^3-2x^2+7$, identify the degree.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Use the graph. Identify the vertex of the quadratic.</p><div class="graph-block graph-md"><img src="figures/unit4_quadratic_features.png" alt="quadratic feature graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">Students can classify families, graph translations and transformations, perform polynomial operations, and connect quadratic equations to features.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Exit ticket, graphing task, matching task, mini-quiz, partner check, or short written task</strong></p><p>Purpose: Check whether students can classify families, graph translations, identify transformation effects, perform polynomial operations, and connect quadratic equations to graphs.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Function Family Sorting Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students sort graphs, equations, and tables by function family.</li><li>Translation Graphing Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students graph translated functions and identify key point changes.</li><li>Transformation Matching Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students match equations, descriptions, and graphs for reflections and vertical changes.</li><li>Polynomial Area Model Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students add, subtract, and multiply polynomials using symbolic work and area models.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally apply procedures and connect representations, but the assessment reveals whether they understand how equations, graphs, and structure correspond.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Classify each equation by family.</p><ol class="lower-alpha"><li>$y=3x-4$</li><li>$y=|x+2|$</li><li>$y=x^3-1$</li><li>$y=\sqrt{x}+5$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Use the table to decide whether the relationship appears linear or quadratic. Explain briefly.</p><table class="data-table"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>1</td><td>4</td><td>9</td><td>16</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Describe the translation from the parent function to the transformed function.</p><div class="graph-block graph-md"><img src="figures/unit4_quad_translation.png" alt="translated quadratic graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-150"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Complete the table for $g(x)=(x-2)^2$.</p><table class="data-table"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$g(x)$</th><td></td><td></td><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-150"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Describe the transformation shown.</p><div class="graph-block graph-md"><img src="figures/unit4_abs_transform.png" alt="absolute value transformation graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Simplify.</p><p>$$(3x^2+4x-5)+(2x^2-x+7)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-150"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Multiply using distribution or an area model.</p><p>$$(x+3)(x+2)$$</p><div class="graph-block graph-md"><img src="figures/unit4_area_model.png" alt="area model for binomial multiplication"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Use the quadratic graph to identify the zeros, vertex, and axis of symmetry.</p><div class="graph-block graph-md"><img src="figures/unit4_quadratic_features.png" alt="quadratic features graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">Students can justify classifications, explain transformation effects, analyze polynomial structure, and connect equivalent expressions to graph behavior.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, representation analysis, strategy comparison, error analysis, or discourse prompt</strong></p><p>Purpose: Check whether students can justify classifications, explain transformation effects, analyze polynomial structure, and connect equivalent expressions to graph behavior.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Function Family Evidence Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students justify classifications using graph, table, and equation evidence.</li><li>Transformation Explanation Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students explain how equation changes affect graph behavior and key features.</li><li>Polynomial Structure Analysis Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students analyze equivalent polynomial forms and explain why operations preserve value.</li><li>Quadratic Feature Connection Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students connect quadratic expressions, graphs, and visible features using mathematical evidence.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students can reason about transformations and structure rather than only identify shapes or perform symbolic operations.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>A student says, “All curved graphs are quadratic.” Respond with two counterexamples and explain.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Explain how a table can help distinguish a linear function from a quadratic function. Use an example.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>A student says $g(x)=f(x-3)$ moves the graph left 3 because of the minus sign. Critique the reasoning and correct it.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Use the graph pair to explain what stays the same and what changes under a translation.</p><div class="graph-block graph-md"><img src="figures/unit4_sqrt_translation.png" alt="translated square root graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A student says <span class="tex2jax_ignore">$</span>2f(x)$ and $f(x)+2$ do the same thing because both use 2. Explain the misconception.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Explain why $(x+3)(x+2)$ and $x^2+5x+6$ are equivalent. Use the area model or algebra.</p><div class="graph-block graph-md"><img src="figures/unit4_area_model.png" alt="area model for polynomial structure"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A student expands $(x+4)^2$ as $x^2+16$. Identify the error and correct the expression.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Use the graph to connect the zeros, vertex, and equation structure of the quadratic.</p><div class="graph-block graph-md"><img src="figures/unit4_quadratic_features.png" alt="quadratic graph with features"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">Students can design, compare, critique, and revise models involving function families, transformations, and polynomial structures.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p><p>Purpose: Check whether students can transfer function-family, transformation, and polynomial-structure reasoning to unfamiliar situations and justify model choices.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Design a Function Family Challenge <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students create examples and non-examples of function families and defend classifications.</li><li>Transformation Design Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students design a transformed graph and equation that meet specific conditions.</li><li>Polynomial Model Design Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students create a geometric or contextual model represented by polynomial expressions.</li><li>Quadratic Structure Performance Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students connect polynomial structure to quadratic graph features and justify conclusions.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can design, connect, critique, and revise models using transformations and polynomial structure. These should remain short performance tasks rather than large projects.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Design a “Which Family Does Not Belong?” task using four equations or graphs. Identify the mismatch and justify it.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Design a translated quadratic function whose vertex is in Quadrant II. Provide an equation, a rough graph, and an explanation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Use the graph below to design a possible equation for Graph 2 and explain your reasoning.</p><div class="graph-block graph-md"><img src="figures/unit4_transformed_quad.png" alt="transformed quadratic graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Design a transformed function that includes a reflection, vertical scale change, and translation. Explain how each part appears in the graph.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Create a geometric or contextual model that could be represented by a polynomial expression. Define the expression and explain each term.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Create two equivalent polynomial expressions that look different. Explain how a student could prove they are equivalent.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Critique the statement: “Function families are just shapes to memorize.” Use at least two representations in your response.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Create a short student mistake involving horizontal and vertical translations. Then write feedback that would help correct the misconception.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>

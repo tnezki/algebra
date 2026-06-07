@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 7 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.equation-stack { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.equation-stack td { border: none; padding: 3px 18px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 7 Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, represent, and model exponential relationships in order to interpret growth and decay, compare function behavior, and make predictions using equations, graphs, tables, and contexts.</p></section>
+
+  <section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>Students can recognize exponential patterns, identify growth and decay, and name initial values, multipliers, growth factors, and decay factors.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>Students can write exponential equations, graph exponential relationships, calculate values, and make routine predictions.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>Students can justify exponential models, explain growth and decay behavior, compare function families, and critique predictions.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>Students can transfer exponential reasoning to unfamiliar situations, create models, compare model families, and justify decisions.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+    <tr><td class="rung-num">8</td><td>I can create and analyze exponential models from data or contexts, use them to make predictions, and justify whether the model and prediction are reasonable.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">7</td><td>I can compare exponential models with linear and quadratic models, critique model choices, and defend which function family best represents a situation.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">6</td><td>I can analyze exponential growth and decay across graphs, tables, equations, and contexts and explain how repeated multiplication controls the behavior.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">5</td><td>I can justify an exponential equation or graph by connecting initial value, multiplier, percent change, and contextual meaning.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">4</td><td>I can write exponential equations from tables, graphs, and situations and use them to make routine predictions.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">3</td><td>I can graph exponential relationships, calculate values, and compare basic growth and decay behavior.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">2</td><td>I can identify growth, decay, initial value, multiplier, and repeated multiplication from tables, graphs, equations, and contexts.</td><td>DOK 1</td><td>Essential</td></tr>
+<tr><td class="rung-num">1</td><td>I can use vocabulary and notation for exponential relationships, growth factors, decay factors, inputs, outputs, and function families correctly.</td><td>DOK 1</td><td>Essential</td></tr>
+  </tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 7 Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">Students can recognize exponential patterns, identify growth and decay, and name initial values, multipliers, growth factors, and decay factors.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3&ndash;5 minute warm-up, vocabulary check, table-pattern check, graph recognition, or exit ticket</strong></p><p>Purpose: Check whether students can recognize exponential patterns, identify growth and decay, use vocabulary, and name initial values, multipliers, growth factors, and decay factors.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Growth and Decay Recognition Check <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students classify patterns and situations as growth, decay, or not exponential.</li><li>Multiplier and Initial Value Check <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students identify initial values, multipliers, and percent changes from tables and equations.</li><li>Exponential Graph Recognition Check <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students recognize exponential graphs and distinguish growth from decay.</li><li>Function Family Sorting Check <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students sort linear, quadratic, and exponential representations.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need additional support seeing repeated multiplication and distinguishing exponential relationships from linear or quadratic relationships.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Determine whether the pattern appears linear, exponential, or neither.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>3</td><td>6</td><td>12</td><td>24</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Identify the initial value and multiplier for $y=5(2)^x$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Does $y=80(0.75)^x$ represent growth or decay? Explain briefly.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>For the table, identify the repeated multiplier.</p><table class="table-block"><tr><th>Step</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Value</th><td>64</td><td>32</td><td>16</td><td>8</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Which equation shows exponential growth?</p><ol class="lower-alpha"><li>$y=4x+7$</li><li>$y=x^2+4$</li><li>$y=7(1.2)^x$</li><li>$y=7(0.8)^x$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Use the graph. Is the relationship growth or decay?</p><div class="graph-block graph-md"><img src="figures/unit7_decay_graph.png" alt="exponential decay graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Complete the sentence: Exponential relationships change by repeated __________.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Which function family usually has a constant first difference in a table: linear, quadratic, or exponential?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">Students can write exponential equations, graph exponential relationships, calculate values, and make routine predictions.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Exit ticket, partner check, mini-quiz, graph/table task, or short written task</strong></p><p>Purpose: Check whether students can write exponential equations, graph exponential relationships, calculate values, and make routine predictions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Write an Exponential Equation Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students write an equation from a table, graph, or percent-change context.</li><li>Graph and Interpret an Exponential Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students graph an exponential function and interpret growth or decay.</li><li>Compare Function Families Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students compare linear, quadratic, and exponential tables or graphs.</li><li>Exponential Prediction Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students use an exponential model to make and interpret a prediction.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally use exponential procedures and representations, but the assessment reveals whether they connect the calculations to meaning.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Complete the table for $y=3(2)^x$.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Write an exponential equation for a relationship with initial value $12$ and multiplier $3$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>A population starts at $200$ and increases by $15\%$ each year. Write an exponential model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>A computer is worth $900$ and loses $20\%$ of its value each year. Write an exponential model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Use $y=40(1.5)^x$ to predict the value when $x=4$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Graph $y=2^x$ for $x=0,1,2,3,4,5$. Use the grid if helpful.</p><div class="graph-block graph-md"><img src="figures/unit7_blank_grid.png" alt="coordinate grid"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Use the graph to estimate the value of $y$ when $x=4$.</p><div class="graph-block graph-md"><img src="figures/unit7_growth_graph.png" alt="exponential growth graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Compare the two models at $x=5$: $A=10(2)^x$ and $B=60+20x$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">Students can justify exponential models, explain growth and decay behavior, compare function families, and critique predictions.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p><p>Purpose: Check whether students can justify exponential models, explain growth and decay behavior, compare function families, and critique unreasonable predictions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Repeated Multiplication Justification Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students explain why a relationship is exponential using tables, equations, or contexts.</li><li>Parameter Interpretation Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students justify the meaning of initial value and multiplier in context.</li><li>Linear vs Exponential Argument Task <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students compare representations and defend a model choice.</li><li>Prediction Reasonableness Critique <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students critique a prediction made from an exponential model.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students understand exponential functions as connected models rather than just formulas to evaluate.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>A student says:</p><blockquote>This table is exponential because the outputs increase.</blockquote><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>4</td><td>7</td><td>10</td><td>13</td></tr></table><p>Critique the statement and explain the correct reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Explain why $y=100(1.08)^x$ represents an $8\%$ increase, not a $108\%$ increase.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Compare $y=50(2)^x$ and $y=50(0.5)^x$. How are their initial values and long-term behaviors different?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Use the graph to explain why exponential growth can eventually pass linear growth even if the linear model is larger at first.</p><div class="graph-block graph-md"><img src="figures/unit7_family_compare.png" alt="linear and exponential comparison graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A student models a $25\%$ decrease using $y=300(0.25)^x$. Identify the misconception and write a better model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Use the table to justify whether an exponential model is reasonable.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>6</td><td>12</td><td>24</td><td>48</td><td>96</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Explain why making a prediction far beyond the data range can be risky, even when the exponential equation fits the data well.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Choose the better model type: linear or exponential. A bacteria culture doubles every hour. Justify your choice using mathematical language.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">Students can transfer exponential reasoning to unfamiliar situations, create models, compare model families, and justify decisions.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p><p>Purpose: Check whether students can transfer exponential reasoning to unfamiliar situations, create models, compare model families, and justify decisions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Design a Growth or Decay Model Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students design an exponential situation and equation, then interpret parameters.</li><li>Model Selection Challenge <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students choose between linear, quadratic, and exponential models and justify the choice.</li><li>Exponential Data Modeling Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students create a model from data and communicate a prediction with limitations.</li><li>Critique and Revise a Prediction Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students critique an exponential prediction and revise the conclusion.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can design, critique, compare, and make decisions with exponential models in unfamiliar situations.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Create an exponential growth situation with an initial value of $250$ and a growth rate between $5\%$ and $20\%$. Write the model and interpret each part.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Design a depreciation model for an item of your choice. Include an equation, a four-year table, and a statement about reasonableness.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Use the data to propose an exponential model. Explain your assumption and one limitation.</p><table class="table-block"><tr><th>Day</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Amount</th><td>50</td><td>75</td><td>113</td><td>169</td><td>253</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Critique and revise this model: A $30\%$ increase from $400$ is modeled by $y=400(30)^t$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Create two exponential models that start at the same value but lead to very different predictions after $10$ steps. Explain why.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Use the comparison graph to make a recommendation about which model is better for short-term versus long-term prediction.</p><div class="graph-block graph-md"><img src="figures/unit7_family_compare.png" alt="function family comparison graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Design a short investigation using bounce-height decay, cooling, or population growth. Include what data students would collect and how they would model it.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Design a multi-representation exponential modeling task involving a table, graph, equation, and context. Include the evidence students should use to justify their model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>

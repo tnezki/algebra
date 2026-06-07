@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 8 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: none; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.data-table { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.data-table th, .data-table td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 8 Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, compare, and model relationships using multiple function families in order to select appropriate models, interpret key features, and justify conclusions using equations, graphs, tables, and contexts.</p></section>
+
+  <section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>Students can recognize function families, vocabulary, notation, parent-function shapes, transformations, and basic key features.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>Students can compare relationships, identify model types and transformations, and connect graphs, tables, equations, and contexts.</span></div><div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>Students can justify model choices, analyze transformations and absolute value structure, critique models, and explain limitations using evidence.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+  <section class="tracking-card"><div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>Students can synthesize multiple function families to choose, design, critique, revise, and defend mathematical models for unfamiliar situations.</span></div><div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div></section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+    <tr><td class="rung-num">8</td><td>I can synthesize multiple function families and representations to choose, critique, and revise mathematical models for unfamiliar situations.</td><td>DOK 4</td><td>Above</td></tr>
+    <tr><td class="rung-num">7</td><td>I can design and defend a multi-representation model, communicate its limitations, and revise my reasoning based on mathematical evidence.</td><td>DOK 4</td><td>Above</td></tr>
+    <tr><td class="rung-num">6</td><td>I can justify why one function family or model is more appropriate than another using graphs, tables, equations, contexts, and residual patterns.</td><td>DOK 3</td><td>Essential</td></tr>
+    <tr><td class="rung-num">5</td><td>I can analyze key features, transformations, and absolute value structure to explain how different representations communicate function behavior.</td><td>DOK 3</td><td>Essential</td></tr>
+    <tr><td class="rung-num">4</td><td>I can use graphs, tables, equations, and contexts to compare linear, quadratic, exponential, and absolute value relationships.</td><td>DOK 2</td><td>Essential</td></tr>
+    <tr><td class="rung-num">3</td><td>I can identify transformations, key features, model types, and input-output behavior from multiple representations.</td><td>DOK 2</td><td>Essential</td></tr>
+    <tr><td class="rung-num">2</td><td>I can recognize vocabulary, notation, function-family shapes, key features, and basic model types.</td><td>DOK 1</td><td>Essential</td></tr>
+    <tr><td class="rung-num">1</td><td>I can identify graphs, tables, equations, contexts, and parent-function families as representations of mathematical relationships.</td><td>DOK 1</td><td>Essential</td></tr>
+  </tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 8 Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">Students can recognize function families, vocabulary, notation, parent-function shapes, transformations, and basic key features.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3&ndash;5 minute warm-up, vocabulary check, representation recognition, model-type sort, or exit ticket</strong></p><p>Purpose: Check whether students can recognize function families, transformations, absolute value features, model vocabulary, and basic representations.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Model Type Recognition Check <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students identify whether relationships appear linear, quadratic, exponential, absolute value, or inappropriate for a listed model.</li><li>Transformation Vocabulary Check <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students identify shifts, reflections, stretches, compressions, and parent functions.</li><li>Absolute Value Feature Check <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students identify vertex, symmetry, distance interpretation, and basic graph features.</li><li>Function Family Review Check <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students sort graphs, equations, and tables by function family.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need additional support with the language and visual features of function families before model selection and synthesis tasks.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Use the graph. Match each label to a function family: linear, quadratic, exponential, or absolute value.</p><div class="graph-block graph-lg"><img src="figures/unit8_family_sort_2x2.png" alt="four parent function family graphs"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Which equation represents an exponential function?</p><ol class="lower-alpha"><li>$y=3x+2$</li><li>$y=x^2-4$</li><li>$y=2(1.5)^x$</li><li>$y=|x-3|$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Identify the parent function for the equation $g(x)=|x|+4$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Which expression represents a vertical translation of $f(x)$ upward by 6 units?</p><ol class="lower-alpha"><li>$f(x)+6$</li><li>$f(x-6)$</li><li>$6f(x)$</li><li>$f(6x)$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>For $h(x)=2|x-1|+3$, identify the vertex.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Complete the sentence: A residual is the difference between the actual value and the __________ value.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Which table most clearly suggests exponential growth?</p><ol class="lower-alpha"><li>$2,5,8,11$</li><li>$1,4,9,16$</li><li>$3,6,12,24$</li><li>$7,7,7,7$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>State one key feature of an absolute value graph.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">Students can compare relationships, identify model types and transformations, and connect graphs, tables, equations, and contexts.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Mini-quiz, graph/table task, matching task, partner check, or short written task</strong></p><p>Purpose: Check whether students can compare function families, identify transformations, work with absolute value functions, and connect data to model types.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Choose a Model from Data Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students select a likely model type from a table or scatterplot and support the choice briefly.</li><li>Transformation Match Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students match transformed graphs, equations, and descriptions.</li><li>Absolute Value Graph and Context Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students graph or interpret an absolute value relationship in context.</li><li>Mixed Function Comparison Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students compare functions using graph, table, equation, and context features.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally organize representations and apply known tools, but the assessment reveals whether they connect those tools to model behavior.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Use the scatterplot. Which model type appears most appropriate: linear, quadratic, exponential, or absolute value? Explain briefly.</p><div class="graph-block graph-md"><img src="figures/unit8_quadratic_scatter.png" alt="scatterplot with quadratic pattern"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>The parent function $f(x)=x^2$ is transformed to $g(x)=(x-2)^2+1$. Describe the transformation.</p><div class="graph-block graph-md"><img src="figures/unit8_quadratic_transform.png" alt="parent and transformed quadratic graphs"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-150"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Use the graph of $y=2|x-1|+2$. Identify the vertex and describe whether the graph is narrower or wider than $y=|x|$.</p><div class="graph-block graph-md"><img src="figures/unit8_absolute_value.png" alt="absolute value graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-150"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Compare the growth shown in the table.</p><table class="data-table"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$A$</th><td>4</td><td>7</td><td>10</td><td>13</td><td>16</td></tr><tr><th>$B$</th><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td></tr></table><p>Which relationship has a constant rate of change? Which has a constant multiplier?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Write an equation for an absolute value function with vertex $(3,-2)$ and the same width as $y=|x|$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>A phone value decreases by about $18\%$ each year. Which model type is most appropriate, and why?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>For the function $q(x)=-(x+1)^2+5$, identify the reflection, horizontal shift, and vertical shift.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Use the graph. Which function eventually grows faster, A or B? Explain how the graph shows this.</p><div class="graph-block graph-md"><img src="figures/unit8_linear_exp_compare.png" alt="linear and exponential comparison graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">Students can justify model choices, analyze transformations and absolute value structure, critique models, and explain limitations using evidence.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p><p>Purpose: Check whether students can justify model choices, analyze transformations, interpret absolute value structure, and critique conclusions using evidence.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Model Justification Task <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students defend why a model type is appropriate or inappropriate using multiple representations.</li><li>Transformation Explanation Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students explain how a transformation changes features across function families.</li><li>Absolute Value Reasoning Task <span class="timing-label">Can Be Assessed After Section 3</span> &ndash; Students justify solutions or intervals using distance and two-sided reasoning.</li><li>Model Limitation Critique <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students critique a prediction or model conclusion and revise the reasoning.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students can move beyond recognizing function families into defending decisions, interpreting features, and critiquing models.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>A student claims the data below should be modeled with a linear function because it is increasing.</p><table class="data-table"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td></tr></table><p>Critique the claim and choose a better model type.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Use the residual plot. Explain why the residual pattern suggests the chosen model may not be appropriate.</p><div class="graph-block graph-md"><img src="figures/unit8_residual_pattern.png" alt="residual plot with curved pattern"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Compare $f(x)=|x-4|$ and $g(x)=(x-4)^2$. How are their graphs similar, and how are they different?</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>A student says:</p><blockquote>Every transformation works the same way for every function family.</blockquote><p>Critique the statement using at least two different parent functions.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A temperature is considered acceptable if it is within 3 degrees of 72. Explain how absolute value can represent this situation, then write an inequality.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Use the scatterplot. Justify why an exponential model is more appropriate than a linear model.</p><div class="graph-block graph-md"><img src="figures/unit8_exponential_scatter_square.png" alt="scatterplot with exponential pattern"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Explain how the parameter $a$ affects each function: $y=a(x-h)^2+k$ and $y=a|x-h|+k$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>A model predicts that a business will keep growing exponentially forever. Explain one reason this conclusion might be unreasonable in context.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">Students can synthesize multiple function families to choose, design, critique, revise, and defend mathematical models for unfamiliar situations.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or capstone synthesis task</strong></p><p>Purpose: Check whether students can synthesize Algebra 1 function knowledge to model unfamiliar situations, compare families, communicate limitations, and justify decisions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Model Selection Challenge <span class="timing-label">Can Be Assessed After Section 1</span> &ndash; Students choose an appropriate model for data and justify the choice using mathematical evidence.</li><li>Transform and Compare Task <span class="timing-label">Can Be Assessed After Section 2</span> &ndash; Students design transformed functions from different families and compare key features.</li><li>Modeling Investigation Snapshot <span class="timing-label">Can Be Assessed After Section 4</span> &ndash; Students analyze a small data set, select a model, make a prediction, and state limitations.</li><li>Function Synthesis Capstone Task <span class="timing-label">Can Be Assessed After Section 5</span> &ndash; Students analyze a mixed-representation situation and defend conclusions across function families.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can synthesize the course, model with evidence, critique assumptions, and communicate decisions. These should remain short performance tasks rather than large projects.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Create a data set that would be better modeled by a quadratic function than by a linear function. Include a table and explain the evidence.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Design two transformed functions from different families that share the same vertex or turning point. Write the equations and compare their graphs.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Create a tolerance situation that can be modeled with an absolute value inequality. Define the target value, tolerance, inequality, and solution meaning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Use the graph comparing a projectile model and a linear model. Explain when each model might be useful and when it might be misleading.</p><div class="graph-block graph-md"><img src="figures/unit8_projectile_compare.png" alt="projectile and linear comparison graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Design a model-selection challenge using a real-world context. Include enough information so another student could decide between linear, quadratic, exponential, and absolute value models.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Critique this conclusion:</p><blockquote>The model has a good prediction for one data point, so it must be the best model for the entire situation.</blockquote><p>Revise the conclusion using stronger mathematical reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Create two different functions that have the same value at $x=0$ but different long-term behavior. Explain how their tables and graphs would show the difference.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Choose a situation from science, business, sports, or technology. Select a function family to model it, justify your choice, and state at least one limitation of your model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>
