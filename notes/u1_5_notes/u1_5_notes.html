@@ -1,110 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_5_notes.html
-     Path: notes/u1_5_notes/u1_5_notes.html
-     Hosted at: tnezki.github.io/algebra/notes/u1_5_notes/u1_5_notes.html
-
-     Lesson notes for Unit 1, Section 5. Student-facing notes for class work and reference.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Notes — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.5 Notes - Equations as Models</title>
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    .page-break{page-break-before:always;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .definition{background:#fffacd;border-left:5px solid #ffd700;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    .teacher-note{font-size:.92em;color:#555;}
+    .model-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .model-card{border:1px solid #cfd6e6;border-radius:8px;padding:14px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .model-card h4{color:#00003d;margin-bottom:7px;font-size:1.02em;}
+    .equation-large{text-align:center;font-size:1.45em;font-weight:700;margin:10px 0;}
+    .checklist{background:#f8fbff;border:1px solid #cfd6e6;border-radius:8px;padding:12px;margin:12px 0;break-inside:avoid;page-break-inside:avoid;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid,.model-grid{display:block;}.rep-card,.model-card{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 5</div>
-        <h1 class="course-title">Student Notes</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 - Unit 1</div>
+      <div class="title-main">Section 1.5<br>Equations as Models</div>
+      <div class="title-sub">Using equations to represent a situation, not just to get an answer.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A model is useful when the equation, the solution, and the situation all make sense together.</p></div>
+      <p class="title-note">Today we will write equations from situations, solve them, and explain what the solution means in context.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will write, solve, and interpret equations that model situations.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can write equations to represent situations.</li>
+            <li>I can solve equations and interpret solutions.</li>
+            <li>I can determine whether a solution is reasonable.</li>
+            <li>I can explain what a solution means in context.</li>
+            <li>I can compare equation solving with other solution strategies.</li>
+          </ul>
         </div>
-        <div class="meta">
-            <strong>File:</strong> u1_5_notes.html<br>
-            <strong>Location:</strong> notes/u1_5_notes/u1_5_notes.html<br>
-            <strong>Purpose:</strong> Lesson notes for Unit 1, Section 5. Student-facing notes for class work and reference.
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What’s To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: What decision is the equation helping someone make? What does the crossing point on the graph seem to represent? What information would you need before choosing a plan? How could a mathematically correct answer still need to be interpreted carefully?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task</strong></p>
+          <p>A community center is comparing two membership plans. Both plans charge a starting fee and a monthly cost, but the plans are built differently.</p>
+          <div class="model-grid">
+            <div class="model-card"><h4>Plan A</h4><p>Starts with a lower fee but costs more each month.</p><p class="equation-large">$C=10m+30$</p></div>
+            <div class="model-card"><h4>Plan B</h4><p>Starts with a higher fee but costs less each month.</p><p class="equation-large">$C=5m+60$</p></div>
+          </div>
+          <div class="graph-block graph-md"><img src="figures/u1_5_future_two_plans_sq_v1.png" alt="Square graph comparing two membership plans with different starting values and rates"></div>
+          <ol>
+            <li>Use evidence to decide when the plans have the same cost.</li>
+            <li>Explain what that solution means in the situation.</li>
+            <li>Decide which plan is better for a short membership and which is better for a long membership.</li>
+            <li>Explain why solving an equation is only part of making a real-world decision.</li>
+          </ol>
         </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/notes/u1_5_notes/u1_5_notes.html
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
         </div>
-    </div>
+        <div class="reading-box">
+          <p>An equation can be more than a math sentence. It can be a <strong>model</strong>. A model uses math to represent something happening in a situation.</p>
+          <p>For example, if a ticket booth charges a starting fee and then adds the same amount for each ticket, an equation can show the total cost. The numbers in the equation have meaning. One number might show the starting cost. Another number might show how much the cost changes each time.</p>
+          <p>Solving an equation gives a value that makes the equation true. In a situation, that value should also answer a question. If the answer is $6$, we should know whether that means $6$ tickets, $6$ months, $6$ dollars, or something else.</p>
+          <p>A good model must be checked. The equation should match the story. The solution should be reasonable. The explanation should connect back to the original situation.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How is an equation model different from an equation with no context?</li>
+            <li>Why is it not enough to only say the numerical answer?</li>
+            <li>What should you check before deciding a solution is reasonable?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WRITING EQUATIONS FROM SITUATIONS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Equations Match the Story</h2>
+        <p>When we write an equation from a situation, we first decide what the variable represents. Then we connect the numbers in the story to the parts of the equation.</p>
+        <div class="definition"><p><strong>Equation model:</strong> An equation that represents a situation and helps answer a question about that situation.</p></div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 1</h3>
+          <p>A taxi charges a starting fee of \$4 plus \$2 for each mile. Write an equation for the total cost after $m$ miles. Then explain what each part of the equation means.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 1</h3>
+          <p>A school dance charges \$6 to enter plus \$3 for each snack ticket. Write an equation for the total cost after $t$ snack tickets. Explain what the variable and each number mean.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Which number in Example 1 is the starting amount?</li>
+            <li>Which number tells the change for each mile?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SOLVING AND INTERPRETING -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Solving Should Answer the Question</h2>
+        <p>Solving gives the value that makes the equation true. Interpreting explains what that value means in the situation.</p>
+        <div class="checklist">
+          <p><strong>Modeling check:</strong> What does the variable represent? What operation is happening? What question does the solution answer?</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 2</h3>
+          <p>A gym charges \$20 to join and \$15 each month. The total cost is \$80.</p>
+          <ol>
+            <li>Write an equation to represent the situation.</li>
+            <li>Solve the equation.</li>
+            <li>Explain what the solution means.</li>
+          </ol>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 2</h3>
+          <p>A club has \$18 already saved and earns \$6 for each car washed. The club wants \$60 total. Write and solve an equation, then explain the solution in context.</p>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: GRAPHS AND EQUATIONS AS MODELS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Graphs Can Help Us Read an Equation Model</h2>
+        <p>A graph shows the same model visually. The starting value appears where the graph begins at input $0$. The change shows how the graph rises or falls as the input increases.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 3</h3>
+          <p>The graph shows a ticket cost model.</p>
+          <div class="graph-block graph-md"><img src="figures/u1_5_ticket_cost_sq_v1.png" alt="Square graph of ticket cost model starting at 8 dollars and increasing by 6 dollars per ticket"></div>
+          <ol>
+            <li>Write an equation for the cost $C$ in terms of tickets $t$.</li>
+            <li>Use the graph or equation to find the cost of $5$ tickets.</li>
+            <li>Explain what the starting value means.</li>
+          </ol>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 3</h3>
+          <p>A table shows a total cost of \$7 at $0$ items, \$12 at $1$ item, \$17 at $2$ items, and \$22 at $3$ items. Write an equation model and explain what the $7$ and the $5$ mean.</p>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How does the graph show the same starting value as the equation?</li>
+            <li>Why can a graph help check whether an equation model is reasonable?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: REASONABLE SOLUTIONS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>A Correct Equation Can Still Need a Reality Check</h2>
+        <p>After solving, we should ask whether the answer makes sense. Some contexts need whole numbers. Some answers may be too large, too small, or have the wrong unit for the situation.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 4</h3>
+          <p>A class needs \$50 for supplies. Each student contributes \$8. A student writes and solves $8s=50$ and gets $s=6.25$.</p>
+          <ol>
+            <li>Explain what the solution $6.25$ means mathematically.</li>
+            <li>Explain why the solution may not make sense as a final answer in this context.</li>
+            <li>Decide what the class should do and justify your answer.</li>
+          </ol>
+          <div class="workspace-340"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 4</h3>
+          <p>A group needs \$70 for a trip. Each fundraiser ticket earns \$12. Solve $12t=70$. Then explain why the exact solution may need to be adjusted in the real situation.</p>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>When might a decimal answer be reasonable?</li>
+            <li>When might a decimal answer need to be rounded or rejected?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <ul>
+            <li>An equation model represents a situation with symbols and numbers.</li>
+            <li>The variable should have a clear meaning.</li>
+            <li>Numbers in the equation should connect to parts of the story.</li>
+            <li>Solving an equation gives a value that makes the equation true.</li>
+            <li>Interpreting the solution explains what the value means in context.</li>
+            <li>A reasonable answer should fit the situation and use the correct unit.</li>
+            <li>Tables and graphs can help check whether an equation model makes sense.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Writing an expression instead of an equation:</strong> An equation has an equal sign and often answers a specific question.</li>
+            <li><strong>Not defining the variable:</strong> A solution is hard to interpret if the variable was never explained.</li>
+            <li><strong>Swapping the starting value and rate:</strong> The starting amount and repeated change have different meanings.</li>
+            <li><strong>Stopping after solving:</strong> A model needs an interpretation, not just a number.</li>
+            <li><strong>Ignoring units:</strong> The answer might represent miles, tickets, months, people, dollars, or another quantity.</li>
+            <li><strong>Forgetting the reality check:</strong> Some mathematical answers need to be adjusted because of the context.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="strategy-box">
+          <p><strong>Optional Reflection:</strong> Look back at the future task. Do not solve it yet.</p>
+          <ol>
+            <li>Highlight one part that makes more sense now than it did at the beginning.</li>
+            <li>Circle one part that still feels unfamiliar.</li>
+            <li>Write one sentence about what an equation solution would mean in that situation.</li>
+          </ol>
+        </div>
+        <div class="workspace-160"></div>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
