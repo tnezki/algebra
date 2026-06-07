@@ -1,110 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ============================================================
-     ALGEBRA 1 — PLACEHOLDER
-     File: u1_1_notes.html
-     Path: notes/u1_1_notes/u1_1_notes.html
-     Hosted at: tnezki.github.io/algebra/notes/u1_1_notes/u1_1_notes.html
-
-     Lesson notes for Unit 1, Section 1. Student-facing notes for class work and reference.
-     Replace this file with real content when ready.
-     ============================================================ -->
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Notes — Unit 1 — Algebra 1</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        :root {
-            --navy:       #1F3864;
-            --gold:       #C9A84C;
-            --gold-light: #F5EDD5;
-            --gold-mid:   #e8d49a;
-            --text:       #1a1a1a;
-            --text-muted: #555555;
-            --bg-subtle:  #f7f7f5;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: var(--bg-subtle); color: var(--text);
-            min-height: 100vh; display: flex;
-            align-items: center; justify-content: center;
-        }
-        .card {
-            max-width: 560px; width: calc(100% - 3rem);
-            background: white; border-radius: 8px;
-            border-top: 5px solid var(--navy);
-            box-shadow: 0 2px 16px rgba(31,56,100,.10);
-            padding: 2.5rem 2.5rem 2rem; text-align: center;
-        }
-        .rule { width: 48px; height: 3px; background: var(--gold);
-                border-radius: 2px; margin: 0 auto 1.25rem; }
-        .course-label {
-            font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase;
-            letter-spacing: 1px; color: var(--gold); margin-bottom: .5rem;
-        }
-        .course-title {
-            font-size: 24px; font-weight: normal;
-            color: var(--navy); letter-spacing: -.3px; margin-bottom: .25rem;
-        }
-        .school-name {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); margin-bottom: 2rem;
-        }
-        .divider { border: none; border-top: 1px solid #e5e5e5; margin: 0 0 1.5rem; }
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--gold-light); border: 1px solid var(--gold-mid);
-            color: #7a6020; font-size: 11px; font-family: Arial, sans-serif;
-            font-weight: bold; text-transform: uppercase; letter-spacing: .8px;
-            padding: 5px 14px; border-radius: 20px; margin-bottom: 1.25rem;
-        }
-        .meta {
-            font-size: 12px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;
-            background: #f9f9f7; border-radius: 6px; padding: 1rem;
-            text-align: left; border: 1px solid #ebebeb;
-        }
-        .meta strong { color: var(--navy); }
-        .placeholder-msg {
-            font-size: 13px; font-family: Arial, sans-serif;
-            color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;
-        }
-        .footer-note {
-            font-size: 11px; font-family: Arial, sans-serif;
-            color: #aaaaaa; border-top: 1px solid #eeeeee; padding-top: 1rem;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.1 Notes - Multiple Representations of Relationships</title>
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    .page-break{page-break-before:always;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .definition{background:#fffacd;border-left:5px solid #ffd700;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    .teacher-note{font-size:.92em;color:#555;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid{display:block;}.rep-card{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="rule"></div>
-        <div class="course-label">Algebra 1 &nbsp;&middot;&nbsp; Unit 1 &nbsp;&middot;&nbsp; Section 1</div>
-        <h1 class="course-title">Student Notes</h1>
-        <div class="school-name">Mr. Nezki &nbsp;&middot;&nbsp; Mariners Math &nbsp;&middot;&nbsp; Algebra 1</div>
-        <hr class="divider">
-        <div class="badge">
-            <i class="ti ti-clock" aria-hidden="true"></i>
-            Coming Soon
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 - Unit 1</div>
+      <div class="title-main">Section 1.1<br>Multiple Representations of Relationships</div>
+      <div class="title-sub">Seeing the same relationship in more than one way.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A relationship can look different in a table, graph, equation, or story, but the pattern underneath can still be the same.</p></div>
+      <p class="title-note">Today we will practice connecting representations, explaining what changes, and using evidence to decide whether two representations match.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will connect tables, graphs, equations, and contexts that represent the same relationship.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can identify when different representations describe the same relationship.</li>
+            <li>I can match tables, graphs, equations, and situations.</li>
+            <li>I can describe how two quantities are related.</li>
+            <li>I can determine what quantities are changing.</li>
+            <li>I can justify how representations are connected.</li>
+          </ul>
         </div>
-        <div class="meta">
-            <strong>File:</strong> u1_1_notes.html<br>
-            <strong>Location:</strong> notes/u1_1_notes/u1_1_notes.html<br>
-            <strong>Purpose:</strong> Lesson notes for Unit 1, Section 1. Student-facing notes for class work and reference.
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What’s To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: What quantities are changing? How can the table, graph, equation, and context show the same pattern? What evidence would prove that two representations match? What information would make a representation not match?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task</strong></p>
+          <p>A school walkathon raises a starting donation plus the same amount for each mile walked. Three students claim they have representations for the same relationship.</p>
+          <div class="representation-grid">
+            <div class="rep-card"><h4>Context</h4><p>The team already has \$10 in donations. They earn \$5 more for each mile walked.</p></div>
+            <div class="rep-card"><h4>Equation</h4><p>$d=5m+10$, where $m$ is miles and $d$ is dollars.</p></div>
+            <div class="rep-card"><h4>Table</h4><table class="table-block"><tr><th>Miles</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Dollars</th><td>10</td><td>15</td><td>20</td><td>25</td></tr></table></div>
+            <div class="rep-card"><h4>Graph</h4><div class="graph-block graph-sm"><img src="figures/u1_1_future_graph.png" alt="Graph of donations starting at 10 dollars and increasing by 5 dollars per mile"></div></div>
+          </div>
+          <ol>
+            <li>Use at least three pieces of evidence to justify whether the representations match.</li>
+            <li>Explain what the starting donation means in each representation.</li>
+            <li>Explain what the amount per mile means in each representation.</li>
+            <li>A classmate says the table must be wrong because the miles do not start at $1$. Write a response that corrects the misunderstanding.</li>
+          </ol>
         </div>
-        <p class="placeholder-msg">
-            This page is under construction.<br>
-            Replace this file with the real content when ready.
-        </p>
-        <div class="footer-note">
-            tnezki.github.io/algebra/notes/u1_1_notes/u1_1_notes.html
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by marking important ideas, highlighting or circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
         </div>
-    </div>
+        <div class="reading-box">
+          <p>A relationship tells how two things are connected. In math, the two things are often quantities that can change. For example, the number of rides on a bus and the total cost can be connected.</p>
+          <p>We can show the same relationship in different ways. A table shows organized input and output values. A graph shows the pattern as points or a line. An equation uses symbols to describe the rule. A context tells the story in words.</p>
+          <p>The important question is not, “Do these look the same?” The important question is, “Do these show the same relationship?” To answer that, we look for evidence. We check what starts the pattern, what changes each time, and what the numbers mean.</p>
+          <p>When you connect representations, you are building a stronger picture of the relationship. One representation may be easier to read than another, but they should all agree about how the two quantities are related.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>What is a relationship in math?</li>
+            <li>How can a table, graph, equation, and context show the same idea?</li>
+            <li>What evidence could help you decide whether two representations match?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: ONE RELATIONSHIP FOUR WAYS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>One Relationship, Four Ways</h2>
+        <p>Each representation can tell part of the story. When they match, the numbers and the meaning should agree.</p>
+        <div class="key-point">
+          <p><strong>Input:</strong> the starting value you choose or measure.</p>
+          <p><strong>Output:</strong> the value that depends on the input.</p>
+          <p><strong>Relationship:</strong> the way the input and output are connected.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 1</h3>
+          <p>A bus pass costs \$4 to buy. Each ride costs \$3. The total cost is represented by $c=3r+4$.</p>
+          <div class="representation-grid">
+            <div class="rep-card"><h4>Table</h4><table class="table-block"><tr><th>Rides, $r$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Cost, $c$</th><td>4</td><td>7</td><td>10</td><td>13</td></tr></table></div>
+            <div class="rep-card"><h4>Graph</h4><div class="graph-block graph-sm"><img src="figures/u1_1_bus_graph.png" alt="Bus cost graph showing a start value of 4 and increase of 3 per ride"></div></div>
+          </div>
+          <p>Explain how the context, equation, table, and graph each show the starting cost and the cost per ride.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 1</h3>
+          <p>A gym charges a one-time membership fee of \$15 and then \$2 for each visit.</p>
+          <p>Write an equation for the total cost, make a quick table for $0$, $1$, $2$, and $3$ visits, and explain where the starting fee and cost per visit would appear on a graph.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Where do you see the 4-dollar starting cost in the table, graph, equation, and context?</li>
+            <li>Where do you see the 3-dollar-per-ride change in the table, graph, equation, and context?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATCHING BY WHAT CHANGES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Matching by What Changes</h2>
+        <p>Two representations can match even if they look very different. Look for the same input-output pairs, the same starting value, and the same change.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 2</h3>
+          <p>Which graph matches the table? Use evidence from the table and the graphs.</p>
+          <table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td></tr></table>
+          <div class="two-column">
+            <div class="graph-block graph-sm"><img src="figures/u1_1_match_graph_a.png" alt="Graph A with points increasing by 2 starting at 1"></div>
+            <div class="graph-block graph-sm"><img src="figures/u1_1_match_graph_b.png" alt="Graph B decreasing by 1 starting at 8"></div>
+          </div>
+          <p>Write a sentence that uses at least two table values as evidence.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 2</h3>
+          <p>A different table starts with $y=8$ when $x=0$ and then decreases by $1$ each time $x$ increases by $1$.</p>
+          <p>Which graph above would match that table? Explain using at least two pieces of evidence.</p>
+          <div class="workspace-180"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>What evidence should you check first when matching a table to a graph?</li>
+            <li>Why is one point usually not enough evidence to prove a match?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: READING EACH REPRESENTATION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Reading Each Representation for Meaning</h2>
+        <p>A representation is more useful when we can explain what the numbers mean. We should connect numbers to the situation, not just copy them.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 3</h3>
+          <p>A water tank already has $12$ gallons in it. Water is added at a steady rate of $4$ gallons each minute.</p>
+          <ol>
+            <li>Choose the equation that matches: $w=12m+4$ or $w=4m+12$.</li>
+            <li>Explain what the input represents.</li>
+            <li>Explain what the output represents.</li>
+            <li>Describe how the table should change from one row to the next.</li>
+          </ol>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 3</h3>
+          <p>A phone battery already has $30\%$ charge. It gains $5\%$ each minute while charging.</p>
+          <ol>
+            <li>Write an equation that matches the situation.</li>
+            <li>Explain what the input and output represent.</li>
+            <li>Describe how the table should change from one row to the next.</li>
+          </ol>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Why is $w=12m+4$ a tempting mistake?</li>
+            <li>How can the words “already has” help you choose the equation?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WHEN REPRESENTATIONS DO NOT MATCH -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>When Representations Do Not Match</h2>
+        <p>Sometimes one representation has an error. To find it, compare the meaning, not just the numbers.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 4</h3>
+          <p>A school club sells shirts. The club pays a \$20 setup fee and then pays \$6 for each shirt.</p>
+          <p>A student writes the equation $c=20s+6$.</p>
+          <ol>
+            <li>Explain the student’s mistake.</li>
+            <li>Write the correct equation.</li>
+            <li>Describe what a matching table would show when $s=0$, $s=1$, and $s=2$.</li>
+            <li>Explain how a graph would show the setup fee.</li>
+          </ol>
+          <div class="workspace-340"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 4</h3>
+          <p>A fundraiser has a \$12 starting donation and earns \$4 for each bracelet sold. A student writes $d=12b+4$.</p>
+          <ol>
+            <li>Explain the mistake.</li>
+            <li>Write the correct equation.</li>
+            <li>Describe one table value and one graph feature that would prove your equation matches the situation.</li>
+          </ol>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How can an error in an equation create an error in the table and graph?</li>
+            <li>What evidence would help you catch the error before graphing?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <ul>
+            <li>A relationship connects two quantities.</li>
+            <li>Tables, graphs, equations, and contexts can show the same relationship.</li>
+            <li>A table shows input-output pairs.</li>
+            <li>A graph shows the pattern visually.</li>
+            <li>An equation gives a rule using symbols.</li>
+            <li>A context explains what the quantities mean in words.</li>
+            <li>Good justification uses evidence from more than one representation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Matching by looks only:</strong> Two representations match because the relationship is the same, not because the pages look similar.</li>
+            <li><strong>Mixing up input and output:</strong> Always ask which quantity is chosen or measured first and which quantity depends on it.</li>
+            <li><strong>Ignoring the start value:</strong> The value when the input is $0$ can be important evidence.</li>
+            <li><strong>Ignoring the change:</strong> Check how the output changes when the input increases.</li>
+            <li><strong>Swapping numbers in an equation:</strong> In $y=mx+b$, the change rate and starting value have different meanings.</li>
+            <li><strong>Not explaining evidence:</strong> A correct match is stronger when you can say why it matches.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="strategy-box">
+          <p><strong>Optional Reflection:</strong> Look back at the future task. Do not solve it yet.</p>
+          <ol>
+            <li>Highlight one part that makes more sense now than it did at the beginning.</li>
+            <li>Circle one part that still feels unfamiliar.</li>
+            <li>Write one sentence about what representation you would look at first.</li>
+          </ol>
+        </div>
+        <div class="workspace-160"></div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
