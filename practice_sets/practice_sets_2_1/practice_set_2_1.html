@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Practice Set 2.1.1</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+
+@page { size: letter; margin: 0.45in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.45; color:#222; background:#fff; font-size:11pt; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.container { max-width:930px; margin:0 auto; }
+h1 { color:#00003d; font-size:25pt; line-height:1.1; margin-bottom:6px; }
+h2 { color:#00003d; font-size:16pt; margin:16px 0 8px 0; border-left:6px solid #00003d; padding-left:10px; }
+.unit-intro { border:2px solid #00003d; padding:10px 12px; margin:10px 0 14px 0; background:#f8fbff; }
+.section-label { background:#eaf1fb; border:1px solid #a9b9cf; color:#22354d; font-weight:800; font-size:11pt; padding:8px 12px; margin:16px 0 10px 0; border-radius:4px; break-after:avoid; }
+.problem { border:1px solid #777; padding:12px 14px; margin:10px 0 13px 0; break-inside:avoid; page-break-inside:avoid; background:#fff; }
+.problem-number { font-weight:900; color:#00003d; font-size:12.5pt; margin-bottom:7px; }
+.problem-meta { color:#555; font-weight:700; font-size:9.5pt; margin-left:6px; }
+p { margin:6px 0; }
+ol, ul { margin:6px 0 8px 28px; }
+li { margin-bottom:5px; }
+.lower-alpha { list-style-type: lower-alpha; }
+table.values, .table-block, .rep-table { width:auto; margin:10px auto 12px auto; border-collapse:collapse; }
+table.values th, table.values td, .table-block th, .table-block td, .rep-table th, .rep-table td { border:1px solid #777; padding:7px 15px; text-align:center; vertical-align:middle; min-width:42px; }
+table.values th, .table-block th, .rep-table th { background:#eaf1fb; color:#00003d; font-weight:800; }
+.graph-block, .figure-block { margin:10px 0 8px 0; text-align:center; break-inside:avoid; page-break-inside:avoid; }
+.graph-block img, .figure-block img { max-width:100%; height:auto; border:1px solid #ccc; background:#fff; }
+.graph-sm img { max-width:2.3in; } .graph-md img { max-width:3.05in; } .graph-lg img { max-width:3.85in; } .graph-xl img { max-width:4.7in; }
+.workspace { height:380px; border:1px dashed #aaa; margin-top:10px; }
+.workspace-sm { height:250px; border:1px dashed #aaa; margin-top:10px; }
+.page-break { page-break-before:always; break-before:page; }
+blockquote { border-left:5px solid #777; margin:8px 0 10px 10px; padding:6px 10px; background:#f7f7f7; font-style:italic; }
+.match-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:8px 0; }
+.match-card { border:1px solid #aaa; padding:8px; min-height:56px; background:#fff; }
+.card-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:10px; margin:10px 0; }
+.card { border:1px solid #aaa; padding:9px; background:#fffdf7; min-height:72px; }
+.mini-note { font-size:9.5pt; color:#555; font-style:italic; }
+@media print { body { font-size:10.5pt; } h1 { font-size:23pt; } .problem { padding:10px 12px; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Practice Set 2.1.1</h1>
+<div class="unit-intro">Entry / Early Unit Spiral: slope and rate of change, Unit 1.1 representation connections, and Unit 0B.1 coordinate-plane readiness.</div>
+<div class="section-label">Unit 2.1 — Rate of Change and Slope</div>
+<section class="problem" id="p01">
+<div class="problem-number">1.<span class="problem-meta">Unit 2.1 | DoK 1 | Rate from a graph</span></div>
+<p>Use Line A. Choose two points on the graph and find the slope.</p><div class="graph-block graph-md"><img alt="Line A" src="figures/u2_1_line_A.png"/></div>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p02">
+<div class="problem-number">2.<span class="problem-meta">Unit 2.1 | DoK 1 | Rate from a table</span></div>
+<p>Find the rate of change from the table.</p><table class="values"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>$y$</th><td>6</td><td>9</td><td>12</td><td>15</td></tr></table>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p03">
+<div class="problem-number">3.<span class="problem-meta">Unit 2.1 | DoK 2 | Ordered pairs</span></div>
+<p>Find the slope between $(2,7)$ and $(6,19)$. Write one sentence explaining what the slope means as a change in $y$ for each 1-unit change in $x$.</p>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p04">
+<div class="problem-number">4.<span class="problem-meta">Unit 2.1 | DoK 2 | Context rate</span></div>
+<p>A cyclist travels 36 miles in 3 hours at a constant speed. Find the rate of change and explain the meaning of the units.</p>
+<div class="workspace"></div>
+</section>
+<div class="section-label">Unit 1.1 Spiral — Multiple Representations of Relationships</div>
+<section class="problem" id="p05">
+<div class="problem-number">5.<span class="problem-meta">Unit 1.1 | DoK 1 | Representation type</span></div>
+<p>Identify the representation type: graph, table, equation, or context.</p><p>$y=4x+7$</p>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p06">
+<div class="problem-number">6.<span class="problem-meta">Unit 1.1 | DoK 1 | Table reading</span></div>
+<p>In the table, what output matches the input $x=3$?</p><table class="values"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>$y$</th><td>2</td><td>6</td><td>10</td><td>14</td></tr></table>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p07">
+<div class="problem-number">7.<span class="problem-meta">Unit 1.1 | DoK 1 | Axis meaning</span></div>
+<p>Use the graph. What quantity is on the horizontal axis? What quantity is on the vertical axis?</p><div class="graph-block graph-md"><img alt="Ticket cost relationship" src="figures/u1_1_ticket_context.png"/></div>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p08">
+<div class="problem-number">8.<span class="problem-meta">Unit 1.1 | DoK 1 | Ordered pair in context</span></div>
+<p>A point on an earnings graph is $(4,44)$, where $x$ is hours and $y$ is dollars. Explain what the point means.</p>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p09">
+<div class="problem-number">9.<span class="problem-meta">Unit 1.1 | DoK 2 | Match table and equation</span></div>
+<p>Determine whether the table matches the equation $y=3x+2$. Explain how you know.</p><table class="values"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>$y$</th><td>2</td><td>5</td><td>8</td><td>11</td></tr></table>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p10">
+<div class="problem-number">10.<span class="problem-meta">Unit 1.1 | DoK 2 | Context to equation</span></div>
+<p>A school dance costs $\$8$ per ticket plus a $\$20$ decoration fee. Write an equation for total cost $C$ in terms of tickets $t$.</p>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p11">
+<div class="problem-number">11.<span class="problem-meta">Unit 1.1 | DoK 3 | Representation justification</span></div>
+<p>A student says the graph below could match the table shown. Decide whether the student is correct and justify your reasoning.</p><div class="graph-block graph-md"><img alt="Relationship R" src="figures/u1_1_compare_reps.png"/></div><table class="values"><tr><th>$x$</th><th>0</th><th>2</th><th>4</th></tr><tr><th>$y$</th><td>2</td><td>8</td><td>14</td></tr></table>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p12">
+<div class="problem-number">12.<span class="problem-meta">Unit 1.1 | DoK 4 | Build a representation web</span></div>
+<p>Create a table, equation, and short context that all represent the same relationship. Then explain how someone could verify that all three match.</p>
+<div class="workspace"></div>
+</section>
+<div class="section-label">Unit 0B.1 Spiral — Coordinate Plane and Graph Interpretation</div>
+<section class="problem" id="p13">
+<div class="problem-number">13.<span class="problem-meta">Unit 0B.1 | DoK 1 | Coordinates</span></div>
+<p>Use the coordinate plane. State the coordinates of points A and C.</p><div class="graph-block graph-md"><img alt="Coordinate points" src="figures/u0b_1_points_A.png"/></div>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p14">
+<div class="problem-number">14.<span class="problem-meta">Unit 0B.1 | DoK 1 | Axis point</span></div>
+<p>Use the coordinate plane. Which labeled point lies on the $x$-axis? Which labeled point lies on the $y$-axis?</p><div class="graph-block graph-md"><img alt="Coordinate points on axes" src="figures/u0b_1_points_B.png"/></div>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p15">
+<div class="problem-number">15.<span class="problem-meta">Unit 0B.1 | DoK 2 | Plotting and interpreting</span></div>
+<p>Plot the points $(1,2)$, $(2,4)$, $(3,6)$, and $(4,8)$ on a coordinate plane. Describe the pattern you see.</p>
+<div class="workspace"></div>
+</section>
+<section class="problem" id="p16">
+<div class="problem-number">16.<span class="problem-meta">Unit 0B.1 | DoK 2 | Graph story</span></div>
+<p>A point $(5,12)$ appears on a graph where $x$ is time in minutes and $y$ is distance in blocks. Interpret the point in context.</p>
+<div class="workspace"></div>
+</section>
+</div>
+</body>
+</html>
