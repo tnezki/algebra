@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.3 Notes – Function Families</title>
+  <!--
+  =====================================================================
+  SECTION 1.3 NOTES — FUNCTION FAMILIES
+  Build template notes for Algebra 1, Unit 1.
+  =====================================================================
+  STRUCTURE:
+    1. Title Page
+    2. Learning Target (verbatim from assessment plan)
+    3. What's To Come (DOK 4 future task — conflicting family evidence)
+    4. Intro Reading + Stop and Discuss (3 questions)
+    5. Math Notes: Function Families as Behavior Patterns (before Ex 1)
+    6. Example 1 / YTI 1 — analyze and compare table behavior
+    7. Math Notes: Evidence Before Labels (before Ex 2)
+    8. Example 2 / YTI 2 — evaluate evidence and defend a classification
+    9. Stop and Discuss
+   10. Math Notes: Shape Can Mislead (before Ex 3)
+   11. Example 3 / YTI 3 — critique and revise family reasoning
+   12. Math Notes: Families in Context (before Ex 4)
+   13. Example 4 / YTI 4 — argue and create evidence-based classifications
+   14. Summary
+   15. Common Mistakes
+   16. Optional Future Task Reflection
+
+  KEY DESIGN DECISIONS:
+  - Future task is DOK 4: the table, graph, context, and student claims
+    point toward different possible families. Students cannot resolve it
+    today because they need more data and stronger tools for comparing rates.
+  - Function-family work avoids graph-shape-only sorting. Every task asks
+    for evidence from tables, equations, contexts, or competing claims.
+  - Example/YTI pairs are deliberately non-overlapping:
+      Ex1 analyze a single table; YTI1 compare two tables.
+      Ex2 evaluate which evidence is strongest; YTI2 defend from equation/table.
+      Ex3 critique a weak claim; YTI3 revise a claim using graph evidence.
+      Ex4 argue across representations; YTI4 create examples and non-examples.
+  - Graphs never label the family answer inside the task.
+  =====================================================================
+  -->
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+
+    /* TITLE PAGE */
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+
+    /* STANDARD CONTENT BOXES */
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .claim-card{border:1px solid #aaa;border-left:5px solid #555;border-radius:6px;padding:12px;margin:10px 0;background:#fafafa;break-inside:avoid;page-break-inside:avoid;}
+
+    /* ─────────────────────────────────────────
+       MATH NOTES BOX
+       Navy header bar + descriptive title.
+       Open sketch/notes space below content.
+       No border/shading on sketch area.
+    ───────────────────────────────────────── */
+    .math-notes{border:2px solid #00003d;border-radius:8px;margin:16px 0 20px 0;break-inside:avoid;page-break-inside:avoid;overflow:hidden;}
+    .math-notes-header{background:#00003d;color:#fff;padding:6px 14px;display:flex;align-items:baseline;gap:10px;}
+    .math-notes-header .mn-label{font-size:0.82em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:0.75;white-space:nowrap;}
+    .math-notes-header .mn-title{font-size:1.08em;font-weight:800;}
+    .math-notes-body{padding:16px 18px 10px 18px;}
+    .math-notes-body p{margin-bottom:8px;}
+    .math-notes-body ul,.math-notes-body ol{margin-left:22px;margin-bottom:8px;}
+    .math-notes-body li{margin-bottom:6px;}
+
+    /* Sketch workspace — open space, no box or shading */
+    .mn-sketch{margin-top:14px;display:flex;align-items:flex-start;gap:10px;}
+    .mn-sketch-label{font-size:0.82em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;padding-top:2px;}
+    .mn-sketch-area{flex:1;min-height:210px;}
+    /* Two-column sketch cells */
+    .mn-sketch-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+    .mn-sketch-cell{padding:4px 0 0 0;min-height:170px;}
+    .mn-sketch-cell .mn-cell-label{font-size:0.80em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;display:block;border-bottom:1px solid #ccd;padding-bottom:3px;}
+
+    /* EXAMPLE / YOU TRY IT */
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}.graph-xl img{max-width:500px;}
+
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid,.mn-sketch-cols{display:block;}.rep-card,.mn-sketch-cell{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 · Unit 1</div>
+      <div class="title-main">Section 1.3<br>Function<br>Families</div>
+      <div class="title-sub">Function families are groups of relationships that behave in similar ways. The skill is using evidence, not just appearance, to recognize the behavior.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A function family is not just a graph shape to memorize. It is a pattern of change that can appear in tables, equations, graphs, and contexts.</p></div>
+      <p class="title-note">Today we will practice identifying common function families, comparing how they behave, and defending classifications with evidence from more than one representation.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will recognize common function families from graphs, tables, equations, and contexts.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can identify common function families from graphs.</li>
+            <li>I can identify common function families from equations.</li>
+            <li>I can describe how function families behave.</li>
+            <li>I can compare different function families.</li>
+            <li>I can distinguish classification from full modeling.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <!--
+    FUTURE TASK DESIGN NOTES (v2):
+    DOK 4 — Conflicting Family Evidence.
+    Only 3 data points shown (weeks 0-2: 4, 7, 12). First differences are
+    3 and 5 — increasing, but only two differences exist. That is not enough
+    to confirm the second-difference pattern needed to classify as quadratic,
+    nor enough to confirm a ratio pattern for exponential. Students cannot
+    resolve today because the data is genuinely insufficient.
+    
+    DOK 4 justification: A strong student CAN compute diffs 3 and 5 and notice
+    they increase — but cannot confirm the second-difference pattern without
+    week 3 and 4 data. They cannot confirm exponential ratio without more
+    points. The task explicitly requires naming what additional values would
+    support EACH student's position, not just one.
+
+    Conflict/Ambiguity:
+      - Only 2 first-differences available — not enough to classify pattern.
+      - Both students agree more data is needed (neither can prove their case).
+      - Graph shows 3 points — ambiguous curve vs linear acceleration.
+      - Q3 requires writing what pattern would support each side.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What's To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: Which representation would you trust first? Which representation might be misleading? What extra evidence would help you classify the relationship?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task — Conflicting Family Evidence</strong></p>
+          <p>A new school app tracks total downloads after students begin sharing it. The data below shows only the first three weeks. Different students disagree about the function family.</p>
+          <div class="representation-grid">
+            <div class="rep-card">
+              <h4>Graph</h4>
+              <div class="graph-block graph-md"><img alt="Partial app download graph showing only three weeks of data" src="figures/u1_3_future_appdata_sq_v2.png"></div>
+            </div>
+            <div class="rep-card">
+              <h4>Table (weeks 0–2 only)</h4>
+              <table class="table-block" style="margin:10px auto;">
+                <tr><th>Week ($w$)</th><td>0</td><td>1</td><td>2</td></tr>
+                <tr><th>Downloads ($D$)</th><td>4</td><td>7</td><td>12</td></tr>
+              </table>
+            </div>
+            <div class="rep-card"><h4>Student A</h4><p>"It is probably linear because the points mostly move upward in a steady direction."</p></div>
+            <div class="rep-card"><h4>Student B</h4><p>"It might not be linear because the number of new downloads seems to be changing — but I need more data to be sure."</p></div>
+          </div>
+          <ol>
+            <li>Circle one piece of evidence from the table or graph that seems useful for classification.</li>
+            <li>Underline one piece of evidence that might be misleading with so little data.</li>
+            <li>Both students agree more data is needed. Write two specific input-output pairs you would want — and explain what pattern in those values would support each student's position.</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+        </div>
+        <div class="reading-box">
+          <p>A function family is a group of functions that share similar behavior. Members of the same family may have different numbers in their equations, but they change in a similar way.</p>
+          <p>For example, a linear relationship changes by adding the same amount again and again. A quadratic relationship often grows by changing amounts that form a pattern. An absolute value relationship has a turning point and two straight branches. An exponential relationship changes by multiplying by a common factor.</p>
+          <p>Graphs can help us notice families, but graph shape alone is not enough. A rough sketch, a small window, or a few points can be misleading. Tables, equations, and contexts give additional evidence about how the output changes as the input changes.</p>
+          <p>In this section, classification means making a reasonable family decision from evidence. Classification is not the same as full modeling. A classification tells us the likely type of behavior; a full model gives a specific rule that matches the situation.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>According to the reading, why is graph shape alone not enough evidence?</li>
+            <li>What is the difference between classifying a function family and building a full model?</li>
+            <li>Which representation do you think would be most useful for checking how outputs change: a graph, table, equation, or context? Defend your choice.</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 1 -->
+    <!--
+    PURPOSE: Establish family behavior before students analyze tables.
+    This Math Notes block names common families but emphasizes behavior
+    patterns, not shape memorization. The parent sketches are reference
+    notes only; the examples require evidence from tables and claims.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Families Are Patterns of Behavior</h2>
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Common Function Families</span></div>
+          <div class="math-notes-body">
+            <p>Each function family has a typical way that outputs change.</p>
+            <ul>
+              <li><strong>Linear:</strong> outputs change by adding the same amount for equal input steps.</li>
+              <li><strong>Quadratic:</strong> outputs often curve because the changes themselves change in a regular way.</li>
+              <li><strong>Absolute value:</strong> outputs decrease then increase, or increase then decrease, with a turning point.</li>
+              <li><strong>Exponential:</strong> outputs change by multiplying by a common factor for equal input steps.</li>
+            </ul>
+            <div class="graph-block graph-xl"><img alt="Reference sketches of common function family behavior" src="figures/u1_3_family_sketches_sq_v1.png"></div>
+            <p><strong>Important:</strong> The graph can suggest a family, but the evidence should come from how the relationship behaves.</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 1 -->
+    <!--
+    TASK TYPE: Analyze table behavior.
+    DESIGN: Students classify from differences, not graph shape. The table
+    has constant first differences, so linear evidence is available without
+    giving students a graph. This targets the misconception that family
+    identification begins with visual shape.
+    DIFFERENT FROM YTI 1: YTI 1 compares two tables and asks students to
+    explain why one is stronger evidence than the other.
+    QA CHECK: Not trivial because students must compute and explain changes,
+    not just name a family from a visible graph.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 1: Analyze a Table for Family Behavior</h3>
+        <p>A student wants to classify this relationship.</p>
+        <table class="table-block">
+          <tr><th>Input ($x$)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><th>Output ($y$)</th><td>6</td><td>10</td><td>14</td><td>18</td><td>22</td></tr>
+        </table>
+        <ol>
+          <li>Find how the output changes each time the input increases by 1.</li>
+          <li>Which family is best supported by this table: linear, quadratic, absolute value, or exponential?</li>
+          <li>Write one sentence explaining why your classification is based on behavior, not just a guess.</li>
+        </ol>
+        <div class="workspace-400"></div>
+      </div>
+
+      <!-- YOU TRY IT 1 -->
+      <!--
+      TASK TYPE: Compare two tables for family evidence.
+      DIFFERENT from Example 1: Ex1 classified one table. YTI1 compares two
+      tables and asks which has stronger evidence for a family. This requires
+      students to evaluate evidence quality rather than only classify.
+      QA CHECK: Students must justify using changes in output; neither table
+      is paired with a graph shape that gives away the answer.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 1: Compare Table Evidence</h3>
+        <p>Two tables are shown. One student says both tables are linear because both outputs increase.</p>
+        <div class="two-column">
+          <div>
+            <h4>Table A</h4>
+            <table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>3</td><td>6</td><td>9</td><td>12</td></tr></table>
+          </div>
+          <div>
+            <h4>Table B</h4>
+            <table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>3</td><td>6</td><td>12</td><td>24</td></tr></table>
+          </div>
+        </div>
+        <ol>
+          <li>For each table, describe how the outputs change.</li>
+          <li>Which table has stronger evidence of linear behavior? Which table has stronger evidence of a different behavior?</li>
+          <li>Explain why "both outputs increase" is not enough evidence to classify the family.</li>
+        </ol>
+        <div class="workspace-400"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 2 -->
+    <!--
+    PURPOSE: Give students an evidence hierarchy before they evaluate
+    competing clues. This supports Example 2, where the graph window is
+    tempting but incomplete and the table/equation provide stronger clues.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Evidence Before Labels</span></div>
+          <div class="math-notes-body">
+            <p>When classifying a function family, collect evidence before choosing a label.</p>
+            <ul>
+              <li><strong>Table evidence:</strong> Look at how outputs change for equal input steps.</li>
+              <li><strong>Equation evidence:</strong> Look at how the variable is used: $x$, $x^2$, $|x|$, or a variable in an exponent.</li>
+              <li><strong>Graph evidence:</strong> Look for shape, but check that the window and scale are not hiding important behavior.</li>
+              <li><strong>Context evidence:</strong> Look for words that suggest constant adding, changing growth, turning around, or repeated multiplying.</li>
+            </ul>
+            <p><strong>Evidence sentence frame:</strong> I think this family is __________ because the __________ representation shows __________.</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 2 -->
+    <!--
+    TASK TYPE: Evaluate which evidence is strongest.
+    DESIGN: A visible graph window shows increasing outputs, but the table's
+    changes 2, 4, 6, 6 are not cleanly linear. Students must decide which
+    evidence is reliable and name what is not enough information.
+    DIFFERENT FROM YTI 2: YTI 2 asks students to defend classification from
+    symbolic and table evidence, not evaluate a graph-window limitation.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 2: Which Evidence Is Strongest?</h3>
+        <p>A student looks at the visible graph window and says, "This must be linear because the graph keeps going up."</p>
+        <div class="two-column">
+          <div><div class="graph-block graph-md"><img alt="Visible graph window with increasing outputs" src="figures/u1_3_example2_visible_window_sq_v1.png"></div></div>
+          <div>
+            <table class="table-block" style="margin-top:18px;"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>2</td><td>4</td><td>8</td><td>14</td><td>20</td></tr></table>
+            <p style="margin-top:10px;">Claim: "Increasing means linear."</p>
+          </div>
+        </div>
+        <ol>
+          <li>Use the table to check how the outputs change. Are the changes constant?</li>
+          <li>What evidence does the graph provide? What evidence does it <em>not</em> provide by itself?</li>
+          <li>Do you agree, disagree, or need more information? Defend your response using at least two pieces of evidence.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 2 -->
+      <!--
+      TASK TYPE: Defend a classification from equation and table evidence.
+      DIFFERENT from Example 2: Ex2 evaluated a weak graph-based claim. YTI2
+      uses an equation and a small table; students must connect symbolic
+      evidence to output behavior.
+      QA CHECK: The answer is not in a graph label; students must explain why
+      x^2 and changing output differences support the classification.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 2: Defend a Classification</h3>
+        <p>A relationship is represented by the equation $y=x^2+2$ and the partial table below.</p>
+        <table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>3</td><td>6</td><td>11</td></tr></table>
+        <ol>
+          <li>What does the equation suggest about the function family?</li>
+          <li>How do the output changes in the table support or challenge that classification?</li>
+          <li>Write a defense of the classification using both the equation and the table. Avoid saying only, "because it looks like a parabola."</li>
+        </ol>
+        <div class="workspace-400"></div>
+      </div>
+    </section>
+
+    <!-- STOP AND DISCUSS -->
+    <section>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <p>A student says, "I do not need a table if I already have a graph." What might the student miss by relying only on the graph?</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 3 -->
+    <!--
+    PURPOSE: Prepare students to critique family claims. The key point is
+    that weak evidence often sounds reasonable: increasing, curving, or
+    having an x are not enough by themselves. Students need language for
+    strengthening or revising a claim.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Shape Can Mislead</span></div>
+          <div class="math-notes-body">
+            <p>Many incorrect classifications come from using one weak clue.</p>
+            <ul>
+              <li><strong>Weak clue:</strong> "It goes up." Many families can increase.</li>
+              <li><strong>Weak clue:</strong> "The equation has an $x$." Many equations contain variables.</li>
+              <li><strong>Weak clue:</strong> "It looks curved." A rough graph or small window can hide behavior.</li>
+              <li><strong>Stronger clue:</strong> Use a table, equation, context, or multiple graph features to explain the behavior.</li>
+            </ul>
+            <p><strong>Revision frame:</strong> The claim is incomplete because __________. A stronger claim would use __________ as evidence.</p>
+            <div class="mn-sketch-cols">
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Weak clue</span></div>
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Stronger evidence</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 3 -->
+    <!--
+    TASK TYPE: Critique a weak classification claim.
+    DESIGN: The student claims y=x^2+3 is linear because the equation has an x.
+    Students must identify the misconception and revise the reasoning with
+    stronger equation/table evidence.
+    DIFFERENT FROM YTI 3: YTI 3 provides a graph and asks students to revise
+    a shape-based claim using multiple pieces of evidence.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 3: Critique a Classification Claim</h3>
+        <div class="claim-card"><p><strong>Student claim:</strong> "The equation $y=x^2+3$ is linear because it has an $x$ in it."</p></div>
+        <ol>
+          <li>What is the misconception in the student's reasoning?</li>
+          <li>Create a small table for $x=0$, $x=1$, $x=2$, and $x=3$.</li>
+          <li>Use the equation and your table to write a corrected classification claim.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 3 -->
+      <!--
+      TASK TYPE: Revise a graph-based claim.
+      DIFFERENT from Example 3: Ex3 critiques symbolic reasoning. YTI3
+      critiques a graph-based claim and asks students to revise it using
+      graphical evidence. The graph does not label the family answer.
+      QA CHECK: Students must use evidence such as turning point and two
+      straight branches rather than merely naming a visible shape.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 3: Revise a Graph-Based Claim</h3>
+        <p>A student looks at the sketch and says, "This is quadratic because it turns around."</p>
+        <div class="graph-block graph-lg"><img alt="Student sketch showing a turning shape with ambiguous branch behavior" src="figures/u1_3_yti3_student_sketch_sq_v2.png"></div>
+        <ol>
+          <li>What part of the student's claim is based on evidence from the graph? What part is just a label?</li>
+          <li>At least two families have a turning point. What would you need to look at more carefully — in the graph or in a table — to decide between them?</li>
+          <li>Revise the student's claim so it names what specific evidence would need to be true for the quadratic classification to be correct. What would have to be true about the branches?</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 4 -->
+    <!--
+    PURPOSE: Connect families to contexts before students make and defend
+    a classification across representations. This supports transfer from
+    symbolic/graph/table evidence into modeling language.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Families in Context</span></div>
+          <div class="math-notes-body">
+            <p>Contexts can suggest a family, but context clues should still be checked with numbers.</p>
+            <ul>
+              <li><strong>Constant adding:</strong> often suggests linear behavior.</li>
+              <li><strong>Area or height-and-width situations:</strong> can suggest quadratic behavior.</li>
+              <li><strong>Distance from a center or turning point:</strong> can suggest absolute value behavior.</li>
+              <li><strong>Repeated doubling, halving, or multiplying:</strong> often suggests exponential behavior.</li>
+            </ul>
+            <p><strong>Classification is a first decision.</strong> A full model needs a specific equation, table, graph, and interpretation.</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 4 -->
+    <!--
+    TASK TYPE: Argue from multiple representations.
+    DESIGN: Students receive a context, graph, and table for video views that
+    triple/double-like across weeks. They must classify using evidence and
+    distinguish classification from a complete model.
+    DIFFERENT FROM YTI 4: YTI 4 asks students to create examples and
+    non-examples rather than classify a provided situation.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 4: Build an Evidence-Based Argument</h3>
+        <p>A video starts with a small number of views. Each week, the total views multiply by the same factor.</p>
+        <div class="two-column">
+          <div><div class="graph-block graph-md"><img alt="Video views over time graph" src="figures/u1_3_example4_video_views_sq_v1.png"></div></div>
+          <div>
+            <table class="table-block" style="margin-top:18px;"><tr><th>Week ($w$)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Views ($V$)</th><td>3</td><td>6</td><td>12</td><td>24</td><td>48</td></tr></table>
+          </div>
+        </div>
+        <ol>
+          <li>A student looks only at the graph and says, "This is exponential." Another student says the graph is not enough — they need the table too. Who has the stronger position? What does the table add that the graph alone does not tell you?</li>
+          <li>Use the table to show specifically whether the relationship is based on constant adding or repeated multiplying. Show the calculation that proves your answer.</li>
+          <li>What would still be needed to build a full model, rather than only classifying the family?</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 4 -->
+      <!--
+      TASK TYPE: Create examples and non-examples.
+      DIFFERENT from Example 4: Ex4 classifies and argues from a provided
+      representation set. YTI4 requires students to design their own evidence
+      and a distractor, which checks whether they understand classification
+      as behavior rather than memorized labels.
+      QA CHECK: This is not a graph-shape sorting task; students must create
+      and justify a family example and explain why a non-example fails.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 4: Create an Example and a Non-Example</h3>
+        <p>Choose one family: linear, quadratic, absolute value, or exponential.</p>
+        <ol>
+          <li>Create a small table that fits your chosen family.</li>
+          <li>Write one context that could reasonably fit your table.</li>
+          <li>Create one non-example that might trick someone at first. Explain exactly why it does <em>not</em> fit the family you chose.</li>
+          <li>Write one sentence explaining the difference between classifying your relationship and building a full model for it.</li>
+        </ol>
+        <div class="workspace-600"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <p>Function families describe patterns of behavior. A family classification should be based on evidence from how the relationship changes, not only on how a graph looks.</p>
+          <p>Tables can show whether outputs change by constant adding, changing differences, turning behavior, or repeated multiplying. Equations can reveal structure such as $x$, $x^2$, $|x|$, or a variable in the exponent. Contexts can explain why a certain type of change makes sense.</p>
+          <p>Classification is not the same as full modeling. Classification names the likely family. A full model gives a specific rule and explains how the representations match the situation.</p>
+        </div>
+        <div class="workspace-220"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Matching by graph shape only.</strong> Why it is tempting: the shape is easy to see quickly. What to check instead: use table changes, equation structure, and context clues as evidence.</li>
+            <li><strong>Thinking every increasing graph is linear.</strong> Why it is tempting: the graph moves upward in one direction. What to check instead: ask whether the output changes by the same amount each time.</li>
+            <li><strong>Classifying by the presence of $x$ alone.</strong> Why it is tempting: many equations contain $x$. What to check instead: look at how $x$ is used: $x$, $x^2$, $|x|$, or an exponent.</li>
+            <li><strong>Confusing classification with a full model.</strong> Why it is tempting: naming the family feels like an answer. What to check instead: ask whether you also have a specific equation, table, graph, and context.</li>
+            <li><strong>Trusting a small graph window too much.</strong> Why it is tempting: the visible part looks convincing. What to check instead: use more input-output values or another representation before deciding.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="annotation-box">
+          <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
