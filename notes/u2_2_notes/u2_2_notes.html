@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 2.2 Notes - Graphing Linear Functions</title>
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .definition{background:#fffacd;border-left:5px solid #ffd700;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}.graph-xl img{max-width:500px;}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    .teacher-note{font-size:.92em;color:#555;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid{display:block;}.rep-card{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 - Unit 2</div>
+      <div class="title-main">Section 2.2<br>Graphing Linear Functions</div>
+      <div class="title-sub">Turning a rule into a picture of constant change.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A line tells a story: where the relationship starts, how it changes, and what values are possible.</p></div>
+      <p class="title-note">Today we will build linear graphs from tables, equations, and situations. We will focus on what the graph means, not just drawing a line.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will graph linear functions and interpret key features.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can graph linear functions.</li>
+            <li>I can identify slope and intercepts from a graph.</li>
+            <li>I can determine whether a line is increasing or decreasing.</li>
+            <li>I can connect graphs to situations.</li>
+            <li>I can use slope and intercepts to build a graph.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What’s To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: Where does each graph start? Which graph changes faster? Does the lower starting value always stay lower? What graph evidence could support a recommendation?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task</strong></p>
+          <p>Two streaming plans are shown on the graph. A student says, “Plan B is always cheaper because it starts lower.”</p>
+          <div class="graph-block graph-md"><img src="figures/u2_2_future_plans_sq_v2.png" alt="Two linear plans with different starting values and different rates of change"></div>
+          <ol>
+            <li>Use graph evidence to decide whether the student’s claim is always true.</li>
+            <li>Explain why starting value and rate of change both matter.</li>
+            <li>Write a recommendation that depends on how long someone plans to use the plan.</li>
+            <li>Explain what information from an equation, table, or context would make your recommendation stronger.</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+        </div>
+        <div class="reading-box">
+          <p>A linear function makes a straight-line graph. The line is straight because the relationship changes at a constant rate. That means the output changes by the same amount again and again when the input changes by equal steps.</p>
+          <p>A graph can show important features quickly. The <strong>intercept</strong> shows where the line crosses an axis. The $y$-intercept often shows the starting value when $x=0$. The <strong>slope</strong> shows how much the output changes for each 1-unit change in the input.</p>
+          <p>There is more than one way to graph a linear function. You can make a table of input-output pairs. You can start at the $y$-intercept and use the slope. You can also use a context to decide what the starting value and rate of change mean.</p>
+          <p>A good graph is not just a drawing. It is a model. The axes, scale, points, and line should match the situation and help someone understand the relationship.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>Why does a constant rate of change make a straight-line graph?</li>
+            <li>What information can the $y$-intercept give us?</li>
+            <li>Why should a graph’s scale and labels match the situation?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: TABLES TO GRAPHS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>A Table Gives Points for the Graph</h2>
+        <p>A table lists input-output pairs. Each pair becomes a point on the coordinate plane. After plotting the points, check whether they form a straight line.</p>
+        <div class="definition"><p><strong>Linear graph:</strong> A graph that forms a straight line because the rate of change is constant.</p></div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 1</h3>
+          <p>Use the table to graph the linear function.</p>
+          <table class="table-block"><tr><th>$x$</th><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr><tr><th>$y$</th><td>$1$</td><td>$3$</td><td>$5$</td><td>$7$</td><td>$9$</td></tr></table>
+          <div class="graph-block graph-md"><img src="figures/u2_2_table_graph_sq_v2.png" alt="Graph from a table showing points on a line"></div>
+          <p>Explain how the table and graph both show the same starting value and constant change.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 1</h3>
+          <p>Complete the table for $y=3x+2$ using $x=0$, $1$, $2$, and $3$. Then describe what the graph should look like before you sketch it.</p>
+          <table class="table-block"><tr><th>$x$</th><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How does each table column become a point on the graph?</li>
+            <li>Why is it helpful to predict the shape before graphing?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SLOPE-INTERCEPT FORM -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Slope and Intercept Can Build the Line</h2>
+        <p>In slope-intercept form, $y=mx+b$, the value of $b$ is the $y$-intercept and the value of $m$ is the slope. Start at the intercept, then use the slope to find more points.</p>
+        <div class="key-point"><p><strong>Graphing idea:</strong> Start at $b$ on the $y$-axis. Then use $m$ as rise over run to move to another point.</p></div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 2</h3>
+          <p>Graph $y=-2x+6$ using the $y$-intercept and slope. Then explain what the slope tells the graph to do.</p>
+          <div class="graph-block graph-md"><img src="figures/u2_2_slope_intercept_sq_v2.png" alt="Graph of y equals negative two x plus six with a slope triangle"></div>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 2</h3>
+          <p>Graph $y=\frac{1}{2}x+3$ on the blank grid. Mark the $y$-intercept first, then use the slope to find at least two more points.</p>
+          <div class="graph-block graph-md"><img src="figures/u2_2_blank_grid_sq_v1.png" alt="Blank coordinate plane"></div>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: FEATURES OF GRAPHS -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Graphs Show Direction and Key Features</h2>
+        <p>A line can increase, decrease, or stay flat. The direction depends on the slope. The intercepts and points help us describe what the graph means.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 3</h3>
+          <p>Compare the two graphs. Identify which line is increasing and which line is decreasing. Then explain how the slope affects the direction.</p>
+          <div class="graph-block graph-xl"><img src="figures/u2_2_increase_decrease_sq_v1.png" alt="Two square graph panels showing an increasing line and a decreasing line"></div>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 3</h3>
+          <p>A line has a positive slope and crosses the $y$-axis at $-4$. Describe what the graph should do. Then sketch a possible graph and label the intercept.</p>
+          <div class="workspace-260"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>How can you tell the sign of the slope by looking at the graph?</li>
+            <li>Why can two lines have the same intercept but different slopes?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: GRAPHS IN CONTEXT -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>A Graph Should Match the Situation</h2>
+        <p>When a graph represents a context, the axes, starting value, and rate of change should all make sense. A graph can help us make predictions, but the prediction should be reasonable for the situation.</p>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <!-- EXAMPLE START -->
+          <h3>Example 4</h3>
+          <p>A student starts with \\$10 in savings and adds \\$5 each week. Use the graph to explain the starting value, the rate of change, and one reasonable prediction.</p>
+          <div class="graph-block graph-md"><img src="figures/u2_2_context_savings_sq_v1.png" alt="Savings graph starting at ten dollars and increasing by five dollars each week"></div>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="example-box">
+          <h3>You Try It 4</h3>
+          <p>A plant is $6$ cm tall and grows $2$ cm each week. Sketch a graph that matches the situation. Label both axes and explain what the $y$-intercept and slope mean.</p>
+          <div class="workspace-300"></div>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>What graph feature shows the starting savings amount?</li>
+            <li>What graph feature shows the amount added each week?</li>
+            <li>Why might a graph prediction stop being reasonable far outside the situation?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <ul>
+            <li>A linear function graphs as a straight line.</li>
+            <li>A table gives ordered pairs that can be plotted on a graph.</li>
+            <li>In $y=mx+b$, $b$ gives the $y$-intercept and $m$ gives the slope.</li>
+            <li>A positive slope makes a line increase from left to right.</li>
+            <li>A negative slope makes a line decrease from left to right.</li>
+            <li>The $y$-intercept often represents a starting value in a context.</li>
+            <li>A good graph uses labels, scale, and features that match the situation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Starting at the slope:</strong> In $y=mx+b$, start at $b$, not at $m$.</li>
+            <li><strong>Using slope backward:</strong> Slope is vertical change compared to horizontal change.</li>
+            <li><strong>Ignoring the sign:</strong> A negative slope should move down as you move right.</li>
+            <li><strong>Plotting only one point:</strong> One point is not enough to show a line.</li>
+            <li><strong>Forgetting labels:</strong> In a context, axes should show what the input and output mean.</li>
+            <li><strong>Using a poor scale:</strong> A graph can be hard to read if the scale does not fit the data.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="strategy-box">
+          <p><strong>Optional Reflection:</strong> Look back at the future task. Do not solve it yet.</p>
+          <ol>
+            <li>Highlight one part that makes more sense now than it did at the beginning.</li>
+            <li>Circle one part that still feels unfamiliar.</li>
+            <li>Write one sentence about what representation you would look at first.</li>
+          </ol>
+        </div>
+        <div class="workspace-160"></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
