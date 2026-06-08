@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.2 Notes – Inputs, Outputs, and Functions</title>
+  <!--
+  =====================================================================
+  SECTION 1.2 NOTES — INPUTS, OUTPUTS, AND FUNCTIONS
+  Build template notes for Algebra 1, Unit 1.
+  =====================================================================
+  STRUCTURE:
+    1. Title Page
+    2. Learning Target (verbatim from assessment plan)
+    3. What's To Come (DOK 4 future task — competing rules investigation)
+    4. Intro Reading + Stop and Discuss (3 questions)
+    5. Math Notes: Inputs, Outputs, and Function Machines (before Ex 1)
+    6. Example 1 / YTI 1 — interpret and predict from input-output evidence
+    7. Math Notes: Function Notation (before Ex 2)
+    8. Example 2 / YTI 2 — compare rules and generalize behavior
+    9. Stop and Discuss
+   10. Math Notes: Exactly One Output for Each Input (before Ex 3)
+   11. Example 3 / YTI 3 — critique and explain function status
+   12. Math Notes: Functions in Context (before Ex 4)
+   13. Example 4 / YTI 4 — apply and model functions in context
+   14. Summary
+   15. Common Mistakes
+   16. Optional Future Task Reflection
+
+  KEY DESIGN DECISIONS:
+  - Future task is DOK 4: three rules fit the visible evidence but may
+    behave differently for hidden inputs. Students cannot resolve it today;
+    they must judge evidence and name what additional test input is needed.
+  - Example/YTI pairs are deliberately non-overlapping:
+      Ex1 interpret a machine; YTI1 predict from partial evidence.
+      Ex2 compare two rules; YTI2 generalize across inputs.
+      Ex3 critique repeated-output misconception; YTI3 explain repeated-input failure.
+      Ex4 apply a given contextual function; YTI4 model a new function.
+  - No graph/figure labels reveal the answer; relation figures show points only.
+  - Function language stays input/output based, not domain/range or vertical line test based.
+  =====================================================================
+  -->
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+
+    /* TITLE PAGE */
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+
+    /* STANDARD CONTENT BOXES */
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .claim-card{border:1px solid #aaa;border-left:5px solid #555;border-radius:6px;padding:12px;margin:10px 0;background:#fafafa;break-inside:avoid;page-break-inside:avoid;}
+
+    /* ─────────────────────────────────────────
+       MATH NOTES BOX
+       Navy header bar + descriptive title.
+       Open sketch/notes space below content.
+       No border/shading on sketch area.
+    ───────────────────────────────────────── */
+    .math-notes{border:2px solid #00003d;border-radius:8px;margin:16px 0 20px 0;break-inside:avoid;page-break-inside:avoid;overflow:hidden;}
+    .math-notes-header{background:#00003d;color:#fff;padding:6px 14px;display:flex;align-items:baseline;gap:10px;}
+    .math-notes-header .mn-label{font-size:0.82em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:0.75;white-space:nowrap;}
+    .math-notes-header .mn-title{font-size:1.08em;font-weight:800;}
+    .math-notes-body{padding:16px 18px 10px 18px;}
+    .math-notes-body p{margin-bottom:8px;}
+    .math-notes-body ul,.math-notes-body ol{margin-left:22px;margin-bottom:8px;}
+    .math-notes-body li{margin-bottom:6px;}
+
+    /* Sketch workspace — open space, no box or shading */
+    .mn-sketch{margin-top:14px;display:flex;align-items:flex-start;gap:10px;}
+    .mn-sketch-label{font-size:0.82em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;padding-top:2px;}
+    .mn-sketch-area{flex:1;min-height:210px;}
+    /* Two-column sketch cells */
+    .mn-sketch-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+    .mn-sketch-cell{padding:4px 0 0 0;min-height:170px;}
+    .mn-sketch-cell .mn-cell-label{font-size:0.80em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;display:block;border-bottom:1px solid #ccd;padding-bottom:3px;}
+
+    /* EXAMPLE / YOU TRY IT */
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}.graph-xl img{max-width:500px;}
+
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid,.mn-sketch-cols{display:block;}.rep-card,.mn-sketch-cell{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 · Unit 1</div>
+      <div class="title-main">Section 1.2<br>Inputs, Outputs,<br>and Functions</div>
+      <div class="title-sub">A function is a rule that connects each input to exactly one output. The skill is reading what the rule does and what the values mean.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> A function is not just an equation. It is a dependable connection between inputs and outputs — one input goes in, one output comes out.</p></div>
+      <p class="title-note">Today we will practice interpreting inputs and outputs, evaluating function rules, comparing rules, and deciding whether a relation behaves like a function.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can determine outputs from given inputs.</li>
+            <li>I can evaluate a function rule.</li>
+            <li>I can identify inputs and outputs in a situation.</li>
+            <li>I can describe how a function changes values.</li>
+            <li>I can decide whether a rule gives exactly one output for each input.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <!--
+    FUTURE TASK DESIGN NOTES:
+    DOK 4 — Competing Rules Investigation.
+    Three students propose different hidden rules for a rewards program.
+    All visible evidence is compatible with more than one possible rule.
+    Students cannot fully resolve which rule is best today; they must
+    analyze evidence quality, identify missing inputs, and propose a test.
+
+    Conflict/Ambiguity:
+      - Visible table only shows the first three days.
+      - Student A uses a constant-growth rule.
+      - Student B proposes a bonus rule that behaves the same at first.
+      - Student C proposes a rule with an exception that cannot be checked yet.
+    This previews later function comparison, rule testing, and model critique.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What's To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: Which rule would you trust most? What evidence is missing? What new input would help test the rules?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task — Competing Rules Investigation</strong></p>
+          <p>A school app gives students points for completing daily math practice. The table shows the points for the first few days.</p>
+          <table class="table-block" style="margin:10px auto;">
+            <tr><th>Day ($d$)</th><td>0</td><td>1</td><td>2</td></tr>
+            <tr><th>Total points ($P$)</th><td>2</td><td>5</td><td>8</td></tr>
+          </table>
+          <p>Three students propose possible rules.</p>
+          <div class="representation-grid">
+            <div class="rep-card"><h4>Student A</h4><p>The rule is $P=3d+2$ because the points increase by 3 each day.</p></div>
+            <div class="rep-card"><h4>Student B</h4><p>The app adds 3 points most days, but gives a hidden bonus after several days.</p></div>
+            <div class="rep-card"><h4>Student C</h4><p>The app uses a rule that matches the first three outputs but changes later.</p></div>
+            <div class="rep-card"><h4>Unknown</h4><p>The outputs for days 3, 4, and 5 are hidden.</p></div>
+          </div>
+          <ol>
+            <li>Circle the evidence that all three students might use to support their rule.</li>
+            <li>Underline one part that makes it impossible to decide which rule is correct today.</li>
+            <li>Write one new input you would test and explain what output would help you choose between the three rules — and what output would force you to reject at least one of them.</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+        </div>
+        <div class="reading-box">
+          <p>A function is a special kind of relationship. It connects each input to exactly one output. You can think of a function like a machine: a value goes in, the rule does something to it, and one value comes out.</p>
+          <p>Inputs and outputs can come from many situations. If the input is the number of hours worked, the output might be total pay. If the input is the number of tickets bought, the output might be total cost. If the input is the day of a challenge, the output might be total points earned.</p>
+          <p>A function rule can be shown with words, a table, a graph, or notation like $f(x)$. The notation $f(x)$ does not mean multiply $f$ by $x$. It means "the output of the function when the input is $x$."</p>
+          <p>When we study functions, we ask careful questions. What is the input? What is the output? What does the rule do? Does each input have exactly one output? What does the output mean in the real situation?</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>The reading describes a function like a machine. According to the text, what are the three parts of that machine?</li>
+            <li>The reading explains what $f(x)$ means. Find the sentence that defines it and read it aloud. What does $f(x)$ <em>not</em> mean?</li>
+            <li>The reading says a function connects each input to exactly one output. Why would it create a problem if one input could produce two different outputs?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 1 -->
+    <!--
+    PURPOSE: Introduce input, output, rule, and function machine language
+    immediately before students interpret a machine situation. This is not
+    a vocabulary dump; it gives the framework needed for Example 1.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Functions Connect Inputs and Outputs</h2>
+        <div class="math-notes">
+          <div class="math-notes-header">
+            <span class="mn-label">Math Notes</span>
+            <span class="mn-title">Inputs, Outputs, and Function Machines</span>
+          </div>
+          <div class="math-notes-body">
+            <p>A function rule connects an <strong>input</strong> to an <strong>output</strong>.</p>
+            <div class="representation-grid">
+              <div class="rep-card"><h4>Input</h4><p>The value that goes into the function. It is often the number you choose or are given.</p></div>
+              <div class="rep-card"><h4>Rule</h4><p>The process that changes the input into an output.</p></div>
+              <div class="rep-card"><h4>Output</h4><p>The value that comes out after the rule is applied.</p></div>
+              <div class="rep-card"><h4>Function</h4><p>A relationship where each input has exactly one output.</p></div>
+            </div>
+            <div class="graph-block graph-md"><img alt="Function machine showing input, rule, and output" src="figures/u1_2_function_machine_sq_v1.png"></div>
+            <div class="mn-sketch">
+              <span class="mn-sketch-label">Your notes</span>
+              <div class="mn-sketch-area"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 1 -->
+    <!--
+    TASK TYPE: Interpret a function machine and critique an incomplete rule.
+    DESIGN: Students are not merely evaluating. They must explain why a
+    student's verbal description is incomplete and connect inputs/outputs
+    to context. Different from YTI1, which asks students to predict from
+    partial evidence and identify uncertainty.
+    QA CHECK: Not trivial because the student statement is partly true but
+    incomplete; students must name the missing operation and contextual meaning.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 1: Interpret a Function Machine</h3>
+        <p>A weekend bike rental shop charges a one-time helmet fee of \$6 and then \$4 for each hour a bike is rented.</p>
+        <p>The input is the number of rental hours, $h$. The output is the total cost, $C$.</p>
+        <div class="claim-card"><p><strong>Student claim:</strong> "The rule adds 6."</p></div>
+        <ol>
+          <li>Why is the student's claim incomplete? What information does it leave out?</li>
+          <li>What happens to the input before the 6 is added? Explain why that step matters — what would go wrong if you skipped it?</li>
+          <li>Find the output when the input is 3 hours. Explain what your answer means in the bike rental situation, using the word "total."</li>
+        </ol>
+        <div class="workspace-400"></div>
+      </div>
+
+      <!-- YOU TRY IT 1 -->
+      <!--
+      TASK TYPE: Predict from partial input-output evidence.
+      DIFFERENT from Example 1: Ex1 interprets a known contextual rule.
+      YTI1 gives a partial table and asks students to make a prediction
+      while naming the evidence and uncertainty. This prevents simple copying.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 1: Predict an Output from Evidence</h3>
+        <p>A mystery function machine produces these input-output pairs.</p>
+        <table class="table-block">
+          <tr><th>Input</th><td>1</td><td>2</td><td>4</td><td>5</td></tr>
+          <tr><th>Output</th><td>7</td><td>9</td><td>13</td><td>?</td></tr>
+        </table>
+        <ol>
+          <li>What pattern do you notice between the inputs and outputs?</li>
+          <li>Predict the output when the input is 5. Explain the evidence you used.</li>
+          <li>What additional input-output pair would make you more confident that your rule is correct?</li>
+        </ol>
+        <div class="workspace-400"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 2 -->
+    <!--
+    PURPOSE: Introduce function notation right before students compare
+    two rules written in notation. Students need to understand f(x) as an
+    output, not multiplication, before Example 2.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header">
+            <span class="mn-label">Math Notes</span>
+            <span class="mn-title">Function Notation</span>
+          </div>
+          <div class="math-notes-body">
+            <p>Function notation is a compact way to name a rule and its output.</p>
+            <ul>
+              <li>$f(x)$ means the output of function $f$ when the input is $x$.</li>
+              <li>If $f(x)=2x+5$, then $f(3)$ means use input 3 in the rule.</li>
+              <li>$f(3)=11$ means when the input is 3, the output is 11.</li>
+            </ul>
+            <p><strong>Important:</strong> $f(x)$ does not mean multiplying $f$ times $x$. The letter $f$ is the name of the function.</p>
+            <div class="mn-sketch">
+              <span class="mn-sketch-label">Your notes</span>
+              <div class="mn-sketch-area"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 2 -->
+    <!--
+    TASK TYPE: Compare two function rules.
+    DESIGN: Students evaluate both rules for selected inputs and decide
+    which function changes faster. This focuses on output behavior, not
+    just isolated computation. Different from YTI2, which asks students
+    to generalize when one function becomes larger than another.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 2: Compare Two Function Rules</h3>
+        <p>Two school clubs use different point rules for a reading challenge.</p>
+        <p>Club A: $A(b)=2b+7$</p>
+        <p>Club B: $B(b)=5b+1$</p>
+        <ol>
+          <li>Evaluate both rules for $b=0$, $b=1$, and $b=3$.</li>
+          <li>Which club starts with more points when $b=0$? At $b=3$, which club has more? Without calculating every value, estimate the book count $b$ where the two clubs would have equal points. Explain your reasoning.</li>
+          <li>Explain why comparing only one input value might lead to a wrong conclusion about which club is "better."</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 2 -->
+      <!--
+      TASK TYPE: Generalize across inputs.
+      DIFFERENT from Example 2: Ex2 compares specific outputs for two
+      functions. YTI2 asks students to reason about when one rule overtakes
+      another and describe the pattern in words.
+      QA CHECK: Requires generalization and interpretation, not just filling
+      in a table.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 2: Generalize What the Rule Does</h3>
+        <p>Two game apps award coins using these rules.</p>
+        <p>App H: $H(x)=4x-2$</p>
+        <p>App K: $K(x)=x+8$</p>
+        <ol>
+          <li>Evaluate both rules for $x=0$, $x=2$, and $x=5$.</li>
+          <li>At which input does App H first give more coins than App K?</li>
+          <li>Write a sentence explaining why App H eventually gives more coins, even though App K starts higher.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- STOP AND DISCUSS -->
+    <section>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <p>Can two different function rules produce the same output for one input? If that happens, does it prove the rules are the same function? Explain.</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 3 -->
+    <!--
+    PURPOSE: Introduce the exact definition of function before students
+    critique common misconceptions. This note intentionally avoids formal
+    domain/range language and uses input-output reasoning.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header">
+            <span class="mn-label">Math Notes</span>
+            <span class="mn-title">Exactly One Output for Each Input</span>
+          </div>
+          <div class="math-notes-body">
+            <p>A relationship is a function if each input has exactly one output.</p>
+            <ul>
+              <li>Repeated outputs are allowed. Different inputs can lead to the same output.</li>
+              <li>Repeated inputs with different outputs are not allowed. One input cannot lead to two different outputs.</li>
+              <li>When deciding, focus on the inputs first.</li>
+            </ul>
+            <div class="mn-sketch-cols">
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Allowed: different inputs, same output</span></div>
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Not allowed: same input, different outputs</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 3 -->
+    <!--
+    TASK TYPE: Critique a misconception about repeated outputs.
+    DESIGN: Relation A has repeated outputs but every input appears only once.
+    Students must disagree with a student claim using input-output language.
+    DIFFERENT from YTI3: YTI3 has a repeated input with different outputs
+    and asks students to explain why that fails the function test.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 3: Critique a Function Claim</h3>
+        <p>A student looks at Relation A and says, "This is not a function because the output 4 repeats."</p>
+        <div class="graph-block graph-md"><img alt="Relation A with repeated output values" src="figures/u1_2_relation_repeated_outputs_sq_v2.png"></div>
+        <ol>
+          <li>Read the input values of all four points from the graph. List them. Do any inputs repeat?</li>
+          <li>For each input, identify its output. Does any single input lead to more than one output? How do you know?</li>
+          <li>Do you agree or disagree with the student's claim? Use specific input-output evidence from the graph — do not just name the rule.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 3 -->
+      <!--
+      TASK TYPE: Explain why a relation is not a function.
+      DIFFERENT from Example 3: Ex3 corrects a false rejection caused by
+      repeated outputs. YTI3 analyzes a genuine non-function caused by a
+      repeated input with different outputs.
+      QA CHECK: The figure does not label the answer; students must inspect
+      the input values and explain the conflict.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 3: Explain Whether the Relation Is a Function</h3>
+        <p>Use Relation B.</p>
+        <div class="graph-block graph-md"><img alt="Relation B with one input connected to two outputs" src="figures/u1_2_relation_repeated_input_sq_v2.png"></div>
+        <ol>
+          <li>Read all the input values from the graph. List them. Do you see any input value that appears more than once? What makes it hard or easy to tell?</li>
+          <li>For the input you identified, how many different outputs are there? How do you know from the graph?</li>
+          <li>Is Relation B a function? Use the phrase "each input has exactly one output" in your explanation, and name the specific input that you checked.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 4 -->
+    <!--
+    PURPOSE: Shift from abstract rules to contextual interpretation before
+    students apply and build functions in situations. The note prepares
+    students to interpret ordered pairs and rule parts.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header">
+            <span class="mn-label">Math Notes</span>
+            <span class="mn-title">Functions in Context</span>
+          </div>
+          <div class="math-notes-body">
+            <p>In a real situation, inputs and outputs have meaning.</p>
+            <ul>
+              <li>The input tells what value you choose or measure first.</li>
+              <li>The output tells what value the rule produces.</li>
+              <li>An ordered pair like $(3,18)$ means: when the input is 3, the output is 18.</li>
+              <li>A rule should make sense with the units and context.</li>
+            </ul>
+            <p><strong>Context sentence frame:</strong> In this situation, the input represents __________ and the output represents __________.</p>
+            <div class="mn-sketch">
+              <span class="mn-sketch-label">Your notes</span>
+              <div class="mn-sketch-area"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 4 -->
+    <!--
+    TASK TYPE: Apply a contextual function rule.
+    DESIGN: Students interpret the meaning of the rule, evaluate it, and
+    explain ordered pairs in context. DIFFERENT from YTI4, which asks them
+    to create a connected rule, context, and input-output pairs.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 4: Apply a Function in Context</h3>
+        <p>A library reading program gives each student 12 starter points and 4 more points for each book read.</p>
+        <p>The function rule is $P(b)=12+4b$.</p>
+        <ol>
+          <li>What does the input $b$ represent? What does the output $P(b)$ represent?</li>
+          <li>Find $P(0)$ and explain what it means in the situation. Why does the program give points even before a student reads any books?</li>
+          <li>Find $P(5)$ and explain what the ordered pair $(5,32)$ means in the context of the program.</li>
+          <li>How does the output change each time the input increases by 1? A student wants to reach 60 points. Without solving an equation, estimate how many books that would take. Explain your reasoning.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 4 -->
+      <!--
+      TASK TYPE: Model by creating a connected function rule, context, and pairs.
+      DIFFERENT from Example 4: Ex4 gives the context and rule. YTI4 asks
+      students to design a function relationship and verify that its pieces
+      fit together. This is a creation/modeling task.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 4: Build a Function Model</h3>
+        <p>Create a simple real-world situation that could be represented by a function. Your situation should have a starting value and a constant change for each input.</p>
+        <ol>
+          <li>Write a short context. Clearly name the input and output quantities.</li>
+          <li>Write a function rule using notation such as $f(x)$, $C(t)$, or another meaningful name.</li>
+          <li>Create at least three input-output pairs from your rule.</li>
+          <li>Explain why your rule gives exactly one output for each input.</li>
+        </ol>
+        <div class="workspace-600"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <p>A function connects each input to exactly one output. Inputs, outputs, and rules can be shown with words, tables, graphs, equations, or function notation.</p>
+          <p>Function notation such as $f(x)$ means "the output of function $f$ when the input is $x$." It does not mean multiplication.</p>
+          <p>To decide whether a relationship is a function, focus on the inputs. Repeated outputs are okay, but one input cannot have two different outputs.</p>
+          <p>In context, function rules are strongest when we can explain what the input means, what the output means, and how the output changes as the input changes.</p>
+        </div>
+        <div class="workspace-220"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Reversing input and output.</strong> Why it is tempting: both values appear together in an ordered pair or table. What to check instead: ask which quantity is chosen first and which quantity depends on it.</li>
+            <li><strong>Thinking repeated outputs mean "not a function."</strong> Why it is tempting: repeated values look like a problem. What to check instead: repeated outputs are allowed; repeated inputs with different outputs are not.</li>
+            <li><strong>Treating $f(x)$ like multiplication.</strong> Why it is tempting: parentheses often mean multiplication in other settings. What to check instead: read $f(x)$ as "the output of function $f$ at input $x$."</li>
+            <li><strong>Checking outputs first.</strong> Why it is tempting: outputs are often the numbers we want. What to check instead: function status depends on whether each input has exactly one output.</li>
+            <li><strong>Describing a rule with only one example.</strong> Why it is tempting: one input-output pair may feel convincing. What to check instead: a function rule must describe the pattern for every input in the situation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="annotation-box">
+          <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

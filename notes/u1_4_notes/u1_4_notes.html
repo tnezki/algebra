@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1.4 Notes – Expressions and Structure</title>
+  <!--
+  =====================================================================
+  SECTION 1.4 NOTES — EXPRESSIONS AND STRUCTURE
+  Build template notes for Algebra 1, Unit 1.
+  =====================================================================
+  STRUCTURE:
+    1. Title Page
+    2. Learning Target (verbatim from assessment plan)
+    3. What's To Come (DOK 3 future task — representation design challenge)
+    4. Intro Reading + Stop and Discuss (3 questions)
+    5. Math Notes: Parts of an Expression (before Ex 1)
+    6. Example 1 / YTI 1 — interpret and compare expression structure
+    7. Math Notes: Equivalent Expressions (before Ex 2)
+    8. Example 2 / YTI 2 — simplify/verify equivalence
+    9. Stop and Discuss
+   10. Math Notes: Error Analysis with Structure (before Ex 3)
+   11. Example 3 / YTI 3 — analyze and critique student work
+   12. Math Notes: Choosing a Useful Form (before Ex 4)
+   13. Example 4 / YTI 4 — compare and create equivalent forms
+   14. Summary
+   15. Common Mistakes
+   16. Optional Future Task Reflection
+
+  KEY DESIGN DECISIONS:
+  - Future task is DOK 4: an ambiguous area model with an unlabeled dimension.
+    Two students propose different expressions; students cannot resolve which is
+    correct without additional information. Genuinely underdetermined.
+  - Tasks focus on meaning and structure, not just simplifying procedures.
+  - Adjacent Example/YTI pairs have different task types: interpret/compare,
+    simplify/verify, analyze/critique, compare/create.
+  - Visual models are student-facing supports but do not give away all answers.
+  =====================================================================
+  -->
+  <script>
+    window.MathJax = {tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:12px;line-height:1.6;color:#242424;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .container{max-width:900px;margin:auto;}
+    section{margin-bottom:30px;}
+    h1{color:#00003d;font-size:2.45em;margin-bottom:20px;line-height:1.15;}
+    h2{color:#00003d;font-size:1.72em;margin-top:28px;margin-bottom:14px;border-left:5px solid #00003d;padding-left:10px;break-after:avoid;page-break-after:avoid;}
+    h3{color:#004d99;font-size:1.22em;margin-top:14px;margin-bottom:8px;break-after:avoid;page-break-after:avoid;}
+    h4{color:#00003d;margin-bottom:6px;font-size:1.02em;}
+    p{margin-bottom:10px;}
+    ol,ul{margin-left:24px;}
+    li{margin-bottom:7px;}
+
+    /* TITLE PAGE */
+    .title-page{min-height:930px;display:flex;flex-direction:column;justify-content:center;border:2px solid #00003d;padding:56px;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#f6f8ff 100%);}
+    .title-kicker{font-weight:800;color:#004d99;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;}
+    .title-main{font-size:3em;color:#00003d;font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .title-sub{font-size:1.28em;color:#333;margin-bottom:28px;}
+    .quote-box{border-left:6px solid #00003d;background:#eef3ff;padding:18px 22px;border-radius:6px;margin-top:26px;font-size:1.12em;}
+    .title-note{margin-top:26px;color:#555;font-size:1.04em;}
+
+    /* STANDARD CONTENT BOXES */
+    .objectives{background:#f0f4f8;padding:20px;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .reading-box{background:#fbfbff;border-left:5px solid #7c89c7;padding:18px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .key-point{background:#e8f5e9;border-left:5px solid #4caf50;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .strategy-box{background:#eef3ff;border-left:5px solid #4a6fdc;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .mistake-box{background:#fff3e8;border-left:5px solid #dd7a21;padding:16px;margin:16px 0;border-radius:6px;break-inside:avoid;page-break-inside:avoid;}
+    .annotation-box{border:1px solid #bfc8d8;border-radius:6px;padding:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .claim-card{border:1px solid #aaa;border-left:5px solid #555;border-radius:6px;padding:12px;margin:10px 0;background:#fafafa;break-inside:avoid;page-break-inside:avoid;}
+
+    /* ─────────────────────────────────────────
+       MATH NOTES BOX
+       Navy header bar + descriptive title.
+       Open sketch/notes space below content.
+       No border/shading on sketch area.
+    ───────────────────────────────────────── */
+    .math-notes{border:2px solid #00003d;border-radius:8px;margin:16px 0 20px 0;break-inside:avoid;page-break-inside:avoid;overflow:hidden;}
+    .math-notes-header{background:#00003d;color:#fff;padding:6px 14px;display:flex;align-items:baseline;gap:10px;}
+    .math-notes-header .mn-label{font-size:0.82em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:0.75;white-space:nowrap;}
+    .math-notes-header .mn-title{font-size:1.08em;font-weight:800;}
+    .math-notes-body{padding:16px 18px 10px 18px;}
+    .math-notes-body p{margin-bottom:8px;}
+    .math-notes-body ul,.math-notes-body ol{margin-left:22px;margin-bottom:8px;}
+    .math-notes-body li{margin-bottom:6px;}
+
+    /* Sketch workspace — open space, no box or shading */
+    .mn-sketch{margin-top:14px;display:flex;align-items:flex-start;gap:10px;}
+    .mn-sketch-label{font-size:0.82em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;padding-top:2px;}
+    .mn-sketch-area{flex:1;min-height:210px;}
+    /* Two-column sketch cells */
+    .mn-sketch-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+    .mn-sketch-cell{padding:4px 0 0 0;min-height:170px;}
+    .mn-sketch-cell .mn-cell-label{font-size:0.80em;font-weight:700;color:#7c89c7;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;display:block;border-bottom:1px solid #ccd;padding-bottom:3px;}
+
+    /* EXAMPLE / YOU TRY IT */
+    .example-box{border:none;border-radius:0;padding:0;margin:8px 0 14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .example-box h3{margin-top:0;margin-bottom:8px;}
+    .problem{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;}
+    .section-title-task-group{break-inside:avoid;page-break-inside:avoid;}
+
+    /* WORKSPACE HEIGHT CONTROL */
+    .workspace,.workspace-120,.workspace-160,.workspace-180,.workspace-220,.workspace-260,.workspace-300,.workspace-340,.workspace-400,.workspace-500,.workspace-600,.workspace-discuss,.workspace-context{width:100%;margin-top:10px;border-top:1px solid #e4e4e4;break-inside:avoid;page-break-inside:avoid;}
+    .workspace-120{height:450px;}.workspace-160{height:450px;}.workspace-180{height:450px;}.workspace-220{height:450px;}.workspace-260{height:450px;}.workspace-300{height:450px;}.workspace-340{height:450px;}.workspace-400{height:450px;}.workspace-500{height:500px;}.workspace-600{height:600px;}.workspace-discuss{height:450px;}.workspace-context{height:450px;}
+
+    /* GRAPH SIZE CONTROL */
+    .graph-block{margin:12px 0 12px 0;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+    .graph-block img{display:block;margin:0 auto;height:auto;max-width:340px;width:100%;border:1px solid #ccc;background:#fff;}
+    .graph-sm img{max-width:285px;}.graph-md img{max-width:340px;}.graph-lg img{max-width:410px;}.graph-xl img{max-width:500px;}
+
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+    .representation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;break-inside:avoid;page-break-inside:avoid;}
+    .rep-card{border:1px solid #cfd6e6;border-radius:8px;padding:12px;background:#fff;break-inside:avoid;page-break-inside:avoid;}
+    .table-block{margin:10px auto 12px auto;border-collapse:collapse;}
+    .table-block td,.table-block th{border:1px solid #000;padding:7px 16px;text-align:center;}
+    @media print{body{padding:12px;}.title-page{min-height:auto;}.two-column,.representation-grid,.mn-sketch-cols{display:block;}.rep-card,.mn-sketch-cell{margin-bottom:12px;}.graph-block img{max-width:320px;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SECTION START: TITLE PAGE -->
+    <section class="title-page">
+      <div class="title-kicker">Algebra 1 · Unit 1</div>
+      <div class="title-main">Section 1.4<br>Expressions<br>and Structure</div>
+      <div class="title-sub">Expressions are more than symbols. Their structure tells a story about quantities, groups, parts, and relationships.</div>
+      <div class="quote-box"><p><strong>Mathematical idea:</strong> Rewriting an expression should preserve its value while making a different feature of the quantity easier to see.</p></div>
+      <p class="title-note">Today we will practice interpreting expression parts, rewriting equivalent expressions, analyzing errors, and choosing forms that reveal meaning.</p>
+    </section>
+
+    <!-- SECTION START: LEARNING TARGET -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Learning Target</h2>
+        <div class="objectives">
+          <p><strong>Students will interpret and rewrite algebraic expressions by identifying structure, meaning, and equivalent forms.</strong></p>
+          <p><strong>I can statements</strong></p>
+          <ul>
+            <li>I can identify parts of an expression.</li>
+            <li>I can simplify expressions.</li>
+            <li>I can write equivalent expressions.</li>
+            <li>I can explain what an expression means in context.</li>
+            <li>I can use structure to choose an efficient rewrite.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: WHAT'S TO COME -->
+    <!--
+    FUTURE TASK DESIGN NOTES (v2):
+    DOK 4 — Ambiguous Visual Model.
+    A student's area model has one unlabeled dimension ("?"). The model
+    shows height=3, left-section-width=x, right-section-width=?. Two students
+    propose different expressions: Student A says 3(x+?) and Student B says
+    3x+?. Without knowing what "?" equals, BOTH interpretations are possible.
+    
+    DOK 4 justification: A strong student cannot resolve which expression is
+    correct because the model is genuinely underdetermined. Knowing the value
+    of "?" requires additional information not shown. Students must:
+    - identify which interpretation each student is making
+    - explain why both could be right given current evidence
+    - name exactly what information would distinguish the two expressions
+    This previews: why expressions with different structure can look similar,
+    and why a model needs all labels to communicate a specific expression.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>What's To Come</h2>
+        <p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+        <p>As you annotate, ask yourself: Which student's interpretation could be correct? What is missing from the model? What would need to be true for each expression to be right?</p>
+        <div class="annotation-box">
+          <p><strong>Future Task — Ambiguous Visual Model</strong></p>
+          <p>A student draws an area model to represent an expression. The height is labeled 3 and the left section's width is labeled $x$, but the right section's width is unlabeled. Two students disagree about what expression the model represents.</p>
+          <div class="graph-block graph-lg"><img alt="Area model with height 3, one section labeled x, one section labeled with a question mark" src="figures/u1_4_future_model_ambiguous_sq_v1.png"></div>
+          <ol>
+            <li>Circle the dimension that is missing from the model.</li>
+            <li>Underline one part that is the same in both students' expressions.</li>
+            <li>Explain why both students could be correct given only the information shown. What specific piece of information would let you decide which expression is right?</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: INTRO -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Intro</h2>
+        <div class="strategy-box">
+          <p><strong>Directions</strong></p>
+          <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+        </div>
+        <div class="reading-box">
+          <p>An expression is a mathematical phrase. It can include numbers, variables, operations, and grouping symbols. Unlike an equation, an expression does not have an equals sign.</p>
+          <p>Expressions can describe quantities. For example, if a club charges a fee and then charges more for each item, one part of the expression might show the fee and another part might show the repeated cost.</p>
+          <p>Structure means how the parts of an expression are arranged. The expression $4x+12$ shows two separate parts being added. The expression $4(x+3)$ shows a group being multiplied by 4. Sometimes expressions look different but are equivalent, which means they always have the same value for the same input.</p>
+          <p>Rewriting expressions is useful when a new form reveals something important. One form might show the total as parts. Another form might show groups. A strong algebra student does not just rewrite symbols; they explain what the structure means.</p>
+        </div>
+      </div>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <ol>
+            <li>The reading says expressions can include numbers, variables, operations, and grouping symbols. According to the reading, what is the one thing an expression does <em>not</em> have that an equation does?</li>
+            <li>The reading says equivalent expressions "always have the same value for the same input." Find that sentence and read it aloud. What does the word "always" tell you about what it takes to prove equivalence?</li>
+            <li>When might a grouped form like $4(x+3)$ be more useful than the separated form $4x+12$? Give a real-world reason.</li>
+          </ol>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 1 -->
+    <!--
+    PURPOSE: Introduce expression vocabulary immediately before students
+    interpret expression structure in context. This box is not a vocabulary
+    dump; it connects terms, coefficients, constants, variables, and factors
+    to the meaning students will explain in Example 1.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Expressions Have Parts</h2>
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Parts of an Expression</span></div>
+          <div class="math-notes-body">
+            <p>An algebraic expression can be read by looking at its parts and how those parts are connected.</p>
+            <ul>
+              <li><strong>Variable:</strong> a letter that represents a changing or unknown quantity.</li>
+              <li><strong>Coefficient:</strong> a number multiplied by a variable.</li>
+              <li><strong>Constant:</strong> a number that does not change.</li>
+              <li><strong>Term:</strong> a part of an expression separated by addition or subtraction.</li>
+              <li><strong>Factor:</strong> a part of a multiplication expression.</li>
+            </ul>
+            <p><strong>Key question:</strong> What does each part mean in the situation?</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 1 -->
+    <!--
+    TASK TYPE: Interpret expression structure in context.
+    DESIGN: Students explain the roles of terms and factors rather than only
+    identifying vocabulary words. The visual model supports meaning but does
+    not provide the full written interpretation.
+    DIFFERENT FROM YTI 1: YTI 1 asks students to compare two structures for
+    the same context, not merely interpret one expression.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 1: Interpret the Structure</h3>
+        <p>A classroom buys 3 identical supply kits. Each kit contains $x$ markers and 4 glue sticks. A student writes the expression $3(x+4)$.</p>
+        <div class="graph-block graph-md"><img alt="Visual model for 3 times x plus 4" src="figures/u1_4_example1_visual_model_sq_v2.png"></div>
+        <ol>
+          <li>Look at the unlabeled sections in the visual model. What two things does each kit contain? Write those two things as a group using parentheses.</li>
+          <li>The model shows 3 identical rows. What does the expression look like when you write 3 groups of your answer from Q1?</li>
+          <li>If each kit has 6 markers (x=6), how many total items are in all 3 kits? Show how the expression gives that answer, not just the arithmetic.</li>
+          <li>Explain why $3(x+4)$ and $3x+12$ describe the same total. Which form makes the kits more visible? Which form makes the total items more visible?</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 1 -->
+      <!--
+      TASK TYPE: Compare two structures for the same context.
+      DIFFERENT from Example 1: Example 1 interprets one grouped expression.
+      YTI 1 compares a grouped form and an expanded form and asks what each
+      form reveals. Students must reason about usefulness, not just compute.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 1: Compare Two Structures</h3>
+        <p>A party planner buys 5 snack bags. Each bag has $c$ crackers and 2 fruit snacks. Two students write expressions for the total number of snacks:</p>
+        <div class="claim-card"><p><strong>Student A:</strong> $5(c+2)$</p></div>
+        <div class="claim-card"><p><strong>Student B:</strong> $5c+10$</p></div>
+        <ol>
+          <li>What part of the situation is easiest to see in Student A's expression?</li>
+          <li>What part of the situation is easiest to see in Student B's expression?</li>
+          <li>Do both expressions represent the same quantity? Use the context as evidence.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 2 -->
+    <!--
+    PURPOSE: Prepare students to simplify and verify equivalent expressions.
+    This mini-lesson explains that equivalence is about always having the same
+    value, not just looking similar or sharing numbers.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Equivalent Expressions</span></div>
+          <div class="math-notes-body">
+            <p>Equivalent expressions are expressions that always have the same value for the same input.</p>
+            <ul>
+              <li><strong>Combining like terms</strong> rewrites expressions by joining terms with the same variable part.</li>
+              <li><strong>The distributive property</strong> rewrites a product over a sum or difference.</li>
+              <li><strong>Substitution</strong> can check whether two expressions give the same value for a chosen input, but one input alone does not prove equivalence forever.</li>
+            </ul>
+            <p><strong>Useful test:</strong> Does the new expression keep the same quantity, or did something change?</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 2 -->
+    <!--
+    TASK TYPE: Simplify and explain meaning.
+    DESIGN: The expression includes like terms and constants, but students
+    must explain what was combined and why the expression is equivalent.
+    DIFFERENT FROM YTI 2: YTI 2 verifies equivalence using a model and a
+    substitution check rather than simply simplifying.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 2: Simplify and Explain Meaning</h3>
+        <p>A student is tracking points from two games. Their expression is $6p+4+3p+8$.</p>
+        <ol>
+          <li>A student says $6p$, $3p$, $4$, and $8$ are all like terms because they are all in the same expression. Explain what is wrong with that reasoning and identify which terms actually can be combined.</li>
+          <li>Simplify the expression. Then verify your result by substituting $p=2$ into both the original and simplified forms.</li>
+          <li>Explain what stayed the same when you simplified and what changed.</li>
+          <li>Why would the simplified form be more useful than the original form in a real situation?</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 2 -->
+      <!--
+      TASK TYPE: Verify equivalence.
+      DIFFERENT from Example 2: Students are not just simplifying. They must
+      use a visual model and substitution to decide whether two forms match.
+      The task targets the misconception that matching numbers alone prove
+      equivalence.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 2: Verify Equivalent Forms</h3>
+        <p>A student claims $5(n+2)$ and $5n+10$ are equivalent.</p>
+        <div class="graph-block graph-md"><img alt="Visual model for 5 times n plus 2" src="figures/u1_4_yti2_equiv_model_sq_v2.png"></div>
+        <ol>
+          <li>The visual model shows a rectangle divided into two sections. Label each section with what it represents in the expression $5(n+2)$. Explain how the model shows the total area equals $5n+10$.</li>
+          <li>Check both expressions when $n=3$. What do you notice? Then check again for $n=0$. Does the result change?</li>
+          <li>Does checking two values prove equivalence forever, or does it only provide supporting evidence? Explain what would be required to prove equivalence completely.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- STOP AND DISCUSS -->
+    <section>
+      <div class="problem">
+        <div class="strategy-box">
+          <p><strong>Stop and Discuss</strong></p>
+          <p>A student says, "If two expressions have the same numbers and variables, they must be equivalent." What is wrong with that reasoning?</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 3 -->
+    <!--
+    PURPOSE: Provide an error-analysis framework before students critique
+    student work. Students learn to locate the exact changed structure rather
+    than only saying "wrong."
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Analyzing Expression Errors</span></div>
+          <div class="math-notes-body">
+            <p>When checking student work, look for the moment when the structure changed incorrectly.</p>
+            <ol>
+              <li>Identify the original terms, groups, and operations.</li>
+              <li>Ask which terms are actually like terms.</li>
+              <li>Check whether distribution reached every term inside the group.</li>
+              <li>Use substitution or context to test whether the value stayed the same.</li>
+            </ol>
+            <div class="mn-sketch-cols">
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Original structure</span></div>
+              <div class="mn-sketch-cell"><span class="mn-cell-label">Where it changed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 3 -->
+    <!--
+    TASK TYPE: Analyze an error.
+    DESIGN: Student combines unlike terms, a common early Algebra 1 error.
+    Students must name the misconception and correct it with reasoning.
+    DIFFERENT FROM YTI 3: YTI 3 critiques a distribution error rather than a
+    combining-like-terms error.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 3: Analyze the Error</h3>
+        <p>A student simplifies $3x+4+2x$ as $9x$.</p>
+        <div class="claim-card"><p><strong>Student work:</strong> $3x+4+2x = 9x$ because $3+4+2=9$.</p></div>
+        <ol>
+          <li>What did the student combine incorrectly?</li>
+          <li>Why is the constant 4 not like $3x$ or $2x$?</li>
+          <li>Write the correct simplified expression.</li>
+          <li>Write one sentence that would help the student avoid this mistake next time.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 3 -->
+      <!--
+      TASK TYPE: Critique student reasoning.
+      DIFFERENT from Example 3: This task targets distribution. Students must
+      critique the reasoning and revise the work, not merely identify like terms.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 3: Critique the Reasoning</h3>
+        <p>A student rewrites $4(x+6)$ as $4x+6$.</p>
+        <div class="claim-card"><p><strong>Student explanation:</strong> "I multiplied the $x$ by 4, and the 6 was already there."</p></div>
+        <ol>
+          <li>The student says "the 6 was already there." What does that phrase reveal about their misconception — what did they think the parentheses meant, and what do parentheses actually mean in this context?</li>
+          <li>Use substitution with $x=2$ in both $4(x+6)$ and $4x+6$ to show they are not equivalent. Explain what the numbers tell you.</li>
+          <li>Write the correct equivalent expression. Then write one sentence of advice that addresses the exact misconception in the student's explanation.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: MATH NOTES BEFORE EXAMPLE 4 -->
+    <!--
+    PURPOSE: Help students decide when different equivalent forms are useful.
+    This unlocks the final pair, where students compare and create forms
+    based on what each form reveals.
+    -->
+    <section>
+      <div class="problem section-title-task-group">
+        <div class="math-notes">
+          <div class="math-notes-header"><span class="mn-label">Math Notes</span><span class="mn-title">Choosing a Useful Form</span></div>
+          <div class="math-notes-body">
+            <p>Equivalent expressions can be useful in different ways.</p>
+            <ul>
+              <li>A <strong>separated form</strong>, such as $4x+12$, can show parts being added.</li>
+              <li>A <strong>factored or grouped form</strong>, such as $4(x+3)$, can show equal groups or a shared factor.</li>
+              <li>A <strong>context form</strong> uses words to explain what each part means.</li>
+            </ul>
+            <p><strong>Decision question:</strong> Which form makes the important idea easiest to see?</p>
+            <div class="mn-sketch"><span class="mn-sketch-label">Your notes</span><div class="mn-sketch-area"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLE START: 4 -->
+    <!--
+    TASK TYPE: Compare equivalent forms.
+    DESIGN: Students compare forms for usefulness, not just correctness. This
+    builds toward choosing forms strategically in later equation modeling.
+    DIFFERENT FROM YTI 4: YTI 4 asks students to create a new equivalent
+    representation and explain its meaning.
+    -->
+    <section>
+      <div class="example-box problem">
+        <h3>Example 4: Compare Equivalent Forms</h3>
+        <p>A school club buys supplies. Two equivalent expressions are shown:</p>
+        <p>$$4x+12 \qquad \text{and} \qquad 4(x+3)$$</p>
+        <div class="graph-block graph-md"><img alt="Visual model comparing two equivalent forms" src="figures/u1_4_example4_two_forms_sq_v1.png"></div>
+        <ol>
+          <li>Use distribution to show step-by-step why $4(x+3)$ is equivalent to $4x+12$. Show each multiplication explicitly.</li>
+          <li>A club treasurer wants to quickly see how many items are in each equal group. Which form is more useful and why? A budget analyst wants to see the total add-on cost of 12 units. Which form is more useful and why?</li>
+          <li>If you wanted to rewrite $4x+12$ in a factored form that shows a factor of 4, what would you write? What if the factor you pulled out were 2 instead — what would the new factored form be?</li>
+          <li>Write a possible context where the factored form reveals something important that the expanded form hides.</li>
+        </ol>
+        <div class="workspace-500"></div>
+      </div>
+
+      <!-- YOU TRY IT 4 -->
+      <!--
+      TASK TYPE: Create an equivalent representation.
+      DIFFERENT from Example 4: Students build their own equivalent form or
+      representation from a context. The task requires creation and meaning.
+      -->
+      <div class="example-box problem">
+        <h3>You Try It 4: Create an Equivalent Representation</h3>
+        <p>A gym rents equipment for \$7 per person and charges one group fee of \$14.</p>
+        <ol>
+          <li>Write an expression for the total cost for $p$ people.</li>
+          <li>Create a different equivalent expression or visual model for the same situation.</li>
+          <li>Explain what each part of your expression or model represents.</li>
+          <li>Which form would be most useful if someone wanted to see the group fee quickly? Explain.</li>
+        </ol>
+        <div class="workspace-600"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: SUMMARY -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Summary</h2>
+        <div class="key-point">
+          <p>Expressions describe quantities using variables, constants, terms, factors, operations, and grouping symbols. The structure of an expression shows how the parts of a quantity are connected.</p>
+          <p>Equivalent expressions may look different but keep the same value for the same input. Rewriting can make an expression easier to simplify, easier to connect to a context, or easier to compare with another representation.</p>
+          <p>Strong algebraic reasoning means checking whether the meaning stayed the same, not just moving symbols around.</p>
+        </div>
+        <div class="workspace-220"></div>
+      </div>
+    </section>
+
+    <!-- SECTION START: COMMON MISTAKES -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Common Mistakes</h2>
+        <div class="mistake-box">
+          <ul>
+            <li><strong>Combining unlike terms.</strong> Why it is tempting: all the symbols are in the same expression. Check instead: only combine terms with the same variable part.</li>
+            <li><strong>Distributing to only one term.</strong> Why it is tempting: students often multiply the first visible term and stop. Check instead: the outside factor must multiply every term inside the group.</li>
+            <li><strong>Assuming same numbers means equivalent.</strong> Why it is tempting: the expressions look related. Check instead: test the operations and structure, not just the numbers.</li>
+            <li><strong>Ignoring context meaning.</strong> Why it is tempting: symbolic work can feel separate from the story. Check instead: ask what each term, factor, and group represents.</li>
+            <li><strong>Thinking simplified form is always best.</strong> Why it is tempting: simplified expressions look shorter. Check instead: choose the form that reveals the information you need.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION START: OPTIONAL FUTURE TASK REFLECTION -->
+    <section>
+      <div class="problem section-title-task-group">
+        <h2>Optional Future Task Reflection</h2>
+        <div class="annotation-box">
+          <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+        </div>
+        <div class="workspace-discuss"></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
