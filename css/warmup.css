@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: letter; margin-top: 0.01in; margin-bottom: 0.01in; margin-left: 0.5in; margin-right: 0.5in; }
+@page { size: letter; margin 0.5in; }
 
 /* ── WARMUP CONTAINER ───────────────────────────────────────── */
 .warmups-container {
@@ -22,16 +22,16 @@
 /* Day header + P1 always on the same page.                     */
 /* New warmup day always starts on a new page.                  */
 .warmup-page {
-    height: 10.98in;
+    height: 9.98in;
     display: flex;
     flex-direction: column;
     page-break-after: always;
-    break-after: never;
+    break-after: page;
     overflow: hidden;
 }
 .warmup-page:last-child {
-    page-break-after: never;
-    break-after: never;
+    page-break-after: auto;
+    break-after: auto;
 }
 
 /* ── WARMUP HEADER ──────────────────────────────────────────── */
@@ -43,7 +43,7 @@
     margin-bottom: 10px;
 }
 .warmup-header h1 {
-    font-size: 18pt;
+    font-size: 16pt;
     color: var(--navy);
     font-weight: 900;
     margin: 0 0 2px 0;
@@ -60,8 +60,8 @@
     border-top: 1px solid var(--navy);
     border-bottom: 1px solid var(--navy);
     border-right: 1px solid var(--navy);
-    padding: 8px 10px 8px 12px;
-    margin-bottom: 8px;
+    padding: 4px 5px 4px 6px;
+    margin-bottom: 4px;
     background: var(--bg);
     break-inside: avoid;
     page-break-inside: avoid;
@@ -73,7 +73,7 @@
 /* Use on every problem card unless content overflows 5.199in. */
 .problem.half {
     flex: 0 0 auto;
-    height: 5.199in;
+    height: 4.992in;
     overflow: hidden;
 }
 
@@ -81,7 +81,7 @@
 /* Marks P1 as being on the header page. Same height as .half.  */
 /* Apply both classes: class="problem half first"               */
 .problem.half.first {
-    height: 5.199in;
+    height: 4.755in;
 }
 
 /* .full — one problem per page.                                */
@@ -192,6 +192,6 @@ table.values th {
 
 /* ── PRINT OVERRIDES ────────────────────────────────────────── */
 @media print {
-    .warmup-header h1 { font-size: 16pt; }
-    .problem          { padding: 7px 9px 7px 11px; }
+    .warmup-header h1 { font-size: 14pt; }
+    .problem          { padding: 6px 8px 6px 10px; }
 }
