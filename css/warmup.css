@@ -34,7 +34,7 @@
     margin-bottom: 10px;
 }
 .warmup-header h1 {
-    font-size: 16pt;
+    font-size: 14pt;
     color: var(--navy);
     font-weight: 900;
     margin: 0 0 2px 0;
@@ -59,7 +59,7 @@
 /* Heights below are print-layout hints; remove if not needed.  */
 .problem.half {
     flex: 0 0 auto;
-    height: 4in;
+    height: 3in;
     overflow: hidden;
 }
 
@@ -67,7 +67,7 @@
 /* Marks P1 as being on the header page. Same height as .half.  */
 /* Apply both classes: class="problem half first"               */
 .problem.half.first {
-    height: 4.755in;
+    height: 3in;
 }
 
 /* .full — one problem per page.                                */
@@ -81,7 +81,7 @@
 .problem-title {
     font-weight: 900;
     color: var(--navy);
-    font-size: 11pt;
+    font-size: 9pt;
     margin-bottom: 5px;
     flex: 0 0 auto;
 }
@@ -91,7 +91,7 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    font-size: 11pt;
+    font-size: 9pt;
     min-height: 0;
 }
 .problem-body p {
@@ -128,7 +128,7 @@ table.values td {
     min-width: 38px;
     text-align: center;
     vertical-align: middle;
-    font-size: 10.5pt;
+    font-size: 8.5pt;
 }
 table.values th {
     background: var(--blue-light);
@@ -142,29 +142,29 @@ table.values th {
     flex: 0 0 auto;
 }
 .warmup-figure img {
-    max-width: 3.2in;
+    max-width: 2.4in;
     height: auto;
     display: block;
     border: 0px solid var(--border-light);
     background: var(--bg);
 }
 .diamond-figure img {
-    max-width: 2.2in;
+    max-width: 1.65in;
 }
 
 /* ── IMAGE SIZE OVERRIDES ───────────────────────────────────── */
 /* Apply to .warmup-figure to manually override image width.    */
 /* Example: <figure class="warmup-figure wu-img-3">             */
-.wu-img-1  img { max-width: 1.0in; }
-.wu-img-2  img { max-width: 1.5in; }
-.wu-img-3  img { max-width: 2.0in; }
-.wu-img-4  img { max-width: 2.5in; }
-.wu-img-5  img { max-width: 3.0in; }
-.wu-img-6  img { max-width: 3.5in; }
-.wu-img-7  img { max-width: 4.0in; }
-.wu-img-8  img { max-width: 4.5in; }
-.wu-img-9  img { max-width: 5.0in; }
-.wu-img-10 img { max-width: 5.5in; }
+.wu-img-1  img { max-width: 0.75in; }
+.wu-img-2  img { max-width: 1.13in; }
+.wu-img-3  img { max-width: 1.50in; }
+.wu-img-4  img { max-width: 1.88in; }
+.wu-img-5  img { max-width: 2.25in; }
+.wu-img-6  img { max-width: 2.63in; }
+.wu-img-7  img { max-width: 3.00in; }
+.wu-img-8  img { max-width: 3.38in; }
+.wu-img-9  img { max-width: 3.75in; }
+.wu-img-10 img { max-width: 4.13in; }
 
 /* ── MULTI-PART LIST ────────────────────────────────────────── */
 .problem-parts {
@@ -178,6 +178,6 @@ table.values th {
 
 /* ── PRINT OVERRIDES ────────────────────────────────────────── */
 @media print {
-    .warmup-header h1 { font-size: 14pt; }
+    .warmup-header h1 { font-size: 12pt; }
     .problem          { padding: 6px 8px 6px 10px; }
 }
