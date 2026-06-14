@@ -179,6 +179,14 @@ table.values th {
 .wu-img-9  img { max-width: 2in; }
 .wu-img-10 img { max-width: 1in; }
 
+/* Bare <div><img></div> inside a problem — no .warmup-figure wrapper.  */
+/* Catches coordinate plane images dropped without a figure element.     */
+.problem-body div img {
+    max-width: 3in;
+    height: auto;
+    display: block;
+}
+
 /* ── MULTI-PART LIST ────────────────────────────────────────── */
 .problem-parts {
     margin: 4px 0 4px 1.1em;
