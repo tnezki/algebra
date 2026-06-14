@@ -1,0 +1,101 @@
+/* ============================================================
+   practice_set.css — Algebra 1
+   tnezki.github.io/algebra/css/practice_set.css
+   Path from file: ../../css/practice_set.css
+
+   Covers: practice_set, extra_practice, cyu
+   Depends on: base.css
+   ============================================================ */
+
+/* ── PAGE ───────────────────────────────────────────────────── */
+@page { size: letter; margin: 0.45in; }
+
+.container { max-width: 930px; }
+
+h1 { font-size: 25pt; margin-bottom: 6px; }
+
+/* ── INTRO BOX ──────────────────────────────────────────────── */
+.unit-intro {
+    border: 2px solid var(--navy);
+    padding: 10px 12px;
+    margin: 10px 0 14px 0;
+    background: var(--blue-bg);
+}
+
+/* ── SECTION LABEL ──────────────────────────────────────────── */
+.section-label {
+    background: var(--blue-light);
+    border: 1px solid #a9b9cf;
+    color: #22354d;
+    font-weight: 800;
+    font-size: 11pt;
+    padding: 8px 12px;
+    margin: 16px 0 10px 0;
+    border-radius: 4px;
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+/* ── PROBLEM CARD ───────────────────────────────────────────── */
+.problem {
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+    margin: 10px 0 13px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background: var(--bg);
+}
+.problem-number {
+    font-weight: 900;
+    color: var(--navy);
+    font-size: 12.5pt;
+    margin-bottom: 7px;
+}
+.problem-meta {
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 9.5pt;
+    margin-left: 6px;
+}
+
+/* ── LISTS ──────────────────────────────────────────────────── */
+.lower-alpha { list-style-type: lower-alpha; }
+
+/* ── MATCH GRID ─────────────────────────────────────────────── */
+.match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 8px 0;
+}
+.match-card {
+    border: 1px solid #aaa;
+    padding: 8px;
+    min-height: 56px;
+}
+
+/* ── TILE PATTERNS ──────────────────────────────────────────── */
+.tile-row {
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.tile-fig { text-align: center; }
+.sq-grid  { display: grid; gap: 2px; justify-content: center; margin-bottom: 5px; }
+.sq {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #333;
+    background: var(--blue-light);
+}
+.mini-note { font-size: 9.5pt; color: var(--muted); font-style: italic; }
+
+/* ── PRINT ──────────────────────────────────────────────────── */
+@media print {
+    body    { font-size: 10.5pt; }
+    h1      { font-size: 23pt;   }
+    .problem { padding: 10px 12px; }
+}
