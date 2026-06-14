@@ -49,8 +49,8 @@
     flex-direction: column;
     border-left: 6px solid var(--navy);
     border-top: 1px solid var(--navy);
-    border-bottom: 1px solid var(--navy);
-    border-right: 1px solid var(--navy);
+    border-bottom: 0px solid var(--navy);
+    border-right: 0px solid var(--navy);
     padding: 4px 5px 4px 6px;
     margin-bottom: 4px;
     background: var(--bg);
@@ -66,8 +66,8 @@ section.warmup-page:last-child .problem:last-child {
 /* .half — default. Two problems share a page.                  */
 /* Heights below are print-layout hints; remove if not needed.  */
 .problem.half {
-    flex: 1 0 4.2in;
-    
+    flex: 1 0 4in;
+    min-height: 4in;
     overflow: hidden;
 }
 
@@ -75,7 +75,8 @@ section.warmup-page:last-child .problem:last-child {
 /* Marks P1 as being on the header page. Same height as .half.  */
 /* Apply both classes: class="problem half first"               */
 .problem.half.first {
-    flex: 1 0 4.2in;
+    flex: 1 0 4in;
+    min-height: 4in;
     /*height: 3in;*/ 
 
 
