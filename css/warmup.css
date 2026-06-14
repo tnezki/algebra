@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: letter; margin: 1in; }
+@page { size: letter; margin: .1in; }
 
 /* ── WARMUP CONTAINER ───────────────────────────────────────── */
 .warmups-container {
@@ -59,7 +59,7 @@
 /* Heights below are print-layout hints; remove if not needed.  */
 .problem.half {
     flex: 0 0 auto;
-    height: 3in;
+    
     overflow: hidden;
 }
 
@@ -67,7 +67,10 @@
 /* Marks P1 as being on the header page. Same height as .half.  */
 /* Apply both classes: class="problem half first"               */
 .problem.half.first {
-    height: 3in;
+    flex: 0 0 auto;
+    /*height: 3in;*/ 
+
+
 }
 
 /* .full — one problem per page.                                */
@@ -102,16 +105,16 @@
 /* ── WORKSPACE ──────────────────────────────────────────────── */
 /* Plain white — grows to fill remaining card height.           */
 .workspace {
-    flex: 1 1 auto;
-    min-height: 1.0in;
+    flex: 0 0 0px;
+    min-height: 0in;
     background: #fff;
-    margin-top: 6px;
+    margin-top: 2px;
     border: none;
 }
-/* Short workspace for Problem 4 diamond.                       */
+/* Short workspace for Problem 4 diamond.   forcing no workspace                    */
 .workspace.short {
-    flex: 0 0 auto;
-    min-height: 0.5in;
+    flex: 0 0 0;
+    height: 0;
 }
 
 /* ── TABLES ─────────────────────────────────────────────────── */
@@ -142,7 +145,7 @@ table.values th {
     flex: 0 0 auto;
 }
 .warmup-figure img {
-    max-width: 2.4in;
+    max-width: .1in;
     height: auto;
     display: block;
     border: 0px solid var(--border-light);
@@ -155,16 +158,16 @@ table.values th {
 /* ── IMAGE SIZE OVERRIDES ───────────────────────────────────── */
 /* Apply to .warmup-figure to manually override image width.    */
 /* Example: <figure class="warmup-figure wu-img-3">             */
-.wu-img-1  img { max-width: 0.75in; }
-.wu-img-2  img { max-width: 1.13in; }
-.wu-img-3  img { max-width: 1.50in; }
-.wu-img-4  img { max-width: 1.88in; }
-.wu-img-5  img { max-width: 2.25in; }
-.wu-img-6  img { max-width: 2.63in; }
-.wu-img-7  img { max-width: 3.00in; }
-.wu-img-8  img { max-width: 3.38in; }
-.wu-img-9  img { max-width: 3.75in; }
-.wu-img-10 img { max-width: 4.13in; }
+.wu-img-1  img { max-width: 1in; }
+.wu-img-2  img { max-width: 1in; }
+.wu-img-3  img { max-width: 1in; }
+.wu-img-4  img { max-width: 1in; }
+.wu-img-5  img { max-width: 1in; }
+.wu-img-6  img { max-width: 1in; }
+.wu-img-7  img { max-width: 1.00in; }
+.wu-img-8  img { max-width: 1.0in; }
+.wu-img-9  img { max-width: 1.0in; }
+.wu-img-10 img { max-width: 1.0in; }
 
 /* ── MULTI-PART LIST ────────────────────────────────────────── */
 .problem-parts {
