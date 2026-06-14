@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: letter; margin: 0.5in; }
+@page { size: letter; margin: 1in; }
 
 /* ── WARMUP CONTAINER ───────────────────────────────────────── */
 .warmups-container {
@@ -18,20 +18,11 @@
 }
 
 /* ── PAGE WRAPPER ───────────────────────────────────────────── */
-/* One .warmup-page = one printed page.                         */
-/* Day header + P1 always on the same page.                     */
-/* New warmup day always starts on a new page.                  */
+/* Groups one warmup day's content. Flows naturally — no forced */
+/* page breaks. Browser/print engine handles pagination.        */
 .warmup-page {
-    height: 9.98in;
     display: flex;
     flex-direction: column;
-    page-break-after: always;
-    break-after: page;
-    overflow: hidden;
-}
-.warmup-page:last-child {
-    page-break-after: auto;
-    break-after: auto;
 }
 
 /* ── WARMUP HEADER ──────────────────────────────────────────── */
@@ -52,7 +43,6 @@
 
 /* ── PROBLEM CARD ───────────────────────────────────────────── */
 /* Left accent bar only — no full outer border.                 */
-/* break-inside: avoid keeps title+question+workspace together. */
 .problem {
     display: flex;
     flex-direction: column;
@@ -63,17 +53,13 @@
     padding: 4px 5px 4px 6px;
     margin-bottom: 4px;
     background: var(--bg);
-    break-inside: avoid;
-    page-break-inside: avoid;
-    
-  
 }
 
 /* .half — default. Two problems share a page.                  */
-/* Use on every problem card unless content overflows 5.199in. */
+/* Heights below are print-layout hints; remove if not needed.  */
 .problem.half {
     flex: 0 0 auto;
-    height: 4.992in;
+    height: 4in;
     overflow: hidden;
 }
 
