@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: letter; margin: .1in; }
+@page { size: 8.5in 6in; margin: .5in; }
 
 /* ── WARMUP CONTAINER ───────────────────────────────────────── */
 .warmups-container {
@@ -43,6 +43,7 @@
 
 /* ── PROBLEM CARD ───────────────────────────────────────────── */
 /* Left accent bar only — no full outer border.                 */
+/* Every problem gets its own page.                             */
 .problem {
     display: flex;
     flex-direction: column;
@@ -53,12 +54,19 @@
     padding: 4px 5px 4px 6px;
     margin-bottom: 4px;
     background: var(--bg);
+    break-after: page;
+    page-break-after: always;
+}
+/* Cancel break on the very last problem — prevents trailing blank page. */
+section.warmup-page:last-child .problem:last-child {
+    break-after: auto;
+    page-break-after: auto;
 }
 
 /* .half — default. Two problems share a page.                  */
 /* Heights below are print-layout hints; remove if not needed.  */
 .problem.half {
-    flex: 0 0 5.5in;
+    flex: 1 0 4.2in;
     
     overflow: hidden;
 }
@@ -67,7 +75,7 @@
 /* Marks P1 as being on the header page. Same height as .half.  */
 /* Apply both classes: class="problem half first"               */
 .problem.half.first {
-    flex: 0 0 5in;
+    flex: 1 0 4.2in;
     /*height: 3in;*/ 
 
 
