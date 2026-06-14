@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: 8.5in 6in; margin: .5in; }
+@page { size: 8.5in 11in; margin: .5in; }
 
 /* ── WARMUP CONTAINER ───────────────────────────────────────── */
 .warmups-container {
@@ -29,13 +29,14 @@
 /* Only appears on the first .warmup-page of each day.          */
 .warmup-header {
     flex: 0 0 auto;
-    border-bottom: 2px solid var(--navy);
-    padding-bottom: 5px;
+    background: var(--navy);
+    padding: 6px 10px;
     margin-bottom: 10px;
 }
+
 .warmup-header h1 {
     font-size: 14pt;
-    color: var(--navy);
+    color: #ffffff;
     font-weight: 900;
     margin: 0 0 2px 0;
     line-height: 1.1;
@@ -47,8 +48,8 @@
 .problem {
     display: flex;
     flex-direction: column;
-    border-left: 6px solid var(--navy);
-    border-top: 1px solid var(--navy);
+    border-left: 0px solid var(--navy);
+    border-top: 8px double var(--navy); 
     border-bottom: 0px solid var(--navy);
     border-right: 0px solid var(--navy);
     padding: 4px 5px 4px 6px;
