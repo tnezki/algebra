@@ -3,135 +3,202 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Practice Set 1.2.1</title>
+<title>Practice Set 1.1.1</title>
 <script>
 MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-
-@page { size: letter; margin: 0.45in; }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.45; color:#222; background:#fff; font-size:11pt; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-.container { max-width: 930px; margin:0 auto; }
-h1 { color:#00003d; font-size:25pt; line-height:1.1; margin-bottom:6px; }
-h2 { color:#00003d; font-size:16pt; margin:16px 0 8px 0; border-left:6px solid #00003d; padding-left:10px; }
-.unit-intro { border:2px solid #00003d; padding:10px 12px; margin:10px 0 14px 0; background:#f8fbff; }
-.section-label { background:#eaf1fb; border:1px solid #a9b9cf; color:#22354d; font-weight:800; font-size:11pt; padding:8px 12px; margin:16px 0 10px 0; border-radius:4px; break-after:avoid; }
-.problem { border:1px solid #777; padding:12px 14px; margin:10px 0 13px 0; break-inside:avoid; page-break-inside:avoid; background:#fff; }
-.problem-number { font-weight:900; color:#00003d; font-size:12.5pt; margin-bottom:7px; }
-.problem-meta { color:#555; font-weight:700; font-size:9.5pt; margin-left:6px; }
-p { margin:6px 0; }
-ol, ul { margin:6px 0 8px 28px; }
-li { margin-bottom:5px; }
-.lower-alpha { list-style-type: lower-alpha; }
-table.values, .table-block, .rep-table { width:auto; margin:10px auto 12px auto; border-collapse:collapse; }
-table.values th, table.values td, .table-block th, .table-block td, .rep-table th, .rep-table td { border:1px solid #777; padding:7px 15px; text-align:center; vertical-align:middle; min-width:42px; }
-table.values th, .table-block th, .rep-table th { background:#eaf1fb; color:#00003d; font-weight:800; }
-.graph-block, .figure-block { margin:10px 0 8px 0; text-align:center; break-inside:avoid; page-break-inside:avoid; }
-.graph-block img, .figure-block img { max-width:100%; height:auto; border:1px solid #ccc; background:#fff; }
-.graph-sm img { max-width:2.3in; } .graph-md img { max-width:3.0in; } .graph-lg img { max-width:3.8in; }
-.workspace { height:380px; border:1px dashed #aaa; margin-top:10px; }
-.workspace-sm { height:250px; border:1px dashed #aaa; margin-top:10px; }
-.page-break { page-break-before:always; break-before:page; }
-blockquote { border-left:5px solid #777; margin:8px 0 10px 10px; padding:6px 10px; background:#f7f7f7; font-style:italic; }
-.match-grid { display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin:8px 0; }
-.match-card { border:1px solid #aaa; padding:8px; min-height:56px; }
-.machine-row { display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap; margin:10px 0; }
-.machine { border:2px solid #00003d; border-radius:10px; padding:10px 14px; min-width:150px; text-align:center; background:#f8fbff; font-weight:700; }
-.arrow { font-size:18pt; font-weight:900; color:#00003d; }
-.mini-note { font-size:9.5pt; color:#555; font-style:italic; }
-@media print { body { font-size:10.5pt; } h1 { font-size:23pt; } .problem { padding:10px 12px; } }
-
-</style>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/practice_set.css"/>
 </head>
 <body>
 <div class="container">
-<h1>Practice Set 1.2.1</h1>
-<div class="unit-intro">Entry / Early Unit Spiral: input-output reasoning, function machines, and Unit 0A.2 / Unit 0B.2 retrieval.</div>
-<div class="section-label">Unit 1.2 — Inputs, Outputs, and Functions</div>
-<section class="problem" id="p01">
-<div class="problem-number">1.<span class="problem-meta">Unit 1.2 | DoK 1 | Function machine</span></div>
-<p>A function machine uses the rule $y=2x+3$.</p><div class="machine-row"><div class="machine">Input<br/>$x=4$</div><div class="arrow">&rarr;</div><div class="machine">Rule<br/>$y=2x+3$</div><div class="arrow">&rarr;</div><div class="machine">Output<br/>$y=?$</div></div><p>Find the output.</p>
-<div class="workspace"></div>
+
+<h1>Practice Set 1.1.1</h1>
+
+<!-- ══════════════════ PROBLEMS 1–16 ══════════════════════ -->
+<!-- Each .ps-page holds exactly 2 .problem.half items.     -->
+<!-- break-after: page on flex items fires at .ps-page      -->
+<!-- boundary → 2 problems per printed page.                -->
+
+<div class="ps-page">
+<section class="problem half" id="p01">
+<div class="problem-title">1.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 2x + 3 = 11$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p02">
-<div class="problem-number">2.<span class="problem-meta">Unit 1.2 | DoK 1 | Function notation</span></div>
-<p>For the rule $f(x)=3x-2$, find $f(5)$.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p02">
+<div class="problem-title">2.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 3x - 5 = 10$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p03">
-<div class="problem-number">3.<span class="problem-meta">Unit 1.2 | DoK 2 | Table of outputs</span></div>
-<p>Complete the output row for the rule: subtract 4 from the input, then multiply by 2.</p><table class="values"><tr><th>Input</th><td>-1</td><td>0</td><td>3</td><td>6</td></tr><tr><th>Output</th><td></td><td></td><td></td><td></td></tr></table>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p03">
+<div class="problem-title">3.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad -4x + 2 = 18$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p04">
-<div class="problem-number">4.<span class="problem-meta">Unit 1.2 | DoK 2 | Function or not</span></div>
-<p>Decide whether the table could represent a function. Explain using inputs and outputs.</p><table class="values"><tr><th>Input</th><td>2</td><td>4</td><td>2</td><td>7</td></tr><tr><th>Output</th><td>9</td><td>1</td><td>9</td><td>0</td></tr></table>
-<div class="workspace"></div>
+<section class="problem half" id="p04">
+<div class="problem-title">4.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad \dfrac{x}{2} + 4 = 9$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<div class="section-label">Unit A.2 Spiral — Order of Operations and Evaluating Expressions</div>
-<section class="problem" id="p05">
-<div class="problem-number">5.<span class="problem-meta">Unit 0A.2 | DoK 1 | Order of operations</span></div>
-<p>Evaluate: $$18-2(3^2-4)$$</p>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p05">
+<div class="problem-title">5.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 5x - 7 = 18$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p06">
-<div class="problem-number">6.<span class="problem-meta">Unit 0A.2 | DoK 1 | Substitution</span></div>
-<p>Evaluate $4x+7$ when $x=-2$.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p06">
+<div class="problem-title">6.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad -2x + 6 = -8$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p07">
-<div class="problem-number">7.<span class="problem-meta">Unit 0A.2 | DoK 1 | Exponents</span></div>
-<p>Evaluate: $$(-3)^2+2^3$$</p>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p07">
+<div class="problem-title">7.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad \dfrac{x}{3} - 2 = 4$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p08">
-<div class="problem-number">8.<span class="problem-meta">Unit 0A.2 | DoK 1 | Expression value</span></div>
-<p>Evaluate $a^2-b$ when $a=5$ and $b=11$.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p08">
+<div class="problem-title">8.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 4x + 9 = -3$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p09">
-<div class="problem-number">9.<span class="problem-meta">Unit 0A.2 | DoK 2 | Context expression</span></div>
-<p>A school club sells bracelets for 6 dollars each and pays a one-time booth fee of 18 dollars. Write and evaluate an expression for the profit before other expenses if the club sells 14 bracelets.</p>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p09">
+<div class="problem-title">9.<span class="problem-meta">DoK 2 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad -x + 12 = 5$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p10">
-<div class="problem-number">10.<span class="problem-meta">Unit 0A.2 | DoK 2 | Multi-step substitution</span></div>
-<p>Evaluate $2m^2-3n$ when $m=-4$ and $n=5$. Show the substitution step.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p10">
+<div class="problem-title">10.<span class="problem-meta">DoK 2 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 6x - 4 = 20$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p11">
-<div class="problem-number">11.<span class="problem-meta">Unit 0A.2 | DoK 3 | Error analysis</span></div>
-<p>A student evaluates $5+2(6)^2$ and gets $196$ because they add first. Identify the error and evaluate correctly.</p>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p11">
+<div class="problem-title">11.<span class="problem-meta">DoK 2 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 3x + 8 = -1$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p12">
-<div class="problem-number">12.<span class="problem-meta">Unit 0A.2 | DoK 4 | Design an expression</span></div>
-<p>Create an expression using parentheses, an exponent, addition, and multiplication that has a value of $30$. Then explain the order used to evaluate it.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p12">
+<div class="problem-title">12.<span class="problem-meta">DoK 2 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad \dfrac{x}{4} + 7 = 10$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<div class="section-label">Unit B.2 Spiral — Patterns and Input-Output Rules</div>
-<section class="problem" id="p13">
-<div class="problem-number">13.<span class="problem-meta">Unit 0B.2 | DoK 1 | Rule output</span></div>
-<p>For the rule $y=x+5$, find the output when $x=11$.</p>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p13">
+<div class="problem-title">13.<span class="problem-meta">DoK 1 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = 2x + 1$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p14">
-<div class="problem-number">14.<span class="problem-meta">Unit 0B.2 | DoK 1 | Inputs and outputs</span></div>
-<p>Identify the inputs and outputs in the table.</p><table class="values"><tr><th>Input</th><td>1</td><td>2</td><td>3</td></tr><tr><th>Output</th><td>7</td><td>9</td><td>11</td></tr></table>
-<div class="workspace"></div>
+<section class="problem half" id="p14">
+<div class="problem-title">14.<span class="problem-meta">DoK 1 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = -3x + 5$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p15">
-<div class="problem-number">15.<span class="problem-meta">Unit 0B.2 | DoK 2 | Complete a table</span></div>
-<p>Complete the table for the rule $y=3x-1$.</p><table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table>
-<div class="workspace"></div>
+</div><!-- end ps-page -->
+
+<div class="ps-page">
+<section class="problem half" id="p15">
+<div class="problem-title">15.<span class="problem-meta">DoK 2 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = \dfrac{1}{2}x - 2$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
-<section class="problem" id="p16">
-<div class="problem-number">16.<span class="problem-meta">Unit 0B.2 | DoK 2 | Describe a rule</span></div>
-<p>The outputs are $4, 9, 14, 19$ for inputs $0, 1, 2, 3$. Describe the rule in words.</p>
-<div class="workspace"></div>
+<section class="problem half" id="p16">
+<div class="problem-title">16.<span class="problem-meta">DoK 2 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = -x + 4$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
 </section>
+</div><!-- end ps-page -->
+
+<!-- ══════════════════ EXIT TICKET ════════════════════════ -->
+<!-- break-before: page on .exit-ticket-label starts        -->
+<!-- a clean page; no .ps-page wrapper needed here.         -->
+
+<div class="exit-ticket-label">Exit Ticket</div>
+
+<div class="exit-ticket-grid">
+
+<section class="problem" id="et01">
+<div class="problem-title">1.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad 2x - 5 = 9$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
+</section>
+
+<section class="problem" id="et02">
+<div class="problem-title">2.<span class="problem-meta">DoK 1 | Two-Step Equations</span></div>
+<div class="problem-body">
+<p>Solve for $x$: $\quad -3x + 1 = 13$</p>
+<div class="workspace wu-ws-000"></div>
+</div>
+</section>
+
+<section class="problem" id="et03">
+<div class="problem-title">3.<span class="problem-meta">DoK 1 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = 3x - 2$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
+</section>
+
+<section class="problem" id="et04">
+<div class="problem-title">4.<span class="problem-meta">DoK 2 | Slope-Intercept Form</span></div>
+<div class="problem-body">
+<p>Graph the equation $y = -\dfrac{1}{2}x + 3$. Plot at least three points and draw the line.</p>
+<div class="workspace wu-ws-000"></div>
+</div>
+</section>
+
+</div><!-- end exit-ticket-grid -->
+
 </div>
 </body>
 </html>
