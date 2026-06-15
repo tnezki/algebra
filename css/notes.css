@@ -1,129 +1,128 @@
 /* ============================================================
    notes.css — Algebra 1
    tnezki.github.io/algebra/css/notes.css
-   Path from file: ../../css/notes.css
+   Path from notes HTML: ../../css/notes.css
 
-   Depends on: base.css
-   Rich component library: title page, math notes box,
-   reading boxes, examples, stop-and-discuss, sketches.
+   Requires: base.css loaded FIRST.
+   base.css provides: --navy, --navy-mid, --border, --border-light,
+   --blue-light, --blue-bg, --bg, --muted tokens; reset;
+   body/typography; table/table.values; .page-break; print.
+
+   Architecture:
+     .notes-page    → flex column; one section per printed page;
+                       break-after: page fires directly on wrapper
+     .notes-ws      → writing/annotation space; flex: 1 1 auto
+                       auto-fills remaining page height by default;
+                       override with wu-ws-NNN for fixed size
+     .math-notes    → navy-header content box (Math Notes)
+     .example-box   → example and YTI sections
+     .notes-figure  → figure container; default img 3in
+     .wu-img-NNN    → image width overrides (matches warmup.css)
+     .wu-ws-NNN     → writing space height overrides
    ============================================================ */
 
-/* ── PAGE / BODY ────────────────────────────────────────────── */
-@page { size: letter; margin: 0.45in; }
+/* ── PAGE SETUP ─────────────────────────────────────────────── */
+@page { size: 8.5in 11in; margin: .5in; }
 
-body {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #242424;
-    padding: 20px;
-}
-.container { max-width: 900px; }
-
-section { margin-bottom: 30px; }
-
-/* ── TYPOGRAPHY ─────────────────────────────────────────────── */
-h1 { font-size: 2.45em; margin-bottom: 20px; line-height: 1.15; }
-h2 { font-size: 1.72em; margin-top: 28px; margin-bottom: 14px; border-left: 5px solid var(--navy); padding-left: 10px; break-after: avoid; page-break-after: avoid; }
-h3 { font-size: 1.22em; margin-top: 14px; margin-bottom: 8px; break-after: avoid; page-break-after: avoid; }
-h4 { margin-bottom: 6px; font-size: 1.02em; }
-
-/* ── TITLE PAGE ─────────────────────────────────────────────── */
-.title-page {
-    min-height: 930px;
+/* ── NOTES PAGE WRAPPER ─────────────────────────────────────── */
+/* One section = one Notability page.                            */
+/* min-height: 9.5in fills the printable content area.          */
+/* break-after fires directly on the wrapper (not on flex items) */
+/* because notes sections are not paired like practice problems. */
+.notes-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border: 2px solid var(--navy);
-    padding: 56px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+    min-height: 9.5in;
+    break-after: page;
+    page-break-after: always;
 }
-.title-kicker {
-    font-weight: 800;
-    color: var(--navy-mid);
+
+/* Cancel break on the last page — prevents a trailing blank.   */
+.notes-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+    min-height: 0;
+}
+
+/* ── WRITING SPACE ──────────────────────────────────────────── */
+/* Default: grows to fill whatever height remains on the page   */
+/* after content. No border or shading — clean annotation area. */
+/* Override with wu-ws-NNN for a fixed height.                  */
+/* Usage (auto-fill): <div class="notes-ws"></div>              */
+/* Usage (fixed):     <div class="notes-ws wu-ws-300"></div>    */
+.notes-ws {
+    flex: 1 1 auto;
+    min-height: 1in;
+    margin-top: 8px;
+}
+
+/* Optional thin rule at top of writing space.                  */
+/* Usage: <div class="notes-ws ws-ruled"></div>                 */
+.ws-ruled {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 4px;
+}
+
+/* Small label at top of writing area.                          */
+/* Usage: <div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div> */
+.ws-label {
+    display: block;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--muted);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-.title-main  { font-size: 3em; font-weight: 900; line-height: 1.1; margin-bottom: 18px; }
-.title-sub   { font-size: 1.28em; color: #333; margin-bottom: 28px; }
-.quote-box   { border-left: 6px solid var(--navy); background: #eef3ff; padding: 18px 22px; border-radius: 6px; margin-top: 26px; font-size: 1.12em; }
-.title-note  { margin-top: 26px; color: var(--muted); font-size: 1.04em; }
-
-/* ── LEARNING OBJECTIVES ────────────────────────────────────── */
-.objectives {
-    background: #f0f4f8;
-    padding: 20px;
-    border-radius: 6px;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
 }
 
-/* ── CONTENT BOXES ──────────────────────────────────────────── */
-.reading-box {
-    background: #fbfbff;
-    border-left: 5px solid #7c89c7;
-    padding: 18px;
-    margin: 16px 0;
-    border-radius: 6px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.key-point {
-    background: #e8f5e9;
-    border-left: 5px solid #4caf50;
-    padding: 16px;
-    margin: 16px 0;
-    border-radius: 6px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.strategy-box {
-    background: #eef3ff;
-    border-left: 5px solid #4a6fdc;
-    padding: 16px;
-    margin: 16px 0;
-    border-radius: 6px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.mistake-box {
-    background: #fff3e8;
-    border-left: 5px solid #dd7a21;
-    padding: 16px;
-    margin: 16px 0;
-    border-radius: 6px;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.annotation-box {
-    border: 1px solid #bfc8d8;
-    border-radius: 6px;
-    padding: 14px;
-    margin: 14px 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.claim-card {
-    border: 1px solid #aaa;
-    border-left: 5px solid #555;
-    border-radius: 6px;
-    padding: 12px;
-    margin: 10px 0;
-    background: #fafafa;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
+/* ── WORKSPACE SIZE OVERRIDES ───────────────────────────────── */
+/* Overrides flex: 1 1 auto on .notes-ws with a fixed height.   */
+/* Same ladder as warmup.css and practice_set.css.              */
+.wu-ws-000 { flex: 0 0 0in;    min-height: 0in;    }
+.wu-ws-025 { flex: 0 0 0.25in; min-height: 0.25in; }
+.wu-ws-050 { flex: 0 0 0.50in; min-height: 0.50in; }
+.wu-ws-075 { flex: 0 0 0.75in; min-height: 0.75in; }
+.wu-ws-100 { flex: 0 0 1.00in; min-height: 1.00in; }
+.wu-ws-125 { flex: 0 0 1.25in; min-height: 1.25in; }
+.wu-ws-150 { flex: 0 0 1.50in; min-height: 1.50in; }
+.wu-ws-175 { flex: 0 0 1.75in; min-height: 1.75in; }
+.wu-ws-200 { flex: 0 0 2.00in; min-height: 2.00in; }
+.wu-ws-225 { flex: 0 0 2.25in; min-height: 2.25in; }
+.wu-ws-250 { flex: 0 0 2.50in; min-height: 2.50in; }
+.wu-ws-275 { flex: 0 0 2.75in; min-height: 2.75in; }
+.wu-ws-300 { flex: 0 0 3.00in; min-height: 3.00in; }
+.wu-ws-325 { flex: 0 0 3.25in; min-height: 3.25in; }
+.wu-ws-350 { flex: 0 0 3.50in; min-height: 3.50in; }
+.wu-ws-375 { flex: 0 0 3.75in; min-height: 3.75in; }
+.wu-ws-400 { flex: 0 0 4.00in; min-height: 4.00in; }
+.wu-ws-425 { flex: 0 0 4.25in; min-height: 4.25in; }
+.wu-ws-450 { flex: 0 0 4.50in; min-height: 4.50in; }
+.wu-ws-475 { flex: 0 0 4.75in; min-height: 4.75in; }
+.wu-ws-500 { flex: 0 0 5.00in; min-height: 5.00in; }
+.wu-ws-525 { flex: 0 0 5.25in; min-height: 5.25in; }
+.wu-ws-550 { flex: 0 0 5.50in; min-height: 5.50in; }
+.wu-ws-575 { flex: 0 0 5.75in; min-height: 5.75in; }
+.wu-ws-600 { flex: 0 0 6.00in; min-height: 6.00in; }
+.wu-ws-625 { flex: 0 0 6.25in; min-height: 6.25in; }
+.wu-ws-650 { flex: 0 0 6.50in; min-height: 6.50in; }
+.wu-ws-675 { flex: 0 0 6.75in; min-height: 6.75in; }
+.wu-ws-700 { flex: 0 0 7.00in; min-height: 7.00in; }
+.wu-ws-725 { flex: 0 0 7.25in; min-height: 7.25in; }
+.wu-ws-750 { flex: 0 0 7.50in; min-height: 7.50in; }
+.wu-ws-775 { flex: 0 0 7.75in; min-height: 7.75in; }
+.wu-ws-800 { flex: 0 0 8.00in; min-height: 8.00in; }
 
 /* ── MATH NOTES BOX ─────────────────────────────────────────── */
+/* Navy header bar + content area. No internal writing space.   */
+/* Writing space goes AFTER the box as a page-level .notes-ws.  */
 .math-notes {
     border: 2px solid var(--navy);
     border-radius: 8px;
-    margin: 16px 0 20px 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    margin: 10px 0 12px 0;
     overflow: hidden;
+    flex: 0 0 auto;
 }
+
 .math-notes-header {
     background: var(--navy);
     color: #fff;
@@ -132,102 +131,245 @@ h4 { margin-bottom: 6px; font-size: 1.02em; }
     align-items: baseline;
     gap: 10px;
 }
-.math-notes-header .mn-label {
-    font-size: 0.82em;
+
+.math-notes-label {
+    font-size: 8pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     opacity: 0.75;
     white-space: nowrap;
 }
-.math-notes-header .mn-title { font-size: 1.08em; font-weight: 800; }
-.math-notes-body { padding: 16px 18px 10px 18px; }
+
+.math-notes-title {
+    font-size: 11pt;
+    font-weight: 800;
+}
+
+.math-notes-body {
+    padding: 12px 16px 12px 16px;
+}
+
 .math-notes-body p          { margin-bottom: 8px; }
 .math-notes-body ul,
 .math-notes-body ol         { margin-left: 22px; margin-bottom: 8px; }
 .math-notes-body li         { margin-bottom: 6px; }
 
-/* ── SKETCH AREAS (notes only — no box/shading) ─────────────── */
-.mn-sketch {
-    margin-top: 14px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-.mn-sketch-label {
-    font-size: 0.82em;
-    font-weight: 700;
-    color: #7c89c7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    padding-top: 2px;
-}
-.mn-sketch-area { flex: 1; min-height: 210px; }
-
-.mn-sketch-cols {
+/* ── REP GRID (2-col vocabulary cards) ──────────────────────── */
+/* Used inside Math Notes for term definitions.                  */
+.rep-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 14px;
+    gap: 10px;
+    margin: 10px 0;
 }
-.mn-sketch-cell { padding: 4px 0 0 0; min-height: 170px; }
-.mn-sketch-cell .mn-cell-label {
-    font-size: 0.80em;
+
+.rep-card {
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 10px;
+    background: var(--bg);
+}
+
+.rep-card h4 {
+    color: var(--navy);
+    font-size: 10.5pt;
+    margin-bottom: 4px;
+}
+
+/* ── SKETCH COLS (2-col in math-notes for student labels) ───── */
+.sketch-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.sketch-cell {
+    min-height: 2.5in;
+}
+
+.sketch-cell-label {
+    display: block;
+    font-size: 8pt;
     font-weight: 700;
-    color: #7c89c7;
+    color: var(--navy-mid);
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    margin-bottom: 4px;
-    display: block;
     border-bottom: 1px solid #ccd;
     padding-bottom: 3px;
+    margin-bottom: 6px;
 }
 
-/* ── EXAMPLE / YOU TRY IT ───────────────────────────────────── */
+/* ── EXAMPLE / YTI ──────────────────────────────────────────── */
+/* Used for Example N and You Try It N sections.                */
+/* base.css h3 handles heading color/size.                      */
 .example-box {
-    border: none;
-    padding: 0;
-    margin: 8px 0 14px 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    flex: 0 0 auto;
+    margin-bottom: 8px;
 }
-.example-box h3 { margin-top: 0; margin-bottom: 8px; }
-.problem { break-inside: avoid; page-break-inside: avoid; margin-bottom: 14px; }
-.section-title-task-group { break-inside: avoid; page-break-inside: avoid; }
 
-/* ── LAYOUT HELPERS ─────────────────────────────────────────── */
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    align-items: start;
+/* ── CALLOUT BOXES ──────────────────────────────────────────── */
+.reading-box {
+    background: #fbfbff;
+    border-left: 5px solid #7c89c7;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 6px;
+    flex: 0 0 auto;
 }
-.representation-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 14px 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
+
+.strategy-box {
+    background: var(--blue-bg);
+    border-left: 5px solid var(--navy-mid);
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 6px;
+    flex: 0 0 auto;
 }
-.rep-card {
-    border: 1px solid #cfd6e6;
-    border-radius: 8px;
-    padding: 12px;
+
+.key-point {
+    background: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
+
+.mistake-box {
+    background: #fff3e8;
+    border-left: 5px solid #dd7a21;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
+
+.annotation-box {
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 14px;
+    margin: 10px 0;
+    flex: 0 0 auto;
+}
+
+.claim-card {
+    border: 1px solid #aaa;
+    border-left: 5px solid #555;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 10px 0;
+    background: #fafafa;
+    flex: 0 0 auto;
+}
+
+.objectives {
+    background: #f0f4f8;
+    padding: 16px;
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
+
+/* ── FIGURE ─────────────────────────────────────────────────── */
+/* Default: 3in. Override with wu-img-NNN.                      */
+/* Usage: <figure class="notes-figure wu-img-350"><img…>        */
+.notes-figure {
+    margin: 8px auto 6px auto;
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.notes-figure img {
+    max-width: 3in;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--border-light);
     background: var(--bg);
-    break-inside: avoid;
-    page-break-inside: avoid;
 }
 
-/* ── PRINT ──────────────────────────────────────────────────── */
+/* ── IMAGE SIZE OVERRIDES ───────────────────────────────────── */
+/* Same ladder as warmup.css and practice_set.css.              */
+.wu-img-025 img { max-width: 0.25in; }
+.wu-img-050 img { max-width: 0.50in; }
+.wu-img-075 img { max-width: 0.75in; }
+.wu-img-100 img { max-width: 1.00in; }
+.wu-img-125 img { max-width: 1.25in; }
+.wu-img-150 img { max-width: 1.50in; }
+.wu-img-175 img { max-width: 1.75in; }
+.wu-img-200 img { max-width: 2.00in; }
+.wu-img-225 img { max-width: 2.25in; }
+.wu-img-250 img { max-width: 2.50in; }
+.wu-img-275 img { max-width: 2.75in; }
+.wu-img-300 img { max-width: 3.00in; }
+.wu-img-325 img { max-width: 3.25in; }
+.wu-img-350 img { max-width: 3.50in; }
+.wu-img-375 img { max-width: 3.75in; }
+.wu-img-400 img { max-width: 4.00in; }
+.wu-img-425 img { max-width: 4.25in; }
+.wu-img-450 img { max-width: 4.50in; }
+.wu-img-475 img { max-width: 4.75in; }
+.wu-img-500 img { max-width: 5.00in; }
+.wu-img-525 img { max-width: 5.25in; }
+.wu-img-550 img { max-width: 5.50in; }
+.wu-img-575 img { max-width: 5.75in; }
+.wu-img-600 img { max-width: 6.00in; }
+.wu-img-625 img { max-width: 6.25in; }
+.wu-img-650 img { max-width: 6.50in; }
+.wu-img-675 img { max-width: 6.75in; }
+.wu-img-700 img { max-width: 7.00in; }
+.wu-img-725 img { max-width: 7.25in; }
+.wu-img-750 img { max-width: 7.50in; }
+
+/* ── TITLE PAGE ─────────────────────────────────────────────── */
+/* Standalone first page; no notes-ws needed.                   */
+.notes-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--navy);
+    padding: 48px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+    flex: 1 1 auto; /* fills the notes-page */
+}
+
+.title-kicker {
+    font-weight: 800;
+    color: var(--navy-mid);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-size: 10pt;
+}
+
+.title-main {
+    font-size: 28pt;
+    color: var(--navy);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.title-sub {
+    font-size: 12pt;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.title-quote {
+    border-left: 6px solid var(--navy);
+    background: var(--blue-light);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 11pt;
+}
+
+/* ── PRINT OVERRIDES ────────────────────────────────────────── */
 @media print {
-    body { padding: 12px; }
-    .title-page { min-height: auto; }
-    .two-column,
-    .representation-grid,
-    .mn-sketch-cols { display: block; }
-    .rep-card,
-    .mn-sketch-cell { margin-bottom: 12px; }
-    .graph-block img { max-width: 320px; }
+    .notes-page { min-height: 9.5in; }
+    .rep-grid   { display: grid; }
+    .sketch-cols { display: grid; }
 }
