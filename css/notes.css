@@ -9,9 +9,9 @@
    body/typography; table/table.values; .page-break; print.
 
    Architecture:
-     .notes-page    → flex column; one section per printed page;
+     .notes-page    → block; min-height 9.5in; one section per Notability page;
                        break-after: page fires directly on wrapper
-     .notes-ws      → writing/annotation space; flex: 1 1 auto
+     .notes-ws      → writing/annotation space; height set by wu-ws-NNN
                        auto-fills remaining page height by default;
                        override with wu-ws-NNN for fixed size
      .math-notes    → navy-header content box (Math Notes)
@@ -30,18 +30,9 @@
 /* break-after fires directly on the wrapper (not on flex items) */
 /* because notes sections are not paired like practice problems. */
 .notes-page {
-    display: flex;
-    flex-direction: column;
     min-height: 9.5in;
-    break-after: page;
-    page-break-after: always;
-}
-
-/* Cancel break on the last page — prevents a trailing blank.   */
-.notes-page:last-child {
-    break-after: auto;
-    page-break-after: auto;
-    min-height: 0;
+    /* break-after is on .notes-ws (last child) not here —       */
+    /* flex+break-after on a container generates blank pages.    */
 }
 
 /* ── WRITING SPACE ──────────────────────────────────────────── */
@@ -51,9 +42,18 @@
 /* Usage (auto-fill): <div class="notes-ws"></div>              */
 /* Usage (fixed):     <div class="notes-ws wu-ws-300"></div>    */
 .notes-ws {
-    flex: 1 1 auto;
-    min-height: 1in;
+    /* break-after on the last flex child fires at container     */
+    /* level in warmup/ps-page pattern; here we put it directly  */
+    /* on the last block child — same effect, no ghost pages.    */
+    break-after: page;
+    page-break-after: always;
     margin-top: 8px;
+}
+
+/* Cancel break on the last notes-page to prevent trailing blank.*/
+.notes-page:last-child .notes-ws {
+    break-after: auto;
+    page-break-after: auto;
 }
 
 /* Optional thin rule at top of writing space.                  */
@@ -76,41 +76,41 @@
 }
 
 /* ── WORKSPACE SIZE OVERRIDES ───────────────────────────────── */
-/* Overrides flex: 1 1 auto on .notes-ws with a fixed height.   */
+/* Use these to set the workspace height. Block context — height: not flex.  */
 /* Same ladder as warmup.css and practice_set.css.              */
-.wu-ws-000 { flex: 0 0 0in;    min-height: 0in;    }
-.wu-ws-025 { flex: 0 0 0.25in; min-height: 0.25in; }
-.wu-ws-050 { flex: 0 0 0.50in; min-height: 0.50in; }
-.wu-ws-075 { flex: 0 0 0.75in; min-height: 0.75in; }
-.wu-ws-100 { flex: 0 0 1.00in; min-height: 1.00in; }
-.wu-ws-125 { flex: 0 0 1.25in; min-height: 1.25in; }
-.wu-ws-150 { flex: 0 0 1.50in; min-height: 1.50in; }
-.wu-ws-175 { flex: 0 0 1.75in; min-height: 1.75in; }
-.wu-ws-200 { flex: 0 0 2.00in; min-height: 2.00in; }
-.wu-ws-225 { flex: 0 0 2.25in; min-height: 2.25in; }
-.wu-ws-250 { flex: 0 0 2.50in; min-height: 2.50in; }
-.wu-ws-275 { flex: 0 0 2.75in; min-height: 2.75in; }
-.wu-ws-300 { flex: 0 0 3.00in; min-height: 3.00in; }
-.wu-ws-325 { flex: 0 0 3.25in; min-height: 3.25in; }
-.wu-ws-350 { flex: 0 0 3.50in; min-height: 3.50in; }
-.wu-ws-375 { flex: 0 0 3.75in; min-height: 3.75in; }
-.wu-ws-400 { flex: 0 0 4.00in; min-height: 4.00in; }
-.wu-ws-425 { flex: 0 0 4.25in; min-height: 4.25in; }
-.wu-ws-450 { flex: 0 0 4.50in; min-height: 4.50in; }
-.wu-ws-475 { flex: 0 0 4.75in; min-height: 4.75in; }
-.wu-ws-500 { flex: 0 0 5.00in; min-height: 5.00in; }
-.wu-ws-525 { flex: 0 0 5.25in; min-height: 5.25in; }
-.wu-ws-550 { flex: 0 0 5.50in; min-height: 5.50in; }
-.wu-ws-575 { flex: 0 0 5.75in; min-height: 5.75in; }
-.wu-ws-600 { flex: 0 0 6.00in; min-height: 6.00in; }
-.wu-ws-625 { flex: 0 0 6.25in; min-height: 6.25in; }
-.wu-ws-650 { flex: 0 0 6.50in; min-height: 6.50in; }
-.wu-ws-675 { flex: 0 0 6.75in; min-height: 6.75in; }
-.wu-ws-700 { flex: 0 0 7.00in; min-height: 7.00in; }
-.wu-ws-725 { flex: 0 0 7.25in; min-height: 7.25in; }
-.wu-ws-750 { flex: 0 0 7.50in; min-height: 7.50in; }
-.wu-ws-775 { flex: 0 0 7.75in; min-height: 7.75in; }
-.wu-ws-800 { flex: 0 0 8.00in; min-height: 8.00in; }
+.wu-ws-000 { height: 0; }
+.wu-ws-025 { height: 0.25in; }
+.wu-ws-050 { height: 0.50in; }
+.wu-ws-075 { height: 0.75in; }
+.wu-ws-100 { height: 1.00in; }
+.wu-ws-125 { height: 1.25in; }
+.wu-ws-150 { height: 1.50in; }
+.wu-ws-175 { height: 1.75in; }
+.wu-ws-200 { height: 2.00in; }
+.wu-ws-225 { height: 2.25in; }
+.wu-ws-250 { height: 2.50in; }
+.wu-ws-275 { height: 2.75in; }
+.wu-ws-300 { height: 3.00in; }
+.wu-ws-325 { height: 3.25in; }
+.wu-ws-350 { height: 3.50in; }
+.wu-ws-375 { height: 3.75in; }
+.wu-ws-400 { height: 4.00in; }
+.wu-ws-425 { height: 4.25in; }
+.wu-ws-450 { height: 4.50in; }
+.wu-ws-475 { height: 4.75in; }
+.wu-ws-500 { height: 5.00in; }
+.wu-ws-525 { height: 5.25in; }
+.wu-ws-550 { height: 5.50in; }
+.wu-ws-575 { height: 5.75in; }
+.wu-ws-600 { height: 6.00in; }
+.wu-ws-625 { height: 6.25in; }
+.wu-ws-650 { height: 6.50in; }
+.wu-ws-675 { height: 6.75in; }
+.wu-ws-700 { height: 7.00in; }
+.wu-ws-725 { height: 7.25in; }
+.wu-ws-750 { height: 7.50in; }
+.wu-ws-775 { height: 7.75in; }
+.wu-ws-800 { height: 8.00in; }
 
 /* ── MATH NOTES BOX ─────────────────────────────────────────── */
 /* Navy header bar + content area. No internal writing space.   */
@@ -120,7 +120,6 @@
     border-radius: 8px;
     margin: 10px 0 12px 0;
     overflow: hidden;
-    flex: 0 0 auto;
 }
 
 .math-notes-header {
@@ -205,7 +204,6 @@
 /* Used for Example N and You Try It N sections.                */
 /* base.css h3 handles heading color/size.                      */
 .example-box {
-    flex: 0 0 auto;
     margin-bottom: 8px;
 }
 
@@ -216,7 +214,6 @@
     padding: 14px 16px;
     margin: 10px 0;
     border-radius: 6px;
-    flex: 0 0 auto;
 }
 
 .strategy-box {
@@ -225,7 +222,6 @@
     padding: 14px 16px;
     margin: 10px 0;
     border-radius: 6px;
-    flex: 0 0 auto;
 }
 
 .key-point {
@@ -234,7 +230,6 @@
     padding: 14px 16px;
     margin: 10px 0;
     border-radius: 6px;
-    flex: 0 0 auto;
 }
 
 .mistake-box {
@@ -243,7 +238,6 @@
     padding: 14px 16px;
     margin: 10px 0;
     border-radius: 6px;
-    flex: 0 0 auto;
 }
 
 .annotation-box {
@@ -251,7 +245,6 @@
     border-radius: 6px;
     padding: 14px;
     margin: 10px 0;
-    flex: 0 0 auto;
 }
 
 .claim-card {
@@ -261,14 +254,12 @@
     padding: 10px 12px;
     margin: 10px 0;
     background: #fafafa;
-    flex: 0 0 auto;
 }
 
 .objectives {
     background: #f0f4f8;
     padding: 16px;
     border-radius: 6px;
-    flex: 0 0 auto;
 }
 
 /* ── FIGURE ─────────────────────────────────────────────────── */
@@ -276,7 +267,6 @@
 /* Usage: <figure class="notes-figure wu-img-350"><img…>        */
 .notes-figure {
     margin: 8px auto 6px auto;
-    flex: 0 0 auto;
     text-align: center;
 }
 
@@ -325,14 +315,11 @@
 /* ── TITLE PAGE ─────────────────────────────────────────────── */
 /* Standalone first page; no notes-ws needed.                   */
 .notes-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border: 2px solid var(--navy);
-    padding: 48px;
+    padding: 48px 48px 32px 48px;
     border-radius: 10px;
     background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
-    flex: 1 1 auto; /* fills the notes-page */
+    min-height: 5in; /* ensures title box fills most of title page */
 }
 
 .title-kicker {
