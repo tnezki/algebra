@@ -9,7 +9,9 @@
    body/typography; table/table.values; .page-break; print.
 
    Architecture mirrors warmup.css:
-     .problem → flex column, top-double-border only, NO break-after
+     .ps-page       → flex column page wrapper; holds exactly 2 .problem.half
+     .problem       → flex column, top-double-border only
+     .problem.half  → 4in min-height card; break-after fires at .ps-page level
      .problem-title → flex: 0 0 auto label row
      .problem-body  → flex: 1 1 auto content column
      .workspace     → flex: 0 0 0px base; sized by .wu-ws-NNN
@@ -20,6 +22,33 @@
 
    /* ── PAGE SETUP ─────────────────────────────────────────────── */
 @page { size: 8.5in 11in; margin: .5in; }
+
+/* ── PRACTICE SET PAGE WRAPPER ──────────────────────────────── */
+/* Groups exactly 2 .problem.half items per printed page.        */
+/* Same architectural pattern as .warmup-page in warmup.css:    */
+/* break-after: page on flex items fires at the container        */
+/* boundary, keeping both problems together on one page.         */
+/* Usage: wrap every pair of problems in this div.              */
+.ps-page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── PROBLEM HALF ───────────────────────────────────────────── */
+/* Default modifier for all main practice set problems.          */
+/* flex: 1 0 4in  → never shrink below 4in; grow if space.      */
+/* min-height: 4in → hard floor regardless of content.           */
+/* overflow: hidden → clips anything exceeding the 4in card.     */
+/* break-after fires at .ps-page level → 2 problems per page.   */
+/* Usage: class="problem half"                                   */
+.problem.half {
+    flex: 1 0 4in;
+    min-height: 4in;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+}
+
 
 /* ── UNIT INTRO BOX ─────────────────────────────────────────── */
 .unit-intro {
@@ -257,38 +286,10 @@ table.values {
     .problem { padding: 6px 8px 6px 10px; }
 }
 
-/* ── EXIT TICKET GRID ───────────────────────────────────────── */
-/* 2×2 grid for the 4 exit ticket problems.                     */
-/* Usage: wrap the 4 .problem sections in this div,             */
+/* ── EXIT TICKET GRID ──────────────────────────────────────── */
+/* 2×2 grid of self-contained cards for projection + Notability.*/
+/* Usage: wrap the 4 exit ticket .problem sections in this div  */
 /* immediately after .exit-ticket-label.                        */
-.exit-ticket-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-
-/* Cancel the standard .problem top-border inside the grid.     */
-.exit-ticket-grid .problem {
-    border-top: none;
-    margin-bottom: 0;
-}
-
-/* Right dotted border: left-column cells (children 1 and 3).  */
-.exit-ticket-grid .problem:nth-child(odd) {
-    border-right: 3px dotted var(--border);
-}
-
-/* Bottom dotted border: top-row cells (children 1 and 2).     */
-.exit-ticket-grid .problem:nth-child(-n+2) {
-    border-bottom: 3px dotted var(--border);
-}
-
-/* ── EXIT TICKET GRID (CARD VERSION) ────────────────────────── */
-/* Overrides the nth-child dotted-border rules above.           */
-/* Each problem is its own bordered card; gap creates visual    */
-/* separation without doubling borders.                         */
 .exit-ticket-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
