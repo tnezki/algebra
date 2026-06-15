@@ -2043,22 +2043,69 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 # PASTE YOUR GRAPH CODE BELOW THIS LINE
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Unit 1 Warmups graph-generation blocks
+
+
+
+
+# Unit 1 Assessment Bank graph-generation blocks
 # All figures use graph_tool.py functions. Styling is not overridden.
 
+def _save_standard_blank(filename):
+    fig, ax = plt.subplots(figsize=(3.5, 3.5))
+    fig.patch.set_facecolor('white')
+    make_standard_graph(ax, [], title='')
+    save_graph(fig, filename)
+    plt.close(fig)
+
+_save_standard_blank('u1_bank_s1_coordinate_blank_sq_v1.png')
+_save_standard_blank('u1_bank_s5_coordinate_blank_sq_v1.png')
+
 fig, ax = plt.subplots(figsize=(3.5, 3.5))
 fig.patch.set_facecolor('white')
-make_standard_graph(ax, [{'expr': lambda x: 2*x - 4, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}], title='')
-save_graph(fig, 'u0b_bank_s1_intercepts_sq_v1.png')
+make_standard_graph(ax, [
+    {'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': None}
+], title='')
+save_graph(fig, 'u1_bank_s1_evidence_line_sq_v1.png')
 plt.close(fig)
 
 fig, ax = plt.subplots(figsize=(3.5, 3.5))
 fig.patch.set_facecolor('white')
-make_context_graph(ax, [{'expr': lambda x: 5*x + 10, 'deriv': lambda x: 0*x + 5, 'color': 'steelblue'}], 0, 8, 0, 55, xlabel='Time (min)', ylabel='Distance (m)', title='')
-save_graph(fig, 'u0b_bank_s1_context_growth_sq_v1.png')
+make_context_graph(ax, [
+    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'steelblue', 'label': None}
+], xmin=0, xmax=10, ymin=0, ymax=50, xlabel='Tickets', ylabel='Cost', title='')
+save_graph(fig, 'u1_bank_s1_context_cost_sq_v1.png')
 plt.close(fig)
 
-make_rectangle_model([r'$2$'], [r'$x$', r'$3$'], [[r'$2x$', r'$6$']], 'u0A_bank_s3_area_model_basic_sq_v1.png')
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [0,1,1,2,3], [3,4,6,7,8], xmin=0, xmax=4, ymin=0, ymax=10, color='steelblue', point_size=40, line_of_best_fit=False, xlabel='Input', ylabel='Output', title='')
+save_graph(fig, 'u1_bank_s2_relation_points_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [
+    {'expr': lambda x: -x + 4, 'deriv': lambda x: 0*x - 1, 'color': 'steelblue', 'label': None}
+], title='')
+save_graph(fig, 'u1_bank_s2_function_line_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x2_grid([
+    [{'expr': lambda x: x + 1, 'deriv': lambda x: 0*x + 1, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: x**2 - 4, 'deriv': lambda x: 2*x, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: 2**x, 'deriv': lambda x: np.log(2)*2**x, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: np.abs(x) - 3, 'deriv': lambda x: np.sign(x), 'color': 'steelblue', 'label': None}],
+], titles=['A','B','C','D'])
+save_graph(fig, 'u1_bank_s3_family_grid_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 2*(1.45**x), 'deriv': lambda x: 2*np.log(1.45)*(1.45**x), 'color': 'steelblue', 'label': None}
+], xmin=0, xmax=8, ymin=0, ymax=40, xlabel='Step', ylabel='Output', title='')
+save_graph(fig, 'u1_bank_s3_exp_context_sq_v1.png')
+plt.close(fig)
 
 fig = make_2x1_grid([
     [{'expr': lambda x: np.abs(x+2) - 3, 'deriv': lambda x: np.sign(x+2), 'color': 'steelblue', 'label': None}],
@@ -2067,18 +2114,212 @@ fig = make_2x1_grid([
 save_graph(fig, 'u1_bank_s3_abs_quad_sq_v1.png')
 plt.close(fig)
 
-make_diamond(r'', r'$3$', r'$5$', r'', 'u1_warmup_1_1_1_diamond.png')
-make_diamond(r'$-24$', r'', r'', r'$2$', 'u1_warmup_1_1_2_diamond.png')
-make_diamond(r'$14$', r'', r'$-2$', r'', 'u1_warmup_1_1_3_diamond.png')
-make_diamond(r'', r'', r'$8$', r'$19$', 'u1_warmup_1_2_1_diamond.png')
-make_diamond(r'$36$', r'$4$', r'', r'', 'u1_warmup_1_2_2_diamond.png')
-make_diamond(r'', r'$-8$', r'', r'$-5$', 'u1_warmup_1_2_3_diamond.png')
-make_diamond(r'', r'$-5$', r'$-6$', r'', 'u1_warmup_1_3_1_diamond.png')
-make_diamond(r'$-88$', r'', r'$8$', r'', 'u1_warmup_1_3_2_diamond.png')
-make_diamond(r'$14$', r'', r'', r'$9$', 'u1_warmup_1_3_3_diamond.png')
-make_diamond(r'', r'', r'$-5$', r'$4$', 'u1_warmup_1_4_1_diamond.png')
-make_diamond(r'', r'$-9$', r'', r'$-12$', 'u1_warmup_1_4_2_diamond.png')
-make_diamond(r'$-84$', r'$12$', r'', r'', 'u1_warmup_1_4_3_diamond.png')
-make_diamond(r'', r'$6$', r'$6$', r'', 'u1_warmup_1_5_1_diamond.png')
-make_diamond(r'$-20$', r'', r'$-2$', r'', 'u1_warmup_1_5_2_diamond.png')
-make_diamond(r'', r'', r'$-8$', r'$-8$', 'u1_warmup_1_5_3_diamond.png')
+make_rectangle_model([r'$2x$', r'$3$'], [r'$x$', r'$5$'], [[r'$2x^2$', ''], ['', '']], 'u1_bank_s4_rect_blank_sq_v1.png')
+make_rectangle_model([r'$x$', r'$4$'], [r'$x$', r'$6$'], [[r'$x^2$', r'$6x$'], [r'$4x$', r'$20$']], 'u1_bank_s4_rect_mismatch_sq_v1.png')
+make_diamond(r'$-24$', '', '', r'$2$', 'u1_bank_s4_diamond_sq_v1.png')
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 15 + 2*x, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': 'Plan A'},
+    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'firebrick', 'label': 'Plan B'},
+], xmin=0, xmax=10, ymin=0, ymax=45, xlabel='Items', ylabel='Cost', title='')
+save_graph(fig, 'u1_bank_s5_balance_context_sq_v1.png')
+plt.close(fig)
+
+
+# Unit 0B bank graph-generation blocks included for selected spiral figures.
+
+
+# Auto-generated Unit 0B bank graph blocks appended below the required marker.
+
+# u0b_bank_blank_coordinate_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [], title='')
+save_graph(fig, 'u0b_bank_blank_coordinate_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_blank_context_time_distance_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [], 0, 10, 0, 50, xlabel='Time (min)', ylabel='Distance (m)', title='')
+save_graph(fig, 'u0b_bank_blank_context_time_distance_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_intercepts_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 2*x - 4, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}], title='')
+save_graph(fig, 'u0b_bank_s1_intercepts_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_context_growth_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 5*x + 10, 'deriv': lambda x: 0*x + 5, 'color': 'steelblue'}], 0, 8, 0, 55, xlabel='Time (min)', ylabel='Distance (m)', title='')
+save_graph(fig, 'u0b_bank_s1_context_growth_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_break_even_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 1.5*x - 6, 'deriv': lambda x: 0*x + 1.5, 'color': 'firebrick'}], title='')
+save_graph(fig, 'u0b_bank_s1_break_even_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_scatter_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [1,2,3,4,5,6,7,8], [4,5,7,9,10,13,14,16], 0, 9, 0, 18, color='steelblue', point_size=36, line_of_best_fit=True, xlabel='Practice days', ylabel='Score gain', title='')
+save_graph(fig, 'u0b_bank_s1_scatter_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_linear_compare_sq_v1.png
+fig = make_2x1_grid([
+    [{'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}],
+    [{'expr': lambda x: 4*x - 3, 'deriv': lambda x: 0*x + 4, 'color': 'firebrick'}]
+], titles=[r'Graph A', r'Graph B'])
+save_graph(fig, 'u0b_bank_s3_linear_compare_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_constant_rate_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 3*x + 2, 'deriv': lambda x: 0*x + 3, 'color': 'steelblue'}], 0, 8, 0, 30, xlabel='Figure number', ylabel='Tiles', title='')
+save_graph(fig, 'u0b_bank_s3_constant_rate_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_decreasing_rate_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: -4*x + 40, 'deriv': lambda x: 0*x - 4, 'color': 'firebrick'}], 0, 10, 0, 45, xlabel='Week', ylabel='Pages left', title='')
+save_graph(fig, 'u0b_bank_s3_decreasing_rate_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s4_line_from_graph_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -1*x + 5, 'deriv': lambda x: 0*x - 1, 'color': 'steelblue'}], title='')
+save_graph(fig, 'u0b_bank_s4_line_from_graph_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s4_context_line_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 8*x + 12, 'deriv': lambda x: 0*x + 8, 'color': 'steelblue'}], 0, 6, 0, 65, xlabel='Hours', ylabel='Total points', title='')
+save_graph(fig, 'u0b_bank_s4_context_line_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_compare_two_lines_sq_v1.png
+fig = make_2x1_grid([
+    [{'expr': lambda x: 1.5*x + 4, 'deriv': lambda x: 0*x + 1.5, 'color': 'steelblue'}],
+    [{'expr': lambda x: 3*x - 2, 'deriv': lambda x: 0*x + 3, 'color': 'firebrick'}]
+], titles=[r'Plan A', r'Plan B'])
+save_graph(fig, 'u0b_bank_s5_compare_two_lines_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_three_reps_sq_v1.png
+fig = make_3x1_grid([
+    [{'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}],
+    [{'expr': lambda x: -1*x + 8, 'deriv': lambda x: 0*x - 1, 'color': 'firebrick'}],
+    [{'expr': lambda x: 0.5*x + 5, 'deriv': lambda x: 0*x + 0.5, 'color': 'darkorange'}]
+], titles=[r'A', r'B', r'C'])
+save_graph(fig, 'u0b_bank_s5_three_reps_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_scatter_compare_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [0,1,2,3,4,5,6], [3,5,7,10,11,13,15], 0, 7, 0, 18, color='steelblue', point_size=36, line_of_best_fit=True, xlabel='Weeks', ylabel='Total', title='')
+save_graph(fig, 'u0b_bank_s5_scatter_compare_sq_v1.png')
+plt.close(fig)
+
+
+# Unit 0A bank graph-generation blocks included for selected mastery figures.
+
+
+# Unit 0A graph-generation blocks appended for assessment bank.
+# Existing graph_tool.py source above this point is copied unchanged.
+
+def _blank_number_line(filename, label=None, xmin=-10, xmax=10):
+    fig, ax = plt.subplots(figsize=(3.5, 1.25))
+    fig.patch.set_facecolor('white')
+    make_number_line_blank(ax, label=label, xmin=xmin, xmax=xmax)
+    save_graph(fig, filename)
+    plt.close(fig)
+
+def _number_line(filename, intervals, xmin=-10, xmax=10):
+    fig, ax = plt.subplots(figsize=(3.5, 1.25))
+    fig.patch.set_facecolor('white')
+    make_number_line(ax, intervals, xmin=xmin, xmax=xmax)
+    save_graph(fig, filename)
+    plt.close(fig)
+
+if __name__ == '__main__':
+    _blank_number_line('u0A_bank_s1_numberline_blank_sq_v1.png', label=r'$-10\leq x\leq 10$')
+    make_diamond(r'$-24$', '', '', r'$2$', 'u0A_bank_s1_diamond_integer_sq_v1.png')
+
+    make_rectangle_model([r'$2$'], [r'$x$', r'$3$'], [[r'$2x$', r'$6$']], 'u0A_bank_s3_area_model_basic_sq_v1.png')
+    make_rectangle_model([r'$x$', r'$2$'], [r'$x$', r'$4$'], [['', ''], ['', '']], 'u0A_bank_s3_area_model_blank_sq_v1.png')
+    make_rectangle_model([r'$x$', r'$2$'], [r'$x$', r'$3$'], [[r'$x^2$', r'$3x$'], [r'$2x$', r'$5$']], 'u0A_bank_s3_area_model_mismatch_sq_v1.png')
+    make_algebra_tiles({'x':5, 'one':4, 'neg_one':2}, 'u0A_bank_s3_tiles_model_sq_v1.png')
+
+    _blank_number_line('u0A_bank_s5_numberline_blank_sq_v1.png', label=r'$-10\leq x\leq 10$')
+    _number_line('u0A_bank_s5_less_than_graph_sq_v1.png', [{'start':3, 'end':None, 'start_open':True, 'end_open':True, 'direction':'left', 'color':'steelblue'}])
+    _number_line('u0A_bank_s5_greater_equal_graph_sq_v1.png', [{'start':-1, 'end':None, 'start_open':False, 'end_open':True, 'direction':'right', 'color':'steelblue'}])
+    _number_line('u0A_bank_s5_compound_graph_sq_v1.png', [{'start':-3, 'end':2, 'start_open':False, 'end_open':True, 'direction':None, 'color':'steelblue'}])
+    fig = make_2x1_grid([
+        [{'expr': lambda x: 0*x, 'deriv': lambda x: 0*x, 'color':'steelblue', 'label':None}],
+        [{'expr': lambda x: 0*x, 'deriv': lambda x: 0*x, 'color':'steelblue', 'label':None}],
+    ], titles=[r'$x<-4$', r'$x\leq -4$'])
+    save_graph(fig, 'u0A_bank_s5_choice_graphs_sq_v1.png')
+    plt.close(fig)
+
+# Polish fix: corrected number-line choice figure for 0A-S5-DOK2.10.
+# The original choice figure remains intact above; this new block creates an
+# unlabeled-by-answer number-line comparison so students must reason about the
+# open versus closed boundary.
+def _choice_number_lines_s5_v2(filename='u0A_bank_s5_choice_numberlines_sq_v2.png'):
+    fig, axes = plt.subplots(2, 1, figsize=(3.5, 2.55))
+    fig.patch.set_facecolor('white')
+    choices = [
+        ('Graph A', [{'start': -4, 'end': None, 'start_open': True,
+                      'end_open': True, 'direction': 'left',
+                      'color': 'steelblue'}]),
+        ('Graph B', [{'start': -4, 'end': None, 'start_open': False,
+                      'end_open': True, 'direction': 'left',
+                      'color': 'steelblue'}]),
+    ]
+    for ax, (label, intervals) in zip(axes, choices):
+        make_number_line(ax, intervals, xmin=-10, xmax=10)
+        ax.text(-10, 0.82, label, ha='left', va='center',
+                fontfamily='Times New Roman', fontsize=11,
+                fontweight='bold', color='black')
+    fig.subplots_adjust(hspace=0.42)
+    save_graph(fig, filename)
+    plt.close(fig)
+
+if __name__ == '__main__':
+    _choice_number_lines_s5_v2('u0A_bank_s5_choice_numberlines_sq_v2.png')
+
+
+
+
+# Unit 1 Warmup diamond graph-generation blocks
+# All diamonds use graph_tool.make_diamond(). Styling is not overridden.
+make_diamond(r'', r'$3$', r'$5$', r'', 'u1_warmup_1_1_1_diamond.png')  # 1.1 Day 1 V1+P1 factors 3 and 5
+make_diamond(r'$-24$', r'', r'', r'$5$', 'u1_warmup_1_1_2_diamond.png')  # 1.1 Day 2 V2+P2 factors 8 and -3
+make_diamond(r'$24$', r'', r'$-6$', r'', 'u1_warmup_1_1_3_diamond.png')  # 1.1 Day 3 V3+P4 factors -4 and -6
+make_diamond(r'', r'', r'$11$', r'$20$', 'u1_warmup_1_2_1_diamond.png')  # 1.2 Day 1 V4+P6 factors 9 and 11
+make_diamond(r'$28$', r'$4$', r'', r'', 'u1_warmup_1_2_2_diamond.png')  # 1.2 Day 2 V1+P3 factors 4 and 7
+make_diamond(r'', r'$-9$', r'', r'$-5$', 'u1_warmup_1_2_3_diamond.png')  # 1.2 Day 3 V2+P5 factors -9 and 4
+make_diamond(r'', r'$-2$', r'$-7$', r'', 'u1_warmup_1_3_1_diamond.png')  # 1.3 Day 1 V3+P1 factors -2 and -7
+make_diamond(r'$-80$', r'', r'$8$', r'', 'u1_warmup_1_3_2_diamond.png')  # 1.3 Day 2 V4+P4 factors -10 and 8
+make_diamond(r'$12$', r'', r'', r'$8$', 'u1_warmup_1_3_3_diamond.png')  # 1.3 Day 3 V1+P2 factors 6 and 2
+make_diamond(r'', r'', r'$-5$', r'$7$', 'u1_warmup_1_4_1_diamond.png')  # 1.4 Day 1 V2+P6 factors 12 and -5
+make_diamond(r'', r'$-8$', r'', r'$-11$', 'u1_warmup_1_4_2_diamond.png')  # 1.4 Day 2 V3+P5 factors -8 and -3
+make_diamond(r'$-84$', r'$-12$', r'', r'', 'u1_warmup_1_4_3_diamond.png')  # 1.4 Day 3 V4+P3 factors -12 and 7
+make_diamond(r'', r'$9$', r'$4$', r'', 'u1_warmup_1_5_1_diamond.png')  # 1.5 Day 1 V1+P1 factors 9 and 4
+make_diamond(r'$-66$', r'', r'$6$', r'', 'u1_warmup_1_5_2_diamond.png')  # 1.5 Day 2 V2+P4 factors -11 and 6
+make_diamond(r'', r'', r'$-7$', r'$-7$', 'u1_warmup_1_5_3_diamond.png')  # 1.5 Day 3 V5+P6 factors 0 and -7
