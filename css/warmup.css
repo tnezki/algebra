@@ -121,11 +121,6 @@ section.warmup-page:last-child .problem:last-child {
     margin-top: 2px;
     border: none;
 }
-/* Short workspace for Problem 4 diamond.   forcing no workspace                    */
-.workspace.short {
-    flex: 0 0 0;
-    height: 0;
-}
 
 /* ── TABLES ─────────────────────────────────────────────────── */
 table.values {
@@ -161,23 +156,78 @@ table.values th {
     border: 0px solid var(--border-light);
     background: var(--bg);
 }
-.diamond-figure img {
-    max-width: 1.5in;
-}
 
 /* ── IMAGE SIZE OVERRIDES ───────────────────────────────────── */
 /* Apply to .warmup-figure to manually override image width.    */
-/* Example: <figure class="warmup-figure wu-img-3">             */
-.wu-img-1  img { max-width: 3in; }
-.wu-img-2  img { max-width: 3in; }
-.wu-img-3  img { max-width: 3in; }
-.wu-img-4  img { max-width: 3in; }
-.wu-img-5  img { max-width: 3in; }
-.wu-img-6  img { max-width: 3in; }
-.wu-img-7  img { max-width: 3in; }
-.wu-img-8  img { max-width: 3in; }
-.wu-img-9  img { max-width: 3in; }
-.wu-img-10 img { max-width: 3in; }
+/* Example: <figure class="warmup-figure wu-img-300">           */
+.wu-img-025 img { max-width: 0.25in; }
+.wu-img-050 img { max-width: 0.50in; }
+.wu-img-075 img { max-width: 0.75in; }
+.wu-img-100 img { max-width: 1.00in; }
+.wu-img-125 img { max-width: 1.25in; }
+.wu-img-150 img { max-width: 1.50in; }
+.wu-img-175 img { max-width: 1.75in; }
+.wu-img-200 img { max-width: 2.00in; }
+.wu-img-225 img { max-width: 2.25in; }
+.wu-img-250 img { max-width: 2.50in; }
+.wu-img-275 img { max-width: 2.75in; }
+.wu-img-300 img { max-width: 3.00in; }
+.wu-img-325 img { max-width: 3.25in; }
+.wu-img-350 img { max-width: 3.50in; }
+.wu-img-375 img { max-width: 3.75in; }
+.wu-img-400 img { max-width: 4.00in; }
+.wu-img-425 img { max-width: 4.25in; }
+.wu-img-450 img { max-width: 4.50in; }
+.wu-img-475 img { max-width: 4.75in; }
+.wu-img-500 img { max-width: 5.00in; }
+.wu-img-525 img { max-width: 5.25in; }
+.wu-img-550 img { max-width: 5.50in; }
+.wu-img-575 img { max-width: 5.75in; }
+.wu-img-600 img { max-width: 6.00in; }
+.wu-img-625 img { max-width: 6.25in; }
+.wu-img-650 img { max-width: 6.50in; }
+.wu-img-675 img { max-width: 6.75in; }
+.wu-img-700 img { max-width: 7.00in; }
+.wu-img-725 img { max-width: 7.25in; }
+.wu-img-750 img { max-width: 7.50in; }
+
+/* ── WORKSPACE SIZE OVERRIDES ───────────────────────────────── */
+/* Apply to .workspace to set height. Default: wu-ws-000 (0in). */
+/* Example: <div class="workspace wu-ws-200"></div>             */
+/* Change 200 → e.g. 150 = 1.50in, 300 = 3.00in               */
+.wu-ws-000 { flex: 0 0 0in;    min-height: 0in;    }
+.wu-ws-025 { flex: 0 0 0.25in; min-height: 0.25in; }
+.wu-ws-050 { flex: 0 0 0.50in; min-height: 0.50in; }
+.wu-ws-075 { flex: 0 0 0.75in; min-height: 0.75in; }
+.wu-ws-100 { flex: 0 0 1.00in; min-height: 1.00in; }
+.wu-ws-125 { flex: 0 0 1.25in; min-height: 1.25in; }
+.wu-ws-150 { flex: 0 0 1.50in; min-height: 1.50in; }
+.wu-ws-175 { flex: 0 0 1.75in; min-height: 1.75in; }
+.wu-ws-200 { flex: 0 0 2.00in; min-height: 2.00in; }
+.wu-ws-225 { flex: 0 0 2.25in; min-height: 2.25in; }
+.wu-ws-250 { flex: 0 0 2.50in; min-height: 2.50in; }
+.wu-ws-275 { flex: 0 0 2.75in; min-height: 2.75in; }
+.wu-ws-300 { flex: 0 0 3.00in; min-height: 3.00in; }
+.wu-ws-325 { flex: 0 0 3.25in; min-height: 3.25in; }
+.wu-ws-350 { flex: 0 0 3.50in; min-height: 3.50in; }
+.wu-ws-375 { flex: 0 0 3.75in; min-height: 3.75in; }
+.wu-ws-400 { flex: 0 0 4.00in; min-height: 4.00in; }
+.wu-ws-425 { flex: 0 0 4.25in; min-height: 4.25in; }
+.wu-ws-450 { flex: 0 0 4.50in; min-height: 4.50in; }
+.wu-ws-475 { flex: 0 0 4.75in; min-height: 4.75in; }
+.wu-ws-500 { flex: 0 0 5.00in; min-height: 5.00in; }
+.wu-ws-525 { flex: 0 0 5.25in; min-height: 5.25in; }
+.wu-ws-550 { flex: 0 0 5.50in; min-height: 5.50in; }
+.wu-ws-575 { flex: 0 0 5.75in; min-height: 5.75in; }
+.wu-ws-600 { flex: 0 0 6.00in; min-height: 6.00in; }
+.wu-ws-625 { flex: 0 0 6.25in; min-height: 6.25in; }
+.wu-ws-650 { flex: 0 0 6.50in; min-height: 6.50in; }
+.wu-ws-675 { flex: 0 0 6.75in; min-height: 6.75in; }
+.wu-ws-700 { flex: 0 0 7.00in; min-height: 7.00in; }
+.wu-ws-725 { flex: 0 0 7.25in; min-height: 7.25in; }
+.wu-ws-750 { flex: 0 0 7.50in; min-height: 7.50in; }
+.wu-ws-775 { flex: 0 0 7.75in; min-height: 7.75in; }
+.wu-ws-800 { flex: 0 0 8.00in; min-height: 8.00in; }
 
 /* Bare <div><img></div> inside a problem — no .warmup-figure wrapper.  */
 /* Catches coordinate plane images dropped without a figure element.     */
