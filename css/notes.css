@@ -5,80 +5,32 @@
 
    Requires: base.css loaded FIRST.
 
-   Architecture mirrors warmup.css exactly:
-     .notes-page     → flex column wrapper (like .warmup-page)
-     .notes-card     → the content card; break-after fires at
-                        .notes-page container level
-     .notes-card.half → 4in; 2 cards share one Notability page
-     .notes-card.full → 8in; 1 card fills one Notability page
-     .notes-ws       → flex: 1 1 auto; fills remaining card height
-     .notes-figure   → figure container; default img 3in
-     .wu-img-NNN     → image width overrides
+   No page breaks. Content flows top to bottom.
+   Export using print → endless paper → save as PDF for Notability.
+
+   .notes-ws   → fixed 3in writing space after each section
+   .notes-figure → image container; default 3in wide
+   .wu-img-NNN → image width overrides
+   All other sizing: base.css tokens and typography.
    ============================================================ */
 
 /* ── PAGE SETUP ─────────────────────────────────────────────── */
-@page { size: 8.5in 11in; margin: .5in; }
-
-/* ── NOTES PAGE WRAPPER ─────────────────────────────────────── */
-/* Groups 1–2 .notes-card items per Notability page.            */
-/* break-after on flex items fires at THIS container level,     */
-/* keeping paired half-cards together on one page.              */
-.notes-page {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ── NOTES CARD ─────────────────────────────────────────────── */
-/* Exact mirror of .problem.half/.problem.full in warmup.css.   */
-/* break-after: page on a flex item fires at the container,     */
-/* so 2 half cards stay together and break fires after both.    */
-.notes-card {
-    display: flex;
-    flex-direction: column;
-    padding: 6px 10px;
-    overflow: hidden;
-    break-after: page;
-    page-break-after: always;
-}
-
-/* Half: 4in — two fit on one Notability page.                  */
-/* Usage: class="notes-card half"                               */
-.notes-card.half {
-    flex: 1 0 4in;
-    min-height: 4in;
-}
-
-/* Full: 8in — one fills a Notability page.                     */
-/* Usage: class="notes-card full"                               */
-.notes-card.full {
-    flex: 1 0 8in;
-    min-height: 8in;
-}
-
-/* Cancel break on the last card — prevents trailing blank page.*/
-.notes-page:last-child .notes-card:last-child {
-    break-after: auto;
-    page-break-after: auto;
-}
+/* Kept for regular browser view. Overridden by endless paper   */
+/* in the print dialog for Notability export.                   */
+@page { size: 8.5in 200in; margin: .5in; }
 
 /* ── WRITING SPACE ──────────────────────────────────────────── */
-/* Auto-fills remaining card height after content.              */
-/* In a 4in half with 2in of content → workspace = 2in.        */
-/* In an 8in full with 3in of content → workspace = 5in.       */
-/* Usage: <div class="notes-ws ws-ruled"></div>                 */
+/* Default: 3in. Override per-section in HTML if needed.        */
+/* Usage: <div class="notes-ws"></div>                          */
 .notes-ws {
-    flex: 1 1 auto;
-    min-height: 0.25in;
+    height: 3in;
     margin-top: 8px;
 }
 
 /* Optional thin rule at top of writing area.                   */
-.ws-ruled {
-    border-top: 1px solid #e4e4e4;
-    padding-top: 4px;
-}
+.ws-ruled { border-top: 1px solid #e4e4e4; padding-top: 4px; }
 
-/* Small all-caps label above the writing area.                 */
+/* Small all-caps label.                                        */
 .ws-label {
     display: block;
     font-size: 8pt;
@@ -93,7 +45,7 @@
 .math-notes {
     border: 2px solid var(--navy);
     border-radius: 8px;
-    margin: 6px 0 10px 0;
+    margin: 10px 0 12px 0;
     overflow: hidden;
 }
 
@@ -121,15 +73,15 @@
 }
 
 .math-notes-body {
-    padding: 10px 16px 10px 16px;
+    padding: 12px 16px;
 }
 
-.math-notes-body p          { margin-bottom: 6px; }
+.math-notes-body p          { margin-bottom: 8px; }
 .math-notes-body ul,
-.math-notes-body ol         { margin-left: 20px; margin-bottom: 6px; }
+.math-notes-body ol         { margin-left: 22px; margin-bottom: 8px; }
 .math-notes-body li         { margin-bottom: 5px; }
 
-/* ── REP GRID (2-col vocabulary cards) ──────────────────────── */
+/* ── REP GRID ───────────────────────────────────────────────── */
 .rep-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -140,27 +92,21 @@
 .rep-card {
     border: 1px solid var(--border-light);
     border-radius: 6px;
-    padding: 8px;
+    padding: 10px;
     background: var(--bg);
 }
 
-.rep-card h4 {
-    color: var(--navy);
-    font-size: 10pt;
-    margin-bottom: 3px;
-}
+.rep-card h4 { color: var(--navy); font-size: 10pt; margin-bottom: 4px; }
 
-/* ── SKETCH COLS (2-col in math-notes) ──────────────────────── */
+/* ── SKETCH COLS ────────────────────────────────────────────── */
 .sketch-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 8px;
+    gap: 12px;
+    margin-top: 10px;
 }
 
-.sketch-cell {
-    min-height: 1.5in;
-}
+.sketch-cell { min-height: 1.5in; }
 
 .sketch-cell-label {
     display: block;
@@ -174,70 +120,65 @@
     margin-bottom: 4px;
 }
 
-/* ── EXAMPLE / YTI ──────────────────────────────────────────── */
-.example-box {
-    margin-bottom: 6px;
-}
-
 /* ── CALLOUT BOXES ──────────────────────────────────────────── */
 .reading-box {
     background: #fbfbff;
     border-left: 5px solid #7c89c7;
-    padding: 10px 14px;
-    margin: 8px 0;
+    padding: 12px 16px;
+    margin: 10px 0;
     border-radius: 6px;
 }
 
 .strategy-box {
     background: var(--blue-bg);
     border-left: 5px solid var(--navy-mid);
-    padding: 10px 14px;
-    margin: 8px 0;
+    padding: 12px 16px;
+    margin: 10px 0;
     border-radius: 6px;
 }
 
 .key-point {
     background: #e8f5e9;
     border-left: 5px solid #4caf50;
-    padding: 10px 14px;
-    margin: 8px 0;
+    padding: 12px 16px;
+    margin: 10px 0;
     border-radius: 6px;
 }
 
 .mistake-box {
     background: #fff3e8;
     border-left: 5px solid #dd7a21;
-    padding: 10px 14px;
-    margin: 8px 0;
+    padding: 12px 16px;
+    margin: 10px 0;
     border-radius: 6px;
 }
 
 .annotation-box {
     border: 1px solid var(--border-light);
     border-radius: 6px;
-    padding: 10px 14px;
-    margin: 8px 0;
+    padding: 12px 16px;
+    margin: 10px 0;
 }
 
 .claim-card {
     border: 1px solid #aaa;
     border-left: 5px solid #555;
     border-radius: 6px;
-    padding: 8px 12px;
-    margin: 8px 0;
+    padding: 10px 12px;
+    margin: 10px 0;
     background: #fafafa;
 }
 
 .objectives {
     background: #f0f4f8;
-    padding: 14px;
+    padding: 16px;
     border-radius: 6px;
 }
 
 /* ── FIGURE ─────────────────────────────────────────────────── */
 /* Default: 3in wide. Override with wu-img-NNN.                 */
 .notes-figure {
-    margin: 6px auto 4px auto;
+    margin: 10px auto 8px auto;
     text-align: center;
 }
 
@@ -285,9 +226,10 @@
 /* ── TITLE PAGE ─────────────────────────────────────────────── */
 .notes-title {
     border: 2px solid var(--navy);
-    padding: 40px 48px 28px 48px;
+    padding: 40px 48px 32px 48px;
     border-radius: 10px;
     background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+    margin-bottom: 20px;
 }
 
 .title-kicker {
@@ -320,11 +262,4 @@
     border-radius: 6px;
     margin-top: 16px;
     font-size: 11pt;
-}
-
-/* ── PRINT OVERRIDES ────────────────────────────────────────── */
-@media print {
-    .notes-card { padding: 6px 8px 6px 10px; }
-    .rep-grid   { display: grid; }
-    .sketch-cols { display: grid; }
 }
