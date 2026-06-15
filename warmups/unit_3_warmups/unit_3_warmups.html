@@ -1,146 +1,823 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 3 Warm Ups</title>
-<script>MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };</script>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true }
+};
+</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>@page { size: letter; margin: 0.45in; }
-* { box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; background: #fff; font-size: 11pt; line-height: 1.35; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.container { max-width: 980px; margin: 0 auto; }
-.warmup { page-break-after: always; break-after: page; padding-top: 4px; }
-.warmup:last-child { page-break-after: auto; break-after: auto; }
-h1 { color: #00003d; font-size: 24pt; line-height: 1.1; margin: 0 0 4px 0; }
-.subtitle { color: #444; font-weight: 700; margin-bottom: 10px; }
-.problem { border: 1px solid #777; border-left: 7px solid #00003d; padding: 10px 12px; margin: 10px 0 14px 0; background: #fff; break-inside: avoid; page-break-inside: avoid; }
-.problem-title { font-weight: 900; color: #00003d; margin-bottom: 6px; }
-.prompt { margin-bottom: 8px; }
-.workspace { min-height: 400px; border: 1px dashed #999; background: repeating-linear-gradient(0deg, #fff, #fff 23px, #f2f2f2 24px); margin-top: 8px; }
-table.values { border-collapse: collapse; margin: 8px auto; width: auto; }
-table.values th, table.values td { border: 1px solid #777; padding: 6px 14px; min-width: 42px; text-align: center; }
-table.values th { background: #eaf1fb; color: #00003d; font-weight: 800; }
-.graph-img { max-width: 5.25in; height: auto; display: block; margin: 8px auto; border: 1px solid #ccc; background: #fff; }
-.graph-wide { max-width: 6.75in; }
-@media print { body { font-size: 10.5pt; } h1 { font-size: 22pt; } .problem { padding: 9px 11px; } }
-</style></head><body><div class="container">
-<section class="warmup" id="warmup-3-1-1">
-<h1>Warm Up Unit 3.1.1</h1>
-<div class="subtitle">Prior Knowledge for Graphing and Elimination</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Complete the table for $y=2x+1$ and write the ordered pairs.<table class="values"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table></div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Solve $x+4=11$ and check your solution.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Find the slope between $(0,3)$ and $(4,11)$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Add the two equations vertically to eliminate $y$: $$\begin{aligned}x+y&=8\\2x-y&=7\end{aligned}$$</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-1-2">
-<h1>Warm Up Unit 3.1.2</h1>
-<div class="subtitle">Current + Spiral Practice</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt"><img class="graph-img" src="figures/wu3-1-2-1.png?v=1" alt="two linear graphs with an intersection"><br>Use the graph to estimate the solution to the system. Explain what the ordered pair means.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Solve by elimination. $$\begin{aligned}x+y&=10\\x-y&=2\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Write an equation for a line with slope $3$ and $y$-intercept $-2$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: Evaluate $f(x)=2x+5$ when $x=-3$ and when $x=4$.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-1-3">
-<h1>Warm Up Unit 3.1.3</h1>
-<div class="subtitle">Reasoning with Graphing and Elimination</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt"><img class="graph-img graph-wide" src="figures/wu3-1-3-1.png?v=2" alt="three separate system graphs"><br>For Graphs A, B, and C, decide whether each system appears to have one solution, no solution, or infinitely many solutions. Justify using the graph behavior.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">A student says elimination is always harder than graphing. Use the system below to critique the claim. $$\begin{aligned}4x+2y&=18\\-4x+3y&=7\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt"><img class="graph-img" src="figures/wu3-1-3-3.png?v=1" alt="two matching linear representations"><br>Spiral: The table line and equation line appear to overlap. Explain what evidence would confirm they represent the same relationship.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: A student solves $3x+9=21$ by adding $9$ first. Explain the error and solve correctly.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-2-1">
-<h1>Warm Up Unit 3.2.1</h1>
-<div class="subtitle">Prior Knowledge for Solving Systems by Substitution</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Evaluate $2x+3$ when $x=5$ and when $x=-2$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Solve $y=3x-1$ for $y$ when $x=4$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Substitute $x=2$ into $x+y=9$ and solve for $y$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Solve the equation $2(x+4)=18$.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-2-2">
-<h1>Warm Up Unit 3.2.2</h1>
-<div class="subtitle">Current + Spiral Practice</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Solve by substitution. $$\begin{aligned}y&=2x+1\\x+y&=10\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Solve by substitution. $$\begin{aligned}x&=y+3\\2x+y&=18\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Solve by elimination. $$\begin{aligned}3x+y&=14\\x-y&=2\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt"><img class="graph-img" src="figures/wu3-2-2-4.png?v=1" alt="two linear graphs with intersection"><br>Formative Spiral: Estimate the intersection from the graph and explain how it relates to solving a system.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-2-3">
-<h1>Warm Up Unit 3.2.3</h1>
-<div class="subtitle">Reasoning with Substitution</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">A student substitutes $y=2x+4$ into $x+y=16$ and writes $x+2x+4=16$. Is this setup correct? Finish the solution and explain.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">For the system below, explain why substitution is efficient before solving. $$\begin{aligned}x&=4y-1\\3x+2y&=23\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Compare the systems $y=2x+1$, $y=2x+5$ and $y=2x+1$, $y=-x+7$. Which has no solution? Justify without graphing.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt"><img class="graph-img graph-wide" src="figures/wu3-2-3-4.png?v=1" alt="four separate linear graphs in two by two layout"><br>Formative Spiral: Choose two graphs that could have the same slope but different intercepts. Explain how you know.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-3-1">
-<h1>Warm Up Unit 3.3.1</h1>
-<div class="subtitle">Prior Knowledge for Writing and Solving Systems from Situations</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Define variables for this situation: adult tickets and student tickets are sold for a school play.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Write an equation for: the total number of adult tickets $a$ and student tickets $s$ is $42$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Adult tickets cost $9$ dollars and student tickets cost $6$ dollars. Write an expression for the total money collected from $a$ adult tickets and $s$ student tickets.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Solve $9a+6s=276$ for the total when $a=20$ and $s=16$. Does this pair fit the money equation?</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-3-2">
-<h1>Warm Up Unit 3.3.2</h1>
-<div class="subtitle">Current + Spiral Practice</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Define variables and write a system: Adult tickets cost $10$ dollars, student tickets cost $6$ dollars, $50$ tickets were sold, and $380$ dollars was collected.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Write and solve a system: Two numbers have a sum of $28$ and a difference of $6$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Solve by substitution. $$\begin{aligned}y&=x+4\\2x+y&=19\end{aligned}$$</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt"><img class="graph-img" src="figures/wu3-3-2-4.png?v=3" alt="two cost models graph"><br>Formative Spiral: Estimate when the two cost models are equal and interpret the point in context.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-3-3">
-<h1>Warm Up Unit 3.3.3</h1>
-<div class="subtitle">Reasoning with System Models</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">A student writes only $a+s=36$ for a ticket situation with two ticket prices. Explain why a second equation is needed and what it should represent.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt"><img class="graph-img" src="figures/wu3-3-3-2.png?v=3" alt="two plan graph"><br>Create a short context for the two plans. Then explain what the intersection means in your context.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: A student says the solution $(5,40)$ means the answer is just $40$. Critique the interpretation.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: Design a one-step or two-step equation whose solution is $x=7$. Explain how someone could verify it.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-4-1">
-<h1>Warm Up Unit 3.4.1</h1>
-<div class="subtitle">Prior Knowledge for Graphing Linear Inequalities</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">For $y=2x+1$, identify the slope and $y$-intercept.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Determine whether $(0,0)$ satisfies $y<3x+2$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Should the graph of $x\le5$ include $5$? Explain using inequality notation.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Solve $2x+3\le 15$.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-4-2">
-<h1>Warm Up Unit 3.4.2</h1>
-<div class="subtitle">Current + Spiral Practice</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">For the inequality $y\le -2x+6$, should the boundary line be solid or dashed? Explain.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Determine whether $(2,5)$ satisfies $y> x+2$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt"><img class="graph-img" src="figures/wu3-4-2-3.png?v=1" alt="single linear inequality graph"><br>Use the graph to decide whether point A or point B appears to be a solution. Explain using the shaded region.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: Solve by elimination. $$\begin{aligned}x+y&=12\\x-y&=4\end{aligned}$$</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-4-3">
-<h1>Warm Up Unit 3.4.3</h1>
-<div class="subtitle">Reasoning with Linear Inequalities</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">A student graphs $y<2x+1$ with a solid boundary line. Analyze the error and explain the correction.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt"><img class="graph-img" src="figures/wu3-4-3-2.png?v=1" alt="inequality graph with a test point"><br>Explain how the test point $(0,0)$ can verify which side of the boundary should be shaded.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Compare graphing $y= -x+5$ and graphing $y\le -x+5$. How are the graphs similar and different?</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: Create a context that could be represented by $x\le 12$ and explain what values make sense.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-5-1">
-<h1>Warm Up Unit 3.5.1</h1>
-<div class="subtitle">Prior Knowledge for Linear Systems of Inequalities</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Determine whether $(3,4)$ satisfies $y\le -x+8$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Determine whether $(3,4)$ satisfies $y\ge 2$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Use your answers from Problems 1 and 2. Does $(3,4)$ satisfy both inequalities?</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Describe what it means for a point to be in a shaded region on an inequality graph.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-5-2">
-<h1>Warm Up Unit 3.5.2</h1>
-<div class="subtitle">Current + Spiral Practice</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt">Determine whether $(4,3)$ satisfies both inequalities: $y\le -x+9$ and $y>1$.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt"><img class="graph-img" src="figures/wu3-5-2-2.png?v=1" alt="system of inequalities with candidate points"><br>Use the graph to list two points that appear to satisfy both constraints.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: For the inequality $y>2x-1$, explain whether the boundary is solid or dashed and why.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: Write a system of equations for: two numbers have a sum of $18$ and one number is $4$ more than the other.</div><div class="workspace"></div></section>
-</section>
-<section class="warmup" id="warmup-3-5-3">
-<h1>Warm Up Unit 3.5.3</h1>
-<div class="subtitle">Reasoning with Systems of Inequalities</div>
-<section class="problem"><div class="problem-title">Problem 1</div><div class="prompt"><img class="graph-img" src="figures/wu3-5-3-1.png?v=1" alt="feasible region with candidate points"><br>A student says any point between the two boundary lines is a solution. Critique the claim using the graph.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 2</div><div class="prompt">Explain why a feasible region may contain infinitely many possible solutions even when the system has only two inequalities.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 3</div><div class="prompt">Spiral: Create a real-world situation with two constraints. Write the two inequalities and describe one feasible choice.</div><div class="workspace"></div></section>
-<section class="problem"><div class="problem-title">Problem 4</div><div class="prompt">Formative Spiral: A student tests only one inequality and says a point is a solution to the system. Explain why that reasoning is incomplete.</div><div class="workspace"></div></section>
-</section>
-</div></body></html>
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/warmup.css">
+</head>
+<body>
+<div class="warmups-container">
+
+  <!-- ═══ WARMUP 3-1-1 ═══ -->
+  <section class="warmup-page" id="warmup-3-1-1-p1">
+    <header class="warmup-header">
+      <h1>Section 3.1 — Day 1</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S1-DOK1.12 | PK selected -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>For $x=3$ and $y=-2$, state the point of intersection as an ordered pair.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S1-DOK1.10 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>A line passes through $(0,-2)$. What feature of the graph is represented by $-2$?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-1-1-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S1-DOK2.10 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Write an equation for a relationship whose graph would pass through $(0,9)$ and increase by $4$ in output for every $1$ increase in input.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V1+P1 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_1_1_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-1-1 ═══ -->
+
+  <!-- ═══ WARMUP 3-1-2 ═══ -->
+  <section class="warmup-page" id="warmup-3-1-2-p1">
+    <header class="warmup-header">
+      <h1>Section 3.1 — Day 2</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S1-DOK1.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>When a graph of a system shows one intersection point, how many ordered-pair solutions does the system have?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S1-DOK1.08 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>A table shows that $y$ decreases by $6$ whenever $x$ increases by $2$. What is the slope?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-1-2-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S1-DOK1.12 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: For the table, identify the output when the input is $-1$.</p><table class="values"><thead><tr><th>$x$</th><th>-2</th><th>-1</th><th>0</th><th>1</th></tr></thead>
+        
+        
+        <tbody><tr><td>$y$</td><td>9</td><td>6</td><td>3</td><td>0</td></tr></tbody></table>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V2+P2 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_1_2_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-1-2 ═══ -->
+
+  <!-- ═══ WARMUP 3-1-3 ═══ -->
+  <section class="warmup-page" id="warmup-3-1-3-p1">
+    <header class="warmup-header">
+      <h1>Section 3.1 — Day 3</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S1-DOK2.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>Choose whether to multiply the first equation, second equation, or neither before eliminating. Then solve.</p>$$\begin{aligned}2x+3y=18\\5x-3y=10\end{aligned}$$
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S1-DOK2.05 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <table class="values"><thead><tr><th>$x$</th><th>1</th><th>3</th><th>6</th><th>10</th></tr></thead>
+        
+        
+        <tbody><tr><td>$y$</td><td>5</td><td>11</td><td>20</td><td>32</td></tr></tbody></table><p>The input gaps are not all the same. Determine whether the rate of change is constant, and show the rate you used.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-1-3-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S2-DOK2.02 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Complete the input-output table for $g(x)=\sqrt{x+4}$.</p><table class="values"><thead><tr><th>$x$</th><th>-4</th><th>0</th><th>5</th><th>12</th></tr></thead>
+        
+        
+        <tbody><tr><td>$g(x)$</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V3+P4 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_1_3_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-1-3 ═══ -->
+
+  <!-- ═══ WARMUP 3-2-1 ═══ -->
+  <section class="warmup-page" id="warmup-3-2-1-p1">
+    <header class="warmup-header">
+      <h1>Section 3.2 — Day 1</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S2-DOK1.04 | PK selected -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>After substituting $y=x+6$ into $2x+y=15$, what one-variable equation should be solved?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S3-DOK1.04 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>A line has slope $5$ and $y$-intercept $-2$. Write the equation.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-2-1-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S5-DOK1.08 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: For the equation $5x=35$, name the operation you would use to isolate $x$.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V4+P6 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_2_1_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-2-1 ═══ -->
+
+  <!-- ═══ WARMUP 3-2-2 ═══ -->
+  <section class="warmup-page" id="warmup-3-2-2-p1">
+    <header class="warmup-header">
+      <h1>Section 3.2 — Day 2</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S2-DOK1.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>Why is substitution efficient when one equation is $x=8-y$?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK1.02 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>Which point is the $y$-intercept of a line that crosses the $y$-axis at $6$?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-2-2-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S2-DOK1.08 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: If a rule gives output $0$ for input $-3$, write the ordered pair.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V1+P3 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_2_2_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-2-2 ═══ -->
+
+  <!-- ═══ WARMUP 3-2-3 ═══ -->
+  <section class="warmup-page" id="warmup-3-2-3-p1">
+    <header class="warmup-header">
+      <h1>Section 3.2 — Day 3</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S2-DOK2.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>Use substitution to solve the system. Show the one-variable equation that results from your substitution.</p>$$\begin{aligned}m=2n+1\\3m+n=25\end{aligned}$$
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S1-DOK2.10 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <table class="values"><thead><tr><th>Day</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+        
+        
+        <tbody><tr><td>Height (cm)</td><td>12</td><td>15</td><td>18</td><td>21</td><td>24</td></tr></tbody></table><p>Use the table to write a rate-of-change statement in context. Then predict the height on day $9$.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-2-3-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S3-DOK2.04 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: A population starts at $200$ and is multiplied by $1.15$ each year. Write an equation and state whether the model shows growth or decay.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V2+P5 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_2_3_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-2-3 ═══ -->
+
+  <!-- ═══ WARMUP 3-3-1 ═══ -->
+  <section class="warmup-page" id="warmup-3-3-1-p1">
+    <header class="warmup-header">
+      <h1>Section 3.3 — Day 1</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S3-DOK1.01 | PK selected -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>In a ticket context, if $s$ is student tickets and $a$ is adult tickets, what does $s+a=120$ represent?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S5-DOK1.04 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>A residual is actual value minus predicted value. If actual is $48$ and predicted is $45$, find the residual.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-3-1-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S5-DOK1.04 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: What does a solution to an equation represent in a context?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V3+P1 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_3_1_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-3-1 ═══ -->
+
+  <!-- ═══ WARMUP 3-3-2 ═══ -->
+  <section class="warmup-page" id="warmup-3-3-2-p1">
+    <header class="warmup-header">
+      <h1>Section 3.3 — Day 2</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S3-DOK1.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>In a mixture problem with $x$ pounds of nuts and $y$ pounds of dried fruit, what would $x+y=25$ represent?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK1.10 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        Use the line shown to identify whether the $y$-intercept is positive, negative, or zero.<figure class="warmup-figure wu-img-4"><img alt="coordinate plane with a linear graph" src="figures/u2_bank_s2_intercept_read_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-3-2-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S3-DOK1.04 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: The equation $y=2|x-5|+1$ belongs to which common family?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V4+P4 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_3_2_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-3-2 ═══ -->
+
+  <!-- ═══ WARMUP 3-3-3 ═══ -->
+  <section class="warmup-page" id="warmup-3-3-3-p1">
+    <header class="warmup-header">
+      <h1>Section 3.3 — Day 3</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S3-DOK2.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>At a fundraiser, small candles cost \$4 and large candles cost \$7. The group sold 63 candles for \$330. Write and solve a system for small and large candles.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK2.05 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        The graph shows a distance model. Estimate the starting distance and rate of change. Then predict the distance at $6$ minutes.<figure class="warmup-figure wu-img-4"><img alt="context graph with a linear distance model" src="figures/u2_bank_s2_context_distance_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-3-3-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S4-DOK2.06 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Use the diamond to find two numbers with product $-24$ and sum $2$. Then write a related factored form for $x^2+2x-24$.</p><figure class="warmup-figure diamond-figure"><img alt="Diamond problem with product and sum given." src="figures/u1_bank_s4_diamond_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V1+P2 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_3_3_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-3-3 ═══ -->
+
+  <!-- ═══ WARMUP 3-4-1 ═══ -->
+  <section class="warmup-page" id="warmup-3-4-1-p1">
+    <header class="warmup-header">
+      <h1>Section 3.4 — Day 1</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S4-DOK1.05 | PK selected -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>What point is most often easiest to use as a test point when it is not on the boundary?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK1.10 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        Use the line shown to identify whether the $y$-intercept is positive, negative, or zero.<figure class="warmup-figure wu-img-4"><img alt="coordinate plane with a linear graph" src="figures/u2_bank_s2_intercept_read_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-4-1-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S1-DOK2.04 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Use the blank coordinate plane to graph the relationship shown in the table.</p><table class="values"><thead><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr></thead>
+        
+        
+        <tbody><tr><td>$y$</td><td>1</td><td>3</td><td>5</td><td>7</td></tr></tbody></table><figure class="warmup-figure wu-img-4"><img alt="Blank coordinate plane for graphing a table." src="figures/u1_bank_s1_coordinate_blank_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V2+P6 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_4_1_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-4-1 ═══ -->
+
+  <!-- ═══ WARMUP 3-4-2 ═══ -->
+  <section class="warmup-page" id="warmup-3-4-2-p1">
+    <header class="warmup-header">
+      <h1>Section 3.4 — Day 2</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S4-DOK1.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>What does a shaded half-plane represent?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S3-DOK1.04 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>A line has slope $5$ and $y$-intercept $-2$. Write the equation.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-4-2-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S3-DOK1.16 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Name one feature you can use as evidence for a family choice besides the graph shape.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V3+P5 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_4_2_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-4-2 ═══ -->
+
+  <!-- ═══ WARMUP 3-4-3 ═══ -->
+  <section class="warmup-page" id="warmup-3-4-3-p1">
+    <header class="warmup-header">
+      <h1>Section 3.4 — Day 3</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S4-DOK2.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>Use the displayed shaded region to write one test point that satisfies the inequality and one that does not. Then explain how you know each point belongs in its category.</p><figure class="warmup-figure wu-img-4"><img alt="graph of a dashed linear inequality" src="figures/u3_bank_s4_ineq_below_dashed_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK2.10 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        A line has slope $4$ and passes through $(2,1)$. Make a table with three points, graph it, and decide whether $(0,-7)$ should also be on the line.<figure class="warmup-figure wu-img-4"><img alt="blank coordinate plane" src="figures/u2_bank_coordinate_blank_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-4-3-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S5-DOK2.08 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Check the proposed solution. A student says $x=5$ solves $7x-4=31$. Substitute and decide whether the solution is correct.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V4+P3 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_4_3_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-4-3 ═══ -->
+
+  <!-- ═══ WARMUP 3-5-1 ═══ -->
+  <section class="warmup-page" id="warmup-3-5-1-p1">
+    <header class="warmup-header">
+      <h1>Section 3.5 — Day 1</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S5-DOK1.02 | PK selected -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>In a graph of two inequalities, what does the overlapping shaded region represent?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S2-DOK1.14 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <p>Describe the graph of $y=-2$, including which axis it is parallel to.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-5-1-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S4-DOK2.09 | PK selected -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Complete the table by evaluating each expression at $x=0,1,2$.</p><table class="values"><thead><tr><th>expression</th><th>$x=0$</th><th>$x=1$</th><th>$x=2$</th></tr></thead>
+        
+        
+        
+        <tbody><tr><td>$2x+6$</td><td></td><td></td><td></td></tr><tr><td>$2(x+3)$</td><td></td><td></td><td></td></tr></tbody></table>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V1+P1 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_5_1_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-5-1 ═══ -->
+
+  <!-- ═══ WARMUP 3-5-2 ═══ -->
+  <section class="warmup-page" id="warmup-3-5-2-p1">
+    <header class="warmup-header">
+      <h1>Section 3.5 — Day 2</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S5-DOK1.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>What does a vertex of a feasible region usually represent?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S3-DOK1.12 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        Use the graph shown to identify the $y$-intercept before writing any equation.<figure class="warmup-figure wu-img-4"><img alt="coordinate plane with a linear graph" src="figures/u2_bank_s3_write_from_graph_sq_v1.png"/></figure>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-5-2-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S4-DOK1.12 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Which operation is shown by the parentheses in $5(2x-1)$?</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V2+P4 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_5_2_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-5-2 ═══ -->
+
+  <!-- ═══ WARMUP 3-5-3 ═══ -->
+  <section class="warmup-page" id="warmup-3-5-3-p1">
+    <header class="warmup-header">
+      <h1>Section 3.5 — Day 3</h1>
+    </header>
+
+    <!-- source: current | Unit 3 | 3-S5-DOK2.08 | exact -->
+    <div class="problem half first">
+      <div class="problem-title">Problem 1</div>
+      <div class="problem-body">
+        <p>A club can spend at most \$120 on notebooks and pens. Notebooks cost \$4 and pens cost \$2. Let $n$ be notebooks and $p$ be pens. Write a cost inequality and two nonnegative constraints.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: last    | Unit 2 | 2-S3-DOK2.05 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 2</div>
+      <div class="problem-body">
+        <table class="values"><thead><tr><th>Hours</th><th>1</th><th>3</th><th>5</th><th>7</th></tr></thead>
+        
+        
+        <tbody><tr><td>Pay</td><td>18</td><td>46</td><td>74</td><td>102</td></tr></tbody></table><p>Write an equation for pay in terms of hours. Interpret the starting value in the equation.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="warmup-page" id="warmup-3-5-3-p2">
+
+    <!-- source: mastery | Unit 1 | U1-S1-DOK2.10 | number_swap -->
+    <div class="problem half">
+      <div class="problem-title">Problem 3</div>
+      <div class="problem-body">
+        <p>Spiral: Write an equation for a relationship whose graph would pass through $(0,9)$ and increase by $4$ in output for every $1$ increase in input.</p>
+        <div class="workspace"></div>
+      </div>
+    </div>
+
+    <!-- source: generated | diamond | graph_tool.make_diamond | V5+P6 -->
+    <div class="problem half">
+      <div class="problem-title">Problem 4</div>
+      <div class="problem-body">
+        <p>Formative Spiral: Use the diamond. The top number is the product of the two side numbers, and the bottom number is their sum. Fill in the missing cell(s).</p>
+        <figure class="warmup-figure diamond-figure">
+          <img src="figures/u3_warmup_3_5_3_diamond.png" alt="Diamond problem">
+        </figure>
+        <div class="workspace short"></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END WARMUP 3-5-3 ═══ -->
+
+</div>
+</body>
+</html>
