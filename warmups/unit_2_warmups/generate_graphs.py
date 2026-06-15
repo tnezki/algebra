@@ -2041,10 +2041,1676 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PASTE YOUR GRAPH CODE BELOW THIS LINE
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Appended Unit 2 bank graph-generation blocks
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [], title='')
+save_graph(fig, 'u2_bank_coordinate_blank_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 0.75*x + 1, 'deriv': lambda x: np.zeros_like(x)+0.75, 'color':'steelblue', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s1_slope_read_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -0.5*x + 3, 'deriv': lambda x: np.zeros_like(x)-0.5, 'color':'firebrick', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s1_negative_rate_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x1_grid([
+    [{'expr': lambda x: 1.5*x - 1.5, 'deriv': lambda x: np.zeros_like(x)+1.5, 'color':'steelblue', 'label':None}],
+    [{'expr': lambda x: 1.5*x - 1.5, 'deriv': lambda x: np.zeros_like(x)+1.5, 'color':'darkorange', 'label':None}],
+], titles=['',''])
+save_graph(fig, 'u2_bank_s1_method_compare_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x2_grid([
+    [{'expr': lambda x: 2*x+3, 'deriv': lambda x: np.zeros_like(x)+2, 'color':'steelblue', 'label':None}],
+    [{'expr': lambda x: 2*x-2, 'deriv': lambda x: np.zeros_like(x)+2, 'color':'firebrick', 'label':None}],
+    [{'expr': lambda x: 2*x+1, 'deriv': lambda x: np.zeros_like(x)+2, 'color':'darkorange', 'label':None}],
+    [{'expr': lambda x: -2*x+1, 'deriv': lambda x: np.zeros_like(x)-2, 'color':'steelblue', 'label':None}],
+], titles=['','','',''])
+save_graph(fig, 'u2_bank_s2_parallel_compare_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -x + 4, 'deriv': lambda x: np.zeros_like(x)-1, 'color':'steelblue', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s2_intercept_read_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 12*x + 20, 'deriv': lambda x: np.zeros_like(x)+12, 'color':'steelblue', 'label':None}], 0, 8, 0, 120, xlabel='Time (min)', ylabel='Distance (m)', title='')
+save_graph(fig, 'u2_bank_s2_context_distance_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -0.5*x + 3, 'deriv': lambda x: np.zeros_like(x)-0.5, 'color':'firebrick', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s2_flawed_graph_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 2*x - 3, 'deriv': lambda x: np.zeros_like(x)+2, 'color':'steelblue', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s3_write_from_graph_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -0.75*x + 5, 'deriv': lambda x: np.zeros_like(x)-0.75, 'color':'firebrick', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s3_second_graph_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x1_grid([
+    [{'expr': lambda x: 0.5*x + 4, 'deriv': lambda x: np.zeros_like(x)+0.5, 'color':'steelblue', 'label':None}],
+    [{'expr': lambda x: 0.5*x + 4, 'deriv': lambda x: np.zeros_like(x)+0.5, 'color':'darkorange', 'label':None}],
+], titles=['',''])
+save_graph(fig, 'u2_bank_s3_equivalent_graphs_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x1_grid([
+    [{'expr': lambda x: x + 2, 'deriv': lambda x: np.zeros_like(x)+1, 'color':'steelblue', 'label':None}],
+    [{'expr': lambda x: 1.5*x - 1, 'deriv': lambda x: np.zeros_like(x)+1.5, 'color':'firebrick', 'label':None}],
+], titles=['',''])
+save_graph(fig, 'u2_bank_s4_compare_graphs_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 5*x + 20, 'deriv': lambda x: np.zeros_like(x)+5, 'color':'steelblue', 'label':r'$A$'},
+    {'expr': lambda x: 8*x + 5, 'deriv': lambda x: np.zeros_like(x)+8, 'color':'firebrick', 'label':r'$B$'},
+], 0, 10, 0, 100, xlabel='Uses', ylabel='Cost', title='')
+save_graph(fig, 'u2_bank_s4_plan_compare_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -1.25*x + 6, 'deriv': lambda x: np.zeros_like(x)-1.25, 'color':'steelblue', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s4_cross_rep_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [1,2,3,4,5,6,7,8], [42,45,49,52,55,59,61,65], 0, 9, 35, 70, color='steelblue', point_size=35, line_of_best_fit=True, xlabel='Week', ylabel='Height (cm)', title='')
+save_graph(fig, 'u2_bank_s5_scatter_height_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [2,4,6,8,10,12], [16,27,39,50,68,88], 0, 14, 0, 100, color='firebrick', point_size=35, line_of_best_fit=True, xlabel='Minutes', ylabel='Cost', title='')
+save_graph(fig, 'u2_bank_s5_scatter_cost_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [1,2,3,4,5,6,7,8], [12,15,19,22,40,28,31,35], 0, 9, 0, 45, color='darkorange', point_size=35, line_of_best_fit=True, xlabel='Trial', ylabel='Result', title='')
+save_graph(fig, 'u2_bank_s5_outlier_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [], [], 0, 10, 0, 30, color='steelblue', point_size=35, line_of_best_fit=False, xlabel='Practice day', ylabel='Free throws made', title='')
+save_graph(fig, 'u2_bank_s5_blank_scatter_sq_v1.png')
+plt.close(fig)
+
+# Additional Unit 2 figure-alignment fixes
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [], 0, 6, 0, 14, xlabel=r'$x$', ylabel=r'$y$', title='')
+save_graph(fig, 'u2_bank_s2_table_blank_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [], 0, 6, 0, 60, xlabel='Month', ylabel='Total cost', title='')
+save_graph(fig, 'u2_bank_s2_subscription_blank_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: x + 2, 'deriv': lambda x: np.zeros_like(x)+1, 'color':'steelblue', 'label':None}], title='')
+save_graph(fig, 'u2_bank_s4_single_compare_sq_v1.png')
+plt.close(fig)
+
+# Appended Unit 1 graph blocks needed by selected spiral items
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 4 — 2x2 GRID
+# Four standard coordinate planes in one 504x504 figure.
+# Use for: comparing parent functions, transformations, multiple examples.
+#
+# functions_list : list of 4 function lists, same format as make_standard_graph
+# titles         : list of 4 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _exit_arrows_small(ax, f, fprime, color, xmin, xmax, ymin, ymax):
+    x = np.linspace(xmin, xmax, 2000)
+    y = f(x)
+    exit_points = []
+    yl = f(xmin)
+    if ymin <= yl <= ymax:
+        exit_points.append((xmin, yl, -1, 'side'))
+    yr = f(xmax)
+    if ymin <= yr <= ymax:
+        exit_points.append((xmax, yr, 1, 'side'))
+    for edge_y, direction in [(ymin, -1), (ymax, 1)]:
+        vals = y - edge_y
+        for idx in np.where(np.diff(np.sign(vals)))[0]:
+            xr = np.interp(0, [vals[idx], vals[idx+1]], [x[idx], x[idx+1]])
+            exit_points.append((xr, edge_y, direction, 'topbot'))
+    for (xe, ye, direction, edge) in exit_points:
+        slope = fprime(xe)
+        if abs(slope) < 0.001:
+            continue
+        if edge == 'topbot':
+            dy_dir = float(direction)
+            dx_dir = dy_dir / slope
+        else:
+            dx_dir = float(direction)
+            dy_dir = slope * dx_dir
+        mag = np.sqrt(dx_dir**2 + dy_dir**2)
+        dx_dir /= mag
+        dy_dir /= mag
+        L = 0.45
+        ax.annotate('', xy=(xe + dx_dir*L, ye + dy_dir*L),
+                        xytext=(xe, ye),
+                    arrowprops=dict(arrowstyle='-|>', color=color,
+                                    lw=1.0, mutation_scale=7))
+
+
+def make_2x2_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '', '']
+
+    fig, axes = plt.subplots(2, 2, figsize=(3.5, 3.5))
+    fig.subplots_adjust(hspace=0.35, wspace=0.25)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes.flatten(), functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.2,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
 
 # ─────────────────────────────────────────────────────────────────────────────
-# WARMUP GRAPH GENERATION BLOCKS
+# TYPE 9 — 2x1 GRID
+# Two coordinate planes side by side, each 504x504px (3.5in).
+# Use for: before/after, compare/contrast, function and transformation pairs.
+#
+# functions_list : list of 2 function lists, same format as make_standard_graph
+# titles         : list of 2 LaTeX title strings e.g. r'$f(x)=x^2$'
 # ─────────────────────────────────────────────────────────────────────────────
+
+def make_2x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '']
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 3.5))
+    fig.subplots_adjust(wspace=0.3)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.5,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 5 — 3x1 GRID
+# Three coordinate planes side by side, each ~300px wide.
+# Use for: comparing transformations, showing shift/stretch/reflect series.
+#
+# functions_list : list of 3 function lists, same format as make_standard_graph
+# titles         : list of 3 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_3x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '']
+
+    fig, axes = plt.subplots(1, 3, figsize=(6.25, 2.08))
+    fig.subplots_adjust(wspace=0.3)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.2,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 6 — 4x1 GRID
+# Four coordinate planes side by side, each ~225px wide.
+# Use for: comparing four transformations or four parent functions in a row.
+#
+# functions_list : list of 4 function lists, same format as make_standard_graph
+# titles         : list of 4 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_4x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '', '']
+
+    fig, axes = plt.subplots(1, 4, figsize=(6.25, 1.56))
+    fig.subplots_adjust(wspace=0.35)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.5,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 7 — RECTANGLE MODEL (AREA MODEL)
+# Use for: multiplying polynomials, factoring, generic rectangle.
+# Scales automatically to any number of rows and columns.
+#
+# row_labels  : list of LaTeX strings  e.g. [r'$4x$', r'$-5y$']
+# col_labels  : list of LaTeX strings  e.g. [r'$2x$', r'$-3y$']
+# cell_values : 2D list — use r'$...$' for LaTeX, '' for blank
+#               e.g. [[r'$8x^2$', r'$-12xy$'], [r'$-10xy$', r'$15y^2$']]
+# filename    : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_rectangle_model(row_labels, col_labels, cell_values,
+                         filename='rectangle_model.png'):
+    import matplotlib.patches as patches
+
+    n_rows = len(row_labels)
+    n_cols = len(col_labels)
+
+    cell_w = 0.75
+    cell_h = 0.50
+    margin = 0.40
+
+    fig_w = margin + n_cols * cell_w + margin
+    fig_h = margin + n_rows * cell_h + margin
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    ax.set_xlim(0, fig_w)
+    ax.set_ylim(0, fig_h)
+    ax.axis('off')
+    ax.set_facecolor('white')
+    fig.patch.set_facecolor('white')
+
+    grid_x = margin
+    grid_y = margin * 0.5
+
+    for r in range(n_rows):
+        for c in range(n_cols):
+            cell_left   = grid_x + c * cell_w
+            cell_bottom = grid_y + (n_rows - 1 - r) * cell_h
+            rect = patches.Rectangle(
+                (cell_left, cell_bottom), cell_w, cell_h,
+                linewidth=1.2, edgecolor='black', facecolor='white'
+            )
+            ax.add_patch(rect)
+            val = cell_values[r][c]
+            if val:
+                ax.text(cell_left + cell_w/2, cell_bottom + cell_h/2, val,
+                        ha='center', va='center',
+                        fontsize=13, fontfamily='Times New Roman')
+
+    for c, lbl in enumerate(col_labels):
+        cx = grid_x + c * cell_w + cell_w/2
+        cy = grid_y + n_rows * cell_h + 0.10
+        ax.text(cx, cy, lbl, ha='center', va='bottom',
+                fontsize=13, fontfamily='Times New Roman')
+
+    for r, lbl in enumerate(row_labels):
+        rx = grid_x - 0.10
+        ry = grid_y + (n_rows - 1 - r) * cell_h + cell_h/2
+        ax.text(rx, ry, lbl, ha='right', va='center',
+                fontsize=13, fontfamily='Times New Roman')
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 8 — DIAMOND PROBLEM
+# Use for: diamond problems, factoring, sum/product puzzles.
+# Top = product, bottom = sum, left and right = the two factors.
+# Any cell can be '' for blank — student fills it in.
+#
+# top    : product value  e.g. r'$-42$'  or  r'$xy$'
+# left   : left factor    e.g. r'$3$'    or  r'$x$'
+# right  : right factor   e.g. r'$-14$'  or  r'$y$'
+# bottom : sum value      e.g. r'$-11$'  or  r'$x+y$'
+# filename : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_diamond(top, left, right, bottom, filename='diamond.png'):
+    import matplotlib.pyplot as plt
+
+    size = 2.5
+    fig, ax = plt.subplots(figsize=(size, size))
+    ax.set_xlim(-1, 1)
+    ax.set_ylim(-1, 1)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    ax.set_facecolor('white')
+    fig.patch.set_facecolor('white')
+
+    r = 0.85
+
+    top_pt    = ( 0,  r)
+    right_pt  = ( r,  0)
+    bottom_pt = ( 0, -r)
+    left_pt   = (-r,  0)
+
+    mid_top_right    = ((top_pt[0]+right_pt[0])/2,    (top_pt[1]+right_pt[1])/2)
+    mid_right_bottom = ((right_pt[0]+bottom_pt[0])/2, (right_pt[1]+bottom_pt[1])/2)
+    mid_bottom_left  = ((bottom_pt[0]+left_pt[0])/2,  (bottom_pt[1]+left_pt[1])/2)
+    mid_left_top     = ((left_pt[0]+top_pt[0])/2,     (left_pt[1]+top_pt[1])/2)
+
+    diamond = plt.Polygon(
+        [top_pt, right_pt, bottom_pt, left_pt],
+        closed=True, linewidth=1.4,
+        edgecolor='black', facecolor='white', zorder=2
+    )
+    ax.add_patch(diamond)
+
+    ax.plot([mid_left_top[0], mid_right_bottom[0]],
+            [mid_left_top[1], mid_right_bottom[1]],
+            color='black', linewidth=1.0, zorder=3)
+    ax.plot([mid_top_right[0], mid_bottom_left[0]],
+            [mid_top_right[1], mid_bottom_left[1]],
+            color='black', linewidth=1.0, zorder=3)
+
+    pad = 0.38
+    positions = {
+        'top':    ( 0,    pad),
+        'bottom': ( 0,   -pad),
+        'left':   (-pad,  0),
+        'right':  ( pad,  0),
+    }
+
+    for cell, val in [('top', top), ('bottom', bottom),
+                      ('left', left), ('right', right)]:
+        if val:
+            ax.text(*positions[cell], val,
+                    ha='center', va='center',
+                    fontsize=16, fontfamily='Times New Roman',
+                    zorder=4)
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 10 — PIECEWISE FUNCTION
+# Standard -10 to 10 plane. Each piece has its own domain; all pieces draw in steelblue.
+# Dots are automatic — closed if endpoint included, open if not.
+# Arrows drawn at window edges when piece extends to infinity.
+#
+# pieces : list of dicts, each with:
+#   'expr'          : lambda x: ...    the function expression
+#   'deriv'         : lambda x: ...    its derivative
+#   'domain'        : (a, b)           interval for this piece
+#   'include_left'  : True/False       closed dot on left endpoint
+#   'include_right' : True/False       closed dot on right endpoint
+#   'color'         : optional; ignored for consistency (all pieces use steelblue)
+#   'arrow_left'    : True/False       exit arrow at left end
+#   'arrow_right'   : True/False       exit arrow at right end
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _pw_dot(ax, x, y, open_dot, color, size=7, dot_scale=0.65):
+    size = size * dot_scale
+    if open_dot:
+        ax.plot(x, y, 'o', markersize=size, markerfacecolor='white',
+                markeredgecolor=color, markeredgewidth=2, zorder=6,
+                clip_on=False)
+    else:
+        ax.plot(x, y, 'o', markersize=size, markerfacecolor=color,
+                markeredgecolor=color, markeredgewidth=2, zorder=6,
+                clip_on=False)
+
+
+def make_piecewise_graph(ax, pieces, title='', dot_scale=0.65):
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for piece in pieces:
+        f          = piece['expr']
+        fprime     = piece['deriv']
+        color      = 'steelblue'
+        a, b       = piece['domain']
+        inc_left   = piece.get('include_left',  True)
+        inc_right  = piece.get('include_right', True)
+        arrow_left  = piece.get('arrow_left',  False)
+        arrow_right = piece.get('arrow_right', False)
+
+        x_seg = np.linspace(a, b, 1000)
+        y_seg = f(x_seg)
+        mask  = (y_seg >= YMIN) & (y_seg <= YMAX)
+        if mask.any():
+            ax.plot(x_seg[mask], y_seg[mask],
+                    color=color, linewidth=1.7, zorder=3)
+
+        ya = f(a)
+        if not arrow_left and YMIN <= ya <= YMAX:
+            _pw_dot(ax, a, ya, open_dot=not inc_left, color=color, dot_scale=dot_scale)
+
+        yb = f(b)
+        if not arrow_right and YMIN <= yb <= YMAX:
+            _pw_dot(ax, b, yb, open_dot=not inc_right, color=color, dot_scale=dot_scale)
+
+        if arrow_left and YMIN <= ya <= YMAX:
+            slope = fprime(a)
+            if abs(slope) >= 0.001:
+                dx_dir = -1.0
+                dy_dir = slope * dx_dir
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(a + dx_dir*0.45, ya + dy_dir*0.45),
+                                xytext=(a, ya),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+        if arrow_right and YMIN <= yb <= YMAX:
+            slope = fprime(b)
+            if abs(slope) >= 0.001:
+                dx_dir = 1.0
+                dy_dir = slope * dx_dir
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(b + dx_dir*0.45, yb + dy_dir*0.45),
+                                xytext=(b, yb),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+        for edge_y, direction in [(YMIN, -1), (YMAX, 1)]:
+            vals = y_seg - edge_y
+            for idx in np.where(np.diff(np.sign(vals)))[0]:
+                xr = np.interp(0, [vals[idx], vals[idx+1]],
+                                  [x_seg[idx], x_seg[idx+1]])
+                slope = fprime(xr)
+                if abs(slope) < 0.001:
+                    continue
+                dy_dir = float(direction)
+                dx_dir = dy_dir / slope
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(xr + dx_dir*0.45, edge_y + dy_dir*0.45),
+                                xytext=(xr, edge_y),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+    ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+    ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+    ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+    ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+    ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+    ax.set_xticks([-10, -5, 5, 10])
+    ax.set_yticks([-10, -5, 5, 10])
+    ax.set_xticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+    ax.tick_params(which='minor', length=2, width=0.8, color='#555555')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+    ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+    ax.text(XMAX+0.35, 0.4, 'x', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='center', va='bottom')
+    ax.text(0.35, YMAX+0.35, 'y', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 11 — UNIT CIRCLE
+# All variants save at exactly 2.5x2.5in (360x360px at 144dpi).
+#
+# make_unit_circle_blank()
+#   Blank — circle and axes only. Student draws/writes everything.
+#
+# make_unit_circle_angles(ax_angle_deg=None, show_coord=True, filename=...)
+#   ax_angle_deg : int — highlights that angle in blue  e.g. 120
+#                  None — semi-blank, just 16 angle lines, nothing highlighted
+#   show_coord   : True = coordinate label outside circle, False = no label
+#
+# Valid angles: 0, 30, 45, 60, 90, 120, 135, 150,
+#               180, 210, 225, 240, 270, 300, 315, 330
+# ─────────────────────────────────────────────────────────────────────────────
+
+ANGLE_DATA = {
+    0:   ( 1,            0           ),
+    30:  ( np.sqrt(3)/2, 0.5         ),
+    45:  ( np.sqrt(2)/2, np.sqrt(2)/2),
+    60:  ( 0.5,          np.sqrt(3)/2),
+    90:  ( 0,            1           ),
+    120: (-0.5,          np.sqrt(3)/2),
+    135: (-np.sqrt(2)/2, np.sqrt(2)/2),
+    150: (-np.sqrt(3)/2, 0.5         ),
+    180: (-1,            0           ),
+    210: (-np.sqrt(3)/2,-0.5         ),
+    225: (-np.sqrt(2)/2,-np.sqrt(2)/2),
+    240: (-0.5,         -np.sqrt(3)/2),
+    270: ( 0,           -1           ),
+    300: ( 0.5,         -np.sqrt(3)/2),
+    315: ( np.sqrt(2)/2,-np.sqrt(2)/2),
+    330: ( np.sqrt(3)/2,-0.5         ),
+}
+
+COORD_LABELS = {
+    0:   r'$(1, 0)$',
+    30:  r'$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$',
+    45:  r'$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$',
+    60:  r'$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$',
+    90:  r'$(0, 1)$',
+    120: r'$\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$',
+    135: r'$\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$',
+    150: r'$\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$',
+    180: r'$(-1, 0)$',
+    210: r'$\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$',
+    225: r'$\left(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$',
+    240: r'$\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$',
+    270: r'$(0, -1)$',
+    300: r'$\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$',
+    315: r'$\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$',
+    330: r'$\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$',
+}
+
+
+def _draw_unit_circle_base(ax, show_angle_lines=False):
+    theta = np.linspace(0, 2*np.pi, 1000)
+    ax.plot(np.cos(theta), np.sin(theta),
+            color='black', linewidth=2.0, zorder=3)
+
+    lw_ax  = 0.6
+    col_ax = '#222222'
+    ax.plot([-1.3, 1.3], [0, 0], color=col_ax, linewidth=lw_ax, zorder=1)
+    ax.plot([0, 0], [-1.3, 1.3], color=col_ax, linewidth=lw_ax, zorder=1)
+
+    tri = dict(arrowstyle='-|>', color=col_ax, lw=lw_ax, mutation_scale=10)
+    ax.annotate('', xy=( 1.38, 0),  xytext=( 1.22, 0),  arrowprops=tri)
+    ax.annotate('', xy=(-1.38, 0),  xytext=(-1.22, 0),  arrowprops=tri)
+    ax.annotate('', xy=( 0,  1.38), xytext=( 0,  1.22), arrowprops=tri)
+    ax.annotate('', xy=( 0, -1.38), xytext=( 0, -1.22), arrowprops=tri)
+
+    ax.text( 1.44, 0,  'x', ha='left',   va='center', fontsize=8,
+             fontfamily='Times New Roman', color=col_ax)
+    ax.text( 0,  1.44, 'y', ha='center', va='bottom', fontsize=8,
+             fontfamily='Times New Roman', color=col_ax)
+
+    if show_angle_lines:
+        for deg in ANGLE_DATA:
+            rad = np.radians(deg)
+            ax.plot([0, np.cos(rad)], [0, np.sin(rad)],
+                    color='#aaaaaa', linewidth=0.6, zorder=2)
+
+    ax.set_xlim(-1.6, 1.6)
+    ax.set_ylim(-1.6, 1.6)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    ax.set_facecolor('white')
+
+
+def _uc_save(fig, filename):
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144)
+    print(f'Saved: {path}')
+
+
+def make_unit_circle_blank(filename='unit_circle_blank.png'):
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    _draw_unit_circle_base(ax, show_angle_lines=False)
+    _uc_save(fig, filename)
+
+
+def make_unit_circle_angles(ax_angle_deg=None, show_coord=True,
+                             filename='unit_circle_angles.png'):
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    _draw_unit_circle_base(ax, show_angle_lines=True)
+
+    if ax_angle_deg is not None:
+        blue = '#1a4f8a'
+        rad  = np.radians(ax_angle_deg)
+        px   = np.cos(rad)
+        py   = np.sin(rad)
+
+        ax.plot([0, px], [0, py], color=blue, linewidth=1.8, zorder=4)
+        ax.plot(px, py, 'o', markersize=5, color=blue, zorder=5)
+
+        if show_coord and ax_angle_deg in COORD_LABELS:
+            lx = px * 1.12
+            ly = py * 1.12
+            ha = 'center'
+            if px > 0.15:  ha = 'left'
+            if px < -0.15: ha = 'right'
+            va = 'center'
+            if py > 0.15:  va = 'bottom'
+            if py < -0.15: va = 'top'
+            ax.text(lx, ly, COORD_LABELS[ax_angle_deg],
+                    ha=ha, va=va, fontsize=12, color=blue,
+                    fontfamily='Times New Roman', zorder=6)
+
+    _uc_save(fig, filename)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 12 — 2D INEQUALITY / SYSTEM OF INEQUALITIES
+# Standard plane extended to ±11 so exit arrows clear the grid.
+# Single inequality or system of 2 (overlap shown in mediumpurple).
+#
+# inequalities : list of dicts, each with:
+#   'expr'      : lambda x: ...    boundary line function
+#   'deriv'     : lambda x: ...    its derivative
+#   'color'     : 'steelblue'
+#   'shade'     : 'above' or 'below'
+#   'inclusive' : True = solid line, False = dashed line
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_inequality_graph(ax, inequalities, title=''):
+    XMIN, XMAX, YMIN, YMAX = -11, 11, -11, 11
+    x = np.linspace(XMIN, XMAX, 2000)
+
+    shade_regions = []
+
+    for ineq in inequalities:
+        f         = ineq['expr']
+        fprime    = ineq['deriv']
+        color     = ineq['color']
+        shade     = ineq['shade']
+        inclusive = ineq.get('inclusive', True)
+
+        y = f(x)
+        y_clipped = np.clip(y, YMIN, YMAX)
+        shade_regions.append({'y': y_clipped, 'shade': shade, 'color': color})
+
+        linestyle = '-' if inclusive else '--'
+        mask = (y >= YMIN) & (y <= YMAX)
+        segments = np.split(np.where(mask)[0],
+                            np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+        for seg in segments:
+            if len(seg) > 1:
+                ax.plot(x[seg], y[seg], color=color, linewidth=2,
+                        linestyle=linestyle, zorder=4)
+
+        exit_points = []
+        yl = f(XMIN)
+        if YMIN <= yl <= YMAX:
+            exit_points.append((float(XMIN), float(yl), 'left'))
+        yr = f(XMAX)
+        if YMIN <= yr <= YMAX:
+            exit_points.append((float(XMAX), float(yr), 'right'))
+        for edge_y, edge_dir in [(YMIN, 'bottom'), (YMAX, 'top')]:
+            vals = y - edge_y
+            for idx in np.where(np.diff(np.sign(vals)))[0]:
+                xr = float(np.interp(0, [vals[idx], vals[idx+1]],
+                                        [x[idx], x[idx+1]]))
+                exit_points.append((xr, float(edge_y), edge_dir))
+
+        for (xe, ye, edge) in exit_points:
+            slope = float(fprime(np.array([xe]))[0])
+            if edge == 'right':
+                dx_dir =  1.0
+                dy_dir =  float(slope)
+            elif edge == 'left':
+                dx_dir = -1.0
+                dy_dir = -float(slope)
+            elif edge == 'top':
+                dy_dir =  1.0
+                dx_dir =  float(1.0 / slope) if abs(slope) > 0.001 else 0.0
+            else:
+                dy_dir = -1.0
+                dx_dir = -float(1.0 / slope) if abs(slope) > 0.001 else 0.0
+            mag = float(np.sqrt(dx_dir**2 + dy_dir**2))
+            if mag < 0.001:
+                continue
+            dx_dir /= mag
+            dy_dir /= mag
+            L = 0.55
+            ax.annotate('',
+                        xy=(xe + dx_dir*L, ye + dy_dir*L),
+                        xytext=(xe - dx_dir*0.1, ye - dy_dir*0.1),
+                        arrowprops=dict(arrowstyle='-|>', color=color,
+                                        lw=1.5, mutation_scale=12),
+                        annotation_clip=False)
+
+    for sr in shade_regions:
+        if sr['shade'] == 'above':
+            ax.fill_between(x, sr['y'], YMAX,
+                            where=(sr['y'] <= YMAX),
+                            color=sr['color'], alpha=0.15, zorder=2)
+        elif sr['shade'] == 'below':
+            ax.fill_between(x, YMIN, sr['y'],
+                            where=(sr['y'] >= YMIN),
+                            color=sr['color'], alpha=0.15, zorder=2)
+
+    if len(shade_regions) == 2:
+        sr0, sr1 = shade_regions[0], shade_regions[1]
+        y0_top = np.full(len(x), float(YMAX)) if sr0['shade'] == 'above' else sr0['y']
+        y0_bot = sr0['y'] if sr0['shade'] == 'above' else np.full(len(x), float(YMIN))
+        y1_top = np.full(len(x), float(YMAX)) if sr1['shade'] == 'above' else sr1['y']
+        y1_bot = sr1['y'] if sr1['shade'] == 'above' else np.full(len(x), float(YMIN))
+        overlap_top = np.minimum(y0_top, y1_top)
+        overlap_bot = np.maximum(y0_bot, y1_bot)
+        has_overlap = overlap_top > overlap_bot
+        if has_overlap.any():
+            ax.fill_between(x, overlap_bot, overlap_top,
+                            where=has_overlap,
+                            color='mediumpurple', alpha=0.45, zorder=3)
+
+    ax.set_xlim(-10.5, 10.5)
+    ax.set_ylim(-10.5, 10.5)
+    ax.set_xticks(np.arange(-10, 11, 1), minor=True)
+    ax.set_yticks(np.arange(-10, 11, 1), minor=True)
+    ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+    ax.set_xticks([-10, -5, 5, 10])
+    ax.set_yticks([-10, -5, 5, 10])
+    ax.set_xticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+    ax.tick_params(which='minor', length=2, width=0.8, color='#555555')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(-10.5, 10.5)
+    ax.spines['bottom'].set_bounds(-10.5, 10.5)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=( 11.6,  0), xytext=( 10,  0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(-11.6,  0), xytext=(-10,  0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=( 0,  11.6), xytext=( 0,  10), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=( 0, -11.6), xytext=( 0, -10), arrowprops=tri, annotation_clip=False)
+
+    ax.text(11.8, 0.4, 'x', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='center', va='bottom')
+    ax.text(0.35, 11.8, 'y', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=22)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 13 — TRIG GRAPH (sine and cosine)
+# Landscape figure 5x2.5in. Shows 2 full periods.
+# x-axis labeled in π fractions. y-axis scales to amplitude.
+#
+# functions : list of dicts, each with:
+#   'type'  : 'sin' or 'cos'
+#   'a'     : amplitude          (default 1)
+#   'b'     : frequency          (default 1)
+#   'c'     : phase shift        (default 0)  f(x) = a·sin(b(x-c)) + d
+#   'd'     : vertical shift     (default 0)
+#   'color' : 'steelblue'
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_trig_graph(ax, functions, title=''):
+    max_amp = max(abs(fn.get('a', 1)) + abs(fn.get('d', 0))
+                  for fn in functions)
+    y_max = max(np.ceil(max_amp * 1.3), 2)
+
+    min_b = min(abs(fn.get('b', 1)) for fn in functions)
+    period = 2 * np.pi / min_b
+    x_max = period
+    x = np.linspace(-x_max, x_max, 3000)
+
+    for fn in functions:
+        ftype = fn.get('type', 'sin')
+        a     = fn.get('a', 1)
+        b     = fn.get('b', 1)
+        c     = fn.get('c', 0)
+        d     = fn.get('d', 0)
+        color = fn.get('color', 'steelblue')
+
+        if ftype == 'sin':
+            y = a * np.sin(b * (x - c)) + d
+        else:
+            y = a * np.cos(b * (x - c)) + d
+
+        ax.plot(x, y, color=color, linewidth=2, zorder=3)
+
+    ax.set_ylim(-y_max - 0.3, y_max + 0.3)
+    ax.set_xlim(-x_max - 0.2, x_max + 0.2)
+
+    step = np.pi / (4 * min_b)
+    x_ticks = np.arange(-x_max, x_max + step*0.01, step)
+
+    def pi_label(v):
+        from fractions import Fraction
+        v_pi = round(v / np.pi * 8) / 8
+        if v_pi == 0:
+            return '0'
+        frac = Fraction(v_pi).limit_denominator(8)
+        num, den = frac.numerator, frac.denominator
+        if den == 1:
+            if num ==  1: return r'$\pi$'
+            if num == -1: return r'$-\pi$'
+            return rf'${num}\pi$'
+        if num ==  1: return rf'$\frac{{\pi}}{{{den}}}$'
+        if num == -1: return rf'$-\frac{{\pi}}{{{den}}}$'
+        if num <   0: return rf'$-\frac{{{abs(num)}\pi}}{{{den}}}$'
+        return rf'$\frac{{{num}\pi}}{{{den}}}$'
+
+    label_every = 2
+    ax.set_xticks(x_ticks)
+    x_labels = [pi_label(t) if i % label_every == 0 else ''
+                for i, t in enumerate(x_ticks)]
+    ax.set_xticklabels(x_labels, fontfamily='Times New Roman', fontsize=10)
+
+    y_ticks = np.arange(-int(y_max), int(y_max)+1, 1)
+    ax.set_yticks(y_ticks)
+    y_labels = [str(int(t)) if t != 0 else '' for t in y_ticks]
+    ax.set_yticklabels(y_labels, fontfamily='Times New Roman', fontsize=10)
+
+    ax.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.tick_params(which='major', length=4, width=1.0, color='#222222')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(-y_max, y_max)
+    ax.spines['bottom'].set_bounds(-x_max, x_max)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=2.0, mutation_scale=14)
+    ax.annotate('', xy=( x_max+0.3, 0), xytext=( x_max, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(-x_max-0.3, 0), xytext=(-x_max, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0,  y_max+0.4), xytext=(0,  y_max), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, -y_max-0.4), xytext=(0, -y_max), arrowprops=tri, annotation_clip=False)
+
+    ax.text(x_max+0.35, 0.15, 'x', fontsize=13, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='bottom')
+    ax.text(0.15, y_max+0.3, 'y', fontsize=13, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 14 — BAR CHART
+# Use for: categorical comparisons, survey results, grouped data.
+# Landscape 4x3in. Horizontal grid lines only. Times New Roman throughout.
+#
+# categories : list of strings        e.g. ['Mon', 'Tue', 'Wed']
+# values     : list of numbers        e.g. [4, 7, 3]
+# colors     : single color or list   (default 'steelblue')
+# ylabel     : y-axis label
+# xlabel     : x-axis label
+# title      : LaTeX supported via r'$...$'
+#
+# TYPE 15 — HISTOGRAM
+# Use for: frequency distributions, data spread, statistics units.
+#
+# data   : list or array of raw values  e.g. [12, 15, 14, 18, ...]
+# bins   : number of bins or list of bin edges (default 10)
+# color  : bar color (default 'steelblue')
+# ylabel : y-axis label
+# xlabel : x-axis label
+# title  : LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_bar_chart(ax, categories, values, title='',
+                   colors=None, ylabel='Frequency', xlabel=''):
+    if colors is None:
+        colors = 'steelblue'
+
+    n = len(categories)
+    x = np.arange(n)
+
+    ax.bar(x, values, color=colors, width=0.6,
+           edgecolor='white', linewidth=0.8, zorder=3)
+
+    ax.yaxis.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.set_axisbelow(True)
+
+    y_max = max(values) * 1.15
+    ax.set_ylim(0, y_max)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(categories,
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_xlim(-0.5, n - 0.5)
+
+    ax.yaxis.set_tick_params(labelsize=11)
+    for label in ax.get_yticklabels():
+        label.set_fontfamily('Times New Roman')
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_color('#222222')
+    ax.spines['bottom'].set_color('#222222')
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+
+def make_histogram(ax, data, bins=10, title='',
+                   color='steelblue', ylabel='Frequency', xlabel='Value'):
+    counts, edges, patches = ax.hist(data, bins=bins, color=color,
+                                     edgecolor='white', linewidth=0.8,
+                                     zorder=3)
+
+    ax.yaxis.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.set_axisbelow(True)
+
+    y_max = max(counts) * 1.15
+    ax.set_ylim(0, y_max)
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_color('#222222')
+    ax.spines['bottom'].set_color('#222222')
+
+    ax.xaxis.set_tick_params(labelsize=11)
+    ax.yaxis.set_tick_params(labelsize=11)
+    for label in ax.get_xticklabels() + ax.get_yticklabels():
+        label.set_fontfamily('Times New Roman')
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 16 — SCATTER PLOT
+# Use for: data analysis, line of best fit, residuals, sequences/series.
+# Custom axis ranges. Optional linear line of best fit with arrows.
+# One dataset at a time.
+#
+# x_data, y_data   : lists or arrays of data points
+# xmin/xmax        : x axis range
+# ymin/ymax        : y axis range
+# color            : point color (default 'steelblue')
+# point_size       : dot size (default 25)
+# line_of_best_fit : True = draw linear regression line with arrows
+# xlabel/ylabel    : axis labels
+# title            : LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_scatter_plot(ax, x_data, y_data,
+                      xmin, xmax, ymin, ymax,
+                      color='steelblue', point_size=25, point_scale=0.65,
+                      line_of_best_fit=False,
+                      xlabel='x', ylabel='y', title=''):
+
+    x_data = np.array(x_data, dtype=float)
+    y_data = np.array(y_data, dtype=float)
+
+    ax.scatter(x_data, y_data, color=color, s=point_size * point_scale,
+               zorder=4, clip_on=True)
+
+    if line_of_best_fit:
+        m, b = np.polyfit(x_data, y_data, 1)
+        x_range = xmax - xmin
+        x_ext = np.linspace(xmin, xmax, 1000)
+        y_ext = m * x_ext + b
+        mask = (y_ext >= ymin) & (y_ext <= ymax)
+
+        if mask.any():
+            ax.plot(x_ext[mask], y_ext[mask],
+                    color='firebrick', linewidth=2, zorder=3)
+
+            y_left = m * xmin + b
+            if ymin <= y_left <= ymax:
+                dx_dir = -1.0
+                dy_dir = -float(m)
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                L = x_range * 0.04
+                ax.annotate('',
+                            xy=(xmin + dx_dir*L, y_left + dy_dir*L),
+                            xytext=(xmin - dx_dir*0.01, y_left - dy_dir*0.01),
+                            arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                            lw=1.5, mutation_scale=12),
+                            annotation_clip=False)
+
+            y_right = m * xmax + b
+            if ymin <= y_right <= ymax:
+                dx_dir = 1.0
+                dy_dir = float(m)
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                L = x_range * 0.04
+                ax.annotate('',
+                            xy=(xmax + dx_dir*L, y_right + dy_dir*L),
+                            xytext=(xmax - dx_dir*0.01, y_right - dy_dir*0.01),
+                            arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                            lw=1.5, mutation_scale=12),
+                            annotation_clip=False)
+
+            for edge_y, direction in [(ymin, -1), (ymax, 1)]:
+                vals = y_ext - edge_y
+                for idx in np.where(np.diff(np.sign(vals)))[0]:
+                    xr = float(np.interp(0, [vals[idx], vals[idx+1]],
+                                            [x_ext[idx], x_ext[idx+1]]))
+                    dy_dir = float(direction)
+                    dx_dir = float(dy_dir / m) if abs(m) > 0.001 else 0.0
+                    mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                    if mag < 0.001:
+                        continue
+                    dx_dir /= mag; dy_dir /= mag
+                    L = x_range * 0.04
+                    ax.annotate('',
+                                xy=(xr + dx_dir*L, edge_y + dy_dir*L),
+                                xytext=(xr - dx_dir*0.01, edge_y - dy_dir*0.01),
+                                arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                                lw=1.5, mutation_scale=12),
+                                annotation_clip=False)
+
+    x_range = xmax - xmin
+    y_range = ymax - ymin
+    mx = x_range * 0.06
+    my = y_range * 0.06
+
+    # Keep the first gridline flush with the left/bottom axes.
+    # Reserve headroom only past the final gridline for arrowheads.
+    ax.set_xlim(xmin, xmax + mx)
+    ax.set_ylim(ymin, ymax + my)
+
+    x_step = _nice_grid_step(x_range)
+    y_step = _nice_grid_step(y_range)
+    x_ticks = np.arange(xmin, xmax + x_step*0.01, x_step)
+    y_ticks = np.arange(ymin, ymax + y_step*0.01, y_step)
+
+    for xt in x_ticks:
+        ax.plot([xt, xt], [ymin, ymax], color='#aaaaaa', linewidth=0.6,
+                zorder=0, clip_on=True)
+    for yt in y_ticks:
+        ax.plot([xmin, xmax], [yt, yt], color='#aaaaaa', linewidth=0.6,
+                zorder=0, clip_on=True)
+
+    x_label_every = _label_every(len(x_ticks))
+    y_label_every = _label_every(len(y_ticks))
+    x_labeled = [t for i, t in enumerate(x_ticks) if i % x_label_every == 0]
+    y_labeled = [t for i, t in enumerate(y_ticks) if i % y_label_every == 0]
+
+    ax.set_xticks(x_labeled)
+    ax.set_yticks(y_labeled)
+    ax.set_xticklabels([_fmt(t) for t in x_labeled],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels([_fmt(t) for t in y_labeled],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_bounds(ymin, ymax)
+    ax.spines['bottom'].set_bounds(xmin, xmax)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=(xmax + mx, ymin), xytext=(xmax, ymin),
+                arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(xmin, ymax + my), xytext=(xmin, ymax),
+                arrowprops=tri, annotation_clip=False)
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman', fontsize=13,
+                  fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman', fontsize=13,
+                  fontweight='bold', labelpad=6, rotation=90)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 17 — HUNDRED GRID (10x10)
+# Use for: shading percents, decimals, fractions visually.
+# 2.5x2.5in (360x360px at 144dpi).
+#
+# shaded_cells : int 0-100, fills left to right top to bottom
+# shaded_color : color for shaded cells (default 'steelblue')
+# filename     : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_hundred_grid(shaded_cells=0, shaded_color='steelblue',
+                      filename='hundred_grid.png'):
+    import matplotlib.patches as patches
+
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.set_aspect('equal')
+    ax.axis('off')
+
+    for row in range(10):
+        for col in range(10):
+            cell_num = row * 10 + col
+            filled = cell_num < shaded_cells
+            rect = patches.Rectangle(
+                (col, 9 - row), 1, 1,
+                linewidth=0.8,
+                edgecolor='#555555',
+                facecolor=shaded_color if filled else 'white'
+            )
+            ax.add_patch(rect)
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 18 — FRACTION BAR / TAPE DIAGRAM
+# Use for: fractions, ratios, part-part-whole relationships.
+# Horizontal bar divided into n equal parts, some shaded left to right.
+#
+# n_parts      : total number of parts       e.g. 4 for fourths
+# n_shaded     : parts shaded from left      (default 0 = blank)
+# shaded_color : color for shaded parts      (default 'steelblue')
+# label_parts  : True = label each part with fraction e.g. 1/4
+# filename     : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_fraction_bar(n_parts, n_shaded=0, shaded_color='steelblue',
+                      label_parts=True, filename='fraction_bar.png'):
+    import matplotlib.patches as patches
+
+    bar_w  = 4.0
+    bar_h  = 0.75
+    margin = 0.3
+
+    fig_w = bar_w + margin * 2
+    fig_h = bar_h + margin * 2
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, fig_w)
+    ax.set_ylim(0, fig_h)
+    ax.axis('off')
+    ax.set_facecolor('white')
+
+    part_w = bar_w / n_parts
+
+    for i in range(n_parts):
+        x_left = margin + i * part_w
+        filled = i < n_shaded
+
+        rect = patches.Rectangle(
+            (x_left, margin), part_w, bar_h,
+            linewidth=1.2,
+            edgecolor='black',
+            facecolor=shaded_color if filled else 'white'
+        )
+        ax.add_patch(rect)
+
+        if label_parts:
+            ax.text(x_left + part_w/2, margin + bar_h/2,
+                    rf'$\frac{{1}}{{{n_parts}}}$',
+                    ha='center', va='center',
+                    fontsize=11, fontfamily='Times New Roman',
+                    color='white' if filled else 'black')
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 19 — ALGEBRA TILES
+# Portrait orientation. Positive = filled color. Negative = red fill.
+# White italic LaTeX label inside each tile. Auto-wraps to rows.
+#
+# expression : dict — any combination of:
+#   'x2'      : positive x²  (blue square)
+#   'neg_x2'  : negative x²  (red square)
+#   'y2'      : positive y²  (blue square)
+#   'neg_y2'  : negative y²  (red square)
+#   'xy'      : positive xy  (green square)
+#   'neg_xy'  : negative xy  (red square)
+#   'x'       : positive x   (blue tall narrow rectangle)
+#   'neg_x'   : negative x   (red tall narrow rectangle)
+#   'y'       : positive y   (purple tall narrow rectangle)
+#   'neg_y'   : negative y   (red tall narrow rectangle)
+#   'one'     : positive 1   (dark blue small square)
+#   'neg_one' : negative 1   (red small square)
+#
+# filename : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_algebra_tiles(expression, filename='algebra_tiles.png'):
+    import matplotlib.patches as patches
+
+    C = {
+        'x2':'#5bacd6','neg_x2':'#e05c5c',
+        'y2':'#5bacd6','neg_y2':'#e05c5c',
+        'xy':'#4dab82','neg_xy':'#e05c5c',
+        'x':'#5bacd6','neg_x':'#e05c5c',
+        'y':'#9b59b6','neg_y':'#e05c5c',
+        'one':'#3a3ab0','neg_one':'#e05c5c',
+    }
+    L = {
+        'x2':r'$x^2$','neg_x2':r'$-x^2$',
+        'y2':r'$y^2$','neg_y2':r'$-y^2$',
+        'xy':r'$x \cdot y$','neg_xy':r'$-x \cdot y$',
+        'x':r'$x$','neg_x':r'$-x$',
+        'y':r'$y$','neg_y':r'$-y$',
+        'one':r'$1$','neg_one':r'$-1$',
+    }
+    D = {
+        'x2':(1.0,1.0),'neg_x2':(1.0,1.0),
+        'y2':(1.0,1.0),'neg_y2':(1.0,1.0),
+        'xy':(0.75,0.75),'neg_xy':(0.75,0.75),
+        'x':(0.28,1.0),'neg_x':(0.28,1.0),
+        'y':(0.28,1.0),'neg_y':(0.28,1.0),
+        'one':(0.28,0.28),'neg_one':(0.28,0.28),
+    }
+
+    order = ['x2','neg_x2','y2','neg_y2','xy','neg_xy',
+             'x','neg_x','y','neg_y','one','neg_one']
+
+    tiles = []
+    for kind in order:
+        for _ in range(expression.get(kind, 0)):
+            tiles.append(kind)
+
+    if not tiles:
+        return
+
+    gap       = 0.15
+    pad       = 0.35
+    max_row_w = 5.5
+
+    rows    = []
+    cur_row = []
+    cur_w   = 0.0
+
+    for kind in tiles:
+        tw = D[kind][0]
+        if cur_w + tw + gap > max_row_w and cur_row:
+            rows.append(cur_row)
+            cur_row = [kind]
+            cur_w   = tw + gap
+        else:
+            cur_row.append(kind)
+            cur_w += tw + gap
+    if cur_row:
+        rows.append(cur_row)
+
+    row_heights = [max(D[k][1] for k in row) for row in rows]
+    total_h = sum(row_heights) + gap * (len(rows)-1) + pad * 2
+    total_w = max_row_w + pad * 2
+
+    fig, ax = plt.subplots(figsize=(total_w, total_h))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, total_w)
+    ax.set_ylim(0, total_h)
+    ax.axis('off')
+
+    y_cursor = total_h - pad
+
+    for r, row in enumerate(rows):
+        rh = row_heights[r]
+        y_cursor -= rh
+        x_cursor  = pad
+
+        for kind in row:
+            tw, th = D[kind]
+            rect = patches.FancyBboxPatch(
+                (x_cursor, y_cursor + (rh-th)/2), tw, th,
+                boxstyle='round,pad=0.02',
+                linewidth=2.0, edgecolor='white', facecolor=C[kind]
+            )
+            ax.add_patch(rect)
+            fs = 13 if tw >= 0.7 else 9
+            ax.text(x_cursor + tw/2,
+                    y_cursor + (rh-th)/2 + th/2,
+                    L[kind],
+                    ha='center', va='center',
+                    fontsize=fs, color='white',
+                    fontfamily='Times New Roman', style='italic')
+            x_cursor += tw + gap
+
+        y_cursor -= gap
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PASTE YOUR GRAPH CODE BELOW THIS LINE
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+
+# Unit 1 Assessment Bank graph-generation blocks
+# All figures use graph_tool.py functions. Styling is not overridden.
+
+def _save_standard_blank(filename):
+    fig, ax = plt.subplots(figsize=(3.5, 3.5))
+    fig.patch.set_facecolor('white')
+    make_standard_graph(ax, [], title='')
+    save_graph(fig, filename)
+    plt.close(fig)
+
+_save_standard_blank('u1_bank_s1_coordinate_blank_sq_v1.png')
+_save_standard_blank('u1_bank_s5_coordinate_blank_sq_v1.png')
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [
+    {'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': None}
+], title='')
+save_graph(fig, 'u1_bank_s1_evidence_line_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'steelblue', 'label': None}
+], xmin=0, xmax=10, ymin=0, ymax=50, xlabel='Tickets', ylabel='Cost', title='')
+save_graph(fig, 'u1_bank_s1_context_cost_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [0,1,1,2,3], [3,4,6,7,8], xmin=0, xmax=4, ymin=0, ymax=10, color='steelblue', point_size=40, line_of_best_fit=False, xlabel='Input', ylabel='Output', title='')
+save_graph(fig, 'u1_bank_s2_relation_points_sq_v1.png')
+plt.close(fig)
 
 fig, ax = plt.subplots(figsize=(3.5, 3.5))
 fig.patch.set_facecolor('white')
@@ -2054,25 +3720,1658 @@ make_standard_graph(ax, [
 save_graph(fig, 'u1_bank_s2_function_line_sq_v1.png')
 plt.close(fig)
 
-# Appended Unit 2 bank graph-generation blocks
+fig = make_2x2_grid([
+    [{'expr': lambda x: x + 1, 'deriv': lambda x: 0*x + 1, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: x**2 - 4, 'deriv': lambda x: 2*x, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: 2**x, 'deriv': lambda x: np.log(2)*2**x, 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: np.abs(x) - 3, 'deriv': lambda x: np.sign(x), 'color': 'steelblue', 'label': None}],
+], titles=['A','B','C','D'])
+save_graph(fig, 'u1_bank_s3_family_grid_sq_v1.png')
+plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 2*(1.45**x), 'deriv': lambda x: 2*np.log(1.45)*(1.45**x), 'color': 'steelblue', 'label': None}
+], xmin=0, xmax=8, ymin=0, ymax=40, xlabel='Step', ylabel='Output', title='')
+save_graph(fig, 'u1_bank_s3_exp_context_sq_v1.png')
+plt.close(fig)
+
+fig = make_2x1_grid([
+    [{'expr': lambda x: np.abs(x+2) - 3, 'deriv': lambda x: np.sign(x+2), 'color': 'steelblue', 'label': None}],
+    [{'expr': lambda x: (x-1)**2 - 4, 'deriv': lambda x: 2*(x-1), 'color': 'steelblue', 'label': None}],
+], titles=['A','B'])
+save_graph(fig, 'u1_bank_s3_abs_quad_sq_v1.png')
+plt.close(fig)
+
+make_rectangle_model([r'$2x$', r'$3$'], [r'$x$', r'$5$'], [[r'$2x^2$', ''], ['', '']], 'u1_bank_s4_rect_blank_sq_v1.png')
+make_rectangle_model([r'$x$', r'$4$'], [r'$x$', r'$6$'], [[r'$x^2$', r'$6x$'], [r'$4x$', r'$20$']], 'u1_bank_s4_rect_mismatch_sq_v1.png')
+make_diamond(r'$-24$', '', '', r'$2$', 'u1_bank_s4_diamond_sq_v1.png')
+
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [
+    {'expr': lambda x: 15 + 2*x, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': 'Plan A'},
+    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'firebrick', 'label': 'Plan B'},
+], xmin=0, xmax=10, ymin=0, ymax=45, xlabel='Items', ylabel='Cost', title='')
+save_graph(fig, 'u1_bank_s5_balance_context_sq_v1.png')
+plt.close(fig)
+
+# Appended Unit 0B graph blocks needed by selected mastery items
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 4 — 2x2 GRID
+# Four standard coordinate planes in one 504x504 figure.
+# Use for: comparing parent functions, transformations, multiple examples.
+#
+# functions_list : list of 4 function lists, same format as make_standard_graph
+# titles         : list of 4 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _exit_arrows_small(ax, f, fprime, color, xmin, xmax, ymin, ymax):
+    x = np.linspace(xmin, xmax, 2000)
+    y = f(x)
+    exit_points = []
+    yl = f(xmin)
+    if ymin <= yl <= ymax:
+        exit_points.append((xmin, yl, -1, 'side'))
+    yr = f(xmax)
+    if ymin <= yr <= ymax:
+        exit_points.append((xmax, yr, 1, 'side'))
+    for edge_y, direction in [(ymin, -1), (ymax, 1)]:
+        vals = y - edge_y
+        for idx in np.where(np.diff(np.sign(vals)))[0]:
+            xr = np.interp(0, [vals[idx], vals[idx+1]], [x[idx], x[idx+1]])
+            exit_points.append((xr, edge_y, direction, 'topbot'))
+    for (xe, ye, direction, edge) in exit_points:
+        slope = fprime(xe)
+        if abs(slope) < 0.001:
+            continue
+        if edge == 'topbot':
+            dy_dir = float(direction)
+            dx_dir = dy_dir / slope
+        else:
+            dx_dir = float(direction)
+            dy_dir = slope * dx_dir
+        mag = np.sqrt(dx_dir**2 + dy_dir**2)
+        dx_dir /= mag
+        dy_dir /= mag
+        L = 0.45
+        ax.annotate('', xy=(xe + dx_dir*L, ye + dy_dir*L),
+                        xytext=(xe, ye),
+                    arrowprops=dict(arrowstyle='-|>', color=color,
+                                    lw=1.0, mutation_scale=7))
+
+
+def make_2x2_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '', '']
+
+    fig, axes = plt.subplots(2, 2, figsize=(3.5, 3.5))
+    fig.subplots_adjust(hspace=0.35, wspace=0.25)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes.flatten(), functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.2,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 9 — 2x1 GRID
+# Two coordinate planes side by side, each 504x504px (3.5in).
+# Use for: before/after, compare/contrast, function and transformation pairs.
+#
+# functions_list : list of 2 function lists, same format as make_standard_graph
+# titles         : list of 2 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_2x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '']
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 3.5))
+    fig.subplots_adjust(wspace=0.3)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.5,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 5 — 3x1 GRID
+# Three coordinate planes side by side, each ~300px wide.
+# Use for: comparing transformations, showing shift/stretch/reflect series.
+#
+# functions_list : list of 3 function lists, same format as make_standard_graph
+# titles         : list of 3 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_3x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '']
+
+    fig, axes = plt.subplots(1, 3, figsize=(6.25, 2.08))
+    fig.subplots_adjust(wspace=0.3)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.2,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 6 — 4x1 GRID
+# Four coordinate planes side by side, each ~225px wide.
+# Use for: comparing four transformations or four parent functions in a row.
+#
+# functions_list : list of 4 function lists, same format as make_standard_graph
+# titles         : list of 4 LaTeX title strings e.g. r'$f(x)=x^2$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_4x1_grid(functions_list, titles=None):
+    if titles is None:
+        titles = ['', '', '', '']
+
+    fig, axes = plt.subplots(1, 4, figsize=(6.25, 1.56))
+    fig.subplots_adjust(wspace=0.35)
+
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for ax, functions, title in zip(axes, functions_list, titles):
+
+        for fn in functions:
+            f      = fn['expr']
+            fprime = fn['deriv']
+            color  = fn['color']
+            label  = fn.get('label', None)
+            x = np.linspace(XMIN, XMAX, 2000)
+            y = f(x)
+            mask = (y >= YMIN) & (y <= YMAX)
+            segments = np.split(np.where(mask)[0],
+                                np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+            for seg in segments:
+                if len(seg) > 1:
+                    ax.plot(x[seg], y[seg], color=color, linewidth=1.5,
+                            label=label)
+                    label = None
+            _exit_arrows_small(ax, f, fprime, color, XMIN, XMAX, YMIN, YMAX)
+
+        ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+        ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+
+        ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+        ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+        ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+
+        ax.set_xticks([-10, -5, 5, 10])
+        ax.set_yticks([-10, -5, 5, 10])
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+        ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+        ax.tick_params(which='major', length=3.5, width=0.9, color='#222222')
+        ax.tick_params(which='minor', length=1.0, width=0.4, color='#555555')
+
+        tick_fs = 8.5
+        offset  = 1.0
+        for val in [-10, -5, 5, 10]:
+            lbl = str(val)
+            ax.text(val, -offset, lbl, ha='center', va='top',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+            ax.text(-offset, val, lbl, ha='right', va='center',
+                    fontsize=tick_fs, fontfamily='Times New Roman',
+                    color='black', clip_on=False)
+
+        ax.spines['left'].set_position('zero')
+        ax.spines['bottom'].set_position('zero')
+        ax.spines['right'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        for s in ['left', 'bottom']:
+            ax.spines[s].set_linewidth(1.4)
+            ax.spines[s].set_color('#222222')
+        ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+        ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+        tri = dict(arrowstyle='-|>', color='#222222', lw=1.4, mutation_scale=8)
+        ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+        ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+        ax.text(XMAX + 0.2, 0.9, 'x', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='center', va='bottom')
+        ax.text(0.6, YMAX + 0.2, 'y', fontsize=10, fontweight='bold',
+                fontfamily='Times New Roman', ha='left', va='center')
+
+        if title:
+            ax.set_title(title, fontsize=11, pad=4)
+
+    return fig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 7 — RECTANGLE MODEL (AREA MODEL)
+# Use for: multiplying polynomials, factoring, generic rectangle.
+# Scales automatically to any number of rows and columns.
+#
+# row_labels  : list of LaTeX strings  e.g. [r'$4x$', r'$-5y$']
+# col_labels  : list of LaTeX strings  e.g. [r'$2x$', r'$-3y$']
+# cell_values : 2D list — use r'$...$' for LaTeX, '' for blank
+#               e.g. [[r'$8x^2$', r'$-12xy$'], [r'$-10xy$', r'$15y^2$']]
+# filename    : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_rectangle_model(row_labels, col_labels, cell_values,
+                         filename='rectangle_model.png'):
+    import matplotlib.patches as patches
+
+    n_rows = len(row_labels)
+    n_cols = len(col_labels)
+
+    cell_w = 0.75
+    cell_h = 0.50
+    margin = 0.40
+
+    fig_w = margin + n_cols * cell_w + margin
+    fig_h = margin + n_rows * cell_h + margin
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    ax.set_xlim(0, fig_w)
+    ax.set_ylim(0, fig_h)
+    ax.axis('off')
+    ax.set_facecolor('white')
+    fig.patch.set_facecolor('white')
+
+    grid_x = margin
+    grid_y = margin * 0.5
+
+    for r in range(n_rows):
+        for c in range(n_cols):
+            cell_left   = grid_x + c * cell_w
+            cell_bottom = grid_y + (n_rows - 1 - r) * cell_h
+            rect = patches.Rectangle(
+                (cell_left, cell_bottom), cell_w, cell_h,
+                linewidth=1.2, edgecolor='black', facecolor='white'
+            )
+            ax.add_patch(rect)
+            val = cell_values[r][c]
+            if val:
+                ax.text(cell_left + cell_w/2, cell_bottom + cell_h/2, val,
+                        ha='center', va='center',
+                        fontsize=13, fontfamily='Times New Roman')
+
+    for c, lbl in enumerate(col_labels):
+        cx = grid_x + c * cell_w + cell_w/2
+        cy = grid_y + n_rows * cell_h + 0.10
+        ax.text(cx, cy, lbl, ha='center', va='bottom',
+                fontsize=13, fontfamily='Times New Roman')
+
+    for r, lbl in enumerate(row_labels):
+        rx = grid_x - 0.10
+        ry = grid_y + (n_rows - 1 - r) * cell_h + cell_h/2
+        ax.text(rx, ry, lbl, ha='right', va='center',
+                fontsize=13, fontfamily='Times New Roman')
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 8 — DIAMOND PROBLEM
+# Use for: diamond problems, factoring, sum/product puzzles.
+# Top = product, bottom = sum, left and right = the two factors.
+# Any cell can be '' for blank — student fills it in.
+#
+# top    : product value  e.g. r'$-42$'  or  r'$xy$'
+# left   : left factor    e.g. r'$3$'    or  r'$x$'
+# right  : right factor   e.g. r'$-14$'  or  r'$y$'
+# bottom : sum value      e.g. r'$-11$'  or  r'$x+y$'
+# filename : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_diamond(top, left, right, bottom, filename='diamond.png'):
+    import matplotlib.pyplot as plt
+
+    size = 2.5
+    fig, ax = plt.subplots(figsize=(size, size))
+    ax.set_xlim(-1, 1)
+    ax.set_ylim(-1, 1)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    ax.set_facecolor('white')
+    fig.patch.set_facecolor('white')
+
+    r = 0.85
+
+    top_pt    = ( 0,  r)
+    right_pt  = ( r,  0)
+    bottom_pt = ( 0, -r)
+    left_pt   = (-r,  0)
+
+    mid_top_right    = ((top_pt[0]+right_pt[0])/2,    (top_pt[1]+right_pt[1])/2)
+    mid_right_bottom = ((right_pt[0]+bottom_pt[0])/2, (right_pt[1]+bottom_pt[1])/2)
+    mid_bottom_left  = ((bottom_pt[0]+left_pt[0])/2,  (bottom_pt[1]+left_pt[1])/2)
+    mid_left_top     = ((left_pt[0]+top_pt[0])/2,     (left_pt[1]+top_pt[1])/2)
+
+    diamond = plt.Polygon(
+        [top_pt, right_pt, bottom_pt, left_pt],
+        closed=True, linewidth=1.4,
+        edgecolor='black', facecolor='white', zorder=2
+    )
+    ax.add_patch(diamond)
+
+    ax.plot([mid_left_top[0], mid_right_bottom[0]],
+            [mid_left_top[1], mid_right_bottom[1]],
+            color='black', linewidth=1.0, zorder=3)
+    ax.plot([mid_top_right[0], mid_bottom_left[0]],
+            [mid_top_right[1], mid_bottom_left[1]],
+            color='black', linewidth=1.0, zorder=3)
+
+    pad = 0.38
+    positions = {
+        'top':    ( 0,    pad),
+        'bottom': ( 0,   -pad),
+        'left':   (-pad,  0),
+        'right':  ( pad,  0),
+    }
+
+    for cell, val in [('top', top), ('bottom', bottom),
+                      ('left', left), ('right', right)]:
+        if val:
+            ax.text(*positions[cell], val,
+                    ha='center', va='center',
+                    fontsize=16, fontfamily='Times New Roman',
+                    zorder=4)
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TYPE 10 — PIECEWISE FUNCTION
+# Standard -10 to 10 plane. Each piece has its own domain; all pieces draw in steelblue.
+# Dots are automatic — closed if endpoint included, open if not.
+# Arrows drawn at window edges when piece extends to infinity.
+#
+# pieces : list of dicts, each with:
+#   'expr'          : lambda x: ...    the function expression
+#   'deriv'         : lambda x: ...    its derivative
+#   'domain'        : (a, b)           interval for this piece
+#   'include_left'  : True/False       closed dot on left endpoint
+#   'include_right' : True/False       closed dot on right endpoint
+#   'color'         : optional; ignored for consistency (all pieces use steelblue)
+#   'arrow_left'    : True/False       exit arrow at left end
+#   'arrow_right'   : True/False       exit arrow at right end
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _pw_dot(ax, x, y, open_dot, color, size=7, dot_scale=0.65):
+    size = size * dot_scale
+    if open_dot:
+        ax.plot(x, y, 'o', markersize=size, markerfacecolor='white',
+                markeredgecolor=color, markeredgewidth=2, zorder=6,
+                clip_on=False)
+    else:
+        ax.plot(x, y, 'o', markersize=size, markerfacecolor=color,
+                markeredgecolor=color, markeredgewidth=2, zorder=6,
+                clip_on=False)
+
+
+def make_piecewise_graph(ax, pieces, title='', dot_scale=0.65):
+    XMIN, XMAX, YMIN, YMAX = -10, 10, -10, 10
+
+    for piece in pieces:
+        f          = piece['expr']
+        fprime     = piece['deriv']
+        color      = 'steelblue'
+        a, b       = piece['domain']
+        inc_left   = piece.get('include_left',  True)
+        inc_right  = piece.get('include_right', True)
+        arrow_left  = piece.get('arrow_left',  False)
+        arrow_right = piece.get('arrow_right', False)
+
+        x_seg = np.linspace(a, b, 1000)
+        y_seg = f(x_seg)
+        mask  = (y_seg >= YMIN) & (y_seg <= YMAX)
+        if mask.any():
+            ax.plot(x_seg[mask], y_seg[mask],
+                    color=color, linewidth=1.7, zorder=3)
+
+        ya = f(a)
+        if not arrow_left and YMIN <= ya <= YMAX:
+            _pw_dot(ax, a, ya, open_dot=not inc_left, color=color, dot_scale=dot_scale)
+
+        yb = f(b)
+        if not arrow_right and YMIN <= yb <= YMAX:
+            _pw_dot(ax, b, yb, open_dot=not inc_right, color=color, dot_scale=dot_scale)
+
+        if arrow_left and YMIN <= ya <= YMAX:
+            slope = fprime(a)
+            if abs(slope) >= 0.001:
+                dx_dir = -1.0
+                dy_dir = slope * dx_dir
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(a + dx_dir*0.45, ya + dy_dir*0.45),
+                                xytext=(a, ya),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+        if arrow_right and YMIN <= yb <= YMAX:
+            slope = fprime(b)
+            if abs(slope) >= 0.001:
+                dx_dir = 1.0
+                dy_dir = slope * dx_dir
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(b + dx_dir*0.45, yb + dy_dir*0.45),
+                                xytext=(b, yb),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+        for edge_y, direction in [(YMIN, -1), (YMAX, 1)]:
+            vals = y_seg - edge_y
+            for idx in np.where(np.diff(np.sign(vals)))[0]:
+                xr = np.interp(0, [vals[idx], vals[idx+1]],
+                                  [x_seg[idx], x_seg[idx+1]])
+                slope = fprime(xr)
+                if abs(slope) < 0.001:
+                    continue
+                dy_dir = float(direction)
+                dx_dir = dy_dir / slope
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                ax.annotate('', xy=(xr + dx_dir*0.45, edge_y + dy_dir*0.45),
+                                xytext=(xr, edge_y),
+                            arrowprops=dict(arrowstyle='-|>', color=color,
+                                            lw=1.5, mutation_scale=12))
+
+    ax.set_xlim(XMIN - 0.5, XMAX + 0.5)
+    ax.set_ylim(YMIN - 0.5, YMAX + 0.5)
+    ax.set_xticks(np.arange(XMIN, XMAX+1, 1), minor=True)
+    ax.set_yticks(np.arange(YMIN, YMAX+1, 1), minor=True)
+    ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+    ax.set_xticks([-10, -5, 5, 10])
+    ax.set_yticks([-10, -5, 5, 10])
+    ax.set_xticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+    ax.tick_params(which='minor', length=2, width=0.8, color='#555555')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(YMIN - 0.5, YMAX + 0.5)
+    ax.spines['bottom'].set_bounds(XMIN - 0.5, XMAX + 0.5)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=(XMAX+0.6, 0), xytext=(XMAX, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(XMIN-0.6, 0), xytext=(XMIN, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, YMAX+0.6), xytext=(0, YMAX), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, YMIN-0.6), xytext=(0, YMIN), arrowprops=tri, annotation_clip=False)
+
+    ax.text(XMAX+0.35, 0.4, 'x', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='center', va='bottom')
+    ax.text(0.35, YMAX+0.35, 'y', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 11 — UNIT CIRCLE
+# All variants save at exactly 2.5x2.5in (360x360px at 144dpi).
+#
+# make_unit_circle_blank()
+#   Blank — circle and axes only. Student draws/writes everything.
+#
+# make_unit_circle_angles(ax_angle_deg=None, show_coord=True, filename=...)
+#   ax_angle_deg : int — highlights that angle in blue  e.g. 120
+#                  None — semi-blank, just 16 angle lines, nothing highlighted
+#   show_coord   : True = coordinate label outside circle, False = no label
+#
+# Valid angles: 0, 30, 45, 60, 90, 120, 135, 150,
+#               180, 210, 225, 240, 270, 300, 315, 330
+# ─────────────────────────────────────────────────────────────────────────────
+
+ANGLE_DATA = {
+    0:   ( 1,            0           ),
+    30:  ( np.sqrt(3)/2, 0.5         ),
+    45:  ( np.sqrt(2)/2, np.sqrt(2)/2),
+    60:  ( 0.5,          np.sqrt(3)/2),
+    90:  ( 0,            1           ),
+    120: (-0.5,          np.sqrt(3)/2),
+    135: (-np.sqrt(2)/2, np.sqrt(2)/2),
+    150: (-np.sqrt(3)/2, 0.5         ),
+    180: (-1,            0           ),
+    210: (-np.sqrt(3)/2,-0.5         ),
+    225: (-np.sqrt(2)/2,-np.sqrt(2)/2),
+    240: (-0.5,         -np.sqrt(3)/2),
+    270: ( 0,           -1           ),
+    300: ( 0.5,         -np.sqrt(3)/2),
+    315: ( np.sqrt(2)/2,-np.sqrt(2)/2),
+    330: ( np.sqrt(3)/2,-0.5         ),
+}
+
+COORD_LABELS = {
+    0:   r'$(1, 0)$',
+    30:  r'$\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$',
+    45:  r'$\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$',
+    60:  r'$\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$',
+    90:  r'$(0, 1)$',
+    120: r'$\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$',
+    135: r'$\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$',
+    150: r'$\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$',
+    180: r'$(-1, 0)$',
+    210: r'$\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$',
+    225: r'$\left(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$',
+    240: r'$\left(-\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$',
+    270: r'$(0, -1)$',
+    300: r'$\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$',
+    315: r'$\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)$',
+    330: r'$\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$',
+}
+
+
+def _draw_unit_circle_base(ax, show_angle_lines=False):
+    theta = np.linspace(0, 2*np.pi, 1000)
+    ax.plot(np.cos(theta), np.sin(theta),
+            color='black', linewidth=2.0, zorder=3)
+
+    lw_ax  = 0.6
+    col_ax = '#222222'
+    ax.plot([-1.3, 1.3], [0, 0], color=col_ax, linewidth=lw_ax, zorder=1)
+    ax.plot([0, 0], [-1.3, 1.3], color=col_ax, linewidth=lw_ax, zorder=1)
+
+    tri = dict(arrowstyle='-|>', color=col_ax, lw=lw_ax, mutation_scale=10)
+    ax.annotate('', xy=( 1.38, 0),  xytext=( 1.22, 0),  arrowprops=tri)
+    ax.annotate('', xy=(-1.38, 0),  xytext=(-1.22, 0),  arrowprops=tri)
+    ax.annotate('', xy=( 0,  1.38), xytext=( 0,  1.22), arrowprops=tri)
+    ax.annotate('', xy=( 0, -1.38), xytext=( 0, -1.22), arrowprops=tri)
+
+    ax.text( 1.44, 0,  'x', ha='left',   va='center', fontsize=8,
+             fontfamily='Times New Roman', color=col_ax)
+    ax.text( 0,  1.44, 'y', ha='center', va='bottom', fontsize=8,
+             fontfamily='Times New Roman', color=col_ax)
+
+    if show_angle_lines:
+        for deg in ANGLE_DATA:
+            rad = np.radians(deg)
+            ax.plot([0, np.cos(rad)], [0, np.sin(rad)],
+                    color='#aaaaaa', linewidth=0.6, zorder=2)
+
+    ax.set_xlim(-1.6, 1.6)
+    ax.set_ylim(-1.6, 1.6)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    ax.set_facecolor('white')
+
+
+def _uc_save(fig, filename):
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144)
+    print(f'Saved: {path}')
+
+
+def make_unit_circle_blank(filename='unit_circle_blank.png'):
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    _draw_unit_circle_base(ax, show_angle_lines=False)
+    _uc_save(fig, filename)
+
+
+def make_unit_circle_angles(ax_angle_deg=None, show_coord=True,
+                             filename='unit_circle_angles.png'):
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    _draw_unit_circle_base(ax, show_angle_lines=True)
+
+    if ax_angle_deg is not None:
+        blue = '#1a4f8a'
+        rad  = np.radians(ax_angle_deg)
+        px   = np.cos(rad)
+        py   = np.sin(rad)
+
+        ax.plot([0, px], [0, py], color=blue, linewidth=1.8, zorder=4)
+        ax.plot(px, py, 'o', markersize=5, color=blue, zorder=5)
+
+        if show_coord and ax_angle_deg in COORD_LABELS:
+            lx = px * 1.12
+            ly = py * 1.12
+            ha = 'center'
+            if px > 0.15:  ha = 'left'
+            if px < -0.15: ha = 'right'
+            va = 'center'
+            if py > 0.15:  va = 'bottom'
+            if py < -0.15: va = 'top'
+            ax.text(lx, ly, COORD_LABELS[ax_angle_deg],
+                    ha=ha, va=va, fontsize=12, color=blue,
+                    fontfamily='Times New Roman', zorder=6)
+
+    _uc_save(fig, filename)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 12 — 2D INEQUALITY / SYSTEM OF INEQUALITIES
+# Standard plane extended to ±11 so exit arrows clear the grid.
+# Single inequality or system of 2 (overlap shown in mediumpurple).
+#
+# inequalities : list of dicts, each with:
+#   'expr'      : lambda x: ...    boundary line function
+#   'deriv'     : lambda x: ...    its derivative
+#   'color'     : 'steelblue'
+#   'shade'     : 'above' or 'below'
+#   'inclusive' : True = solid line, False = dashed line
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_inequality_graph(ax, inequalities, title=''):
+    XMIN, XMAX, YMIN, YMAX = -11, 11, -11, 11
+    x = np.linspace(XMIN, XMAX, 2000)
+
+    shade_regions = []
+
+    for ineq in inequalities:
+        f         = ineq['expr']
+        fprime    = ineq['deriv']
+        color     = ineq['color']
+        shade     = ineq['shade']
+        inclusive = ineq.get('inclusive', True)
+
+        y = f(x)
+        y_clipped = np.clip(y, YMIN, YMAX)
+        shade_regions.append({'y': y_clipped, 'shade': shade, 'color': color})
+
+        linestyle = '-' if inclusive else '--'
+        mask = (y >= YMIN) & (y <= YMAX)
+        segments = np.split(np.where(mask)[0],
+                            np.where(np.diff(np.where(mask)[0]) > 5)[0] + 1)
+        for seg in segments:
+            if len(seg) > 1:
+                ax.plot(x[seg], y[seg], color=color, linewidth=2,
+                        linestyle=linestyle, zorder=4)
+
+        exit_points = []
+        yl = f(XMIN)
+        if YMIN <= yl <= YMAX:
+            exit_points.append((float(XMIN), float(yl), 'left'))
+        yr = f(XMAX)
+        if YMIN <= yr <= YMAX:
+            exit_points.append((float(XMAX), float(yr), 'right'))
+        for edge_y, edge_dir in [(YMIN, 'bottom'), (YMAX, 'top')]:
+            vals = y - edge_y
+            for idx in np.where(np.diff(np.sign(vals)))[0]:
+                xr = float(np.interp(0, [vals[idx], vals[idx+1]],
+                                        [x[idx], x[idx+1]]))
+                exit_points.append((xr, float(edge_y), edge_dir))
+
+        for (xe, ye, edge) in exit_points:
+            slope = float(fprime(np.array([xe]))[0])
+            if edge == 'right':
+                dx_dir =  1.0
+                dy_dir =  float(slope)
+            elif edge == 'left':
+                dx_dir = -1.0
+                dy_dir = -float(slope)
+            elif edge == 'top':
+                dy_dir =  1.0
+                dx_dir =  float(1.0 / slope) if abs(slope) > 0.001 else 0.0
+            else:
+                dy_dir = -1.0
+                dx_dir = -float(1.0 / slope) if abs(slope) > 0.001 else 0.0
+            mag = float(np.sqrt(dx_dir**2 + dy_dir**2))
+            if mag < 0.001:
+                continue
+            dx_dir /= mag
+            dy_dir /= mag
+            L = 0.55
+            ax.annotate('',
+                        xy=(xe + dx_dir*L, ye + dy_dir*L),
+                        xytext=(xe - dx_dir*0.1, ye - dy_dir*0.1),
+                        arrowprops=dict(arrowstyle='-|>', color=color,
+                                        lw=1.5, mutation_scale=12),
+                        annotation_clip=False)
+
+    for sr in shade_regions:
+        if sr['shade'] == 'above':
+            ax.fill_between(x, sr['y'], YMAX,
+                            where=(sr['y'] <= YMAX),
+                            color=sr['color'], alpha=0.15, zorder=2)
+        elif sr['shade'] == 'below':
+            ax.fill_between(x, YMIN, sr['y'],
+                            where=(sr['y'] >= YMIN),
+                            color=sr['color'], alpha=0.15, zorder=2)
+
+    if len(shade_regions) == 2:
+        sr0, sr1 = shade_regions[0], shade_regions[1]
+        y0_top = np.full(len(x), float(YMAX)) if sr0['shade'] == 'above' else sr0['y']
+        y0_bot = sr0['y'] if sr0['shade'] == 'above' else np.full(len(x), float(YMIN))
+        y1_top = np.full(len(x), float(YMAX)) if sr1['shade'] == 'above' else sr1['y']
+        y1_bot = sr1['y'] if sr1['shade'] == 'above' else np.full(len(x), float(YMIN))
+        overlap_top = np.minimum(y0_top, y1_top)
+        overlap_bot = np.maximum(y0_bot, y1_bot)
+        has_overlap = overlap_top > overlap_bot
+        if has_overlap.any():
+            ax.fill_between(x, overlap_bot, overlap_top,
+                            where=has_overlap,
+                            color='mediumpurple', alpha=0.45, zorder=3)
+
+    ax.set_xlim(-10.5, 10.5)
+    ax.set_ylim(-10.5, 10.5)
+    ax.set_xticks(np.arange(-10, 11, 1), minor=True)
+    ax.set_yticks(np.arange(-10, 11, 1), minor=True)
+    ax.grid(True, which='minor', color='#aaaaaa', linewidth=0.6)
+    ax.set_xticks([-10, -5, 5, 10])
+    ax.set_yticks([-10, -5, 5, 10])
+    ax.set_xticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels(['-10','-5','5','10'],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.grid(True, which='major', color='#aaaaaa', linewidth=0.6)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+    ax.tick_params(which='minor', length=2, width=0.8, color='#555555')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(-10.5, 10.5)
+    ax.spines['bottom'].set_bounds(-10.5, 10.5)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=( 11.6,  0), xytext=( 10,  0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(-11.6,  0), xytext=(-10,  0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=( 0,  11.6), xytext=( 0,  10), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=( 0, -11.6), xytext=( 0, -10), arrowprops=tri, annotation_clip=False)
+
+    ax.text(11.8, 0.4, 'x', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='center', va='bottom')
+    ax.text(0.35, 11.8, 'y', fontsize=14, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=22)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 13 — TRIG GRAPH (sine and cosine)
+# Landscape figure 5x2.5in. Shows 2 full periods.
+# x-axis labeled in π fractions. y-axis scales to amplitude.
+#
+# functions : list of dicts, each with:
+#   'type'  : 'sin' or 'cos'
+#   'a'     : amplitude          (default 1)
+#   'b'     : frequency          (default 1)
+#   'c'     : phase shift        (default 0)  f(x) = a·sin(b(x-c)) + d
+#   'd'     : vertical shift     (default 0)
+#   'color' : 'steelblue'
+#
+# title: LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_trig_graph(ax, functions, title=''):
+    max_amp = max(abs(fn.get('a', 1)) + abs(fn.get('d', 0))
+                  for fn in functions)
+    y_max = max(np.ceil(max_amp * 1.3), 2)
+
+    min_b = min(abs(fn.get('b', 1)) for fn in functions)
+    period = 2 * np.pi / min_b
+    x_max = period
+    x = np.linspace(-x_max, x_max, 3000)
+
+    for fn in functions:
+        ftype = fn.get('type', 'sin')
+        a     = fn.get('a', 1)
+        b     = fn.get('b', 1)
+        c     = fn.get('c', 0)
+        d     = fn.get('d', 0)
+        color = fn.get('color', 'steelblue')
+
+        if ftype == 'sin':
+            y = a * np.sin(b * (x - c)) + d
+        else:
+            y = a * np.cos(b * (x - c)) + d
+
+        ax.plot(x, y, color=color, linewidth=2, zorder=3)
+
+    ax.set_ylim(-y_max - 0.3, y_max + 0.3)
+    ax.set_xlim(-x_max - 0.2, x_max + 0.2)
+
+    step = np.pi / (4 * min_b)
+    x_ticks = np.arange(-x_max, x_max + step*0.01, step)
+
+    def pi_label(v):
+        from fractions import Fraction
+        v_pi = round(v / np.pi * 8) / 8
+        if v_pi == 0:
+            return '0'
+        frac = Fraction(v_pi).limit_denominator(8)
+        num, den = frac.numerator, frac.denominator
+        if den == 1:
+            if num ==  1: return r'$\pi$'
+            if num == -1: return r'$-\pi$'
+            return rf'${num}\pi$'
+        if num ==  1: return rf'$\frac{{\pi}}{{{den}}}$'
+        if num == -1: return rf'$-\frac{{\pi}}{{{den}}}$'
+        if num <   0: return rf'$-\frac{{{abs(num)}\pi}}{{{den}}}$'
+        return rf'$\frac{{{num}\pi}}{{{den}}}$'
+
+    label_every = 2
+    ax.set_xticks(x_ticks)
+    x_labels = [pi_label(t) if i % label_every == 0 else ''
+                for i, t in enumerate(x_ticks)]
+    ax.set_xticklabels(x_labels, fontfamily='Times New Roman', fontsize=10)
+
+    y_ticks = np.arange(-int(y_max), int(y_max)+1, 1)
+    ax.set_yticks(y_ticks)
+    y_labels = [str(int(t)) if t != 0 else '' for t in y_ticks]
+    ax.set_yticklabels(y_labels, fontfamily='Times New Roman', fontsize=10)
+
+    ax.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.tick_params(which='major', length=4, width=1.0, color='#222222')
+
+    ax.spines['left'].set_position('zero')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['left'].set_bounds(-y_max, y_max)
+    ax.spines['bottom'].set_bounds(-x_max, x_max)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=2.0, mutation_scale=14)
+    ax.annotate('', xy=( x_max+0.3, 0), xytext=( x_max, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(-x_max-0.3, 0), xytext=(-x_max, 0), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0,  y_max+0.4), xytext=(0,  y_max), arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(0, -y_max-0.4), xytext=(0, -y_max), arrowprops=tri, annotation_clip=False)
+
+    ax.text(x_max+0.35, 0.15, 'x', fontsize=13, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='bottom')
+    ax.text(0.15, y_max+0.3, 'y', fontsize=13, fontweight='bold',
+            fontfamily='Times New Roman', ha='left', va='center')
+
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 14 — BAR CHART
+# Use for: categorical comparisons, survey results, grouped data.
+# Landscape 4x3in. Horizontal grid lines only. Times New Roman throughout.
+#
+# categories : list of strings        e.g. ['Mon', 'Tue', 'Wed']
+# values     : list of numbers        e.g. [4, 7, 3]
+# colors     : single color or list   (default 'steelblue')
+# ylabel     : y-axis label
+# xlabel     : x-axis label
+# title      : LaTeX supported via r'$...$'
+#
+# TYPE 15 — HISTOGRAM
+# Use for: frequency distributions, data spread, statistics units.
+#
+# data   : list or array of raw values  e.g. [12, 15, 14, 18, ...]
+# bins   : number of bins or list of bin edges (default 10)
+# color  : bar color (default 'steelblue')
+# ylabel : y-axis label
+# xlabel : x-axis label
+# title  : LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_bar_chart(ax, categories, values, title='',
+                   colors=None, ylabel='Frequency', xlabel=''):
+    if colors is None:
+        colors = 'steelblue'
+
+    n = len(categories)
+    x = np.arange(n)
+
+    ax.bar(x, values, color=colors, width=0.6,
+           edgecolor='white', linewidth=0.8, zorder=3)
+
+    ax.yaxis.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.set_axisbelow(True)
+
+    y_max = max(values) * 1.15
+    ax.set_ylim(0, y_max)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(categories,
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_xlim(-0.5, n - 0.5)
+
+    ax.yaxis.set_tick_params(labelsize=11)
+    for label in ax.get_yticklabels():
+        label.set_fontfamily('Times New Roman')
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_color('#222222')
+    ax.spines['bottom'].set_color('#222222')
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+
+def make_histogram(ax, data, bins=10, title='',
+                   color='steelblue', ylabel='Frequency', xlabel='Value'):
+    counts, edges, patches = ax.hist(data, bins=bins, color=color,
+                                     edgecolor='white', linewidth=0.8,
+                                     zorder=3)
+
+    ax.yaxis.grid(True, color='#aaaaaa', linewidth=0.6, zorder=0)
+    ax.set_axisbelow(True)
+
+    y_max = max(counts) * 1.15
+    ax.set_ylim(0, y_max)
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_color('#222222')
+    ax.spines['bottom'].set_color('#222222')
+
+    ax.xaxis.set_tick_params(labelsize=11)
+    ax.yaxis.set_tick_params(labelsize=11)
+    for label in ax.get_xticklabels() + ax.get_yticklabels():
+        label.set_fontfamily('Times New Roman')
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman',
+                  fontsize=12, fontweight='bold', labelpad=6)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 16 — SCATTER PLOT
+# Use for: data analysis, line of best fit, residuals, sequences/series.
+# Custom axis ranges. Optional linear line of best fit with arrows.
+# One dataset at a time.
+#
+# x_data, y_data   : lists or arrays of data points
+# xmin/xmax        : x axis range
+# ymin/ymax        : y axis range
+# color            : point color (default 'steelblue')
+# point_size       : dot size (default 25)
+# line_of_best_fit : True = draw linear regression line with arrows
+# xlabel/ylabel    : axis labels
+# title            : LaTeX supported via r'$...$'
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_scatter_plot(ax, x_data, y_data,
+                      xmin, xmax, ymin, ymax,
+                      color='steelblue', point_size=25, point_scale=0.65,
+                      line_of_best_fit=False,
+                      xlabel='x', ylabel='y', title=''):
+
+    x_data = np.array(x_data, dtype=float)
+    y_data = np.array(y_data, dtype=float)
+
+    ax.scatter(x_data, y_data, color=color, s=point_size * point_scale,
+               zorder=4, clip_on=True)
+
+    if line_of_best_fit:
+        m, b = np.polyfit(x_data, y_data, 1)
+        x_range = xmax - xmin
+        x_ext = np.linspace(xmin, xmax, 1000)
+        y_ext = m * x_ext + b
+        mask = (y_ext >= ymin) & (y_ext <= ymax)
+
+        if mask.any():
+            ax.plot(x_ext[mask], y_ext[mask],
+                    color='firebrick', linewidth=2, zorder=3)
+
+            y_left = m * xmin + b
+            if ymin <= y_left <= ymax:
+                dx_dir = -1.0
+                dy_dir = -float(m)
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                L = x_range * 0.04
+                ax.annotate('',
+                            xy=(xmin + dx_dir*L, y_left + dy_dir*L),
+                            xytext=(xmin - dx_dir*0.01, y_left - dy_dir*0.01),
+                            arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                            lw=1.5, mutation_scale=12),
+                            annotation_clip=False)
+
+            y_right = m * xmax + b
+            if ymin <= y_right <= ymax:
+                dx_dir = 1.0
+                dy_dir = float(m)
+                mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                dx_dir /= mag; dy_dir /= mag
+                L = x_range * 0.04
+                ax.annotate('',
+                            xy=(xmax + dx_dir*L, y_right + dy_dir*L),
+                            xytext=(xmax - dx_dir*0.01, y_right - dy_dir*0.01),
+                            arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                            lw=1.5, mutation_scale=12),
+                            annotation_clip=False)
+
+            for edge_y, direction in [(ymin, -1), (ymax, 1)]:
+                vals = y_ext - edge_y
+                for idx in np.where(np.diff(np.sign(vals)))[0]:
+                    xr = float(np.interp(0, [vals[idx], vals[idx+1]],
+                                            [x_ext[idx], x_ext[idx+1]]))
+                    dy_dir = float(direction)
+                    dx_dir = float(dy_dir / m) if abs(m) > 0.001 else 0.0
+                    mag = np.sqrt(dx_dir**2 + dy_dir**2)
+                    if mag < 0.001:
+                        continue
+                    dx_dir /= mag; dy_dir /= mag
+                    L = x_range * 0.04
+                    ax.annotate('',
+                                xy=(xr + dx_dir*L, edge_y + dy_dir*L),
+                                xytext=(xr - dx_dir*0.01, edge_y - dy_dir*0.01),
+                                arrowprops=dict(arrowstyle='-|>', color='firebrick',
+                                                lw=1.5, mutation_scale=12),
+                                annotation_clip=False)
+
+    x_range = xmax - xmin
+    y_range = ymax - ymin
+    mx = x_range * 0.06
+    my = y_range * 0.06
+
+    # Keep the first gridline flush with the left/bottom axes.
+    # Reserve headroom only past the final gridline for arrowheads.
+    ax.set_xlim(xmin, xmax + mx)
+    ax.set_ylim(ymin, ymax + my)
+
+    x_step = _nice_grid_step(x_range)
+    y_step = _nice_grid_step(y_range)
+    x_ticks = np.arange(xmin, xmax + x_step*0.01, x_step)
+    y_ticks = np.arange(ymin, ymax + y_step*0.01, y_step)
+
+    for xt in x_ticks:
+        ax.plot([xt, xt], [ymin, ymax], color='#aaaaaa', linewidth=0.6,
+                zorder=0, clip_on=True)
+    for yt in y_ticks:
+        ax.plot([xmin, xmax], [yt, yt], color='#aaaaaa', linewidth=0.6,
+                zorder=0, clip_on=True)
+
+    x_label_every = _label_every(len(x_ticks))
+    y_label_every = _label_every(len(y_ticks))
+    x_labeled = [t for i, t in enumerate(x_ticks) if i % x_label_every == 0]
+    y_labeled = [t for i, t in enumerate(y_ticks) if i % y_label_every == 0]
+
+    ax.set_xticks(x_labeled)
+    ax.set_yticks(y_labeled)
+    ax.set_xticklabels([_fmt(t) for t in x_labeled],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.set_yticklabels([_fmt(t) for t in y_labeled],
+                       fontfamily='Times New Roman', fontsize=11)
+    ax.tick_params(which='major', length=5, width=1.2, color='#222222')
+
+    for s in ['left', 'bottom']:
+        ax.spines[s].set_linewidth(1.8)
+        ax.spines[s].set_color('#222222')
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['left'].set_bounds(ymin, ymax)
+    ax.spines['bottom'].set_bounds(xmin, xmax)
+
+    tri = dict(arrowstyle='-|>', color='#222222', lw=1.8, mutation_scale=14)
+    ax.annotate('', xy=(xmax + mx, ymin), xytext=(xmax, ymin),
+                arrowprops=tri, annotation_clip=False)
+    ax.annotate('', xy=(xmin, ymax + my), xytext=(xmin, ymax),
+                arrowprops=tri, annotation_clip=False)
+
+    ax.set_xlabel(xlabel, fontfamily='Times New Roman', fontsize=13,
+                  fontweight='bold', labelpad=6)
+    ax.set_ylabel(ylabel, fontfamily='Times New Roman', fontsize=13,
+                  fontweight='bold', labelpad=6, rotation=90)
+    ax.set_title(title, fontfamily='Times New Roman', fontsize=12, pad=8)
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 17 — HUNDRED GRID (10x10)
+# Use for: shading percents, decimals, fractions visually.
+# 2.5x2.5in (360x360px at 144dpi).
+#
+# shaded_cells : int 0-100, fills left to right top to bottom
+# shaded_color : color for shaded cells (default 'steelblue')
+# filename     : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_hundred_grid(shaded_cells=0, shaded_color='steelblue',
+                      filename='hundred_grid.png'):
+    import matplotlib.patches as patches
+
+    fig, ax = plt.subplots(figsize=(2.5, 2.5))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.set_aspect('equal')
+    ax.axis('off')
+
+    for row in range(10):
+        for col in range(10):
+            cell_num = row * 10 + col
+            filled = cell_num < shaded_cells
+            rect = patches.Rectangle(
+                (col, 9 - row), 1, 1,
+                linewidth=0.8,
+                edgecolor='#555555',
+                facecolor=shaded_color if filled else 'white'
+            )
+            ax.add_patch(rect)
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 18 — FRACTION BAR / TAPE DIAGRAM
+# Use for: fractions, ratios, part-part-whole relationships.
+# Horizontal bar divided into n equal parts, some shaded left to right.
+#
+# n_parts      : total number of parts       e.g. 4 for fourths
+# n_shaded     : parts shaded from left      (default 0 = blank)
+# shaded_color : color for shaded parts      (default 'steelblue')
+# label_parts  : True = label each part with fraction e.g. 1/4
+# filename     : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_fraction_bar(n_parts, n_shaded=0, shaded_color='steelblue',
+                      label_parts=True, filename='fraction_bar.png'):
+    import matplotlib.patches as patches
+
+    bar_w  = 4.0
+    bar_h  = 0.75
+    margin = 0.3
+
+    fig_w = bar_w + margin * 2
+    fig_h = bar_h + margin * 2
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, fig_w)
+    ax.set_ylim(0, fig_h)
+    ax.axis('off')
+    ax.set_facecolor('white')
+
+    part_w = bar_w / n_parts
+
+    for i in range(n_parts):
+        x_left = margin + i * part_w
+        filled = i < n_shaded
+
+        rect = patches.Rectangle(
+            (x_left, margin), part_w, bar_h,
+            linewidth=1.2,
+            edgecolor='black',
+            facecolor=shaded_color if filled else 'white'
+        )
+        ax.add_patch(rect)
+
+        if label_parts:
+            ax.text(x_left + part_w/2, margin + bar_h/2,
+                    rf'$\frac{{1}}{{{n_parts}}}$',
+                    ha='center', va='center',
+                    fontsize=11, fontfamily='Times New Roman',
+                    color='white' if filled else 'black')
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+    # ─────────────────────────────────────────────────────────────────────────────
+# TYPE 19 — ALGEBRA TILES
+# Portrait orientation. Positive = filled color. Negative = red fill.
+# White italic LaTeX label inside each tile. Auto-wraps to rows.
+#
+# expression : dict — any combination of:
+#   'x2'      : positive x²  (blue square)
+#   'neg_x2'  : negative x²  (red square)
+#   'y2'      : positive y²  (blue square)
+#   'neg_y2'  : negative y²  (red square)
+#   'xy'      : positive xy  (green square)
+#   'neg_xy'  : negative xy  (red square)
+#   'x'       : positive x   (blue tall narrow rectangle)
+#   'neg_x'   : negative x   (red tall narrow rectangle)
+#   'y'       : positive y   (purple tall narrow rectangle)
+#   'neg_y'   : negative y   (red tall narrow rectangle)
+#   'one'     : positive 1   (dark blue small square)
+#   'neg_one' : negative 1   (red small square)
+#
+# filename : saved to ./figures
+# ─────────────────────────────────────────────────────────────────────────────
+
+def make_algebra_tiles(expression, filename='algebra_tiles.png'):
+    import matplotlib.patches as patches
+
+    C = {
+        'x2':'#5bacd6','neg_x2':'#e05c5c',
+        'y2':'#5bacd6','neg_y2':'#e05c5c',
+        'xy':'#4dab82','neg_xy':'#e05c5c',
+        'x':'#5bacd6','neg_x':'#e05c5c',
+        'y':'#9b59b6','neg_y':'#e05c5c',
+        'one':'#3a3ab0','neg_one':'#e05c5c',
+    }
+    L = {
+        'x2':r'$x^2$','neg_x2':r'$-x^2$',
+        'y2':r'$y^2$','neg_y2':r'$-y^2$',
+        'xy':r'$x \cdot y$','neg_xy':r'$-x \cdot y$',
+        'x':r'$x$','neg_x':r'$-x$',
+        'y':r'$y$','neg_y':r'$-y$',
+        'one':r'$1$','neg_one':r'$-1$',
+    }
+    D = {
+        'x2':(1.0,1.0),'neg_x2':(1.0,1.0),
+        'y2':(1.0,1.0),'neg_y2':(1.0,1.0),
+        'xy':(0.75,0.75),'neg_xy':(0.75,0.75),
+        'x':(0.28,1.0),'neg_x':(0.28,1.0),
+        'y':(0.28,1.0),'neg_y':(0.28,1.0),
+        'one':(0.28,0.28),'neg_one':(0.28,0.28),
+    }
+
+    order = ['x2','neg_x2','y2','neg_y2','xy','neg_xy',
+             'x','neg_x','y','neg_y','one','neg_one']
+
+    tiles = []
+    for kind in order:
+        for _ in range(expression.get(kind, 0)):
+            tiles.append(kind)
+
+    if not tiles:
+        return
+
+    gap       = 0.15
+    pad       = 0.35
+    max_row_w = 5.5
+
+    rows    = []
+    cur_row = []
+    cur_w   = 0.0
+
+    for kind in tiles:
+        tw = D[kind][0]
+        if cur_w + tw + gap > max_row_w and cur_row:
+            rows.append(cur_row)
+            cur_row = [kind]
+            cur_w   = tw + gap
+        else:
+            cur_row.append(kind)
+            cur_w += tw + gap
+    if cur_row:
+        rows.append(cur_row)
+
+    row_heights = [max(D[k][1] for k in row) for row in rows]
+    total_h = sum(row_heights) + gap * (len(rows)-1) + pad * 2
+    total_w = max_row_w + pad * 2
+
+    fig, ax = plt.subplots(figsize=(total_w, total_h))
+    fig.patch.set_facecolor('white')
+    ax.set_xlim(0, total_w)
+    ax.set_ylim(0, total_h)
+    ax.axis('off')
+
+    y_cursor = total_h - pad
+
+    for r, row in enumerate(rows):
+        rh = row_heights[r]
+        y_cursor -= rh
+        x_cursor  = pad
+
+        for kind in row:
+            tw, th = D[kind]
+            rect = patches.FancyBboxPatch(
+                (x_cursor, y_cursor + (rh-th)/2), tw, th,
+                boxstyle='round,pad=0.02',
+                linewidth=2.0, edgecolor='white', facecolor=C[kind]
+            )
+            ax.add_patch(rect)
+            fs = 13 if tw >= 0.7 else 9
+            ax.text(x_cursor + tw/2,
+                    y_cursor + (rh-th)/2 + th/2,
+                    L[kind],
+                    ha='center', va='center',
+                    fontsize=fs, color='white',
+                    fontfamily='Times New Roman', style='italic')
+            x_cursor += tw + gap
+
+        y_cursor -= gap
+
+    path = os.path.join(OUTPUT_DIR, filename)
+    fig.savefig(path, dpi=144, bbox_inches='tight')
+    print(f'Saved: {path}')
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PASTE YOUR GRAPH CODE BELOW THIS LINE
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+
+# Auto-generated Unit 0B bank graph blocks appended below the required marker.
+
+# u0b_bank_blank_coordinate_sq_v1.png
 fig, ax = plt.subplots(figsize=(3.5, 3.5))
 fig.patch.set_facecolor('white')
 make_standard_graph(ax, [], title='')
-save_graph(fig, 'u2_bank_coordinate_blank_sq_v1.png')
+save_graph(fig, 'u0b_bank_blank_coordinate_sq_v1.png')
 plt.close(fig)
 
-make_diamond('', '3', '5', '', filename='u2_warmup_2_1_1_diamond.png')
-make_diamond('-48', '', '', '-2', filename='u2_warmup_2_1_2_diamond.png')
-make_diamond('12', '', '-4', '', filename='u2_warmup_2_1_3_diamond.png')
-make_diamond('', '', '7', '18', filename='u2_warmup_2_2_1_diamond.png')
-make_diamond('28', '4', '', '', filename='u2_warmup_2_2_2_diamond.png')
-make_diamond('', '-7', '', '-4', filename='u2_warmup_2_2_3_diamond.png')
-make_diamond('', '-2', '-9', '', filename='u2_warmup_2_3_1_diamond.png')
-make_diamond('-60', '', '5', '', filename='u2_warmup_2_3_2_diamond.png')
-make_diamond('18', '', '', '11', filename='u2_warmup_2_3_3_diamond.png')
-make_diamond('', '', '-4', '5', filename='u2_warmup_2_4_1_diamond.png')
-make_diamond('', '-5', '', '-12', filename='u2_warmup_2_4_2_diamond.png')
-make_diamond('-72', '8', '', '', filename='u2_warmup_2_4_3_diamond.png')
-make_diamond('', '6', '8', '', filename='u2_warmup_2_5_1_diamond.png')
-make_diamond('-20', '', '2', '', filename='u2_warmup_2_5_2_diamond.png')
-make_diamond('', '', '8', '8', filename='u2_warmup_2_5_3_diamond.png')
+# u0b_bank_blank_context_time_distance_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [], 0, 10, 0, 50, xlabel='Time (min)', ylabel='Distance (m)', title='')
+save_graph(fig, 'u0b_bank_blank_context_time_distance_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_intercepts_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 2*x - 4, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}], title='')
+save_graph(fig, 'u0b_bank_s1_intercepts_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_context_growth_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 5*x + 10, 'deriv': lambda x: 0*x + 5, 'color': 'steelblue'}], 0, 8, 0, 55, xlabel='Time (min)', ylabel='Distance (m)', title='')
+save_graph(fig, 'u0b_bank_s1_context_growth_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_break_even_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: 1.5*x - 6, 'deriv': lambda x: 0*x + 1.5, 'color': 'firebrick'}], title='')
+save_graph(fig, 'u0b_bank_s1_break_even_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s1_scatter_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [1,2,3,4,5,6,7,8], [4,5,7,9,10,13,14,16], 0, 9, 0, 18, color='steelblue', point_size=36, line_of_best_fit=True, xlabel='Practice days', ylabel='Score gain', title='')
+save_graph(fig, 'u0b_bank_s1_scatter_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_linear_compare_sq_v1.png
+fig = make_2x1_grid([
+    [{'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}],
+    [{'expr': lambda x: 4*x - 3, 'deriv': lambda x: 0*x + 4, 'color': 'firebrick'}]
+], titles=[r'Graph A', r'Graph B'])
+save_graph(fig, 'u0b_bank_s3_linear_compare_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_constant_rate_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 3*x + 2, 'deriv': lambda x: 0*x + 3, 'color': 'steelblue'}], 0, 8, 0, 30, xlabel='Figure number', ylabel='Tiles', title='')
+save_graph(fig, 'u0b_bank_s3_constant_rate_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s3_decreasing_rate_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: -4*x + 40, 'deriv': lambda x: 0*x - 4, 'color': 'firebrick'}], 0, 10, 0, 45, xlabel='Week', ylabel='Pages left', title='')
+save_graph(fig, 'u0b_bank_s3_decreasing_rate_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s4_line_from_graph_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_standard_graph(ax, [{'expr': lambda x: -1*x + 5, 'deriv': lambda x: 0*x - 1, 'color': 'steelblue'}], title='')
+save_graph(fig, 'u0b_bank_s4_line_from_graph_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s4_context_line_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_context_graph(ax, [{'expr': lambda x: 8*x + 12, 'deriv': lambda x: 0*x + 8, 'color': 'steelblue'}], 0, 6, 0, 65, xlabel='Hours', ylabel='Total points', title='')
+save_graph(fig, 'u0b_bank_s4_context_line_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_compare_two_lines_sq_v1.png
+fig = make_2x1_grid([
+    [{'expr': lambda x: 1.5*x + 4, 'deriv': lambda x: 0*x + 1.5, 'color': 'steelblue'}],
+    [{'expr': lambda x: 3*x - 2, 'deriv': lambda x: 0*x + 3, 'color': 'firebrick'}]
+], titles=[r'Plan A', r'Plan B'])
+save_graph(fig, 'u0b_bank_s5_compare_two_lines_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_three_reps_sq_v1.png
+fig = make_3x1_grid([
+    [{'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue'}],
+    [{'expr': lambda x: -1*x + 8, 'deriv': lambda x: 0*x - 1, 'color': 'firebrick'}],
+    [{'expr': lambda x: 0.5*x + 5, 'deriv': lambda x: 0*x + 0.5, 'color': 'darkorange'}]
+], titles=[r'A', r'B', r'C'])
+save_graph(fig, 'u0b_bank_s5_three_reps_sq_v1.png')
+plt.close(fig)
+
+# u0b_bank_s5_scatter_compare_sq_v1.png
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
+fig.patch.set_facecolor('white')
+make_scatter_plot(ax, [0,1,2,3,4,5,6], [3,5,7,10,11,13,15], 0, 7, 0, 18, color='steelblue', point_size=36, line_of_best_fit=True, xlabel='Weeks', ylabel='Total', title='')
+save_graph(fig, 'u0b_bank_s5_scatter_compare_sq_v1.png')
+plt.close(fig)
+
+# Unit 2 warmup diamond generation blocks
+# All diamonds use graph_tool.make_diamond().
+make_diamond('', '$3$', '$4$', '', filename='u2_warmup_2_1_1_diamond.png')
+make_diamond('$-18$', '', '', '$7$', filename='u2_warmup_2_1_2_diamond.png')
+make_diamond('$30$', '', '$-6$', '', filename='u2_warmup_2_1_3_diamond.png')
+make_diamond('', '', '$11$', '$19$', filename='u2_warmup_2_2_1_diamond.png')
+make_diamond('$42$', '$6$', '', '', filename='u2_warmup_2_2_2_diamond.png')
+make_diamond('', '$-8$', '', '$-5$', filename='u2_warmup_2_2_3_diamond.png')
+make_diamond('', '$-2$', '$-9$', '', filename='u2_warmup_2_3_1_diamond.png')
+make_diamond('$84$', '', '$7$', '', filename='u2_warmup_2_3_2_diamond.png')
+make_diamond('$50$', '', '', '$15$', filename='u2_warmup_2_3_3_diamond.png')
+make_diamond('', '', '$4$', '$-8$', filename='u2_warmup_2_4_1_diamond.png')
+make_diamond('', '$-3$', '', '$-11$', filename='u2_warmup_2_4_2_diamond.png')
+make_diamond('$-90$', '$-10$', '', '', filename='u2_warmup_2_4_3_diamond.png')
+make_diamond('', '$2$', '$11$', '', filename='u2_warmup_2_5_1_diamond.png')
+make_diamond('$-42$', '', '$-7$', '', filename='u2_warmup_2_5_2_diamond.png')
+make_diamond('', '', '$12$', '$12$', filename='u2_warmup_2_5_3_diamond.png')
