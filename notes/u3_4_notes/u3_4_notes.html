@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 3.4 Notes — Graphing Linear Inequalities</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 3</div>
+  <div class="title-main">Section 3.4<br>Graphing Linear Inequalities</div>
+  <div class="title-sub">Graph one linear inequality by deciding the boundary and the solution side.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> A linear inequality uses a boundary line and a shaded half-plane to show all points that make the inequality true.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will decide whether boundaries are solid or dashed, use test points to choose shading, and critique inequality graphs. You will connect symbols to the solution region on a coordinate plane.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will graph and interpret linear inequalities.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can construct a boundary line and shaded region for a linear inequality.</li>
+    <li>I can use test points to interpret which region satisfies an inequality.</li>
+    <li>I can critique a graph of a linear inequality using the boundary, shading, and solution region.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p>A poster claims to model “students need at least 20 total practice problems, with $x$ online problems and $y$ paper problems” using $x+y\lt 20$ and a dashed boundary.</p>
+<figure class="notes-figure wu-img-350">
+    <img alt="blank coordinate plane" src="figures/u3_bank_standard_blank_sq_v1.png"/>
+  </figure>
+<ol><li>Revise the inequality so it matches the phrase “at least.”</li><li>Describe the correct boundary and shading.</li><li>Give one point that should be feasible and one point that should not.</li></ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p><strong>Paragraph A.</strong> A linear inequality begins with a related boundary line. If the symbol includes equality, such as $\le$ or $\ge$, the boundary line is solid because points on the line are included. If the symbol is $\lt$ or $\gt$, the boundary is dashed because points on the line are not included.</p>
+  <p><strong>Paragraph B.</strong> The shaded region shows all the points that satisfy the inequality. A test point, often $(0,0)$ when it is not on the boundary, is substituted into the inequality. If the test point makes the inequality true, shade the side containing that point; if not, shade the other side.</p>
+  <p><strong>Paragraph C.</strong> Two inequalities can share the same boundary but ask for opposite sides. For example, $y\ge x+1$ and $y\le x+1$ use the same line, but their solution regions are on different sides. This means the symbol controls more than the line style.</p>
+  <p><strong>Paragraph D.</strong> Useful representations include the inequality, the boundary line, the shaded half-plane, test points, and solution-region statements. A good graph makes both the boundary type and shaded side clear.</p>
+  <p><strong>Paragraph E.</strong> In situations, inequalities model limits such as budgets, minimum scores, or maximum amounts. The shaded region represents all possible choices that meet the constraint, not just one answer.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>When should a boundary line be solid?</li>
+    <li>How does a test point help decide the shaded side?</li>
+    <li>Why can the same boundary line have different solution regions?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Boundary line and inclusion</span>
+  </div>
+  <div class="math-notes-body">
+  <p>The boundary line comes from replacing the inequality symbol with an equals sign.</p>
+  $$y\ge x-2 \quad \Rightarrow \quad y=x-2$$
+  <table class="values">
+    <tr><th>Symbol</th><th>Boundary</th><th>Why</th></tr>
+    <tr><td>$\ge$ or $\le$</td><td>solid</td><td>points on the line are included</td></tr>
+    <tr><td>$\gt$ or $\lt$</td><td>dashed</td><td>points on the line are not included</td></tr>
+  </table>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_s4_mn1_boundary.png" alt="Solid boundary line with the region above shaded."/>
+  </figure>
+  <p>The graph uses a solid line because equality is allowed.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Boundary type from the symbol</h3>
+<p>Consider the inequality $y\le -3x+5$.</p>
+<ol>
+  <li>Should the boundary line be solid or dashed?</li>
+  <li>Write the equation of the boundary line.</li>
+  <li>Explain how the symbol tells whether points on the boundary are solutions.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Another boundary decision</h3>
+<p>Consider the inequality $y\gt x-8$.</p>
+<ol>
+  <li>Should the boundary line be solid or dashed?</li>
+  <li>Write the equation of the boundary line.</li>
+  <li>Explain whether a point on that line should be included.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Which symbols include the boundary line, and which symbols do not?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Test points decide shading</span>
+  </div>
+  <div class="math-notes-body">
+  <p>A test point tells which side of the boundary satisfies the inequality.</p>
+  $$\text{For } y\lt -2x+4, \text{ test } (0,0):\quad 0\lt -2(0)+4 \text{ is true.}$$
+  <table class="values">
+    <tr><th>Test point</th><th>Result</th><th>Action</th></tr>
+    <tr><td>$(0,0)$</td><td>$0\lt 4$ is true</td><td>shade the side containing $(0,0)$</td></tr>
+  </table>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_s4_mn2_test_point.png" alt="Dashed boundary with a marked test point in the shaded region."/>
+  </figure>
+  <p>Because the test point works, it is part of the solution region.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Graph a linear inequality</h3>
+<p>Graph the inequality $y\ge 2x-4$.</p>
+<figure class="notes-figure wu-img-350">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+<ol>
+  <li>Write the boundary line and decide whether it is solid or dashed.</li>
+  <li>Use a test point to decide which side to shade.</li>
+  <li>Name one point that is a solution and one point that is not a solution.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Graph another inequality</h3>
+<p>Graph the inequality $y\le -x+5$.</p>
+<figure class="notes-figure wu-img-350">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+<ol>
+  <li>Draw the boundary line with the correct style.</li>
+  <li>Use a test point to choose the shaded side.</li>
+  <li>Name one satisfying point and one non-satisfying point.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why is a test point useful even if you already graphed the boundary correctly?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Boundary and shading together</h3>
+<p>Identify the boundary line and graph the solution region for $y\lt x+3$.</p>
+<figure class="notes-figure wu-img-350">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+<ol>
+  <li>State the boundary equation and line style.</li>
+  <li>Choose a test point and show the substitution.</li>
+  <li>Explain whether a point on the boundary line is a solution.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Check boundary inclusion</h3>
+<p>Graph the solution region for $y\lt -x+1$.</p>
+<figure class="notes-figure wu-img-350">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+<ol>
+  <li>State the boundary equation and line style.</li>
+  <li>Test $(0,0)$ and decide where to shade.</li>
+  <li>Explain whether $(1,0)$ is a solution if it lies on the boundary.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How did the boundary line style affect whether a boundary point counted as a solution?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Critiquing an inequality graph</span>
+  </div>
+  <div class="math-notes-body">
+  <p>To critique an inequality graph, check the boundary type and shaded side separately.</p>
+  $$y\lt -x+4$$
+  <table class="values">
+    <tr><th>Decision</th><th>Correct check</th></tr>
+    <tr><td>Boundary</td><td>$\lt$ means dashed, not solid.</td></tr>
+    <tr><td>Shading</td><td>Test $(0,0)$: $0\lt 4$ is true, so shade the side with $(0,0)$.</td></tr>
+  </table>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_bank_s4_wrong_boundary_sq_v1.png" alt="Questionable graph of a linear inequality for critique."/>
+  </figure>
+  <p>A graph can have the right boundary equation but still be wrong if either the line style or shading is wrong.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Critique a shaded graph</h3>
+<p>A student graphs $y\gt -2x+6$ with a solid boundary and shades below the line.</p>
+<div class="claim-card"><p><strong>Student claim:</strong> "The graph is correct because the boundary has slope $-2$ and intercept $6$."</p></div>
+<ol>
+  <li>Identify the correct boundary equation and line style.</li>
+  <li>Use a test point to decide whether the shading should be above or below.</li>
+  <li>Revise the student's claim so it checks both the boundary and the solution region.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Fix another graph description</h3>
+<p>A student graphs $y\le \frac{1}{2}x-3$ with a dashed boundary and shades above the line.</p>
+<div class="claim-card"><p><strong>Student claim:</strong> "Dashed is okay because this is an inequality."</p></div>
+<ol>
+  <li>Identify the boundary style error.</li>
+  <li>Use a test point to decide whether the shading should be above or below.</li>
+  <li>Write a corrected description of the graph.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>When critiquing, why should you check the line style and the shaded side as two separate decisions?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>A linear inequality graph shows all points that satisfy a constraint.</p>
+  <p>The boundary line comes from the related equation; the inequality symbol decides whether the boundary is solid or dashed and the test point helps choose the shaded side.</p>
+  <p>A common error is drawing the correct line but using the wrong line style or shading the wrong half-plane.</p>
+  <p>Strong understanding means you can justify the boundary, shading, and solution region using both symbols and test points.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Using solid for every boundary.</strong> Why it is tempting: equations usually use solid lines. What to check instead: look for equality in $\le$ or $\ge$.</li>
+    <li><strong>Shading based only on the symbol direction.</strong> Why it is tempting: above and below feel tied to $\gt$ and $\lt$. What to check instead: use a test point when unsure.</li>
+    <li><strong>Testing a point on the boundary.</strong> Why it is tempting: the origin is convenient. What to check instead: choose a point not on the boundary.</li>
+    <li><strong>Forgetting vertical or horizontal cases.</strong> Why it is tempting: most lines are written as $y=mx+b$. What to check instead: identify the boundary equation first.</li>
+    <li><strong>Calling one point the answer.</strong> Why it is tempting: test points are memorable. What to check instead: describe the entire shaded region.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Foundations · DoK 1</div>
+    <p>For $y\ge 2x-1$, should the boundary line be solid or dashed?</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Apply It · DoK 2</div>
+    <p>Graph the inequality $y\ge x-3$.</p>
+<figure class="notes-figure wu-img-350">
+    <img alt="blank coordinate plane" src="figures/u3_bank_standard_blank_sq_v1.png"/>
+  </figure>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about graphing linear inequalities you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about graphing linear inequalities you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
