@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 3.2 Notes — Solving Systems by Substitution</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 3</div>
+  <div class="title-main">Section 3.2<br>Solving Systems by Substitution</div>
+  <div class="title-sub">Use one equation to replace a variable and turn a system into one equation.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> Substitution works because an expression equal to a variable can stand in for that variable anywhere it appears.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will choose a useful substitution, solve the resulting one-variable equation, and interpret the ordered pair. You will also compare when substitution is more efficient than another method.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will solve systems using substitution and choose efficient forms for solving.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can formulate a substitution plan when one equation is already written in an efficient form.</li>
+    <li>I can apply substitution to solve systems and interpret the ordered-pair solution.</li>
+    <li>I can assess which algebraic method is more efficient for a given system.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p>Create a system of two linear equations that has solution $(4,3)$ and is efficient to solve by substitution because one equation is already solved for $y$.</p>
+<ol><li>Write the system.</li><li>Show a substitution solution path.</li><li>Explain why your structure makes substitution efficient.</li></ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p><strong>Paragraph A.</strong> Substitution begins by looking for a variable that is already alone or easy to isolate. If a system includes $y=3x-4$, then the expression $3x-4$ can replace $y$ in the other equation. This keeps the two constraints connected while using only one variable.</p>
+  <p><strong>Paragraph B.</strong> The goal is not just to move symbols around. After you replace one variable expression in the other equation, the new equation has one variable instead of two. Solving that equation gives one coordinate of the solution.</p>
+  <p><strong>Paragraph C.</strong> Some systems almost invite substitution because one equation is already written as $x=$ or $y=$. Other systems can still be solved by substitution, but they may create fractions or extra steps. A careful solver notices the structure before choosing a method.</p>
+  <p><strong>Paragraph D.</strong> The ordered pair still has the same meaning it had when solving by graphing. It is the point where both equations are true, and it can be checked by substituting into both original equations.</p>
+  <p><strong>Paragraph E.</strong> In context, substitution often means one quantity is written in terms of another. For example, one equation may describe a total, while the other gives the value of one part based on the other part.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What expression replaces the isolated variable during substitution?</li>
+    <li>Why does substitution create a one-variable equation?</li>
+    <li>What makes one system more efficient for substitution than another?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Replacing a variable with an equal expression</span>
+  </div>
+  <div class="math-notes-body">
+  <p>When $y=x+2$, every $y$ in the second equation can be replaced by $x+2$.</p>
+  $$\begin{aligned}y&=x+2\\3x+y&=14\\3x+(x+2)&=14\end{aligned}$$
+  <table class="values">
+    <tr><th>Representation</th><th>Evidence</th></tr>
+    <tr><td>Equation</td><td>$3x+(x+2)=14$</td></tr>
+    <tr><td>Solution</td><td>$x=3$, so $y=5$</td></tr>
+    <tr><td>Ordered pair</td><td>$(3,5)$</td></tr>
+  </table>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_s2_mn1_substitution.png" alt="Graph of a substitution system meeting at three comma five."/>
+  </figure>
+  <p>The graph shows the same result: both constraints are true at $(3,5)$.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Choose the replacement expression</h3>
+<p>Consider the system $y=4x-7$ and $5x+y=23$.</p>
+<ol>
+  <li>What expression should replace $y$ in the second equation?</li>
+  <li>Write the one-variable equation after substitution.</li>
+  <li>Explain why replacing $y$ with that expression does not change the solution.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Choose another replacement expression</h3>
+<p>Consider the system $x=2y-5$ and $3x+y=29$.</p>
+<ol>
+  <li>What expression should replace $x$ in the second equation?</li>
+  <li>Write the one-variable equation after substitution.</li>
+  <li>Explain how the isolated-variable equation guides the first move.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How did the isolated equation decide the first substitution move?</li>
+    <li>What would go wrong if you replaced the wrong variable with the wrong expression?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Solving the one-variable equation</span>
+  </div>
+  <div class="math-notes-body">
+  <p>After substitution, solve the one-variable equation before finding the second coordinate.</p>
+  $$\begin{aligned}y&=2x-3\\x+y&=9\\x+(2x-3)&=9\\3x-3&=9\\x&=4\end{aligned}$$
+  <table class="values">
+    <tr><th>Use $x=4$ in...</th><th>Result</th></tr>
+    <tr><td>$y=2x-3$</td><td>$y=5$</td></tr>
+    <tr><td>$x+y=9$</td><td>$4+5=9$</td></tr>
+  </table>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_s2_mn2_one_variable.png" alt="Graph confirming a substitution solution of four comma five."/>
+  </figure>
+  <p>The ordered pair is $(4,5)$ because both original equations are true.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Solve by substitution</h3>
+<p>Solve the system by substitution.</p>
+$$\begin{aligned}y&=x+6\\2x+y&=18\end{aligned}$$
+<ol>
+  <li>Substitute the expression for $y$ into the second equation.</li>
+  <li>Solve for $x$, then find $y$.</li>
+  <li>Check the ordered pair in both original equations.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Solve a parallel substitution problem</h3>
+<p>Solve the system by substitution.</p>
+$$\begin{aligned}y&=3x-2\\x+y&=18\end{aligned}$$
+<ol>
+  <li>Substitute the expression for $y$ into the second equation.</li>
+  <li>Solve for both coordinates.</li>
+  <li>Check the ordered pair in both original equations.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>After substitution, why should the equation have only one variable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Choose the isolated equation</h3>
+<p>A system is shown below.</p>
+$$\begin{aligned}x&=2y+1\\x+3y&=21\end{aligned}$$
+<ol>
+  <li>Name the equation that is already solved for one variable.</li>
+  <li>Substitute into the other equation and solve.</li>
+  <li>Explain why this system is more efficient for substitution than elimination.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Choose and solve</h3>
+<p>A system is shown below.</p>
+$$\begin{aligned}y&=4x-9\\2x+y&=27\end{aligned}$$
+<ol>
+  <li>Name the expression you will substitute into the other equation.</li>
+  <li>Solve the system.</li>
+  <li>Explain one clue that substitution was an efficient choice.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What clue made the You Try It efficient for substitution?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Choosing an efficient method</span>
+  </div>
+  <div class="math-notes-body">
+  <p>Substitution is efficient when one equation already gives a variable or can be solved for one variable quickly.</p>
+  <div class="rep-grid">
+    <div class="rep-card"><h4>Ready for substitution</h4><p>$y=-x+8$ can replace $y$ immediately.</p></div>
+    <div class="rep-card"><h4>Also possible</h4><p>$4x+y=17$ can be rewritten as $y=17-4x$.</p></div>
+    <div class="rep-card"><h4>Check</h4><p>The final point must satisfy both original equations.</p></div>
+    <div class="rep-card"><h4>Interpret</h4><p>The ordered pair is the shared solution.</p></div>
+  </div>
+  <figure class="notes-figure wu-img-400">
+    <img src="figures/u3_s2_mn4_efficiency.png" alt="Graph of a system suited for substitution."/>
+  </figure>
+  <p>Method choice is about structure: pick the pathway that keeps the algebra clear.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Plan before solving</h3>
+<p>For the system below, decide on a substitution plan before doing any arithmetic.</p>
+$$\begin{aligned}6x+y&=31\\y&=x+3\end{aligned}$$
+<ol>
+  <li>Name exactly what expression will be substituted and where it will go.</li>
+  <li>Write the one-variable equation and solve the system.</li>
+  <li>Compare substitution with elimination for this system. Which method is cleaner, and why?</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Compare methods</h3>
+<p>For the system below, choose a method and justify it before solving.</p>
+$$\begin{aligned}5x+y&=34\\y&=2x-1\end{aligned}$$
+<ol>
+  <li>State the substitution plan.</li>
+  <li>Solve for the ordered pair.</li>
+  <li>Would elimination also work? Explain why substitution is or is not faster here.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How can two different methods solve the same system but one still be a better choice?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Substitution solves a system by replacing one variable with an equal expression from the other equation.</p>
+  <p>The key notation move is writing a one-variable equation, solving it, and then using an original equation to find the missing coordinate.</p>
+  <p>A common error is substituting into the same equation or forgetting to return for the second coordinate.</p>
+  <p>Strong understanding means you choose substitution when the equation structure makes it clear and then interpret the ordered pair.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Substituting into the same equation.</strong> Why it is tempting: the isolated equation is easiest to look at. What to check instead: place the expression into the other equation.</li>
+    <li><strong>Dropping parentheses.</strong> Why it is tempting: expressions like $2x-5$ look simple. What to check instead: use parentheses when substituting into products or sums.</li>
+    <li><strong>Finding only one coordinate.</strong> Why it is tempting: the one-variable equation feels finished. What to check instead: use the solved value to find the other variable.</li>
+    <li><strong>Not checking the original system.</strong> Why it is tempting: the substituted equation may be correct. What to check instead: verify the ordered pair in both original equations.</li>
+    <li><strong>Choosing a messy method.</strong> Why it is tempting: all methods can work. What to check instead: look for an equation already solved for $x$ or $y$.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Foundations · DoK 1</div>
+    <p>In the system $y=3x-4$ and $2x+y=11$, which expression should replace $y$ during substitution?</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Apply It · DoK 2</div>
+    <p>Solve by substitution.</p>
+$$\begin{aligned}y=2x+1\\x+y=13\end{aligned}$$
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about solving systems by substitution you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about solving systems by substitution you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
