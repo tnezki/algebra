@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 6.5 Notes — Quadratic Modeling and Optimization</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 6</div>
+  <div class="title-main">Section 6.5<br>Quadratic Modeling and Optimization</div>
+  <div class="title-sub">Model quadratic situations and interpret the features that matter.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> Quadratic models connect intercepts, vertices, domains, and rates to real quantities such as height, area, and profit.</p></div>
+  <p style="margin-top:18px;color:#555;">You will build and interpret quadratic models from contexts. You will focus on maximums, minimums, intercepts, and reasonable domains rather than treating every algebraic value as automatically meaningful.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will use quadratic functions to model real-world situations and interpret maximums, minimums, and intercepts.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can construct quadratic models from real-world constraints, data, or key features.</li>
+    <li>I can extend quadratic models to predict maximums, minimums, intercepts, and meaningful solution values.</li>
+    <li>I can assess whether a quadratic model and its solutions are reasonable for the situation.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p><strong>Create With Constraints.</strong> Create or revise a quadratic task for <strong>Quadratic Modeling and Optimization</strong> using the constraints below.</p>
+  <p>Use the provided graph as one representation of height over time. Create a quadratic model with a maximum near the graph's vertex, estimate and interpret the maximum height and landing time, and state a reasonable domain.</p>
+  <figure class="notes-figure wu-img-500"><img src="figures/u6_bank_s5_dok4_1_sq_v1.png" alt="Graph for the future task."/></figure>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Quadratic models are useful because their graphs have features that can be interpreted. Intercepts, vertices, and domains often answer the main questions in height, area, and profit situations. Choosing the useful feature depends on the context.</p>
+  <p>Optimization problems ask for a best value. The vertex represents a maximum or minimum, so it can identify the greatest height, largest area, or highest profit. The input at the vertex tells when or where that best value occurs.</p>
+  <p>Real-world inputs are not always allowed to continue forever. Time after launch usually starts at zero, and a side length cannot be negative. A model may be algebraically defined for many values while the situation only makes sense on a restricted interval.</p>
+  <p>This section uses contextual quadratic models, graphs with vertices and intercepts, tables of values, multiple equation forms, and solution statements. Each representation helps explain what the numbers mean.</p>
+  <p>Modeling also requires reasonableness checks. A negative time, an impossible length, or a prediction outside the situation's domain should be questioned even if it comes from correct algebra.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Which graph features are often useful in quadratic modeling contexts?</li>
+    <li>What does a vertex represent in an optimization problem?</li>
+    <li>Why is the domain of a real-world quadratic often restricted?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Features in a Context Graph</span>
+  </div>
+  <div class="math-notes-body">
+  <p>In a context, the important graph feature depends on the question being asked.</p>
+  $$h(t)=-4(t-2)^2+16$$
+  <table class="values"><tr><th>Feature</th><th>Meaning</th></tr><tr><td>Vertex $(2,16)$</td><td>maximum height</td></tr><tr><td>Intercepts</td><td>ground-level times</td></tr><tr><td>Domain</td><td>reasonable time interval</td></tr></table>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s5_mn1_features.png" alt="Height-time graph with vertex and intercepts marked."/>
+  </figure>
+  <p><strong>Context:</strong> The point $(2,16)$ means the object reaches 16 units high after 2 seconds.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Choose the Useful Feature</h3>
+<p>A ball's height is modeled by $h(t)=-16t^2+64t$. A garden's area is modeled by $A(x)=x(28-x)$.</p>
+<ol><li>For the ball model, name the feature that tells when it hits the ground.</li><li>For the garden model, name the feature that gives the greatest area.</li><li>Explain why different questions can require different graph features.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Feature Match in Context</h3>
+<p>A rocket model is $h(t)=-16t^2+80t$ and a revenue model is $R(p)=-p^2+18p$.</p>
+<ol><li>Name the feature that tells when the rocket returns to the ground.</li><li>Name the feature that gives maximum revenue.</li><li>Explain why the same graph feature is not always the answer to every context question.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How did the context decide which feature you needed?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Solving for a Meaningful Intercept</span>
+  </div>
+  <div class="math-notes-body">
+  <p>When a height is zero, the object is at ground level.</p>
+  $$h(t)=-16t^2+48t+4$$
+  $$0=-16t^2+48t+4$$
+  <table class="values"><tr><th>Solution type</th><th>Use in context</th></tr><tr><td>negative time</td><td>reject for after launch</td></tr><tr><td>positive time</td><td>landing time</td></tr></table>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s5_mn2_ground.png" alt="Height-time graph with the positive ground intercept marked."/>
+  </figure>
+  <p><strong>Context:</strong> The positive zero is the landing time because time after launch must be nonnegative.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Find When a Ball Lands</h3>
+<p>A ball is launched from a low platform with height $h(t)=-16t^2+56t+6$.</p>
+<ol><li>Write the equation used to find when the ball hits the ground.</li><li>Solve the equation using an appropriate method.</li><li>Choose the meaningful solution and explain it with units.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Another Landing Time</h3>
+<p>A tossed object has height $h(t)=-16t^2+32t+5$.</p>
+<ol><li>Write the equation for the ground-contact time.</li><li>Solve using an appropriate method.</li><li>Choose the meaningful time and include units.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why is the positive time the useful ground-contact answer?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Optimization With Area</span>
+  </div>
+  <div class="math-notes-body">
+  <p>For an area model, the maximum occurs at the vertex of the quadratic.</p>
+  $$A(x)=x(30-2x)=-2x^2+30x$$
+  <table class="values"><tr><th>$x$</th><th>5</th><th>7.5</th><th>10</th></tr><tr><td>$A(x)$</td><td>100</td><td>112.5</td><td>100</td></tr></table>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s5_mn3_area_opt.png" alt="Area graph with maximum point marked."/>
+  </figure>
+  <p><strong>Context:</strong> The vertex tells which width creates the largest possible area for the fencing constraint.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Maximize an Area Model</h3>
+<p>A rectangle is built along a wall using 36 meters of fencing for three sides. The area can be modeled by $A(x)=x(36-2x)$.</p>
+<ol><li>Rewrite the model in standard form.</li><li>Find the value of $x$ that maximizes area.</li><li>State the dimensions and maximum area in context.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Optimize a Fenced Region</h3>
+<p>A rectangle uses 40 meters of fencing for three sides, so $A(x)=x(40-2x)$.</p>
+<ol><li>Rewrite the model in standard form.</li><li>Find the value of $x$ that maximizes area.</li><li>State the dimensions and maximum area.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How does the vertex connect to maximum area?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Reasonableness of Solutions</h3>
+<p>A height model gives solutions $t=-0.1$ and $t=2.9$ seconds for when the object is on the ground.</p>
+<ol><li>Identify which solution is meaningful after launch.</li><li>Explain why the other solution appears algebraically.</li><li>State a reasonable domain for the model.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Check Model Meaning</h3>
+<p>A model gives zeros $x=-3$ and $x=11$ for possible side lengths in centimeters.</p>
+<ol><li>Identify which solution is meaningful.</li><li>Explain why the other solution is not reasonable.</li><li>Write a reasonable domain restriction for the side length.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What is the difference between an algebraic solution and a meaningful solution?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Today you used quadratic models to interpret real-world situations. You focused on vertices, intercepts, and domains because those features answer context questions.</p>
+  <p>Intercepts often represent break-even values or ground-contact times, while vertices represent maximums or minimums. The form of the equation can make one feature easier to find.</p>
+  <p>A common error is accepting every algebraic solution without checking the situation. Correct algebra still needs a reasonableness check.</p>
+  <p>Strong understanding means you can choose the feature that answers the question, compute it, and explain the result using units and a reasonable domain.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Using the wrong feature.</strong> Why it is tempting: all graph features seem important. What to check instead: match the feature to the question being asked.</li>
+    <li><strong>Keeping negative context values.</strong> Why it is tempting: the algebra produced them. What to check instead: check units and domain restrictions.</li>
+    <li><strong>Forgetting units.</strong> Why it is tempting: the number looks complete. What to check instead: state what the input and output measure.</li>
+    <li><strong>Maximizing with an intercept.</strong> Why it is tempting: zeros are easier to solve. What to check instead: use the vertex for maximum or minimum questions.</li>
+    <li><strong>Ignoring model limits.</strong> Why it is tempting: quadratics continue forever algebraically. What to check instead: state a realistic domain for the context.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Useful Context Features · DoK 1</div>
+    <p>Identify the vertex, intercepts, or domain feature most useful for the context.</p>
+  <ol><li>$h(t)=-16t^2+48t$</li><li>$A(x)=x(20-x)$</li></ol>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Ground Contact Time · DoK 2</div>
+    <p>Solve or interpret the quadratic situation for <strong>Quadratic Modeling and Optimization</strong>. Show the algebra that supports your answer.</p>
+  <p>A ball has height $h(t)=-16t^2+40t+6$. Find when it hits the ground.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about quadratic modeling and optimization you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about quadratic modeling and optimization you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 6.1 Notes — Solving Quadratics by Factoring</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 6</div>
+  <div class="title-main">Section 6.1<br>Solving Quadratics by Factoring</div>
+  <div class="title-sub">Use factors to find and interpret quadratic solutions.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> A product is zero only when at least one factor is zero, so factored form can reveal the solution values of a quadratic equation.</p></div>
+  <p style="margin-top:18px;color:#555;">You will connect factors, zeros, tables, and graphs while solving quadratic equations. You will also decide whether the solutions make sense in a context, especially when a negative value appears.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will solve quadratic equations using factored form and interpret solutions.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can construct factored quadratic equations from given zeros, intercepts, or contextual constraints.</li>
+    <li>I can apply the zero product property to solve quadratic equations in factored form.</li>
+    <li>I can determine whether solutions make sense in relation to a graph or context.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p><strong>Design A Model Or Context.</strong> Create or revise a quadratic task for <strong>Solving Quadratics by Factoring</strong> using the constraints below.</p>
+  <p>Use the provided graph as one representation. Design a launch-or-break-even context for a quadratic with two positive zeros; write a factored equation that matches the estimated intercepts and explain what both zeros mean in the context.</p>
+  <figure class="notes-figure wu-img-500"><img src="figures/u6_bank_s1_dok4_1_sq_v1.png" alt="Graph for the future task."/></figure>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Quadratic equations can look complicated until their structure is visible. When a quadratic is written as a product of two factors equal to zero, the zero product property says at least one factor must be zero. That is why solving a factored quadratic often becomes two simpler linear equations.</p>
+  <p>A graph gives the same solution information in a different form. The zeros of a quadratic are the input values where the output is zero, and on a graph those locations are the $x$-intercepts. In a table, the same values appear where the output row is zero or changes sign near zero.</p>
+  <p>Contexts add one more decision after the algebra is finished. A projectile model might produce one negative time and one positive time, but time before launch may not fit the situation. A strong solution explains both the algebraic answer and the meaning of the value.</p>
+  <p>In this section, factored equations, tables of values, graphs of parabolas, and contextual statements all describe the same relationships. Moving between representations helps you check whether the factors, zeros, and intercepts agree.</p>
+  <p>Factoring is useful for break-even points, ground-contact times, and area relationships because each factor can represent a meaningful dimension or boundary. The goal is not just to find numbers; the goal is to explain what those numbers represent.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why does the zero product property let us solve a factored quadratic equation?</li>
+    <li>What do zeros and $x$-intercepts describe on a graph?</li>
+    <li>Why might a solution from an equation be rejected in a real context?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Zeros, Factors, and Intercepts</span>
+  </div>
+  <div class="math-notes-body">
+  <p>In factored form, each factor shows a possible input that makes the output zero.</p>
+  $$y=(x-2)(x-5)$$
+  <table class="values"><tr><th>$x$</th><th>2</th><th>3</th><th>5</th></tr><tr><td>$y$</td><td>0</td><td>-2</td><td>0</td></tr></table>
+  <ul><li>The zeros are $x=2$ and $x=5$ because those inputs make one factor equal zero.</li><li>On the graph, the zeros appear where the parabola touches the $x$-axis.</li></ul>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s1_mn1_zeros.png" alt="Graph of a factored quadratic with the zeros marked."/>
+  </figure>
+  <p><strong>Context:</strong> If $x$ represents seconds, the zeros could describe two times when the height or profit is zero.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Zero Product Property in a Launch Model</h3>
+<p>A small rocket's height model is already written in factored form. The equation $0=(t-4)(t+1)$ represents times when the rocket is at ground level.</p>
+<ol><li>Solve the equation using the zero product property.</li><li>Which solution makes sense for time after launch?</li><li>Explain why the other algebraic solution should not be used in the launch context.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Zero Product Property in a Profit Model</h3>
+<p>A club's simple profit model is $0=(p-12)(p+2)$ for break-even prices.</p>
+<ol><li>Solve the equation using the zero product property.</li><li>Which price is reasonable in this context?</li><li>Explain what the unreasonable solution tells you about checking context.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How did the context change which algebraic solution you kept?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Factoring Standard Form Before Solving</span>
+  </div>
+  <div class="math-notes-body">
+  <p>When an equation is in standard form, rewrite it as a product before using the zero product property.</p>
+  $$x^2-7x+10=0$$
+  $$x^2-7x+10=(x-2)(x-5)$$
+  $$x-2=0 \quad \text{or} \quad x-5=0$$
+  <table class="values"><tr><th>Form</th><th>What it shows</th></tr><tr><td>$x^2-7x+10$</td><td>constant term and coefficient structure</td></tr><tr><td>$(x-2)(x-5)$</td><td>zeros at $2$ and $5$</td></tr></table>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s1_mn2_standard_factored.png" alt="Graph showing the same zeros after rewriting standard form into factored form."/>
+  </figure>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Factor Standard Form to Solve</h3>
+<p>A quadratic equation models when a school display frame reaches an area boundary. Solve the equation $x^2-4x-21=0$.</p>
+<ol><li>Find two numbers that multiply to $-21$ and add to $-4$.</li><li>Rewrite the equation in factored form and solve.</li><li>How could a graph of the related parabola confirm your two solutions?</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Factor and Solve Standard Form</h3>
+<p>A quadratic equation for a path is $x^2+x-42=0$.</p>
+<ol><li>Find two numbers that multiply to $-42$ and add to $1$.</li><li>Rewrite the equation in factored form and solve.</li><li>Describe where the solutions would appear on the graph of $y=x^2+x-42$.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What step made the zeros visible: factoring or using the zero product property? Explain.</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Context Solutions Need Meaning</span>
+  </div>
+  <div class="math-notes-body">
+  <p>A solution to a quadratic equation is useful only if it answers the question from the situation.</p>
+  $$h(t)=-4(t-1)(t-6)$$
+  <table class="values"><tr><th>$t$</th><th>1</th><th>3.5</th><th>6</th></tr><tr><td>$h(t)$</td><td>0</td><td>25</td><td>0</td></tr></table>
+  <figure class="notes-figure wu-img-450">
+    <img src="figures/u6_s1_mn3_context.png" alt="Height-time graph with the ground-contact times marked."/>
+  </figure>
+  <p><strong>Context:</strong> The zeros mean the object is at ground level at $t=1$ second and $t=6$ seconds.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Area With Linear Factors</h3>
+<p>A rectangular poster has side lengths $x$ inches and $x+5$ inches. Its area is $84$ square inches.</p>
+<ol><li>Write a quadratic equation for the area.</li><li>Solve for possible values of $x$ by factoring.</li><li>Which solution is meaningful for the poster, and why?</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Garden Area With Factors</h3>
+<p>A garden bed has side lengths $x$ meters and $x+2$ meters. Its area is $48$ square meters.</p>
+<ol><li>Write the area equation.</li><li>Solve for $x$ by factoring.</li><li>Choose the meaningful solution and justify it using the context.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why is a negative side length different from a negative $x$-intercept on a graph?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Critique a Factoring Error</h3>
+<p>A student solves $(x-8)(x+3)=0$ and says the solutions are $x=8$ and $x=3$.</p>
+<div class="claim-card"><p><strong>Student claim:</strong> "Both numbers come from the constants in the factors, so both should be positive."</p></div>
+<ol><li>Identify the correct two linear equations from the zero product property.</li><li>Correct the student's solutions.</li><li>Explain how the signs in the factors show the mistake.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Find and Fix a Sign Error</h3>
+<p>A student solves $(x+6)(x-1)=0$ and says the solutions are $x=6$ and $x=-1$.</p>
+<div class="claim-card"><p><strong>Student claim:</strong> "I switched both signs because the expression equals zero."</p></div>
+<ol><li>Write the two correct equations from the factors.</li><li>Find the correct solutions.</li><li>Explain which sign was switched incorrectly.</li></ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How can checking each factor equal to zero prevent the sign error?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Today you solved quadratic equations by using factored form and the zero product property. You practiced moving from algebra to a graph or context so the solutions had meaning.</p>
+  <p>A zero is an input that makes the output equal $0$, and an $x$-intercept is the same idea shown on a graph. In factored form, each factor shows one possible zero.</p>
+  <p>A common error is copying the numbers from the factors without solving each linear equation. The sign in the factor must be checked carefully.</p>
+  <p>Strong understanding means you can solve the equation, connect the answers to intercepts, and explain which solutions make sense in a real situation.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Copying signs from factors.</strong> Why it is tempting: the numbers are easy to see. What to check instead: set each factor equal to zero and solve.</li>
+    <li><strong>Keeping every algebraic solution.</strong> Why it is tempting: both values came from correct algebra. What to check instead: ask whether the value fits the context.</li>
+    <li><strong>Factoring before setting equal to zero.</strong> Why it is tempting: factoring looks like the main goal. What to check instead: make sure the equation equals zero before using the zero product property.</li>
+    <li><strong>Confusing zeros with vertex.</strong> Why it is tempting: both are important graph features. What to check instead: identify whether the output is zero or maximum/minimum.</li>
+    <li><strong>Dropping a factor.</strong> Why it is tempting: one factor may look simpler. What to check instead: check that the product has two factors and both are used.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Zero Product Property · DoK 1</div>
+    <p>Use the zero product property to solve each equation.</p>
+  <ol><li>$(x-3)(x+5)=0$</li><li>$(2x-7)(x+1)=0$</li></ol>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Factoring to Solve · DoK 2</div>
+    <p>Solve or interpret the quadratic situation for <strong>Solving Quadratics by Factoring</strong>. Show the algebra that supports your answer.</p>
+  <p>Solve $x^2-7x-18=0$ by factoring.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about solving quadratics by factoring you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about solving quadratics by factoring you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
