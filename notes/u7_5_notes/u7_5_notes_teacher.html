@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section 7.5 Notes — Exponential Modeling with Data</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/notes.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- TITLE -->
+<div class="notes-title">
+<div class="title-kicker">Algebra 1 · Unit 7</div>
+<div class="title-main">Section 7.5<br/>Exponential Modeling with Data</div>
+<div class="title-sub">Use real data to estimate exponential models and judge their limits.</div>
+<div class="title-quote"><p><strong>Mathematical idea:</strong> An exponential model is useful when data follow an approximate repeated multiplier, not necessarily a perfect pattern.</p></div>
+<p style="margin-top:18px;color:#555;">Today you will estimate multipliers from data, write exponential models, make predictions, and discuss fit. You will also decide when a model is reasonable and when it has limitations.</p>
+</div>
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+<p><strong>Learning Target: Students will create and analyze exponential models using real-world data.</strong></p>
+<p><strong>I can statements</strong></p>
+<ul>
+<li>I can construct exponential models from real-world data using an initial value and a growth or decay factor.</li>
+<li>I can extend exponential models to make predictions and interpret results in context.</li>
+<li>I can assess model fit and limitations when exponential data do not follow a perfect pattern.</li>
+</ul>
+</div>
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+<p>Design a small real-world data set with five points that could reasonably be modeled exponentially. Then write a model and make one near-term prediction.</p>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Future task support: students should annotate familiar starts, multipliers, tables, equations, or model-choice language only. Do not solve the task yet; listen for what evidence they think future lessons will require.</p></div>
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+<p><strong>Directions</strong></p>
+<p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+<p>A data table often gives the starting value at time 0 and several later outputs. The multiplier can be estimated by comparing consecutive outputs or by looking for an average repeated ratio.</p>
+<p>Real data usually include measurement error, rounding, or changing conditions. That means the ratios may be close to each other without being exactly the same, so model fit requires judgment.</p>
+<p>A model is usually safer for near-term predictions than for far-away predictions. When you predict far outside the data range, small errors in the multiplier can grow into large errors.</p>
+<p>In this section, you will use real-world data tables, scatter plots, equations, predictions, and residual reasoning. The goal is to explain both what the model captures and what it does not capture.</p>
+<p>Examples of exponential data include viral sharing, population change, compound growth, medicine concentration, and depreciation. Each context should give meaning to the starting value, multiplier, and prediction.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Intro notes: Q1 answer is in paragraph A; Q2 answer is in paragraph B; Q3 should infer that tables provide stronger evidence because they show differences or ratios across multiple steps. Follow-up: ask students to quote the sentence that helped them.</p></div>
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How can a table show the starting value and multiplier for a model?</li>
+<li>Why might real data not follow a perfect constant ratio?</li>
+<li>Why should predictions stay near the observed data range?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss answers: Q1 asks about constant ratio; Q2 asks about percent multipliers; Q3 should infer that numerical evidence is stronger than direction or shape alone.</p></div>
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Estimating a Model from Data</span>
+</div>
+<div class="math-notes-body">
+<p>To build a model from data, identify the starting value and estimate the multiplier.</p>
+<table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Data</th><td>60</td><td>90</td><td>135</td><td>202.5</td></tr>
+<tr><th>Ratio</th><td></td><td>1.5</td><td>1.5</td><td>1.5</td></tr>
+</table>
+<p>The model is $D(t)=60(1.5)^t$.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of data points with an exponential model through the trend." src="figures/u7_s5_data_model.png"/>
+</figure>
+<p><strong>Context:</strong> If $t$ is days and $D(t)$ is views, the multiplier 1.5 means the views are multiplied by 1.5 each day.</p>
+</div>
+</div>
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Estimate Starting Values and Multipliers</h3>
+<p>Identify the starting value and approximate multiplier from each data table.</p>
+<table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Data A</th><td>80</td><td>100</td><td>125</td><td>156.25</td></tr>
+<tr><th>Data B</th><td>600</td><td>420</td><td>294</td><td>205.8</td></tr>
+</table>
+<ol>
+<li>Find the starting value for Data A and Data B.</li>
+<li>Estimate the multiplier for each data set.</li>
+<li>Label each data set as growth or decay and explain.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Data A starts at 80 and uses multiplier 1.25, growth. Data B starts at 600 and uses multiplier 0.7, decay. Reminder: approximate multiplier may be acceptable if data are rounded.</p></div>
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Estimate More Models</h3>
+<p>Identify the starting value and approximate multiplier from each data table.</p>
+<table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Data A</th><td>40</td><td>52</td><td>67.6</td><td>87.88</td></tr>
+<tr><th>Data B</th><td>900</td><td>720</td><td>576</td><td>460.8</td></tr>
+</table>
+<ol>
+<li>Find the starting value for Data A and Data B.</li>
+<li>Estimate the multiplier for each data set.</li>
+<li>Label each data set as growth or decay and explain.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Data A starts at 40 and uses multiplier 1.3, growth. Data B starts at 900 and uses multiplier 0.8, decay.</p></div>
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did the multiplier support the model in both problems?</li>
+<li>What limitation should be mentioned before making a prediction?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Model Views and Predict</h3>
+<p>The table shows the number of views for a tutorial video.</p>
+<table class="values">
+<tr><th>Day</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><th>Views</th><td>60</td><td>90</td><td>135</td><td>202.5</td><td>303.75</td></tr>
+</table>
+<ol>
+<li>Write an exponential model.</li>
+<li>Use the model to predict day 6.</li>
+<li>Explain whether day 6 is a near-term or far-term prediction.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Model $V(d)=60(1.5)^d$. Day 6: $60(1.5)^6=683.4375$, about 683 views. Day 6 is near-term because it is only two days beyond the data.</p></div>
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Model Shares and Predict</h3>
+<p>The table shows the number of times a post has been shared.</p>
+<table class="values">
+<tr><th>Day</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Shares</th><td>32</td><td>56</td><td>98</td><td>171.5</td></tr>
+</table>
+<ol>
+<li>Write an exponential model.</li>
+<li>Use the model to predict day 5.</li>
+<li>Explain whether the prediction should be treated as exact or approximate.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Multiplier 1.75. Model $S(d)=32(1.75)^d$. Day 5: $32(1.75)^5\approx525.22$, about 525 shares. It should be approximate because real sharing can slow down or speed up.</p></div>
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did the multiplier support the model in both problems?</li>
+<li>What limitation should be mentioned before making a prediction?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Model Fit and Limitations</span>
+</div>
+<div class="math-notes-body">
+<p>Real data can be close to exponential even when the ratios are not exactly equal.</p>
+<table class="values">
+<tr><th>Hour</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><th>Amount (mg)</th><td>400</td><td>284</td><td>205</td><td>142</td><td>104</td></tr>
+<tr><th>Approx. ratio</th><td></td><td>0.71</td><td>0.72</td><td>0.69</td><td>0.73</td></tr>
+</table>
+<p>A reasonable model might use a multiplier near 0.71, such as $M(t)=400(0.71)^t$.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="Scatter plot of imperfect decay data with a reasonable exponential trend." src="figures/u7_s5_imperfect_decay.png"/>
+</figure>
+<p><strong>Context:</strong> The model captures the decay trend, but it may not predict perfectly because real measurements vary.</p>
+</div>
+</div>
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Model Imperfect Decay Data</h3>
+<p>The amount of a chemical in a sample is recorded hourly.</p>
+<table class="values">
+<tr><th>Hour</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Amount (mg)</th><td>800</td><td>560</td><td>392</td><td>274.4</td></tr>
+</table>
+<ol>
+<li>Estimate a multiplier.</li>
+<li>Write an exponential model.</li>
+<li>Name one limitation of the model.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Multiplier 0.7. Model $A(h)=800(0.7)^h$. Limitation: assumes the same percent remains every hour; actual measurements may vary.</p></div>
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Model Medicine Data</h3>
+<p>The amount of medicine in a body is recorded hourly.</p>
+<table class="values">
+<tr><th>Hour</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>Amount (mg)</th><td>300</td><td>210</td><td>147</td><td>102.9</td></tr>
+</table>
+<ol>
+<li>Estimate a multiplier.</li>
+<li>Write an exponential model.</li>
+<li>Name one limitation of the model.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Multiplier 0.7. Model $M(h)=300(0.7)^h$. Limitation: biology may not remove exactly the same percent every hour.</p></div>
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did the multiplier support the model in both problems?</li>
+<li>What limitation should be mentioned before making a prediction?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Choose Between Two Models</h3>
+<p>A model from two data points gives $P(t)=150(1.4)^t$. Another student suggests $P(t)=150+60t$ because the first increase is 60.</p>
+<ol>
+<li>Compare both models to the data 150, 210, 294, 411.6.</li>
+<li>Decide which model is more reasonable.</li>
+<li>Support your conclusion with ratios or differences.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Exponential is more reasonable. Ratios are 1.4,1.4,1.4 while differences are 60,84,117.6, not constant. The linear model only matches the first increase.</p></div>
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Defend a Model Choice</h3>
+<p>A model from two data points gives $Q(t)=100(1.6)^t$. Another student suggests $Q(t)=100+60t$ because the first increase is 60.</p>
+<ol>
+<li>Compare both models to the data 100, 160, 256, 409.6.</li>
+<li>Decide which model is more reasonable.</li>
+<li>Support your conclusion with ratios or differences.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Exponential is more reasonable. Ratios are 1.6,1.6,1.6 while differences are 60,96,153.6, not constant. Linear matches only the first step.</p></div>
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did the multiplier support the model in both problems?</li>
+<li>What limitation should be mentioned before making a prediction?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+<p>You can create an exponential model from data by finding the starting value and estimating a repeated multiplier.</p>
+<p>A model such as $y=ab^x$ can be used to make predictions, but the prediction should be interpreted in context.</p>
+<p>A common error is to force exact exponential behavior onto data that only approximately follows a trend.</p>
+<p>Strong understanding means you can explain the model, make a near-term prediction, and name a limitation of the model fit.</p>
+</div>
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+<ul>
+<li><strong>Assuming perfect ratios.</strong> Why it is tempting: classroom tables are often clean. What to check instead: expect real data to be approximate.</li>
+<li><strong>Predicting too far.</strong> Why it is tempting: the formula works for any input. What to check instead: be cautious outside the data range.</li>
+<li><strong>Ignoring units.</strong> Why it is tempting: numbers alone feel sufficient. What to check instead: state what input and output mean.</li>
+<li><strong>Choosing a model from one increase.</strong> Why it is tempting: the first step can be misleading. What to check instead: check several differences or ratios.</li>
+<li><strong>Rounding too early.</strong> Why it is tempting: easy numbers are convenient. What to check instead: keep enough precision before making a prediction.</li>
+</ul>
+</div>
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+<p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+<div class="et-cell">
+<div class="et-cell-title">1 — Foundation Check · DoK 1</div>
+<p>Identify the starting value and approximate multiplier from each data table.</p>
+<table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Data A</td><td>100</td><td>120</td><td>144</td><td>172.8</td></tr>
+<tr><td>Data B</td><td>500</td><td>400</td><td>320</td><td>256</td></tr>
+</table>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">2 — Apply the Idea · DoK 2</div>
+<p>The table shows the number of views for a video.</p>
+<table class="values">
+<tr><th>Day</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>Views</td><td>80</td><td>120</td><td>180</td><td>270</td><td>405</td></tr>
+</table>
+<p>Write an exponential model and predict day 6.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">3 — What Did You Learn?</div>
+<p>What is one idea about exponential modeling with data you understand better now than at the start of class? Write at least one complete sentence.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">4 — What Do You Need Help With?</div>
+<p>What is one thing about exponential modeling with data you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+</div>
+</div>
+</div>
+</body>
+</html>
