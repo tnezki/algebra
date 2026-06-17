@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 6.2 Notes — Completing the Square</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 6</div>
+  <div class="title-main">Section 6.2<br>Completing the Square</div>
+  <div class="title-sub">Build perfect squares to solve and reveal vertex form.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> Completing the square rewrites a quadratic so its square structure is visible.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will connect quadratic equations, graphs, and contexts. You will practice solving and explaining what the solutions or features mean.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will solve quadratic equations by completing the square and connect the process to vertex form.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can build perfect-square trinomials by adding the needed constant term.</li>
+    <li>I can use completing the square to solve quadratic equations and write equivalent vertex-form expressions.</li>
+    <li>I can predict how completing the square reveals the vertex and symmetry of a quadratic function.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p><strong>Create With Constraints.</strong> Create or revise a quadratic task for <strong>Completing the Square</strong> using the constraints below.</p>
+<ul><li>Include at least two representations among equation, table, graph, or context.</li><li>Make the solution method visible from structure, not from a hint.</li><li>Interpret the solution in words.</li></ul>
+<p>Use the provided graph as one representation. Create a quadratic with vertex $(5,60)$ that opens downward, write it in vertex and standard form, and explain how completing the square connects the two forms.</p>
+<figure class="notes-figure wu-img-500"><img src="figures/u6_bank_s2_dok4_1_sq_v1.png" alt="supporting graph for 6-S2-DOK4.01"/></figure>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Completing the square rewrites part of a quadratic as a perfect-square trinomial. For $x^2+bx$, the needed constant is $(b/2)^2$. This creates a square like $(x+4)^2$ or $(x-5)^2$.</p>
+  <p>When an equation is solved by completing the square, both sides must stay balanced. If a constant is added to one side, it must also be added to the other side. The goal is to make one side a perfect square that can be solved with square roots.</p>
+  <p>Completing the square also connects standard form to vertex form. Vertex form shows the vertex and axis of symmetry directly. This makes it useful when the maximum or minimum is more important than the zeros.</p>
+  <p>Area models can help explain why the extra constant is needed. The middle term is split into two equal parts, and the missing corner completes the square. The algebraic constant matches the area of that missing corner.</p>
+  <p>This lesson uses equations, vertex form, tables, graphs, and area models. Strong work keeps the equation balanced and explains what the new form reveals.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+  <li>How do you choose the constant that completes a square?</li>
+  <li>What does completing the square reveal about a quadratic function?</li>
+  <li>Why is completing the square more than just adding a number?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">The Completing-Square Constant</span>
+  </div>
+  <div class="math-notes-body">
+    <p>For $x^2+bx$, the constant that completes the square is $(b/2)^2$.</p>
+<table class="values">
+<tr><th>Expression</th><th>Half of $b$</th><th>Add</th></tr>
+<tr><td>$x^2+12x$</td><td>$6$</td><td>$36$</td></tr>
+<tr><td>$x^2-14x$</td><td>$-7$</td><td>$49$</td></tr>
+</table>
+$$x^2+12x+36=(x+6)^2$$
+<p><strong>Context:</strong> The added value is not random; it completes a square pattern.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Find the Missing Constant</h3>
+<p>Find the constant that completes each square.</p>
+<ol type="a">
+  <li>$x^2+12x+\Box$</li>
+  <li>$x^2-14x+\Box$</li>
+</ol>
+<p>Then write each perfect-square trinomial in factored form.</p>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Find the Missing Constant</h3>
+<p>Find the constant that completes each square.</p>
+<ol type="a">
+  <li>$x^2+16x+\Box$</li>
+  <li>$x^2-6x+\Box$</li>
+</ol>
+<p>Then write each perfect-square trinomial in factored form.</p>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+  <li>What pattern did you use to choose the completing-square constant?</li>
+  <li>How did the You Try It change when the middle coefficient changed?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Solving by Completing the Square</span>
+  </div>
+  <div class="math-notes-body">
+    <p>To solve, move the constant, add the completing-square constant to both sides, then take square roots.</p>
+$$x^2+6x-7=0$$
+$$x^2+6x=7$$
+$$x^2+6x+9=16$$
+$$(x+3)^2=16$$
+<p>Now square roots give $x+3=\pm4$, so $x=1$ or $x=-7$.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Solve by Completing the Square</h3>
+<p>Solve $x^2+6x-7=0$ by completing the square.</p>
+<ol>
+  <li>Move the constant term.</li>
+  <li>Add the completing-square constant to both sides.</li>
+  <li>Take square roots and solve.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Solve by Completing the Square</h3>
+<p>Solve $x^2-10x+21=0$ by completing the square.</p>
+<ol>
+  <li>Move the constant term.</li>
+  <li>Add the completing-square constant to both sides.</li>
+  <li>Take square roots and solve.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+  <li>Why did adding the same value to both sides keep the equation equivalent?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Vertex Form from Completing the Square</span>
+  </div>
+  <div class="math-notes-body">
+    <p>Completing the square can rewrite standard form into vertex form.</p>
+$$y=x^2-8x+13$$
+$$y=(x^2-8x+16)-16+13$$
+$$y=(x-4)^2-3$$
+<table class="values">
+<tr><th>Vertex form</th><th>Vertex</th><th>Axis of symmetry</th></tr>
+<tr><td>$y=(x-4)^2-3$</td><td>$(4,-3)$</td><td>$x=4$</td></tr>
+</table>
+<p>The vertex is the lowest point because the squared term is never negative.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Rewrite in Vertex Form</h3>
+<p>Rewrite $y=x^2-8x+13$ in vertex form and name the vertex.</p>
+<ol>
+  <li>Complete the square inside the expression.</li>
+  <li>State the vertex.</li>
+  <li>Explain whether the vertex is a maximum or minimum.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Rewrite in Vertex Form</h3>
+<p>Rewrite $y=x^2+10x+21$ in vertex form and name the vertex.</p>
+<ol>
+  <li>Complete the square inside the expression.</li>
+  <li>State the vertex.</li>
+  <li>Explain whether the vertex is a maximum or minimum.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+  <li>How does vertex form reveal information that standard form hides?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Tables Can Check Equivalent Forms</span>
+  </div>
+  <div class="math-notes-body">
+    <p>Equivalent forms should produce the same output values for the same inputs.</p>
+$$x^2+4x+4=(x+2)^2$$
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$x^2+4x+4$</td><td>4</td><td>9</td><td>16</td><td>25</td></tr>
+<tr><td>$(x+2)^2$</td><td>4</td><td>9</td><td>16</td><td>25</td></tr>
+</table>
+<p>If one table value does not match, evaluate the expression again before changing the equation.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Find a Table Mismatch</h3>
+<p>The equation and table are supposed to match. Find the first incorrect value and revise it.</p>
+$$y=x^2+4x+4$$
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Table value</td><td>4</td><td>9</td><td>15</td><td>25</td></tr>
+</table>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Find a Table Mismatch</h3>
+<p>The equation and table are supposed to match. Find the first incorrect value and revise it.</p>
+$$y=x^2-6x+9$$
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Table value</td><td>9</td><td>4</td><td>2</td><td>0</td></tr>
+</table>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+  <li>Why is a table useful for checking equivalent expressions?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Today you completed the square to solve equations and rewrite quadratics in vertex form.</p>
+  <p>The key constant is $(b/2)^2$, and it must be used in a way that keeps expressions or equations equivalent.</p>
+  <p>A common error is adding the completing-square constant without balancing the equation.</p>
+  <p>Strong understanding means you can connect the algebra to perfect squares, vertex form, and graph features.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Using $b^2$ instead of $(b/2)^2$.</strong> Why it is tempting: the middle coefficient is visible. What to check instead: take half first, then square.</li>
+    <li><strong>Adding to only one side.</strong> Why it is tempting: the added constant seems like part of a pattern. What to check instead: keep the equation balanced.</li>
+    <li><strong>Factoring the perfect square incorrectly.</strong> Why it is tempting: signs can disappear inside parentheses. What to check instead: match the sign of half of $b$.</li>
+    <li><strong>Forgetting the outside adjustment in vertex form.</strong> Why it is tempting: adding inside changes the expression. What to check instead: subtract the same amount when rewriting an expression.</li>
+    <li><strong>Misreading the vertex.</strong> Why it is tempting: the form has subtraction signs. What to check instead: use $(x-h)^2+k$ to name $(h,k)$.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Quick Skill · DoK 1</div>
+    <p>Find the constant that completes each square.</p>
+<ol type="a"><li>$x^2+8x+\Box$</li><li>$x^2-10x+\Box$</li></ol>
+<em>Adapted from strong CPM practice structures: 12. 10-81, 13. 10-91, 14. 10-125.</em>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Apply the Skill · DoK 2</div>
+    <p>Solve or interpret the quadratic situation for <strong>Completing the Square</strong>. Show the algebra that supports your answer.</p>
+<p>Solve $x^2+8x-9=0$ by completing the square.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about completing the square you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about completing the square you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
