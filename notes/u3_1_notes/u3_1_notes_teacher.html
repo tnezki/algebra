@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section 3.1 Notes — Graphing and Elimination</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/notes.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- TITLE -->
+<div class="notes-title">
+<div class="title-kicker">Algebra 1 · Unit 3</div>
+<div class="title-main">Section 3.1<br/>Graphing and Elimination</div>
+<div class="title-sub">Solve systems by connecting graphs, intersections, and elimination steps.</div>
+<div class="title-quote"><p><strong>Mathematical idea:</strong> A solution to a system is the point or relationship that makes every equation true at the same time.</p></div>
+<p style="margin-top:18px;color:#555;">Today you will practice the representations named in the learning target. You will connect skills from examples to an exit ticket that checks both procedures and meaning.</p>
+</div>
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+<p><strong>Learning Target: Students will solve systems graphically and by elimination while interpreting the meaning of different solution types.</strong></p>
+<p><strong>I can statements</strong></p>
+<ul>
+<li>I can construct graphical representations of systems and connect intersection points to solutions.</li>
+<li>I can use elimination to solve systems and interpret the solution type.</li>
+<li>I can determine whether a system has one solution, no solution, or infinitely many solutions from algebraic and graphical evidence.</li>
+</ul>
+</div>
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+<p>A school fundraiser can rent Table Plan A for \$40 plus \$6 per table or Table Plan B for \$16 plus \$9 per table.</p>
+<ol type="a"><li>Define variables and write a system that models the two plans.</li><li>Solve the system and interpret the break-even point.</li><li>Write one additional sentence explaining which plan is cheaper before and after the break-even point.</li></ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher note: This is only an annotation preview. Do not solve the future task; ask students to circle familiar representations and underline constraints.</p></div>
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+<p><strong>Directions</strong></p>
+<p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+<p>Many real situations have two rules that must be true at the same time. In a graph of a system, the intersection point is the ordered pair that satisfies both equations. That point can represent a break-even amount, a shared cost, or another result where two plans match.</p>
+<p>Sometimes a graph gives a helpful picture, but algebra can give an exact answer. Elimination works by adding or subtracting equations so one variable disappears. Then you solve for the remaining variable and use it to find the complete ordered pair.</p>
+<p>Two lines can meet once, never meet, or lie exactly on top of each other. When you compare slopes and intercepts, you can often predict the solution type before doing all the solving. The graph helps you check whether the algebraic result makes sense.</p>
+<p>Useful representations include two-line graphs, tables of paired values, standard form equations, and written solution-type statements. Strong work connects the intersection, the algebra, and the meaning of the ordered pair.</p>
+<p>In a context, a system often compares two plans or two conditions. The solution is not just a point; it tells what input makes both rules true and what output happens at that input.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Teacher note: Listen for annotations that connect vocabulary to representations. Follow-up: Which representation would you want to see first?</p></div>
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What does the intersection point of two lines in a system represent?</li>
+<li>What is the goal of elimination when solving a system?</li>
+<li>How can graph features help you predict whether a system has one solution, no solution, or infinitely many solutions?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Intro answers: 1. The intersection is the ordered pair that satisfies both equations. 2. Elimination removes one variable so the system becomes a one-variable equation. 3. Different slopes usually mean one solution; same slope with different intercepts means no solution; identical lines mean infinitely many solutions.</p></div>
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Solutions as Intersections</span>
+</div>
+<div class="math-notes-body">
+<p>A solution to a system is one ordered pair that makes both equations true at the same time.</p>
+$$\begin{aligned}y&amp;=x+2\\y&amp;=-x+8\end{aligned}$$
+<table class="values">
+<tr><th>$x$</th><th>First rule $y=x+2$</th><th>Second rule $y=-x+8$</th></tr>
+<tr><td>3</td><td>5</td><td>5</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of two lines meeting at the solution point." src="figures/u3_s1_mn1_intersection.png"/>
+</figure>
+<p><strong>Context:</strong> If $x$ is the number of tables and $y$ is cost, the point $(3,5)$ means both plans have the same cost when $x=3$.</p>
+</div>
+</div>
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Interpret an Intersection</h3>
+<p>Two school clubs compare their banner costs with $y=x+2$ and $y=-x+8$, where $x$ is the number of banners and $y$ is total cost in tens of dollars.</p>
+<ol>
+<li>Find the ordered pair where the two rules have the same output.</li>
+<li>Explain what that ordered pair means for the two clubs.</li>
+<li>Would $(4,6)$ be a solution to both equations? Explain how you know.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example 1 answer: Intersection: $(3,5)$. It means both costs are 50 dollars for 3 banners. $(4,6)$ only satisfies $y=x+2$, not $y=-x+8$.<br/>Teacher reminder: Ask students to name the representation they used before they describe the procedure.</p></div>
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Interpret an Intersection</h3>
+<p>Two fundraising options are modeled by $y=4x+1$ and $y=2x+7$.</p>
+<ol>
+<li>Find the ordered pair where the two rules have the same output.</li>
+<li>Explain what the ordered pair means.</li>
+<li>Decide whether $(2,9)$ satisfies both rules.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">You Try It 1 answer: $4x+1=2x+7$, so $x=3$ and $y=13$. It means both options match at that input and output. $(2,9)$ satisfies the first but not the second.<br/>Teacher reminder: Have students compare their setup with a partner before simplifying.</p></div>
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did the Example and You Try It both show that an intersection is a shared solution?</li>
+<li>What evidence would prove a point is not a solution?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss 1 possible response: Both problems find a point with the same output in both rules; a non-solution fails at least one equation.<br/>Follow-up: What evidence would convince someone who disagrees?</p></div>
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Graphing a System on One Plane</span>
+</div>
+<div class="math-notes-body">
+<p>To graph a system, graph both equations on the same coordinate plane and look for the point where the two lines meet.</p>
+$$\begin{aligned}y&amp;=2x-2\\y&amp;=-x+7\end{aligned}$$
+<table class="values">
+<tr><th>$x$</th><th>Line A $2x-2$</th><th>Line B $-x+7$</th></tr>
+<tr><td>3</td><td>4</td><td>4</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of two lines with their intersection marked." src="figures/u3_s1_mn2_graphing_system.png"/>
+</figure>
+<p>The table and graph both show the shared output at $x=3$, so the solution is $(3,4)$.</p>
+</div>
+</div>
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Graph and State the Solution</h3>
+<p>Graph both equations on the same axes.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="blank coordinate plane" src="figures/u3_bank_standard_blank_sq_v1.png"/>
+</figure>
+$$\begin{aligned}y&amp;=x+2\\y&amp;=-2x+8\end{aligned}$$
+<ol>
+<li>Make a quick table of values for each line.</li>
+<li>Graph both lines and state the point of intersection.</li>
+<li>Explain how the graph shows the solution type.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example 2 answer: Tables can use points such as $(0,2),(2,4)$ and $(0,8),(2,4)$. The intersection is $(2,4)$, so the system has one solution.<br/>Teacher reminder: Ask students to name the representation they used before they describe the procedure.</p></div>
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Graph and State the Solution</h3>
+<p>Graph both equations on the same axes.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="blank coordinate plane" src="figures/u3_bank_standard_blank_sq_v1.png"/>
+</figure>
+$$\begin{aligned}y&amp;=-x+6\\y&amp;=2x\end{aligned}$$
+<ol>
+<li>Make a quick table of values for each line.</li>
+<li>Graph both lines and state the point of intersection.</li>
+<li>Explain whether the system has one solution, no solution, or infinitely many solutions.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">You Try It 2 answer: The intersection is $(2,4)$. The system has one solution because the two nonparallel lines cross once.<br/>Teacher reminder: Have students compare their setup with a partner before simplifying.</p></div>
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What did the graph add that the equations alone did not show immediately?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss 2 possible response: The graph shows whether the lines cross once, never, or everywhere, and helps estimate/check the ordered pair.<br/>Follow-up: What evidence would convince someone who disagrees?</p></div>
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Set Equal Before Graphing</h3>
+<p>Two expressions give the same output at the intersection.</p>
+$$\begin{aligned}y&amp;=5x-1\\y&amp;=-x+11\end{aligned}$$
+<ol>
+<li>Set the expressions equal and solve for $x$.</li>
+<li>Find the matching $y$-value.</li>
+<li>Describe how a graph could check your ordered pair.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example 3 answer: $5x-1=-x+11$, so $6x=12$ and $x=2$. Then $y=9$. A graph should show the lines crossing at $(2,9)$.<br/>Teacher reminder: Ask students to name the representation they used before they describe the procedure.</p></div>
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Set Equal Before Graphing</h3>
+<p>Find the intersection of the two lines.</p>
+$$\begin{aligned}y&amp;=-3x+10\\y&amp;=x-2\end{aligned}$$
+<ol>
+<li>Set the expressions equal and solve for $x$.</li>
+<li>Find the matching $y$-value.</li>
+<li>Explain how graphing would confirm the solution.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">You Try It 3 answer: $-3x+10=x-2$, so $12=4x$ and $x=3$. Then $y=1$. Graphing should show the lines crossing at $(3,1)$.<br/>Teacher reminder: Have students compare their setup with a partner before simplifying.</p></div>
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Why is setting expressions equal connected to finding an intersection?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss 3 possible response: At an intersection, both equations have the same $y$ for the same $x$, so the expressions for $y$ are equal.<br/>Follow-up: What evidence would convince someone who disagrees?</p></div>
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Elimination Produces One Variable First</span>
+</div>
+<div class="math-notes-body">
+<p>Elimination combines equations so one variable cancels, but the first value you find is only part of the ordered pair.</p>
+$$\begin{aligned}x+2y&amp;=13\\-x+y&amp;=2\\3y&amp;=15\end{aligned}$$
+<p>After $y=5$, substitute into either original equation: $x+2(5)=13$, so $x=3$.</p>
+<p><strong>Context:</strong> A complete system solution needs both coordinates, written as $(3,5)$.</p>
+</div>
+</div>
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Critique an Elimination Step</h3>
+<p>A student adds the equations and says the solution is $y=5$.</p>
+$$\begin{aligned}x+2y&amp;=13\\-x+y&amp;=2\end{aligned}$$
+<ol>
+<li>Add the equations and identify what value is found first.</li>
+<li>Find the missing coordinate.</li>
+<li>Critique the student claim in one complete sentence.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example 4 answer: Adding gives $3y=15$, so $y=5$. Substitute: $x+10=13$, so $x=3$. The complete solution is $(3,5)$; $y=5$ alone is incomplete.<br/>Teacher reminder: Ask students to name the representation they used before they describe the procedure.</p></div>
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Critique an Elimination Step</h3>
+<p>A student adds the equations and says the answer is $y=6$.</p>
+$$\begin{aligned}x+2y&amp;=15\\-x+y&amp;=3\end{aligned}$$
+<ol>
+<li>Add the equations and identify the first value found.</li>
+<li>Find the missing coordinate.</li>
+<li>Explain why the student answer is incomplete.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">You Try It 4 answer: Adding gives $3y=18$, so $y=6$. Substitute: $x+12=15$, so $x=3$. The complete solution is $(3,6)$, not just $y=6$.<br/>Teacher reminder: Have students compare their setup with a partner before simplifying.</p></div>
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What makes an elimination answer complete instead of partial?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss 4 possible response: A complete elimination solution gives both $x$ and $y$ and checks in both original equations.<br/>Follow-up: What evidence would convince someone who disagrees?</p></div>
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+<p>Today you connected graphical and algebraic ways to solve systems. A system solution must satisfy both equations at the same time.</p>
+<p>On a graph, one solution appears as one intersection point; no solution appears as parallel lines; infinitely many solutions appear as the same line.</p>
+<p>A common error is stopping after finding only one coordinate during elimination.</p>
+<p>Strong understanding means you can solve, classify the solution type, and explain what the solution means in a situation.</p>
+</div>
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+<ul>
+<li><strong>Stopping after one coordinate.</strong> Why it is tempting: elimination often gives $x$ or $y$ first. What to check instead: substitute back to write a complete ordered pair.</li>
+<li><strong>Reading the wrong crossing point.</strong> Why it is tempting: nearby gridlines can look close. What to check instead: verify the point in both equations.</li>
+<li><strong>Mixing solution types.</strong> Why it is tempting: parallel and identical lines both do not have one crossing point. What to check instead: compare slopes and intercepts carefully.</li>
+<li><strong>Changing equations during elimination.</strong> Why it is tempting: multiplying or adding can feel like changing the problem. What to check instead: only use equivalent equations and keep both constraints.</li>
+<li><strong>Forgetting context.</strong> Why it is tempting: the ordered pair can look like just numbers. What to check instead: name what each coordinate means.</li>
+</ul>
+</div>
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+<p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+<div class="et-cell">
+<div class="et-cell-title">1 — Foundation · DoK 1</div>
+<p>For the system $y=2x+1$ and $y=-x+7$, what does the ordered pair where the two lines cross represent?</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">2 — Skill Check · DoK 2</div>
+<p>Graph the system on the same axes, then state the point of intersection.</p>
+<figure class="notes-figure wu-img-500"><img alt="blank coordinate plane" src="figures/u3_bank_standard_blank_sq_v1.png"/></figure>
+$$\begin{aligned}y=2x+3\\y=x+1\end{aligned}$$
+  </div>
+<div class="et-cell">
+<div class="et-cell-title">3 — What Did You Learn?</div>
+<p>What is one idea about systems solved by graphing and elimination you understand better now than at the start of class? Write at least one complete sentence.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">4 — What Do You Need Help With?</div>
+<p>What is one thing about systems solved by graphing and elimination you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+</div>
+</div>
+</div>
+</body>
+</html>
