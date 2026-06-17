@@ -491,3 +491,66 @@
     .page  { min-height: 9.3in; }
     .station-page { margin: 0; }
 }
+
+/* ============================================================
+   Unit activity corrections — no-work exit tickets, larger graphs,
+   and full-page Tarsia iframe editor.
+   These rules can be folded into activities.css for future builds.
+   ============================================================ */
+.exit-no-work .exit-grid,
+.exit-ticket-page .exit-grid {
+    flex: 0 0 auto;
+    align-items: start;
+    grid-auto-rows: auto;
+}
+.exit-no-work .problem,
+.exit-no-work .problem-body,
+.exit-no-work .exit-item,
+.exit-no-work .stn-exit-item,
+.exit-ticket-page .problem,
+.exit-ticket-page .problem-body {
+    min-height: 0;
+    height: auto;
+    margin-bottom: 0;
+}
+.exit-no-work .workspace,
+.exit-no-work .work,
+.exit-ticket-page .workspace,
+.exit-ticket-page .work {
+    display: none;
+    min-height: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.exit-no-work .problem-body::after,
+.exit-no-work .exit-item::after,
+.exit-ticket-page .problem-body::after,
+.exit-ticket-page .exit-item::after {
+    content: none;
+    display: none;
+}
+.prob-q .graph-block img,
+.prob-q .ps-figure img {
+    max-width: 5.69in;
+    max-height: 3.68in;
+    object-fit: contain;
+}
+.prob-q .graph-block,
+.prob-q .ps-figure {
+    margin: 8px auto;
+    text-align: center;
+}
+.tarsia-editor-page { min-height: 9.3in; }
+.tarsia-editor-page .teacher-note {
+    font-size: 12pt;
+    line-height: 1.25;
+    margin: 6px 0 8px 0;
+}
+.tarsia-frame {
+    width: 100%;
+    height: 7.35in;
+    border: 1px solid #9ca3af;
+    display: block;
+    background: white;
+}
