@@ -1,0 +1,256 @@
+UNIT 6 FORMATIVE POLISH QA LOG
+================================
+Package : unit6_formative_polished
+Polish date : 2026-06-13
+PM used  : 23_portable_memory_formative_polish.txt (Two-Pass Version)
+
+INPUT FILES READ
+----------------
+16 HTML files: unit6_dok1-1.html through unit6_dok4-4.html
+generate_graphs.py (graph_tool_v12, 19 types, OUTPUT_DIR = ./figures/)
+No catalog CSV included in original package.
+
+================================================================
+PASS A — MATHJAX / CORRUPTION SCAN
+================================================================
+
+Scan method: byte-level x0c/x0d; string-level broken \rac, \ight, bare $[digit], wrong delimiters; stray $ inside $$...$$ display blocks; LaTeX environment balance; MathJax config order.
+
+FILE-BY-FILE RESULTS:
+
+unit6_dok1-1.html  FAIL → PASS (after 2 fixes)
+  x0c=0  x0d=0  stray_$_in_$$=2  bare_$=0  wrong_delim=0  envs=OK  cfg<cdn=YES
+  Fix 1 (V7): $$x^2-13x+40$=$(x-5)(\,?\,)$$
+               → $$x^2-13x+40=(x-5)(\,?\,)$$
+               MathJax would render the literal characters $= inside display math,
+               producing garbled output.
+  Fix 2 (V8): $$x^2+3x-28$=$(x+7)(\,?\,)$$
+               → $$x^2+3x-28=(x+7)(\,?\,)$$
+
+unit6_dok1-2.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok1-3.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok1-4.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok2-1.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok2-2.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok2-3.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok2-4.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok3-1.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok3-2.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok3-3.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok3-4.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok4-1.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok4-2.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok4-3.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+unit6_dok4-4.html  PASS (x0c=0  x0d=0  stray_$=0  bare_$=0  wrong_delim=0  envs=OK)
+
+PASS A SUMMARY: 15 files passed clean. 1 file (dok1-1) failed and was fixed.
+All 16 files PASS after corrections.
+
+================================================================
+PASS B — BAD QUESTIONS / CONTENT QUALITY AUDIT
+================================================================
+
+B1. 10-second test (scan for trivially obvious, no-reasoning prompts): No failures found.
+
+B2. Bad-pattern audit (5a–5o):
+
+unit6_dok1-1.html
+  DOK 1  |  10-sec failures: NONE  |  Patterns: NONE  |  Graph titles: N/A
+  Versions: PASS  |  Fixes: NONE (Pass A fixes only)  |  Result: PASS
+
+unit6_dok1-2.html
+  DOK 1  |  10-sec failures: NONE  |  Patterns: NONE  |  Graph titles: N/A
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok1-3.html
+  DOK 1  |  10-sec failures: NONE  |  Patterns: NONE  |  Graph titles: N/A
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok1-4.html
+  DOK 1  |  10-sec failures: NONE  |  Patterns: NONE  |  Graph titles: N/A
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok2-1.html
+  DOK 2  |  10-sec failures: NONE  |  Bad patterns found: 1
+  V6 (5n): Scenario "area $88$, sides x and x+4" produces x(x+4)=88 →
+    x²+4x-88=0, discriminant=16+352=368. sqrt(368) is irrational; equation
+    cannot be solved by factoring. Task explicitly requires "solve by factoring."
+  Fix: Changed area from 88 to 96. x(x+4)=96 → x²+4x-96=0 → (x-8)(x+12)=0,
+       x=8 (positive solution). Sides 8 and 12. Factoring works cleanly.
+  Versions: PASS (V5: area 70 sides x,x+3, x=7; V6: area 96 sides x,x+4, x=8 — distinct)
+  Graph titles: N/A for V1-V6. V7-V8: title='' ✓
+  New figure blocks: u6_f_dok2_1_v7_graph.png, u6_f_dok2_1_v8_graph.png (added)
+  Result: PASS
+
+unit6_dok2-2.html
+  DOK 2  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: u6_f_dok2_2_v7_graph.png, u6_f_dok2_2_v8_graph.png (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok2-3.html
+  DOK 2  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: u6_f_dok2_3_v7_graph.png, u6_f_dok2_3_v8_graph.png (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok2-4.html
+  DOK 2  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: u6_f_dok2_4_v7_context.png, u6_f_dok2_4_v8_context.png (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok3-1.html
+  DOK 3  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: v5–v8 graphs (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok3-2.html
+  DOK 3  |  10-sec failures: NONE  |  Bad patterns found: 2
+  V7 (5j): Scenario "A student completes the square and says the vertex is (2,-5)."
+    No original equation provided. Without the equation, students cannot do the
+    algebraic critique the task requires.
+  Fix: Scenario updated to: "A student completes the square on y=x²-4x+3 and
+    says the vertex is (2,-5)."
+    Correct completing the square: y=(x-2)²-1. Correct vertex (2,-1).
+    Student error: used k=c-b²/2 = 3-8 = -5 instead of k=c-(b/2)² = 3-4 = -1.
+  V8 (5j): Scenario "A student rewrites the equation as y=(x-5)²+7."
+    No original equation provided.
+  Fix: Scenario updated to: "A student rewrites y=x²-10x+18 as y=(x-5)²+7."
+    Correct: y=(x-5)²-7. Student error: sign of constant (+7 vs -7).
+  Graph figures for V7 and V8 updated to match added equations.
+  Versions: PASS  |  Result: PASS
+
+unit6_dok3-3.html
+  DOK 3  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: v7–v8 graphs (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok3-4.html
+  DOK 3  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: v5–v8 graphs (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok4-1.html
+  DOK 4  |  10-sec failures: NONE  |  Bad patterns found: 1
+  V7 (5o): Scenario describes Student A and Student B approaches without specifying
+    any equation. Task says "solve the equation involved" but no equation exists.
+    Students cannot begin without a concrete mathematical input.
+  Fix: Scenario updated to: "For the equation (2x-3)(x+5)=0: Student A expands
+    first and uses the quadratic formula. Student B uses zero product property
+    first and expands afterward for the final report."
+    Recommendation: ZPP (Student B) because equation is already factored.
+    (2x-3)(x+5)=0 → x=3/2 or x=-5.
+  New figure blocks: v1–v6 context/area (added)
+  Versions: PASS  |  Result: PASS
+
+unit6_dok4-2.html
+  DOK 4  |  10-sec failures: NONE  |  Patterns: NONE
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok4-3.html
+  DOK 4  |  10-sec failures: NONE  |  Patterns: NONE
+  New figure blocks: v1–v6 area/context (added)
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+unit6_dok4-4.html
+  DOK 4  |  10-sec failures: NONE  |  Patterns: NONE
+  Versions: PASS  |  Fixes: NONE  |  Result: PASS
+
+PASS B SUMMARY: 4 files had fixable bad-question findings (1×5n, 2×5j, 1×5o).
+All 16 files PASS after corrections.
+
+================================================================
+FIGURE DELIVERY STATUS
+================================================================
+
+All 16 HTML files reference figures from the figures/ subfolder.
+generate_graphs.py was present in the input package.
+
+Unit 6 formative figures (34) ADDED to generate_graphs.py append section:
+
+DOK 2 standard parabola graphs:
+  u6_f_dok2_1_v7_graph.png  — y=x²-x-6, zeros -2 and 3
+  u6_f_dok2_1_v8_graph.png  — y=x²-4x-5, zeros -1 and 5
+  u6_f_dok2_2_v7_graph.png  — y=(x-3)²-4, zeros 1 and 5
+  u6_f_dok2_2_v8_graph.png  — y=-(x+2)²+9, zeros -5 and 1 (firebrick, opens down)
+  u6_f_dok2_3_v7_graph.png  — y=x²-2x-2, zeros 1±√3
+  u6_f_dok2_3_v8_graph.png  — y=2x²+3x-5, zeros -2.5 and 1
+
+DOK 2 height-over-time context graphs:
+  u6_f_dok2_4_v7_context.png — h=-t²+6t, max (3,9), lands t=6
+  u6_f_dok2_4_v8_context.png — h=-t²+8t, max (4,16), lands t=8
+
+DOK 3 standard parabola graphs:
+  u6_f_dok3_1_v5_graph.png  — y=x²-7x+6, zeros 1 and 6
+  u6_f_dok3_1_v6_graph.png  — y=x²-3x-10, zeros -2 and 5
+  u6_f_dok3_1_v7_graph.png  — y=x²-9x+14, zeros 2 and 7
+  u6_f_dok3_1_v8_graph.png  — y=x²+3x-4, zeros -4 and 1
+  u6_f_dok3_2_v5_graph.png  — y=x²-6x+5, zeros 1 and 5
+  u6_f_dok3_2_v6_graph.png  — y=x²+4x-1, zeros -2±√5
+  u6_f_dok3_2_v7_graph.png  — y=x²-4x+3, zeros 1 and 3, correct vertex (2,-1)
+  u6_f_dok3_2_v8_graph.png  — y=x²-10x+18, zeros 5±√7, correct vertex (5,-7)
+  u6_f_dok3_3_v8_graph.png  — y=2x²+9x-5, zeros -5 and 0.5
+  u6_f_dok3_4_v6_graph.png  — y=x²-8x+7, zeros 1 and 7
+
+DOK 3 context graphs (clipped range):
+  u6_f_dok3_3_v7_graph.png  — y=x²-9x+17, irrational zeros ≈2.70 and 6.30
+  u6_f_dok3_4_v5_graph.png  — y=x²-10x+24, zeros 4 and 6, vertex (5,-1)
+  u6_f_dok3_4_v7_context.png — h=-t²+6t, max (3,9)
+  u6_f_dok3_4_v8_context.png — h=-2t²+10t, max (2.5,12.5), lands t=5
+
+DOK 4 height-over-time context graphs:
+  u6_f_dok4_1_v1_context.png — h=-t²+4t, max (2,4)
+  u6_f_dok4_1_v2_context.png — h=-t²+6t, max (3,9)
+  u6_f_dok4_1_v3_context.png — h=-t²+5t, max (2.5,6.25)
+  u6_f_dok4_1_v4_context.png — h=-t²+7t, max (3.5,12.25)
+
+DOK 4 area model tile diagrams (make_rectangle_model):
+  u6_f_dok4_1_v5_area.png  — (x)(x+2) sides, interior cells blank
+  u6_f_dok4_1_v6_area.png  — (x+3)(x+5) sides, diagonal cells shown
+  u6_f_dok4_3_v1_area.png  — (x+4)(x+6)=80, all cells filled
+  u6_f_dok4_3_v2_area.png  — (x+2)(x+8)=91, all cells filled
+  u6_f_dok4_3_v3_area.png  — (x+3)(x+8)=104, all cells filled
+  u6_f_dok4_3_v4_area.png  — (x+3)(x+9)=72, all cells filled
+
+DOK 4 model critique context graphs:
+  u6_f_dok4_3_v5_context.png — y=-(x-5)²+4, zeros 3 and 7 (firebrick, opens down)
+  u6_f_dok4_3_v6_context.png — y=-(x-4)²+25, zeros -1 and 9 (firebrick, opens down)
+
+All 34 Unit 6 formative figures verified: exist and non-empty (2–27 KB each).
+Total figures/ count: 59 PNGs (25 pre-existing unit6_bank_* + 34 new unit6_f_*).
+Figures are INCLUDED as PNGs in the ZIP.
+
+================================================================
+GRAPH CODE CHANGES
+================================================================
+
+generate_graphs.py: No existing code above the append marker was modified.
+34 new graph-generation blocks appended below the marker.
+All graph calls use graph_tool functions (make_standard_graph, make_context_graph,
+make_rectangle_model).
+
+================================================================
+CATALOG STATUS
+================================================================
+
+No catalog CSV was present in the original package. Not applicable.
+
+================================================================
+FINAL SELF-CHECK
+================================================================
+
+ 1. All 16 HTML files present: YES
+ 2. Each file has exactly 8 version pages: YES
+ 3. No file names changed: YES
+ 4. PASS A all files: YES (15 clean + 1 fixed)
+ 5. PASS B all files: YES (12 clean + 4 fixed)
+ 6. MathJax config precedes CDN: YES (all files)
+ 7. CDN uses cdn.jsdelivr.net: YES (all files)
+ 8. No unbalanced LaTeX environments: YES
+ 9. No unresolved graph-title leaks: YES (all title='' in graph calls)
+10. No V5-V6 or V7-V8 family collapse: YES
+11. generate_graphs.py included: YES
+12. figures/ included with 59 PNGs: YES
+13. Catalog CSV: N/A (not in original package)
+14. Package-level QA log included: YES
+15. ZIP opens to single folder unit6_formative_polished/: YES
+
+OVERALL RESULT: PASS

@@ -1,0 +1,132 @@
+UNIT 0B FORMATIVE POLISH QA LOG
+Polish date: 2026-06-13
+Package name: unit0B_formative_polished
+
+INPUT FILES READ
+- 23_portable_memory_formative_polish(1).txt
+- generate_graphs(62).py
+- unit0B_dok1-1.html
+- unit0B_dok1-2.html
+- unit0B_dok1-3.html
+- unit0B_dok1-4.html
+- unit0B_dok2-1.html
+- unit0B_dok2-2.html
+- unit0B_dok2-3.html
+- unit0B_dok2-4.html
+- unit0B_dok3-1.html
+- unit0B_dok3-2.html
+- unit0B_dok3-3.html
+- unit0B_dok3-4.html
+- unit0B_dok4-1.html
+- unit0B_dok4-2.html
+- unit0B_dok4-3.html
+- unit0B_dok4-4.html
+
+PASS A SUMMARY - TECHNICAL MATHJAX / CORRUPTION
+All 16 HTML files PASS. No x0c/x0d corruption, broken \rac/\ight, bare currency dollars outside math, wrong delimiters, raw < or > inside math, or unbalanced checked LaTeX environments remained. MathJax config precedes the CDN script and the CDN uses cdn.jsdelivr.net in every file.
+Notation cleanups were made for plus-negative equation displays; these were readability/quality fixes, not unresolved MathJax failures.
+
+PASS B SUMMARY - BAD QUESTIONS / CONTENT QUALITY
+All 16 HTML files PASS after targeted fixes. Main content fix: unit0B_dok3-1.html now uses plausible current-version intercept contexts and critique prompts rather than pre-answered/awkward statements. Version-family structure remains V1-V4 assessment-day, V5-V6 reassessment/makeup pair, and V7-V8 second reassessment/makeup pair.
+
+FILE-BY-FILE PASS A / PASS B RESULTS
+
+unit0B_dok1-1.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok1-2.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok1-3.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok1-4.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok2-1.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Wording polish in V5/V6.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok2-2.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Equation notation cleanup in V6/V7.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok2-3.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok2-4.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Point(s) wording cleanup in V7/V8.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok3-1.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=V5/V6 were pre-answered/awkward; V1/V2 context plausibility was weak with negative horizontal-intercept contexts.; bad patterns / content findings=5e/5n: revised V5/V6 into critique-claim prompts; replaced V1/V2 contexts with plausible positive-intercept contexts and clarified V3/V4.; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS after fixes; template-only shells=NONE; version-family integrity=PASS; fixes applied=Context/prompt revisions in V1-V6.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok3-2.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Equation notation cleanup in V3.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok3-3.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok3-4.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok4-1.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Grammar cleanup in V5 constraint.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok4-2.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok4-3.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=NONE; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+unit0B_dok4-4.html
+PASS A counts: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; legitimate \frac=0; legitimate \left=0; legitimate \right=0; raw < or > inside math=0; environment balance errors=NONE; config before CDN=YES; CDN correct=YES; section.page count=8; class check=PASS; result=PASS.
+PASS B: 10-second failures=NONE; bad patterns / content findings=NONE; graph title violations=NONE; pre-answered tables=NONE; context plausibility=PASS; template-only shells=NONE; version-family integrity=PASS; fixes applied=Singular point wording cleanup in V2.; graph title corrections in py=NONE; new figure blocks added=NONE; result=PASS.
+
+GRAPH-CODE CHANGES
+No generate_graphs.py source or graph calls were changed. Referenced graph title checks PASS; referenced graph calls use blank/generic titles and do not reveal answers.
+
+FIGURE DELIVERY STATUS
+Generated PNG figures are included. Unique referenced figures: 8. Missing referenced figures: NONE. Zero-byte referenced figures: NONE.
+- figures/u0b_bank_blank_context_time_distance_sq_v1.png
+- figures/u0b_bank_blank_coordinate_sq_v1.png
+- figures/u0b_dok1_2_v1_intercepts.png
+- figures/u0b_dok1_2_v2_intercepts.png
+- figures/u0b_dok1_2_v3_intercepts.png
+- figures/u0b_dok1_2_v4_intercepts.png
+- figures/u0b_dok1_2_v5_context.png
+- figures/u0b_dok1_2_v6_context.png
+
+CATALOG STATUS
+No unit0B_catalog_update.csv was present in the uploaded input package; none included.
+
+FINAL SELF-CHECK
+- All 16 HTML files present: YES
+- Each HTML file has exactly 8 section.page version pages: YES
+- No file names changed: YES
+- PASS A is PASS for all files: YES
+- PASS B is PASS for all files: YES
+- MathJax config precedes CDN in every HTML file: YES
+- CDN uses cdn.jsdelivr.net in every HTML file: YES
+- No unbalanced checked LaTeX environments remain: YES
+- No unresolved graph-title leaks remain: YES
+- No V5-V6 or V7-V8 family collapse occurred during fixes: YES
+- generate_graphs.py included: YES
+- figures/ included with generated PNGs: YES
+- Catalog CSV included if present: N/A, no catalog uploaded
+- Package-level QA log included: YES
+- ZIP opens to a single top-level folder named unit0B_formative_polished/: YES
+
+FINAL OVERALL RESULT: PASS
