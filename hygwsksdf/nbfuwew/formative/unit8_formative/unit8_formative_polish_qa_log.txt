@@ -1,0 +1,220 @@
+UNIT 8 FORMATIVE POLISH QA LOG
+========================================================================
+Package: unit8_formative_polished
+Polish date: 2026-06-13
+Source PM: 23_portable_memory_formative_polish(7).txt
+Polish type: Two-pass targeted formative polish (PASS A technical MathJax/corruption; PASS B bad questions/content quality).
+
+INPUT FILES READ
+- PM: 23_portable_memory_formative_polish(7).txt
+- HTML: unit8_dok1-1.html through unit8_dok4-4.html (16 files, 128 version pages)
+- Graph generator: generate_graphs(68).py, copied as generate_graphs.py
+- Catalog CSV: none provided
+
+PASS A SUMMARY - TECHNICAL MATHJAX / CORRUPTION
+Overall result: PASS
+No byte-level corruption, broken \frac/\right, bare-currency MathJax issues, wrong delimiters, raw comparisons inside math, environment-balance errors, bad body classes, or MathJax config/CDN ordering issues remain.
+
+unit8_dok1-1.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok1-2.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok1-3.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok1-4.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok2-1.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=see PASS B/targeted fixes; result=PASS
+unit8_dok2-2.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=see PASS B/targeted fixes; result=PASS
+unit8_dok2-3.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok2-4.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok3-1.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok3-2.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=see PASS B/targeted fixes; result=PASS
+unit8_dok3-3.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok3-4.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok4-1.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok4-2.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=NONE; result=PASS
+unit8_dok4-3.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=see PASS B/targeted fixes; result=PASS
+unit8_dok4-4.html: x0c=0; x0d=0; broken \rac=0; broken \ight=0; bare currency=0; wrong delimiters=0; \frac=0; \left=0; \right=0; raw < or > inside math=0; env errors=0; config before CDN=YES; CDN correct=YES; fixes applied=see PASS B/targeted fixes; result=PASS
+
+PASS B SUMMARY - BAD QUESTIONS / CONTENT QUALITY
+Overall result: PASS
+All 128 version pages were reviewed for 10-second-test failures and patterns 5a-5o. Targeted minimum-change fixes were applied only where needed.
+
+unit8_dok1-1.html: DOK 1
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok1-2.html: DOK 1
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok1-3.html: DOK 1
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok1-4.html: DOK 1
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok2-1.html: DOK 2
+  Findings/fixes:
+  - V8 prompt revised to match the exponential growth/decay graph pair; paired graph titles neutralized in generate_graphs.py.
+  Graph title violations: u8_bank_s1_growth_decay_2x1_sq_v1.png panel titles Growth/Decay were answer-leaking after the prompt revision; changed to Panel A/Panel B.
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok2-2.html: DOK 2
+  Findings/fixes:
+  - V1 grammar fixed: added “shifts” to the transformation prompt.
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok2-3.html: DOK 2
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok2-4.html: DOK 2
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok3-1.html: DOK 3
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok3-2.html: DOK 3
+  Findings/fixes:
+  - V5 made self-contained by adding the equation representation; V6 revised from a duplicate comparison into a parallel critique task.
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok3-3.html: DOK 3
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok3-4.html: DOK 3
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok4-1.html: DOK 4
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok4-2.html: DOK 4
+  Findings/fixes: NONE
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok4-3.html: DOK 4
+  Findings/fixes:
+  - V1-V4 clarified with a “choose a reasonable constant speed” requirement so model design is actionable.
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+unit8_dok4-4.html: DOK 4
+  Findings/fixes:
+  - V1-V4 attendance-scatterplot prompts diversified to avoid exact duplicate assessment-day pages while preserving the same synthesis family.
+  Graph title violations: NONE
+  Pre-answered tables 5m: NONE
+  Context plausibility 5n: NONE
+  Template-only shells 5o: NONE after fixes where applicable
+  Version-family integrity: PASS
+  Result: PASS
+
+GRAPH-CODE CHANGES
+- generate_graphs.py: changed only the appended graph-generation call for u8_bank_s1_growth_decay_2x1_sq_v1.png so panel titles are Panel A and Panel B instead of Growth and Decay.
+- No graph_tool.py source lines above the append marker were modified.
+- New figure blocks added: NONE
+
+FIGURE DELIVERY STATUS
+- Referenced figure instances: 34
+- Unique referenced figure files: 20
+  figures/u8_bank_numberline_blank_sq_v1.png: exists=True; size=4406
+  figures/u8_bank_s1_family_compare_2x2_sq_v1.png: exists=True; size=35108
+  figures/u8_bank_s1_growth_decay_2x1_sq_v1.png: exists=True; size=27142
+  figures/u8_bank_s1_model_compare_2x1_sq_v1.png: exists=True; size=34323
+  figures/u8_bank_s2_abs_transform_sq_v1.png: exists=True; size=20134
+  figures/u8_bank_s2_multi_transform_2x2_sq_v1.png: exists=True; size=34028
+  figures/u8_bank_s2_parent_transform_2x1_sq_v1.png: exists=True; size=29109
+  figures/u8_bank_s2_quad_transform_sq_v1.png: exists=True; size=17414
+  figures/u8_bank_s3_abs_basic_sq_v1.png: exists=True; size=19573
+  figures/u8_bank_s3_piecewise_delivery_sq_v1.png: exists=True; size=20314
+  figures/u8_bank_s4_attendance_scatter_sq_v1.png: exists=True; size=33999
+  figures/u8_bank_s4_bike_scatter_sq_v1.png: exists=True; size=27847
+  figures/u8_bank_s4_cereal_blank_sq_v1.png: exists=True; size=19304
+  figures/u8_bank_s4_cereal_scatter_sq_v1.png: exists=True; size=34194
+  figures/u8_bank_s4_disk_scatter_sq_v1.png: exists=True; size=31151
+  figures/u8_bank_s4_residual_scatter_sq_v1.png: exists=True; size=21177
+  figures/u8_bank_s5_capstone_compare_2x1_sq_v1.png: exists=True; size=23116
+  figures/u8_bank_s5_family_compare_2x2_sq_v1.png: exists=True; size=35108
+  figures/u8_bank_s5_piecewise_capstone_sq_v1.png: exists=True; size=21947
+  figures/u8_bank_standard_blank_sq_v1.png: exists=True; size=11163
+- Figures are included as PNGs in figures/ and were regenerated after the graph-title fix.
+
+CATALOG STATUS
+- No unit8_catalog_update.csv was provided; none was added.
+
+FINAL SELF-CHECK
+- 16 HTML files present: YES
+- Each HTML has exactly 8 section.page pages: YES
+- File names unchanged: YES
+- PASS A all files: YES
+- PASS B all files: YES
+- MathJax config precedes CDN in every file: YES
+- CDN uses cdn.jsdelivr.net in every file: YES
+- Referenced figures exist and are nonzero size: YES
+- generate_graphs.py included: YES
+- figures/ included: YES
+- QA log included: YES
+- ZIP root is single folder unit8_formative_polished/: YES
+
+FINAL OVERALL RESULT: PASS

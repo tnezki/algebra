@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+FORMATIVE POLISH QA
+Polish date: 2026-06-13
+PASS A - MathJax/corruption: PASS
+PASS B - Bad questions: PASS (after 2 fixes)
+Fixes applied in this file:
+  PASS B V7 (5j): Added missing original equation — scenario now reads: A student completes the square on y=x^2-4x+3 and says the vertex is (2,-5). Correct vertex is (2,-1); student error: used k=c-b²/2 instead of c-(b/2)²
+  PASS B V8 (5j): Added missing original equation — scenario now reads: A student rewrites y=x^2-10x+18 as y=(x-5)^2+7. Correct form is y=(x-5)^2-7; student error: sign of constant (+ instead of -)
+See unit6_formative_polish_qa_log.txt for full package log.
+-->
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DOK 3.2 Completing-Square Analysis</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.5in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; color:#111; background:#fff; font-size:11pt; line-height:1.38; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page { min-height:10in; page-break-after:always; break-after:page; display:flex; flex-direction:column; }
+.page:last-child { page-break-after:auto; }
+.header-row { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #00003d; padding-bottom:3px; margin-bottom:6px; flex-shrink:0; gap:12px; }
+.assessment-title { color:#00003d; font-size:14px; font-weight:800; }
+.name-line { font-weight:700; font-size:13px; white-space:nowrap; }
+.name-line span { display:inline-block; border-bottom:1px solid #111; height:12px; margin-left:6px; width:2.2in; vertical-align:bottom; }
+.directions { color:#444; font-size:10.5pt; margin:0 0 10px 0; flex-shrink:0; }
+.task { flex:1; padding:6px 2px 0 2px; }
+.qnum { color:#00003d; font-size:14pt; font-weight:800; margin:4px 0 6px 0; }
+p { margin-bottom:8px; }
+ol, ul { margin-left:26px; margin-bottom:10px; }
+li { margin-bottom:7px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin:10px 0 12px 0; }
+th, td { border:1px solid #777; padding:7px 8px; text-align:center; vertical-align:middle; font-size:11pt; }
+th { font-weight:800; background:#f4f4f4; }
+.left td, .left th { text-align:left; }
+.data-table { width:auto; margin:10px auto 12px auto; }
+.data-table th, .data-table td { min-width:0.55in; }
+.word-bank { border:1px solid #aaa; background:#f7f7f7; padding:8px 10px; margin:8px 0 12px 0; }
+.note { font-style:italic; color:#333; }
+.tight li { margin-bottom:4px; }
+.scenario { background:#f8fbff; border-left:5px solid #00003d; padding:8px 10px; margin:8px 0 12px 0; }
+.graph-block { text-align:center; margin:10px 0; }
+.graph-md img { width:280px; }
+.graph-sm img { width:200px; }
+.graph-lg img { width:380px; }
+@media print { body { font-size:11pt; } }
+</style>
+</head>
+<body>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V1</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V1</div>
+<p>The equation and table are supposed to match. Find the first incorrect table value for $$x^2+2x+1$$, revise it, and explain how completing the square helps you predict the pattern.</p><table class="values data-table">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$f(x)$</td><td>1</td><td>4</td><td>8</td><td>16</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V2</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V2</div>
+<p>The equation and table are supposed to match. Find the first incorrect table value for $$x^2-4x+4$$, revise it, and explain how completing the square helps you predict the pattern.</p><table class="values data-table">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$f(x)$</td><td>4</td><td>1</td><td>0</td><td>2</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V3</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V3</div>
+<p>The equation and table are supposed to match. Find the first incorrect table value for $$x^2+6x+9$$, revise it, and explain how completing the square helps you predict the pattern.</p><table class="values data-table">
+<tr><th>$x$</th><th>-4</th><th>-3</th><th>-2</th><th>-1</th></tr>
+<tr><td>$f(x)$</td><td>1</td><td>0</td><td>1</td><td>5</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V4</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V4</div>
+<p>The equation and table are supposed to match. Find the first incorrect table value for $$x^2-8x+16$$, revise it, and explain how completing the square helps you predict the pattern.</p><table class="values data-table">
+<tr><th>$x$</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>$f(x)$</td><td>4</td><td>1</td><td>0</td><td>2</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V5</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V5</div>
+<p>Construct a strategy for solving the zeros of $y=x^2-6x+5$. Use completing the square and the graph as evidence for your result.</p><div class="graph-block graph-md">
+<img src="figures/u6_f_dok3_2_v5_graph.png" alt="Quadratic graph for completing-square strategy.">
+</div><ol type="a">
+<li>Rewrite in vertex form.</li>
+<li>Solve for the zeros.</li>
+<li>Explain how the graph supports the answers.</li>
+</ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V6</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V6</div>
+<p>Construct a strategy for solving the zeros of $y=x^2+4x-1$. Use completing the square and the graph as evidence for your result.</p><div class="graph-block graph-md">
+<img src="figures/u6_f_dok3_2_v6_graph.png" alt="Quadratic graph for completing-square strategy.">
+</div><ol type="a">
+<li>Rewrite in vertex form.</li>
+<li>Solve for the zeros.</li>
+<li>Explain how the graph supports the answers.</li>
+</ol>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V7</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V7</div>
+<div class="scenario">A student completes the square on $y=x^2-4x+3$ and says the vertex is $(2,-5)$.</div><p>Use algebra and the graph to critique the claim, revise the vertex-form work, and explain the correction.</p><div class="graph-block graph-md">
+<img src="figures/u6_f_dok3_2_v7_graph.png" alt="Quadratic graph for completing-square critique.">
+</div>
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit 6 Formative • DOK 3.2 • Completing-Square Analysis • V8</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show enough reasoning that another student could follow your method. Interpret any solutions that come from a context.</div>
+<div class="task">
+<div class="qnum">V8</div>
+<div class="scenario">A student rewrites $y=x^2-10x+18$ as $y=(x-5)^2+7$.</div><p>Use algebra and the graph to critique the claim, revise the vertex-form work, and explain the correction.</p><div class="graph-block graph-md">
+<img src="figures/u6_f_dok3_2_v8_graph.png" alt="Quadratic graph for completing-square critique.">
+</div>
+</div>
+</section>
+</body>
+</html>
