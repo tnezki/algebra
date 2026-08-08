@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0A Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-250{height:250px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 0A Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will demonstrate fluency with numerical reasoning, algebraic expressions, equations, and inequalities in order to support future function analysis, modeling, and algebraic problem solving.</p></section>
+
+  <section class="key">
+    <div class="key-title">Progress Tracking Key</div>
+    <div class="key-grid">
+      <div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div>
+      <div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div>
+      <div><strong>Got It!:</strong><br/>I can do this independently.</div>
+      <div><strong>Teach It!:</strong><br/>I can teach it.</div>
+    </div>
+  </section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 1 — Rungs 1–2</strong><span>Students can identify and use rational numbers, basic algebraic notation, and foundational vocabulary accurately.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 2 — Rungs 3–4</strong><span>Students can evaluate expressions, apply order of operations, simplify expressions, and carry out routine equations or inequalities.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 3 — Rungs 5–6</strong><span>Students can explain reasoning, justify solution methods, analyze structure, verify solutions, and critique errors.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 4 — Rungs 7–8</strong><span>Students can model unfamiliar situations with expressions, equations, or inequalities and justify conclusions using mathematical evidence.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+    <tr><td class="rung-num">8</td><td>I can analyze real-world situations involving numerical reasoning, expressions, equations, and inequalities, justify my conclusions, evaluate the reasonableness of solutions, and communicate my reasoning clearly.</td><td>DOK 4</td><td>Above</td></tr>
+    <tr><td class="rung-num">7</td><td>I can create mathematical models using expressions, equations, or inequalities, compare multiple solution strategies, and critique the reasoning of others.</td><td>DOK 4</td><td>Above</td></tr>
+    <tr><td class="rung-num">6</td><td>I can analyze expressions, equations, and inequalities to explain mathematical structure, justify solution methods, and identify errors in reasoning.</td><td>DOK 3</td><td>Essential</td></tr>
+    <tr><td class="rung-num">5</td><td>I can solve equations and inequalities, explain my reasoning, verify solutions, and connect symbolic work to mathematical situations.</td><td>DOK 3</td><td>Essential</td></tr>
+    <tr><td class="rung-num">4</td><td>I can rewrite and simplify expressions using properties of operations and algebraic structure.</td><td>DOK 2</td><td>Essential</td></tr>
+    <tr><td class="rung-num">3</td><td>I can evaluate expressions, apply order of operations, and use substitution correctly in mathematical and contextual situations.</td><td>DOK 2</td><td>Essential</td></tr>
+    <tr><td class="rung-num">2</td><td>I can perform operations with rational numbers accurately and interpret the meaning of results.</td><td>DOK 1</td><td>Essential</td></tr>
+    <tr><td class="rung-num">1</td><td>I can identify, represent, and use integers, fractions, decimals, and basic algebraic notation correctly.</td><td>DOK 1</td><td>Essential</td></tr>
+  </tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 0A Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 — Rungs 1–2</strong><span class="dok-small">Students can identify and use rational numbers, basic algebraic notation, and foundational vocabulary accurately.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3–5 minute warm-up, quick check, proficiency check, or exit ticket</strong></p><p>Purpose: Check whether students can recall vocabulary, perform rational number operations, use algebraic notation correctly, and demonstrate foundational numerical fluency.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Rational Number Fluency Check <span class="timing-label">Can Be Assessed After Section 1</span> – Students perform operations with integers, fractions, and decimals.</li><li>Number Sense Retrieval Task <span class="timing-label">Can Be Assessed After Section 1</span> – Students estimate, compare, and evaluate numerical expressions.</li><li>Order of Operations Quick Check <span class="timing-label">Can Be Assessed After Section 2</span> – Students evaluate expressions involving multiple operations and exponents.</li><li>Vocabulary and Notation Check <span class="timing-label">Can Be Assessed After Section 3</span> – Students identify variables, coefficients, terms, expressions, equations, and inequalities.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need additional fluency support before deeper algebraic reasoning can occur. Difficulties often reveal gaps in prerequisite arithmetic or mathematical vocabulary.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Evaluate: $$-8+15$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Evaluate: $$\frac{3}{4}+\frac{1}{2}$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Order from least to greatest: $$-3,\ \frac{1}{2},\ -\frac{5}{4},\ 2$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Evaluate: $$18-(2^3+4)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Evaluate when $x=4$: $$3x+2$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Identify the coefficient in the expression: $$7x$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Solve: $$x+7=15$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Which value is a solution to $x>5$?</p><ol class="lower-alpha"><li>$3$</li><li>$5$</li><li>$6$</li><li>$4$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 — Rungs 3–4</strong><span class="dok-small">Students can evaluate expressions, apply order of operations, simplify expressions, and carry out routine equations or inequalities.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Exit ticket, whiteboard response, partner check, short written task, or mini-quiz</strong></p><p>Purpose: Check whether students can evaluate expressions, simplify algebraic expressions, apply properties, and solve routine equations and inequalities.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Expression Evaluation Task <span class="timing-label">Can Be Assessed After Section 2</span> – Students evaluate expressions using substitution and order of operations.</li><li>Equivalent Expression Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students simplify expressions and justify why expressions are equivalent.</li><li>Equation Solving Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students solve one-step and multi-step equations and verify solutions.</li><li>Inequality Graphing Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students solve inequalities and represent solution sets on number lines.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally carry out procedures and use appropriate algebraic tools. These assessments reveal whether students understand how procedures connect to algebraic structure and representation.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Evaluate: $$-4+3(6)-2$$</p><p>Show all work.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>A student begins with <span class="tex2jax_ignore">$</span>50 and spends <span class="tex2jax_ignore">$</span>18.75.</p><p>How much money remains? Write and evaluate an expression.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Evaluate when $x=3$: $$2x^2+5$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Simplify: $$4x+7+3x-2$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Use the distributive property: $$5(2x-3)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Solve and verify your solution: $$3x+5=20$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A phone plan charges a <span class="tex2jax_ignore">$</span>10 activation fee and <span class="tex2jax_ignore">$</span>15 per month.</p><p>Write and solve an equation to determine how many months would cost <span class="tex2jax_ignore">$</span>70 total.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>A student can spend at most <span class="tex2jax_ignore">$</span>40. Each movie ticket costs <span class="tex2jax_ignore">$</span>8.</p><p>Write and solve an inequality representing the number of tickets that can be purchased.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 — Rungs 5–6</strong><span class="dok-small">Students can explain reasoning, justify solution methods, analyze structure, verify solutions, and critique errors.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, discourse prompt, strategy comparison, error analysis, or written explanation</strong></p><p>Purpose: Check whether students can explain reasoning, justify procedures, analyze mathematical structure, and critique mathematical arguments.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Strategy Comparison Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students solve an equation using two approaches and compare efficiency and clarity.</li><li>Error Analysis Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students critique incorrect work involving equations or inequalities and explain the misconception.</li><li>Structure and Properties Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students explain how properties of operations justify simplification steps.</li><li>Solution Justification Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students defend whether a proposed solution is valid and support their reasoning with mathematical evidence.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students truly understand why procedures work rather than simply following steps. These tasks identify misconceptions, reasoning gaps, and readiness for future modeling work.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>A student claims:</p><blockquote>Adding a negative number always makes a value smaller.</blockquote><p>Determine whether the statement is always true. Use at least two examples to justify your conclusion.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Compare $$-3-(-5)$$ and $$-3+5$$</p><p>Explain why they produce the same result.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>A student evaluates $$8+2(5)$$ as <span class="tex2jax_ignore">$</span>50.</p><p>Identify the mistake and explain the correct reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Explain why $$3(x+4)$$ and $$3x+12$$ are equivalent. Use words, algebra, or a visual model.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A student says:</p><blockquote>Combining like terms means adding everything together.</blockquote><p>Critique the statement and provide an example.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>A student solves $$2x+5=15$$ and gets $x=10$.</p><p>Analyze the error and correct the solution.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Explain how solving an inequality is similar to solving an equation. Explain how it is different.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>A student graphs $$x>4$$ using a closed circle.</p><p>Analyze the error and explain the correct graph.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 — Rungs 7–8</strong><span class="dok-small">Students can model unfamiliar situations with expressions, equations, or inequalities and justify conclusions using mathematical evidence.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p><p>Purpose: Check whether students can transfer foundational algebra skills to unfamiliar situations, model real-world contexts, and justify conclusions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Budget Constraint Modeling Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students create and interpret inequalities to model spending constraints and justify recommendations.</li><li>Design an Equation Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students create a real-world situation represented by a given equation and explain the meaning of the solution.</li><li>Critique and Revise Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students evaluate flawed mathematical reasoning, identify errors, and rewrite a valid solution process.</li><li>Multi-Representation Modeling Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students analyze a situation using numerical reasoning, expressions, equations, and inequalities, then communicate conclusions using mathematical evidence.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can transfer foundational algebra skills beyond routine exercises. These assessments emphasize reasoning, communication, modeling, and decision making rather than procedural execution alone.</div></section>
+
+  <section class="problem"><div class="problem-number">1.</div><p>Create a real-world situation that can be represented by $$-12+20$$</p><p>Explain what each number represents and interpret the solution.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Design a temperature-change problem involving at least three rational number operations. Then solve the problem and explain the reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Design an expression that evaluates to $30$. The expression must use:</p><ul><li>parentheses</li><li>exponents</li><li>multiplication</li><li>addition</li></ul><p>Explain the order of operations used.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Create an expression that requires both combining like terms and the distributive property. Then simplify and justify each step.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Create a real-world situation modeled by $$3x+5=26$$</p><p>Interpret the solution in context.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Compare two equations that have the same solution. Explain why the equations are different but the solution remains the same.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Create a budget constraint situation that can be modeled with an inequality. Interpret the solution set.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Design a decision-making problem involving a spending limit, minimum requirement, or restriction. Represent the situation with an inequality and justify a recommendation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0B Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; min-width: 44px; }
+.graph-block { margin: 12px 0 10px 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 3.35in; height: auto; border: 1px solid #aaa; background: #fff; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 0B Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze patterns, relationships, and linear representations in order to prepare for function analysis, modeling, and systems of equations.</p></section>
+
+  <section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 1 — Rungs 1–2</strong><span>Students can identify coordinates, graph vocabulary, inputs, outputs, basic patterns, and simple representation features accurately.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 2 — Rungs 3–4</strong><span>Students can apply input-output rules, find constant change, write simple linear relationships, and connect tables, graphs, equations, and contexts.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 3 — Rungs 5–6</strong><span>Students can justify linearity, explain rate of change, analyze representation structure, and critique errors using mathematical evidence.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 4 — Rungs 7–8</strong><span>Students can model unfamiliar relationships with multiple representations and justify conclusions or recommendations using mathematical evidence.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody><tr><td class="rung-num">8</td><td>I can analyze and model real-world relationships using graphs, tables, equations, and contexts, justify the reasonableness of conclusions, and communicate my reasoning clearly.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">7</td><td>I can create or revise representations of a relationship, compare multiple strategies, and critique whether different representations describe the same situation.</td><td>DOK 4</td><td>Above</td></tr><tr><td class="rung-num">6</td><td>I can analyze linear relationships across graphs, tables, equations, visual patterns, and contexts to explain structure, rate of change, and starting value.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">5</td><td>I can justify whether a relationship is linear, explain how quantities change, and defend conclusions using evidence from more than one representation.</td><td>DOK 3</td><td>Essential</td></tr><tr><td class="rung-num">4</td><td>I can write and use linear relationships from tables, graphs, visual patterns, and situations.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">3</td><td>I can identify and use input-output rules, patterns, constant change, and coordinate information to answer questions.</td><td>DOK 2</td><td>Essential</td></tr><tr><td class="rung-num">2</td><td>I can identify coordinates, plot points, read tables, and recognize basic graph features such as axes and intercepts.</td><td>DOK 1</td><td>Essential</td></tr><tr><td class="rung-num">1</td><td>I can use vocabulary and notation for coordinate planes, ordered pairs, inputs, outputs, patterns, and linear relationships correctly.</td><td>DOK 1</td><td>Essential</td></tr></tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 0B Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 — Rungs 1–2</strong><span class="dok-small">Students can identify coordinates, graph vocabulary, inputs, outputs, basic patterns, and simple representation features accurately.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3–5 minute warm-up, quick check, vocabulary check, graph-reading check, or exit ticket</strong></p><p>Purpose: Check whether students can recall vocabulary, identify coordinates, read basic tables and graphs, and recognize foundational features of patterns and relationships.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Coordinate Plane Fluency Check <span class="timing-label">Can Be Assessed After Section 1</span> – Students identify axes, quadrants, ordered pairs, intercepts, and plotted points.</li><li>Input-Output Vocabulary Check <span class="timing-label">Can Be Assessed After Section 2</span> – Students identify inputs, outputs, rules, and missing values in simple tables.</li><li>Linear Pattern Recognition Check <span class="timing-label">Can Be Assessed After Section 3</span> – Students recognize constant change and basic linear pattern features.</li><li>Representation Match Quick Check <span class="timing-label">Can Be Assessed After Section 5</span> – Students match simple graphs, tables, equations, and descriptions.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need more support with graph vocabulary, table reading, coordinate notation, and the basic language of relationships before they can reason about linear models.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Identify the $x$-coordinate and $y$-coordinate of the point $$(4,-2)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Name the quadrant containing $$(-3,5)$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Plot the point $$(2,3)$$ on the coordinate plane.</p><div class="graph-block"><img src="figures/unit0B_coordinate_grid.png" alt="Blank coordinate grid"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Complete the table for the rule $$y=x+2$$</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A pattern starts at $4$ and increases by $3$ each step. State the next three values after $4$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Determine the constant change in the sequence: $$5,\ 8,\ 11,\ 14$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>For the rule $$y=2x+5$$, identify the starting value and the constant change.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Do the rule $$y=x+3$$ and the table below match?</p><table class="table-block"><tr><th>$x$</th><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>4</td><td>5</td><td>6</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 — Rungs 3–4</strong><span class="dok-small">Students can apply input-output rules, find constant change, write simple linear relationships, and connect tables, graphs, equations, and contexts.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Exit ticket, partner check, whiteboard response, short written task, mini-quiz, or graph-table task</strong></p><p>Purpose: Check whether students can apply input-output rules, determine constant rates of change, write linear relationships, and connect graphs, tables, equations, and contexts.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Input-Output Rule Task <span class="timing-label">Can Be Assessed After Section 2</span> – Students complete a table, use a rule, and explain what the input and output represent.</li><li>Rate of Change Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students determine constant change from a table, graph, or visual pattern.</li><li>Writing a Linear Rule Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students write an equation from a table, graph, context, or growing pattern.</li><li>Comparing Representations Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students determine whether two representations describe the same relationship and support the decision.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally use procedures and representations, but the assessment reveals whether they understand how starting value, constant change, and representation features connect.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Use the graph to make a table for $x=0,1,2,3$ and describe the pattern.</p><div class="graph-block"><img src="figures/unit0B_distance_time_graph.png" alt="Distance-time graph showing a linear pattern"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Complete the table for $$y=3x+2$$ and explain how each output is found.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>A rule takes each input, doubles it, and subtracts $1$.</p><p>Write an equation and find the output when the input is $8$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Find the constant rate of change from the table.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>7</td><td>10</td><td>13</td><td>16</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>A tile pattern has $6$ tiles in Figure $1$ and $18$ tiles in Figure $4$. If the pattern is linear, determine the growth per figure.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Write an equation for a relationship with starting value $8$ and constant change $3$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A phone company charges a <span class="tex2jax_ignore">$</span>20 start fee and <span class="tex2jax_ignore">$</span>15 per month. Write an equation for total cost $C$ after $m$ months.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Compare the starting values and rates of change.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr><tr><th>A</th><td>4</td><td>7</td><td>10</td></tr><tr><th>B</th><td>1</td><td>5</td><td>9</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 — Rungs 5–6</strong><span class="dok-small">Students can justify linearity, explain rate of change, analyze representation structure, and critique errors using mathematical evidence.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, representation analysis, strategy comparison, discourse prompt, or error analysis</strong></p><p>Purpose: Check whether students can justify linearity, explain rate of change, analyze representation structure, and defend conclusions using mathematical evidence.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Linearity Justification Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students decide whether a relationship is linear and justify the conclusion from a table, graph, or context.</li><li>Representation Analysis Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students analyze a graph, table, equation, and context to explain which features match.</li><li>Strategy Comparison Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students compare two ways to write a linear relationship and explain which is clearer or more efficient.</li><li>Misleading Representation Critique <span class="timing-label">Can Be Assessed After Section 5</span> – Students critique a flawed graph, table, or rule and correct the reasoning.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students understand relationships as connected representations rather than isolated procedures. These tasks identify who can explain, justify, critique, and transfer linear readiness concepts.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>A student says:</p><blockquote>The point $(3,8)$ means the graph goes right $8$ and up $3$.</blockquote><p>Critique the statement and explain the correct interpretation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>A graph of a relationship passes through $$(0,4)$$ and $$(3,10)$$. Explain what these points reveal about the starting value and change.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>A student claims that every input-output rule is linear. Use examples to critique the claim.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Compare the rules $$y=2x+3$$ and $$y=x^2+3$$. Explain how their tables would grow differently.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Determine whether the relationship is linear and justify your answer using differences.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>6</td><td>12</td><td>20</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>A student writes $$y=3x+5$$ for a pattern with Figure $0$ equal to $3$ and growth of $5$. Identify the error and write the correct equation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A table has starting value $4$ and rate $3$. A graph has $y$-intercept $3$ and rate $4$. Explain whether they represent the same relationship.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Explain why an equation is often more efficient than a drawing for predicting Figure $100$, but a drawing may be better for understanding the structure.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+
+  <div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 — Rungs 7–8</strong><span class="dok-small">Students can model unfamiliar relationships with multiple representations and justify conclusions or recommendations using mathematical evidence.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, design task, critique-and-revise task, or decision-making task</strong></p><p>Purpose: Check whether students can transfer graph, table, pattern, rule, and linear relationship understanding to unfamiliar situations and justify decisions.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Design a Linear Pattern Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students create a pattern, table, graph, and rule that all represent the same relationship.</li><li>Compare Two Plans Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students model and compare two linear situations and justify a recommendation.</li><li>Critique and Redesign Representation Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students evaluate a flawed representation and revise it so the table, graph, rule, and context agree.</li><li>Multi-Representation Modeling Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students create and analyze multiple representations for an unfamiliar relationship and communicate conclusions using evidence.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can use multiple representations to make decisions, design models, critique reasoning, and communicate conclusions. These should remain short performance tasks rather than large projects.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Create a coordinate-plane situation involving at least four points. Include a table, describe what the points represent, and explain one pattern in the graph.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Create one linear input-output rule and one non-linear input-output rule that begin with the same first two outputs. Explain how a student could eventually tell them apart.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Design a growing tile pattern with a constant rate of change. Provide a table, describe the growth, and write a rule.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Critique this claim:</p><blockquote>The pattern with the larger starting value will always have more tiles.</blockquote><p>Use a counterexample and explain the reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Create a real-world situation represented by $$y=4x+9$$. Define the variables, make a table, and interpret both numbers in the equation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Create two equations with the same rate of change but different starting values. Describe a context where comparing them would matter.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Create a compare-two-plans problem involving a starting fee and a constant rate. Use equations or tables to recommend one plan and justify the recommendation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Design a multi-representation challenge where students must decide whether a tile pattern, table, graph, and equation all match. Provide the evidence they should use.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>
