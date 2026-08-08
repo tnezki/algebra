@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 5.1 Notes — GCF and Structure</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 5</div>
+  <div class="title-main">Section 5.1<br>GCF and Structure</div>
+  <div class="title-sub">Use shared factors to rewrite polynomial expressions without changing their value.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> Factoring out a GCF reverses distribution by pulling out the largest factor all terms have in common.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will identify common factors in polynomial terms and rewrite expressions as equivalent products. You will use area models, multiplication checks, and structure to decide whether a factored form is complete.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will identify common factors and use structure to rewrite polynomial expressions.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can construct equivalent polynomial expressions by factoring out a greatest common factor.</li>
+    <li>I can apply structure to rewrite polynomial expressions in a more useful form.</li>
+    <li>I can determine whether a rewritten expression is reasonable by checking common factors and equivalent products.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p>A student designed the area model shown to represent a product, but the model does not support the claimed expression $5m^2-12m-6$.</p>
+<p>Revise either the expression or one part of the model so the representations match. Then write the matching product and sum.</p>
+<figure class="notes-figure wu-img-500"><img src="figures/u5_bank_s1_rev_area_sq_v1.png" alt="Area model"/></figure>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher preview: Students should annotate familiar words, symbols, and representations only. Do not solve the future task here.</p></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Polynomial expressions can often be rewritten without changing their value. When every term contains the same number factor or variable factor, those shared pieces are called common factors. Pulling them out helps reveal the structure of the expression.</p>
+  <p>Factoring is connected to multiplication. After you factor an expression, multiplying the outside factor through the parentheses should reproduce every original term. This check helps catch missing signs, missing powers, and incomplete factors.</p>
+  <p>Two students might both find a common factor, but their answers may not be equally useful. If one student pulls out only a small shared factor, another common factor may still be hiding inside the parentheses. Careful factoring usually asks for the greatest common factor so the remaining expression is simplified as much as possible.</p>
+  <p>Area models make the structure visible. The side length outside a row or column represents a factor, and the inside rectangles represent the products. When all inside terms share a dimension, that common dimension can become the outside factor.</p>
+  <p>Common-factor structure appears in contexts too. If two costs, areas, or quantities all repeat the same piece, factoring can show the repeated part once and make the rest of the calculation easier to interpret.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Teacher: Listen for students citing the paragraph language and connecting it to a representation or algebraic structure.</p></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What does it mean for terms to have a common factor?</li>
+    <li>How can multiplying back help check a factored expression?</li>
+    <li>Why is the greatest common factor more useful than any smaller common factor?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answers: Q1 is directly answered in paragraph A; Q2 is directly answered in paragraph B; Q3 is inferred from paragraph C. Follow-up: ask students to underline the evidence sentence before sharing.</p></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Greatest Common Factor of Polynomial Terms</span>
+  </div>
+  <div class="math-notes-body">
+    <p>The greatest common factor is the largest number-and-variable factor shared by every term.</p>
+$$12x^2-18x=6x(2x-3)$$
+<table class="values">
+<tr><th>Term</th><th>$12x^2$</th><th>$-18x$</th></tr>
+<tr><td>Shared factor</td><td>$6x$</td><td>$6x$</td></tr>
+<tr><td>Left inside</td><td> $2x$ </td><td> $-3$ </td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s1_mn1_gcf_area.png" alt="Area model showing a common factor of 6x."/>
+</figure>
+<p><strong>Context:</strong> The outside factor $6x$ represents the repeated part shared by both terms.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Identify a Common Factor</h3>
+<p>Work with the expression $15x^3-10x^2+5x$.</p>
+<p>Think about the greatest number factor and the lowest power of $x$ that appears in every term.</p>
+<ol>
+  <li>What number factor is shared by 15, 10, and 5?</li>
+  <li>What power of $x$ is shared by all three terms?</li>
+  <li>Write the expression in the form GCF times remaining factor.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: GCF $5x$; $15x^3-10x^2+5x=5x(3x^2-2x+1)$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Find the GCF</h3>
+<p>Work with the expression $18m^4+12m^2-6m$.</p>
+<p>Look for the largest factor shared by all terms.</p>
+<ol>
+  <li>Find the greatest number factor.</li>
+  <li>Find the shared variable factor.</li>
+  <li>Write the expression as a product.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: GCF $6m$; $6m(3m^3+2m-1)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 1 and You Try It 1 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Both tasks require separating the shared factor from the remaining factor. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Area Models Show Factored Products</span>
+  </div>
+  <div class="math-notes-body">
+    <p>An area model connects the outside dimensions to the terms inside the rectangle.</p>
+$$4x(x+5)=4x^2+20x$$
+<table class="values">
+<tr><th>Part</th><th>Meaning</th></tr>
+<tr><td>Outside row</td><td>$4x$ is the common factor</td></tr>
+<tr><td>Columns</td><td>$x$ and $5$ are the remaining factors</td></tr>
+<tr><td>Cells</td><td>$4x^2$ and $20x$ are the products</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s1_mn2_area_product.png" alt="Area model for 4x times x plus 5."/>
+</figure>
+<p><strong>Context:</strong> The model shows the same total area written as a product and as a sum.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Complete an Area Model</h3>
+<p>A rectangle has one outside side labeled $3x$ and column labels $x$ and $-4$.</p>
+<p>Use the outside factors to fill the inside areas, then write the total area two ways.</p><table class="values">
+<tr><th>Column</th><th>$x$</th><th>$-4$</th></tr>
+<tr><td>Row $3x$</td><td>_____</td><td>_____</td></tr>
+</table>
+<ol>
+  <li>Fill in each cell of the model.</li>
+  <li>Write the total area as a sum.</li>
+  <li>Write the total area as a product.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $3x^2$ and $-12x$; sum $3x^2-12x$; product $3x(x-4)$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Build a Product from an Area Model</h3>
+<p>A rectangle has one outside side labeled $5p$ and column labels $2p$ and $-3$.</p>
+<p>Fill the inside cells and write two equivalent forms.</p><table class="values">
+<tr><th>Column</th><th>$2p$</th><th>$-3$</th></tr>
+<tr><td>Row $5p$</td><td>_____</td><td>_____</td></tr>
+</table>
+<ol>
+  <li>Fill in each area.</li>
+  <li>Write the total as a sum.</li>
+  <li>Write the total as a product.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $10p^2$ and $-15p$; sum $10p^2-15p$; product $5p(2p-3)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 2 and You Try It 2 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: The area cells show distribution before the product is written. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Factor and Verify</h3>
+<p>Factor $21a^2-14a$ completely.</p>
+<p>After factoring, multiply your answer back to check that both terms return.</p>
+<ol>
+  <li>Find the GCF.</li>
+  <li>Write the factored expression.</li>
+  <li>Multiply back to verify equivalence.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $7a(3a-2)$; distribute to get $21a^2-14a$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Factor and Check</h3>
+<p>Factor $32n^3-20n^2$ completely.</p>
+<p>Use the GCF and verify by distributing.</p>
+<ol>
+  <li>Find the GCF.</li>
+  <li>Write the factored form.</li>
+  <li>Multiply back to check your answer.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $4n^2(8n-5)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 3 and You Try It 3 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Verification connects factoring back to multiplication. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Checking Whether Factoring Is Complete</span>
+  </div>
+  <div class="math-notes-body">
+    <p>A factored form is complete when there is no common factor left inside the parentheses.</p>
+$$18x^2+27x=9x(2x+3)$$
+<table class="values">
+<tr><th>Attempt</th><th>Multiply back</th><th>Complete?</th></tr>
+<tr><td>$3x(6x+9)$</td><td>$18x^2+27x$</td><td>No; $6x+9$ still shares 3</td></tr>
+<tr><td>$9x(2x+3)$</td><td>$18x^2+27x$</td><td>Yes</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s1_mn4_complete_factor.png" alt="Area model showing 9x as the greatest common factor."/>
+</figure>
+<p><strong>Context:</strong> Multiplying back checks equivalence; checking inside the parentheses checks completeness.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Critique a Factoring Claim</h3>
+<p>A student says $24y^2+36y=6y(4y+6)$ and claims the expression is fully factored.</p>
+<p>Decide whether the student is correct and support your answer with structure.</p>
+<ol>
+  <li>Multiply back. Is the expression equivalent?</li>
+  <li>Is the factorization complete?</li>
+  <li>Write a complete factored form.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Equivalent but incomplete; complete form is $12y(2y+3)$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Find the Incomplete Step</h3>
+<p>A student says $30z^2-45z=5z(6z-9)$ and stops.</p>
+<p>Decide whether more factoring is possible.</p>
+<ol>
+  <li>Does the product multiply back correctly?</li>
+  <li>What common factor remains inside the parentheses?</li>
+  <li>Write the complete factored form.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Equivalent but incomplete; complete form $15z(2z-3)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 4 and You Try It 4 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: A product can be equivalent but not fully factored. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>A greatest common factor is the largest factor shared by every term in an expression.</p>
+  <p>Factoring out the GCF rewrites a sum as a product, and distributing can check that the product is equivalent to the original expression.</p>
+  <p>Area models help connect a factored product to the terms inside the rectangle.</p>
+  <p>A factorization may multiply back correctly and still be incomplete if a common factor remains inside the parentheses.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Factoring only a number.</strong> Why it is tempting: students see the coefficients first and ignore variable powers. What to check instead: check the numbers and the lowest power of each shared variable.</li>
+    <li><strong>Forgetting a negative term.</strong> Why it is tempting: the minus sign feels separate from the term. What to check instead: keep each sign attached to its term while dividing by the GCF.</li>
+    <li><strong>Stopping too soon.</strong> Why it is tempting: a smaller common factor gives a true product. What to check instead: look inside the parentheses for another common factor.</li>
+    <li><strong>Changing the value.</strong> Why it is tempting: rewriting can feel like simplifying by deleting a factor. What to check instead: multiply back to verify every original term returns.</li>
+    <li><strong>Misreading an area model.</strong> Why it is tempting: inside cells and outside dimensions can be confused. What to check instead: match each cell to row factor times column factor.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Foundation Check · DoK 1</div>
+    <p>Circle the greatest common factor in each expression, then write the remaining factor mentally.</p>
+<ol><li>$4x+8$</li><li>$10x+25y+5$</li><li>$2x^2-8x$</li><li>$9x^2y+12x+3xy$</li></ol>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Representation Check · DoK 2</div>
+    <p>Complete the missing areas in the model, then write one equivalent product for the total area.</p>
+<figure class="notes-figure wu-img-500"><img src="figures/u5_bank_s1_blank_area_sq_v1.png" alt="Partial area model"/></figure>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about greatest common factors and polynomial structure you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about greatest common factors and polynomial structure you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
