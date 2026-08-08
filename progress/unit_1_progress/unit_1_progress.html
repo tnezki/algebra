@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 1 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; min-width: 42px; }
+.figure-block, .graph-block { margin: 12px 0 10px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.figure-block img, .graph-block img { display: block; margin: 0 auto; height: auto; width: auto; max-width: 100%; border: 1px solid #bbb; background: #fff; }
+.graph-sm img{ max-width:280px; } .graph-md img{ max-width:340px; } .graph-lg img{ max-width:420px; }
+.figure-md img{ max-width:320px; } .figure-lg img{ max-width:420px; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #777; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block, .figure-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Unit 1 Progress Tracker</h1>
+  <section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze relationships using functions and multiple representations in order to interpret patterns, communicate mathematical structure, and connect equations, tables, graphs, and contexts.</p></section>
+
+  <section class="key">
+    <div class="key-title">Progress Tracking Key</div>
+    <div class="key-grid">
+      <div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div>
+      <div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div>
+      <div><strong>Got It!:</strong><br/>I can do this independently.</div>
+      <div><strong>Teach It!:</strong><br/>I can teach it.</div>
+    </div>
+  </section>
+
+  <h2>Progress Tracking</h2>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 1 — Rungs 1–2</strong><span>Students can recognize representations, vocabulary, function notation, inputs, outputs, and basic function-family shapes.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 2 — Rungs 3–4</strong><span>Students can evaluate function rules, match representations, classify function families, and write or rewrite expressions and equations.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 3 — Rungs 5–6</strong><span>Students can justify whether representations match, analyze function behavior, explain expression structure, and critique models.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+  <section class="tracking-card">
+    <div class="black-box"><strong>DOK 4 — Rungs 7–8</strong><span>Students can create, compare, revise, and critique models across tables, graphs, equations, contexts, and function families.</span></div>
+    <div class="tracking-grid"><div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>☐ Teach It!</div><div>☐ Got It!</div><div>☐ Getting There</div><div>☐ Not Yet</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div></div>
+  </section>
+
+  <div class="page-break"></div>
+  <h2>Learning Ladder</h2>
+  <table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+<tr><td class="rung-num">8</td><td>I can analyze and model relationships using functions, expressions, equations, graphs, tables, and contexts, then justify conclusions and evaluate whether solutions are reasonable.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">7</td><td>I can create, compare, and revise mathematical models across multiple representations and critique whether the representations accurately describe the same relationship.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">6</td><td>I can analyze functions, expressions, and equations to explain structure, identify function-family behavior, and connect features across representations.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">5</td><td>I can justify whether representations match, explain input-output relationships, and defend conclusions using evidence from tables, graphs, equations, and contexts.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">4</td><td>I can write and rewrite expressions and equations to represent relationships, functions, and situations.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">3</td><td>I can evaluate function rules, use inputs and outputs, classify common function families, and connect basic representations.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">2</td><td>I can identify and use vocabulary, notation, and features for functions, inputs, outputs, expressions, equations, tables, graphs, and contexts.</td><td>DOK 1</td><td>Essential</td></tr>
+<tr><td class="rung-num">1</td><td>I can recognize tables, graphs, equations, expressions, contexts, and basic function-family shapes as different ways to represent mathematical relationships.</td><td>DOK 1</td><td>Essential</td></tr>
+  </tbody></table>
+  <section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+
+  <div class="page-break"></div>
+  <h2 class="practice-title">Unit 1 Practice by Depth of Knowledge</h2>
+
+  <div class="black-dok"><strong>DOK 1 — Rungs 1–2</strong><span class="dok-small">Students can recognize representations, vocabulary, function notation, inputs, outputs, and basic function-family shapes.</span></div>
+  <section class="dok-method-card"><p><strong>Format: 3–5 minute warm-up, vocabulary check, representation match, graph/equation identification, or exit ticket</strong></p><p>Purpose: Check whether students can recall vocabulary, recognize representations, identify inputs and outputs, classify basic function-family shapes, and use notation correctly.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Representation Vocabulary Check <span class="timing-label">Can Be Assessed After Section 1</span> – Students identify tables, graphs, equations, contexts, variables, and representation features.</li><li>Input-Output Fluency Check <span class="timing-label">Can Be Assessed After Section 2</span> – Students identify inputs and outputs and evaluate simple function rules.</li><li>Function Family Recognition Check <span class="timing-label">Can Be Assessed After Section 3</span> – Students recognize common function families from basic graphs and equations.</li><li>Expression and Equation Notation Check <span class="timing-label">Can Be Assessed After Section 5</span> – Students identify expression parts, equation structure, variables, and solutions.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students who struggle here need additional support with the language and notation of functions, representations, expressions, and equations before moving into deeper modeling and justification.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Use the coordinate plane below. State the coordinates of points A and C.</p><div class="graph-block graph-md"><img src="figures/unit1_coord_points.png" alt="Coordinate plane with labeled points A, B, C, and D"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Complete the table for the relationship $y=x+2$.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Use the graph below. What is the value of $y$ when $x=3$?</p><div class="graph-block graph-md"><img src="figures/unit1_linear_points.png" alt="Graph of a linear relationship with plotted points"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Use the graph below. What quantity is shown on the horizontal axis? What quantity is shown on the vertical axis?</p><div class="graph-block graph-md"><img src="figures/unit1_distance_time.png" alt="Distance time graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Identify the representation type: table, graph, equation, or context.</p><p>$$y=4x+1$$</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>For the rule $f(x)=3x-2$, find $f(5)$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Use the graph set below. Identify the family shown in Graph B: linear, quadratic, absolute value, or exponential.</p><div class="graph-block graph-lg"><img src="figures/unit1_family_set.png" alt="Four function family graphs labeled A through D"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Identify the coefficient and constant term in the expression $7x+4$.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-80"></div></section>
+<div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 2 — Rungs 3–4</strong><span class="dok-small">Students can evaluate function rules, match representations, classify function families, and write or rewrite expressions and equations.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Exit ticket, partner check, whiteboard response, mini-quiz, matching task, or short written task</strong></p><p>Purpose: Check whether students can evaluate function rules, match representations, rewrite expressions, classify function families, and write equations from situations.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Multiple Representation Match Task <span class="timing-label">Can Be Assessed After Section 1</span> – Students match a table, graph, equation, and context that represent the same relationship.</li><li>Function Rule Evaluation Task <span class="timing-label">Can Be Assessed After Section 2</span> – Students evaluate a function rule for several inputs and interpret the outputs.</li><li>Function Family Sorting Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students sort graphs and equations into function families and explain simple features.</li><li>Equation Model Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students write and solve an equation from a context and interpret the solution.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>Students at this level can generally use procedures and representations, but the assessment reveals whether they understand how relationships, rules, expression structure, and models connect.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Plot the points $(0,2)$, $(1,4)$, $(2,6)$, and $(3,8)$ on the coordinate plane. Describe the pattern you see.</p><div class="graph-block graph-md"><img src="figures/unit1_coord_points.png" alt="Coordinate plane for plotting points"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Complete the table for $y=3x+2$ and explain how each output is found.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td></td><td></td><td></td><td></td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Determine whether the relation shown in the table is a function. Explain your reasoning.</p><table class="table-block"><tr><th>Input</th><td>1</td><td>2</td><td>2</td><td>4</td></tr><tr><th>Output</th><td>5</td><td>7</td><td>9</td><td>11</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Classify each equation as linear, quadratic, absolute value, or exponential.</p><ol class="lower-alpha"><li>$y=2x+7$</li><li>$y=x^2-4$</li><li>$y=|x|-3$</li><li>$y=2^x$</li></ol><div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Find the constant rate of change from the table.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>7</td><td>10</td><td>13</td><td>16</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Write a rule for the table.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>5</td><td>9</td><td>13</td><td>17</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A phone company charges a <span class="tex2jax_ignore">$</span>20 start fee and <span class="tex2jax_ignore">$</span>15 per month.</p><p>Write an equation for total cost $C$ after $m$ months.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Use the ticket-cost graph below.</p><ol class="lower-alpha"><li>Identify the starting cost.</li><li>Describe the rate of change.</li><li>Write an equation that matches the graph.</li></ol><div class="graph-block graph-md"><img src="figures/unit1_ticket_cost.png" alt="Ticket cost graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 3 — Rungs 5–6</strong><span class="dok-small">Students can justify whether representations match, analyze function behavior, explain expression structure, and critique models.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Constructed response, representation analysis, strategy comparison, error analysis, or discourse prompt</strong></p><p>Purpose: Check whether students can justify representation matches, analyze function behavior, explain expression structure, and defend the reasonableness of equations as models.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Representation Justification Task <span class="timing-label">Can Be Assessed After Section 1</span> – Students justify whether multiple representations describe the same relationship using mathematical evidence.</li><li>Function Behavior Explanation Task <span class="timing-label">Can Be Assessed After Section 3</span> – Students compare two function families and explain differences in graph, table, and equation behavior.</li><li>Expression Structure Analysis Task <span class="timing-label">Can Be Assessed After Section 4</span> – Students analyze equivalent expressions and explain why different forms reveal different information.</li><li>Equation Model Critique Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students critique an equation model or solution interpretation and revise the reasoning.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>This level reveals whether students understand functions and algebraic relationships as connected systems of representations rather than isolated procedures. These tasks identify who can explain, justify, critique, and transfer reasoning.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>A student says:</p><blockquote>The point $(3,8)$ means the graph goes right 8 and up 3.</blockquote><p>Critique the statement and explain the correct interpretation.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Determine whether the equation $y=x+2$ matches the graph below. Use at least two pieces of evidence.</p><div class="graph-block graph-md"><img src="figures/unit1_linear_points.png" alt="Graph of y equals x plus 2"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Compare the rules $y=2x+3$ and $y=x^2+3$. Explain how their tables would grow differently.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>A student uses the rule $y=x+5$ for a pattern that starts at 5 and adds 5 each time.</p><p>Explain the misconception and correct the rule.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Determine whether the relationship is linear and justify your answer using differences.</p><table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>6</td><td>12</td><td>20</td></tr></table><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Use the area model below to explain why $4(x+3)$ and $4x+12$ are equivalent.</p><div class="figure-block figure-md"><img src="figures/unit1_area_model.png" alt="Area model representing 4x plus 12"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>A student solves $4x+12=40$ and says the answer means “7 dollars.” Critique the interpretation and explain what information is needed to interpret correctly.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Compare two methods for solving $3x+9=30$: using inverse operations and using a table. Explain strengths of each method.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div></section>
+<div class="page-break"></div>
+  <div class="black-dok"><strong>DOK 4 — Rungs 7–8</strong><span class="dok-small">Students can create, compare, revise, and critique models across tables, graphs, equations, contexts, and function families.</span></div>
+  <section class="dok-method-card"><p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or extended application</strong></p><p>Purpose: Check whether students can transfer function and algebra foundations to unfamiliar situations, create coherent models, and justify conclusions across multiple representations.</p><h3>Assessment Ideas</h3><ol class="assessment-ideas"><li>Build a Relationship Web Task <span class="timing-label">Can Be Assessed After Section 1</span> – Students create a table, graph, equation, and context for the same relationship and justify the connections.</li><li>Design a Function Rule Task <span class="timing-label">Can Be Assessed After Section 2</span> – Students design a function rule for a situation, evaluate it, and explain the meaning of inputs and outputs.</li><li>Function Family Classification Challenge <span class="timing-label">Can Be Assessed After Section 3</span> – Students create examples and non-examples of function families and defend classifications.</li><li>Equation as a Model Performance Task <span class="timing-label">Can Be Assessed After Section 5</span> – Students create, solve, interpret, and critique an equation model for a real-world situation.</li></ol><div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can design, connect, critique, and revise representations and models. These should remain short performance tasks rather than large projects.</div></section>
+  <section class="problem"><div class="problem-number">1.</div><p>Create a relationship that can be represented with a table, graph, equation, and context. Include all four representations and explain how each one shows the same relationship.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">2.</div><p>Create two relations: one that is a function and one that is not a function. Represent each with either a table or graph, and explain the difference using inputs and outputs.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">3.</div><p>Design a function-machine puzzle where the rule is hidden. Include at least four input-output pairs and explain how the rule can be discovered.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">4.</div><p>Create a classification challenge using the four graph families below. Write one clue for each graph that does not directly name the family.</p><div class="graph-block graph-lg"><img src="figures/unit1_family_set.png" alt="Function family graph set"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">5.</div><p>Create a real-world scenario that could be represented by both $4x+12$ and $4(x+3)$. Explain why both forms are useful.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-220"></div></section>
+  <section class="problem"><div class="problem-number">6.</div><p>Create a break-even situation represented by an equation. Solve it and explain what the break-even point means.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div></section>
+  <section class="problem"><div class="problem-number">7.</div><p>Use the two-plan graph below to write a recommendation for a customer. Your recommendation must depend on the number of months and cite evidence from the graph.</p><div class="graph-block graph-md"><img src="figures/unit1_two_plans.png" alt="Two plans cost graph"/></div><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+  <section class="problem"><div class="problem-number">8.</div><p>Design a multi-representation modeling task involving an equation, graph, table, and context. Include the expected student reasoning.</p><div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div></section>
+
+</div>
+</body>
+</html>
