@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 5.4 Notes — Factored Form and Zeros</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 5</div>
+  <div class="title-main">Section 5.4<br>Factored Form and Zeros</div>
+  <div class="title-sub">Use factored form to connect quadratic factors with zeros and graph intercepts.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> A product is zero when one factor is zero, so factored form reveals where a quadratic graph crosses the x-axis.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will find zeros from factors, use intercepts to sketch quadratic graphs, and interpret zeros in context. You will also analyze what changes and what stays the same when a quadratic is stretched or reflected.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will connect factors, zeros, intercepts, and graphs of quadratic functions.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can formulate quadratic functions in factored form from zeros or intercepts.</li>
+    <li>I can use factored form to predict zeros and x-intercepts of quadratic graphs.</li>
+    <li>I can extend connections among factors, zeros, intercepts, and graph behavior.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p>Create a factored quadratic model for a situation where an object starts on the ground, rises, and returns to the ground after $6$ seconds. Include the equation, the zeros, and a sentence interpreting the zeros.</p>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher preview: Students should annotate familiar words, symbols, and representations only. Do not solve the future task here.</p></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Factored form shows a quadratic as a product of factors. When the product equals zero, at least one factor must equal zero, so each factor can reveal an input that makes the output zero. Those input values are called zeros.</p>
+  <p>Zeros have a graphical meaning. If $f(x)=0$, the output is zero, so the point lies on the x-axis. That means zeros correspond to x-intercepts on the graph of the quadratic function.</p>
+  <p>A multiplier outside the factors can make a parabola wider, narrower, or reflected. The x-values that make the factors equal zero still make the whole product zero. The graph changes shape, but the x-intercepts can stay fixed.</p>
+  <p>Tables near the intercepts can support the same reasoning. Inputs on one side of a zero may give positive or negative outputs, and the zero itself gives output 0. A sketch should agree with the table, the factors, and the intercepts.</p>
+  <p>In contexts, zeros often represent meaningful start or end values. A height model may have a zero when an object is on the ground, while a profit model may have zeros at break-even points.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Teacher: Listen for students citing the paragraph language and connecting it to a representation or algebraic structure.</p></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How does factored form reveal the zeros of a quadratic?</li>
+    <li>What is the connection between zeros and x-intercepts?</li>
+    <li>Why might the number multiplying the factors change the graph but not the zeros?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answers: Q1 is directly answered in paragraph A; Q2 is directly answered in paragraph B; Q3 is inferred from paragraph C. Follow-up: ask students to underline the evidence sentence before sharing.</p></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Factors to Zeros</span>
+  </div>
+  <div class="math-notes-body">
+    <p>In factored form, set each factor equal to zero to find the zeros.</p>
+$$f(x)=(x+3)(x-2)$$
+$$x+3=0 \Rightarrow x=-3 \qquad x-2=0 \Rightarrow x=2$$
+<table class="values">
+<tr><th>Factor</th><th>Zero</th><th>Graph point</th></tr>
+<tr><td>$x+3$</td><td>$-3$</td><td>$(-3,0)$</td></tr>
+<tr><td>$x-2$</td><td>$2$</td><td>$(2,0)$</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s4_mn1_zeros_graph.png" alt="Quadratic graph crossing the x-axis at -3 and 2."/>
+</figure>
+<p><strong>Context:</strong> A zero is an input where the output of the quadratic is 0.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Find Zeros from Factors</h3>
+<p>For $f(x)=(x-4)(x+1)$, list the zeros.</p>
+<p>Set each factor equal to zero.</p>
+<ol>
+  <li>What equation comes from $x-4$?</li>
+  <li>What equation comes from $x+1$?</li>
+  <li>List the zeros and x-intercepts.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Zeros 4 and -1; x-intercepts $(4,0)$ and $(-1,0)$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Zeros from a Product</h3>
+<p>For $g(x)=(x+6)(x-3)$, list the zeros.</p>
+<p>Set each factor equal to zero.</p>
+<ol>
+  <li>Solve $x+6=0$.</li>
+  <li>Solve $x-3=0$.</li>
+  <li>Write the x-intercepts.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Zeros -6 and 3; x-intercepts $(-6,0)$ and $(3,0)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 1 and You Try It 1 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: The sign change from factor to zero comes from solving an equation. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Using Intercepts to Sketch</span>
+  </div>
+  <div class="math-notes-body">
+    <p>Zeros give x-intercepts, and the y-intercept comes from evaluating the function at $x=0$.</p>
+$$g(x)=(x-1)(x-5),\qquad g(0)=(-1)(-5)=5$$
+<table class="values">
+<tr><th>Feature</th><th>Value</th></tr>
+<tr><td>Zeros</td><td>$1$ and $5$</td></tr>
+<tr><td>x-intercepts</td><td>$(1,0)$ and $(5,0)$</td></tr>
+<tr><td>y-intercept</td><td>$(0,5)$</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s4_mn2_factored_graph.png" alt="Quadratic graph with visible intercepts."/>
+</figure>
+<p><strong>Context:</strong> The sketch should cross the x-axis at the zeros and pass through the y-intercept.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Factor to Find Intercepts</h3>
+<p>For $y=x^2-5x+6$, find the y-intercept and x-intercepts.</p>
+<p>Use $x=0$ for the y-intercept and factoring for the x-intercepts.</p>
+<ol>
+  <li>Find the y-intercept.</li>
+  <li>Factor the quadratic.</li>
+  <li>Name the x-intercepts.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: y-intercept $(0,6)$; factors $(x-2)(x-3)$; x-intercepts $(2,0)$ and $(3,0)$. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Intercepts from Factoring</h3>
+<p>For $y=x^2+x-12$, find the y-intercept and x-intercepts.</p>
+<p>Use factoring to find where the graph crosses the x-axis.</p>
+<ol>
+  <li>Find the y-intercept.</li>
+  <li>Factor the quadratic.</li>
+  <li>Name the x-intercepts.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: y-intercept $(0,-12)$; factors $(x+4)(x-3)$; x-intercepts $(-4,0)$ and $(3,0)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 2 and You Try It 2 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Intercepts can be found from different forms of the same quadratic. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Sketch from Intercepts</h3>
+<p>Factor $y=x^2-2x-8$ and use the zeros to sketch key features.</p>
+<p>Use the intercepts and the opening direction to guide the sketch.</p>
+<ol>
+  <li>Find the zeros.</li>
+  <li>Find the y-intercept.</li>
+  <li>Describe how the graph should cross the x-axis.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $(x-4)(x+2)$; zeros 4 and -2; y-intercept $(0,-8)$; opens up. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Describe a Sketch</h3>
+<p>Factor $y=x^2+3x-10$ and describe the intercepts of the graph.</p>
+<p>Use the algebra to support a sketch.</p>
+<ol>
+  <li>Find the zeros.</li>
+  <li>Find the y-intercept.</li>
+  <li>Describe the x-axis crossings.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $(x+5)(x-2)$; zeros -5 and 2; y-intercept $(0,-10)$. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 3 and You Try It 3 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: A sketch must agree with algebraic zeros and the y-intercept. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Zeros in a Context</span>
+  </div>
+  <div class="math-notes-body">
+    <p>When a factored quadratic models height, zeros can represent times when the object is on the ground.</p>
+$$h(t)=-t(t-6)$$
+<table class="values">
+<tr><th>Time $t$</th><th>0</th><th>3</th><th>6</th></tr>
+<tr><td>Height $h(t)$</td><td>0</td><td>9</td><td>0</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u5_s4_mn4_context_height.png" alt="Height graph with zeros at 0 seconds and 6 seconds."/>
+</figure>
+<p><strong>Context:</strong> The zeros mean the object is on the ground at the start and again after 6 seconds.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Analyze the Role of a</h3>
+<p>Consider $f(x)=a(x+2)(x-5)$.</p>
+<p>Think about what changes when $a$ changes and what stays fixed.</p>
+<ol>
+  <li>What zeros are fixed by the factors?</li>
+  <li>What can changing $a$ do to the graph?</li>
+  <li>Why do the zeros stay the same?</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Zeros -2 and 5 stay fixed; $a$ changes width, direction, and output values away from zeros. Misconception watch: ask students to justify each step with structure, not only a final answer.</p></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: What Changes and What Stays</h3>
+<p>Consider $h(x)=a(x-1)(x+4)$.</p>
+<p>Use the factors to reason about the graph.</p>
+<ol>
+  <li>What zeros stay fixed?</li>
+  <li>What can the value of $a$ change?</li>
+  <li>Explain why the fixed zeros still produce output 0.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Zeros 1 and -4 stay fixed; $a$ changes stretch/reflection but multiplying by zero still gives zero. Follow-up: ask students which part matched the example and which number changed.</p></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What mathematical structure did Example 4 and You Try It 4 have in common?</li>
+    <li>What check would convince you that the answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: The outside multiplier affects shape but not the zero-product property. Ask students to point to a term, factor, feature, or graph evidence.</p></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Factored form makes zeros visible because each factor can be set equal to zero.</p>
+  <p>Zeros correspond to x-intercepts because both describe inputs where the output is 0.</p>
+  <p>A quadratic sketch should connect factors, intercepts, table values, and overall graph behavior.</p>
+  <p>In contexts, zeros must be interpreted using the quantities and units from the situation.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Using the factor as the zero.</strong> Why it is tempting: students see $x-4$ and write 4 or -4 without solving. What to check instead: set the factor equal to zero and solve carefully.</li>
+    <li><strong>Mixing up intercepts.</strong> Why it is tempting: x-intercepts and y-intercepts both use 0. What to check instead: remember x-intercepts have output 0; y-intercept uses input 0.</li>
+    <li><strong>Ignoring the multiplier.</strong> Why it is tempting: zeros stay the same but graph shape can change. What to check instead: separate factors from the outside multiplier.</li>
+    <li><strong>Sketching a line.</strong> Why it is tempting: students focus only on intercepts. What to check instead: remember a quadratic graph is a parabola.</li>
+    <li><strong>Context-free answers.</strong> Why it is tempting: zeros are found but not interpreted. What to check instead: name what each zero means in the situation.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Foundation Check · DoK 1</div>
+    <p>For each factored function, list the zeros.</p>
+<ol><li>$y=(x-3)(x+5)$</li><li>$y=2(x+1)(x-4)$</li><li>$y=-(x-6)(x+2)$</li></ol>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Representation Check · DoK 2</div>
+    <p>For $y=2x^2-7x+3$, give the y-intercept and the two x-intercepts. Show how factoring supports the x-intercepts.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about factored form, zeros, and quadratic graphs you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about factored form, zeros, and quadratic graphs you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
