@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Speed Dating Math — Section 2.1</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/activities.css" rel="stylesheet"/>
+<style id="activity-local-overrides">
+/* Local correction pass: keep directions page scale, shrink problem/solution content, shrink graphs, and hide empty workspaces. */
+@page { size: letter portrait; margin: .35in; }
+@media screen, print {
+  .prob-head { font-size: 7.8pt !important; margin-bottom: 8px !important; padding-bottom: 4px !important; }
+  .prob-num { font-size: 22pt !important; margin-bottom: 6px !important; }
+  .prob-tag { font-size: 7.8pt !important; margin-bottom: 6px !important; }
+  .prob-q { font-size: 16.9pt !important; line-height: 1.25 !important; margin-bottom: 8px !important; }
+  .solution { font-size: 14.3pt !important; line-height: 1.25 !important; margin-top: 8px !important; padding-top: 8px !important; }
+  .solution ol, .solution ul { margin-top: 4px !important; margin-bottom: 0 !important; }
+  .solution li { margin-bottom: 2px !important; }
+  .work:empty, .workspace:empty { display: none !important; min-height: 0 !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+  .prob-q .graph-block img, .prob-q .ps-figure img { max-width: 5.69in !important; max-height: 3.68in !important; object-fit: contain !important; }
+  .prob-q .graph-block, .prob-q .ps-figure { margin: 8px auto !important; text-align: center !important; }
+  .exit-item, .stn-exit-item { font-size: 12.4pt !important; line-height: 1.25 !important; }
+
+  /* Exit tickets have no workspace: compact content only. */
+  .exit-no-work .exit-grid, .exit-ticket-page .exit-grid {
+    flex: 0 0 auto !important;
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+  }
+  .exit-no-work .problem, .exit-no-work .problem-body,
+  .exit-no-work .exit-item, .exit-no-work .stn-exit-item,
+  .exit-ticket-page .problem, .exit-ticket-page .problem-body {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .exit-no-work .workspace, .exit-no-work .work,
+  .exit-ticket-page .workspace, .exit-ticket-page .work {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .exit-no-work .problem-body::after, .exit-no-work .exit-item::after,
+  .exit-ticket-page .problem-body::after, .exit-ticket-page .exit-item::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Portrait station cards: four questions per page, duplicated in print order. */
+  .station-page {
+    width: auto !important;
+    max-width: 980px !important;
+    min-height: 9.3in !important;
+    border: 2px solid var(--text-dark) !important;
+    padding: 16px 18px !important;
+    margin: 0 auto !important;
+  }
+  .stn-header { grid-template-columns: 1fr 2.5in !important; }
+  .stn-header .act-title { font-size: 24pt !important; }
+  .station-header { font-size: 15pt !important; padding: 8px 12px !important; margin-bottom: 8px !important; }
+  .copy-note { top: 20px !important; right: 20px !important; font-size: 7.5pt !important; }
+  .station-grid { grid-template-columns: 1fr 1fr !important; grid-template-rows: 1fr 1fr !important; gap: 8px !important; flex: 1 !important; }
+  .station-card { font-size: 9.2pt !important; line-height: 1.18 !important; padding: 7px !important; overflow: hidden !important; }
+  .station-card h3 { font-size: 10pt !important; margin-bottom: 3px !important; }
+  .station-card-label { font-size: 7.2pt !important; margin-bottom: 3px !important; }
+  .station-card .prob-q { font-size: 9.2pt !important; line-height: 1.18 !important; margin: 0 !important; }
+  .station-card .solution { font-size: 8.2pt !important; line-height: 1.15 !important; margin: 4px 0 0 0 !important; padding-top: 4px !important; }
+  .station-card .solution ol { margin-left: 15px !important; }
+  .station-card .solution li { margin-bottom: 1px !important; }
+  .station-card .ps-figure, .station-card .graph-block { margin: 4px auto !important; }
+  .station-card .ps-figure img, .station-card .graph-block img { max-width: 100% !important; max-height: 1.35in !important; object-fit: contain !important; }
+  .station-card table.values { font-size: 8pt !important; margin: 4px auto !important; }
+  .page-footer { font-size: 7.2pt !important; padding-top: 6px !important; }
+}
+</style>
+</head>
+<body><div class="wrap">
+<section class="page">
+<div class="dir-header">
+<div>
+<div class="act-eyebrow">Unit 2 · Section 1 · Activity 2</div>
+<div class="act-title">Speed Dating Math</div>
+<div class="act-subtitle">Rate of Change and Slope</div>
+</div>
+<div class="act-meta">
+<b>Source:</b> practice_set_2_1_3.html<br/>
+<b>Time:</b> 20–30 min<br/>
+<b>Groups:</b> Partners<br/>
+<b>Materials:</b> Whiteboard or blank paper for each person
+    </div>
+</div>
+<div class="dir-body">
+<div class="dir-text">
+<div class="dir-row">
+<span class="dir-label">Structure</span>
+        Paired practice → Timed rotation → Strategy sharing
+      </div>
+<div class="dir-row">
+<span class="dir-label">Setup</span>
+        Partners. One whiteboard or blank paper for each person
+      </div>
+<div class="dir-row">
+<span class="dir-label">Directions</span>
+<ol>
+<li>Work with a partner on the projected problem — both students write on their own paper</li><li>Compare strategies and methods with your partner before rotating</li><li>After 3–4 minutes, one row shifts one seat to create a new pairing</li><li>Bring your previous work and share your strategy with your new partner</li><li>Repeat across multiple problems and partner pairings</li>
+</ol>
+</div>
+<div class="dir-goal">
+<b>Goal:</b> Multiple representations + collaborative problem solving
+      </div>
+</div>
+<div class="looks-like">
+<div class="looks-good">
+<div class="looks-header">✓ Looks Like Success</div>
+<ul><li>Both partners solve on their own paper before comparing.</li><li>Each rotation begins with a quick explanation of the previous strategy.</li><li>Students carry prior work so new partners can compare methods.</li></ul>
+</div>
+<div class="looks-bad">
+<div class="looks-header">✗ Doesn't Look Like</div>
+<ul><li>Partners only trade final answers with no strategy talk.</li><li>One row rotates before both students have written anything.</li><li>Students restart from scratch instead of learning from prior work.</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 1</span>
+</div>
+<div class="prob-num">Problem 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>A vertical line passes through $x=5$. Describe what happens to $\Delta x$ between any two points on that line, then state the slope category.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 1</span>
+</div>
+<div class="prob-num">Solution 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>A vertical line passes through $x=5$. Describe what happens to $\Delta x$ between any two points on that line, then state the slope category.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>All points on a vertical line have the same $x$-value.</li><li>So $\Delta x=0$.</li><li>Because slope divides by $\Delta x$, the slope is undefined.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 2</span>
+</div>
+<div class="prob-num">Problem 2</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<p>A water tank has $48$ gallons and drains at $6$ gallons per minute. Write the slope with units and explain what the negative rate means in the situation.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 2</span>
+</div>
+<div class="prob-num">Solution 2</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<p>A water tank has $48$ gallons and drains at $6$ gallons per minute. Write the slope with units and explain what the negative rate means in the situation.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>The amount changes by $-6$ gallons each minute.</li><li>The slope is $-6$ gallons per minute.</li><li>The negative sign means the amount of water is decreasing.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 3</span>
+</div>
+<div class="prob-num">Problem 3</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>A student claims a walking rate of $42$ miles per hour is reasonable because the slope calculation $84\div 2=42$ is correct. Decide whether the slope is reasonable for the context and support your answer with units and a more realistic comparison.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 3</span>
+</div>
+<div class="prob-num">Solution 3</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>A student claims a walking rate of $42$ miles per hour is reasonable because the slope calculation $84\div 2=42$ is correct. Decide whether the slope is reasonable for the context and support your answer with units and a more realistic comparison.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 4</span>
+</div>
+<div class="prob-num">Problem 4</div>
+<div class="prob-tag">Current · DOK 4</div>
+<div class="prob-q">
+<p>Create a short context with a constant rate of change of $-4$ units per step and a starting value of $30$. Include a table for four input values and one sentence explaining what the slope means in your context.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 4</span>
+</div>
+<div class="prob-num">Solution 4</div>
+<div class="prob-tag">Current · DOK 4</div>
+<div class="prob-q">
+<p>Create a short context with a constant rate of change of $-4$ units per step and a starting value of $30$. Include a table for four input values and one sentence explaining what the slope means in your context.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 5</span>
+</div>
+<div class="prob-num">Problem 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>A graph uses the horizontal axis for time in minutes and the vertical axis for distance in meters. What does the point $({6},{18})$ mean in the context?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 5</span>
+</div>
+<div class="prob-num">Solution 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>A graph uses the horizontal axis for time in minutes and the vertical axis for distance in meters. What does the point $({6},{18})$ mean in the context?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 6</span>
+</div>
+<div class="prob-num">Problem 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Read the table of points and name the $y$-intercept.</p>
+<table class="values">
+<tr><th>Point</th><th>$x$</th><th>$y$</th></tr>
+<tr><td>A</td><td>0</td><td>7</td></tr>
+<tr><td>B</td><td>2</td><td>11</td></tr>
+<tr><td>C</td><td>4</td><td>15</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 6</span>
+</div>
+<div class="prob-num">Solution 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Read the table of points and name the $y$-intercept.</p>
+<table class="values">
+<tr><th>Point</th><th>$x$</th><th>$y$</th></tr>
+<tr><td>A</td><td>0</td><td>7</td></tr>
+<tr><td>B</td><td>2</td><td>11</td></tr>
+<tr><td>C</td><td>4</td><td>15</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 7</span>
+</div>
+<div class="prob-num">Problem 7</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which point in the table lies on the $x$-axis? Name the $x$-intercept.</p>
+<table class="values">
+<tr><th>Point</th><th>$x$</th><th>$y$</th></tr>
+<tr><td>A</td><td>-3</td><td>0</td></tr>
+<tr><td>B</td><td>0</td><td>6</td></tr>
+<tr><td>C</td><td>2</td><td>10</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 7</span>
+</div>
+<div class="prob-num">Solution 7</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which point in the table lies on the $x$-axis? Name the $x$-intercept.</p>
+<table class="values">
+<tr><th>Point</th><th>$x$</th><th>$y$</th></tr>
+<tr><td>A</td><td>-3</td><td>0</td></tr>
+<tr><td>B</td><td>0</td><td>6</td></tr>
+<tr><td>C</td><td>2</td><td>10</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 8</span>
+</div>
+<div class="prob-num">Problem 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Make a coordinate graph for the ordered pairs in the table, then state the vertical intercept.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>4</td><td>7</td><td>10</td><td>13</td><td>16</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S1-DOK2.07." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+<p>assessment-grade</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 8</span>
+</div>
+<div class="prob-num">Solution 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Make a coordinate graph for the ordered pairs in the table, then state the vertical intercept.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>4</td><td>7</td><td>10</td><td>13</td><td>16</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S1-DOK2.07." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+<p>assessment-grade</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 9</span>
+</div>
+<div class="prob-num">Problem 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>The scatter plot shows practice days and score gain. Describe the overall association and identify one point that supports your description.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Scatter plot for 0B-S1-DOK2.08." src="figures/u0b_bank_s1_scatter_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 9</span>
+</div>
+<div class="prob-num">Solution 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>The scatter plot shows practice days and score gain. Describe the overall association and identify one point that supports your description.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Scatter plot for 0B-S1-DOK2.08." src="figures/u0b_bank_s1_scatter_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 10</span>
+</div>
+<div class="prob-num">Problem 10</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A student wants to graph test score versus hours studied. Explain which variable should go on the horizontal axis and why.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 10</span>
+</div>
+<div class="prob-num">Solution 10</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A student wants to graph test score versus hours studied. Explain which variable should go on the horizontal axis and why.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 11</span>
+</div>
+<div class="prob-num">Problem 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>The rule and table are supposed to match. Find the first mismatch, explain the correct value, and revise the table.</p>
+<p>Rule: $y={2}x+5$</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>8</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 11</span>
+</div>
+<div class="prob-num">Solution 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>The rule and table are supposed to match. Find the first mismatch, explain the correct value, and revise the table.</p>
+<p>Rule: $y={2}x+5$</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>8</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 12</span>
+</div>
+<div class="prob-num">Problem 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>A school club’s table shows inputs ${0}$, ${1}$, ${2}$, ${3}$ with outputs ${10}$, ${14}$, ${17}$, ${22}$. Revise the flawed model by deciding whether one output is likely an error, replacing it, and writing a rule that fits the corrected table.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 12</span>
+</div>
+<div class="prob-num">Solution 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>A school club’s table shows inputs ${0}$, ${1}$, ${2}$, ${3}$ with outputs ${10}$, ${14}$, ${17}$, ${22}$. Revise the flawed model by deciding whether one output is likely an error, replacing it, and writing a rule that fits the corrected table.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 13</span>
+</div>
+<div class="prob-num">Problem 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>Which representation uses points on a coordinate plane: a table, a graph, an equation, or a context?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 13</span>
+</div>
+<div class="prob-num">Solution 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>Which representation uses points on a coordinate plane: a table, a graph, an equation, or a context?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 14</span>
+</div>
+<div class="prob-num">Problem 14</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>The equation $p=5n+2$ represents the number of points $p$ after completing $n$ levels in a game. Write a one-sentence context that matches the starting value and repeated change.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 14</span>
+</div>
+<div class="prob-num">Solution 14</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>The equation $p=5n+2$ represents the number of points $p$ after completing $n$ levels in a game. Write a one-sentence context that matches the starting value and repeated change.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 15</span>
+</div>
+<div class="prob-num">Problem 15</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>Determine whether the point $(5,17)$ belongs to the relationship shown by $y=3x+2$. Use two methods: one from the equation and one from a table or verbal pattern. Explain which method is more efficient for this point.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 15</span>
+</div>
+<div class="prob-num">Solution 15</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>Determine whether the point $(5,17)$ belongs to the relationship shown by $y=3x+2$. Use two methods: one from the equation and one from a table or verbal pattern. Explain which method is more efficient for this point.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Problem 16</span>
+</div>
+<div class="prob-num">Problem 16</div>
+<div class="prob-tag">Last · DOK 4</div>
+<div class="prob-q">
+<p>Design a connected model for a short situation where a total begins at $6$ and changes by the same amount each step. Include a context, equation, four-row table, and graph on the blank coordinate plane. Make sure all four representations agree.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for connected model design." src="figures/u1_bank_s1_coordinate_blank_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2 · Speed Dating Math</span>
+<span>Solution 16</span>
+</div>
+<div class="prob-num">Solution 16</div>
+<div class="prob-tag">Last · DOK 4</div>
+<div class="prob-q">
+<p>Design a connected model for a short situation where a total begins at $6$ and changes by the same amount each step. Include a context, equation, four-row table, and graph on the blank coordinate plane. Make sure all four representations agree.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for connected model design." src="figures/u1_bank_s1_coordinate_blank_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2</span>
+<span>Exit Ticket</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Use the points $(2,9)$ and $(6,1)$ to find the rate of change.</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A graph has constant rate $-3$ and starts at $7$. Write a possible rule.</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>For $g(x)=x^2$, find $g(-4)$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Evaluate $3(5-2)^2$.</p>
+</div>
+</section>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 2</span>
+<span>Exit Ticket Answer Key</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Use the points $(2,9)$ and $(6,1)$ to find the rate of change.</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A graph has constant rate $-3$ and starts at $7$. Write a possible rule.</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>For $g(x)=x^2$, find $g(-4)$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Evaluate $3(5-2)^2$.</p>
+</div>
+</section>
+</div>
+<div class="exit-key">
+<b>Key:</b>
+<ol>
+<li>Rate $=\frac{1-9}{6-2}=-2$.</li><li>One possible rule is $y=-3x+7$.</li><li>$g(-4)=(-4)^2=16$.</li><li>$3(5-2)^2=3\cdot 3^2=27$.</li>
+</ol>
+</div>
+</section>
+</div></body>
+</html>
