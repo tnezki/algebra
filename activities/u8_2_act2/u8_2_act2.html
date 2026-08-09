@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Speed Dating Math — Section 8.2</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/activities.css"/>
+</head>
+<body><div class="wrap">
+
+<section class="page">
+  <div class="dir-header">
+    <div>
+      <div class="act-eyebrow">Unit 8 · Section 2 · Activity 2</div>
+      <div class="act-title">Speed Dating Math</div>
+      <div class="act-subtitle">Transformations Across Function Families</div>
+    </div>
+    <div class="act-meta">
+      <b>Source:</b> practice_set_8_2_3.html<br>
+      <b>Time:</b> 20–30 min<br>
+      <b>Groups:</b> Partners with timed rotation<br>
+      <b>Materials:</b> One whiteboard or blank paper for each person
+    </div>
+  </div>
+  <div class="dir-body">
+    <div class="dir-text">
+      <div class="dir-row">
+        <span class="dir-label">Structure</span>
+        Paired practice → Timed rotation → Strategy sharing
+      </div>
+      <div class="dir-row">
+        <span class="dir-label">Setup</span>
+        Partners. One whiteboard or blank paper for each person
+      </div>
+      <div class="dir-row">
+        <span class="dir-label">Directions</span>
+        <ol>
+          <li>Work with a partner on the projected problem — both students write on their own paper</li>
+          <li>Compare strategies and methods with your partner before rotating</li>
+          <li>After 3–4 minutes, one row shifts one seat to create a new pairing</li>
+          <li>Bring your previous work and share your strategy with your new partner</li>
+          <li>Repeat across multiple problems and partner pairings</li>
+        </ol>
+      </div>
+      <div class="dir-goal"><b>Goal:</b> Multiple representations + collaborative problem solving</div>
+    </div>
+    <div class="looks-like">
+      <div class="looks-good">
+        <div class="looks-header">✓ Looks Like Success</div>
+        <ul>
+          <li>Both partners write their own work before comparing.</li>
+          <li>Students bring previous work to each new partner and explain the strategy.</li>
+          <li>Rotations create new comparisons every few minutes.</li>
+        </ul>
+      </div>
+      <div class="looks-bad">
+        <div class="looks-header">✗ Doesn't Look Like</div>
+        <ul>
+          <li>Only one student writes while the other waits.</li>
+          <li>Students erase previous work instead of using it to explain.</li>
+          <li>Rotations happen without any strategy comparison.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 1</span>
+  </div>
+  <div class="prob-num">Problem 1</div>
+  <div class="prob-tag">Current · DOK 1</div>
+  <div class="prob-q">
+    <p>If $f(x)=2^x$ has $y$-intercept $1$, what is the $y$-intercept of $g(x)=4\cdot 2^x$?</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 1</span>
+  </div>
+  <div class="prob-num">Solution 1</div>
+  <div class="prob-tag">Current · DOK 1</div>
+  <div class="prob-q">
+    <p>If $f(x)=2^x$ has $y$-intercept $1$, what is the $y$-intercept of $g(x)=4\cdot 2^x$?</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>At $x=0$, $2^0=1$. Multiplying by 4 makes $g(0)=4\cdot1=4$, so the $y$-intercept is 4.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 2</span>
+  </div>
+  <div class="prob-num">Problem 2</div>
+  <div class="prob-tag">Current · DOK 2</div>
+  <div class="prob-q">
+    <p>Graph $g(x)=|x-3|+2$ on the blank coordinate plane. Label the vertex and the slope on each side.</p><div class="ps-figure wu-img-500"><img alt="blank standard coordinate plane" src="figures/u8_bank_standard_blank_sq_v1.png"/></div>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 2</span>
+  </div>
+  <div class="prob-num">Solution 2</div>
+  <div class="prob-tag">Current · DOK 2</div>
+  <div class="prob-q">
+    <p>Graph $g(x)=|x-3|+2$ on the blank coordinate plane. Label the vertex and the slope on each side.</p><div class="ps-figure wu-img-500"><img alt="blank standard coordinate plane" src="figures/u8_bank_standard_blank_sq_v1.png"/></div>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>The vertex is $(3,2)$. The left branch has slope $-1$ and the right branch has slope $1$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 3</span>
+  </div>
+  <div class="prob-num">Problem 3</div>
+  <div class="prob-tag">Current · DOK 3</div>
+  <div class="prob-q">
+    <p>Compare the two graphs. Which key features are preserved, and which are changed by the transformation? Use at least two representations in your explanation.</p><div class="ps-figure wu-img-700"><img alt="parent and transformed graphs" src="figures/u8_bank_s2_parent_transform_2x1_sq_v1.png"/></div>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 3</span>
+  </div>
+  <div class="prob-num">Solution 3</div>
+  <div class="prob-tag">Current · DOK 3</div>
+  <div class="prob-q">
+    <p>Compare the two graphs. Which key features are preserved, and which are changed by the transformation? Use at least two representations in your explanation.</p><div class="ps-figure wu-img-700"><img alt="parent and transformed graphs" src="figures/u8_bank_s2_parent_transform_2x1_sq_v1.png"/></div>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>A strong comparison should identify the parent feature and the transformed feature: the basic shape is preserved, while the location of key points, intercepts, or asymptote/vertex changes according to the transformation shown.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 4</span>
+  </div>
+  <div class="prob-num">Problem 4</div>
+  <div class="prob-tag">Current · DOK 4</div>
+  <div class="prob-q">
+    <p>Recommend whether a shifted quadratic or shifted absolute value model is better for a path with a single minimum at $(4,2)$ and equal slopes on both sides. Justify using key features and context.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 4</span>
+  </div>
+  <div class="prob-num">Solution 4</div>
+  <div class="prob-tag">Current · DOK 4</div>
+  <div class="prob-q">
+    <p>Recommend whether a shifted quadratic or shifted absolute value model is better for a path with a single minimum at $(4,2)$ and equal slopes on both sides. Justify using key features and context.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>A shifted absolute value model is better because it has a sharp single minimum and equal constant slopes on both sides. A quadratic has a smooth curve and changing slopes.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 5</span>
+  </div>
+  <div class="prob-num">Problem 5</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>Complete the square: $x^2+12x+20=(x+6)^2+\Box$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 5</span>
+  </div>
+  <div class="prob-num">Solution 5</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>Complete the square: $x^2+12x+20=(x+6)^2+\Box$.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Since $(x+6)^2=x^2+12x+36$, $x^2+12x+20=(x+6)^2-16$. The box is $-16$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 6</span>
+  </div>
+  <div class="prob-num">Problem 6</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>Identify the axis of symmetry of $y=(x+2)^2-5$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 6</span>
+  </div>
+  <div class="prob-num">Solution 6</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>Identify the axis of symmetry of $y=(x+2)^2-5$.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>The vertex is $(-2,-5)$, so the axis of symmetry is $x=-2$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 7</span>
+  </div>
+  <div class="prob-num">Problem 7</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>State why adding $25$ completes $x^2-10x$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 7</span>
+  </div>
+  <div class="prob-num">Solution 7</div>
+  <div class="prob-tag">Mastery · DOK 1</div>
+  <div class="prob-q">
+    <p>State why adding $25$ completes $x^2-10x$.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Half of $-10$ is $-5$, and $(-5)^2=25$. Therefore $x^2-10x+25=(x-5)^2$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 8</span>
+  </div>
+  <div class="prob-num">Problem 8</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Completing the Square</strong>. Show the algebra that supports your answer.</p><p>Solve $x^2+12x+20=0$ by completing the square.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 8</span>
+  </div>
+  <div class="prob-num">Solution 8</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Completing the Square</strong>. Show the algebra that supports your answer.</p><p>Solve $x^2+12x+20=0$ by completing the square.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Complete the square: $x^2+12x=-20$, so $(x+6)^2=16$. Then $x+6=\pm4$, giving $x=-2$ or $x=-10$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 9</span>
+  </div>
+  <div class="prob-num">Problem 9</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Completing the Square</strong>. Show the algebra that supports your answer.</p><p>Use vertex form to decide whether $y=x^2-6x+12$ has real zeros.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 9</span>
+  </div>
+  <div class="prob-num">Solution 9</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Completing the Square</strong>. Show the algebra that supports your answer.</p><p>Use vertex form to decide whether $y=x^2-6x+12$ has real zeros.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Rewrite as $y=(x-3)^2+3$. Since $(x-3)^2\ge0$, the minimum value is 3, so the graph has no real zeros.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 10</span>
+  </div>
+  <div class="prob-num">Problem 10</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Quadratic Formula</strong>. Show the algebra that supports your answer.</p><p>Use the quadratic formula to solve $x^2-3x-5=0$ exactly.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 10</span>
+  </div>
+  <div class="prob-num">Solution 10</div>
+  <div class="prob-tag">Mastery · DOK 2</div>
+  <div class="prob-q">
+    <p>Solve or interpret the quadratic situation for <strong>Quadratic Formula</strong>. Show the algebra that supports your answer.</p><p>Use the quadratic formula to solve $x^2-3x-5=0$ exactly.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Use $a=1,b=-3,c=-5$. Then $x=\frac{3\pm\sqrt{(-3)^2-4(1)(-5)}}{2}=\frac{3\pm\sqrt{29}}{2}$.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 11</span>
+  </div>
+  <div class="prob-num">Problem 11</div>
+  <div class="prob-tag">Mastery · DOK 3</div>
+  <div class="prob-q">
+    <p><strong>Strategy Construction.</strong> Analyze the quadratic evidence for <strong>Quadratic Formula</strong>. Write a conclusion and justify it with algebraic or graphical evidence.</p><p>Design a step-by-step solving strategy for $2x^2+9x-5=0$ that avoids unnecessary work. Then solve it.</p><div class="ps-figure wu-img-500"><img alt="supporting graph for 6-S3-DOK3.04" src="figures/u6_bank_s3_dok3_4_sq_v1.png"/></div>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 11</span>
+  </div>
+  <div class="prob-num">Solution 11</div>
+  <div class="prob-tag">Mastery · DOK 3</div>
+  <div class="prob-q">
+    <p><strong>Strategy Construction.</strong> Analyze the quadratic evidence for <strong>Quadratic Formula</strong>. Write a conclusion and justify it with algebraic or graphical evidence.</p><p>Design a step-by-step solving strategy for $2x^2+9x-5=0$ that avoids unnecessary work. Then solve it.</p><div class="ps-figure wu-img-500"><img alt="supporting graph for 6-S3-DOK3.04" src="figures/u6_bank_s3_dok3_4_sq_v1.png"/></div>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>A complete solution should identify the given information, choose the matching representation or method, show the calculation or comparison step-by-step, and state the final conclusion in context.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 12</span>
+  </div>
+  <div class="prob-num">Problem 12</div>
+  <div class="prob-tag">Mastery · DOK 4</div>
+  <div class="prob-q">
+    <p><strong>Synthesize Across Representations.</strong> Create or revise a quadratic task for <strong>Completing the Square</strong> using the constraints below.</p><ul><li>Include at least two representations among equation, table, graph, or context.</li><li>Make the solution method visible from structure, not from a hint.</li><li>Interpret the solution in words.</li></ul><p>For $x^2-10x+13$, synthesize a completing-square rewrite, a table around the vertex, and a context where the minimum value matters. Explain how each representation shows the vertex.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 12</span>
+  </div>
+  <div class="prob-num">Solution 12</div>
+  <div class="prob-tag">Mastery · DOK 4</div>
+  <div class="prob-q">
+    <p><strong>Synthesize Across Representations.</strong> Create or revise a quadratic task for <strong>Completing the Square</strong> using the constraints below.</p><ul><li>Include at least two representations among equation, table, graph, or context.</li><li>Make the solution method visible from structure, not from a hint.</li><li>Interpret the solution in words.</li></ul><p>For $x^2-10x+13$, synthesize a completing-square rewrite, a table around the vertex, and a context where the minimum value matters. Explain how each representation shows the vertex.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>$x^2-10x+13=(x-5)^2-12$, so the vertex is $(5,-12)$. A table around $x=5$ such as $x=4,5,6$ gives $-11,-12,-11$, which shows symmetry and the minimum.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 13</span>
+  </div>
+  <div class="prob-num">Problem 13</div>
+  <div class="prob-tag">Last · DOK 1</div>
+  <div class="prob-q">
+    <p>For each pair of consecutive outputs, write the ratio second output divided by first output. Then decide whether the full set supports an exponential relationship.</p><table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>Output</td><td>6</td><td>9</td><td>13.5</td><td>20.25</td><td>30.375</td></tr>
+</table>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 13</span>
+  </div>
+  <div class="prob-num">Solution 13</div>
+  <div class="prob-tag">Last · DOK 1</div>
+  <div class="prob-q">
+    <p>For each pair of consecutive outputs, write the ratio second output divided by first output. Then decide whether the full set supports an exponential relationship.</p><table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>Output</td><td>6</td><td>9</td><td>13.5</td><td>20.25</td><td>30.375</td></tr>
+</table>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>Ratios are $9/6=1.5$, $13.5/9=1.5$, $20.25/13.5=1.5$, and $30.375/20.25=1.5$. The constant ratio supports an exponential relationship.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 14</span>
+  </div>
+  <div class="prob-num">Problem 14</div>
+  <div class="prob-tag">Last · DOK 2</div>
+  <div class="prob-q">
+    <p>A relationship has outputs 12, 18, 27, 40.5 at inputs 0, 1, 2, 3. Explain why a constant difference test is not enough, then identify the constant ratio.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 14</span>
+  </div>
+  <div class="prob-num">Solution 14</div>
+  <div class="prob-tag">Last · DOK 2</div>
+  <div class="prob-q">
+    <p>A relationship has outputs 12, 18, 27, 40.5 at inputs 0, 1, 2, 3. Explain why a constant difference test is not enough, then identify the constant ratio.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>First differences are not enough because exponential patterns do not have constant differences. The ratios are $18/12=27/18=40.5/27=1.5$, so the constant ratio is 1.5.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 15</span>
+  </div>
+  <div class="prob-num">Problem 15</div>
+  <div class="prob-tag">Last · DOK 3</div>
+  <div class="prob-q">
+    <p>Compare the table and context below.</p><table class="values">
+<tr><th>Week</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Views</td><td>50</td><td>80</td><td>128</td><td>204.8</td></tr>
+</table><p><strong>Context:</strong> A video starts with 50 views and grows by 60% each week.</p><p>Use the table and context together to write an equation, then explain how each representation supports the same model.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 15</span>
+  </div>
+  <div class="prob-num">Solution 15</div>
+  <div class="prob-tag">Last · DOK 3</div>
+  <div class="prob-q">
+    <p>Compare the table and context below.</p><table class="values">
+<tr><th>Week</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Views</td><td>50</td><td>80</td><td>128</td><td>204.8</td></tr>
+</table><p><strong>Context:</strong> A video starts with 50 views and grows by 60% each week.</p><p>Use the table and context together to write an equation, then explain how each representation supports the same model.</p>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>The multiplier is 1.60 and the initial value is 50, so $y=50(1.6)^x$. The table values and the context both show a 60% increase each week.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Problem 16</span>
+  </div>
+  <div class="prob-num">Problem 16</div>
+  <div class="prob-tag">Last · DOK 4</div>
+  <div class="prob-q">
+    <p>A student builds a model from the table but writes the multiplier as 0.2 because the first decrease is 18 and $18\div90=0.2$.</p><table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Amount</td><td>90</td><td>72</td><td>57.6</td><td>46.08</td></tr>
+</table><ol class="lower-alpha"><li>Revise the student's multiplier and explain the error.</li><li>Write a short context that fits the corrected pattern.</li><li>Predict the amount at time 4.</li></ol>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2 · Speed Dating Math</span>
+    <span>Solution 16</span>
+  </div>
+  <div class="prob-num">Solution 16</div>
+  <div class="prob-tag">Last · DOK 4</div>
+  <div class="prob-q">
+    <p>A student builds a model from the table but writes the multiplier as 0.2 because the first decrease is 18 and $18\div90=0.2$.</p><table class="values">
+<tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>Amount</td><td>90</td><td>72</td><td>57.6</td><td>46.08</td></tr>
+</table><ol class="lower-alpha"><li>Revise the student's multiplier and explain the error.</li><li>Write a short context that fits the corrected pattern.</li><li>Predict the amount at time 4.</li></ol>
+  </div>
+  <div class="solution">
+    <b>Solution:</b>
+    <p>The correct multiplier is $72/90=0.8$, not 0.2. The 0.2 is the percent decrease, while 0.8 is the percent kept.</p><p>Time 4 is $46.08(0.8)=36.864$.</p>
+  </div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2</span>
+    <span>Exit Ticket</span>
+  </div>
+  <div class="prob-num">Exit Ticket</div>
+  <div class="exit-grid">
+    <div class="exit-item">
+      <div class="exit-item-label">1. Current · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>For $g(x)=2(x-1)^2+4$, name the vertical stretch factor.</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">2. Current · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>Write an equation for $y=|x|$ shifted right $4$.</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">3. Last · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>What is the common ratio in $3, 6, 12, 24$?</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">4. Mastery · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>Factor $x^2-3x-10$.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page">
+  <div class="prob-head">
+    <span>Unit 8.2 · Activity 2</span>
+    <span>Exit Ticket Answer Key</span>
+  </div>
+  <div class="prob-num">Exit Ticket</div>
+  <div class="exit-grid">
+    <div class="exit-item">
+      <div class="exit-item-label">1. Current · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>For $g(x)=2(x-1)^2+4$, name the vertical stretch factor.</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">2. Current · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>Write an equation for $y=|x|$ shifted right $4$.</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">3. Last · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>What is the common ratio in $3, 6, 12, 24$?</p>
+      </div>
+    </div>
+    <div class="exit-item">
+      <div class="exit-item-label">4. Mastery · DOK 1–2</div>
+      <div class="exit-item-body">
+        <p>Factor $x^2-3x-10$.</p>
+      </div>
+    </div>
+  </div>
+  <div class="exit-key">
+    <b>Key:</b>
+    <ol>
+      <li>The vertical stretch factor is 2.</li>
+      <li>$y=|x-4|$.</li>
+      <li>The common ratio is 2.</li>
+      <li>$x^2-3x-10=(x-5)(x+2)$.</li>
+    </ol>
+  </div>
+</section>
+
+</div></body>
+</html>
