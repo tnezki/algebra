@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section 6.4 Notes — Choosing and Defending Solution Methods</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/notes.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- TITLE -->
+<div class="notes-title">
+<div class="title-kicker">Algebra 1 · Unit 6</div>
+<div class="title-main">Section 6.4<br/>Choosing and Defending Solution Methods</div>
+<div class="title-sub">Choose a solution method because of equation structure, not habit.</div>
+<div class="title-quote"><p><strong>Mathematical idea:</strong> Efficient solving depends on what form and features the quadratic already shows.</p></div>
+<p style="margin-top:18px;color:#555;">Today you will connect quadratic equations, graphs, and contexts. You will practice solving and explaining what the solutions or features mean.</p>
+</div>
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+<p><strong>Learning Target: Students will compare factoring, completing the square, and the quadratic formula and select efficient solution methods.</strong></p>
+<p><strong>I can statements</strong></p>
+<ul>
+<li>I can formulate a solution-method plan based on the structure of a quadratic equation.</li>
+<li>I can use factoring, completing the square, or the quadratic formula when the equation structure supports the method.</li>
+<li>I can critique a selected solution method for efficiency, accuracy, and fit to the equation.</li>
+</ul>
+</div>
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+<p><strong>Revise A Flawed Model.</strong> Create or revise a quadratic task for <strong>Choosing and Defending Solution Methods</strong> using the constraints below.</p>
+<ul><li>Include at least two representations among equation, table, graph, or context.</li><li>Make the solution method visible from structure, not from a hint.</li><li>Interpret the solution in words.</li></ul>
+<p>A student claims the provided graph is modeled by $y=4(x-5)^2+60$ and recommends factoring. Revise the model so it matches the graph's maximum, choose an efficient solving method for the intercepts, and defend your choice.</p>
+<figure class="notes-figure wu-img-500"><img alt="supporting graph for 6-S4-DOK4.01" src="figures/u6_bank_s4_dok4_1_sq_v1.png"/></figure>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher: Keep this as annotation only. Look for students circling familiar graph or equation features; do not solve the future task yet.</p></div>
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+<p><strong>Directions</strong></p>
+<p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+<p>Quadratic equations can be solved in several ways, including factoring, square roots, completing the square, and the quadratic formula. The first step is to look at the structure of the equation. Factored form, vertex form, and standard form give different clues.</p>
+<p>Factoring is efficient when factors are easy to see. Square roots are efficient when the equation already has a squared expression isolated. The quadratic formula is reliable when the structure is not friendly for a faster method.</p>
+<p>Completing the square is useful when vertex form or symmetry is important. It can also solve equations, but it may be slower than factoring when factors are obvious. Method choice should fit the equation and the goal.</p>
+<p>A critique checks whether the selected method matches the equation. It also checks whether the work is accurate and whether the result should be exact or approximate. A poor method choice can create unnecessary steps or hide an error.</p>
+<p>This lesson emphasizes defending choices, not just getting answers. Strong work explains why a method fits the structure and then solves carefully.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Teacher: Listen for vocabulary from the reading. Follow-up: Which representation would you trust first, and why?</p></div>
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What should you notice first when choosing a quadratic solving method?</li>
+<li>Why is an efficient method not always the same for every equation?</li>
+<li>How can critiquing a method prevent mistakes?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answers: 1) Notice the form and structure: factored, standard, vertex, isolated square, or unfriendly coefficients. 2) Different equations reveal different features, so one method may be faster or clearer than another. 3) Critique checks method fit, accuracy, and whether the answer form is appropriate.</p></div>
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Method Selection Clues</span>
+</div>
+<div class="math-notes-body">
+<p>Start by noticing the structure before choosing a method.</p>
+<div class="rep-grid">
+<div class="rep-card"><h4>Factored form</h4><p>Use zero product property.</p></div>
+<div class="rep-card"><h4>Isolated square</h4><p>Use square roots.</p></div>
+<div class="rep-card"><h4>Friendly standard form</h4><p>Try factoring.</p></div>
+<div class="rep-card"><h4>Unfriendly standard form</h4><p>Use formula or complete the square.</p></div>
+</div>
+</div>
+</div>
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Choose a Method</h3>
+<p>Choose the most efficient method: factoring, square roots, completing the square, or quadratic formula.</p>
+<ol type="a">
+<li>$(x-4)(x+9)=0$</li>
+<li>$x^2+5x+6=0$</li>
+<li>$(x-3)^2=20$</li>
+<li>$2x^2+7x-1=0$</li>
+</ol>
+<p>Briefly justify each choice.</p>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: a) zero product property; b) factoring; c) square roots; d) quadratic formula. Reminder: ask students to justify each algebra move, not just state the answer.</p></div>
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Choose a Method</h3>
+<p>Choose the most efficient method: factoring, square roots, completing the square, or quadratic formula.</p>
+<ol type="a">
+<li>$(x+2)(x-11)=0$</li>
+<li>$x^2-8x+16=0$</li>
+<li>$(x+5)^2=13$</li>
+<li>$3x^2-4x+9=0$</li>
+</ol>
+<p>Briefly justify each choice.</p>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: a) zero product property; b) factoring or square root after recognizing a perfect square; c) square roots; d) quadratic formula. Follow-up: have students compare the structure to the example before checking work.</p></div>
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What structure clues helped you choose a method?</li>
+<li>Which equation would be slowest if you chose the wrong method?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion: Factored form, isolated squares, friendly factors, or unfriendly coefficients guide the method. Misconception watch: students may get a correct value without explaining what it means.</p></div>
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Factoring When Structure Is Friendly</span>
+</div>
+<div class="math-notes-body">
+<p>If integer factors are easy to find, factoring is usually efficient.</p>
+$$x^2-13x+40=0$$
+$$(x-5)(x-8)=0$$
+<table class="values">
+<tr><th>Method choice</th><th>Reason</th></tr>
+<tr><td>Factoring</td><td>Two integers multiply to $40$ and add to $-13$.</td></tr>
+</table>
+<p>The method fits because the standard-form structure has obvious integer factors.</p>
+</div>
+</div>
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Solve and Defend the Method</h3>
+<p>Select a method and solve $x^2-13x+40=0$.</p>
+<ol>
+<li>Name the method.</li>
+<li>Solve the equation.</li>
+<li>Explain why the method fits the structure.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Factoring fits: (x-5)(x-8)=0, so x=5 or x=8. Reminder: ask students to justify each algebra move, not just state the answer.</p></div>
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Solve and Defend the Method</h3>
+<p>Select a method and solve $x^2-10x+21=0$.</p>
+<ol>
+<li>Name the method.</li>
+<li>Solve the equation.</li>
+<li>Explain why the method fits the structure.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Factoring fits: (x-3)(x-7)=0, so x=3 or x=7. Follow-up: have students compare the structure to the example before checking work.</p></div>
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Why was factoring efficient for both standard-form equations?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion: The constants and middle coefficient made factoring direct. Misconception watch: students may get a correct value without explaining what it means.</p></div>
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Completing the Square or Formula for Exact Roots</span>
+</div>
+<div class="math-notes-body">
+<p>Some equations do not factor easily but still have exact real solutions.</p>
+$$x^2+6x-5=0$$
+$$(x+3)^2=14$$
+$$x=-3\pm\sqrt{14}$$
+<p>Completing the square is efficient here because the leading coefficient is $1$ and the middle coefficient is even.</p>
+</div>
+</div>
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Use an Exact Method</h3>
+<p>Select a method and solve $x^2+6x-5=0$ exactly.</p>
+<ol>
+<li>Choose completing the square or formula.</li>
+<li>Show the exact solution.</li>
+<li>Explain why factoring is not the most efficient choice.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Completing the square: x^2+6x=5, (x+3)^2=14, so x=-3\pm\sqrt{14}. Factoring is not friendly with integers. Reminder: ask students to justify each algebra move, not just state the answer.</p></div>
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Use an Exact Method</h3>
+<p>Select a method and solve $x^2-4x-8=0$ exactly.</p>
+<ol>
+<li>Choose completing the square or formula.</li>
+<li>Show the exact solution.</li>
+<li>Explain why factoring is not the most efficient choice.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Completing the square: (x-2)^2=12, so x=2\pm2\sqrt{3}. Follow-up: have students compare the structure to the example before checking work.</p></div>
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Why did exact roots require a method beyond simple factoring?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion: The roots were irrational, so completing the square or formula was needed. Misconception watch: students may get a correct value without explaining what it means.</p></div>
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Critiquing Method Fit</span>
+</div>
+<div class="math-notes-body">
+<p>A method critique asks whether the equation structure supports the chosen method.</p>
+$$0=(x-3)^2+5$$
+<p>Factoring is not efficient because the expression is already in vertex form. Since $(x-3)^2$ is always at least $0$, $(x-3)^2+5$ cannot equal $0$.</p>
+<table class="values">
+<tr><th>Feature</th><th>Meaning</th></tr>
+<tr><td>Vertex</td><td>$(3,5)$</td></tr>
+<tr><td>Minimum value</td><td>$5$</td></tr>
+<tr><td>Real zeros</td><td>none</td></tr>
+</table>
+</div>
+</div>
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Analyze Structure Before Solving</h3>
+<p>Analyze $y=(x-3)^2+5$. Without expanding first, decide whether $0=(x-3)^2+5$ has real solutions and justify.</p>
+<ol>
+<li>Name the vertex.</li>
+<li>Use the structure to decide if the graph reaches $y=0$.</li>
+<li>Write a conclusion.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Vertex is (3,5). The minimum value is 5, so the graph never reaches 0; there are no real solutions. Reminder: ask students to justify each algebra move, not just state the answer.</p></div>
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Analyze Structure Before Solving</h3>
+<p>Analyze $y=(x+2)^2-9$. Without expanding first, decide whether $0=(x+2)^2-9$ has real solutions and justify.</p>
+<ol>
+<li>Name the vertex.</li>
+<li>Use the structure to solve or explain.</li>
+<li>Write a conclusion.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer: Vertex is (-2,-9). 0=(x+2)^2-9 gives (x+2)^2=9, so x=1 or x=-5. Follow-up: have students compare the structure to the example before checking work.</p></div>
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>How did vertex form help you reason before expanding?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion: Vertex form showed the minimum/maximum and whether reaching zero was possible. Misconception watch: students may get a correct value without explaining what it means.</p></div>
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+<p>Today you compared quadratic solving methods and defended efficient choices.</p>
+<p>Equation structure should guide the method: factored form, vertex form, standard form, and isolated squares each suggest different paths.</p>
+<p>A common error is using a familiar method even when the structure suggests a faster one.</p>
+<p>Strong understanding means you can choose, solve, critique, and explain why the method fits.</p>
+</div>
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+<ul>
+<li><strong>Choosing by habit.</strong> Why it is tempting: one method feels familiar. What to check instead: look at structure first.</li>
+<li><strong>Factoring unfriendly equations.</strong> Why it is tempting: factoring worked before. What to check instead: switch to formula or completing the square when integer factors are not clear.</li>
+<li><strong>Expanding vertex form too soon.</strong> Why it is tempting: standard form seems required. What to check instead: use vertex form if it already answers the question.</li>
+<li><strong>Not defending the method.</strong> Why it is tempting: the answer is correct. What to check instead: state why the method fits.</li>
+<li><strong>Using approximate answers when exact is needed.</strong> Why it is tempting: decimals are easy to compare. What to check instead: check whether the prompt asks for exact solutions.</li>
+</ul>
+</div>
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+<p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+<div class="et-cell">
+<div class="et-cell-title">1 — Quick Skill · DoK 1</div>
+<p>Choose factoring, square roots, completing the square, or quadratic formula as the most efficient method.</p>
+<ol type="a"><li>$(x-4)(x+9)=0$</li><li>$x^2+5x+6=0$</li></ol>
+<em>Adapted from strong CPM practice structures: 37. 9-39, 38. 9-117, 39. CL9-125d.</em>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">2 — Apply the Skill · DoK 2</div>
+<p>Solve or interpret the quadratic situation for <strong>Choosing and Defending Solution Methods</strong>. Show the algebra that supports your answer.</p>
+<p>Select a method and solve $x^2-11x+30=0$.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">3 — What Did You Learn?</div>
+<p>What is one idea about choosing quadratic solution methods you understand better now than at the start of class? Write at least one complete sentence.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">4 — What Do You Need Help With?</div>
+<p>What is one thing about choosing quadratic solution methods you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+</div>
+</div>
+</div>
+</body>
+</html>

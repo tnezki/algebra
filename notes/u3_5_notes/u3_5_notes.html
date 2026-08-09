@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 3.5 Notes &mdash; Linear Systems of Inequalities</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 &middot; Unit 3</div>
+  <div class="title-main">Section 3.5<br>Linear Systems of Inequalities</div>
+  <div class="title-sub">Find overlapping regions that satisfy multiple constraints at once.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> A feasible region contains all points that satisfy every inequality in a system.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will practice the representations named in the learning target. You will connect skills from examples to an exit ticket that checks both procedures and meaning.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will analyze and interpret systems of linear inequalities.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can formulate a system of inequalities that represents multiple constraints.</li>
+    <li>I can extend graphing strategies to represent overlapping solution regions.</li>
+    <li>I can apply feasible-region reasoning to interpret possible solutions in context.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+<p>A student council has \$200 for prizes. Small prizes cost \$8 and large prizes cost \$15. They want at least 18 total prizes. Let $s$ be small prizes and $l$ be large prizes.</p>
+<ol type="a"><li>Write a system of inequalities for the constraints.</li><li>Recommend either $(10,8)$ or $(14,5)$ as the better feasible order, or explain if neither works.</li><li>Justify your recommendation using both total prizes and total cost.</li></ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>A system of inequalities has more than one condition. A feasible point is a point that satisfies every inequality in the system. If it fails even one condition, it is not a solution to the system.</p>
+  <p>Each inequality shades a region of possible points. The overlap of the shaded regions represents the points that satisfy all constraints at the same time. This overlap is called the feasible region.</p>
+  <p>A candidate point can look reasonable from one boundary but still fail another constraint. Testing every inequality prevents choosing a point that only partly works. This is especially important in contexts with limits like cost, time, or minimum quantities.</p>
+  <p>Useful representations include systems of inequalities, multiple boundary lines, overlapping shaded regions, feasible points, and constraint-based contexts. Strong work connects the graph to the meaning of the constraints.</p>
+  <p>Systems of inequalities help model decisions with more than one restriction. A feasible solution represents a possible choice, not necessarily the only possible choice.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What does a feasible point mean in a system of inequalities?</li>
+    <li>What does the overlap of shaded regions represent?</li>
+    <li>Why must a candidate point be checked in every inequality?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Feasible Means All Constraints</span>
+  </div>
+  <div class="math-notes-body">
+<p>A feasible point must satisfy every inequality in the system, not just one of them.</p>
+$$\begin{aligned}y&\ge x+1\\y&\le -x+7\end{aligned}$$
+<table class="values">
+<tr><th>Point</th><th>Check $y\ge x+1$</th><th>Check $y\le -x+7$</th><th>Feasible?</th></tr>
+<tr><td>$(2,4)$</td><td>$4\ge 3$ true</td><td>$4\le 5$ true</td><td>Yes</td></tr>
+<tr><td>$(5,6)$</td><td>$6\ge 6$ true</td><td>$6\le 2$ false</td><td>No</td></tr>
+</table>
+<p>The point has to pass both checks to be a solution.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Meaning of a Feasible Point</h3>
+<p>A snack stand has constraints on drinks and snacks. The point $(6,4)$ is called feasible for the system.</p>
+<ol>
+  <li>Explain what feasible means.</li>
+  <li>Does a feasible point need to satisfy one inequality or all inequalities?</li>
+  <li>Why is feasible-region language useful in a context?</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Meaning of a Feasible Point</h3>
+<p>A schedule has limits on practice time and travel time. The point $(3,2)$ is feasible for the system.</p>
+<ol>
+  <li>Explain what feasible means.</li>
+  <li>Explain why failing one inequality matters.</li>
+  <li>Describe how a graph would show feasible points.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why must a feasible point satisfy all inequalities?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Overlapping Solution Regions</span>
+  </div>
+  <div class="math-notes-body">
+<p>A system of inequalities is graphed by showing each inequality and then finding the overlap.</p>
+$$\begin{aligned}y&\ge x+1\\y&\le -x+7\end{aligned}$$
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u3_s5_mn2_system.png" alt="Graph of a system of inequalities with the overlapping feasible region."/>
+</figure>
+<p><strong>Context:</strong> A point in the overlap is a choice that meets both constraints at the same time.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Graph a System of Inequalities</h3>
+<p>Graph the system and identify one feasible point.</p>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+$$\begin{aligned}y&\ge x-2\\y&\le -x+6\end{aligned}$$
+<ol>
+  <li>Graph each boundary and shaded region.</li>
+  <li>Describe the overlap.</li>
+  <li>Name one feasible point and justify it.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Graph a System of Inequalities</h3>
+<p>Graph the system and identify one feasible point.</p>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+$$\begin{aligned}y&\gt 2x-1\\y&\le -x+5\end{aligned}$$
+<ol>
+  <li>Graph each boundary and shaded region.</li>
+  <li>Describe the overlap.</li>
+  <li>Name one feasible point and justify it.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>How did you identify the overlap of the two shaded regions?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Describe the Overlap</h3>
+<p>For each inequality, decide boundary type and shaded side, then graph the system.</p>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+$$\begin{aligned}y&\lt x+4\\y&\ge -2x+1\end{aligned}$$
+<ol>
+  <li>Name the boundary type for each inequality.</li>
+  <li>Describe where the overlap should be.</li>
+  <li>Explain how a point in the overlap can be checked.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Describe the Overlap</h3>
+<p>For each inequality, decide boundary type and shaded side, then graph the system.</p>
+<figure class="notes-figure wu-img-500">
+  <img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/>
+</figure>
+$$\begin{aligned}y&\le -x+7\\y&\gt 1\end{aligned}$$
+<ol>
+  <li>Name the boundary type for each inequality.</li>
+  <li>Describe where the overlap should be.</li>
+  <li>Explain how a point in the overlap can be checked.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>Why does checking a point in both inequalities matter?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- MATH NOTES 4 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">Testing Candidate Points Efficiently</span>
+  </div>
+  <div class="math-notes-body">
+<p>When only a few points need to be checked, substitution into the inequalities may be faster than drawing a full graph.</p>
+$$\begin{aligned}y&\le -x+9\\y&\ge x-1\end{aligned}$$
+<table class="values">
+<tr><th>Point</th><th>First inequality</th><th>Second inequality</th><th>Decision</th></tr>
+<tr><td>$(3,5)$</td><td>$5\le 6$ true</td><td>$5\ge 2$ true</td><td>Feasible</td></tr>
+<tr><td>$(6,2)$</td><td>$2\le 3$ true</td><td>$2\ge 5$ false</td><td>Not feasible</td></tr>
+</table>
+<p>Graphing shows the whole feasible region, while point testing quickly checks selected choices.</p>
+  </div>
+</div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Compare Graphing and Point Testing</h3>
+<p>Two students analyze the system below.</p>
+$$\begin{aligned}y&\le -x+9\\y&\ge x-1\end{aligned}$$
+<p>Ava graphs first. Ben tests candidate points first.</p>
+<ol>
+  <li>Test $(3,5)$ and $(6,2)$ in both inequalities.</li>
+  <li>Decide which points are feasible.</li>
+  <li>For only these two points, explain which method is more efficient and why.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Compare Graphing and Point Testing</h3>
+<p>Two students analyze the system below.</p>
+$$\begin{aligned}y&\le 2x+1\\y&\ge -x+4\end{aligned}$$
+<p>Ava graphs first. Ben tests candidate points first.</p>
+<ol>
+  <li>Test $(2,5)$ and $(0,3)$ in both inequalities.</li>
+  <li>Decide which points are feasible.</li>
+  <li>For only these two points, explain which method is more efficient and why.</li>
+</ol>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>When is point testing more efficient than graphing the whole system?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Today you analyzed systems of inequalities by focusing on points that satisfy all constraints.</p>
+  <p>Each inequality creates a region, and the overlap is the feasible region for the system.</p>
+  <p>A common error is accepting a point that satisfies only one inequality.</p>
+  <p>Strong understanding means you can graph the overlap, test candidate points, and interpret feasible choices in context.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Checking only one inequality.</strong> Why it is tempting: one true statement feels like success. What to check instead: test every constraint.</li>
+    <li><strong>Shading union instead of overlap.</strong> Why it is tempting: all shaded areas look important. What to check instead: identify where all regions overlap.</li>
+    <li><strong>Mixing dashed and solid boundaries.</strong> Why it is tempting: multiple lines increase the load. What to check instead: check each symbol separately.</li>
+    <li><strong>Calling every boundary intersection feasible.</strong> Why it is tempting: intersections stand out visually. What to check instead: test the point in all inequalities.</li>
+    <li><strong>Ignoring context restrictions.</strong> Why it is tempting: the graph may include negative values. What to check instead: decide whether the situation requires nonnegative or whole-number values.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 &mdash; Foundation &middot; DoK 1</div>
+<p>What does “feasible point” mean in a system of inequalities?</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 &mdash; Skill Check &middot; DoK 2</div>
+<p>Graph the system of inequalities and identify one feasible point.</p>
+<figure class="notes-figure wu-img-500"><img src="figures/u3_bank_standard_blank_sq_v1.png" alt="blank coordinate plane"/></figure>
+$$\begin{aligned}y\ge x+1\\y\le -x+7\end{aligned}$$
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 &mdash; What Did You Learn?</div>
+    <p>What is one idea about linear systems of inequalities you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 &mdash; What Do You Need Help With?</div>
+    <p>What is one thing about linear systems of inequalities you still want to understand or practice? Be specific &mdash; name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section 7.3 Notes — Graphing and Analyzing Exponential Functions</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/notes.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- TITLE -->
+<div class="notes-title">
+<div class="title-kicker">Algebra 1 · Unit 7</div>
+<div class="title-main">Section 7.3<br/>Graphing and Analyzing Exponential Functions</div>
+<div class="title-sub">Use key points and asymptote behavior to make exponential graphs meaningful.</div>
+<div class="title-quote"><p><strong>Mathematical idea:</strong> An exponential graph is shaped by its starting value, multiplier, and horizontal asymptote.</p></div>
+<p style="margin-top:18px;color:#555;">Today you will connect equations, tables, and graphs of exponential functions. You will identify y-intercepts, long-run behavior, and mistakes in graph features.</p>
+</div>
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+<p><strong>Learning Target: Students will graph exponential functions and analyze key features.</strong></p>
+<p><strong>I can statements</strong></p>
+<ul>
+<li>I can design graphs of exponential functions using key points, growth or decay factors, and asymptote behavior.</li>
+<li>I can apply key features of exponential graphs to interpret domain, range, intercepts, and end behavior.</li>
+<li>I can assess whether a graph is reasonable for an exponential equation or situation.</li>
+</ul>
+</div>
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+<p>A student graphs $f(x)=3(2)^x+1$ with y-intercept 3 and asymptote $y=0$.</p>
+<ol><li>Revise the graph features so they match the equation.</li><li>Explain how the +1 changes both the y-intercept and asymptote.</li></ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Future task support: students should annotate familiar starts, multipliers, tables, equations, or model-choice language only. Do not solve the task yet; listen for what evidence they think future lessons will require.</p></div>
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+<p><strong>Directions</strong></p>
+<p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+<p>Graphs give a visual way to check an exponential equation. The y-intercept comes from the output when $x=0$, so it should match the starting value or the shifted starting output.</p>
+<p>Many exponential graphs get close to a horizontal line over time. That horizontal asymptote describes the value the graph approaches but does not cross in the long-run direction being considered.</p>
+<p>A table, graph, and equation should tell the same story about the same function. If one representation gives a different output for the same input, then at least one representation needs to be revised.</p>
+<p>In this section, you will use coordinate graphs, tables from equations, key points, domain and range, and end behavior. These features help you decide whether a graph is reasonable.</p>
+<p>In real situations, an asymptote can represent a lowest possible amount, a baseline, or a long-run limit. The graph should match that meaning, not just the shape of a curve.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Intro notes: Q1 answer is in paragraph A; Q2 answer is in paragraph B; Q3 should infer that tables provide stronger evidence because they show differences or ratios across multiple steps. Follow-up: ask students to quote the sentence that helped them.</p></div>
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>What point gives the y-intercept of an exponential function?</li>
+<li>What does a horizontal asymptote describe?</li>
+<li>Why should a graph, table, and equation agree with each other?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Stop and Discuss answers: Q1 asks about constant ratio; Q2 asks about percent multipliers; Q3 should infer that numerical evidence is stronger than direction or shape alone.</p></div>
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Key Points and Asymptote Behavior</span>
+</div>
+<div class="math-notes-body">
+<p>To graph an exponential function, make a table, plot key points, and describe the horizontal asymptote.</p>
+<table class="values">
+<tr><th>$x$</th><th>-1</th><th>0</th><th>1</th><th>2</th></tr>
+<tr><th>$y=2(2)^x$</th><td>1</td><td>2</td><td>4</td><td>8</td></tr>
+</table>
+<p>The y-intercept is $(0,2)$, and the graph approaches $y=0$ as $x$ goes left.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of y equals 2 times 2 to the x with the y-intercept marked." src="figures/u7_s3_key_points.png"/>
+</figure>
+<p><strong>Context:</strong> If $x$ is time, the y-intercept tells the amount at time 0.</p>
+</div>
+</div>
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Read Intercepts and Long-Run Behavior</h3>
+<p>For each equation, identify the y-intercept and describe whether the graph approaches the x-axis from above as $x$ increases or grows away from it.</p>
+<table class="values">
+<tr><th>Equation</th><th>y-intercept</th><th>Long-run behavior</th></tr>
+<tr><th>$f(x)=6(0.5)^x$</th><td></td><td></td></tr>
+<tr><th>$g(x)=3(2)^x$</th><td></td><td></td></tr>
+<tr><th>$h(x)=4(0.75)^x$</th><td></td><td></td></tr>
+</table>
+<ol>
+<li>Complete the table.</li>
+<li>Which functions show decay as $x$ increases?</li>
+<li>Explain how the multiplier helps you decide.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: y-intercepts: 6, 3, 4. f and h are decay and approach the x-axis from above as $x$ increases. g grows away from the x-axis. Multiplier between 0 and 1 causes decay.</p></div>
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Read More Graph Features</h3>
+<p>For each equation, identify the y-intercept and describe the long-run behavior.</p>
+<table class="values">
+<tr><th>Equation</th><th>y-intercept</th><th>Long-run behavior</th></tr>
+<tr><th>$p(x)=7(0.25)^x$</th><td></td><td></td></tr>
+<tr><th>$q(x)=5(1.6)^x$</th><td></td><td></td></tr>
+<tr><th>$r(x)=9(0.8)^x$</th><td></td><td></td></tr>
+</table>
+<ol>
+<li>Complete the table.</li>
+<li>Which functions show growth as $x$ increases?</li>
+<li>Explain how the multiplier helps you decide.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: p intercept 7, decay toward x-axis from above. q intercept 5, growth away from x-axis. r intercept 9, decay toward x-axis. Growth if multiplier is greater than 1.</p></div>
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Which graph feature did you use first in the Example and YTI?</li>
+<li>How did the table help check the graph or equation?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Graph from a Table</h3>
+<p>Graph $y=2(3)^x$ using a table of at least five points.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="Blank coordinate plane for graphing an exponential function." src="figures/u7_s3_blank_coordinate.png"/>
+</figure>
+<ol>
+<li>Make a table using $x=-2,-1,0,1,2$.</li>
+<li>Sketch the graph and label the y-intercept.</li>
+<li>State the horizontal asymptote.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Values: $2/9$, $2/3$, 2, 6, 18. The y-intercept is $(0,2)$. The horizontal asymptote is $y=0$. Since 18 is off the standard grid, students may need scale judgment or note it rises quickly.</p></div>
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Graph a Decay Function</h3>
+<p>Graph $y=5(0.5)^x$ using a table of at least five points.</p>
+<figure class="notes-figure wu-img-500">
+<img alt="Blank coordinate plane for graphing an exponential function." src="figures/u7_s3_blank_coordinate.png"/>
+</figure>
+<ol>
+<li>Make a table using $x=-2,-1,0,1,2$.</li>
+<li>Sketch the graph and label the y-intercept.</li>
+<li>State the horizontal asymptote.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Values: 20, 10, 5, 2.5, 1.25. y-intercept $(0,5)$. Horizontal asymptote $y=0$. The graph decreases but stays positive.</p></div>
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Which graph feature did you use first in the Example and YTI?</li>
+<li>How did the table help check the graph or equation?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+<div class="math-notes-header">
+<span class="math-notes-label">Math Notes</span>
+<span class="math-notes-title">Vertical Shifts and Horizontal Asymptotes</span>
+</div>
+<div class="math-notes-body">
+<p>In $f(x)=a(b)^x+k$, the value $k$ shifts the graph and changes the horizontal asymptote to $y=k$.</p>
+<p>For $f(x)=3(2)^x+1$, the y-intercept is $f(0)=3(1)+1=4$.</p>
+<table class="values">
+<tr><th>Feature</th><th>Value</th></tr>
+<tr><th>Multiplier</th><td>2</td></tr>
+<tr><th>y-intercept</th><td>$(0,4)$</td></tr>
+<tr><th>Horizontal asymptote</th><td>$y=1$</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of a shifted exponential function with intercept and asymptote marked." src="figures/u7_s3_shifted_asymptote.png"/>
+</figure>
+<p><strong>Context:</strong> A shift of 1 can represent a baseline amount that remains even after the exponential part changes.</p>
+</div>
+</div>
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Describe End Behavior from a Shifted Table</h3>
+<p>Use $y=8(0.5)^x+1$ to build a table and analyze the graph.</p>
+<ol>
+<li>Make a table for $x=-2,-1,0,1,2$.</li>
+<li>Describe the end behavior in words.</li>
+<li>Identify the horizontal asymptote and explain how the +1 affects it.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: Values: 33, 17, 9, 5, 3. As $x$ increases, outputs approach 1 from above. The asymptote is $y=1$ because the +1 shifts the graph up.</p></div>
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Analyze Another Shifted Decay</h3>
+<p>Use $y=4(0.5)^x+2$ to build a table and analyze the graph.</p>
+<ol>
+<li>Make a table for $x=-2,-1,0,1,2$.</li>
+<li>Describe the end behavior in words.</li>
+<li>Identify the horizontal asymptote and explain how the +2 affects it.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: Values: 18, 10, 6, 4, 3. As $x$ increases, outputs approach 2 from above. The asymptote is $y=2$ because the graph shifts up 2.</p></div>
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Which graph feature did you use first in the Example and YTI?</li>
+<li>How did the table help check the graph or equation?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Find a Representation Mismatch</h3>
+<p>The table and graph are supposed to show $f(x)=5(0.5)^x$. One representation has a deliberate error.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>$f(x)$</th><td>5</td><td>2.5</td><td>1.5</td><td>0.625</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of y equals 5 times 0.5 to the x for checking table consistency." src="figures/u7_s3_mismatch_decay.png"/>
+</figure>
+<ol>
+<li>Identify which representation is inconsistent.</li>
+<li>Explain where the mismatch first appears.</li>
+<li>Revise the incorrect value or feature.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Example answer: The table is inconsistent. At $x=2$, the value should be 1.25, not 1.5. At $x=3$, 0.625 is correct if the previous correct value 1.25 is used. Ask students to test each table value against the equation.</p></div>
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Check Growth Representations</h3>
+<p>The table and graph are supposed to show $g(x)=3(2)^x$. One representation has a deliberate error.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><th>$g(x)$</th><td>3</td><td>6</td><td>10</td><td>24</td></tr>
+</table>
+<figure class="notes-figure wu-img-500">
+<img alt="Graph of y equals 3 times 2 to the x for checking table consistency." src="figures/u7_s3_mismatch_growth.png"/>
+</figure>
+<ol>
+<li>Identify which representation is inconsistent.</li>
+<li>Explain where the mismatch first appears.</li>
+<li>Revise the incorrect value or feature.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">YTI answer: The table is inconsistent. At $x=2$, the value should be 12, not 10. The graph and equation agree if the graph passes through $(0,3),(1,6),(2,12),(3,24)$.</p></div>
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+<p><strong>Stop and Discuss</strong></p>
+<ol>
+<li>Which graph feature did you use first in the Example and YTI?</li>
+<li>How did the table help check the graph or equation?</li>
+</ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Discussion support: students should compare the methods used in the Example and YTI. Ask one student to name the evidence, and another to explain why that evidence fits the section target.</p></div>
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+<p>You can analyze an exponential graph by connecting its equation, table values, y-intercept, and asymptote.</p>
+<p>The y-intercept comes from $x=0$, and a vertical shift changes the horizontal asymptote from $y=0$ to $y=k$.</p>
+<p>A common error is to forget that a + or - outside the exponential changes graph features, not the multiplier.</p>
+<p>Strong understanding means you can revise a graph or table when one representation does not match the equation.</p>
+</div>
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+<ul>
+<li><strong>Forgetting the shift.</strong> Why it is tempting: the parent graph is familiar. What to check instead: check for an added $k$ outside the exponential.</li>
+<li><strong>Mislabeling the y-intercept.</strong> Why it is tempting: students may use $a$ only. What to check instead: evaluate the full expression at $x=0$.</li>
+<li><strong>Treating the asymptote as a point.</strong> Why it is tempting: the graph gets close to it. What to check instead: describe it as long-run behavior.</li>
+<li><strong>Plotting too few points.</strong> Why it is tempting: a curve cannot be seen from one point. What to check instead: use at least five points when sketching.</li>
+<li><strong>Accepting mismatched representations.</strong> Why it is tempting: tables and graphs both look plausible. What to check instead: check the same input in every representation.</li>
+</ul>
+</div>
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+<p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+<div class="et-cell">
+<div class="et-cell-title">1 — Foundation Check · DoK 1</div>
+<p>For each equation, identify the y-intercept and decide whether the graph approaches the x-axis from above or below as x increases.</p>
+<table class="values">
+<tr><th>Equation</th><th>y-intercept</th><th>Long-run behavior</th></tr>
+<tr><td>$f(x)=4(0.5)^x$</td><td></td><td></td></tr>
+<tr><td>$g(x)=2(3)^x$</td><td></td><td></td></tr>
+<tr><td>$h(x)=8(0.8)^x$</td><td></td><td></td></tr>
+</table>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">2 — Apply the Idea · DoK 2</div>
+<p>Graph $y=3(2)^x$ on the blank coordinate plane using at least five points. Then state the y-intercept and horizontal asymptote.</p>
+<figure class="notes-figure wu-img-500"><img alt="blank coordinate plane for U7-S3-DOK2.01" src="figures/u7_bank_blank_coordinate_sq_v1.png"/></figure>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">3 — What Did You Learn?</div>
+<p>What is one idea about graphing and analyzing exponential functions you understand better now than at the start of class? Write at least one complete sentence.</p>
+</div>
+<div class="et-cell">
+<div class="et-cell-title">4 — What Do You Need Help With?</div>
+<p>What is one thing about graphing and analyzing exponential functions you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+PASS: STRUCTURE — FORMAT AND TABLE CHECK
+════════════════════════════════════════════════════════════════
+
+READ ORDER — MANDATORY BEFORE ANY OUTPUT
+
+1. Read THIS document completely.
+2. Read the uploaded BANK HTML completely — every section.
+3. Read the uploaded GENERATE_GRAPHS.PY if provided.
+   Not needed for structure checks — include unchanged in ZIP.
+
+Do not begin output until all files are fully read.
+Say nothing until you are ready to deliver.
+
+════════════════════════════════════════════════════════════════
+
+FILES FOR THIS PASS
+
+  1. This prompt
+  2. Bank HTML (the file to check and fix)
+  3. generate_graphs.py (pass through unchanged to ZIP)
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If anything in saved memory, prior habit, or any other
+instruction conflicts with this file, follow this file.
+
+════════════════════════════════════════════════════════════════
+
+WHAT THIS PASS COVERS
+
+Pass 2 from the full bank quality system: structural integrity,
+required wrappers, CSS paths, section headers, DOK H3 labels,
+performance-notes count, assessment-grade tags, and every
+HTML table.values in the file.
+
+════════════════════════════════════════════════════════════════
+
+PASS 2 — STRUCTURE AND FORMAT CHECK
+
+DOK SECTION H3 HEADER FORMAT:
+  Every DOK level block opens with an <h3> that describes the
+  purpose of that block. The format must be:
+    DOK 1 — Build [description from section I-cans].
+    DOK 2 — [Verb from I-can] [description].
+    DOK 3 — Reason with evidence to [description].
+    DOK 4 — Synthesize [description] in short transfer tasks.
+
+  COMMON FAILURE — double verb:
+    "DOK 2 — Apply apply..." or "DOK 2 — Apply use..."
+    This is a build artifact. Fix: remove the duplicate or
+    extra leading verb. Keep only the I-can verb.
+
+  COMMON FAILURE — trailing fragment:
+    "...patterns. across routine representations."
+    Fix: remove the fragment after the period.
+
+SECTION CHECKS:
+  Sections present:        [N]/5
+  Each section has h2, learning target p, and DOK h3 headers.
+
+CONTAINER CHECK:
+  Must be <div class="container"> — not <main class="bank">
+  or any other wrapper.
+
+STYLE BLOCK CHECK:
+  No <style> block anywhere in the file.
+  All CSS must come from link tags only.
+  CSS paths must be exactly:
+    ../../../../css/base.css
+    ../../../../css/bank.css
+  YES / NO
+
+HEAD ORDER:
+  1. <script> MathJax config </script>
+  2. <script async src="cdn.jsdelivr.net/...mathjax...">
+  3. <link rel="stylesheet" href="../../../../css/base.css">
+  4. <link rel="stylesheet" href="../../../../css/bank.css">
+  YES / NO
+
+PERFORMANCE-NOTES COUNT:
+  Count <div class="performance-notes"> elements: [N]
+  Count DOK 4 assessment cards: [N]
+  These must match. Every DOK 4 card has performance notes.
+  Every performance-notes div belongs to a DOK 4 card.
+  [N] = [N] → MATCH / MISMATCH
+
+WORKSPACE BOXES:
+  No dashed workspace boxes anywhere in the file.
+  YES (none found) / NO (found — list them)
+
+CROSS-REFERENCES:
+  No item references another item by ID or problem number.
+  YES (none found) / NO (found — list them)
+
+ASSESSMENT-GRADE TAGS:
+  Count <!-- assessment-grade --> in the file: [N]
+  Expected: roughly 10-15 per unit (2-3 per section).
+  If count is 0: add tags to the strongest standalone
+    DOK 2-3 items — single-part or clearly separable,
+    unambiguous without context, paper-test appropriate.
+    Do not tag bundled multi-part DOK 1 cards.
+  If count is far above 15: review whether all tags are
+    on genuinely assessment-ready items.
+
+TABLE STRUCTURE VERIFICATION:
+  List every HTML table.values found in the file.
+  For each table verify:
+    — Header row: <tr><th>label</th><th>col1</th>...</tr>
+    — Data row(s): <tr><td>label</td><td>val</td>...</tr>
+    — Column count consistent across all rows
+    — No text split into individual letter cells
+    — If it is a "complete the table" item: blank answer
+      cells must actually be blank — not pre-filled.
+      (Pre-filled answer cells in "complete" items = 5m
+      violation — flag it for Pass Bad Questions.)
+
+  Item [ID]: [brief description] — VALID / BROKEN / 5m FLAG
+  ...
+
+  Common failures:
+    Text content split into individual letter cells in
+    separate <td> tags — always a generation bug.
+    Fix: collapse into a single properly-structured cell.
+
+  Area-model mismatch items → must use make_rectangle_model
+    figure (Type 7) — NOT an HTML table.
+  Expression-vs-table mismatch items → HTML table.values
+    with the deliberate wrong value in one data cell.
+
+RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+DELIVERY
+
+After Pass 2 reaches PASS, assemble the ZIP.
+
+ZIP structure:
+  unit[#]/
+    unit[#].html          ← corrected HTML with updated QA LOG
+    figures/              ← empty folder
+    generate_graphs.py    ← unchanged copy
+
+Update the QA LOG embedded comment at the top of the HTML
+to reflect the current pass results before zipping.
+
+Always deliver a ZIP. Never deliver HTML-only.
+
+════════════════════════════════════════════════════════════════
+
+MINIMUM CHANGE PRINCIPLE
+
+Fix only what is flagged. If a single H3 has the double-verb
+problem, fix only that H3. Do not reformat adjacent headers
+or restructure sections.
+
+════════════════════════════════════════════════════════════════
+
+QA LOG FORMAT FOR THIS PASS
+
+PASS 2 — STRUCTURE
+  Sections:                 [N]/5
+  DOK H3 headers:           OK / [list issues fixed]
+  .container wrapper:       YES
+  style block:              NO
+  Head order:               YES
+  CSS paths:                YES
+  performance-notes = DOK4: [N] = [N]
+  Workspace boxes:          NO
+  Cross-references:         NO
+  assessment-grade tags:    [N]
+  Tables verified:
+    [Item ID]: [description] — VALID
+    (or NONE)
+  5m flags (pre-filled tables): [list or NONE]
+  Fixes applied:            [list or NONE]
+  RESULT: PASS
+
+════════════════════════════════════════════════════════════════

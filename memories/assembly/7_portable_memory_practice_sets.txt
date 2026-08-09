@@ -1,0 +1,701 @@
+PRACTICE SETS BUILD PROMPT — v1
+════════════════════════════════════════════════════════════════
+
+
+PART 1 — SOURCE OF TRUTH
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH.
+
+If saved memory, prior habit, prior conversation, generic
+convention, or any other instruction conflicts with this file,
+follow this file. Do not drift. Do not freelance.
+
+READ ORDER — complete all before writing line 1 of HTML:
+  1. Read THIS document completely.
+  2. Read unit[#]_mapping.xlsx — Practice Sets sheet only.
+  3. Read the assessment bank HTML completely.
+  4. Read graph_tool.py completely.
+  5. Complete CONTENT PLAN before writing any HTML.
+
+Do not begin output until all files are fully read.
+Say nothing until the ZIP is delivered.
+
+CSS RULES:
+  Exactly two external links — base.css first, then practice_set.css.
+  Never embed a <style> block.
+  Never use a class not in the ALLOWED CLASS LIST.
+
+════════════════════════════════════════════════════════════════
+
+FILES NEEDED
+
+  1. This prompt
+  2. unit[#]_mapping.xlsx
+  3. Current unit bank HTML  (unit[#].html or unit[#]_assessment_bank.html)
+  4. Prior unit bank HTML files for mastery/last spiral items
+     (identified during PRE-BUILD SCAN — see below)
+  5. graph_tool.py
+
+Do NOT ask for any file beyond what is listed above and identified
+by the pre-build scan.
+
+PRE-BUILD SCAN — run this BEFORE writing any HTML:
+
+  1. Read the mapping Practice Sets sheet for the requested section.
+  2. Collect every bank ID in the section's column (all 16 slots × 4 PS = 64 IDs).
+  3. Extract the unique prefix from each ID:
+       U1-  → unit1.html (or unit1_assessment_bank.html)
+       0A-  → unit0A.html (or unit0A_assessment_bank.html)
+       0B-  → unit0B.html (or unit0B_assessment_bank.html)
+       etc.
+  4. Check which of those bank files are uploaded.
+  5. If ANY needed bank file is missing:
+       ══ STOP ══
+       List every missing bank file.
+       State which mapped IDs require each missing file.
+       Wait for the user to upload the missing files.
+       Do NOT proceed to building.
+  6. If all needed bank files are present: proceed to CONTENT PLAN.
+
+════════════════════════════════════════════════════════════════
+
+WHAT "BUILD" MEANS
+
+When the user says build / create / generate / make / section [X.Y]:
+EXECUTE THE ENTIRE WORKFLOW DEFINED BY THIS PROMPT.
+
+Build means ALL steps completed for the requested section:
+  ✓ Identify the section column in the mapping
+  ✓ Pull all bank item IDs for PS1–PS4 from that column
+  ✓ Complete CONTENT PLAN before line 1 of HTML
+  ✓ Generate PS1, PS2, PS3, PS4 (extra_practice), CYU HTML files
+  ✓ Generate generate_graphs.py (if any items reference figures)
+  ✓ Create empty figures/ folder (only if figures needed)
+  ✓ Run all 5 QA passes
+  ✓ Output QA LOG in chat
+  ✓ Assemble and deliver ZIP
+
+The ZIP is the only acceptable endpoint.
+
+Pre-ZIP checklist (check privately):
+  1. Did I run the PRE-BUILD SCAN and confirm all bank files are present?
+  2. Did I fully read all uploaded source files (including prior unit banks)?
+  3. Did I complete the CONTENT PLAN?
+  4. Are all 16 bank item IDs pulled from the correct section column?
+  5. Is each item's text copied verbatim from the bank (no paraphrase)?
+  6. Are PS1–PS3 exit tickets AI-derived (not from bank)?
+  7. Does PS4 have NO exit ticket (CYU is separate)?
+  8. Does the CYU use exactly 6 cells (3 rows × 2 cols): 2 current, 2 last, 2 mastery?
+  9. Does the CYU have NO workspace divs?
+  10. Are all HTML files using class="problem" only (never "problem half")?
+  11. Is there no .ps-page wrapper anywhere?
+  12. Do all matching problems have shuffled answers (not in position order)?
+  13. Are all 5 QA passes PASS?
+If any answer is NO, fix before assembling ZIP.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 2 — LOCKED FILE STRUCTURE AND HTML SHELL
+════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+
+ZIP AND FOLDER NAMING
+
+  Section [unit].[section] → [unit] = "1", [section] = "1" through "5"
+
+  ZIP name:   practice_sets_[unit]_[section].zip
+  Folder:     practice_sets_[unit]_[section]/
+
+  Files inside the folder:
+    practice_set_[unit]_[section].html      ← PS1 (Practice Set 1)
+    practice_set_[unit]_[section]_2.html    ← PS2 (Activity 1)
+    practice_set_[unit]_[section]_3.html    ← PS3 (Activity 2)
+    extra_practice_[unit]_[section].html    ← PS4 (Extra Practice)
+    cyu_[unit]_[section].html               ← Check Your Understanding
+    generate_graphs.py                      ← only if figures needed
+    figures/                                ← empty; only if figures needed
+
+  Example for section 1.2:
+    practice_sets_1_2/
+      practice_set_1_2.html
+      practice_set_1_2_2.html
+      practice_set_1_2_3.html
+      extra_practice_1_2.html
+      cyu_1_2.html
+      generate_graphs.py    (if needed)
+      figures/              (if needed)
+
+────────────────────────────────────────────────────────────────
+
+CSS LINKS (exact — copy verbatim):
+  <link rel="stylesheet" href="../../css/base.css"/>
+  <link rel="stylesheet" href="../../css/practice_set.css"/>
+
+MATHJAX (exact — copy verbatim, config BEFORE cdn script):
+  <script>
+  window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+────────────────────────────────────────────────────────────────
+
+ALLOWED CLASS LIST
+
+  LAYOUT         (none — no page wrapper)
+  HEADER         unit-intro · section-label
+  PROBLEM        problem  (never "problem half" — endless page approach)
+  PROBLEM PARTS  problem-title · problem-meta · problem-body · problem-parts
+  FIGURE         ps-figure · wu-img-025 through wu-img-750
+  WORKSPACE      workspace · wu-ws-000 through wu-ws-800
+  TABLES         values  (always — never any other table class)
+  EXIT TICKET    exit-ticket-label · exit-ticket-grid
+  MATCH GRID     match-grid · match-card
+  LIST           lower-alpha
+
+────────────────────────────────────────────────────────────────
+
+ENDLESS PAGE RULE
+
+These are Notability-only documents. Use the endless page approach:
+  ✓ Never use class="problem half"
+  ✓ Never use .ps-page wrapper divs
+  ✓ Problems flow naturally, one after another
+  ✓ Each problem has break-inside: avoid (from CSS) — this is enough
+  ✗ No break-after: page anywhere
+  ✗ No page-break-after anywhere
+
+────────────────────────────────────────────────────────────────
+
+FULL PAGE SHELL — PS1, PS2, PS3, PS4 (copy verbatim, fill brackets):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>[PS_TITLE] — Section [UNIT].[SECTION]</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/practice_set.css"/>
+</head>
+<body>
+<h1>[PS_TITLE] — Section [UNIT].[SECTION]: [SECTION_NAME]</h1>
+<div class="unit-intro">
+  <p>[1–2 sentences describing what this practice set covers and what students should focus on.]</p>
+</div>
+
+<div class="section-label">Current — Section [UNIT].[SECTION]: [SECTION_NAME]</div>
+
+[CURRENT PROBLEMS — 4 problems from bank, pulled verbatim]
+
+<div class="section-label">Mastery Spiral</div>
+
+[MASTERY PROBLEMS — 8 problems from bank, pulled verbatim]
+
+<div class="section-label">Last Section Spiral</div>
+
+[LAST PROBLEMS — 4 problems from bank, pulled verbatim]
+
+[EXIT TICKET — PS1/PS2/PS3 only; omit for PS4]
+
+</body>
+</html>
+
+────────────────────────────────────────────────────────────────
+
+PROBLEM CARD TEMPLATE:
+
+<section class="problem" id="p[NN]">
+  <div class="problem-title">[N].<span class="problem-meta">DOK [N] | [category] · [source_id]</span></div>
+  <div class="problem-body">
+    [PROBLEM_CONTENT — copied verbatim from bank article body]
+    <div class="workspace wu-ws-[NNN]"></div>
+  </div>
+</section>
+
+  source_id = bank item ID (e.g. U1-S2-DOK1.03) in the problem-meta.
+  category = Current / Mastery / Last.
+  workspace sizing:
+    DOK 1 (compute/identify): wu-ws-150
+    DOK 2 (construct/explain): wu-ws-250
+    DOK 3 (critique/compare): wu-ws-300
+    DOK 4 (design/synthesize): wu-ws-350
+    Problems with a blank graph or table provided: wu-ws-000
+      (the graph/table IS the workspace)
+
+If the bank item includes a table.values or graph-block, copy it verbatim
+inside the problem-body before the workspace div.
+
+────────────────────────────────────────────────────────────────
+
+EXIT TICKET TEMPLATE — PS1, PS2, PS3 only:
+
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <section class="problem" id="et1">
+    <div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+    <div class="problem-body">
+      [AI-DERIVED Q1 — current section skill, DOK 1–2]
+    </div>
+  </section>
+
+  <section class="problem" id="et2">
+    <div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+    <div class="problem-body">
+      [AI-DERIVED Q2 — current section skill, DOK 1–2, different format from Q1]
+    </div>
+  </section>
+
+  <section class="problem" id="et3">
+    <div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+    <div class="problem-body">
+      [AI-DERIVED Q3 — previous section skill, DOK 1–2]
+    </div>
+  </section>
+
+  <section class="problem" id="et4">
+    <div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+    <div class="problem-body">
+      [AI-DERIVED Q4 — mastery/prerequisite skill, DOK 1–2]
+    </div>
+  </section>
+
+</div>
+<div class="workspace wu-ws-600"></div>
+
+Exit ticket rules:
+  • All 4 questions are AI-derived. Do NOT pull from the bank.
+  • No workspace divs inside exit ticket cells.
+  • Q1 and Q2: two different format/skill angles on the current section.
+  • Q3: previous section (the "last" topic). 
+  • Q4: prerequisite/mastery topic from prior units.
+  • Each question is short enough to answer in the cell space provided.
+
+────────────────────────────────────────────────────────────────
+
+CYU (Check Your Understanding) TEMPLATE — cyu_[unit]_[section].html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Check Your Understanding — Section [UNIT].[SECTION]</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/practice_set.css"/>
+</head>
+<body>
+<h1>Check Your Understanding — Section [UNIT].[SECTION]: [SECTION_NAME]</h1>
+
+<div class="exit-ticket-grid">
+
+  <!-- Row 1: Current (2 questions from PS4 current bank IDs) -->
+  <section class="problem" id="c1">
+    <div class="problem-title">1.<span class="problem-meta">Current · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 CURRENT ITEM 1 — bank body verbatim]
+    </div>
+  </section>
+
+  <section class="problem" id="c2">
+    <div class="problem-title">2.<span class="problem-meta">Current · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 CURRENT ITEM 2 — bank body verbatim]
+    </div>
+  </section>
+
+  <!-- Row 2: Last (2 questions from PS4 last bank IDs) -->
+  <section class="problem" id="c3">
+    <div class="problem-title">3.<span class="problem-meta">Last · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 LAST ITEM 1 — bank body verbatim]
+    </div>
+  </section>
+
+  <section class="problem" id="c4">
+    <div class="problem-title">4.<span class="problem-meta">Last · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 LAST ITEM 2 — bank body verbatim]
+    </div>
+  </section>
+
+  <!-- Row 3: Mastery (2 questions from PS4 mastery bank IDs) -->
+  <section class="problem" id="c5">
+    <div class="problem-title">5.<span class="problem-meta">Mastery · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 MASTERY ITEM 1 — bank body verbatim]
+    </div>
+  </section>
+
+  <section class="problem" id="c6">
+    <div class="problem-title">6.<span class="problem-meta">Mastery · DOK [N] · [ID]</span></div>
+    <div class="problem-body">
+      [PS4 MASTERY ITEM 2 — bank body verbatim]
+    </div>
+  </section>
+
+</div>
+<div class="workspace wu-ws-600"></div>
+
+</body>
+</html>
+
+CYU rules:
+  • 6 cells total: 3 rows × 2 columns using .exit-ticket-grid.
+  • No workspace divs in any cell.
+  • Items pulled verbatim from bank (same as PS4 items).
+  • Pick the 2 most representative items from each category
+    (balanced DOK, varied format — not the same question type twice).
+  • problem-meta includes source ID for reference.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 3 — CONTENT FROM SOURCES
+════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+
+PRACTICE SETS SHEET — how to read it
+
+The Practice Sets sheet has:
+  Row 1:  Column headers:
+            Col A: "Section / Slot"
+            Col B: PS1 — Practice Set 1
+            Col C: PS2 — Activity 1
+            Col D: PS3 — Activity 2
+            Col E: PS4 — Extra Practice
+
+  Sections repeat in blocks. Each section block has:
+    Row [N]:      "Section [X].[Y]" header (no data in cols B–E)
+    Rows [N+1–4]: Slots 1–4 (current)  ← bank IDs
+    Rows [N+5–12]:Slots 5–12 (mastery) ← bank IDs
+    Rows [N+13–16]:Slots 13–16 (last)  ← bank IDs
+    Row [N+17]:   EXIT TICKET / CYU note
+    Rows [N+18–21]:ET Q1–Q4 descriptions (AI-derived text, not bank IDs)
+
+To find the requested section:
+  1. Scan col A for "Section [X].[Y]" matching the build request.
+  2. Read rows N+1 through N+16 in the requested PS column (B, C, D, or E).
+  3. The 16 bank IDs are the complete content for that PS.
+
+PROBLEM ORDERING in each PS:
+  Slots 1–4:   current section items (label: Current)
+  Slots 5–12:  mastery spiral items (label: Mastery Spiral)
+  Slots 13–16: last section spiral items (label: Last Section Spiral)
+
+────────────────────────────────────────────────────────────────
+
+BANK HTML — how to extract item content
+
+Multiple bank files may be needed. Use the file whose prefix matches the ID:
+  U[N]- prefix → unit[N].html  (current unit bank)
+  0A- prefix   → unit0A.html   (prior unit bank)
+  0B- prefix   → unit0B.html   (prior unit bank)
+Search within the correct file for each item.
+
+Bank item structure:
+  <article class="assessment-card" data-section="N" data-dok="N">
+  <div class="problem-number">[ID]</div>
+  <div class="problem-meta">...</div>
+  <p>[QUESTION_BODY]</p>
+  [optional: table.values, graph-block]
+  </article>
+
+Extract rules:
+  • Copy ONLY: the <p> body, table.values (if present), graph-block (if present).
+  • Do NOT copy: problem-number div, problem-meta div.
+  • Copy verbatim — no paraphrasing, no simplification, no rewording.
+  • If a bank item references a figure (graph-block with img src),
+    recreate that figure using graph_tool.py.
+
+If a bank ID is not found in the bank HTML:
+  STOP. Report the missing ID. Wait. Do not invent a replacement.
+
+────────────────────────────────────────────────────────────────
+
+CYU ITEM SELECTION — from PS4 bank IDs
+
+The CYU picks 6 items from the PS4 column's 16 bank IDs:
+  • 2 from current (slots 1–4): pick the two that best represent
+    DOK 1–2 and have different question formats.
+  • 2 from last (slots 13–16): pick the two most accessible (DOK 1–2).
+  • 2 from mastery (slots 5–12): pick one DOK 1–2 and one DOK 2–3.
+
+Selection criteria:
+  • Prefer different question formats (computation vs. interpretation,
+    table vs. equation, etc.).
+  • Prefer the most instructionally clear and self-contained items.
+  • Do NOT always pick the first two IDs. Choose deliberately.
+
+────────────────────────────────────────────────────────────────
+
+EXIT TICKET — AI-derived (PS1, PS2, PS3 only)
+
+Exit tickets are not pulled from the bank. Write 4 short questions:
+  ET Q1: current section skill, DOK 1–2, one format
+  ET Q2: current section skill, DOK 1–2, different format from Q1
+  ET Q3: previous section skill, DOK 1–2
+  ET Q4: mastery/prerequisite skill from a prior unit, DOK 1–2
+
+Exit ticket questions must be short (answerable in the cell space without workspace).
+
+────────────────────────────────────────────────────────────────
+
+MATCHING PROBLEMS — mandatory scramble rule
+
+When a bank item (or AI-derived question) asks students to match items
+(graphs to equations, tables to equations, contexts to representations):
+  ✗  Correct: Graph A→Eq 1, Graph B→Eq 2, Graph C→Eq 3, Graph D→Eq 4
+     Items listed in the same order as correct answers → trivially solved by position.
+  ✓  Shuffle at least one side so that answer N ≠ position N.
+     Students must engage with the math, not just copy position numbers.
+
+For bank items that arrive with matching content already structured:
+  Check whether the correct matches fall in position order.
+  If yes, reorder the equation/option list (not the graphs/tables) to break the pattern.
+  Note the reorder in the problem-meta comment.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 4 — PROBLEM AND GRAPH RULES
+════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+
+PROBLEM RULES
+
+Content:
+  • Copy bank item body verbatim. Never paraphrase or simplify.
+  • If the item has a blank table or blank graph, copy it — it is the workspace.
+  • If the item references a figure that is NOT blank (a specific graph),
+    recreate it using graph_tool.py.
+
+Format:
+  • problem-title: problem number + problem-meta (DOK level, category, source ID)
+  • problem-body: item content + workspace div (sized by DOK level)
+  • All problems flow in sequence — no .ps-page wrappers, no break-after
+  • ALL text content inside problem-body MUST be wrapped in <p> tags.
+    Bare text nodes directly in a flex column break MathJax rendering —
+    each math expression becomes its own line instead of flowing inline.
+    ✗  <div class="problem-body">Write a rule for $f(x)=2x+1$.</div>
+    ✓  <div class="problem-body"><p>Write a rule for $f(x)=2x+1$.</p></div>
+    This applies to exit ticket cells and CYU problems too.
+
+Workspace sizing guide:
+  wu-ws-150: DOK 1 (identify, read, name)
+  wu-ws-250: DOK 2 (construct, apply, complete)
+  wu-ws-300: DOK 3 (critique, justify, compare)
+  wu-ws-350: DOK 4 (design, synthesize)
+  wu-ws-000: problem provides a table/graph for student work
+
+────────────────────────────────────────────────────────────────
+
+GRAPH TOOL RULES
+
+Use graph_tool.py for ALL figures. No exceptions.
+Read every function signature before writing any call.
+Never guess argument order.
+
+generate_graphs.py structure:
+  Top = full graph_tool.py source (copy verbatim, never modify)
+  Bottom = graph generation blocks only, appended after the marker:
+    # PASTE YOUR GRAPH CODE BELOW THIS LINE
+  No imports, OUTPUT_DIR, os.makedirs, or matplotlib.use() in appended blocks.
+
+INDENTATION RULE — most common graph script failure:
+  Every appended graph call MUST start at column 0 (zero leading spaces or tabs).
+  ✗  Wrong — causes IndentationError:
+       make_rectangle_model(...)        ← leading spaces = crash
+  ✓  Correct:
+     make_rectangle_model(...)          ← starts at column 0
+  Multi-line calls: continuation lines indent normally relative to the opening call,
+  but the first line of every top-level call must be at column 0.
+
+Figures folder is always EMPTY in the delivered ZIP.
+Graph title= must never contain the answer. Use title='' or neutral label.
+
+Naming for practice set figures:
+  u[unit]_ps_s[section]_[descriptor]_sq_v1.png
+  Example: u1_ps_s2_relation_points_sq_v1.png
+
+If no items reference figures: omit generate_graphs.py and figures/ entirely.
+
+If a required graph type is not in graph_tool.py:
+  ══ STOP ══  State exactly which type is missing. Wait.
+
+────────────────────────────────────────────────────────────────
+
+MATHJAX RULES
+
+  window.MathJax config MUST come before the CDN script.
+  processEscapes: true — always include.
+  CDN: cdn.jsdelivr.net only.
+  Delimiters: $...$ inline, $$...$$ display. Never \(...\) or \[...\].
+
+  Currency — $[digit] in prose is NEVER a math delimiter:
+    ✗  "The cost is $5."   ← MathJax hunts for a closing $ and breaks
+    ✓  "The cost is \$5."
+    ✓  "The cost is 5 dollars."
+    Rule: every dollar-sign amount in prose uses \$N, not $N.
+
+  Fractions — always \frac{a}{b}, never a truncated form:
+    ✗  \rac{6}{2x-3}   ← missing the f; MathJax cannot render this
+    ✓  \frac{6}{2x-3}
+    After writing any fraction, scan: if \rac appears, it is corrupted. Fix it.
+
+  Math comparisons: \lt and \gt not < and >.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 5 — QA PASSES
+════════════════════════════════════════════════════════════════
+
+Run all 5 passes. Fix any FAIL before assembling ZIP.
+
+────────────────────────────────────────────────────────────────
+
+PASS 1 — FILE AND STRUCTURE
+
+  All 5 HTML files present with correct names:    YES / NO
+  CSS links in order (base.css then ps.css):      YES / NO
+  No <style> block in any file:                   YES / NO
+  MathJax config before CDN, processEscapes true: YES / NO
+  No .ps-page wrapper anywhere:                   YES / NO
+  No class="problem half" anywhere:               YES / NO
+  RESULT: PASS / FAIL
+
+PASS 2 — CONTENT COMPLETENESS
+
+  16 bank IDs read from correct section column:   YES / NO
+  Each PS has correct slot count (4+8+4=16):      YES / NO
+    PS1 problems: [count current / mastery / last]
+    PS2 problems: [count current / mastery / last]
+    PS3 problems: [count current / mastery / last]
+    PS4 problems: [count current / mastery / last]
+  PS4 has NO exit ticket:                         YES / NO
+  CYU has exactly 6 cells (2C + 2L + 2M):        YES / NO
+  CYU has NO workspace divs:                      YES / NO
+  RESULT: PASS / FAIL
+
+PASS 3 — BANK CONTENT
+
+  Every problem body copied verbatim from bank:   YES / NO
+  No bank ID missing (all found in bank HTML):    YES / NO
+  CYU items pulled from PS4 bank IDs:             YES / NO
+  Exit tickets AI-derived (not from bank):        YES / NO
+  No bank item text paraphrased or reworded:      YES / NO
+  RESULT: PASS / FAIL
+
+PASS 4 — MATCHING AND PROBLEM QUALITY
+
+  Any matching problems in output: YES / NO
+  If YES — at least one side shuffled (not in answer order): YES / NO
+  Source IDs present in every problem-meta:       YES / NO
+  Workspace sizes match DOK levels:               YES / NO
+  Section labels present (Current / Mastery / Last): YES / NO
+  RESULT: PASS / FAIL
+
+PASS 5 — MATHJAX AND FIGURES
+
+  Bare $N for currency (must be \$N in prose):   [list or NONE]
+  \rac anywhere (corrupted \frac):               [list or NONE]
+  Wrong delimiters \(...\) or \[...\]:            [list or NONE]
+  Raw < or > inside math:                         [list or NONE]
+  Config before CDN, processEscapes true:         YES / NO
+  Figures in generate_graphs.py match bank refs:  YES / NO / N/A
+  Figures folder empty in ZIP:                    YES / NO / N/A
+  graph_tool.py lines unmodified (only appended): YES / NO / N/A
+  RESULT: PASS / FAIL
+
+────────────────────────────────────────────────────────────────
+
+QA LOG — OUTPUT IN CHAT
+
+  QA LOG — Section [UNIT].[SECTION] Practice Sets / Build date: [date]
+
+  PASS 1 — File / structure:    PASS / FAIL
+  PASS 2 — Content count:       PASS / FAIL
+  PASS 3 — Bank content:        PASS / FAIL
+  PASS 4 — Matching / quality:  PASS / FAIL
+  PASS 5 — MathJax / figures:   PASS / FAIL
+
+  Issues fixed: [list or NONE]
+  OVERALL: PASS — ZIP assembled  /  FAIL — [blocker]
+
+────────────────────────────────────────────────────────────────
+
+ZIP STRUCTURE
+
+  practice_sets_[unit]_[section]/
+    practice_set_[unit]_[section].html
+    practice_set_[unit]_[section]_2.html
+    practice_set_[unit]_[section]_3.html
+    extra_practice_[unit]_[section].html
+    cyu_[unit]_[section].html
+    generate_graphs.py          ← only if figures needed
+    figures/                    ← empty; only if figures needed
+
+  ZIP name: practice_sets_[unit]_[section].zip
+
+────────────────────────────────────────────────────────────────
+
+DELIVERY
+
+  1. All 5 passes PASS.
+  2. Assemble folder with correct structure.
+  3. ZIP as practice_sets_[unit]_[section].zip.
+  4. Deliver ZIP link + QA LOG in chat.
+
+────────────────────────────────────────────────────────────────
+
+COMMON FAILURE MODES
+
+1.  Skipping the PRE-BUILD SCAN — always check all bank prefixes before building.
+2b. Appended graph calls with leading indentation — every top-level call must start
+    at column 0 or Python raises IndentationError.
+2.  Proceeding when a prior-unit bank file is missing — STOP and list what is needed.
+3.  Using class="problem half" — never. Use class="problem" only.
+4.  Using .ps-page wrappers — never. Endless page approach.
+5.  Paraphrasing a bank item instead of copying verbatim.
+6.  Building from wrong section column in the mapping.
+7.  Miscounting problems (must be 4 current + 8 mastery + 4 last = 16).
+8.  Including an exit ticket in PS4 — PS4 has NO exit ticket.
+9.  Exit ticket questions pulled from bank — must be AI-derived.
+10.  CYU with workspace divs — no workspaces in CYU cells.
+11.  CYU with wrong cell count — must be exactly 6 (3 rows × 2 cols).
+10. CYU items not from PS4 bank IDs — CYU pulls only from PS4 column.
+11. Matching problems where answer N = position N — always shuffle.
+12. Missing section-label divs (Current / Mastery Spiral / Last Section Spiral).
+13. Wrong workspace size for DOK level.
+14. Missing source ID in problem-meta.
+15. MathJax: bare $N for currency — use \$N.
+16. MathJax: \rac anywhere — means corrupted \frac, fix it.
+17. MathJax: wrong delimiters \(...\) or \[...\] — use $...$ only.
+18. Generating PNG files — write graph_tool.py code, user runs locally.
+19. Non-empty figures folder in ZIP.
+20. Modifying graph_tool.py source lines.
+21. Adding imports or OUTPUT_DIR to the appended graph section.
+22. Delivering only HTML files without a ZIP.
+23. Writing HTML before completing the CONTENT PLAN.
+24. Skipping any QA pass or claiming PASS without evidence.
+25. Asking for any file not listed in FILES NEEDED.
+
+════════════════════════════════════════════════════════════════

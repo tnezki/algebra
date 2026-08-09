@@ -1,0 +1,492 @@
+ASSESSMENT PLAN BUILD PROMPT
+════════════════════════════════════════════════════════════════
+
+INPUTS — WHAT YOU RECEIVE AT SESSION START
+
+1. This file (uploaded .txt) — read it completely first.
+2. A unit outline pasted as text — contains: course name,
+   unit number, unit title, essential standard, section numbers,
+   section titles, and learning targets.
+
+That is all. No sample file. No old plan. No other uploads.
+Extract everything — including course name — from these two
+sources only.
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If anything in saved memory, prior habit, prior conversation,
+or any other instruction conflicts with this file, follow
+this file. Do not drift. Do not freelance. Do not improve
+things not listed. If something is missing, do your best —
+we can fix later.
+
+════════════════════════════════════════════════════════════════
+
+YOUR JOB
+
+Read the rules in Part 1.
+Copy the skeleton in Part 2 exactly.
+Fill in every [PLACEHOLDER] using the unit outline.
+Run all quality passes.
+Deliver one HTML file.
+
+Do not begin output until you have read everything.
+Say nothing until you are ready to deliver.
+
+════════════════════════════════════════════════════════════════
+PART 1 — RULES
+════════════════════════════════════════════════════════════════
+
+CONTEXT
+
+Assessment plans are built before any assessments, notes,
+or activities. The plan is the source of truth for all
+downstream resources.
+
+The plan ends at the Holistic Rubric. No exceptions.
+No graphs. No ZIP. One HTML file only.
+
+────────────────────────────────────────────────────────────────
+INFERRED INPUTS — INFER AND PROCEED, DO NOT ASK
+
+Course name:    from unit outline
+Unit number:    from unit outline
+Unit title:     from unit outline
+Formative path: ../formative/unit[#]_formative/
+Summative path: ../summative/unit[#]_summative/
+Spiral timing:  infer from unit number and course position
+
+Fill the HTML comment block at the top of the file with
+your inferred values. Then build immediately.
+
+────────────────────────────────────────────────────────────────
+CSS — EXACT LINK TAGS REQUIRED
+
+Assessment plan files live at:
+  [course-repo]/assessment_plans/unit[#]_assessment_plan.html
+
+CSS links use 4-level-deep paths regardless of course:
+  <link rel="stylesheet" href="../../../../css/base.css">
+  <link rel="stylesheet" href="../../../../css/assessment_plan.css">
+
+Head order is locked — MathJax first, then CSS links:
+  1. <script> MathJax config </script>
+  2. <script async src="mathjax CDN"></script>
+  3. <link base.css>
+  4. <link assessment_plan.css>
+
+NEVER include a <style> block. CSS comes from link tags only.
+
+────────────────────────────────────────────────────────────────
+I-CAN STATEMENTS — HARD RULES
+
+Each section gets exactly 3 I-can statements. Not 2. Not 4.
+Total across all 5 sections = 15 I-cans.
+
+UNIT BUDGET (enforce at unit level, not per section):
+  Modeling (M):   6  ±1  (range 5–7)
+  Applying (A):   6  ±1  (range 5–7)
+  Justifying (J): 3  ±1  (range 2–4)
+  M + A combined: 12 ±1  (range 11–13)
+
+PER-SECTION FLOOR (enforce at section level):
+  Every section must have at least 1 Modeling AND 1 Applying.
+  No section is required to have a Justifying I-can.
+  A section may have 2M+1A, 1M+2A, 2M+0J, etc. — content drives it.
+
+JUSTIFYING PLACEMENT RULE:
+  Write a Justifying I-can only when the section content
+  genuinely involves comparing, critiquing, or checking
+  reasonableness. Do not force one because a slot needs filling.
+
+VERB TIERS:
+  Modeling:   construct / formulate / build / design
+  Applying:   apply / use / predict / extend
+  Justifying: determine / assess / critique
+
+BANNED verbs — never appear in I-cans:
+  identify / describe / match / recognize / list / name /
+  explain / compare / decide / evaluate / show / find /
+  justify / defend / argue
+
+No verb repeated more than twice across all 15 I-cans.
+
+VERB COUNT — required before delivering:
+  List every opening I-can verb.
+  Tally M / A / J totals.
+  Confirm M+A is 11–13 and J is 2–4.
+  Flag and fix before output if out of range.
+
+────────────────────────────────────────────────────────────────
+LEARNING LADDER — HARD RULES
+
+Exactly 8 rungs. Exactly 2 per DOK level.
+Rows listed highest to lowest: rung 8 first, rung 1 last.
+Each row gets a class: dok4 / dok3 / dok2 / dok1.
+DOK 1-3: Level = Essential. DOK 4: Level = Above.
+No two adjacent rungs share the same Math Practice.
+Ladder I-cans must reflect the unit M/A/J budget
+(M+A dominant, J only where reasoning is genuine).
+
+────────────────────────────────────────────────────────────────
+DOK RATIO — FORMATIVE DESCRIPTIONS
+
+Applies to all 16 formative description opening verbs.
+Task names are labels only — descriptions drive the ratio.
+
+TARGET (mirrors I-can budget):
+  Modeling  (~6-7 of 16): construct, formulate, build, design,
+    model, represent, develop, create, generate, translate,
+    establish, map, diagram, sketch
+  Applying  (~6-7 of 16): apply, use, predict, extend, solve,
+    calculate, compute, evaluate, estimate, substitute,
+    simplify, interpret, convert, adapt, compare, classify
+  Justifying (~3 of 16):  determine, assess, critique, justify,
+    defend, verify, validate, support, prove, reason, argue,
+    analyze, examine, conclude, infer, generalize
+
+Spread rule: modeling and applying verbs should be distributed
+across DOK levels 1-4, not clustered at one end.
+DOK 1-2 may lean applying; DOK 4 may lean modeling —
+but no single DOK level should be all one verb type.
+
+Weak verbs — replace these:
+  identify / describe / match / explain / show / list
+
+DOK 3 must NOT default to error analysis every time.
+Vary: strategy construction, reasonableness, critique,
+constraint analysis, discourse prompts.
+
+DOK 4 must NOT be projects. Keep to 5-10 minutes:
+design tasks, modeling tasks, critique-and-revise tasks.
+
+VERB COUNT — required before delivering:
+  List all 16 description opening verbs.
+  Tally M / A / J totals.
+  Confirm M is 5-8, A is 5-8, J is 2-4.
+  Flag and fix before output if out of range.
+
+────────────────────────────────────────────────────────────────
+FORMATIVE LINK PATTERN
+
+../formative/unit[#]_formative/unit[#]_dok[level]-[n].html
+
+Examples for Unit 3:
+  ../formative/unit3_formative/unit3_dok1-1.html
+  ../formative/unit3_formative/unit3_dok2-3.html
+  ../formative/unit3_formative/unit3_dok4-4.html
+
+SUMMATIVE LINK PATTERN
+
+../summative/unit[#]_summative/unit[#]_summative_assessment.html
+
+────────────────────────────────────────────────────────────────
+RUBRIC — LOCKED LANGUAGE
+
+Only the first sentence of each level changes per unit.
+Everything after the first sentence is identical across
+all units — copy it from the skeleton below exactly.
+
+────────────────────────────────────────────────────────────────
+QUALITY PASSES — RUN ALL BEFORE DELIVERING
+
+PASS 1 — CSS AND LINK CHECK
+  No <style> block anywhere in the file
+  CSS link tags exactly as specified, paths ../../../../css/
+  Head order: MathJax config then MathJax script then CSS links
+  All 16 formative links correct unit number and pattern
+  Summative link correct unit number and pattern
+  No typos in any href
+
+PASS 2 — STRUCTURE CHECK
+  Sections in correct order as listed in skeleton
+  5 section cards + 1 unit modeling themes card
+  Plan ends at rubric — nothing after
+  No bank section anywhere
+
+PASS 3 — I-CAN VERB AUDIT
+  List every opening verb for all 15 I-cans
+  Tally: Modeling=X  Applying=X  Justifying=X
+  Confirm M+A is 11–13 and J is 2–4
+  Confirm every section has at least 1M and 1A
+  No banned verbs anywhere
+  No verb repeated more than twice across all 15
+  Report counts — do not just say "compliant"
+
+PASS 4 — LADDER CHECK
+  Exactly 8 rungs, rows 8 to 1
+  2 per DOK level with correct row class
+  No adjacent rungs share same Math Practice
+  Verb balance reflects unit M/A/J budget (M+A dominant)
+
+PASS 5 — FORMATIVE VERB AUDIT
+  List all 16 description opening verbs by DOK level
+  Tally: Modeling=X  Applying=X  Justifying=X
+  Confirm M is 5–8, A is 5–8, J is 2–4
+  Check spread: no single DOK level is all one verb type
+  DOK 3 formats varied (not all error analysis)
+  DOK 4 tasks are 5-10 min, not projects
+  Report counts — do not just say "compliant"
+
+PASS 6 — SUMMATIVE AND RUBRIC CHECK
+  Summative card: link, timing label, 4 paragraphs present
+  Rubric: 4 levels, correct classes, first sentence
+  unit-specific, remaining sentences match skeleton exactly
+
+PASS 7 — MATHJAX CHECK
+  Config before script tag
+  CDN: cdn.jsdelivr.net only
+  No \(...\) or \[...\] delimiters
+  Currency uses \$ not bare $
+
+After the file deliver a QA report:
+  Pass 1-7 result for each
+  DOK counts (Modeling / Applying / Justifying)
+  Issues fixed
+  Issues needing review
+
+────────────────────────────────────────────────────────────────
+DELIVERY
+
+File name: unit[#]_assessment_plan.html
+  e.g. unit1_assessment_plan.html or unit0A_assessment_plan.html
+
+One HTML file. No ZIP. No subfolder. No graphs.
+Build completely. Deliver file + QA report. No mid-build stops.
+
+────────────────────────────────────────────────────────────────
+COMMON FAILURE MODES
+
+1.  Using banned I-can verbs
+2.  More or fewer than 3 I-cans per section
+3.  I-can M+A total outside 11–13 range
+4.  I-can J total outside 2–4 range
+5.  Section missing a Modeling or Applying I-can (floor violation)
+6.  Forcing a Justifying I-can where content doesn't support it
+7.  Formative verb spread clustered — all modeling in DOK 4, all applying in DOK 1
+8.  DOK 3 all error analysis
+9.  DOK 4 as projects
+10. Bank section added after rubric
+11. style block instead of link tags
+12. Wrong CSS path depth
+13. Broken or mismatched formative/summative links
+14. Ladder rows in wrong order (must be 8 to 1)
+15. Adjacent ladder rungs sharing Math Practice
+16. Rewriting full rubric paragraphs (first sentence only)
+17. Stopping to ask questions — infer and build
+18. Missing QA report
+19. Repeating a verb more than twice across 15 I-cans
+20. Reporting pass/fail without actual verb counts
+21. Hardcoding course name instead of extracting from unit outline
+
+════════════════════════════════════════════════════════════════
+PART 2 — HTML SKELETON
+Copy this exactly. Fill every [PLACEHOLDER]. Touch nothing else.
+════════════════════════════════════════════════════════════════
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+INFERRED INPUTS
+Course:         [COURSE NAME from outline]
+Unit:           [UNIT NUMBER AND TITLE]
+Formative path: ../formative/unit[#]_formative/
+Summative path: ../summative/unit[#]_summative/
+Spiral timing:  [INFERRED TIMING]
+-->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit [#] Assessment Plan</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../css/assessment_plan.css">
+</head>
+<body>
+<div class="container">
+
+<h1>[COURSE NAME] - Unit [#]: [UNIT TITLE]</h1>
+
+<h2>Essential Standard</h2>
+<div class="essential-standard">[ONE BROAD STATEMENT. Use verbs: analyze / represent / solve / model / interpret / justify]</div>
+
+<h2>Section Outline</h2>
+
+<section class="outline-card">
+<div class="outline-card-title">Section [#.1]: [TITLE]</div>
+<p><strong>Learning Target: [VERBATIM FROM OUTLINE]</strong></p>
+<h3>I Can Statements</h3>
+<ul>
+<li>I can [MODELING VERB — construct/formulate/build/design] [CONTENT].</li>
+<li>I can [APPLYING VERB — apply/use/predict/extend] [CONTENT].</li>
+<li>I can [SECOND M or A, OR JUSTIFYING if content supports it] [CONTENT].</li>
+</ul>
+<h3>Key Representations</h3>
+<ul><li>[REP 1]</li><li>[REP 2]</li><li>[REP 3]</li><li>[REP 4]</li><li>[REP 5]</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>[OPP 1]</li><li>[OPP 2]</li><li>[OPP 3]</li><li>[OPP 4]</li></ul>
+</section>
+
+<section class="outline-card">
+<div class="outline-card-title">Section [#.2]: [TITLE]</div>
+<p><strong>Learning Target: [VERBATIM FROM OUTLINE]</strong></p>
+<h3>I Can Statements</h3>
+<ul>
+<li>I can [MODELING VERB — construct/formulate/build/design] [CONTENT].</li>
+<li>I can [APPLYING VERB — apply/use/predict/extend] [CONTENT].</li>
+<li>I can [SECOND M or A, OR JUSTIFYING if content supports it] [CONTENT].</li>
+</ul>
+<h3>Key Representations</h3>
+<ul><li>[REP 1]</li><li>[REP 2]</li><li>[REP 3]</li><li>[REP 4]</li><li>[REP 5]</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>[OPP 1]</li><li>[OPP 2]</li><li>[OPP 3]</li><li>[OPP 4]</li></ul>
+</section>
+
+<section class="outline-card">
+<div class="outline-card-title">Section [#.3]: [TITLE]</div>
+<p><strong>Learning Target: [VERBATIM FROM OUTLINE]</strong></p>
+<h3>I Can Statements</h3>
+<ul>
+<li>I can [MODELING VERB — construct/formulate/build/design] [CONTENT].</li>
+<li>I can [APPLYING VERB — apply/use/predict/extend] [CONTENT].</li>
+<li>I can [SECOND M or A, OR JUSTIFYING if content supports it] [CONTENT].</li>
+</ul>
+<h3>Key Representations</h3>
+<ul><li>[REP 1]</li><li>[REP 2]</li><li>[REP 3]</li><li>[REP 4]</li><li>[REP 5]</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>[OPP 1]</li><li>[OPP 2]</li><li>[OPP 3]</li><li>[OPP 4]</li></ul>
+</section>
+
+<section class="outline-card">
+<div class="outline-card-title">Section [#.4]: [TITLE]</div>
+<p><strong>Learning Target: [VERBATIM FROM OUTLINE]</strong></p>
+<h3>I Can Statements</h3>
+<ul>
+<li>I can [MODELING VERB — construct/formulate/build/design] [CONTENT].</li>
+<li>I can [APPLYING VERB — apply/use/predict/extend] [CONTENT].</li>
+<li>I can [SECOND M or A, OR JUSTIFYING if content supports it] [CONTENT].</li>
+</ul>
+<h3>Key Representations</h3>
+<ul><li>[REP 1]</li><li>[REP 2]</li><li>[REP 3]</li><li>[REP 4]</li><li>[REP 5]</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>[OPP 1]</li><li>[OPP 2]</li><li>[OPP 3]</li><li>[OPP 4]</li></ul>
+</section>
+
+<section class="outline-card">
+<div class="outline-card-title">Section [#.5]: [TITLE]</div>
+<p><strong>Learning Target: [VERBATIM FROM OUTLINE]</strong></p>
+<h3>I Can Statements</h3>
+<ul>
+<li>I can [MODELING VERB — construct/formulate/build/design] [CONTENT].</li>
+<li>I can [APPLYING VERB — apply/use/predict/extend] [CONTENT].</li>
+<li>I can [SECOND M or A, OR JUSTIFYING if content supports it] [CONTENT].</li>
+</ul>
+<h3>Key Representations</h3>
+<ul><li>[REP 1]</li><li>[REP 2]</li><li>[REP 3]</li><li>[REP 4]</li><li>[REP 5]</li></ul>
+<h3>Modeling Opportunities</h3>
+<ul><li>[OPP 1]</li><li>[OPP 2]</li><li>[OPP 3]</li><li>[OPP 4]</li></ul>
+</section>
+
+<section class="outline-card">
+<div class="outline-card-title">Unit Modeling Themes</div>
+<ul><li>[THEME 1]</li><li>[THEME 2]</li><li>[THEME 3]</li><li>[THEME 4]</li><li>[THEME 5]</li></ul>
+</section>
+
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><tr><th>Rung</th><th>I Can Statement</th><th>Math Practice</th><th>DOK</th><th>Level</th></tr>
+<tr class="dok4"><td>8</td><td>[DOK 4 — design/synthesize/create/construct]</td><td>[MP#] [Name] / [MP#] [Name]</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok4"><td>7</td><td>[DOK 4 — design/synthesize/create/construct]</td><td>[MP#] [Name] / [MP#] [Name]</td><td>DOK 4</td><td>Above</td></tr>
+<tr class="dok3"><td>6</td><td>[DOK 3 — critique/assess/determine/analyze]</td><td>[MP#] [Name] / [MP#] [Name]</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok3"><td>5</td><td>[DOK 3 — critique/assess/determine/analyze]</td><td>[MP#] [Name] / [MP#] [Name]</td><td>DOK 3</td><td>Essential</td></tr>
+<tr class="dok2"><td>4</td><td>[DOK 2 — apply/use/construct/represent]</td><td>[MP#] [Name]</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok2"><td>3</td><td>[DOK 2 — apply/use/construct/represent]</td><td>[MP#] [Name]</td><td>DOK 2</td><td>Essential</td></tr>
+<tr class="dok1"><td>2</td><td>[DOK 1 — use/read/apply vocabulary/classify]</td><td>[MP#] [Name] / [MP#] [Name]</td><td>DOK 1</td><td>Essential</td></tr>
+<tr class="dok1"><td>1</td><td>[DOK 1 — use/read/apply vocabulary/classify]</td><td>[MP#] [Name]</td><td>DOK 1</td><td>Essential</td></tr>
+</table>
+
+<h2>Progress Tracking</h2>
+<div class="progress-tracker">
+<div class="progress-box"><strong>Not Yet:</strong> I need more instruction and practice.</div>
+<div class="progress-box"><strong>Getting There:</strong> I understand most of it but need more practice.</div>
+<div class="progress-box"><strong>Got It!:</strong> I can do this independently.</div>
+</div>
+
+<h2>Assessment Methods by DOK Level</h2>
+
+<div class="dok-bar">DOK 1 - Rungs 1-2</div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, representation recognition, or exit ticket</strong></p>
+<p>Purpose: [UNIT-SPECIFIC — what DOK 1 reveals about student readiness in this unit]</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../formative/unit[#]_formative/unit[#]_dok1-1.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION — use a modeling or applying verb, unit-specific content].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok1-2.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok1-3.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok1-4.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>[UNIT-SPECIFIC insight about what DOK 1 performance reveals]</div>
+</section>
+
+<div class="dok-bar">DOK 2 - Rungs 3-4</div>
+<section class="dok-method-card">
+<p><strong>Format: Mini-quiz, graph/table task, matching task, partner check, or short written task</strong></p>
+<p>Purpose: [UNIT-SPECIFIC — what DOK 2 reveals]</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../formative/unit[#]_formative/unit[#]_dok2-1.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok2-2.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok2-3.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok2-4.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>[UNIT-SPECIFIC insight]</div>
+</section>
+
+<div class="dok-bar">DOK 3 - Rungs 5-6</div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p>
+<p>Purpose: [UNIT-SPECIFIC — what DOK 3 reveals]</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../formative/unit[#]_formative/unit[#]_dok3-1.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok3-2.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok3-3.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok3-4.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>[UNIT-SPECIFIC insight]</div>
+</section>
+
+<div class="dok-bar">DOK 4 - Rungs 7-8</div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or capstone synthesis task</strong></p>
+<p>Purpose: [UNIT-SPECIFIC — what DOK 4 reveals]</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li><a href="../formative/unit[#]_formative/unit[#]_dok4-1.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok4-2.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok4-3.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+<li><a href="../formative/unit[#]_formative/unit[#]_dok4-4.html">[TASK NAME]</a> <span class="timing-label">Can Be Assessed After Section [#]</span> - [DESCRIPTION].</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br>DOK 4 tasks reveal whether students can [UNIT-SPECIFIC synthesis capability]. These should remain short performance tasks rather than large projects.</div>
+</section>
+
+<h2>Summative Assessment Plan</h2>
+<section class="summative-card">
+<p><a href="../summative/unit[#]_summative/unit[#]_summative_assessment.html">Unit [#] Summative Assessment</a> <span class="timing-label">[SPIRAL TIMING LABEL]</span></p>
+<p>Assessment is designed for a 45-minute paper-only time limit and is built around balanced evidence rather than a fixed question-count breakdown. Each version includes a mix of [UNIT-SPECIFIC task types] aligned to the unit learning targets and Depth of Knowledge expectations.</p>
+<p>Assessments emphasize [UNIT-SPECIFIC focus areas: key skills, representations, and reasoning types].</p>
+<p>Summative assessments are intentionally focused on DoK 1-3 evidence within a paper-only environment. Extended DoK 4 modeling, critique, design, and performance tasks are assessed separately through formative assessments, collaborative activities, investigations, discourse tasks, and performance assessments rather than embedded directly into the summative assessment.</p>
+<p>[SPIRAL SENTENCE — either: "Because of the spiraling course structure, Unit [#] content is revisited through subsequent units via retrieval practice, warm-ups, and formative assessments." OR for end-of-course units: "Because of the spiraling course structure, Unit [#] is assessed during a future course checkpoint or final exam after students have had additional opportunities to revisit and strengthen understanding through retrieval practice, warm-ups, formative assessments, and subsequent instruction."]</p>
+</section>
+
+<h2>Holistic Rubric</h2>
+<section class="rubric-card"><div class="rubric-level">A - Highly Proficient</div><p>[UNIT-SPECIFIC first sentence: strong flexible understanding of this unit's key concepts.] Work is accurate, well-organized, and supported by clear reasoning. The student consistently connects equations, graphs, tables, and contexts while justifying conclusions using precise mathematical language.</p></section>
+<section class="rubric-card"><div class="rubric-level">B - Proficient</div><p>[UNIT-SPECIFIC first sentence: solid understanding of the essential unit concepts.] Most work is accurate, and the student can complete standard and moderately complex tasks independently. Explanations are generally clear, though they may lack some precision or depth.</p></section>
+<section class="rubric-card"><div class="rubric-level">C - Developing Proficiency</div><p>[UNIT-SPECIFIC first sentence: partial but passable understanding of unit concepts.] The student can complete many routine tasks but may need support with notation, reasoning, restrictions, representations, or multi-step problem solving. Work may contain errors or incomplete explanations, but there is enough evidence that the student understands the main ideas.</p></section>
+<section class="rubric-card"><div class="rubric-level">Not Yet - Insufficient Evidence</div><p>[UNIT-SPECIFIC first sentence: does not yet demonstrate sufficient understanding of the essential unit concepts.] Work shows major errors, missing reasoning, weak conceptual understanding, or inability to connect representations. The student may need reteaching, additional practice, or reassessment to demonstrate proficiency.</p></section>
+
+</div>
+</body>
+</html>

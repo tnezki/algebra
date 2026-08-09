@@ -1,0 +1,804 @@
+FORMATIVE ASSESSMENT BUILD PROMPT
+════════════════════════════════════════════════════════════════
+
+READ ORDER — MANDATORY BEFORE ANY OUTPUT
+
+1. Read THIS document completely.
+2. Read the uploaded ASSESSMENT BANK HTML completely.
+   The bank is the source of all question content.
+   Every formative derives from a specific bank item.
+   Do not invent questions independently.
+3. Read graph_tool.py completely when uploaded.
+   Know which graph types exist before planning figures.
+4. don't avoid graphs to save making the resources.
+
+Do not begin output until all uploaded files are fully read.
+Say nothing until the ZIP is delivered.
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If saved memory, prior habit, prior conversation, generic
+convention, or any other instruction conflicts with this file,
+follow this file. Do not drift. Do not freelance.
+
+════════════════════════════════════════════════════════════════
+
+BANK FILE READING — CRITICAL MANDATE
+
+The assessment bank HTML is fully available in context.
+Do not report that the bank is truncated or partially inspected.
+Do not ask for a re-upload of any file uploaded in this session.
+Do not ask for any file not listed in READ ORDER.
+If a section of the bank appears cut off, build using the
+items that are visible and supplement from the strongest
+remaining items at each DOK level.
+This mandate overrides any perceived file-reading limitation.
+
+════════════════════════════════════════════════════════════════
+
+WHAT "BUILD" MEANS
+
+When the user says build / create / generate / make:
+
+  ✓ Read PM and all uploaded source files
+  ✓ Run PLANNING AUDIT before writing item 1
+  ✓ Generate all 16 HTML files, each with exactly 8 versions
+  ✓ Derive every version from a specific bank item
+  ✓ Generate generate_graphs.py when figures are needed
+  ✓ Run all 7 quality passes
+  ✓ Output QA LOG in chat
+  ✓ Create unit[#]_catalog_update.csv and include it in the ZIP; also summarize the catalog update in chat
+  ✓ Assemble and deliver the ZIP
+
+Build does NOT mean:
+  sample / scaffold / placeholder / partial build /
+  show one formative first / ask before continuing /
+  report that the bank was too large to fully inspect /
+  explain what a completed build would require /
+  deliver a structure test instead of the package
+
+The ZIP is the only acceptable endpoint.
+Do not stop before delivering it.
+
+Before assembling the ZIP, ask privately:
+  1. Did I fully read the PM and all uploaded files?
+  2. Did I complete the PLANNING AUDIT before writing item 1?
+  3. Is every formative derived from a named bank item?
+  4. Does every HTML file have exactly 8 versions (V1–V8)?
+  5. Are V1–V4 one question family?
+  6. Are V5–V6 a different question family from V1–V4?
+  7. Are V7–V8 a different question family from both V1–V4 and V5–V6?
+  8. Does every figure reference have a graph call in generate_graphs.py?
+  9. Does every file use inline CSS from the locked template?
+ 10. Are all QA passes PASS?
+ 11. Did I create unit[#]_catalog_update.csv, verify all 16 slots have V1–V4, V5–V6, and V7–V8 rows, and include the CSV in the ZIP?
+If any answer is NO, fix before assembling the ZIP.
+
+════════════════════════════════════════════════════════════════
+
+WHAT YOU BUILD
+
+16 HTML files — one per formative assessment:
+  unit[#]_dok1-1.html through unit[#]_dok1-4.html  (DOK 1)
+  unit[#]_dok2-1.html through unit[#]_dok2-4.html  (DOK 2)
+  unit[#]_dok3-1.html through unit[#]_dok3-4.html  (DOK 3)
+  unit[#]_dok4-1.html through unit[#]_dok4-4.html  (DOK 4)
+
+Each HTML file contains exactly 8 versions, V1 through V8.
+Each version is one full print-ready page: <section class="page">
+
+Also build:
+  generate_graphs.py — only when figures are needed.
+    Copy graph_tool.py in full. Append generation calls below
+    the final append marker. Never modify source lines above it.
+
+  figures/ — empty folder if figures are used.
+    User runs generate_graphs.py locally to populate it.
+
+unit[#]_catalog_update.csv — detailed source-use catalog for master_catalog.xlsx updates
+
+ZIP structure:
+  unit[#]_formative/
+    unit[#]_dok1-1.html  ...  unit[#]_dok4-4.html  (16 files)
+    generate_graphs.py          ← only if figures used
+    figures/                    ← only if figures used
+
+ZIP name:  unit[#]_formative.zip
+
+════════════════════════════════════════════════════════════════
+
+PLANNING AUDIT — RUN BEFORE WRITING ITEM 1
+
+Before writing any HTML, complete this planning table privately.
+Do not write item 1 until every row is filled.
+
+For each of the 16 formative slots, assign:
+
+  Slot:       dok[N]-[M]
+  Target:     [skill name — from bank section title]
+  V1–V4 seed: [bank item ID] — [brief description] — Mode [A/B]
+  V5–V6 seed: [bank item ID or adaptation] — [brief description]
+  V7–V8 seed: [bank item ID or adaptation] — [brief description]
+  Figure:     [YES — type / NO]
+
+ANTI-REPETITION RULES during planning:
+  1. No bank item may serve as V1–V4 seed for more than one slot.
+  2. V5–V6 must come from a different bank item than V1–V4 for
+     the same slot. Different family = different question structure.
+  3. V7–V8 must come from a different bank item than both V1–V4
+     and V5–V6 for the same slot.
+  4. Across the 16 slots, no skill should appear more than twice
+     as a V1–V4 seed unless the unit genuinely requires it.
+
+If you find yourself assigning the same item to multiple V1–V4
+seeds — stop and reassign before writing anything.
+
+════════════════════════════════════════════════════════════════
+
+SOURCE SELECTION — RUN AS PART OF PLANNING AUDIT
+
+Step 1: Scan the bank for all items tagged:
+  <!-- assessment-grade -->
+  List: ID, DOK level, section, brief description.
+
+Step 2: Group by DOK level. Each DOK level needs 4 formative slots.
+
+Step 3: Fill the 16 V1–V4 seeds.
+  — Prefer assessment-grade items.
+  — If a DOK level has more than 4 AG items: pick the 4 that
+    best represent distinct skills or sections.
+  — If fewer than 4 AG items: supplement with the strongest
+    non-AG items (self-contained, variantable, no cross-refs).
+
+Step 4: For each slot, identify V5–V6 and V7–V8 seeds.
+  — Pull from the same DOK level and same skill target.
+  — May use additional AG items or strong non-AG items.
+  — May be bank-derived adaptations when items are limited.
+    "Bank-derived adaptation" = same skill, different scenario,
+    built by combining elements from 2–3 bank items at that level.
+
+Step 5: Choose Mode A or Mode B for the V1–V4 family.
+
+  MODE A — SINGLE BANK-SEED FAMILY
+    One bank item → 4 parallel versions (numbers/context vary).
+    Use when: item is clean, standalone, naturally variantable.
+
+  MODE B — ADJACENT-RUNG BRIDGE
+    Two bank items from adjacent ladder rungs → one multi-part.
+    Part a = lower rung. Part b = upper rung.
+    Use when: items share a natural context bridge and one item
+    alone is too thin for a formative.
+    File goes in the LOWER rung's DOK folder.
+
+  V5–V6 and V7–V8 should only use mode b
+
+════════════════════════════════════════════════════════════════
+VISUAL / GRAPH REPRESENTATION MANDATE
+
+Before assigning formative slots, scan the bank for all graph-based, figure-based, table-based, diagram-based, and model-based items.
+
+For any unit where visual representation is central to the learning target — including function families, transformations, graphing, geometry, statistics, measurement, modeling, or polynomial area models — the formative package must preserve that representation type.
+
+Do not avoid graphs, figures, diagrams, or models to simplify the build.
+
+If the bank contains strong graph/figure/model items for a DOK level, those items should be preferred over text-only alternatives unless the visual item is flawed, non-variantable, or misaligned.
+
+For visually central units:
+
+* DOK 2 should use graph/figure/model items whenever the bank provides them.
+* At least half of the 16 formative files should include a visual representation when the bank supports it.
+* DOK 3 and DOK 4 should include visual critique, comparison, modeling, or revision tasks when those appear in the bank.
+* If fewer visual items are used than the bank appears to support, the builder must explain why in the QA log.
+
+PLANNING AUDIT ADDITION
+
+Add these fields to each planning-audit row:
+
+Representation in bank:
+[graph / figure / table / diagram / area model / algebra tiles / text-only]
+
+Representation chosen:
+[graph / figure / table / diagram / area model / algebra tiles / text-only]
+
+If text-only was chosen when a visual bank item exists:
+[required justification]
+
+VISUAL QA PASS
+
+Before ZIP assembly, run this pass:
+
+1. Count visual items available in the bank by DOK level.
+2. Count visual items selected for the formative package by DOK level.
+3. Confirm that visually central units preserve visual reasoning.
+4. Confirm every image reference has a matching generation call in generate_graphs.py.
+5. Confirm generate_graphs.py and figures/ are included whenever any figure is referenced.
+6. Fail the build if visual items were bypassed mainly for convenience.
+
+════════════════════════════════════════════════════════════════
+
+VERSION FAMILIES — REQUIRED STRUCTURE
+
+Each of the 16 formative HTML files contains 3 version families.
+
+V1–V4 — ASSESSMENT-DAY PARALLEL FORMS
+  Purpose: reduce copying on the day of assessment.
+  Same question family. Different numbers, context, or values.
+  All 4 must be genuinely distinct — not trivially the same.
+
+V5–V6 — FIRST REASSESSMENT / MAKEUP PAIR
+  Purpose: absent students or first reassessment.
+  DIFFERENT question family from V1–V4.
+  Same skill target and DOK level as V1–V4.
+  The two versions parallel each other (different numbers).
+
+V7–V8 — SECOND REASSESSMENT / MAKEUP PAIR
+  Purpose: second reassessment or additional retake.
+  DIFFERENT question family from both V1–V4 and V5–V6.
+  Same skill target and DOK level.
+  The two versions parallel each other (different numbers).
+
+A student who took V2 should see V5 as a fresh question family.
+A student who took V5 should see V7 as another fresh family.
+
+Not allowed:
+  — V5–V8 as simple number swaps of V1–V4.
+  — V7–V8 as simple number swaps of V5–V6.
+  — Changing the DOK level or skill between families.
+
+════════════════════════════════════════════════════════════════
+
+HTML FILE STRUCTURE — LOCKED TEMPLATE
+
+Every formative HTML file uses this exact template.
+CSS is SELF-CONTAINED — inline style block, no external links.
+This is intentional: formative files are printed and distributed
+independently of the course site.
+
+DO NOT use external CSS link tags.
+DO NOT create custom wrapper classes.
+DO NOT add workspace boxes unless explicitly requested.
+DO NOT add <style> overrides below the locked block.
+
+ALLOWED classes in <body>:
+  page  header-row  assessment-title  name-line
+  directions  task  qnum  scenario  note  word-bank
+  graph-block  graph-md  graph-sm  graph-lg
+  values  data-table  left  tight
+
+DO NOT use: container  card  formative-card  formative-header
+  source-note  workspace  problem-card  item-card  or any class
+  not in the list above. Unknown classes render as unstyled.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DOK [N].[M] [TASK NAME]</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.5in; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; color:#111; background:#fff; font-size:11pt; line-height:1.38; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page { min-height:10in; page-break-after:always; break-after:page; display:flex; flex-direction:column; }
+.page:last-child { page-break-after:auto; }
+.header-row { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #00003d; padding-bottom:3px; margin-bottom:6px; flex-shrink:0; gap:12px; }
+.assessment-title { color:#00003d; font-size:14px; font-weight:800; }
+.name-line { font-weight:700; font-size:13px; white-space:nowrap; }
+.name-line span { display:inline-block; border-bottom:1px solid #111; height:12px; margin-left:6px; width:2.2in; vertical-align:bottom; }
+.directions { color:#444; font-size:10.5pt; margin:0 0 10px 0; flex-shrink:0; }
+.task { flex:1; padding:6px 2px 0 2px; }
+.qnum { color:#00003d; font-size:14pt; font-weight:800; margin:4px 0 6px 0; }
+p { margin-bottom:8px; }
+ol, ul { margin-left:26px; margin-bottom:10px; }
+li { margin-bottom:7px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin:10px 0 12px 0; }
+th, td { border:1px solid #777; padding:7px 8px; text-align:center; vertical-align:middle; font-size:11pt; }
+th { font-weight:800; background:#f4f4f4; }
+.left td, .left th { text-align:left; }
+.data-table { width:auto; margin:10px auto 12px auto; }
+.data-table th, .data-table td { min-width:0.55in; }
+.word-bank { border:1px solid #aaa; background:#f7f7f7; padding:8px 10px; margin:8px 0 12px 0; }
+.note { font-style:italic; color:#333; }
+.tight li { margin-bottom:4px; }
+.scenario { background:#f8fbff; border-left:5px solid #00003d; padding:8px 10px; margin:8px 0 12px 0; }
+.graph-block { text-align:center; margin:10px 0; }
+.graph-md img { width:280px; }
+.graph-sm img { width:200px; }
+.graph-lg img { width:380px; }
+@media print { body { font-size:11pt; } }
+</style>
+</head>
+<body>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit [#] DOK [N].[M] [TASK NAME] &nbsp; V1</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+[QUESTION CONTENT — VERSION 1]
+</div>
+</section>
+<section class="page">
+<div class="header-row"><div class="assessment-title">Unit [#] DOK [N].[M] [TASK NAME] &nbsp; V2</div><div class="name-line">Name:<span></span></div></div>
+<div class="directions">Show work and mark answers clearly.</div>
+<div class="task">
+<div class="qnum">1.</div>
+[QUESTION CONTENT — VERSION 2]
+</div>
+</section>
+[V3 through V8 follow the identical page pattern above]
+</body>
+</html>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUESTION CONTENT — WHAT GOES INSIDE .task
+
+Every version must have concrete, student-ready math.
+No placeholder language. No "insert question here."
+
+CONTENT STRUCTURE OPTIONS (use whichever fits the item):
+
+Option 1 — Scenario + ordered parts:
+  <div class="scenario">A gym charges a \$12 startup fee and \$4 per visit.</div>
+  <p>The cost model is $12+4v$.</p>
+  <ol type="a">
+  <li>Evaluate the expression for $v=6$.</li>
+  <li>Interpret the result: what does it represent in context?</li>
+  </ol>
+
+Option 2 — Direct question with ordered parts:
+  <p>Evaluate $3(2x-4)+5$ when $x=-1$.</p>
+  <ol type="a">
+  <li>Show each step of substitution and simplification.</li>
+  <li>Identify which operation must be applied first and why.</li>
+  </ol>
+
+Option 3 — Error analysis (DOK 3):
+  <p>A student simplifies $3(2x-4)+5$ and writes $6x-7$.</p>
+  <ol type="a">
+  <li>Identify the error. Show the correct step.</li>
+  <li>Explain in one sentence why the student's approach fails.</li>
+  </ol>
+
+Option 4 — Design/model task (DOK 4, 5–10 min):
+  <div class="scenario">A student has \$32. A sandwich costs \$7; each snack costs \$3.</div>
+  <ol type="a">
+  <li>Write an inequality for the number of snacks $s$ with one sandwich.</li>
+  <li>Solve the inequality and interpret the solution set.</li>
+  <li>Recommend a reasonable number of snacks and justify your choice.</li>
+  </ol>
+
+Option 5 — Table or figure item:
+  <p>The table and expression are meant to match. Find the first error.</p>
+  <table class="values data-table">
+  <tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+  <tr><td>$2x+5$</td><td>5</td><td>7</td><td>8</td><td>11</td></tr>
+  </table>
+  <p>Identify the error and give the correct value.</p>
+
+Option 6 — Figure item:
+  <p>Plot $-\frac{3}{2}$ and $2.5$ on the number line.
+  Then write which value is greater and explain how you know.</p>
+  <div class="graph-block graph-md">
+    <img src="figures/u[#]_f_[descriptor]_sq_v1.png" alt="Blank number line">
+  </div>
+
+Use .scenario for context that frames the problem.
+Use <p> for instructions and prose.
+Use <ol type="a"> for lettered parts.
+Use table.values for expression-vs-table mismatch.
+Use graph-block for figures — never raw <img> without the wrapper.
+
+════════════════════════════════════════════════════════════════
+
+TITLE FORMAT
+
+Browser tab:     DOK [N].[M] [TASK NAME]
+Header per page: Unit [#] DOK [N].[M] [TASK NAME] &nbsp; V[1-8]
+
+[N] = DOK level (1–4)
+[M] = formative number within that level (1–4)
+[TASK NAME] = short descriptive name from the skill
+  Examples: Rational Number Fluency Check
+            Expression Evaluation Task
+            Error Analysis: Order of Operations
+            Inequality Modeling Task
+
+If assessment plan is uploaded: use its task names.
+If not: derive from the bank section title + DOK-appropriate verb.
+  DOK 1: Fluency Check / Recognition Task
+  DOK 2: Application Task / Connection Task
+  DOK 3: Analysis Task / Reasoning Task / Error Analysis
+  DOK 4: Modeling Task / Design Task
+
+════════════════════════════════════════════════════════════════
+
+DOK AUTHENTICITY — ENFORCE IN EVERY VERSION
+
+DOK 1: Recall, recognition, single-step procedure, simple
+  graphing/reading. No strategic choice required.
+  FAIL: item requires interpretation beyond the procedure.
+
+DOK 2: Apply a concept, multi-step execution, representation
+  connection, interpretation in context.
+  FAIL (too low): pure computation with no interpretation.
+  FAIL (too high): requires analysis or critique.
+
+DOK 3: Strategic reasoning — critique an error, compare two
+  methods, analyze structure, construct a strategy, find a
+  mismatch between representations.
+  FAIL: reasoning is pre-filled for the student (table with
+  categories given, error explained in the prompt).
+  Student must do the analysis, not just recognize a label.
+
+DOK 4: Extended reasoning — design, model, synthesize, revise,
+  recommend. Completable in 5–10 minutes on paper.
+  FAIL: longer than 10 minutes or requires multi-day work.
+  FAIL: no genuine design or synthesis demand (just DOK 2).
+
+10-second test (DOK 2+):
+  If a strong student can answer by scanning in under 10 seconds
+  without computing, it is too weak. Revise before delivery.
+
+════════════════════════════════════════════════════════════════
+
+GRAPH_TOOL.PY — SAME RULES AS BANK PM
+
+If graph_tool.py is uploaded:
+  Copy in full as generate_graphs.py.
+  Append generation calls only below the final append marker.
+  Never modify source lines above the marker.
+  Never duplicate imports, OUTPUT_DIR, or os.makedirs.
+  Never use raw matplotlib outside graph_tool functions.
+  Never put the answer or value being found in title= or alt=.
+  All math in title=, xlabel=, ylabel=, cell values must use
+  LaTeX r'$...$' strings.
+
+Figure naming:
+  u[unit]_f_[slot]_[descriptor]_sq_v1.png
+  Examples:
+    u0A_f_dok1_1_numberline_blank_sq_v1.png
+    u0A_f_dok2_4_ineq_v3_sq_v1.png
+    u0A_f_dok3_2_area_mismatch_sq_v1.png
+
+Blank figures that are structurally identical across versions:
+  share ONE file — do not create numbered copies.
+  WRONG: numberline_blank1, numberline_blank2 ...
+  RIGHT: numberline_blank referenced by all versions that need it.
+
+Figure HTML reference (inside .task):
+  <div class="graph-block graph-md">
+    <img src="figures/[filename].png" alt="[non-answer description]">
+  </div>
+
+════════════════════════════════════════════════════════════════
+
+MATHJAX — EXACT CONFIGURATION
+
+Config must appear BEFORE the CDN script. Always.
+
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+Rules:
+  $...$ inline. $$...$$ display. Never \(...\) or \[...\].
+  CDN: cdn.jsdelivr.net only.
+  Currency: \$5 not $5.
+  Comparison in math: \lt and \gt not < and >.
+    WRONG: $x<3$  $x>0$
+    RIGHT: $x\lt 3$  $x\gt 0$
+
+════════════════════════════════════════════════════════════════
+
+QUALITY PASSES — RUN ALL BEFORE ASSEMBLING ZIP
+
+════════════════════════════════════════════════════════════════
+
+PASS 1 — FILE AND VERSION COUNT
+
+  HTML file count:        [N]  (must = 16)
+  dok1-1 through dok1-4:  4/4
+  dok2-1 through dok2-4:  4/4
+  dok3-1 through dok3-4:  4/4
+  dok4-1 through dok4-4:  4/4
+
+  Versions per file (count <section class="page"> tags):
+    dok1-1:[N] dok1-2:[N] dok1-3:[N] dok1-4:[N]
+    dok2-1:[N] dok2-2:[N] dok2-3:[N] dok2-4:[N]
+    dok3-1:[N] dok3-2:[N] dok3-3:[N] dok3-4:[N]
+    dok4-1:[N] dok4-2:[N] dok4-3:[N] dok4-4:[N]
+  All must = 8. Any file ≠ 8: FAIL.
+
+  generate_graphs.py: [PRESENT / OMITTED — reason]
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 2 — STRUCTURE CHECK
+
+  For each of the 16 files, confirm ALL of the following:
+    — Inline <style> block present (no <link> tags)
+    — MathJax config before CDN script
+    — Exactly 8 <section class="page"> elements
+    — Each section: header-row → directions → task → qnum
+    — Title format: "Unit [#] DOK [N].[M] [Name] V[n]"
+    — V counter runs 1–8 in order
+    — No custom wrapper classes (container, card, workspace, etc.)
+    — No dashed workspace boxes
+
+  Issues:
+    [filename]: [issue]
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 3 — VERSION-FAMILY CHECK
+
+  For each of the 16 files:
+    [file]: V1–V4 family = [question description]
+            V5–V6 family = [question description — different?]
+            V7–V8 family = [question description — different?]
+            V5–V6 different from V1–V4: YES/NO
+            V7–V8 different from V5–V6: YES/NO
+
+  Files where V5–V8 are simple number swaps of V1–V4: [list or NONE]
+  Files where V7–V8 are simple swaps of V5–V6:        [list or NONE]
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 4 — DOK AUTHENTICITY
+
+  For each of the 16 files, confirm all 8 versions genuinely
+  meet their stated DOK level.
+
+  DOK 1 — flag if any version requires reasoning or interpretation.
+  DOK 2 — flag if any version is pure computation (DOK 1 level).
+  DOK 3 — flag if reasoning is pre-filled for the student.
+  DOK 4 — flag if any version exceeds 10 minutes or is a project.
+           Flag if any version lacks genuine design or synthesis.
+
+  10-second test failures:
+    [file V[n]]: [description of failure]
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 5 — FIGURES
+
+  All <img src="..."> references across all 16 files:
+    [figure file]: referenced in generate_graphs.py? YES/NO
+
+  Blank figure sharing:
+    [figure name]: shared across [versions]? YES / VIOLATION
+
+  Graph title violations (title reveals answer):
+    [figure file]: title=[value] — OK / VIOLATION
+  RESULT: PASS / FAIL / N/A (if no figures)
+
+════════════════════════════════════════════════════════════════
+
+PASS 6 — MATHJAX AND CURRENCY
+
+  For each of the 16 files:
+    Bare $[digit] for currency:        [list or NONE]
+    \(...\) or \[...\] delimiters:     [list or NONE]
+    Raw < or > inside math:            [list or NONE]
+    Config before CDN:                 YES / NO
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 7 — SOURCE TRACEABILITY
+
+  For each formative, confirm source bank item is named:
+    dok1-1: V1–V4 from [ID] / V5–V6 from [ID] / V7–V8 from [ID]
+    dok1-2: ...
+    ... (all 16)
+
+  Any formative not traceable to a specific bank item: FAIL.
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+QA LOG — OUTPUT IN CHAT (not inside any HTML file)
+
+QA LOG — unit[#] Formative Assessments
+Build date: [date]
+Unit: [number and title]
+
+Planning audit completed: YES/NO
+Source selection complete (16 V1–V4 seeds named): YES/NO
+
+PASS 1 — File/version count:       PASS/FAIL
+PASS 2 — Structure:                PASS/FAIL
+PASS 3 — Version families:         PASS/FAIL
+PASS 4 — DOK authenticity:         PASS/FAIL
+PASS 5 — Figures:                  PASS/FAIL / N/A
+PASS 6 — MathJax/currency:         PASS/FAIL
+PASS 7 — Source traceability:      PASS/FAIL
+
+Issues fixed before delivery: [list]
+Non-blocking notes: [list or NONE]
+
+OVERALL: PASS — ZIP assembled / FAIL — [blocker]
+
+════════════════════════════════════════════════════════════════
+
+CATALOG UPDATE — OUTPUT IN CHAT AFTER QA LOG
+
+CATALOG UPDATE — CREATE CSV FILE AND SUMMARIZE IN CHAT AFTER QA LOG
+
+Create a separate CSV file named:
+
+unit[#]_catalog_update.csv
+
+This file is required for every formative build. It tracks exactly how bank items were used in the formative package and is designed to be pasted or imported into master_catalog.xlsx.
+
+CSV columns, in this exact order:
+
+q_id,artifact_type,artifact_unit,artifact_section,artifact_day,artifact_slot,usage_type,combine_with
+
+Required values:
+
+q_id
+The original bank item ID used as a source.
+Example: 2-S1-DOK1.03
+
+artifact_type
+Always: formative
+
+artifact_unit
+The unit number.
+Example: 2
+
+artifact_section
+The source bank section or inferred section label.
+Example: S1 or 2.1
+
+artifact_day
+Use — unless a specific day is supplied by an assessment plan.
+
+artifact_slot
+The formative file slot and version family.
+Examples:
+dok1-1 V1-4
+dok1-1 V5-6
+dok1-1 V7-8
+
+usage_type
+Use one of:
+number-swap
+context-swap
+structure-adapt
+combine
+
+```
+number-swap = same question family with changed values only.
+context-swap = same mathematical structure with a changed context.
+structure-adapt = same skill target but changed question structure.
+combine = two bank items are intentionally bridged into one formative family.
+```
+
+combine_with
+Use — unless usage_type is combine.
+If usage_type is combine, list the other bank item ID used in the paired bridge.
+
+ROW RULES
+
+Create one row for every bank item used in every version family.
+
+Each formative slot normally has at least 3 catalog rows:
+
+one row for V1–V4
+one row for V5–V6
+one row for V7–V8
+
+If a version family uses Mode B or otherwise combines two bank items, include two rows for that family:
+
+[lower/source ID] with combine_with = [paired ID]
+[paired ID] with combine_with = [lower/source ID]
+
+For a standard 16-slot build with no combine rows, the CSV will usually contain 48 data rows:
+
+16 slots × 3 version families = 48 rows
+
+If combine rows are used, the CSV may contain more than 48 rows.
+
+DELIVERY REQUIREMENTS
+
+Include unit[#]_catalog_update.csv inside the ZIP root folder:
+
+unit[#]_formative/
+unit[#]_dok1-1.html
+...
+unit[#]_dok4-4.html
+generate_graphs.py          ← only if figures used
+figures/                    ← only if figures used
+unit[#]_catalog_update.csv  ← required
+
+In the chat response, do not paste the entire CSV unless requested. Instead, provide a brief catalog update summary showing:
+
+total catalog rows
+number of version-family source rows
+number of combine rows
+confirmation that the CSV is included in the ZIP
+
+CATALOG QA CHECK
+
+Before assembling the ZIP, verify:
+
+1. unit[#]_catalog_update.csv exists.
+2. The header exactly matches the required column order.
+3. Every one of the 16 formative slots has V1–V4, V5–V6, and V7–V8 represented.
+4. Every q_id in the CSV appears in the assessment bank or is explicitly part of a bank-derived adaptation.
+5. Every combine row has a non-empty combine_with value.
+6. The CSV is included inside the ZIP root folder.
+
+If any answer is NO, fix before delivering the ZIP.
+
+════════════════════════════════════════════════════════════════
+
+DELIVERY — ALWAYS A ZIP
+
+1. All 7 passes show PASS.
+2. Assemble: unit[#]_formative/ with 16 HTML + optional graph files.
+3. ZIP as unit[#]_formative.zip.
+4. Deliver the ZIP link.
+5. Output QA LOG in chat.
+6. Create unit[#]_catalog_update.csv and include it in the ZIP; also summarize the catalog update in chat.
+
+Do not deliver HTML files individually.
+Do not deliver a partial ZIP.
+
+════════════════════════════════════════════════════════════════
+
+COMMON FAILURE MODES — DO NOT DO THESE
+
+1.  Reporting that the bank was only partially read or asking
+    for a re-upload. The bank is fully available. Build with it.
+2.  Asking for any file not in the READ ORDER.
+3.  Stopping before the ZIP is delivered.
+4.  Delivering a scaffold instead of the completed package.
+5.  Using external CSS link tags. Always inline style block.
+6.  Using classes not in the ALLOWED list above.
+7.  Producing fewer or more than 8 versions per file.
+8.  Making V5–V8 simple number swaps of V1–V4.
+9.  Making V7–V8 simple swaps of V5–V6.
+10. Letting the DOK level drift between version families.
+11. Inventing questions not traceable to a bank item.
+12. Using raw matplotlib outside graph_tool.py.
+13. Modifying graph_tool.py source lines — append only.
+14. Putting the answer in a graph title= or alt= string.
+15. Creating numbered blank figures (blank1, blank2...).
+16. Bare $5 for currency — always \$5.
+17. Using \(...\) or \[...\] MathJax delimiters.
+18. Raw < or > inside math — always \lt and \gt.
+19. Adding dashed workspace boxes.
+20. Cross-references between questions, versions, or bank cards.
+21. Generic DOK template shells without concrete math values.
+22. Pre-answering a table or figure the student should complete.
+23. Making DOK 4 formatives into multi-day projects.
+24. Omitting the QA log.
+25. Omitting the catalog update table.
+26. Skipping the PLANNING AUDIT before writing item 1.
+27. Claiming QA passes without evidence counts.
+28. Embedding the QA log inside any HTML file.
+29. One large HTML for all 16 formatives — always 16 files.
+30. Reporting intermediate status before the ZIP is ready.
+
+════════════════════════════════════════════════════════════════

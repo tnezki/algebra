@@ -1,0 +1,205 @@
+ASSESSMENT PLAN POLISH PROMPT
+════════════════════════════════════════════════════════════════
+
+INPUTS — WHAT YOU RECEIVE AT SESSION START
+
+1. This file (uploaded .txt) — read it completely first.
+2. A draft assessment plan HTML file — the file to polish.
+3. The build prompt (1_portable_memory_assessment_plan.txt) —
+   the source of truth for all rules.
+
+Read all three before doing anything.
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH FOR POLISH BEHAVIOR
+
+The build prompt defines what correct looks like.
+This file defines how to audit and fix a draft against it.
+Do not invent fixes not listed here.
+Do not rewrite content that is not flagged by a pass.
+
+════════════════════════════════════════════════════════════════
+
+YOUR JOB
+
+Run all passes in order.
+Fix every flagged issue directly in the HTML.
+Deliver one corrected HTML file + QA report.
+Same filename as the input. No ZIP. No subfolder.
+
+Do not begin output until you have read everything.
+Say nothing until you are ready to deliver.
+
+════════════════════════════════════════════════════════════════
+PART 1 — POLISH PASSES
+════════════════════════════════════════════════════════════════
+
+Run passes in order. Each pass is focused and lightweight.
+Report actual findings — do not just write "clean" without
+checking. Verb passes require listing verbs, not summarizing.
+
+────────────────────────────────────────────────────────────────
+PASS 1 — CSS AND LINK CHECK
+
+  No <style> block anywhere in the file
+  CSS link tags exactly: ../../../../css/base.css
+                         ../../../../css/assessment_plan.css
+  Head order: MathJax config → MathJax script → base.css → assessment_plan.css
+  All 16 formative links match pattern:
+    ../formative/unit[#]_formative/unit[#]_dok[level]-[n].html
+  Summative link matches pattern:
+    ../summative/unit[#]_summative/unit[#]_summative_assessment.html
+  Unit number consistent in all hrefs — no mismatches
+
+  Fix any broken links or head order problems directly.
+
+────────────────────────────────────────────────────────────────
+PASS 2 — STRUCTURE CHECK
+
+  Sections present and in order:
+    5 section outline cards
+    1 Unit Modeling Themes card
+    Learning Ladder
+    Progress Tracking
+    Assessment Methods by DOK (DOK 1, 2, 3, 4 bars)
+    Summative Assessment Plan
+    Holistic Rubric (4 levels)
+  Plan ends at rubric — nothing after
+  No bank section anywhere
+
+  Fix missing or out-of-order sections.
+
+────────────────────────────────────────────────────────────────
+PASS 3 — I-CAN VERB AUDIT
+
+  Extract and list every opening verb for all 15 I-cans.
+  Example output format:
+    8.1: construct / apply / determine
+    8.2: formulate / use / assess
+    ...
+    Tally — M: X  A: X  J: X
+
+  Check:
+    Total = 15 (3 per section)
+    Every section has at least 1 Modeling AND 1 Applying
+    M+A is 11–13
+    J is 2–4
+    No banned verbs:
+      identify / describe / match / recognize / list / name /
+      explain / compare / decide / evaluate / show / find /
+      justify / defend / argue
+    No verb repeated more than twice across all 15
+
+  Fix any violation. Re-tally after fixing.
+  Report final counts in QA report.
+
+────────────────────────────────────────────────────────────────
+PASS 4 — LADDER CHECK
+
+  Exactly 8 rungs listed 8 → 1
+  Row classes: dok4 (rungs 8-7), dok3 (rungs 6-5),
+               dok2 (rungs 4-3), dok1 (rungs 2-1)
+  DOK 4 rows: Level = Above
+  DOK 1-3 rows: Level = Essential
+  No two adjacent rungs share the same Math Practice
+    (check every consecutive pair top to bottom)
+  Verb balance reflects unit M/A/J budget (M+A dominant)
+
+  Fix row class errors, level errors, and MP adjacency conflicts.
+
+────────────────────────────────────────────────────────────────
+PASS 5 — FORMATIVE VERB AUDIT
+
+  Extract and list all 16 description opening verbs by DOK level.
+  Example output format:
+    DOK1: use / apply / classify / interpret
+    DOK2: construct / represent / calculate / compare
+    DOK3: assess / critique / determine / develop
+    DOK4: design / create / build / generate
+    Tally — M: X  A: X  J: X
+
+  Check:
+    M is 5–8
+    A is 5–8
+    J is 2–4
+    No single DOK level is all one verb type
+      (flag if all 4 DOK1 descriptions are applying,
+       or all 4 DOK4 descriptions are modeling, etc.)
+    DOK 3 tasks use varied formats — not all error analysis
+    DOK 4 tasks are 5-10 min, not projects
+
+  Fix verb clustering or weak verbs (identify/describe/show/list).
+  Re-tally after fixing.
+  Report final counts in QA report.
+
+────────────────────────────────────────────────────────────────
+PASS 6 — SUMMATIVE AND RUBRIC CHECK
+
+  Summative card contains exactly 4 paragraphs:
+    1. 45-minute paper-only, balanced evidence
+    2. Unit-specific emphasis
+    3. DOK 4 separation (locked language — do not rewrite)
+    4. Spiral sentence — confirm correct variant:
+       Mid-course: "...content is revisited through subsequent
+                   units via retrieval practice..."
+       End-of-course: "...assessed during a future course
+                   checkpoint or final exam..."
+
+  Rubric has 4 levels with correct classes:
+    A - Highly Proficient
+    B - Proficient
+    C - Developing Proficiency
+    Not Yet - Insufficient Evidence
+  First sentence of each level is unit-specific.
+  All text after the first sentence must match skeleton exactly —
+    do not rewrite or paraphrase locked language.
+
+  Fix only the first sentence if needed.
+  Never touch the remaining rubric text.
+
+────────────────────────────────────────────────────────────────
+PASS 7 — MATHJAX CHECK
+
+  Config block before CDN script tag
+  CDN: cdn.jsdelivr.net only
+  No \(...\) or \[...\] delimiters anywhere
+  Currency dollar signs use \$ not bare $
+
+  Fix any MathJax issues found.
+
+════════════════════════════════════════════════════════════════
+PART 2 — QA REPORT FORMAT
+════════════════════════════════════════════════════════════════
+
+Deliver the corrected HTML file first, then this report:
+
+PASS 1 — CSS/Links:       [CLEAN / FIXED: description]
+PASS 2 — Structure:       [CLEAN / FIXED: description]
+PASS 3 — I-Can Verbs:     [verb list + tally]
+                          M: X  A: X  J: X
+                          [CLEAN / FIXED: description]
+PASS 4 — Ladder:          [CLEAN / FIXED: description]
+PASS 5 — Formative Verbs: [verb list by DOK level + tally]
+                          M: X  A: X  J: X
+                          [CLEAN / FIXED: description]
+PASS 6 — Summative/Rubric:[CLEAN / FIXED: description]
+PASS 7 — MathJax:         [CLEAN / FIXED: description]
+
+Issues fixed:     [list or "none"]
+Issues remaining: [list anything that needs human review]
+
+════════════════════════════════════════════════════════════════
+COMMON POLISH FAILURE MODES
+════════════════════════════════════════════════════════════════
+
+1.  Reporting passes clean without actually listing verbs
+2.  Fixing I-can verbs without re-tallying the full 15
+3.  Rewriting rubric boilerplate when only first sentence needs changing
+4.  Rewriting formative descriptions beyond fixing the opening verb
+5.  Changing task names or timing labels during a verb fix
+6.  Fixing verb spread by clustering fixes in one DOK level
+7.  Flagging J=4 as a failure when 4 is within the ±1 range (2–4 is valid)
+8.  Skipping the spread check on formative verbs (all-one-type DOK level)
+9.  Using the mid-course spiral sentence for end-of-course units or vice versa
+10. Stopping mid-pass to ask questions — fix and note in report
