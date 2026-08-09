@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Showdown — Section 2.1</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/activities.css" rel="stylesheet"/>
+<style id="activity-local-overrides">
+/* Local correction pass: keep directions page scale, shrink problem/solution content, shrink graphs, and hide empty workspaces. */
+@page { size: letter portrait; margin: .35in; }
+@media screen, print {
+  .prob-head { font-size: 7.8pt !important; margin-bottom: 8px !important; padding-bottom: 4px !important; }
+  .prob-num { font-size: 22pt !important; margin-bottom: 6px !important; }
+  .prob-tag { font-size: 7.8pt !important; margin-bottom: 6px !important; }
+  .prob-q { font-size: 16.9pt !important; line-height: 1.25 !important; margin-bottom: 8px !important; }
+  .solution { font-size: 14.3pt !important; line-height: 1.25 !important; margin-top: 8px !important; padding-top: 8px !important; }
+  .solution ol, .solution ul { margin-top: 4px !important; margin-bottom: 0 !important; }
+  .solution li { margin-bottom: 2px !important; }
+  .work:empty, .workspace:empty { display: none !important; min-height: 0 !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+  .prob-q .graph-block img, .prob-q .ps-figure img { max-width: 5.69in !important; max-height: 3.68in !important; object-fit: contain !important; }
+  .prob-q .graph-block, .prob-q .ps-figure { margin: 8px auto !important; text-align: center !important; }
+  .exit-item, .stn-exit-item { font-size: 12.4pt !important; line-height: 1.25 !important; }
+
+  /* Exit tickets have no workspace: compact content only. */
+  .exit-no-work .exit-grid, .exit-ticket-page .exit-grid {
+    flex: 0 0 auto !important;
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+  }
+  .exit-no-work .problem, .exit-no-work .problem-body,
+  .exit-no-work .exit-item, .exit-no-work .stn-exit-item,
+  .exit-ticket-page .problem, .exit-ticket-page .problem-body {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .exit-no-work .workspace, .exit-no-work .work,
+  .exit-ticket-page .workspace, .exit-ticket-page .work {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .exit-no-work .problem-body::after, .exit-no-work .exit-item::after,
+  .exit-ticket-page .problem-body::after, .exit-ticket-page .exit-item::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Portrait station cards: four questions per page, duplicated in print order. */
+  .station-page {
+    width: auto !important;
+    max-width: 980px !important;
+    min-height: 9.3in !important;
+    border: 2px solid var(--text-dark) !important;
+    padding: 16px 18px !important;
+    margin: 0 auto !important;
+  }
+  .stn-header { grid-template-columns: 1fr 2.5in !important; }
+  .stn-header .act-title { font-size: 24pt !important; }
+  .station-header { font-size: 15pt !important; padding: 8px 12px !important; margin-bottom: 8px !important; }
+  .copy-note { top: 20px !important; right: 20px !important; font-size: 7.5pt !important; }
+  .station-grid { grid-template-columns: 1fr 1fr !important; grid-template-rows: 1fr 1fr !important; gap: 8px !important; flex: 1 !important; }
+  .station-card { font-size: 9.2pt !important; line-height: 1.18 !important; padding: 7px !important; overflow: hidden !important; }
+  .station-card h3 { font-size: 10pt !important; margin-bottom: 3px !important; }
+  .station-card-label { font-size: 7.2pt !important; margin-bottom: 3px !important; }
+  .station-card .prob-q { font-size: 9.2pt !important; line-height: 1.18 !important; margin: 0 !important; }
+  .station-card .solution { font-size: 8.2pt !important; line-height: 1.15 !important; margin: 4px 0 0 0 !important; padding-top: 4px !important; }
+  .station-card .solution ol { margin-left: 15px !important; }
+  .station-card .solution li { margin-bottom: 1px !important; }
+  .station-card .ps-figure, .station-card .graph-block { margin: 4px auto !important; }
+  .station-card .ps-figure img, .station-card .graph-block img { max-width: 100% !important; max-height: 1.35in !important; object-fit: contain !important; }
+  .station-card table.values { font-size: 8pt !important; margin: 4px auto !important; }
+  .page-footer { font-size: 7.2pt !important; padding-top: 6px !important; }
+}
+</style>
+</head>
+<body><div class="wrap">
+<section class="page">
+<div class="dir-header">
+<div>
+<div class="act-eyebrow">Unit 2 · Section 1 · Activity 1</div>
+<div class="act-title">Showdown</div>
+<div class="act-subtitle">Rate of Change and Slope</div>
+</div>
+<div class="act-meta">
+<b>Source:</b> practice_set_2_1_2.html<br/>
+<b>Time:</b> 20–30 min<br/>
+<b>Groups:</b> Groups of 4<br/>
+<b>Materials:</b> Whiteboards + markers
+    </div>
+</div>
+<div class="dir-body">
+<div class="dir-text">
+<div class="dir-row">
+<span class="dir-label">Structure</span>
+        Indy → Group comparison → Consensus
+      </div>
+<div class="dir-row">
+<span class="dir-label">Setup</span>
+        Groups of 4. Each person has a whiteboard. Rotate the Captain each round.
+      </div>
+<div class="dir-row">
+<span class="dir-label">Directions</span>
+<ol>
+<li>Each student solves the problem individually</li><li>When prompted, students Showdown (reveal answers at the same time)</li><li>Discuss differences and justify reasoning</li><li>Group agrees on a correct final answer</li><li>Repeat</li>
+</ol>
+</div>
+<div class="dir-goal">
+<b>Goal:</b> Accountability + justification
+      </div>
+</div>
+<div class="looks-like">
+<div class="looks-good">
+<div class="looks-header">✓ Looks Like Success</div>
+<ul><li>Every student writes a full attempt before any reveal.</li><li>The Captain waits until all boards are ready before calling Showdown.</li><li>Students explain differences before the group chooses one final answer.</li></ul>
+</div>
+<div class="looks-bad">
+<div class="looks-header">✗ Doesn't Look Like</div>
+<ul><li>One student announces an answer before boards are revealed.</li><li>Students erase or change work after seeing another board.</li><li>The group accepts an answer without asking for evidence.</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 1</span>
+</div>
+<div class="prob-num">Problem 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>7</td><td>11</td><td>15</td><td>19</td></tr>
+</table>
+<p>Use adjacent rows to find the constant rate of change.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 1</span>
+</div>
+<div class="prob-num">Solution 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>7</td><td>11</td><td>15</td><td>19</td></tr>
+</table>
+<p>Use adjacent rows to find the constant rate of change.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 2</span>
+</div>
+<div class="prob-num">Problem 2</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>State the slope of a horizontal line through $(3,-4)$ and $(9,-4)$. Explain in one sentence why.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 2</span>
+</div>
+<div class="prob-num">Solution 2</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>State the slope of a horizontal line through $(3,-4)$ and $(9,-4)$. Explain in one sentence why.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>The two points have the same $y$-coordinate.</li><li>$\Delta y=0$, so the slope is $0$.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 3</span>
+</div>
+<div class="prob-num">Problem 3</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<table class="values">
+<tr><th>$x$</th><th>1</th><th>3</th><th>6</th><th>10</th></tr>
+<tr><td>$y$</td><td>5</td><td>11</td><td>20</td><td>32</td></tr>
+</table>
+<p>The input gaps are not all the same. Determine whether the rate of change is constant, and show the rate you used.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 3</span>
+</div>
+<div class="prob-num">Solution 3</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<table class="values">
+<tr><th>$x$</th><th>1</th><th>3</th><th>6</th><th>10</th></tr>
+<tr><td>$y$</td><td>5</td><td>11</td><td>20</td><td>32</td></tr>
+</table>
+<p>The input gaps are not all the same. Determine whether the rate of change is constant, and show the rate you used.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 4</span>
+</div>
+<div class="prob-num">Problem 4</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>Two students calculate the slope of the same line. Andre uses two points from a graph; Elena uses this table.</p>
+<table class="values">
+<tr><th>$x$</th><th>-1</th><th>1</th><th>3</th><th>5</th></tr>
+<tr><td>$y$</td><td>-3</td><td>0</td><td>3</td><td>6</td></tr>
+</table>
+<p>Compare the two methods. Which method is less likely to create an arithmetic error here, and why?</p>
+<div class="ps-figure wu-img-350"><img alt="two coordinate planes with matching linear graphs" src="figures/u2_bank_s1_method_compare_sq_v1.png"/></div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 4</span>
+</div>
+<div class="prob-num">Solution 4</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>Two students calculate the slope of the same line. Andre uses two points from a graph; Elena uses this table.</p>
+<table class="values">
+<tr><th>$x$</th><th>-1</th><th>1</th><th>3</th><th>5</th></tr>
+<tr><td>$y$</td><td>-3</td><td>0</td><td>3</td><td>6</td></tr>
+</table>
+<p>Compare the two methods. Which method is less likely to create an arithmetic error here, and why?</p>
+<div class="ps-figure wu-img-350"><img alt="two coordinate planes with matching linear graphs" src="figures/u2_bank_s1_method_compare_sq_v1.png"/></div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 5</span>
+</div>
+<div class="prob-num">Problem 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which axis contains every point whose $y$-coordinate is ${0}$? Give one example ordered pair on that axis.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 5</span>
+</div>
+<div class="prob-num">Solution 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which axis contains every point whose $y$-coordinate is ${0}$? Give one example ordered pair on that axis.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 6</span>
+</div>
+<div class="prob-num">Problem 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>A point has coordinates $({0},{7})$. Which axis is it on? Give another ordered pair on the same axis.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 6</span>
+</div>
+<div class="prob-num">Solution 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>A point has coordinates $({0},{7})$. Which axis is it on? Give another ordered pair on the same axis.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 7</span>
+</div>
+<div class="prob-num">Problem 7</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A graph of height over time passes through $({0},{3})$, $({4},{11})$, and $({8},{19})$. Create a table and describe what the point $({4},{11})$ means.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 7</span>
+</div>
+<div class="prob-num">Solution 7</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A graph of height over time passes through $({0},{3})$, $({4},{11})$, and $({8},{19})$. Create a table and describe what the point $({4},{11})$ means.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 8</span>
+</div>
+<div class="prob-num">Problem 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Use the graph shown to estimate whether the relationship is increasing or decreasing, then support your answer with two coordinate features.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK2.05." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 8</span>
+</div>
+<div class="prob-num">Solution 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Use the graph shown to estimate whether the relationship is increasing or decreasing, then support your answer with two coordinate features.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK2.05." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 9</span>
+</div>
+<div class="prob-num">Problem 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A point $({5},{20})$ on a graph means a student answered ${20}$ questions after ${5}$ minutes. What should the axis labels be? Then write another point that would fit the same pattern if the rate is constant.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 9</span>
+</div>
+<div class="prob-num">Solution 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A point $({5},{20})$ on a graph means a student answered ${20}$ questions after ${5}$ minutes. What should the axis labels be? Then write another point that would fit the same pattern if the rate is constant.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 10</span>
+</div>
+<div class="prob-num">Problem 10</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>You need to graph a school hallway walk where distance is measured every ${30}$ seconds for ${5}$ minutes. Construct a strategy for choosing axis scales so the graph is readable and precise.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 10</span>
+</div>
+<div class="prob-num">Solution 10</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>You need to graph a school hallway walk where distance is measured every ${30}$ seconds for ${5}$ minutes. Construct a strategy for choosing axis scales so the graph is readable and precise.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 11</span>
+</div>
+<div class="prob-num">Problem 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>Compare the table and the graph. Decide whether they could represent the same relationship, and justify your conclusion with at least two pieces of evidence.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>10</td><td>20</td><td>30</td><td>40</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK3.04." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 11</span>
+</div>
+<div class="prob-num">Solution 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>Compare the table and the graph. Decide whether they could represent the same relationship, and justify your conclusion with at least two pieces of evidence.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>10</td><td>20</td><td>30</td><td>40</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK3.04." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 12</span>
+</div>
+<div class="prob-num">Problem 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>Create a coordinate graph with constraints: the $y$-intercept must be ${6}$, one point must be $({4},{14})$, and the context must make negative outputs unreasonable. Then explain why your graph satisfies all constraints.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S1-DOK4.02." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 12</span>
+</div>
+<div class="prob-num">Solution 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>Create a coordinate graph with constraints: the $y$-intercept must be ${6}$, one point must be $({4},{14})$, and the context must make negative outputs unreasonable. Then explain why your graph satisfies all constraints.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S1-DOK4.02." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 13</span>
+</div>
+<div class="prob-num">Problem 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>The table shows a relationship. Write the ordered pair for the column where $x=2$.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>9</td><td>11</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 13</span>
+</div>
+<div class="prob-num">Solution 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>The table shows a relationship. Write the ordered pair for the column where $x=2$.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>9</td><td>11</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 14</span>
+</div>
+<div class="prob-num">Problem 14</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>In the context "the total cost is \$8 plus \$2 per game," which number represents the starting value?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 14</span>
+</div>
+<div class="prob-num">Solution 14</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>In the context "the total cost is \$8 plus \$2 per game," which number represents the starting value?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 15</span>
+</div>
+<div class="prob-num">Problem 15</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>The table represents a linear relationship. Write an equation for $y$ in terms of $x$.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>4</td><td>7</td><td>10</td><td>13</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 15</span>
+</div>
+<div class="prob-num">Solution 15</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>The table represents a linear relationship. Write an equation for $y$ in terms of $x$.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>4</td><td>7</td><td>10</td><td>13</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Problem 16</span>
+</div>
+<div class="prob-num">Problem 16</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>The equation $y=3x+2$ and the table are meant to represent the same relationship. Find the first mismatch, explain how you know, and revise the incorrect value.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>2</td><td>5</td><td>9</td><td>11</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1 · Showdown</span>
+<span>Solution 16</span>
+</div>
+<div class="prob-num">Solution 16</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>The equation $y=3x+2$ and the table are meant to represent the same relationship. Find the first mismatch, explain how you know, and revise the incorrect value.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>$y$</td><td>2</td><td>5</td><td>9</td><td>11</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1</span>
+<span>Exit Ticket</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A line drops from $y=10$ to $y=4$ while $x$ increases from 1 to 4. Find the slope.</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A runner's distance changes from 12 meters to 30 meters in 3 seconds. What is the average rate?</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Identify the family suggested by outputs $2,5,8,11$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Combine like terms: $7a-3a+5$.</p>
+</div>
+</section>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.1 · Activity 1</span>
+<span>Exit Ticket Answer Key</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A line drops from $y=10$ to $y=4$ while $x$ increases from 1 to 4. Find the slope.</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A runner's distance changes from 12 meters to 30 meters in 3 seconds. What is the average rate?</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Identify the family suggested by outputs $2,5,8,11$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Combine like terms: $7a-3a+5$.</p>
+</div>
+</section>
+</div>
+<div class="exit-key">
+<b>Key:</b>
+<ol>
+<li>Slope $=\frac{4-10}{4-1}=-2$.</li><li>Average rate $=\frac{30-12}{3}=6$ meters per second.</li><li>The outputs increase by $3$ each time, so the family is linear.</li><li>$7a-3a+5=4a+5$.</li>
+</ol>
+</div>
+</section>
+</div></body>
+</html>
