@@ -1,0 +1,1061 @@
+NOTES BUILD PROMPT — v2
+════════════════════════════════════════════════════════════════
+
+
+PART 1 — SOURCE OF TRUTH
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH.
+
+If saved memory, prior habit, prior conversation, generic
+convention, or any other instruction conflicts with this file,
+follow this file. Do not drift. Do not freelance.
+
+READ ORDER — complete all before writing line 1 of HTML:
+  1. Read THIS document completely.
+  2. Read the assessment plan HTML completely.
+  3. Read unit[#]_mapping.xlsx — Notes sheet only — completely.
+  4. Read the assessment bank HTML completely.
+  5. Read graph_tool.py completely.
+  6. Complete CONTENT PLAN before writing any HTML.
+
+Do not begin output until all files are fully read.
+Say nothing until the ZIP is delivered.
+
+CSS RULES:
+  Exactly two external links — base.css first, then notes.css.
+  Never embed a <style> block.
+  Never use a class not in the ALLOWED CLASS LIST.
+  Never modify the HTML structure defined in PART 2.
+
+════════════════════════════════════════════════════════════════
+
+FILES NEEDED — NOTHING ELSE REQUIRED
+
+  1. This prompt
+  2. Assessment plan HTML
+  3. unit[#]_mapping.xlsx
+  4. Assessment bank HTML
+  5. graph_tool.py
+
+Do NOT ask for any file not listed above.
+If all files are uploaded, build immediately.
+
+════════════════════════════════════════════════════════════════
+
+WHAT "BUILD" MEANS
+
+When the user says build / create / generate / make:
+EXECUTE THE ENTIRE WORKFLOW DEFINED BY THIS PROMPT.
+
+Build means ALL steps completed:
+  ✓ Read PM and all source files
+  ✓ Complete CONTENT PLAN before line 1 of HTML
+  ✓ Generate notes HTML file
+  ✓ Generate generate_graphs.py (if any bank item references figures)
+  ✓ Create empty figures/ folder (only if figures needed)
+  ✓ Run all 5 QA passes
+  ✓ Output QA LOG in chat
+  ✓ Assemble and deliver ZIP
+
+The ZIP is the only acceptable endpoint.
+
+Pre-ZIP checklist (check privately before assembling):
+  1. Did I fully read all uploaded source files?
+  2. Did I complete the CONTENT PLAN before writing HTML?
+  3. Are ALL I-can statements copied verbatim from assessment plan?
+  4. Is the What's To Come directions paragraph copied verbatim (see PART 2)?
+  5. Is the Future Task the DOK4.01 bank item body, verbatim?
+  6. Are Examples AI-designed — NOT copies of the bank items?
+  7. Are exit ticket cells 1 and 2 the bank items verbatim?
+  8. Is there a Stop and Discuss after every Example/YTI pair?
+  9. Is there NO source anchor line anywhere in the HTML?
+  10. Does every section use only ALLOWED CLASSES?
+  11. Is there a workspace after every Stop and Discuss, Example, YTI, and Future Task?
+  12. Is there NO workspace after Math Notes, Summary, Common Mistakes, or Reflection?
+  13. Is the exit ticket present with all 4 cells?
+  14. Are all Math Notes artifact requirements satisfied with actual equations, tables, graphs, and context where required?
+  15. Are all 5 QA passes PASS?
+If any answer is NO, fix before assembling ZIP.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 2 — LOCKED HTML SHELL
+════════════════════════════════════════════════════════════════
+
+THE CSS AND HTML STRUCTURE ARE FINAL.
+Do not redesign, add classes, or modify structure.
+The output must match these templates exactly.
+
+────────────────────────────────────────────────────────────────
+
+FILE PATHS
+
+  Folder: notes/u[unit]_[section]_notes/
+  File:   u[unit]_[section]_notes.html
+
+  Examples:
+    notes/u1_2_notes/u1_2_notes.html
+    notes/u0A_1_notes/u0A_1_notes.html
+
+────────────────────────────────────────────────────────────────
+
+CSS LINKS (exact — copy verbatim, no style block ever):
+  <link rel="stylesheet" href="../../css/base.css"/>
+  <link rel="stylesheet" href="../../css/notes.css"/>
+
+MATHJAX (exact — copy verbatim, config BEFORE cdn script):
+  <script>
+  window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+────────────────────────────────────────────────────────────────
+
+FULL PAGE SHELL (copy verbatim, fill bracketed values):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section [UNIT].[SECTION] Notes — [SECTION_TITLE]</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+[SECTIONS]
+
+</div>
+</body>
+</html>
+
+────────────────────────────────────────────────────────────────
+
+ALLOWED CLASS LIST
+(No class outside this list may appear in the HTML output.)
+
+  LAYOUT         container
+  TITLE PAGE     notes-title · title-kicker · title-main · title-sub · title-quote
+  LEARNING TGT   objectives
+  CALLOUT BOXES  annotation-box · reading-box · strategy-box · stop-discuss
+                 claim-card · boxed · key-point · mistake-box
+  MATH NOTES     math-notes · math-notes-header · math-notes-label
+                 math-notes-title · math-notes-body
+  GRIDS          rep-grid · rep-card · sketch-cols · sketch-cell · sketch-cell-label
+  FIGURES        notes-figure · wu-img-025 through wu-img-750
+  WORKSPACE      notes-ws · ws-ruled · ws-label
+  H2 CLASSES     h-target · h-preview · h-intro · h-summary · h-mistakes · h-reflection
+  H3 CLASSES     h-example · h-yti
+  EXIT TICKET    exit-ticket-label · exit-ticket-grid · et-cell · et-cell-title
+  TABLES         values  (always — never any other table class)
+
+────────────────────────────────────────────────────────────────
+
+SECTION SEQUENCE
+
+Every notes file has sections in this exact order.
+
+  1.  TITLE
+  2.  LEARNING TARGET
+  3.  WHAT'S TO COME
+  4.  INTRO  (includes Stop and Discuss 1 as its last element)
+  5.  [Math Notes — only if Example 1 needs it]
+  6.  EXAMPLE 1
+  7.  YTI 1
+  8.  STOP AND DISCUSS A   ← after every Example/YTI pair
+  9.  [Math Notes — only if Example 2 needs it]
+  10. EXAMPLE 2
+  11. YTI 2
+  12. STOP AND DISCUSS B
+  13. [Math Notes — only if Example 3 needs it]
+  14. EXAMPLE 3
+  15. YTI 3
+  16. STOP AND DISCUSS C
+  17. [Math Notes — only if Example 4 needs it]
+  18. EXAMPLE 4
+  19. YTI 4
+  20. STOP AND DISCUSS D
+  21. SUMMARY
+  22. COMMON MISTAKES
+  23. OPTIONAL REFLECTION
+  24. EXIT TICKET
+
+MATH NOTES RULE:
+  Only include a Math Notes block before an Example if that
+  Example introduces a concept that students have not seen yet.
+  If the Example is an extension of the previous concept, skip
+  the Math Notes. Do NOT force a Math Notes before every Example.
+
+STOP AND DISCUSS RULE:
+  One Stop and Discuss block appears after EVERY Example/YTI pair.
+  It has 1–2 questions. It always has a workspace.
+  Never skip it. Never combine two pairs into one block.
+
+────────────────────────────────────────────────────────────────
+
+WORKSPACE RULES
+
+<div class="notes-ws ws-ruled"></div>
+appears AFTER these elements ONLY:
+
+  ✓ Future Task annotation-box      (WHAT'S TO COME)
+  ✓ Intro reading-box               (add ws-label "Your notes" inside)
+  ✓ Every Stop and Discuss block    (including the one inside INTRO)
+  ✓ Every Example block
+  ✓ Every YTI block
+
+NEVER after:
+  ✗ Title page
+  ✗ Learning Target / objectives
+  ✗ Any Math Notes block
+  ✗ Summary / key-point
+  ✗ Common Mistakes / mistake-box
+  ✗ Optional Reflection / annotation-box
+  ✗ Exit Ticket
+
+────────────────────────────────────────────────────────────────
+
+COMMENT CONVENTION
+
+One HTML comment immediately above every section (required):
+
+  <!-- TITLE -->
+  <!-- LEARNING TARGET -->
+  <!-- WHAT'S TO COME -->
+  <!-- INTRO -->
+  <!-- MATH NOTES 1 -->          (omit if no Math Notes before Example 1)
+  <!-- EXAMPLE 1 -->
+  <!-- YTI 1 -->
+  <!-- STOP AND DISCUSS A -->
+  <!-- MATH NOTES 2 -->          (omit if skipped)
+  <!-- EXAMPLE 2 -->
+  <!-- YTI 2 -->
+  <!-- STOP AND DISCUSS B -->
+  <!-- MATH NOTES 3 -->          (omit if skipped)
+  <!-- EXAMPLE 3 -->
+  <!-- YTI 3 -->
+  <!-- STOP AND DISCUSS C -->
+  <!-- MATH NOTES 4 -->          (omit if skipped)
+  <!-- EXAMPLE 4 -->
+  <!-- YTI 4 -->
+  <!-- STOP AND DISCUSS D -->
+  <!-- SUMMARY -->
+  <!-- COMMON MISTAKES -->
+  <!-- OPTIONAL REFLECTION -->
+  <!-- EXIT TICKET -->
+
+────────────────────────────────────────────────────────────────
+
+SECTION TEMPLATES
+
+─── 1. TITLE PAGE ──────────────────────────────────────────────
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit [UNIT]</div>
+  <div class="title-main">Section [UNIT].[SECTION]<br>[SECTION_TITLE]</div>
+  <div class="title-sub">[ONE_SENTENCE_TAGLINE — inferred from Learning Target]</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> [ONE_SENTENCE_IDEA — the core concept of this section in plain language]</p></div>
+  <p style="margin-top:18px;color:#555;">[TWO_SENTENCE_PREVIEW — what students will do today, inferred from I-cans]</p>
+</div>
+
+─── 2. LEARNING TARGET ─────────────────────────────────────────
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>[LEARNING_TARGET — copy verbatim from assessment plan outline-card bold p]</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>[I_CAN_1 — copy verbatim]</li>
+    <li>[I_CAN_2 — copy verbatim]</li>
+    <li>[I_CAN_3 — copy verbatim]</li>
+  </ul>
+</div>
+
+─── 3. WHAT'S TO COME ──────────────────────────────────────────
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  [FUTURE_TASK_BODY — DOK4.01 bank item body, verbatim, copied exactly from bank.
+   Copy the full <p> content and any table.values or graph-block inside the article.
+   Do NOT copy the problem-number or problem-meta divs.
+   Do NOT copy the performance-notes div.
+   Numbers may be swapped if the section calls for it — no other changes.]
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+─── 4. INTRO ───────────────────────────────────────────────────
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  [5 OR MORE PARAGRAPHS — see INTRO READING RULES below]
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>[QUESTION_1 — answer is stated directly in one of the reading paragraphs]</li>
+    <li>[QUESTION_2 — answer is stated directly in a different reading paragraph]</li>
+    <li>[QUESTION_3 — answer requires inferring from a third paragraph; conceptual]</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+─── 5. MATH NOTES [N] (optional) ───────────────────────────────
+
+<!-- MATH NOTES [N] -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">[CONCEPT_TITLE — name the specific concept]</span>
+  </div>
+  <div class="math-notes-body">
+    [BODY — see MATH NOTES BODY RULES below]
+  </div>
+</div>
+
+─── 6. EXAMPLE [N] ─────────────────────────────────────────────
+
+<!-- EXAMPLE [N] -->
+<h3 class="h-example">Example [N]: [TITLE]</h3>
+[EXAMPLE_BODY — see EXAMPLE RULES below]
+<div class="notes-ws ws-ruled"></div>
+
+─── 7. YTI [N] ─────────────────────────────────────────────────
+
+<!-- YTI [N] -->
+<h3 class="h-yti">You Try It [N]: [TITLE]</h3>
+[YTI_BODY — see YTI RULES below]
+<div class="notes-ws ws-ruled"></div>
+
+─── 8. STOP AND DISCUSS [A/B/C/D] (after every Example/YTI pair) ─
+
+<!-- STOP AND DISCUSS [A/B/C/D] -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>[Q1 — connects the Example concept to the YTI result or to a previous concept]</li>
+    [Optional: <li>[Q2 — extends or challenges thinking from the pair]</li>]
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"></div>
+
+─── SUMMARY ────────────────────────────────────────────────────
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>[P1 — Learning Target restated in student language, 1-2 sentences]</p>
+  <p>[P2 — key notation or representation rule from this section, 1-2 sentences]</p>
+  <p>[P3 — most common conceptual error (previews Common Mistakes), 1 sentence]</p>
+  <p>[P4 — what strong understanding looks like in context, 1-2 sentences]</p>
+</div>
+
+─── COMMON MISTAKES ────────────────────────────────────────────
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>[LABEL_1].</strong> Why it is tempting: [REASON]. What to check instead: [CHECK].</li>
+    <li><strong>[LABEL_2].</strong> Why it is tempting: [REASON]. What to check instead: [CHECK].</li>
+    <li><strong>[LABEL_3].</strong> Why it is tempting: [REASON]. What to check instead: [CHECK].</li>
+    <li><strong>[LABEL_4].</strong> Why it is tempting: [REASON]. What to check instead: [CHECK].</li>
+    <li><strong>[LABEL_5].</strong> Why it is tempting: [REASON]. What to check instead: [CHECK].</li>
+  </ul>
+</div>
+
+─── OPTIONAL REFLECTION ────────────────────────────────────────
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+─── EXIT TICKET ────────────────────────────────────────────────
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+
+  <div class="et-cell">
+    <div class="et-cell-title">1 — [SHORT_TITLE] · DoK 1</div>
+    [ET_CELL_1_BODY — Example 1 bank item body, verbatim]
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">2 — [SHORT_TITLE] · DoK 2</div>
+    [ET_CELL_2_BODY — Example 2 bank item body, verbatim]
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about [SECTION_TOPIC] you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about [SECTION_TOPIC] you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+
+</div>
+
+────────────────────────────────────────────────────────────────
+
+INTRO READING RULES
+
+Write AT LEAST 5 paragraphs (8th grade reading level).
+Max 3 sentences per paragraph.
+
+The Stop and Discuss block that follows has 3 questions.
+These questions are designed BEFORE the reading is written.
+The reading is then written to answer them:
+
+  Paragraph A: Contains the answer to Stop and Discuss Q1.
+               The FIRST sentence sets context — it does NOT answer Q1.
+               The answer appears in the 2nd or 3rd sentence, embedded
+               in a fuller explanation. Never lead with the answer.
+
+  Paragraph B: Contains the answer to Stop and Discuss Q2.
+               Same rule: first sentence is background or transition.
+               Q2's answer is embedded in the 2nd or 3rd sentence.
+               Do not mirror the structure of Paragraph A too closely.
+
+  Paragraph C: IMPLIES the answer to Q3 without stating it.
+               Q3 is conceptual; students must infer from the paragraph.
+               The paragraph introduces a situation, example, or
+               consequence — not a definition that gives the answer away.
+
+  Paragraph D: Additional information not tied to any S&D question.
+               Use Key Representations from the assessment plan.
+
+  Paragraph E+: Additional information not tied to any S&D question.
+                Use Modeling Opportunities or contextual extensions.
+
+Planning steps:
+  1. Write Q1, Q2, Q3 first (based on I-cans and Key Representations).
+  2. Write paragraphs A, B, C to answer them (A direct, B direct, C inferential).
+  3. Write paragraphs D, E+ for additional content.
+  4. Check: can Q1 be answered directly from A? Q2 from B?
+     Can Q3 be answered by careful reading of C (not stated outright)?
+  5. If not: revise before writing the HTML.
+
+────────────────────────────────────────────────────────────────
+
+MATH NOTES BODY RULES
+
+Include Math Notes ONLY when the next Example introduces a concept
+students have not seen. Do NOT force one before every Example.
+Skip if the next Example is an application of an already-introduced concept.
+
+Math Notes must work across grades 6-12 and across math courses. Do not
+write notes that only name this unit's topic. Write notes around the
+mathematical action students are learning: evaluate, compare, rewrite,
+graph, interpret, solve, classify, estimate, justify, or critique.
+
+GRAPHS ARE THE DEFAULT, NOT THE EXCEPTION.
+For any Math Notes that involves:
+  • Reading or evaluating from a representation (equation, table, graph)
+    → TYPE D: include an actual graph; mark the key point or value on it.
+  • Evaluating function notation (f(3), g(-2), etc.)
+    → TYPE D: show the evaluation from ALL FOUR when possible:
+      equation (substitute), table (find the input), graph (mark the
+      point at x=input), and context (state what the input and output mean).
+  • Comparing or critiquing two representations (equation vs table, table
+    vs graph, graph vs context, etc.)
+    → TYPE D: include an actual graph, table, or visual model that makes
+      the agreement or mismatch visible.
+  • Function families (linear, quadratic, exponential, absolute value)
+    → TYPE D: include an actual graph showing the family's shape and key
+      features. Do not rely only on family names.
+  • One-output rule, mapping diagrams, or relation/function decisions
+    → Use make_scatter_plot to show allowed vs not-allowed cases when
+      possible. If scatter is not appropriate, use another graph_tool.py
+      visual that makes the repeated-input evidence visible.
+  • Expressions, equations, inequalities, or structure
+    → Use a graph, number line, area model, balance model, table, or other
+      graph_tool.py visual when it makes the structure easier to see.
+  • Purely definitional notes with no visual component (e.g. listing
+    properties of a notation system)
+    → TYPE A or B is acceptable only if a visual would not improve the note.
+    If in doubt, still include a graph or visual model.
+
+For every Math Notes block, ask: "Would a student understand this
+better if they saw a graph or visual model?" If yes — build the visual
+with graph_tool.py. Do not merely say a graph would help.
+
+ACTUAL ARTIFACT REQUIREMENT:
+  Do not merely mention equation, table, graph, or context in bullets.
+  If a Math Notes rule says to use a representation, that representation
+  must physically appear in the Math Notes body as actual HTML, MathJax,
+  table.values, or a generated figure.
+
+  Required artifacts by representation:
+    • Equation or symbolic rule: include an actual MathJax equation,
+      substitution line, expression rewrite, inequality, or equation step.
+    • Table or organized values: include an actual <table class="values">
+      unless the table is truly unnecessary for that note.
+    • Graph or visual model: include an actual <figure class="notes-figure ...">
+      whose image is generated by graph_tool.py.
+    • Context or verbal meaning: include a concrete sentence naming what
+      the input, output, solution, point, intercept, factor, coefficient,
+      or feature means in the situation.
+
+EVALUATING FUNCTION NOTATION REQUIREMENT:
+  When the Math Notes introduces or reviews evaluating function notation,
+  TYPE D must include all four of these artifacts when possible:
+
+    1. Equation: an actual substitution line, such as
+       $$f(3)=2(3)+1=7$$
+    2. Table: an actual values table containing the input and output.
+    3. Graph: an actual graph with the evaluated point marked.
+    4. Context: a sentence such as "If x is 3 hours, f(3)=7 means the
+       output is 7 miles after 3 hours."
+
+  The note must make clear that all four representations answer the same
+  question: "When the input is 3, what is the output?"
+
+TYPE A — prose + bullets (use only when a visual would not help):
+  <p>[KEY_CONCEPT — 1 sentence]</p>
+  <ul>
+    <li>[POINT_1 — specific, not generic]</li>
+    <li>[POINT_2]</li>
+    <li>[POINT_3]</li>
+  </ul>
+  [Optional: <p><strong>Example:</strong> [SHORT_SPECIFIC_EXAMPLE]</p>]
+
+TYPE B — rep-grid (vocabulary):
+  <p>[FRAMING — 1 sentence]</p>
+  <div class="rep-grid">
+    <div class="rep-card"><h4>[TERM_1]</h4><p>[DEF_1]</p></div>
+    <div class="rep-card"><h4>[TERM_2]</h4><p>[DEF_2]</p></div>
+    <div class="rep-card"><h4>[TERM_3]</h4><p>[DEF_3]</p></div>
+    <div class="rep-card"><h4>[TERM_4]</h4><p>[DEF_4]</p></div>
+  </div>
+
+TYPE C — sketch-cols (side-by-side comparison):
+  <p>[SETUP — 1 sentence]</p>
+  <ul><li>[RULE_1]</li><li>[RULE_2]</li><li>[RULE_3]</li></ul>
+  <div class="sketch-cols">
+    <div class="sketch-cell"><span class="sketch-cell-label">[LABEL_LEFT]</span></div>
+    <div class="sketch-cell"><span class="sketch-cell-label">[LABEL_RIGHT]</span></div>
+  </div>
+
+TYPE D — prose + actual figure / artifacts (default for representation-heavy notes):
+  <p>[KEY_CONCEPT — name the mathematical action students are learning]</p>
+  [Include actual MathJax equations or substitution lines when relevant.]
+  [Include <table class="values">...</table> when table evidence is relevant.]
+  [Include bullets only to explain how the artifacts connect.]
+  <figure class="notes-figure [wu-img-NNN]">
+    <img src="figures/[FILENAME]" alt="[ALT_TEXT]"/>
+  </figure>
+  [Include a context sentence when the concept has contextual meaning.]
+
+TYPE D EVALUATION MINI-TEMPLATE:
+  <p>To evaluate $f([INPUT])$, find the output when the input is [INPUT].</p>
+  $$[SUBSTITUTION_LINE]$$
+  <table class="values">
+    <tr><th>Input</th><th>[VALUES]</th></tr>
+    <tr><th>Output</th><td>[VALUES]</td></tr>
+  </table>
+  <figure class="notes-figure [wu-img-NNN]">
+    <img src="figures/[FILENAME]" alt="Graph marking the point used to evaluate the function."/>
+  </figure>
+  <p><strong>Context:</strong> [INPUT_MEANING] and [OUTPUT_MEANING].</p>
+
+MATH NOTES CONTENT REQUIREMENT:
+  Every Math Notes body must contain content specific to this section's
+  concept and the next Example's skill. Generic filler phrases are forbidden:
+  ✗ "helps you track the relationship between quantities"
+  ✗ "not just as a label"
+  ✗ "Describe the input, output, rule, and evidence before you compute or graph."
+  These phrases must never appear. Write real mathematical content.
+
+  A Math Notes block is weak if it only explains what students could do.
+  A strong Math Notes block shows the actual equation/table/graph/context
+  students should use.
+
+────────────────────────────────────────────────────────────────
+
+EXAMPLE RULES
+
+Examples are AI-designed problems. They are NOT bank item copies.
+The bank ID in the mapping tells you the skill and DOK level.
+Design an original problem that practices the same skill.
+
+Structure:
+  <h3 class="h-example">Example [N]: [DESCRIPTIVE_TITLE]</h3>
+  <p>[CONTEXT — 1–2 sentences real-world setup]</p>
+  [IF table needed: <table class="values">...</table>]
+  [IF claim: <div class="claim-card"><p><strong>Student claim:</strong> "..."</p></div>]
+  <ol>
+    <li>[Q1 — DOK 1: read or compute from setup]</li>
+    <li>[Q2 — DOK 2: explain, connect, or build]</li>
+    <li>[Q3 — DOK 2–3: critique, extend, or compare]</li>
+  </ol>
+  <div class="notes-ws ws-ruled"></div>
+
+No source anchor line. Never. Remove it if you think of writing one.
+  ✗ "<p><strong>Source anchor:</strong> ..."
+  This line must not appear anywhere in the output.
+
+MATCHING PROBLEMS — mandatory scramble rule:
+  When an Example or YTI asks students to match items (graphs to
+  equations, tables to equations, contexts to representations, etc.),
+  the correct answers must NOT fall in position order.
+  If graph 1 → equation 1, graph 2 → equation 2, graph 3 → equation 3,
+  students can answer by position without any mathematical reasoning.
+  ✗  Graph A matches y=x+4 (listed first), Graph B matches y=x−3 (listed
+     second) — students write 1-2-3-4 without reading any math.
+  ✓  Shuffle at least one side so that answer n ≠ position n.
+     Example: list equations as y=x−3, y=2x+1, y=x+4, y=−x+2
+     while graphs stay in a fixed order — now matching requires analysis.
+  This rule applies to all match tasks regardless of number of items.
+
+────────────────────────────────────────────────────────────────
+
+YTI RULES
+
+YTI problems are AI-derived, parallel to the paired Example.
+Different numbers, different context, same I-can target.
+The YTI must be self-contained — student should not need the Example.
+
+Structure mirrors Example exactly (context, optional table/claim, 3-question ol).
+No source anchor. No bank item copying.
+
+────────────────────────────────────────────────────────────────
+
+GRAPH TOOL RULES
+
+Use graph_tool.py for ALL figures. No exceptions.
+Read every function signature before writing any call.
+
+generate_graphs.py structure:
+  Top = full graph_tool.py source (copy verbatim, never modify)
+  Bottom = graph generation blocks only, appended after the marker:
+    # PASTE YOUR GRAPH CODE BELOW THIS LINE
+  No imports, OUTPUT_DIR, os.makedirs, or matplotlib.use() in appended blocks.
+
+Figures folder is always EMPTY in the delivered ZIP.
+Graph title= must never contain the answer. Use title='' or neutral label.
+
+Number-line point marker rule:
+  If a number-line figure is only showing individual number values,
+  solutions, or distances as points, do NOT draw tall vertical marker
+  lines above the points. Use plain points/dots on the number line only.
+  Multiple points may be the same color unless different colors are
+  mathematically necessary for comparison. Reserve vertical markers for
+  cases where the marker line itself communicates a needed feature.
+
+If a bank item references a figure (e.g. graph-block inside article):
+  Include generate_graphs.py and the figures/ folder.
+  Recreate the figure using graph_tool.py — do not reference the bank's figure path.
+  Use the same visual intent (scatter, line, blank plane, etc.).
+
+If no figures are needed: omit generate_graphs.py and figures/ entirely.
+
+If a required graph type is not in graph_tool.py:
+  ══ STOP ══  State exactly which type is missing. Wait.
+
+────────────────────────────────────────────────────────────────
+
+MATHJAX RULES
+
+  window.MathJax config MUST come before the CDN script.
+  processEscapes: true — always include.
+  CDN: cdn.jsdelivr.net only.
+  Delimiters: $...$ inline, $$...$$ display. Never \(...\) or \[...\].
+  Currency in prose (outside math): write as \\$5 or just "5 dollars"
+    — do NOT wrap in $...$. Currency inside math context: use \\$ inside $...$.
+  Math comparisons: \lt and \gt not < and >.
+  Do NOT use $ to wrap numbers that are not being typeset as math.
+    ✗  "multiply the input by \$4$ and subtract \$1$"
+    ✓  "multiply the input by 4 and subtract 1"
+    ✓  "multiply the input by $4$ and subtract $1$"  (math typeset, no \\$)
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 3 — CONTENT FROM SOURCES
+════════════════════════════════════════════════════════════════
+
+RULE: Do not invent content that is available in a source file.
+Infer only where source files are silent.
+
+────────────────────────────────────────────────────────────────
+
+NOTES SHEET — actual structure (do not expect other columns)
+
+The Notes sheet in unit[#]_mapping.xlsx has:
+  Row 1:  Column headers — "Unit [#]", "Section 1.1", "Section 1.2", ...
+  Row 2:  Example 1 (DOK 1)   — bank item ID per section
+  Row 3:  Example 2 (DOK 1–2) — bank item ID per section
+  Row 4:  Example 3 (DOK 2–3) — bank item ID per section
+  Row 5:  Example 4 (DOK 2–3) — bank item ID per section
+  Row 6:  (blank)
+  Row 7:  YOU TRY ITS header   — "(AI-derived)" note, all columns
+  Row 8:  YTI 1               — "(AI-derived)" all columns
+  Row 9:  YTI 2               — "(AI-derived)" all columns
+  Row 10: YTI 3               — "(AI-derived)" all columns
+  Row 11: YTI 4               — "(AI-derived)" all columns
+  Row 12: (blank)
+  Row 13: FUTURE TASK         — note about DOK 4 usage, all columns
+
+Find the column for the requested section.
+Read the 4 Example bank IDs from rows 2–5.
+YTI and Future Task are not pre-assigned in the mapping.
+
+────────────────────────────────────────────────────────────────
+
+ASSESSMENT PLAN — what to extract
+
+Locate the <section class="outline-card"> whose title matches
+the requested section.
+
+Copy verbatim (never paraphrase):
+  • Learning Target   — bold <p> inside the outline-card
+  • I Can Statements — all <li> items under the "I Can Statements" h3
+  • Key Representations — all <li> items under "Key Representations"
+                          (use to write reading passage + Math Notes body)
+  • Modeling Opportunities — all <li> items under "Modeling Opportunities"
+                              (use to design Examples and YTI problems)
+
+────────────────────────────────────────────────────────────────
+
+BANK HTML — what to extract and how
+
+Bank item structure:
+  <article class="assessment-card" data-section="N" data-dok="N">
+  <div class="problem-number">[ID]</div>
+  <div class="problem-meta">...</div>
+  <p>[QUESTION_BODY]</p>
+  [optional: table.values, graph-block, performance-notes]
+  </article>
+
+Extract rules:
+  • Copy ONLY: the <p> body, table.values (if present), graph-block (if present).
+  • Do NOT copy: problem-number div, problem-meta div, performance-notes div.
+  • Copy verbatim — no paraphrasing, no simplification.
+
+FUTURE TASK (What's To Come):
+  Find the bank item with ID = [Section ID prefix]-DOK4.01.
+  Example: section 1.2 → U1-S2-DOK4.01.
+  Copy the body verbatim (see extract rules above).
+  Number swap only if appropriate for the section — no other edits.
+
+EXIT TICKET CELL 1:
+  Find the bank item with ID from the Notes sheet row 2 (Example 1).
+  Copy the body verbatim into et-cell 1.
+
+EXIT TICKET CELL 2:
+  Find the bank item with ID from the Notes sheet row 3 (Example 2).
+  Copy the body verbatim into et-cell 2.
+
+EXAMPLE DESIGN (do NOT copy verbatim):
+  Use the bank item's skill and DOK level as the design target.
+  Write an ORIGINAL problem that practices the same skill.
+  The bank item's numbers may inspire context but must not appear verbatim.
+  This prevents the exit ticket from being identical to the example.
+
+If a bank ID is not found in the bank HTML:
+  STOP. Report the missing ID. Wait. Do not invent a replacement.
+
+────────────────────────────────────────────────────────────────
+
+CONTENT INFERENCE RULES
+(apply only where source files are silent)
+
+  Title page tagline and mathematical idea:
+    Infer from Learning Target and I-cans. 1 sentence each.
+    Plain language — no jargon beyond what students are learning.
+
+  Reading passage (Intro):
+    Follow INTRO READING RULES exactly.
+    5+ paragraphs. Plan S&D questions first, then write paragraphs.
+
+  Stop and Discuss after each pair:
+    1–2 questions. Connect the Example concept to the YTI result
+    or to a previous concept. Do not repeat the Example question.
+
+  Math Notes body:
+    Specific to the concept. No generic filler. See MATH NOTES BODY RULES.
+    Use Key Representations and the Example skill as content guides.
+
+  Summary:
+    4 paragraphs. Derive from I-cans and Examples only.
+
+  Common Mistakes:
+    5 items. Base on known misconceptions for this section's I-cans.
+    Each item: label, why tempting, what to check instead.
+
+  Exit Ticket Q3 and Q4:
+    Always use the fixed language in the EXIT TICKET template.
+    Replace [SECTION_TOPIC] with the section subject in plain English.
+
+────────────────────────────────────────────────────────────────
+
+CONTENT PLAN — complete before writing HTML, report in chat
+
+  Section:           [e.g. 1.2]
+  Title:             [from outline-card]
+  Learning Target:   [copied verbatim]
+  I-can 1:           [copied verbatim]
+  I-can 2:           [copied verbatim]
+  I-can 3:           [copied verbatim]
+  Future Task ID:    [e.g. U1-S2-DOK4.01] → found: YES / NO
+  Example 1 ID:      [from mapping row 2] → found: YES / NO
+  Example 2 ID:      [from mapping row 3] → found: YES / NO
+  Example 3 ID:      [from mapping row 4] → found: YES / NO
+  Example 4 ID:      [from mapping row 5] → found: YES / NO
+  Math Notes plan:   Before Ex1? YES/NO  Before Ex2? YES/NO
+                     Before Ex3? YES/NO  Before Ex4? YES/NO
+  S&D Q1 (Intro):    [planned question]
+  S&D Q2 (Intro):    [planned question]
+  S&D Q3 (Intro):    [planned question — inferential]
+  Reading paragraph that answers Q1: [paragraph label A/B/C/D/E]
+  Reading paragraph that answers Q2: [paragraph label A/B/C/D/E]
+  Reading paragraph that implies Q3: [paragraph label A/B/C/D/E]
+  Math Notes artifact plan:
+    MN1: TYPE [A/B/C/D/NONE]; equation? YES/NO; table? YES/NO;
+         graph/visual? YES/NO — [type, filename, and marked point/value];
+         context sentence? YES/NO
+    MN2: TYPE [A/B/C/D/NONE]; equation? YES/NO; table? YES/NO;
+         graph/visual? YES/NO — [type, filename, and marked point/value];
+         context sentence? YES/NO
+    MN3: TYPE [A/B/C/D/NONE]; equation? YES/NO; table? YES/NO;
+         graph/visual? YES/NO — [type, filename, and marked point/value];
+         context sentence? YES/NO
+    MN4: TYPE [A/B/C/D/NONE]; equation? YES/NO; table? YES/NO;
+         graph/visual? YES/NO — [type, filename, and marked point/value];
+         context sentence? YES/NO
+  Figures needed:    [list of filenames or NONE]
+  Figure purpose:    [for each filename, name what point/value/mismatch/feature is marked]
+
+If any bank ID is not found: STOP and report before writing HTML.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 4 — QA PASSES
+════════════════════════════════════════════════════════════════
+
+Run all 5 passes. Fix any FAIL before assembling ZIP.
+
+────────────────────────────────────────────────────────────────
+
+PASS 1 — FILE AND STRUCTURE
+
+  HTML file with correct name and folder:            YES / NO
+  Two CSS links in order (base.css then notes.css):  YES / NO
+  No <style> block:                                  YES / NO
+  MathJax config before CDN, processEscapes true:    YES / NO
+  HTML comment above every section:                  YES / NO
+  RESULT: PASS / FAIL
+
+PASS 2 — SECTION SEQUENCE AND CONTENT
+
+  Sections in correct order:                         YES / NO
+  Learning Target statement copied verbatim:         YES / NO
+  All 3 I-cans copied verbatim:                      YES / NO
+  What's To Come directions paragraph verbatim:      YES / NO
+  Future Task = DOK4.01 bank body verbatim:          YES / NO
+  Stop and Discuss present after EVERY Ex/YTI pair:  YES / NO  [count]
+  No source anchor line anywhere in HTML:            YES / NO
+  Summary, Common Mistakes, Reflection, Exit Ticket: YES / NO
+  No class outside ALLOWED CLASS LIST:               YES / NO
+  All tables use class="values":                     YES / NO
+  RESULT: PASS / FAIL
+
+PASS 3 — WORKSPACE AUDIT
+
+  Workspace after Future Task:                       YES / NO
+  Workspace after Intro reading-box (with ws-label): YES / NO
+  Workspace after Intro Stop and Discuss:            YES / NO
+  Workspace after every Example: [count]             YES / NO
+  Workspace after every YTI: [count]                 YES / NO
+  Workspace after every Stop and Discuss A/B/C/D:    YES / NO
+  NO workspace after any Math Notes block:           YES / NO
+  NO workspace after Summary or Common Mistakes:     YES / NO
+  RESULT: PASS / FAIL
+
+PASS 4 — BANK CONTENT
+
+  Future Task DOK4.01 body copied verbatim:          YES / NO
+  Exit Ticket Cell 1 bank body copied verbatim:      YES / NO
+  Exit Ticket Cell 2 bank body copied verbatim:      YES / NO
+  Examples are AI-designed (NOT bank item copies):   YES / NO
+  No bank item ID or source anchor in body text:     YES / NO
+  RESULT: PASS / FAIL
+
+PASS 5 — MATHJAX, MATH NOTES ARTIFACTS, AND FIGURES
+
+  Bare currency in math: \$[digit] inside $...$:    [list or NONE]
+    (should be \\$ or plain prose — not inside $...$)
+  Wrong delimiters \(...\) or \[...\]:               [list or NONE]
+  Raw < or > inside math:                            [list or NONE]
+  No generic Math Notes filler phrases:              YES / NO
+  No S&D answer in the first sentence of any paragraph: YES / NO
+
+  Math Notes artifact audit:
+    Math Notes count:                                [count]
+    TYPE D Math Notes count:                         [count]
+    Each TYPE D has actual figure reference:          YES / NO / N/A
+    Each TYPE D figure is generated in script:        YES / NO / N/A
+    Each required equation appears as MathJax:        YES / NO / N/A
+    Each required table appears as table.values:      YES / NO / N/A
+    Each required graph marks the point/value/feature:YES / NO / N/A
+    Evaluation notes show equation/table/graph/context: YES / NO / N/A
+    No representation is only talked about when required: YES / NO
+
+  Figures in generate_graphs.py match references:    YES / NO / N/A
+  Figures folder empty in ZIP:                       YES / NO / N/A
+  graph_tool.py lines unmodified (only appended):    YES / NO / N/A
+  RESULT: PASS / FAIL
+
+────────────────────────────────────────────────────────────────
+
+QA LOG — OUTPUT IN CHAT
+
+  QA LOG — Section [UNIT].[SECTION] Notes / Build date: [date]
+
+  PASS 1 — File / structure:         PASS / FAIL
+  PASS 2 — Sections / content:       PASS / FAIL
+  PASS 3 — Workspaces:               PASS / FAIL
+  PASS 4 — Bank content:             PASS / FAIL
+  PASS 5 — MathJax / Math Notes / figures: PASS / FAIL
+
+  Issues fixed: [list or NONE]
+  OVERALL: PASS — ZIP assembled  /  FAIL — [blocker]
+
+────────────────────────────────────────────────────────────────
+
+TEACHER NOTES FILE — REQUIRED AFTER PASS
+
+After the student notes file passes all QA requirements, create a second
+HTML file in the same section folder:
+
+  u[unit]_[section]_notes_teacher.html
+
+Requirements:
+  1. Keep the student notes file unchanged.
+  2. The teacher file is a copy of the final student file with teacher
+     support added only inside existing workspace divs.
+  3. In each workspace, add answers to the questions that immediately
+     precede that workspace.
+  4. Teacher answers must be red and bold. Use inline style only for this
+     teacher-only text so the allowed student class list is not changed.
+  5. Add any useful teaching reminder, misconception warning, or follow-up
+     question that would help the teacher facilitate discussion.
+  6. Do not add teacher answers or notes inside Math Notes, Summary,
+     Common Mistakes, Optional Reflection, or Exit Ticket cells unless
+     those items already have an allowed workspace immediately after them.
+  7. Do not add a new CSS file, new CSS link, new class, or <style> block.
+
+Teacher-file QA additions:
+  Student notes HTML unchanged:                     YES / NO
+  Teacher HTML file present and correctly named:    YES / NO
+  Teacher additions appear only in workspaces:      YES / NO
+  Teacher answers are red and bold:                 YES / NO
+  Teacher reminders/follow-ups included as useful:  YES / NO
+  ZIP root contains section folders directly only:   YES / NO
+
+────────────────────────────────────────────────────────────────
+
+ZIP STRUCTURE
+
+  Build a unit-level ZIP with section folders directly at the ZIP root.
+  Do NOT wrap the section folders inside notes/, unit[#]_notes/, or any
+  other parent folder.
+
+  ZIP root:
+    u[unit]_1_notes/
+      u[unit]_1_notes.html
+      u[unit]_1_notes_teacher.html
+      generate_graphs.py          ← only if figures needed
+      figures/                    ← empty; only if figures needed
+
+    u[unit]_2_notes/
+      u[unit]_2_notes.html
+      u[unit]_2_notes_teacher.html
+      generate_graphs.py          ← only if figures needed
+      figures/                    ← empty; only if figures needed
+
+    u[unit]_[last_section]_notes/
+      u[unit]_[last_section]_notes.html
+      u[unit]_[last_section]_notes_teacher.html
+      generate_graphs.py          ← only if figures needed
+      figures/                    ← empty; only if figures needed
+
+  ZIP name: unit[unit]_notes.zip unless the user requests a different name.
+
+────────────────────────────────────────────────────────────────
+
+DELIVERY
+
+  1. All 5 passes PASS for every section in the unit package.
+  2. Assemble section folders directly at the ZIP root.
+  3. ZIP as unit[unit]_notes.zip unless the user requests a different name.
+  4. Deliver ZIP link + QA LOG in chat.
+
+────────────────────────────────────────────────────────────────
+
+COMMON FAILURE MODES
+
+1.  Copying the What's To Come directions paragraph from elsewhere —
+    must match the verbatim text in PART 2 exactly, every section.
+2.  Using the AI-derived future task instead of DOK4.01 from bank.
+3.  Copying a bank item verbatim into an Example — examples are AI-designed.
+4.  Printing a source anchor line — NEVER appears in output.
+5.  Using generic Math Notes filler (see MATH NOTES CONTENT REQUIREMENT).
+6.  Omitting Stop and Discuss after an Example/YTI pair.
+7.  Forcing a Math Notes before every Example — only when concept is new.
+8.  Missing workspace after Example, YTI, or Stop and Discuss.
+9.  Adding workspace after Math Notes, Summary, or Common Mistakes.
+10. Paraphrasing I-cans — copy verbatim always.
+11. Using a class not in the ALLOWED CLASS LIST.
+12. Using a table class other than "values".
+13. Embedding a <style> block.
+14. Missing base.css link or wrong link order.
+15. MathJax: using \$N$ to wrap numeric values in prose.
+    Correct: write "4" in prose, or "$4$" in math context without \\$.
+16. MathJax: using \(...\) or \[...\] — use $...$ and $$...$$ only.
+17. MathJax: raw < or > inside math — use \lt and \gt.
+18. Intro reading with fewer than 5 paragraphs.
+19. Writing the reading paragraphs before planning the S&D questions.
+20. S&D Q1 or Q2 that cannot be answered by rereading one sentence
+    from the passage — fix the reading paragraph if needed.
+21. Exit Ticket Cell 1 or 2 paraphrased instead of verbatim.
+22. Delivering only HTML — always a ZIP.
+23. Writing HTML before completing the CONTENT PLAN.
+24. Skipping any QA pass or claiming PASS without evidence.
+25. Non-empty figures folder in ZIP.
+26. Omitting a graph from a Math Notes block where evaluation,
+    comparison, or representation is the concept — default is to include.
+27. Modifying graph_tool.py source lines.
+28. Adding imports or OUTPUT_DIR to the appended graph section.
+29. Matching problems where correct answer N maps to position N — always
+    scramble at least one side so ordering alone cannot solve the problem.
+
+════════════════════════════════════════════════════════════════

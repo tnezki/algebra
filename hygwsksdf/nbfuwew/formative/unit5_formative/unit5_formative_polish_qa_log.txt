@@ -1,0 +1,90 @@
+Unit 5 Formative Polish QA Log
+Polish date: 2026-06-13
+Package: unit5_formative_polished
+
+INPUT FILES READ
+- 23_portable_memory_formative_polish(5).txt
+- generate_graphs(66).py
+- unit5_dok1-1.html through unit5_dok4-4.html (16 HTML files, 128 version pages)
+- No catalog update CSV was provided.
+
+POLISH SCOPE
+This polish followed the uploaded two-pass formative polish PM only.
+It was not a rebuild. Existing file names, DOK slots, version numbering, and the locked formative HTML template were preserved.
+
+PASS A - TECHNICAL MATHJAX / CORRUPTION SUMMARY
+Overall result: PASS for all 16 HTML files.
+Final scan results across all HTML files:
+- x0c form-feed corruption hits: 0
+- x0d carriage-return corruption hits: 0
+- broken \rac hits: 0
+- broken \ight hits: 0
+- unescaped bare currency dollar hits: 0
+- wrong delimiter hits for \(...\), \[...\]: 0
+- raw < or > inside math delimiters: 0
+- LaTeX environment balance errors: 0
+- MathJax config before CDN: YES in every file
+- CDN uses cdn.jsdelivr.net: YES in every file
+MathJax/corruption fixes applied: NONE
+
+PASS B - BAD QUESTIONS / CONTENT QUALITY SUMMARY
+Overall result: PASS for all 128 version pages after targeted fixes.
+
+File-by-file PASS B findings and fixes:
+- unit5_dok1-1.html: no unresolved bad-question findings; fixes applied: NONE; result PASS.
+- unit5_dok1-2.html: no unresolved bad-question findings; figures provide the needed diamond/area-model inputs; fixes applied: NONE; result PASS.
+- unit5_dok1-3.html: no unresolved bad-question findings; fixes applied: NONE; result PASS.
+- unit5_dok1-4.html: no unresolved bad-question findings; graph titles did not leak vertex/maximum/minimum; fixes applied: NONE; result PASS.
+- unit5_dok2-1.html: no unresolved bad-question findings; area-model and GCF tasks remain actionable; fixes applied: NONE; result PASS.
+- unit5_dok2-2.html: no unresolved bad-question findings; given table values are appropriate scaffolds for the DOK 2 task and do not pre-answer the requested factorization; fixes applied: NONE; result PASS.
+- unit5_dok2-3.html: no unresolved bad-question findings; table and area-model tasks remain actionable; fixes applied: NONE; result PASS.
+- unit5_dok2-4.html: no unresolved bad-question findings; graph-reading tasks require estimated zeros/forms and context or representation justification; fixes applied: NONE; result PASS.
+- unit5_dok3-1.html: no unresolved bad-question findings; mismatch/complete-factor reasoning tasks provide all needed information; fixes applied: NONE; result PASS.
+- unit5_dok3-2.html: found scaffolded DOK 3 prompts in V1-V4 that named each procedural step too directly. Fix: replaced those substeps with an open strategy/factor/justify prompt while preserving the same trinomials and DOK demand. Result PASS.
+- unit5_dok3-3.html: no unresolved bad-question findings; reasoning, comparison, and strategy tasks remain actionable; fixes applied: NONE; result PASS.
+- unit5_dok3-4.html: no unresolved bad-question findings; critique and representation-choice tasks require zero-property/intercept evidence; fixes applied: NONE; result PASS.
+- unit5_dok4-1.html: no unresolved bad-question findings; model-revision and synthesis tasks provide concrete expressions or models; fixes applied: NONE; result PASS.
+- unit5_dok4-2.html: no unresolved bad-question findings; design/synthesis tasks remain open and constraint-based; fixes applied: NONE; result PASS.
+- unit5_dok4-3.html: no unresolved bad-question findings; special-pattern design, approach comparison, and revision tasks remain actionable; fixes applied: NONE; result PASS.
+- unit5_dok4-4.html: found V7-V8 model-revision prompts without enough concrete context constraints. Fix: added specific height/profit context constraints so each revision task is actionable and evidence-based. Result PASS.
+
+VERSION-FAMILY INTEGRITY
+- V1-V4 remain assessment-day parallel forms.
+- V5-V6 remain a reassessment/makeup pair with a different task family from V1-V4.
+- V7-V8 remain a second reassessment/makeup pair with a different task family from both earlier groups.
+- DOK levels remain aligned to file names.
+Result: PASS.
+
+GRAPH CODE AND FIGURE STATUS
+- generate_graphs.py was read completely and included in the polished package.
+- Existing graph-tool source lines above the append section were not modified.
+- Graph title violations found: NONE.
+- Graph title corrections in generate_graphs.py: NONE.
+- New figure blocks added: NONE.
+- Figures were generated in figures/ from generate_graphs.py.
+- Referenced figures in corrected HTML: 36.
+- Missing referenced figures: 0.
+- Zero-byte referenced figures: 0.
+- PNG figures are included in the ZIP under the exact relative paths used by the HTML.
+
+CATALOG STATUS
+No unit5_catalog_update.csv was included in the uploaded files, so no catalog CSV was added.
+
+FINAL SELF-CHECK
+1. All 16 HTML files present: YES
+2. Each HTML file contains exactly 8 section.page version pages: YES
+3. File names unchanged: YES
+4. PASS A is PASS for all files: YES
+5. PASS B is PASS for all files: YES
+6. MathJax config precedes CDN in every HTML file: YES
+7. CDN uses cdn.jsdelivr.net in every HTML file: YES
+8. No unbalanced LaTeX environments remain: YES
+9. No unresolved graph-title leaks remain: YES
+10. No V5-V6 or V7-V8 family collapse occurred during fixes: YES
+11. generate_graphs.py included: YES
+12. figures/ included: YES
+13. Catalog CSV included if present: not applicable; none provided
+14. Package-level QA log included: YES
+15. ZIP opens to a single top-level folder named unit5_formative_polished/: YES
+
+FINAL OVERALL RESULT: PASS

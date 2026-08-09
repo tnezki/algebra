@@ -1,0 +1,836 @@
+SUMMATIVE ASSESSMENT BUILD PROMPT
+Version: summative4 -- 8-version test/reassessment structure
+════════════════════════════════════════════════════════════════
+
+READ ORDER — MANDATORY BEFORE ANY OUTPUT
+
+1. Read THIS document completely.
+2. Read the uploaded ASSESSMENT BANK HTML completely.
+   The bank is the source of all question content.
+   Every summative question derives from a specific bank item.
+   Do not invent questions independently.
+3. Read graph_tool.py completely when uploaded.
+   Know which graph types exist before planning any figure.
+
+Do not begin output until all uploaded files are fully read.
+Say nothing until the ZIP is delivered.
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If saved memory, prior habit, prior conversation, generic
+convention, or any other instruction conflicts with this file,
+follow this file. Do not drift. Do not freelance.
+
+════════════════════════════════════════════════════════════════
+
+BANK FILE READING — CRITICAL MANDATE
+
+The assessment bank HTML is fully available in context.
+Do not report that the bank is truncated or partially inspected.
+Do not ask for a re-upload of any file uploaded in this session.
+Do not ask for any file not listed in READ ORDER.
+If a section of the bank appears cut off, build using the items
+that are visible and supplement from the strongest remaining
+items at each DOK level.
+This mandate overrides any perceived file-reading limitation.
+
+════════════════════════════════════════════════════════════════
+
+DOK CONSTRAINT — SUMMATIVE ONLY USES DOK 1–3
+
+Summative assessments are paper-only, 45-minute tests.
+DOK 4 items (design, model, synthesize, extended critique) are
+NOT appropriate for this format and must not appear.
+
+DOK 4 is assessed through formative assessments, activities,
+investigations, and performance tasks — not the summative.
+
+Any bank item at DOK 4 must be skipped entirely during
+source selection. The DOK 4 slot cap is ZERO.
+
+QUESTION COUNT IS LOCKED: every version must contain exactly
+10 questions. Do not create 11 or 12 questions even if the
+bank has strong extra items or time seems available.
+
+Fixed DOK distribution for every summative version:
+  DOK 1 = 4 questions
+  DOK 2 = 4 questions
+  DOK 3 = 2 questions
+  DOK 4 = 0 questions
+
+════════════════════════════════════════════════════════════════
+
+WHAT "BUILD" MEANS
+
+When the user says build / create / generate / make:
+
+  ✓ Read PM and all uploaded source files
+  ✓ Run PLANNING AUDIT before writing item 1
+  ✓ Generate the single HTML file with all 8 versions
+  ✓ Generate generate_graphs.py when figures are needed
+  ✓ Run all 6 quality passes
+  ✓ Output QA LOG in chat
+  ✓ Create unit[#]_summative_catalog_update.csv in the ZIP
+  ✓ Assemble and deliver the ZIP
+
+Build does NOT mean:
+  sample / scaffold / placeholder / partial build /
+  ask before continuing / report bank too large /
+  explain what a build would require /
+  deliver a structure test instead of the package
+
+The ZIP is the only acceptable endpoint.
+
+Before assembling the ZIP, ask privately:
+  1. Did I complete the PLANNING AUDIT before writing item 1?
+  2. Does the HTML file contain exactly 8 versions (V1-V8)?
+  3. Does each version have exactly 10 questions?
+  4. Are all questions from DOK 1-3 only -- zero DOK 4?
+  5. Do all 5 unit sections appear in the section tags?
+  6. Are V1-V4 genuinely different from each other while preserving the same test-day blueprint?
+  7. Are V5-V6 a reassessment/makeup pair covering the same content with different/reworded/slightly different questions and a scrambled order?
+  8. Are V7-V8 a second reassessment/makeup pair that is different from V5-V6 and also scrambled?
+  9. Does every figure reference have a graph call?
+ 10. Does inline CSS match the locked template exactly?
+ 11. Are all QA passes PASS?
+ 12. Is catalog CSV created and included in the ZIP?
+If any answer is NO, fix before assembling the ZIP.
+
+════════════════════════════════════════════════════════════════
+
+WHAT YOU BUILD
+
+ONE HTML file:  unit[#]_summative_assessment.html
+
+  Contains 8 versions (V1 through V8), all in one file.
+  Each version has exactly 10 questions.
+  The question count is fixed: do not add an 11th or 12th
+  question to fill time. Use balanced unit coverage and the
+  fixed DOK distribution to choose the strongest 10 slots.
+  Pages per version are determined by content:
+    — .problem.half: 2 questions per page (default)
+    — .problem.full: 1 question per page (when content
+      genuinely fills more than half a page)
+
+  V1-V4 = same-day parallel forms for test day (anti-copy seating forms)
+  V5-V6 = first reassessment / makeup pair
+  V7-V8 = second reassessment / makeup pair, different from V5-V6
+
+Also build:
+  generate_graphs.py — copy of graph_tool.py with generation
+    calls appended below the final marker. Include whenever
+    any question requires a figure. Graphs/images are easy to
+    generate and are valuable mastery checks; do NOT ration them
+    to simplify packaging. Omit generate_graphs.py only if a
+    deliberate figure-opportunity audit confirms that no selected
+    slot across all 8 versions would be strengthened by a graph,
+    model, number line, table-as-figure, or other visual. In most
+    math units, expect at least one graph/image/model item.
+
+  figures/ — folder containing all referenced PNGs.
+    User runs generate_graphs.py locally to populate.
+
+  unit[#]_summative_catalog_update.csv — source tracking.
+
+ZIP structure (LOCKED):
+  unit[#]_summative/
+    figures/
+    unit[#]_summative_assessment.html
+    generate_graphs.py          ← include when figures exist
+    unit[#]_summative_catalog_update.csv
+
+ZIP name:  unit[#]_summative.zip
+  Examples:  unit0A_summative.zip   unit1_summative.zip
+
+════════════════════════════════════════════════════════════════
+
+PLANNING AUDIT — RUN BEFORE WRITING ITEM 1
+
+Complete this privately before writing any HTML.
+Do not write the first version until all rows are filled.
+
+STEP 1 — QUESTION SLOT PLAN (exactly 10 slots, one per question)
+
+For each question slot, assign:
+
+  Slot #:       [1–10]
+  Section:      [e.g. 0A.1 — unit section covered]
+  DOK level:    [1 / 2 / 3 — NO 4]
+  Question type:[computation / evaluation / rewriting /
+                 equation-solve / inequality-solve /
+                 number-line / interpret / compare /
+                 error-analysis / function-behavior]
+  V1-V4 source: [bank item ID] + how used [number-swap /
+                 context-swap / merge (+ partner ID)]
+  V5-V6 source: [different bank item ID or stronger adaptation]
+  V7-V8 source: [different from V5-V6; bank item ID or adaptation]
+  Reassessment order: [where this content target appears in V5/V6 and V7/V8]
+  Figure needed:[YES -- graph_tool type / NO]
+  Visual opportunity:[USED / NOT USED -- justify only if not used]
+
+FIGURE OPPORTUNITY RULE:
+  During slot planning, actively look for items that use or could
+  naturally use graphs/images/models: number lines, coordinate
+  graphs, area models, algebra tiles, tables rendered as visual
+  evidence, diagrams, answer planes, or comparison figures.
+  Visuals are not scarce. They are often stronger evidence of
+  mastery than text-only computation. Do not choose all text-only
+  items merely to avoid generate_graphs.py or figures/.
+
+SECTION COVERAGE RULE:
+  All 5 unit sections must appear in the section tags.
+  Target: 2 questions per section (flexible ±1).
+  Do not leave any section unrepresented.
+
+DOK DISTRIBUTION CHECK (fixed for exactly 10 questions):
+  DOK 1: exactly 4 questions
+  DOK 2: exactly 4 questions
+  DOK 3: exactly 2 questions
+  DOK 4: exactly 0 questions
+  Any deviation from 4 / 4 / 2 / 0 = PLANNING FAIL.
+
+If you find any section uncovered or DOK 4 assigned —
+stop and reassign before writing anything.
+
+STEP 2 — FIGURE PLAN
+
+Before marking any slot as NO figure, ask whether a graph, image,
+model, number line, table-as-figure, or answer plane would make the
+student's mastery more visible. Use figures whenever they improve the
+assessment. Do not ration figures because they are easy to generate.
+
+For each slot that needs a figure:
+  Which graph_tool type handles it?
+  Is the figure version-specific (changes across V1-V8)?
+    → Name: descriptor_v[N].png (e.g., points_v1.png)
+  Or shared across all versions?
+    → Name: descriptor.png (e.g., blank_plane.png)
+  Are structurally identical blanks shared (not duplicated)?
+
+STEP 3 — VERSION VARIATION PLAN
+
+For each of the 10 content targets, privately note:
+  How do V1, V2, V3, and V4 differ from each other?
+    (different numbers, points, function rules, contexts)
+  How do V5 and V6 cover the same target with different/reworded/slightly different questions?
+  Where is that target placed after scrambling in V5 and V6?
+  How do V7 and V8 differ from V5/V6 and from each other?
+  Where is that target placed after scrambling in V7 and V8?
+
+V5-V6 must not be trivial number swaps of V1-V4. They should feel like a fresh first reassessment/makeup set while preserving the same content coverage.
+
+V7-V8 must not be repeats of V5-V6. They should feel like a second fresh reassessment/makeup set, again preserving the same content coverage.
+
+════════════════════════════════════════════════════════════════
+
+SOURCE SELECTION
+
+Scan the bank for all items tagged:
+  <!-- assessment-grade -->
+
+List privately: ID, DOK level, section, description.
+SKIP all DOK 4 items — they are not eligible.
+
+CANONICAL PRINCIPLE (from spiral plan):
+  Bank items are the canonical specification.
+  The summative copies them or generates variants.
+  It does not invent independently.
+  Every question must trace to a specific bank item.
+
+SPIRAL PLAN ALIGNMENT ADDENDUM:
+  The summative is a compact 45-minute snapshot of the spiral plan's
+  current priority skills. Reassessment versions may be scrambled and
+  reworded, but they must preserve the same skill targets, section
+  coverage, and DOK balance as the test-day versions. Do not use
+  reassessment forms to introduce new content targets that were not part
+  of the original summative blueprint.
+
+Fill the V1-V4 source slots (exactly 10 content targets total):
+  - Prefer assessment-grade items.
+  - Select items that represent distinct skills and sections.
+  - Prefer visual/graph/model items when they align to the same
+    learning target and DOK level, especially when they check
+    mastery better than a text-only version.
+  - If fewer AG items than needed at a DOK level, supplement
+    with the strongest non-AG items (self-contained, no
+    cross-references, naturally variantable).
+
+Fill the V5-V6 reassessment/makeup slots:
+  - Cover the same content targets and DOK distribution as V1-V4.
+  - Use different bank items from V1-V4 where possible.
+  - When the same source item must be reused, use a stronger adaptation
+    than a single number swap: reword, change context, switch order,
+    or use a closely related bank item.
+  - Scramble the order so the V5/V6 problem numbers are not a direct
+    slot-by-slot match to V1-V4.
+  - V5 and V6 should be parallel to each other, but not identical.
+
+Fill the V7-V8 second reassessment/makeup slots:
+  - Cover the same content targets and DOK distribution as V1-V4.
+  - Use questions different from V5-V6, not merely one-number changes.
+  - Prefer a third bank item, a different entry point, a different context,
+    or a different representation of the same skill target.
+  - Scramble the order again; V7/V8 should not use the same reassessment
+    order as V5/V6.
+  - V7 and V8 should be parallel to each other, but not identical.
+
+MODIFICATION MODES — ordered by frequency of use:
+
+  MOSTLY — NUMBER-SWAP
+    Change the numbers, values, or surface quantities in the
+    bank item. Keep structure, wording, and DOK identical.
+    This is the default. Use for the majority of questions.
+    Example: bank item uses $3x+12=33$
+             V1: $4x+9=29$  V2: $2x+15=37$  V3: $5x-6=44$
+
+  MOSTLY — LIGHT REWRITE
+    Change a phrase or context while preserving the
+    mathematical structure and DOK level.
+    Example: "gym charges \$20 to join" becomes
+             "library card costs \$15 to open"
+    Use when a number-swap alone feels too superficial.
+
+  OCCASIONALLY — SWITCH ORDER INFO IS PRESENTED
+    Reorder what's given vs. what's asked without changing
+    the underlying math.
+    Example: bank gives equation → asks for context meaning
+             → switch to: give context description → ask
+             for equation. Same skill, different entry point.
+    Use for 1–2 questions per form at most.
+
+  OCCASIONALLY — MERGE 2 INTO 1
+    Combine two bank items at adjacent DOK levels into one
+    multi-part question.
+    Part a = lower-DOK bank item (DOK 1 or 2).
+    Part b = higher-DOK bank item that extends Part a's setup.
+    Count the merged question at the higher DOK level.
+    Use for 1–2 merges per form maximum.
+    Do not merge questions from unrelated sections.
+
+════════════════════════════════════════════════════════════════
+
+VERSION DESIGN -- V1 THROUGH V8
+
+The same 10 content targets are represented across all 8 versions.
+All versions must keep exactly 10 questions with the fixed DOK distribution:
+DOK 1 = 4, DOK 2 = 4, DOK 3 = 2, DOK 4 = 0.
+
+V1 / V2 / V3 / V4 -- SAME-DAY TEST FORMS
+  These are used on the original test day to prevent copying.
+  Students seated near each other may receive different versions.
+  V1-V4 must be parallel forms: same problem numbers, same section tags,
+  same DOK levels, same ans-labels, and same question structure for each
+  slot. Only the specific numbers, coordinates, function rules, contexts,
+  or figures change.
+
+V5 / V6 -- FIRST REASSESSMENT OR MAKEUP PAIR
+  These cover the same content and DOK blueprint as V1-V4, but they are
+  not just V1-V4 with new numbers. Reword them, use slightly different
+  bank questions where possible, change contexts or representations, and
+  scramble the order of the 10 content targets.
+
+  V5 and V6 should be parallel to each other for grading consistency, but
+  they should not be direct slot-by-slot copies of V1-V4. A student who
+  took V1-V4 should feel that V5/V6 is a fresh reassessment of the same
+  skills, not a shared answer key in a new order.
+
+V7 / V8 -- SECOND REASSESSMENT OR MAKEUP PAIR
+  These also cover the same content and DOK blueprint, but they must be
+  different from V5-V6. Use a different bank item, a different wording,
+  a different context, a different representation, or a different entry
+  point whenever possible. Scramble the order again so V7/V8 are not
+  ordered like V5/V6.
+
+  V7 and V8 should be parallel to each other, but they must be a second
+  fresh reassessment/makeup set, not a duplicate of V5/V6.
+
+QUESTION TYPE CONSISTENCY RULE:
+  For V1-V4, the same slot number must test the same learning target and
+  use the same question structure. Do not change ans-labels, DOK level,
+  or section tag between V1-V4 for the same slot.
+
+  For V5-V6 and V7-V8, preserve the same overall blueprint: all 10 content
+  targets, all 5 sections, and the 4/4/2/0 DOK distribution. The order may
+  and should be scrambled. Track the mapping privately and in the catalog
+  so each reassessment question can be traced back to its content target
+  and bank source.
+
+════════════════════════════════════════════════════════════════
+
+HTML FILE STRUCTURE — LOCKED TEMPLATE
+
+ONE file. Eight version blocks in sequence.
+CSS is SELF-CONTAINED — inline style block, no external links.
+Do NOT use external CSS link tags.
+Do NOT create custom wrapper classes.
+Do NOT add workspace boxes or dashed areas.
+
+ALLOWED classes in <body>:
+  page  page-header  page-title  name-line
+  problem-row  problem  half  full
+  problem-number  section-tag
+  ws-area  ans-block  ans-line  ans-label
+  graph-block  question-graph  answer-plane
+  data-table
+
+DO NOT USE: container  card  formative-card  workspace
+  item-card  assessment-card  bank-section  or any class
+  not in the list above. Unknown classes render as unstyled.
+
+WHEN TO USE .half vs .full:
+  .half (default): the question content, workspace, and ans-block
+    fit comfortably in half a page. Use for most DOK 1 and DOK 2
+    questions with short prompts and 1–2 ans-lines.
+  .full: the question genuinely fills more than half a page —
+    e.g., a DOK 3 multi-part with a large figure, a problem with
+    4+ ans-lines, or a table + interpretation combination.
+    Do not use .full to add visual white space.
+    Do use .full whenever the content needs it.
+  Default page: 2 × .half. A .full page has 1 × .full.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit [#] Summative Assessments</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root { --pad: 0.13in; --img-col-max: 3.45in; }
+@page { size: letter; margin: 0.5in; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.34; color: #111; background: #fff; font-size: 11.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { height: 10in; display: flex; flex-direction: column; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page-header { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 var(--pad) 4px var(--pad); border-bottom: 2px solid #111; }
+.page-title { font-weight: 900; font-size: 13.5pt; color: #000; white-space: nowrap; }
+.name-line { font-size: 11.5pt; font-weight: 800; white-space: nowrap; }
+.name-line span { display: inline-block; width: 2.6in; height: 13px; border-bottom: 1.5px solid #111; margin-left: 6px; vertical-align: bottom; }
+.problem-row { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: row; }
+.problem { display: flex; flex-direction: column; overflow: hidden; padding: 8px var(--pad) var(--pad) var(--pad); align-self: stretch; }
+.problem.half { flex: 1 1 0; min-width: 0; }
+.problem.half + .problem.half { border-left: 1px solid #777; }
+.problem.full { flex: 0 0 100%; width: 100%; }
+.problem-number { flex: 0 0 auto; font-weight: 900; color: #000; font-size: 12.5pt; margin-bottom: 5px; }
+.section-tag { color: #555; font-size: 10.5pt; font-weight: 800; margin-left: 8px; }
+p { margin-bottom: 6px; }
+ol, ul { margin-left: 0.24in; margin-bottom: 5px; }
+li { margin-bottom: 3px; }
+.ws-area { flex: 1 1 auto; min-height: 0.35in; margin-top: 6px; }
+.ans-block { flex: 0 0 auto; margin-top: auto; border-top: 2px solid #111; padding-top: 4px; }
+.ans-line { min-height: 0.24in; padding: 3px 0 2px 0; border-bottom: 1px solid #ddd; }
+.ans-line:last-child { border-bottom: none; }
+.ans-label { font-weight: 900; font-size: 10.5pt; }
+.graph-block { flex: 0 0 auto; margin: 6px 0 5px 0; text-align: left; }
+.question-graph, .answer-plane { display: block; width: 100%; max-width: var(--img-col-max); max-height: 4.0in; height: auto; margin: 0; border: 0; background: #fff; }
+.data-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 6px 0 7px 0; flex-shrink: 0; }
+.data-table th, .data-table td { border: 1px solid #777; padding: 4px 5px; text-align: center; vertical-align: middle; font-size: 10.5pt; }
+.data-table th:first-child, .data-table td:first-child { font-weight: 900; width: 0.72in; }
+@media print { body { font-size: 11.5pt; } }
+</style>
+</head>
+<body>
+
+<!-- ======================= VERSION 1 PAGE 1 START ======================= -->
+<section class="page">
+<div class="page-header"><div class="page-title">Unit [#] Summative Assessment &nbsp; V1</div><div class="name-line">Name:<span></span></div></div>
+<div class="problem-row">
+<!-- VERSION 1 PROBLEM 1 START -->
+<div class="problem half" id="v1-problem-1">
+  <div class="problem-number">1.<span class="section-tag">Section [#.#]</span></div>
+  [QUESTION CONTENT]
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">[label]:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 1 END -->
+<!-- VERSION 1 PROBLEM 2 START -->
+<div class="problem half" id="v1-problem-2">
+  <div class="problem-number">2.<span class="section-tag">Section [#.#]</span></div>
+  [QUESTION CONTENT]
+  <div class="ws-area"></div>
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">[label]:</span></div>
+  </div>
+</div>
+<!-- VERSION 1 PROBLEM 2 END -->
+</div>
+</section>
+<!-- ======================= VERSION 1 PAGE 1 END ======================= -->
+
+[Pages 2–5 of V1 follow the same pattern when all problems are .half]
+[V2–V6 follow the same version structure, adjusted only when .full problems are justified]
+
+</body>
+</html>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUESTION CONTENT — WHAT GOES INSIDE A .problem DIV
+
+All content sits between .problem-number and .ws-area.
+Never put content inside .ws-area or .ans-block.
+
+CONTENT PATTERNS:
+
+Plain question:
+  <p>Simplify $3x + 5 + 2x - 1$ and identify the like terms
+  that were combined.</p>
+
+Table of values:
+  <table class="data-table">
+  <tr><th>$x$</th><td>-1</td><td>0</td><td>3</td></tr>
+  <tr><th>$f(x)$</th><td></td><td></td><td></td></tr>
+  </table>
+
+Graph/figure (question evidence):
+  <p>Use the graph. [question prompt]</p>
+  <div class="graph-block">
+    <img class="question-graph" src="figures/[name].png"
+         alt="[non-answer-revealing description]">
+  </div>
+
+Student graphing (answer plane):
+  <p>[question prompt] Graph your solution on the number line.</p>
+  <div class="graph-block">
+    <img class="answer-plane" src="figures/blank_numberline.png"
+         alt="Blank number line">
+  </div>
+
+Multi-part question:
+  <p>[setup or context]</p>
+  <ol type="a">
+  <li>[part a]</li>
+  <li>[part b]</li>
+  </ol>
+
+ANS-BLOCK PATTERNS (labeled answer lines):
+
+One short answer:
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">Answer:</span></div>
+  </div>
+
+Multiple labeled answers:
+  <div class="ans-block">
+    <div class="ans-line"><span class="ans-label">equation:</span></div>
+    <div class="ans-line"><span class="ans-label">solution in context:</span></div>
+  </div>
+
+Table fill-in (answers in table, no extra ans-block needed):
+  Use only when every answer is clearly captured in the table.
+  Still add an ans-block if any interpretation is expected.
+
+ANS-LABEL CONTENT:
+  Keep labels brief and literal — mirror the skill being assessed.
+  Examples: Answer: / simplified: / solution: / equation: /
+            interpretation: / function? / explanation: / correct? /
+            $f(-1)$: / $f(0)$: / evidence: / comparison:
+
+════════════════════════════════════════════════════════════════
+
+FIGURE RULES
+
+CORE PRINCIPLE:
+  Graphs/images/models are not a limited resource. They are easy to
+  create with graph_tool.py and are often the best way to check
+  conceptual mastery, representation fluency, and student reasoning.
+  Use them whenever they improve the item. Do not ration them. Do not
+  avoid them to keep the ZIP simpler. Treat an all-text summative as
+  suspicious unless the bank and unit truly provide no useful visual
+  opportunities.
+
+COMMON HIGH-VALUE VISUALS:
+  — Number lines for ordering, signed numbers, inequality solutions,
+    compound inequalities, and answer graphs.
+  — Coordinate planes for points, functions, comparisons, intercepts,
+    slope, transformations, or model interpretation.
+  — Area models, algebra tiles, diamonds, diagrams, or structured
+    visual models for expressions and equation reasoning.
+  — Tables or data displays when students must interpret, compare,
+    complete, or critique patterns.
+  — Evidence graphs where students explain, correct, or compare claims.
+
+NAMING CONVENTION:
+  Version-specific figures (change per version):
+    descriptor_v[N].png   e.g., points_v1.png through points_v8.png
+  Shared figures (same across all versions):
+    descriptor.png        e.g., blank_plane.png, family_linear.png
+
+SHARING RULE:
+  If a figure is structurally identical across versions — share it.
+  Blank number lines, blank coordinate planes, pre-made function
+  family graphs, and evidence graphs that don't change = shared.
+  Figures that differ by version (different points, different lines,
+  different table values rendered as a graph) = version-specific.
+  Do NOT create blank1, blank2, blank3 numbered duplicates.
+
+GRAPH_TOOL.PY RULES (same as all other artifacts):
+  Copy graph_tool.py in full as generate_graphs.py.
+  Append generation calls only below the final append marker.
+  Never modify source lines above the marker.
+  Never duplicate imports, OUTPUT_DIR, or os.makedirs.
+  Never use raw matplotlib outside graph_tool functions.
+  All math in title=, xlabel=, ylabel=, cell values must use
+  LaTeX r'$...$' strings.
+  Never put the answer or value being found in title= or alt=.
+
+FIGURE CREATION PATTERN:
+  fig, ax = plt.subplots(figsize=(3.5, 3.5))
+  fig.patch.set_facecolor('white')
+  make_standard_graph(ax, functions, title='')
+  save_graph(fig, 'points_v1.png')
+  plt.close(fig)
+
+  For number lines: figsize=(3.5, 1.25)
+
+════════════════════════════════════════════════════════════════
+
+MATHJAX — EXACT CONFIGURATION
+
+MathJax config block must come BEFORE the CDN script.
+
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+Rules:
+  $...$ inline. $$...$$ display. Never \(...\) or \[...\].
+  CDN: cdn.jsdelivr.net only.
+  Currency: \$5 not $5.
+  Comparison in math: \lt and \gt not < and >.
+    WRONG: $x<3$   $x>0$
+    RIGHT: $x\lt 3$   $x\gt 0$
+
+════════════════════════════════════════════════════════════════
+
+QUALITY PASSES — RUN ALL BEFORE ASSEMBLING ZIP
+
+════════════════════════════════════════════════════════════════
+
+PASS 1 — FILE AND VERSION COUNT
+
+  HTML files present:                   1 / 1
+  Versions in file (V1-V8):             [N] (must = 8)
+  Questions per version:                [N] (must = 10 exactly)
+  Pages per version:                    [N] (determined by content)
+  Problem size breakdown:
+    .half problems (total):             [N] (80 if all .half, less per .full used)
+    .full problems (total):             [N] (0 or more, each replaces 2 .half slots)
+    .full problems (total):             [N] (0 unless justified)
+  generate_graphs.py:                   [PRESENT / OMITTED — reason]
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 2 — STRUCTURE CHECK
+
+  Inline CSS present (no link tags):    YES / NO
+  MathJax config before CDN:            YES / NO
+  :root defines --pad and --img-col-max: YES / NO
+  id="v[N]-problem-[M]" on all problems: YES / NO
+  Version boundary comments present:    YES / NO
+  Custom wrapper classes used:          YES (FAIL) / NO
+  Workspace boxes added:                YES (FAIL) / NO
+  All 8 versions follow page structure: YES / NO
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 3 — COVERAGE AND DOK
+
+  Sections represented (section tags):
+    [list all unique section tags found]
+    All 5 sections covered:             YES / NO
+
+  DOK distribution (classify each of 10 question types):
+    Slot 1: DOK [N]
+    Slot 2: DOK [N]
+    ... (all 10 slots)
+    DOK 1 count: [N]  (must = 4)
+    DOK 2 count: [N]  (must = 4)
+    DOK 3 count: [N]  (must = 2)
+    DOK 4 count: [N]  (must = 0)
+
+  If any DOK 4 found: fix immediately — DOK 4 is not allowed
+  on summative assessments. Revise to DOK 3 or replace.
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 4 — VERSION QUALITY
+
+  V1/V2/V3/V4 genuinely different from each other: YES / NO
+  V1-V4 preserve same-day slot structure:          YES / NO
+    (same section tag, same ans-labels, same DOK level per slot)
+
+  V5/V6 cover the same content blueprint:          YES / NO
+  V5/V6 use different/reworded/slightly different questions from V1-V4: YES / NO
+  V5/V6 order is scrambled from V1-V4:             YES / NO
+  V5 and V6 are parallel but not identical:        YES / NO
+
+  V7/V8 cover the same content blueprint:          YES / NO
+  V7/V8 are different from V5/V6:                  YES / NO
+  V7/V8 order is scrambled from V5/V6:             YES / NO
+  V7 and V8 are parallel but not identical:        YES / NO
+
+  List any slots or content targets where reassessment forms are too similar:
+    [target/version]: [description of issue]
+
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+PASS 5 — FIGURES
+
+  All <img src="figures/..."> references:
+    [figure file]: matching call in generate_graphs.py? YES/NO
+
+  Version-specific figures properly named (_v[N]):
+    [list or NONE where this was violated]
+
+  Shared blanks used without numbered duplicates:
+    [PASS / list violations]
+
+  Answer or key value in title= or alt=:
+    [NONE or list violations]
+
+  generate_graphs.py: graph_tool copied in full, appended only:
+    YES / NO
+  RESULT: PASS / FAIL / N/A (if no figures in any version)
+
+════════════════════════════════════════════════════════════════
+
+PASS 6 — MATHJAX AND CURRENCY
+
+  Bare $[digit] for currency:           [list or NONE]
+  \(...\) or \[...\] delimiters:        [list or NONE]
+  Raw < or > inside math:               [list or NONE]
+  Config before CDN:                    YES / NO
+  RESULT: PASS / FAIL
+
+════════════════════════════════════════════════════════════════
+
+QA LOG — OUTPUT IN CHAT
+
+QA LOG — unit[#] Summative Assessment
+Build date: [date]
+Unit: [number and title]
+
+Planning audit completed: YES/NO
+Section coverage: [list of sections with count per section]
+DOK distribution: DOK1=[N] DOK2=[N] DOK3=[N] DOK4=[N] (must be 4 / 4 / 2 / 0)
+
+PASS 1 — File/version count:      PASS/FAIL
+PASS 2 — Structure:               PASS/FAIL
+PASS 3 — Coverage and DOK:        PASS/FAIL
+PASS 4 — Version quality:         PASS/FAIL
+PASS 5 — Figures:                 PASS/FAIL / N/A
+PASS 6 — MathJax/currency:        PASS/FAIL
+
+Issues fixed before delivery: [list]
+Non-blocking notes: [list or NONE]
+
+OVERALL: PASS — ZIP assembled / FAIL — [blocker]
+
+════════════════════════════════════════════════════════════════
+
+CATALOG UPDATE CSV
+
+File name: unit[#]_summative_catalog_update.csv
+
+CSV columns (exact order):
+  q_id,artifact_type,artifact_unit,artifact_section,
+  artifact_day,artifact_slot,usage_type,combine_with
+
+artifact_type: always summative
+artifact_day: always —
+artifact_slot: e.g. target1 V1-4 / target1 V5-6 / target1 V7-8
+usage_type: number-swap / context-swap / reword / switch-order / merge
+
+One row per bank item used per version family.
+Each of the 10 content targets has at least 3 rows:
+  - V1-V4 same-day source family
+  - V5-V6 first reassessment/makeup source family
+  - V7-V8 second reassessment/makeup source family
+Merged items have two rows per family.
+
+Standard build: 10 targets x 3 families = 30 rows minimum.
+
+Include the CSV in the ZIP root folder.
+Do not paste the full CSV in chat -- instead output a brief
+summary: total rows, source items used, merge count, and version families.
+
+Verify before ZIP:
+  - Header matches required column order exactly
+  - Every content target has V1-V4, V5-V6, and V7-V8 rows
+  - Every merge row has a non-empty combine_with value
+  - CSV is inside unit[#]_summative/ in the ZIP
+
+════════════════════════════════════════════════════════════════
+
+DELIVERY — ALWAYS A ZIP
+
+1. All 6 passes show PASS.
+2. Assemble the ZIP:
+     unit[#]_summative/
+       figures/
+       unit[#]_summative_assessment.html
+       generate_graphs.py   ← if figures used
+       unit[#]_summative_catalog_update.csv
+3. ZIP as unit[#]_summative.zip.
+4. Deliver the ZIP link.
+5. Output QA LOG in chat.
+6. Output catalog update summary in chat.
+
+Do not deliver the HTML file individually.
+Do not deliver a partial ZIP.
+
+════════════════════════════════════════════════════════════════
+
+COMMON FAILURE MODES — DO NOT DO THESE
+
+1.  Reporting bank truncation or asking for re-upload.
+2.  Asking for files not in READ ORDER.
+3.  Stopping before the ZIP is delivered.
+4.  Including any DOK 4 question. DOK 4 cap = 0.
+5.  Putting all 8 versions in separate HTML files.
+    ONE HTML file contains all 8 versions.
+6.  Producing fewer or more than 8 versions.
+7.  Producing fewer or more than exactly 10 questions per version.
+8.  Forcing all questions to .half when content needs .full.
+9.  Making V5-V6 trivial number swaps of V1-V4, or making V7-V8 repeats of V5-V6.
+10. Changing the question type or section between V1-V4 for the same slot number.
+11. Changing ans-labels between V1-V4 for the same slot.
+12. Forgetting to scramble V5-V6 and V7-V8 reassessment orders.
+13. Letting V7-V8 reuse the same questions or order as V5-V6.
+14. Using external CSS link tags -- always inline style block.
+15. Using classes not in the ALLOWED list.
+16. Using raw matplotlib outside graph_tool.py.
+17. Modifying graph_tool.py source lines -- append only.
+18. Putting answer values in graph title= or alt= strings.
+19. Creating numbered blank figure duplicates (blank1, blank2).
+20. Avoiding useful graph/image/model items merely to simplify the
+    build, omit generate_graphs.py, or keep figures/ empty.
+21. Bare $5 for currency -- always \$5.
+22. Using \(...\) or \[...\] MathJax delimiters.
+23. Raw < or > inside math -- always \lt and \gt.
+24. Omitting section-tag on any problem-number.
+25. Putting content inside .ws-area or .ans-block.
+26. Adding workspace/dashed boxes.
+27. Cross-references between questions or versions.
+28. Questions traceable to DOK 4 bank items (even rewritten).
+29. Skipping the PLANNING AUDIT before writing item 1.
+30. Claiming QA passes without evidence counts.
+31. Omitting the catalog update CSV from the ZIP.
+32. Reporting intermediate status before ZIP is delivered.
+════════════════════════════════════════════════════════════════

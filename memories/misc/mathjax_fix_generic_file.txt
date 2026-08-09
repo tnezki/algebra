@@ -1,0 +1,177 @@
+MATHJAX FIX — GENERIC
+════════════════════════════════════════════════════════════════
+
+PURPOSE
+
+Scan 1–16 uploaded HTML files for MathJax rendering errors
+and byte-level corruption. Fix only the items listed below.
+Do not touch content, formatting, structure, CSS, or anything
+else. Return the corrected file(s).
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If anything in saved memory, prior habit, or any other
+instruction conflicts with this file, follow this file.
+
+════════════════════════════════════════════════════════════════
+
+READ ORDER — MANDATORY BEFORE ANY OUTPUT
+
+1. Read this document completely.
+2. Read every uploaded HTML file completely before beginning.
+   Scan raw bytes first, then string-level, for each file.
+3. Do not produce any output until all files are fully read.
+4. Say nothing until you are ready to deliver results.
+
+════════════════════════════════════════════════════════════════
+
+CHECKS — RUN ALL ON EVERY FILE
+
+Scan body content only. Skip HTML comment blocks and
+<script> tag contents when checking for math issues.
+
+────────────────────────────────────────────────────────────────
+CHECK 1 — BYTE-LEVEL CORRUPTION
+
+  bytes([0x0c]) mid-word in body → replace with \frac
+  bytes([0x0d]) mid-word in body → replace with \right
+
+  Count hits. All must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 2 — STRING-LEVEL CORRUPTION
+
+  \rac not preceded by f → insert f to make \frac
+  \ight not preceded by r → insert r to make \right
+
+  Count hits. All must be 0 after fixes.
+
+  Reference counts (not errors — just for plausibility):
+    \frac occurrences:   [N]
+    \left occurrences:   [N]
+    \right occurrences:  [N]
+
+────────────────────────────────────────────────────────────────
+CHECK 3 — WRONG MATHJAX DELIMITERS
+
+  \(...\) in body text → replace with $...$
+  \[...\] in body text → replace with $$...$$
+
+  Count hits. All must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 4 — BARE CURRENCY IN QUESTION TEXT
+
+  $[digit] that is NOT inside math-mode delimiters → \$[digit]
+  Examples: $5 → \$5    $12 → \$12    $100 → \$100
+
+  Do NOT change:
+    $x$, $-3$, $$...$$   (legitimate math-mode dollars)
+    \$5 already escaped   (already correct)
+
+  Count hits. All must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 5 — RESERVED CHARACTERS INSIDE MATH
+
+  Raw < inside $...$ or $$...$$ → \lt
+  Raw > inside $...$ or $$...$$ → \gt
+  Example: $x<3$ → $x\lt 3$
+
+  Do NOT change ≤ or ≥ Unicode characters — those are fine.
+
+  Count hits. All must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 6 — NAKED UNDERSCORES INSIDE MATH
+
+  Two or more consecutive underscores inside $...$ or $$...$$
+  cause a "Missing open brace for subscript" error.
+
+  Fix: replace with \underline{\hspace{0.5in}}
+  Example: $x^2+____$ → $x^2+\underline{\hspace{0.5in}}$
+
+  Do NOT change underscores outside math delimiters —
+  those are regular HTML text and are correct.
+
+  Count hits. All must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 7 — LATEX ENVIRONMENT BALANCE
+
+  Every \begin{env} must have a matching \end{env} of the
+  same environment name, in proper nested order.
+
+  Check at minimum: aligned, align, array, cases, matrix,
+  pmatrix, bmatrix, vmatrix, split, gathered, alignedat.
+
+  Most common fix: missing \end{aligned} before closing $$.
+  Insert only the missing closer. Do not reformat the block.
+
+  Report \begin and \end counts by environment name.
+  Unmatched count must be 0 after fixes.
+
+────────────────────────────────────────────────────────────────
+CHECK 8 — MATHJAX CONFIG AND CDN
+
+  The window.MathJax = {...} config <script> block must appear
+  BEFORE the <script async src="...mathjax..."> CDN tag.
+  If out of order, swap the two blocks only.
+
+  CDN must be cdn.jsdelivr.net — not cdnjs, not unpkg.
+  If CDN is wrong, update the src URL only.
+
+════════════════════════════════════════════════════════════════
+
+MINIMUM CHANGE PRINCIPLE
+
+Every fix is the smallest change that resolves the issue.
+Fix only the broken token. Do not reformat, restructure,
+or rewrite surrounding content.
+
+If something looks wrong but is not in Checks 1–8, leave it.
+
+════════════════════════════════════════════════════════════════
+
+QA LOG — RECORD FOR EACH FILE
+
+  File: [filename]
+  ─────────────────────────────────────────────
+  C1  \x0c hits:              [N — must be 0]
+  C1  \x0d hits:              [N — must be 0]
+  C2  \rac hits:              [N — must be 0]
+  C2  \ight hits:             [N — must be 0]
+  C2  \frac (ref count):      [N]
+  C2  \left (ref count):      [N]
+  C2  \right (ref count):     [N]
+  C3  wrong delimiters:       [N — must be 0]
+  C4  bare $[digit]:          [N — must be 0]
+  C5  raw < or > in math:     [N — must be 0]
+  C6  naked __ in math:       [N — must be 0]
+  C7  unmatched environments: [N — must be 0]
+  C8  config before CDN:      YES / NO
+  C8  CDN correct:            YES / NO
+  ─────────────────────────────────────────────
+  Fixes applied: [list each change, or NONE]
+  RESULT: PASS / FAIL
+
+Repeat QA LOG block for every uploaded file before delivery.
+
+════════════════════════════════════════════════════════════════
+
+DELIVERY
+
+  1 file uploaded  → deliver the corrected HTML file directly.
+                     No ZIP.
+
+  2–16 files       → deliver a single ZIP containing all HTML
+                     files. Use original filenames. No subfolders
+                     unless the originals had them.
+
+Deliver even if no changes were made.
+Deliver the QA LOG for every file before delivering the file
+or ZIP.
+
+════════════════════════════════════════════════════════════════

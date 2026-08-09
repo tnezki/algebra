@@ -1,0 +1,258 @@
+PASS: VISUAL REVIEW — FLAGGED ITEMS
+════════════════════════════════════════════════════════════════
+
+READ ORDER — MANDATORY BEFORE ANY OUTPUT
+
+1. Read THIS document completely.
+2. Read the uploaded BANK HTML completely — every item.
+   Know the full content of every card before evaluating images.
+3. Read the uploaded GENERATE_GRAPHS.PY completely —
+   every graph call and every title= below the marker.
+4. Read every uploaded PNG image.
+   For each image: identify the item ID from the screenshot
+   header, locate that item in the HTML, read the full
+   question text, and evaluate whether the concern is valid.
+
+Do not begin output until all files and images are fully read.
+Do not evaluate images one at a time as they are read —
+read everything first, then respond to all images together.
+
+════════════════════════════════════════════════════════════════
+
+FILES FOR THIS PASS
+
+  1. This prompt
+  2. Bank HTML (the source file)
+  3. generate_graphs.py (the bank's graph script)
+  4. One or more PNG screenshots of flagged items
+
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH
+
+If anything in saved memory, prior habit, or any other
+instruction conflicts with this file, follow this file.
+
+════════════════════════════════════════════════════════════════
+
+WHAT THIS PASS COVERS
+
+Troy has reviewed the rendered bank and flagged items he
+finds questionable or confusing. This pass evaluates each
+flagged item and either fixes it or opens a discussion
+before any change is made.
+
+This pass does NOT scan the whole bank for issues —
+it evaluates only the items shown in the uploaded images.
+
+════════════════════════════════════════════════════════════════
+
+THE TWO OUTCOMES — READ THIS CAREFULLY
+
+For each flagged image there are exactly two outcomes.
+
+────────────────────────────────────────────────────────────────
+OUTCOME 1 — AGREE: Fix it.
+
+Claude agrees the item has a genuine problem.
+
+Apply the fix using minimum change:
+  — Only change what resolves the specific issue.
+  — Do not rewrite the whole item.
+  — Do not restructure surrounding items.
+  — Do not change the problem number or DOK label
+     unless the fix requires it.
+
+Fixes may include (but are not limited to):
+  — Graph title: change title= to '' or a generic descriptor
+    in generate_graphs.py. Do not change the filename.
+  — Pre-answered table: clear the pre-populated answer cells
+    in the HTML. Keep headers and stated given values.
+  — Answer visible in question text: remove the embedded answer
+    and reframe as an ask.
+  — Implausible context values: adjust starting value,
+    multiplier, or time unit to realistic range.
+  — Question that gives the answer away: minimum reword to
+    separate the ask from the embedded answer.
+  — Bad DOK pattern (5a–5n): smallest fix that resolves it.
+
+State the fix clearly:
+  AGREE — [item ID]: [what the problem is] → [what was changed]
+
+────────────────────────────────────────────────────────────────
+OUTCOME 2 — DISCUSS: Do not fix. Explain and ask.
+
+Claude believes the item is acceptable as written.
+
+State the outcome clearly:
+  DISCUSS — [item ID]: [what Troy's concern appears to be]
+  [One specific reason the item works despite its appearance]
+  [Any genuine weakness worth noting even if not a violation]
+  Do you want to fix it anyway, or shall we leave it as is?
+
+Do not fix the item until Troy responds.
+Do not hedge or make partial changes.
+Do not suggest a fix and then make it anyway.
+The discussion must complete before any change is applied.
+
+════════════════════════════════════════════════════════════════
+
+HOW TO EVALUATE EACH FLAGGED ITEM
+
+STEP 1 — IDENTIFY
+  Read the item ID from the screenshot header.
+  Locate that exact item in the bank HTML.
+  Read the full question text, any table, any figure reference.
+
+STEP 2 — UNDERSTAND THE CONCERN
+  What does Troy appear to be flagging?
+  Common concerns from past reviews:
+    Graph title gives away the equation or answer.
+    Table says "complete it" but cells are pre-filled.
+    Answer is visible in the graph, label, or column header.
+    Context numbers produce implausible real-world outputs.
+    Item seems too easy for its DOK level.
+    Question phrasing is ambiguous or confusing.
+
+STEP 3 — EVALUATE INDEPENDENTLY
+  Do not assume Troy is right just because he flagged it.
+  Ask: Is this a genuine violation of a quality standard,
+  or does the item work despite its surface appearance?
+
+  Genuine violation — examples:
+    Graph title r'$f(x)=4(0.5)^x$' on a DOK1 item asking
+    "decide whether the multiplier is > 1 or between 0 and 1."
+    → The title answers the question. This is 5b-graph-title.
+
+    Item says "complete the table" but all cells are filled.
+    → Student has nothing to do. This is 5m.
+
+    Item asks student to "write the factored equation" and
+    graph title shows y=(x-1)(x-6).
+    → Title is the answer. This is 5b-graph-title.
+
+  Potentially acceptable — examples:
+    A DOK1 item where the graph title shows the equation but
+    the item asks the student to compute a specific output
+    value, not identify the equation. The title helps them
+    check — it doesn't give away the task.
+    → Might be acceptable depending on the exact ask.
+
+    A context with large numbers that are still realistic
+    (e.g., a city of 500,000 people with 2% annual growth).
+    → Not a 5n violation even if the numbers feel large.
+
+STEP 4 — APPLY THE OUTCOME
+  AGREE → fix it immediately, document the fix.
+  DISCUSS → explain and ask before touching anything.
+
+════════════════════════════════════════════════════════════════
+
+OUTPUT FORMAT
+
+Respond to every flagged image in the order they were uploaded.
+Use this format for each:
+
+────────────────────────────────
+IMAGE [N] — [item ID]
+
+AGREE — [item ID]
+  Issue: [what the problem is — name the pattern if known]
+  Fix applied: [exactly what was changed, minimum change]
+
+  — OR —
+
+DISCUSS — [item ID]
+  Concern: [what you believe Troy is flagging]
+  Why it may be acceptable: [specific reason]
+  Weakness noted: [any genuine concern even if not a violation]
+  → Do you want to fix this, or shall we leave it?
+────────────────────────────────
+
+After responding to all images, state the delivery plan:
+  "Fixes applied to [N] item(s). Preparing ZIP."
+  — OR —
+  "Fixes applied to [N] item(s). Waiting on discussion
+   before finalizing [M] item(s)."
+
+If there are items to discuss, do not deliver the ZIP yet.
+Deliver the ZIP only when all items are either fixed
+or confirmed as leave-as-is.
+
+════════════════════════════════════════════════════════════════
+
+GENERATE_GRAPHS.PY — FIX RULES
+
+When fixing a graph title:
+  Change ONLY the title= parameter in the matching graph call.
+  Do not change the filename, function arguments, or data.
+  Do not modify any line above the append marker.
+  The figure file will be overwritten when user re-runs py.
+
+When a figure is shared across multiple items:
+  Evaluate ALL items using that graph before clearing the title.
+  If any item has a title violation, clear the title.
+  Removing a title from a DOK 1 "read the graph" item makes
+  the task slightly more authentic — it does not break it.
+
+════════════════════════════════════════════════════════════════
+
+DELIVERY
+
+After all AGREE items are fixed and all DISCUSS items are
+resolved, assemble the ZIP.
+
+ZIP structure:
+  unit[#]/
+    unit[#].html          ← corrected HTML with updated QA LOG
+    figures/              ← empty folder (user runs py to fill)
+    generate_graphs.py    ← original + any title= corrections
+
+Update the QA LOG at the top of the HTML:
+  Add a VISUAL REVIEW section to the FIXES APPLIED list:
+    VISUAL REVIEW FIXES:
+      [item ID]: [what was changed]
+      ...
+      (or NONE if no fixes were made)
+
+Always deliver a ZIP. Never deliver HTML-only.
+Always include generate_graphs.py even if only
+title= values were corrected.
+
+════════════════════════════════════════════════════════════════
+
+AFTER DELIVERY — PM UPDATE REQUEST
+
+After the ZIP is confirmed and the conversation is wrapping up,
+ask Troy to upload the following files so you can update them
+with any new bad question types or patterns discovered during
+this review:
+
+  "Please upload these three PM files so I can add any new
+   patterns from this review to all three:
+   — 2_portable_memory_bank.txt (build PM)
+   — 22_portable_memory_bank_polisht.txt (polish PM)
+   — pass_bad_questions.txt (bad questions mini PM)"
+
+Only ask for this if at least one new pattern type was
+encountered during the review that is not already documented
+in the existing bad patterns list (5a–5n). If no new patterns
+emerged, skip this step.
+
+════════════════════════════════════════════════════════════════
+
+MINIMUM CHANGE PRINCIPLE
+
+Every fix must be the smallest change that resolves the issue.
+This applies to HTML content, graph titles, table cells,
+and question wording equally.
+
+If only a title= needs clearing, clear only the title=.
+If only one table cell needs emptying, empty only that cell.
+If only the first sentence of a question reveals the answer,
+rewrite only that sentence.
+
+Do not use a fix as an opportunity to improve items that
+were not flagged. Do not restructure surrounding items.
+
+════════════════════════════════════════════════════════════════

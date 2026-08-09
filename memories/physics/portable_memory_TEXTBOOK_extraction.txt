@@ -1,0 +1,481 @@
+CONCEPTUAL PHYSICS TEXTBOOK SECTION EXTRACTION PORTABLE MEMORY
+Version: v3 - section-folder-only ZIP + external shared CSS
+================================================================
+
+INPUTS - WHAT YOU RECEIVE AT SESSION START
+
+1. This file (uploaded .txt) - read it completely first.
+2. A Conceptual Physics textbook PDF or trimmed textbook PDF.
+3. A captured image archive, usually a .zip, containing already-cropped textbook figures.
+4. A requested section, usually in the form "Chapter #, Section #.#" or "continue in order."
+
+Optional inputs:
+- A screenshot showing a layout/style issue to match or revise.
+- A note that pages were intentionally omitted from the PDF.
+
+DO NOT ASK FOR CSS.
+DO NOT CREATE CSS.
+DO NOT INCLUDE A CSS FOLDER IN THE ZIP.
+
+The CSS is external and already lives in a sibling folder named css at the same level as the section folders.
+Each section HTML must simply link to that existing shared stylesheet.
+
+================================================================
+THIS FILE IS THE SOURCE OF TRUTH
+
+If anything in saved memory, prior habit, prior conversation, or a previous build conflicts with this file, follow this file.
+If uploaded guidance in the same chat explicitly updates this PM, follow the newer uploaded guidance.
+Do not drift. Do not freelance. Do not add features not requested.
+If something is missing, do the best faithful conversion possible and flag the issue in README.txt and the final note.
+
+================================================================
+YOUR JOB
+
+Convert one textbook section at a time into a student-readable HTML section package.
+
+Use the textbook PDF for the section text.
+Use the captured image archive for figures.
+Copy textbook prose verbatim into the HTML file, except for removing running headers, page numbers, repeated footers, and obvious PDF extraction artifacts.
+Do not summarize, rewrite, simplify, or modernize the textbook text during this extraction stage.
+Do not generate images.
+Do not recreate missing images.
+Do not draw replacements.
+Include only captured images that were supplied by the user.
+Pull content from margins, sidebars, FYI boxes, blue boxes, checkpoints, personal essays, Practicing Physics, Hang Time, summaries, and questions when those items belong to the requested section.
+Margin material should not be placed in a visual margin; put it in the main body flow using a separate class so it can be styled differently.
+
+Deliver one ZIP file containing the requested section folder only.
+
+================================================================
+SECTION NAMING AND OUTPUT STRUCTURE
+
+Folder naming pattern:
+  cp_section_[chapter]_[section]
+
+Examples:
+  cp_section_1_1
+  cp_section_1_2
+  cp_section_2_3
+  cp_section_26_8
+
+Do not use the word "prototype" in any folder name, ZIP name, HTML title, README title, or final response.
+
+ZIP naming pattern:
+  cp_section_[chapter]_[section].zip
+
+CRITICAL STRUCTURE RULE - MATCH THE APPROVED SECTION 1.1 ZIP
+
+The ZIP should contain exactly one top-level section folder.
+The ZIP should NOT contain a css folder.
+The ZIP should NOT contain styles.css.
+The ZIP should NOT contain a nested duplicate section folder.
+
+Correct single-section ZIP listing:
+
+  cp_section_[chapter]_[section]/
+  cp_section_[chapter]_[section]/index.html
+  cp_section_[chapter]_[section]/images/
+  cp_section_[chapter]_[section]/source/
+  cp_section_[chapter]_[section]/source/source_raw_text.txt
+  cp_section_[chapter]_[section]/source/extraction_notes.txt
+  cp_section_[chapter]_[section]/image_manifest.csv
+  cp_section_[chapter]_[section]/README.txt
+
+Correct example for section 2.3:
+
+  cp_section_2_3/
+  cp_section_2_3/index.html
+  cp_section_2_3/images/
+  cp_section_2_3/source/
+  cp_section_2_3/source/source_raw_text.txt
+  cp_section_2_3/source/extraction_notes.txt
+  cp_section_2_3/image_manifest.csv
+  cp_section_2_3/README.txt
+
+Wrong examples for section 2.3:
+
+  css/styles.css
+  cp_section_2_3/css/styles.css
+  cp_section_2_3/cp_section_2_3/index.html
+  cp_section_2_3/css/
+  cp_section_2_3/cp_section_2_3/
+
+The external project folder will look like this after the user places the extracted section folder beside the existing css folder:
+
+  css/
+    styles.css
+  cp_section_1_1/
+    index.html
+    images/
+    source/
+    image_manifest.csv
+    README.txt
+  cp_section_1_2/
+    index.html
+    images/
+    source/
+    image_manifest.csv
+    README.txt
+  cp_section_2_3/
+    index.html
+    images/
+    source/
+    image_manifest.csv
+    README.txt
+
+The css folder is not part of each section ZIP. It is an external sibling folder managed by the user.
+
+================================================================
+CSS LINK RULE
+
+The section HTML must link to the external shared CSS with exactly:
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+The HTML must never link to:
+
+  css/styles.css
+  ./css/styles.css
+  ../../css/styles.css
+  cp_section_[chapter]_[section]/css/styles.css
+
+Do not create a <style> block.
+Do not inline CSS.
+Do not write or copy styles.css.
+Do not put CSS into README.txt as a substitute.
+
+The required class names below are already supported by the external shared stylesheet.
+Use these class names consistently so the existing CSS can style the page.
+
+================================================================
+HTML STRUCTURE BASELINE
+
+Use semantic HTML. Keep the layout simple and consistent.
+
+Use this general structure for section pages:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conceptual Physics - Section [#.#]: [Section Title]</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="kicker">Conceptual Physics</p>
+  <h1>Chapter [#]: [Chapter Title]</h1>
+  <h2>Section [#.#]: [Section Title]</h2>
+</header>
+<main class="wrapper">
+  <article class="main-body">
+    <!-- section content goes here -->
+  </article>
+</main>
+</body>
+</html>
+
+Chapter title pages can be simple. If the requested task is only a chapter title page, make a simple page that says the chapter title and has the same shared CSS link.
+
+Do not include MathJax unless the section genuinely needs it. If MathJax is needed, add it in the head before the CSS link, but keep the CSS link exactly ../css/styles.css.
+
+================================================================
+CONTENT CLASSES TO USE
+
+Use these classes for content types:
+
+main prose:
+  <article class="main-body">
+
+regular section heading:
+  <h3>...</h3>
+
+figures:
+  <figure class="figure"> ... </figure>
+
+figure label inside figcaption:
+  <span class="figure-label">Figure #.#</span>
+
+margin notes or margin text:
+  <aside class="margin-note">...</aside>
+
+FYI or FYI-style content:
+  <aside class="fyi">...</aside>
+
+blue textbook boxes:
+  <aside class="blue-box">...</aside>
+
+checkpoints:
+  <aside class="checkpoint">...</aside>
+
+checkpoint answers:
+  <aside class="check-answer">...</aside>
+
+personal essays:
+  <section class="personal-essay">...</section>
+
+Practicing Physics:
+  <section class="practicing-physics">...</section>
+
+Hang Time or similar enrichment:
+  <section class="hang-time">...</section>
+
+summary or review questions:
+  <section class="summary-box">...</section>
+
+media links, QR/video notes, interactive notes:
+  <aside class="media-link">...</aside>
+
+footnotes:
+  <section class="footnotes">...</section>
+  <div class="footnote">...</div>
+
+omitted figure note:
+  <p class="omitted-figure">Figure #.# was omitted because no matching captured image was supplied.</p>
+
+source note:
+  <p class="source-note">...</p>
+
+================================================================
+TEXT EXTRACTION RULES
+
+Copy section prose verbatim from the textbook PDF.
+Keep the textbook's section order.
+Preserve short paragraphs as separate paragraphs when possible.
+Remove page headers, footers, page numbers, repeated part/chapter labels, and isolated artifacts that are not part of the section content.
+Preserve bold/italic emphasis when it is obvious and useful.
+Do not insert new explanations into the body.
+If you need to explain a source problem, put it in README.txt or a source-note, not inside the textbook prose.
+
+Margin content belongs in the main flow near the paragraph or figure it supports.
+Do not try to position it in the visual margin.
+Use margin-note, fyi, blue-box, checkpoint, or other classes as appropriate.
+
+If the PDF extraction has broken words or line breaks, clean only obvious extraction artifacts. Do not rewrite wording.
+
+If the uploaded/trimmed source ends mid-sentence or appears to omit pages on purpose:
+- Stop where the source stops.
+- Do not invent missing continuation.
+- Add a clear note in README.txt.
+- Add a short final-response note reminding the user to double-check the intentional omission.
+
+================================================================
+FIGURE AND IMAGE RULES
+
+Use only the captured image archive supplied by the user.
+Do not extract embedded images from the PDF unless the user explicitly asks.
+Do not generate missing figures.
+Do not redraw figures.
+Do not use placeholder art.
+Do not use online images.
+Do not crop new figures from screenshots unless the user explicitly asks.
+
+For each included figure:
+- Copy the matching captured image into cp_section_[chapter]_[section]/images/.
+- Use a relative image path such as images/filename.png.
+- Put the textbook figure description below the image as the figcaption.
+- Begin each caption with Figure #.#.
+
+Caption pattern:
+
+<figure class="figure">
+  <img src="images/[filename].png" alt="Figure #.#: [short accessible description]">
+  <figcaption><span class="figure-label">Figure #.#</span> [verbatim textbook caption or description]</figcaption>
+</figure>
+
+If a textbook figure is referenced in the section but no matching captured image is supplied:
+- Leave the image out.
+- Optionally add an omitted-figure note if it helps the user track the omission.
+- Record the omission in README.txt.
+
+If the captured image filename is already in the locked curriculum naming format, preserve that filename.
+If it is not, use a clean filename inside the section images folder:
+  figure_[chapter]_[figure]_[short_description].png
+or for unnumbered practice/review images:
+  figure_[chapter]_pp_[short_description].png
+
+Do not rename a supplied image silently if that would break traceability; record original filename to final filename in image_manifest.csv.
+
+================================================================
+IMAGE MANIFEST REQUIREMENTS
+
+Each section folder must include image_manifest.csv with columns:
+
+original_filename,final_filename,figure_number,caption_or_description,status,notes
+
+Statuses may include:
+  included
+  omitted_no_capture
+  needs_review
+  unused_not_in_section
+
+================================================================
+README REQUIREMENTS
+
+Each section folder must include README.txt with:
+
+1. Section converted
+2. Source PDF used
+3. Captured image archive/folder used
+4. CSS source used: external ../css/styles.css managed outside this section ZIP
+5. Figures included
+6. Figures omitted because no captured image was supplied
+7. Any source-page gaps, mid-sentence endings, uncertain captions, or other items needing review
+8. QA pass summary
+
+README must explicitly state:
+  This ZIP intentionally does not include css/styles.css. The HTML links to ../css/styles.css, which should exist as a sibling folder outside the section folder.
+
+================================================================
+SOURCE FOLDER REQUIREMENTS
+
+Each section folder must include source/ with:
+
+source_raw_text.txt
+  Raw or lightly cleaned extracted text used for the section.
+
+extraction_notes.txt
+  Notes about pages used, page gaps, omitted images, uncertain captions, and extraction decisions.
+
+================================================================
+QUALITY PASSES - RUN ALL BEFORE DELIVERY
+
+PASS 1 - ZIP STRUCTURE CHECK
+- ZIP name follows cp_section_[chapter]_[section].zip.
+- ZIP contains exactly one top-level section folder named cp_section_[chapter]_[section].
+- There is no top-level css/ folder in the ZIP.
+- There is no styles.css anywhere in the ZIP.
+- index.html is directly inside the section folder: cp_section_[chapter]_[section]/index.html.
+- There is no nested path like cp_section_[chapter]_[section]/cp_section_[chapter]_[section]/index.html.
+- There is no path like cp_section_[chapter]_[section]/css/styles.css.
+- images/ and source/ folders exist inside the section folder.
+- README.txt and image_manifest.csv exist inside the section folder.
+- ZIP listing was inspected before delivery and matches the approved section 1.1 structure.
+
+PASS 2 - CSS LINK CHECK
+- index.html links exactly to ../css/styles.css.
+- index.html does not link to css/styles.css, ./css/styles.css, ../../css/styles.css, or any section-local css folder.
+- index.html contains no <style> block.
+- No CSS file was created or copied.
+
+PASS 3 - CONTENT COMPLETENESS CHECK
+- Section title and chapter title are present.
+- Main body text is copied verbatim except for cleanup of running headers/page numbers/PDF artifacts.
+- Margin content, FYI boxes, blue boxes, checkpoints, personal essays, Practicing Physics, Hang Time, and summaries/questions were included when present in the requested section.
+- No textbook content was intentionally summarized or rewritten.
+- Any mid-sentence ending or intentional source gap is flagged in README.txt and final note.
+
+PASS 4 - FIGURE CHECK
+- Every included image comes from the supplied captured image archive.
+- No images were generated, recreated, drawn, or pulled from the web.
+- Captions appear below figures and begin with Figure #.#.
+- Figure alt text is present.
+- Figures referenced in the section but missing from the captured archive are omitted and recorded.
+- image_manifest.csv includes original filename, final filename, figure number, status, and notes.
+
+PASS 5 - PATH CHECK
+- Every <img src="..."> points to images/[filename].
+- Every referenced image file actually exists in cp_section_[chapter]_[section]/images/.
+- No image paths point outside the section folder.
+- The CSS link is the only allowed outside-folder reference.
+
+PASS 6 - HTML VALIDITY AND CLASS CHECK
+- Basic HTML structure is valid.
+- Body contains header.site-header and main.wrapper.
+- Main textbook content is inside article.main-body.
+- Special content uses approved classes.
+- No broken tags or obvious duplicate content.
+
+PASS 7 - SOURCE AND REVIEW CHECK
+- source_raw_text.txt exists.
+- extraction_notes.txt exists.
+- README.txt includes figures included/omitted and source issues.
+- Final response mentions any issues needing review.
+
+After delivery, include a short QA report in the final response:
+- Pass 1-7 result for each
+- Figures included
+- Figures omitted
+- Issues fixed
+- Issues needing review
+
+================================================================
+DELIVERY RULES
+
+Deliver one ZIP file unless the user explicitly asks for multiple.
+The ZIP must contain only the section folder, not css.
+The ZIP should be ready for the user to place beside an existing css/ folder.
+Do not deliver loose files unless the user asks.
+Do not stop mid-build to ask questions unless the requested section is impossible to infer.
+If unsure about a figure match, include it only if the match is strong; otherwise omit and flag.
+For "continue" requests, continue with the next section in order using the same structure and external shared CSS link.
+
+================================================================
+COMMON FAILURE MODES TO AVOID
+
+1. Putting css/styles.css inside each section folder.
+2. Including any css/ folder in the section ZIP.
+3. Creating a nested folder like cp_section_2_3/cp_section_2_3/index.html.
+4. Linking CSS as css/styles.css instead of ../css/styles.css.
+5. Using the word prototype in file/folder names.
+6. Generating or recreating missing images.
+7. Pulling images from the PDF instead of using supplied captured images.
+8. Omitting margin content, FYI boxes, blue boxes, checkpoints, essays, or summaries that belong to the section.
+9. Trying to visually place margin notes in the margin instead of using a class in the main flow.
+10. Summarizing or rewriting textbook prose during extraction.
+11. Forgetting figure captions or not starting them with Figure #.#.
+12. Not recording omitted figures.
+13. Not flagging mid-sentence endings or intentional PDF omissions.
+14. Missing README.txt, source files, or image_manifest.csv.
+15. Delivering a ZIP whose root contains both css/ and cp_section_x_y/.
+16. Delivering a ZIP whose root contains only loose index.html/images/source instead of cp_section_x_y/.
+17. Reporting pass/fail without checking the actual ZIP listing.
+
+================================================================
+BUILD SEQUENCE
+
+1. Read this PM fully.
+2. Identify the requested section and source pages.
+3. Extract section text and side content from the PDF.
+4. Match only supplied captured images to textbook figures.
+5. Build cp_section_[chapter]_[section]/index.html with the approved class structure and exact CSS link ../css/styles.css.
+6. Build cp_section_[chapter]_[section]/images/ using only supplied captured images.
+7. Build cp_section_[chapter]_[section]/source/source_raw_text.txt and extraction_notes.txt.
+8. Build cp_section_[chapter]_[section]/image_manifest.csv.
+9. Build cp_section_[chapter]_[section]/README.txt.
+10. Zip only the cp_section_[chapter]_[section]/ folder.
+11. Inspect the ZIP listing.
+12. Rebuild if the ZIP contains css/, styles.css, or nested cp_section_[chapter]_[section]/cp_section_[chapter]_[section]/.
+13. Deliver the ZIP and a short QA report.
+
+================================================================
+FINAL RESPONSE TEMPLATE
+
+Done - I converted Section [#.#] using the external shared CSS structure.
+
+[Download cp_section_[chapter]_[section].zip]
+
+Included:
+- cp_section_[chapter]_[section]/index.html
+- cp_section_[chapter]_[section]/images/
+- cp_section_[chapter]_[section]/source/
+- cp_section_[chapter]_[section]/image_manifest.csv
+- cp_section_[chapter]_[section]/README.txt
+
+CSS note:
+- This ZIP does not include css/styles.css.
+- The HTML links to ../css/styles.css, so place the section folder beside your existing css/ folder.
+
+QA:
+- Pass 1: ZIP structure checked - no css folder, no nested section folder.
+- Pass 2: CSS link checked - ../css/styles.css.
+- Pass 3: Content completeness checked.
+- Pass 4: Figures checked.
+- Pass 5: Paths checked.
+- Pass 6: HTML/classes checked.
+- Pass 7: Source/review notes checked.
+
+Figures included: [list]
+Figures omitted: [list]
+Issues needing review: [list or none]

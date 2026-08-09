@@ -1,0 +1,281 @@
+========================================================
+PORTABLE MEMORY — Conceptual Physics Image Extraction
+Troy Nezki | Manistee High School | Physics Curriculum
+========================================================
+
+## PROJECT OVERVIEW
+Extracting figures from Hewitt Conceptual Physics 12e (Paul G. Hewitt) for use
+in guided notes HTML pages. The new curriculum reorganizes the textbook content
+into 8 units of 5 sections each. Images need to be organized by curriculum
+section, not by textbook chapter.
+
+## TEXTBOOK PDF
+File: 10_textbook__1_.pdf (Conceptual Physics 12e, 820 pages)
+PDF page offset: PDF page = book page + 27
+(e.g., book page 3 = PDF page 30; book page 183 = PDF page 210)
+
+## TRIMMED CURRICULUM PDF (ALREADY BUILT)
+File: CP_Curriculum_Sections.pdf (234 pages, 18MB)
+Contains ONLY the pages from used textbook sections, organized by curriculum
+unit with bookmarks. Troy uses this to screen-capture individual figures.
+
+PDF page structure:
+  Pages   1–9:   Unit 1 — Ch1 §1.1–1.2 (book 3–11)
+  Pages  10–16:  Unit 1 — Ch2 §2.3–2.7 (book 26–32)
+  Pages  17–33:  Unit 2 — Ch3 §3.1–3.6 (book 39–55)
+  Pages  34–50:  Unit 3 — Ch4 §4.1–4.6 (book 57–73)
+  Pages  51–66:  Unit 3 — Ch5 §5.1–5.5 (book 74–89)
+  Pages  67–75:  Unit 3 — Ch10 §10.1 (book 183–191)
+  Pages  76–93:  Unit 4 — Ch6 §6.1–6.7 (book 91–108)
+  Pages  94–115: Unit 4 — Ch7 §7.1–7.8 (book 110–131)
+  Pages 116–128: Unit 5 — Ch19 §19.1–19.6 (book 357–369)
+  Pages 129–142: Unit 5 — Ch20 §20.1–20.8 (book 375–388)
+  Pages 143–159: Unit 6 — Ch26 §26.1–26.6 (book 486–502)
+  Pages 160–177: Unit 6 — Ch28 §28.1–28.7 (book 520–537)
+  Pages 178–180: Unit 7 — Ch16 §16.7 (book 314–316)
+  Pages 181–199: Unit 7 — Ch22 §22.1–22.9 (book 407–425)
+  Pages 200–219: Unit 7 — Ch23 §23.1–23.9 (book 431–450)
+  Pages 220–229: Unit 8 — Ch24 §24.1–24.7 (book 453–462)
+  Pages 230–234: Unit 8 — Ch25 §25.3 (book 473–477)
+
+## NAMING CONVENTION (LOCKED)
+Format: u{unit}_{section}_from_ch_{chapter}_{fignum}_{description}.png
+
+Examples:
+  u1_1_from_ch_1_1_eratosthenes_earth_measurement.png
+  u2_4_from_ch_3_7_falling_rock_speedometer_t0_to_t5.png
+  u3_3_from_ch_4_16_two_parachutists_air_resistance_vs_gravity.png
+
+Rules:
+  - unit = curriculum unit number (1–8)
+  - section = curriculum section within that unit (1–5)
+  - from_ch = literal text separator
+  - chapter = textbook chapter number
+  - fignum = textbook figure number (use "pp" for Practicing Physics figures)
+  - description = snake_case description
+
+## CURRICULUM → TEXTBOOK SECTION MAPPING
+
+UNIT 1 — Forces, Motion, and Equilibrium
+  u1_1 = TB §1.1, §1.2  (Ch1 — Scientific Measurements, Methods)
+  u1_2 = TB §2.3, §2.6  (Ch2 — Newton's 1st Law, Support Force)
+  u1_3 = TB §2.4        (Ch2 — Net Force and Vectors)
+  u1_4 = TB §2.5, §2.7  (Ch2 — Equilibrium Rule, Equilibrium of Moving Things)
+  u1_5 = TB §2.3–2.7 synthesis (same images as u1_2 through u1_4)
+
+UNIT 2 — Motion and Kinematics
+  u2_1 = TB §3.1        (Ch3 — Motion Is Relative)
+  u2_2 = TB §3.2, §3.3  (Ch3 — Speed, Velocity)
+  u2_3 = TB §3.4        (Ch3 — Acceleration)
+  u2_4 = TB §3.5        (Ch3 — Free Fall)
+  u2_5 = TB §3.6        (Ch3 — Velocity Vectors)
+
+UNIT 3 — Forces and Motion
+  u3_1 = TB §4.1, §4.4  (Ch4 — Force & Acceleration, Mass & Weight)
+  u3_2 = TB §4.2, §4.3  (Ch4 — Friction, Mass Resists Acceleration)
+  u3_3 = TB §4.5, §4.6  (Ch4 — Free Fall, Nonfree Fall/Air Resistance)
+  u3_4 = TB §5.1–5.5    (Ch5 — Newton's Third Law, all sections)
+  u3_5 = TB §10.1       (Ch10 — Projectile Motion)
+
+UNIT 4 — Momentum and Energy
+  u4_1 = TB §6.1–6.3    (Ch6 — Momentum, Impulse, Impulse Changes Momentum)
+  u4_2 = TB §6.4–6.7    (Ch6 — Bouncing, Conservation, Collisions)
+  u4_3 = TB §7.1–7.3    (Ch7 — Work, Potential Energy, Kinetic Energy)
+  u4_4 = TB §7.4, §7.5  (Ch7 — Work-Energy Theorem, Conservation of Energy)
+  u4_5 = TB §7.8        (Ch7 — Sources of Energy)
+
+UNIT 5 — Waves and Sound
+  u5_1 = TB §19.1–19.4  (Ch19 — Vibrations, Wave Description, Motion, Speed)
+  u5_2 = TB §19.5, §19.6 (Ch19 — Wave Interference, Doppler Effect)
+  u5_3 = TB §20.1, §20.2 (Ch20 — Nature of Sound, media/speed)
+  u5_4 = TB §20.3–20.6  (Ch20 — Refraction, Natural Frequency, Resonance area)
+  u5_5 = TB §20.7, §20.8 (Ch20 — Interference, Beats)
+
+UNIT 6 — Light and Optics
+  u6_1 = TB §26.1–26.6  (Ch26 — Properties of Light)
+  u6_2 = TB §28.1, §28.2 (Ch28 — Reflection, Law of Reflection)
+  u6_3 = TB §28.3–28.6  (Ch28 — Refraction, Cause, Dispersion, Total Internal)
+  u6_4 = TB §28.7       (Ch28 — Lenses)
+  u6_5 = synthesis/application (no new TB sections)
+
+UNIT 7 — Electricity and Circuits
+  u7_1 = TB §22.1–22.6  (Ch22 — Electrostatics)
+  u7_2 = TB §22.9, §23.1, §23.2 (Ch22/23 — Electric Potential, Current, Voltage)
+  u7_3 = TB §23.3, §23.4 (Ch23 — Resistance, Ohm's Law)
+  u7_4 = TB §23.5–23.7, §16.7 (Ch23/16 — Power, Energy, Solar Power)
+  u7_5 = TB §23.9       (Ch23 — Electric Circuits)
+
+UNIT 8 — Magnetism and Electromagnetism
+  u8_1 = TB §24.1–24.4  (Ch24 — Magnetism, Poles, Fields, Domains)
+  u8_2 = TB §24.5       (Ch24 — Electric Currents and Magnetic Fields)
+  u8_3 = TB §24.6, §24.7 (Ch24 — Electromagnets, Magnetic Forces)
+  u8_4 = TB §25.3       (Ch25 — Generators and Alternating Current)
+  u8_5 = synthesis/application (no new TB sections)
+
+## PROGRESS — BATCHES COMPLETED
+
+### BATCH 1 (20 images) — Unit 1, Ch1 and Ch2
+u1_1: Figs 1.1–1.6 (Eratosthenes, lunar eclipse, Moon/Sun scale, coin-Moon,
+       half-Moon geometry, Sun diameter measurement)
+u1_2: Figs 2.4a-d (inertia demos: tablecloth, coin-card, ball-strings, hammer)
+      Fig 2.6 (net force applied forces table)
+      Fig 2.15 (support force: book and spring)
+u1_3: Figs 2.8, 2.9, 2.10 (vector addition, 45° vectors, 30N+40N=50N)
+u1_4: Figs 2.11, 2.12, 2.14 (girl on rings 3-pos, girl on rings 2-pos,
+       scaffold equilibrium)
+      pp (2× Practicing Physics scaffold figures)
+
+### BATCH 2 (20 images) — Unit 1 tail + Unit 2, Ch3
+u1_2: Fig 2.16 (man on scale, support force)
+u2_1: Fig 3.1 (earth orbiting sun), Fig 3.4 (motorcycle 3 scenarios),
+      Fig 3.5 (car stops/person flies forward), pp (flatcar ABCD)
+u2_2: Fig 3.3 (car on circular track), Fig 3.4 (speed/velocity/accel summary),
+      pp (bill-grab), pp (ruler drop), pp (3 balls mass+velocity),
+      pp (roller coaster track ABCD), pp (3 roller coasters ABC)
+u2_4: Fig 3.6 (Galileo inclined planes), Fig 3.7 (falling speedometer t=0-5),
+      Fig 3.11 (ball thrown up t=0-7), Fig 3.9 (falling detailed speedometer),
+      Fig 3.10 (vacuum tube coin+feather)
+u2_5: Fig 3.29 (airplane velocity 80+60=100), Fig 3.30 (airplane wind vectors ABC),
+      Fig 3.31 (boat crossing river ABC)
+
+### BATCH 3 (20 images) — Unit 3, Ch4 and Ch10
+u3_1: Fig 4.1 (man kicking ball), Fig 4.2 (force doubles accel, brick panels),
+      Fig 4.1b (same force more mass less accel bricks), Fig 4.6 (foot on block),
+      Fig 4.7 (astronaut kicking wrench), Fig 4.10 (person pushing elephant),
+      pp (net force blocks ABCD), Fig 4.20 (weight Earth/Moon/Jupiter)
+u3_2: Fig 4.3 (friction surface magnified), Fig 4.4 (push+friction, balloon),
+      Fig 4.5 (tire photo), Fig 4.8 (ball on string sudden pull),
+      pp (spool/bobbin rolling direction), pp (static vs kinetic friction girl)
+u3_3: Fig 4.12 (packages m and 2m same fall rate), Fig 4.13 (F/m=g pi analogy),
+      Fig 4.15 (balloon nonfree fall R vs mg), Fig 4.16 (two parachutists),
+      Fig 4.17 (person spread eagle nonfree fall)
+u3_5: pp (strobe photo dropped vs projected ball) [NOTE: same image as Fig 10.4
+       captured more cleanly in Batch 6 — keep both, use better one]
+
+### BATCH 4 (20 images) — Ch4 review tail + Ch5 §5.1–5.3 (u3_4 begins)
+u3_1 additions (Ch4 review pp, book pp70–73):
+      pp (car braking next to truck, flying object — Q77)
+      pp (3 blocks in line, 30N tension question — Q107)
+u3_3 additions (Ch4 review pp, book pp70–72):
+      pp (3 parachutists A=50kg/B=40kg/C=75kg, terminal velocity — Q57)
+      pp (cat falling spread-eagle, nonfree fall — Q94)
+u3_4 (Ch5 §5.1–5.3, main text):
+      Fig 5.1 (fingers pushing each other / wall)
+      Fig 5.2 (boy leaning against wall)
+      Fig 5.3 (boxer: heavy bag WHAP vs tissue paper PIFF)
+      Fig 5.4 (hammer hitting stake, force arrows)
+      Fig 5.5 (pendulum balls collision, blue and yellow)
+      Fig 5.6 (car crashing into truck)
+      Fig 5.7 (4-panel action-reaction: car/road, rocket/gas, spring, Tower/ball)
+      Fig 5.8 (orange on cart, dashed system box)
+      Fig 5.9 (orange cart pulled by apple, orange in system)
+      Fig 5.10 (orange + apple in shared system, forces internal)
+      Fig 5.11 (orange-apple system, floor pushes apple externally)
+      Fig 5.12 (foot A kicking football B)
+      Fig 5.13 (two feet A+C kicking football B, WHAP)
+      Fig 5.14 (rock/earth mutual gravitational force pair)
+      Fig 5.15 (5 scenarios a–e: two spheres different mass ratios)
+      Fig 5.16 (cannon firing BAM, recoil arrow)
+
+### BATCH 5 (20 images) — Ch5 §5.3–5.5 + Ch5 review (u3_4 complete)
+u3_4 (Ch5 §5.3 tail):
+      Fig 5.17 (balloon recoil from escaping air)
+      Fig 5.18 (rocket propulsion recoil)
+      pp (tug-of-war Practicing Physics activity, book p81)
+u3_4 (Ch5 §5.4 — Vectors and the Third Law):
+      Fig 5.21 (dog on mat, person pulling leash, Fx/Fy/F components)
+      Fig 5.22 (vector V construction, 3-panel)
+      pp (Check Point: two vectors for angle resolution)
+      Fig 5.23 (skier on flat/incline/steep, N and mg, a-b-c)
+      Fig 5.24 (block on surface, N diminishes as incline steepens)
+      Fig 5.25 (shoe on incline: ice/wood/friction equilibrium, a-b-c)
+      Fig 5.26 (Monkey Mo hanging from rope + cage, T/S/mg equilibrium)
+      Fig 5.27 (girl tosses stone, Vx/Vy labeled, parabolic path)
+u3_4 (Ch5 §5.5):
+      Fig 5.28 (geese in V formation, aerodynamic lift photo)
+u3_4 (Ch5 review pp, book pp87–88):
+      pp (van + trailer A/B/C, mass/velocity rank — Q31)
+      pp (boxes pulled same force F, different mass — Q32)
+      pp (pucks on ice at 2/4/6 m/s — Q33)
+      pp (weightlifter holding barbell overhead — Q44)
+      pp (person standing, gravity and normal force arrows — Q45)
+      pp (strongman between two equal-mass carts — Q49)
+      pp (carts m and 2m, compressed spring — Q50)
+      pp (stone on ground, weight vector — Q61)
+
+### BATCH 6 (20 images) — Ch5 review tail + Ch10 §10.1 (u3_5)
+u3_4 (Ch5 review pp, book pp88–89):
+      pp (stone suspended by string from ceiling — Q62)
+      pp (stone being accelerated upward — Q63)
+      pp (stone sliding down frictionless incline — Q66)
+      pp (tug-of-war with ? scale readings, instructor challenge — Q55)
+      pp (stone + block on incline, two contact surfaces — Q67)
+      pp (spring scale on table, 100N hanging each side — Q76)
+      pp (strongman vs two horses vs one horse+tree, 3 panels — Q80)
+u3_5 (Ch10 §10.1, book pp183–191):
+      Fig 10.1 (ball dropped, free fall, increasing vertical spacing)
+      Fig 10.2 (ball rolled horizontally, equal spacing)
+      pp (tossed stone Vx/Vy components — bridge from §5.4, book p184)
+      Fig 10.3 (superposition: H-only/V-only/combined/superposed, 4 panels)
+      Fig 10.4 (strobe photo: red ball dropped + yellow ball projected)
+      Fig 10.5 (cannon on tower, horizontal projectile, parabolic path)
+      Fig 10.6 (person on cliff, projectile path with dotted grid)
+      Fig 10.7 (two panels: different horizontal launch speeds from cliff)
+      Fig 10.8 (cannon projectile with gravity drop: 5m/20m/45m at 1s/2s/3s)
+      Fig 10.9 (velocity vector components along path, horizontal launch)
+      Fig 10.9b (velocity vector components along path, angled launch)
+      Fig 10.10 (multiple trajectories: 15°/30°/45°/60°/75°)
+      Fig 10.11 (cannon: actual path vs ideal path, air resistance)
+
+⚠️  FIGURE NUMBER CAUTION — Ch10: Fig numbers 10.1–10.11 are ESTIMATED from
+    textbook structure. Verify against the actual PDF caption text before
+    finalizing filenames. Fig 10.9b is provisionally named as the angled-launch
+    companion to 10.9; it may be a separate numbered figure.
+
+## STILL NEEDED
+
+u2_3: §3.4 Acceleration — NO images captured yet (PDF pages 17–33 area)
+u4_1–u4_5: All of Unit 4 — Ch6 (PDF pages 76–93) + Ch7 (pages 94–115)
+u5_1–u5_5: All of Unit 5 — Ch19 (pages 116–128) + Ch20 (pages 129–142)
+u6_1–u6_5: All of Unit 6 — Ch26 (pages 143–159) + Ch28 (pages 160–177)
+u7_1–u7_5: All of Unit 7 — Ch16 (pages 178–180) + Ch22 (pages 181–199)
+             + Ch23 (pages 200–219)
+u8_1–u8_5: All of Unit 8 — Ch24 (pages 220–229) + Ch25 (pages 230–234)
+
+POSSIBLY MISSING from u3_5:
+  Ch10 §10.1 review exercise figures (pp) — if Troy wants them from
+  PDF pages 73–75 (the Ch10 review/pp section, book pp189–191).
+  The 13 main-text figures appear complete based on batch 6 captures.
+
+POSSIBLY MISSING from u3_4:
+  Ch5 §5.3 has a figure for the parachutists of different masses analogy
+  (§5.3 "Action and Reaction on Different Masses") that may not have
+  been captured — verify against PDF pages 56–58.
+
+## WORKFLOW FOR NEW CHAT
+1. Upload this .txt file to give Claude the full context
+2. Upload the next batch of Monosnap screenshots
+3. Claude identifies each figure by content and assigns:
+   - Curriculum unit + section (u{unit}_{section})
+   - Textbook chapter + figure number (from_ch_{ch}_{fig})
+   - Description
+4. Claude renames all files and delivers as ZIP
+5. Claude can upload CP_Curriculum_Sections.pdf to verify figure numbers
+   against actual captions (saves guesswork on any chapter)
+
+## NOTES FOR FUTURE CLAUDE
+- Monosnap files are named: Monosnap_CP_Curriculum_Sections_pdf_2026-06-12_HH-MM-SS.png
+- Timestamps are roughly chronological through the PDF
+- Large timestamp gaps (>5 min) indicate user skipped sections in PDF
+- "pp" = Practicing Physics (unnumbered exercise figures in textbook)
+  This includes: main-text Check Point figures, Think and Rank/Explain/Discuss
+  exercise figures, and the Practicing Physics activity boxes within the text.
+  It does NOT only mean the companion Practicing Physics workbook.
+- Troy captures figures WITHOUT captions usually — identify from visual content
+- Figure numbers are estimates when caption not visible; description compensates
+- The existing Module 8.1 physics textbook images use same naming system:
+  e.g., 25_1_magnet_into_coil.png (without unit/section prefix)
+  New images ADD the curriculum prefix before the TB figure reference
+- UPLOAD CP_Curriculum_Sections.pdf along with image batches whenever
+  figure numbers need verification — Claude can rasterize specific PDF
+  pages to read the "FIGURE X.X" captions directly.

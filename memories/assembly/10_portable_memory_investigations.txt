@@ -1,0 +1,708 @@
+ACTIVITIES BUILD PROMPT — v1
+════════════════════════════════════════════════════════════════
+
+
+PART 1 — SOURCE OF TRUTH
+════════════════════════════════════════════════════════════════
+
+THIS FILE IS THE SINGLE SOURCE OF TRUTH.
+
+If saved memory, prior habit, prior conversation, or any other
+instruction conflicts with this file, follow this file.
+Do not drift. Do not freelance.
+
+READ ORDER — complete all before writing line 1 of HTML:
+  1. Read THIS document completely.
+  2. Read unit[#]_mapping.xlsx — Practice Sets sheet only.
+  3. Read the assessment bank HTML(s) completely.
+  4. Read the Activity and Investigation Structures docx completely.
+  5. Read graph_tool.py completely.
+  6. Complete the ACTIVITY PLAN before writing any HTML.
+
+Do not begin output until all files are fully read.
+Say nothing until the ZIP is delivered.
+
+════════════════════════════════════════════════════════════════
+
+FILES NEEDED
+
+  1. This prompt
+  2. unit[#]_mapping.xlsx
+  3. Assessment bank HTML(s) (current + prior units as needed)
+  4. Activity_and_Investigation_Structures_and_Directions.docx
+  5. graph_tool.py
+
+PRE-BUILD SCAN — same as practice sets PM:
+  Scan all bank IDs across PS2 and PS3 columns for all 5 sections.
+  Identify prefixes (U1-, 0A-, 0B-, etc.).
+  If any required bank file is missing: STOP, report, wait.
+
+════════════════════════════════════════════════════════════════
+
+WHAT "BUILD" MEANS
+
+Build means ALL steps completed for ALL 10 ACTIVITIES:
+  ✓ PRE-BUILD SCAN confirmed — all bank files present
+  ✓ ACTIVITY PLAN completed (structure assignment for all 10)
+  ✓ All 10 activity HTML files generated
+  ✓ generate_graphs.py (if any figures needed)
+  ✓ All 5 QA passes run
+  ✓ QA LOG output in chat
+  ✓ ZIP assembled and delivered
+
+The ZIP is the only acceptable endpoint.
+
+Pre-ZIP checklist:
+  1. PRE-BUILD SCAN passed — all needed bank files uploaded?
+  2. ACTIVITY PLAN completed before line 1 of HTML?
+  3. Sections 1–4: each has 2 activities, no structure repeated?
+  4. Section 5: Act 1 = Round Table, Act 2 = Tarsia?
+  5. Each activity has a directions page with verbatim docx text?
+  6. Each directions page has a Looks Like / Doesn't Look Like block?
+  7. Act 1 uses PS2 bank IDs, Act 2 uses PS3 bank IDs?
+  8. Problem pages alternate Q → A (Q page, then A page)?
+  9. Exit ticket: 4 AI-derived questions, 2×2 grid?
+  10. Exit ticket answer key follows immediately after ET page?
+  11. Stations: landscape @page override in <head>?
+  12. graph-block figures in bank copied verbatim (base.css styles them)?
+  13. All 5 QA passes PASS?
+
+════════════════════════════════════════════════════════════════
+
+
+PART 2 — FILE STRUCTURE AND HTML SHELLS
+════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+
+ZIP AND FOLDER NAMING
+
+  ZIP name:  unit[#]_activities.zip
+
+  Root folder: unit[#]_activities/
+    u[unit]_1_act1/
+      u[unit]_1_act1.html
+      figures/                ← empty; only if figures needed
+    u[unit]_1_act2/
+      u[unit]_1_act2.html
+      figures/
+    u[unit]_2_act1/
+      u[unit]_2_act1.html
+      figures/
+    [... through u[unit]_5_act2/ ...]
+    generate_graphs.py        ← ONE shared script if figures needed
+
+  Example for unit 1:
+    unit1_activities/
+      u1_1_act1/u1_1_act1.html
+      u1_1_act2/u1_1_act2.html
+      u1_2_act1/u1_2_act1.html
+      ... (10 folders)
+      generate_graphs.py  (if needed)
+
+────────────────────────────────────────────────────────────────
+
+CSS LINKS (exact — copy verbatim):
+  <link rel="stylesheet" href="../../css/base.css"/>
+  <link rel="stylesheet" href="../../css/activities.css"/>
+
+MATHJAX (exact — copy verbatim, config BEFORE cdn script):
+  <script>
+  window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+────────────────────────────────────────────────────────────────
+
+STANDARD ACTIVITY SHELL (portrait — Showdown, Find Someone Who, etc.)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>[ACTIVITY_TITLE] — Section [UNIT].[SECTION]</title>
+[MathJax]
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/activities.css"/>
+</head>
+<body><div class="wrap">
+
+[DIRECTIONS PAGE]
+[PROBLEM PAGES — alternating Q and A]
+[EXIT TICKET PAGE]
+[EXIT TICKET ANSWER KEY PAGE]
+
+</div></body>
+</html>
+
+────────────────────────────────────────────────────────────────
+
+STATIONS SHELL (landscape — add @page override in head)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stations — Section [UNIT].[SECTION]</title>
+[MathJax]
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/activities.css"/>
+<style>@page { size: letter landscape; margin: .32in .42in .24in; }</style>
+</head>
+<body><div class="wrap">
+
+[DIRECTIONS PAGE using .station-page + .stn-dir-body]
+[STATION CARD PAGES — one page per station, 2×2 grid]
+[STATION SOLUTION PAGES — one page per station solutions]
+[EXIT TICKET PAGE using .stn-exit-grid]
+[EXIT TICKET ANSWER KEY PAGE]
+
+</div></body>
+</html>
+
+────────────────────────────────────────────────────────────────
+
+DIRECTIONS PAGE TEMPLATE (standard activities)
+
+<section class="page">
+  <div class="dir-header">
+    <div>
+      <div class="act-eyebrow">Unit [N] · Section [N] · Activity [N]</div>
+      <div class="act-title">[STRUCTURE_NAME]</div>
+      <div class="act-subtitle">[SECTION_TOPIC]</div>
+    </div>
+    <div class="act-meta">
+      <b>Source:</b> Practice Set [N].[S].[PS#]<br>
+      <b>Time:</b> 20–30 min<br>
+      <b>Groups:</b> [from docx Setup]<br>
+      <b>Materials:</b> [from docx Setup]
+    </div>
+  </div>
+  <div class="dir-body">
+    <div class="dir-text">
+      <div class="dir-row">
+        <span class="dir-label">Structure</span>
+        [verbatim from docx Structure line]
+      </div>
+      <div class="dir-row">
+        <span class="dir-label">Setup</span>
+        [verbatim from docx Setup line]
+      </div>
+      <div class="dir-row">
+        <span class="dir-label">Directions</span>
+        <ol>
+          [verbatim numbered steps from docx Directions — one <li> per step]
+        </ol>
+      </div>
+      <div class="dir-goal">
+        <b>Goal:</b> [verbatim from docx Goal line]
+      </div>
+    </div>
+    <div class="looks-like">
+      <div class="looks-good">
+        <div class="looks-header">✓ Looks Like Success</div>
+        <ul>
+          <li>[AI-generated — specific observable behavior for this structure]</li>
+          <li>[AI-generated]</li>
+          <li>[AI-generated]</li>
+        </ul>
+      </div>
+      <div class="looks-bad">
+        <div class="looks-header">✗ Doesn't Look Like</div>
+        <ul>
+          <li>[AI-generated — specific failure or shortcut for this structure]</li>
+          <li>[AI-generated]</li>
+          <li>[AI-generated]</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+DIRECTIONS PAGE RULES:
+  • docx text is VERBATIM — do not paraphrase Setup, Directions, or Goal.
+  • Structure line may be shortened if it is a subtitle (e.g. "Partner explanation + alternating roles").
+  • Looks Like bullets are AI-generated — specific to this structure's mechanics.
+    ✗ Generic: "Students stay on task."
+    ✓ Specific: "Every student writes on their own board before Showdown."
+  • 3 bullets per column is standard; 4 is acceptable for complex structures.
+
+────────────────────────────────────────────────────────────────
+
+PROBLEM PAGE TEMPLATE (one per problem — Q page)
+
+<section class="page">
+  <div class="prob-head">
+    <span>Unit [N].[S] · Activity [N] · [STRUCTURE_NAME]</span>
+    <span>Problem [N]</span>
+  </div>
+  <div class="prob-num">Problem [N]</div>
+  <div class="prob-tag">[TOPIC TAG — e.g. "Current · DOK 2"]</div>
+  <div class="prob-q">
+    <p>[QUESTION TEXT — verbatim from bank, wrapped in <p>]</p>
+    [IF figure: <div class="graph-block graph-md"><img src="figures/filename.png" alt="..."/></div>]
+    [IF table: <table class="values">...</table>]
+  </div>
+  <div class="work"></div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+SOLUTION PAGE TEMPLATE (immediately after Q page)
+
+<section class="page">
+  <div class="prob-head">
+    <span>Unit [N].[S] · Activity [N] · [STRUCTURE_NAME]</span>
+    <span>Solution [N]</span>
+  </div>
+  <div class="prob-num">Solution [N]</div>
+  <div class="prob-tag">[same tag as Q page]</div>
+  <div class="prob-q">
+    [Exact same question content as Q page]
+  </div>
+  <div class="solution">
+    <b>Solution:</b> [Complete worked solution — steps shown, not just answer]
+  </div>
+  <div class="work"></div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+EXIT TICKET TEMPLATE (standard activities — 2×2 grid, 4 questions)
+
+<section class="page">
+  <div class="prob-head">
+    <span>Unit [N].[S] · Activity [N]</span>
+    <span>Exit Ticket</span>
+  </div>
+  <div class="prob-num">Exit Ticket</div>
+  <div class="exit-grid">
+    <div class="exit-item">
+      <span class="exit-item-label">Current · DOK 1–2</span>
+      <p>[AI-derived Q1 — current section skill, short]</p>
+    </div>
+    <div class="exit-item">
+      <span class="exit-item-label">Current · DOK 1–2</span>
+      <p>[AI-derived Q2 — current section skill, different format]</p>
+    </div>
+    <div class="exit-item">
+      <span class="exit-item-label">Last · DOK 1–2</span>
+      <p>[AI-derived Q3 — previous section skill]</p>
+    </div>
+    <div class="exit-item">
+      <span class="exit-item-label">Mastery · DOK 1–2</span>
+      <p>[AI-derived Q4 — prerequisite skill from prior unit]</p>
+    </div>
+  </div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+EXIT TICKET ANSWER KEY TEMPLATE
+
+<section class="page">
+  <div class="prob-head">
+    <span>Unit [N].[S] · Activity [N]</span>
+    <span>Exit Ticket Answer Key</span>
+  </div>
+  <div class="prob-num">Exit Ticket</div>
+  <div class="exit-grid">
+    [Exact same 4 cells as ET page]
+  </div>
+  <div class="exit-key">
+    <b>Key:</b>
+    <ol>
+      <li>[Answer 1]</li>
+      <li>[Answer 2]</li>
+      <li>[Answer 3]</li>
+      <li>[Answer 4]</li>
+    </ol>
+  </div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+STATIONS DIRECTIONS PAGE TEMPLATE
+
+<section class="station-page">
+  <div class="stn-header">
+    <div>
+      <div class="act-eyebrow">Unit [N] · Section [N] · Activity [N]</div>
+      <div class="act-title">Stations</div>
+      <div class="act-subtitle">[SECTION_TOPIC]</div>
+    </div>
+    <div class="act-meta">
+      <b>Source:</b> Practice Set [N].[S].[PS#]<br>
+      <b>Time:</b> 20–30 min<br>
+      <b>Groups:</b> Stations (max 4 per station)<br>
+      <b>Materials:</b> Printed station cards + record sheet
+    </div>
+  </div>
+  <div class="stn-rule"></div>
+  <div class="stn-dir-body">
+    <div class="dir-text">
+      [Same dir-row structure as standard directions page]
+    </div>
+    <div class="looks-like">
+      [Same Looks Like / Doesn't Look Like structure]
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Unit [N].[S] · Activity [N] · Stations</span>
+    <span>Algebra 1</span>
+  </div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+STATIONS CARD PAGE TEMPLATE (one per station)
+
+<section class="station-page">
+  <div class="station-header">Station [N]: [TOPIC]</div>
+  <div class="copy-note">1 copy per station</div>
+  <div class="station-grid">
+    <div class="station-card">
+      <h3>Question [A]</h3>
+      <div class="station-card-label">[topic]</div>
+      <p>[question verbatim from bank]</p>
+      [figure or table if needed]
+    </div>
+    <div class="station-card">
+      <h3>Question [B]</h3>
+      ...
+    </div>
+    <div class="station-card">
+      <h3>Question [C]</h3>
+      ...
+    </div>
+    <div class="station-card">
+      <h3>Question [D]</h3>
+      ...
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Unit [N].[S] · Activity [N] · Stations</span>
+    <span>Algebra 1</span>
+  </div>
+</section>
+
+────────────────────────────────────────────────────────────────
+
+TARSIA SHELL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tarsia — Section [UNIT].[SECTION]</title>
+[MathJax]
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/activities.css"/>
+</head>
+<body><div class="wrap">
+
+[DIRECTIONS PAGE — same as standard]
+
+<section class="page">
+  <div class="prob-head">
+    <span>Unit [N].[S] · Activity [N] · Tarsia</span>
+    <span>Matching Pairs</span>
+  </div>
+  <div class="prob-num">Matching Pairs</div>
+  <div class="tarsia-intro">
+    <p>Copy these pairs into the Tarsia Triangle Generator to build the puzzle:<br>
+    <a href="https://tnezki.github.io/pc/structures/activity_templates/tarsia_generator/tarsia_generator.html">
+    tnezki.github.io → Tarsia Triangle Generator</a></p>
+    <p>Each pair: Question side → Answer side. Puzzle has [N] pieces.</p>
+  </div>
+  <div class="tarsia-pairs">
+    <div class="tarsia-pair-header">
+      <span>Question / Expression</span>
+      <span>Answer</span>
+    </div>
+    <div class="tarsia-pair">
+      <div class="tarsia-q"><p>[short question or expression]</p></div>
+      <div class="tarsia-a"><p>[answer]</p></div>
+    </div>
+    [repeat for all pairs — typically 9–12 pairs]
+  </div>
+</section>
+
+</div></body>
+</html>
+
+TARSIA RULES:
+  • Select bank items from PS3 column (Act 2) where the question stem
+    is SHORT (under 15 words) and the answer is a single value, expression,
+    or brief phrase.
+  • Avoid: multi-step problems, contextual word problems, table-based items.
+  • Prefer: evaluate expressions, identify properties, match notation,
+    name features, compute single operations.
+  • Target 9–12 pairs. All <p> tags inside .prob-q for MathJax compatibility.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 3 — CONTENT FROM SOURCES
+════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+
+ACTIVITY PLAN — complete before writing HTML, report in chat
+
+  STRUCTURE SELECTION:
+    Section [N].1 Act 1: [structure] — reason: [1 sentence]
+    Section [N].1 Act 2: [structure] — reason: [1 sentence]
+    Section [N].2 Act 1: [structure] — reason: [1 sentence]
+    Section [N].2 Act 2: [structure] — reason: [1 sentence]
+    Section [N].3 Act 1: [structure] — reason: [1 sentence]
+    Section [N].3 Act 2: [structure] — reason: [1 sentence]
+    Section [N].4 Act 1: [structure] — reason: [1 sentence]
+    Section [N].4 Act 2: [structure] — reason: [1 sentence]
+    Section [N].5 Act 1: Round Table — (fixed: multi-step required)
+    Section [N].5 Act 2: Tarsia — (fixed: short stems required)
+    Variety check: any structure used more than twice? [YES/NO — fix if YES]
+
+  FIGURES NEEDED:
+    [List any bank IDs that reference a figure, per section]
+    [NONE if no figures]
+
+────────────────────────────────────────────────────────────────
+
+MAPPING — how to read for activities
+
+  Practice Sets sheet, same structure as practice sets PM.
+  Act 1 content = PS2 column (Col C in mapping).
+  Act 2 content = PS3 column (Col D in mapping).
+  For each section: rows of bank IDs = 4 current + 8 mastery + 4 last = 16 problems.
+  Exit ticket rows (ET Q1–Q4) = descriptions only; ET questions are AI-derived.
+
+────────────────────────────────────────────────────────────────
+
+BANK — extraction rules (same as practice sets PM)
+
+  Find <article> by problem-number. Extract:
+    • <p> body (question text) — verbatim
+    • table.values (if present) — verbatim
+    • graph-block div (if present) — copy verbatim; base.css styles it
+  Do NOT convert graph-block to ps-figure — base.css already styles graph-block.
+  Do NOT copy problem-number or problem-meta divs.
+  If a bank ID is not found: STOP, report, wait.
+
+────────────────────────────────────────────────────────────────
+
+STRUCTURE SELECTION LOGIC
+
+  Section 5 is fixed: Round Table (Act 1), Tarsia (Act 2).
+
+  For sections 1–4 (8 free slots), pick from Activities in docx:
+    Whiteboard Indy, Rally Coach, Whiteboard Partners, Speed Dating Math,
+    Find Someone Who, Showdown, Think Trade Agree, Stations,
+    Mathematical Hot Seat, Rally Coach II.
+
+  Rules:
+    • No structure used more than twice across the whole unit.
+    • Stations works best when the section has varied problem types
+      and figures (visually interesting cards).
+    • Find Someone Who works best with many short DOK1–2 items.
+    • Showdown, Think Trade Agree work with any content.
+    • Speed Dating Math works best with problems that have clean
+      numerical answers for quick peer comparison.
+    • Rally Coach / Rally Coach II work best with multi-step
+      procedural problems.
+    • Mathematical Hot Seat works best with vocabulary-heavy sections.
+    • Prefer to vary structure type (partner vs group vs movement vs timed).
+
+────────────────────────────────────────────────────────────────
+
+DOCX — how to extract structure directions
+
+  For each structure assigned in the ACTIVITY PLAN:
+    1. Find the structure by its ◆ name in the Activities section of the docx.
+    2. Extract verbatim:
+       • Structure: line
+       • Setup: line
+       • Directions: all numbered/bulleted steps
+       • Goal: line
+    3. Place these word-for-word in the dir-text section of the directions page.
+    4. Do NOT paraphrase. Do NOT add steps. Do NOT remove steps.
+
+────────────────────────────────────────────────────────────────
+
+LOOKS LIKE / DOESN'T LOOK LIKE — AI generation rules
+
+  Generate for EACH activity based on the structure's mechanics:
+    • "Looks Like Success" (green): 3 specific observable behaviors
+      that show the structure is working as intended.
+      ✗ Generic: "Students are engaged."
+      ✓ Specific: "Both partners are writing simultaneously before comparing."
+    • "Doesn't Look Like" (red): 3 specific shortcuts or failures
+      that undermine the structure's goal.
+      ✗ Generic: "Students are off task."
+      ✓ Specific: "One partner solving while the other copies the answer."
+  Base the bullets on the structure's Goal and Directions from the docx.
+
+────────────────────────────────────────────────────────────────
+
+PROBLEM CONTENT RULES
+
+  • ALL problems are pulled verbatim from the bank (same rules as PS PM).
+  • ALL text inside .prob-q must be wrapped in <p> tags.
+    ✗ <div class="prob-q">Solve $f(x)=2x+1$.</div>
+    ✓ <div class="prob-q"><p>Solve $f(x)=2x+1$.</p></div>
+  • Problem tag: "Current · DOK [N]" / "Mastery · DOK [N]" / "Last · DOK [N]"
+  • Solution: complete worked solution with steps shown.
+    For DOK 3–4: explain reasoning, not just final answer.
+  • Problem order: same order as in the PS (current 1–4, mastery 5–12, last 13–16).
+
+────────────────────────────────────────────────────────────────
+
+EXIT TICKET RULES
+
+  • 4 AI-derived questions (same content categories as PS ET: Q1+Q2 current,
+    Q3 last, Q4 mastery DOK 1–2).
+  • Short enough to answer in the projected cell without workspace.
+  • All text in <p> tags.
+  • Answer key on the page immediately following the ET page.
+
+────────────────────────────────────────────────────────────────
+
+FIGURE RULES
+
+  • graph-block figures copy verbatim from bank — do NOT convert to ps-figure.
+  • For large projected figures, use class="graph-block graph-xl" (max 4.5in).
+  • If a bank item figure needs recreation: append to generate_graphs.py.
+  • All appended calls start at column 0. No leading indentation.
+  • Figure filenames in activities: u[unit]_[section]_act[N]_[descriptor]_v1.png
+
+MATHJAX RULES (same as practice sets PM)
+  Currency: \$N in prose — never bare $N.
+  Fractions: always \frac{} — scan for \rac and fix.
+  Delimiters: $...$ and $$...$$ only. Never \(...\) or \[...\].
+  Config before CDN. processEscapes: true.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 4 — ROUND TABLE RULES
+════════════════════════════════════════════════════════════════
+
+Round Table is assigned to Section 5 Act 1 (fixed).
+
+ELIGIBILITY: Round Table needs problems with 3+ sequential steps,
+where each step is meaningful on its own and can be completed by
+one student before passing.
+
+SELECTION: Choose 6–8 problems from PS2 (Act 1) of section 5 that
+have multi-step structure. Skip single-computation DOK1 items.
+
+ROUND TABLE PAGE STRUCTURE (standard portrait activity):
+  Each problem page shows:
+    • The full problem statement at top
+    • STEP labels below (Step 1 / Step 2 / Step 3 / ...) with
+      horizontal dividing lines between steps
+    • The steps section acts as the "work" area for the passing rotation
+
+  Example:
+    <div class="prob-q"><p>[multi-step problem]</p></div>
+    <div class="work" style="display:grid; grid-template-columns:1fr;
+      grid-template-rows: repeat(3, 1fr); gap:0; flex:1; margin-top:12px;">
+      <div style="border-top:2px solid #333; padding:8px 4px; font-weight:800;">
+        Step 1</div>
+      <div style="border-top:1px solid #aaa; padding:8px 4px; font-weight:800;">
+        Step 2</div>
+      <div style="border-top:1px solid #aaa; padding:8px 4px; font-weight:800;">
+        Step 3</div>
+    </div>
+
+  Solution page: show complete worked solution for all steps.
+
+
+════════════════════════════════════════════════════════════════
+
+
+PART 5 — QA PASSES
+════════════════════════════════════════════════════════════════
+
+PASS 1 — FILE AND STRUCTURE
+  All 10 HTML files present with correct names:             YES/NO
+  Two CSS links (base.css then activities.css) in each:    YES/NO
+  No <style> block except Stations landscape override:     YES/NO
+  MathJax config before CDN, processEscapes true:          YES/NO
+  Stations has @page landscape override in <head>:         YES/NO
+  RESULT: PASS/FAIL
+
+PASS 2 — CONTENT AND STRUCTURE ASSIGNMENT
+  Sections 1–4: no structure repeated more than twice:     YES/NO
+  Section 5 Act 1 = Round Table:                          YES/NO
+  Section 5 Act 2 = Tarsia:                               YES/NO
+  Act 1 uses PS2 bank IDs, Act 2 uses PS3 bank IDs:      YES/NO
+  Each standard activity: directions → Q/A pairs → ET → key: YES/NO
+  RESULT: PASS/FAIL
+
+PASS 3 — DIRECTIONS AND LOOKS LIKE
+  All directions text verbatim from docx:                  YES/NO
+  No paraphrase, no added/removed steps:                   YES/NO
+  Looks Like bullets specific (not generic):               YES/NO
+  Looks Like has 3 bullets per column:                     YES/NO
+  RESULT: PASS/FAIL
+
+PASS 4 — BANK CONTENT AND PROBLEM FORMAT
+  All problem text verbatim from bank:                     YES/NO
+  All text in .prob-q wrapped in <p> tags:                YES/NO
+  Problem pages alternate Q then A:                        YES/NO
+  Solutions show worked steps (not just answer):           YES/NO
+  graph-block figures copied verbatim (not ps-figure):    YES/NO
+  RESULT: PASS/FAIL
+
+PASS 5 — MATHJAX AND FIGURES
+  Bare $N for currency: [list or NONE]
+  \rac anywhere (corrupted \frac): [list or NONE]
+  Wrong delimiters \(...\) or \[...\]: [list or NONE]
+  Raw < or > inside math: [list or NONE]
+  generate_graphs.py calls at column 0: YES/NO/N/A
+  RESULT: PASS/FAIL
+
+────────────────────────────────────────────────────────────────
+
+QA LOG FORMAT
+
+  QA LOG — Unit [N] Activities / Build date: [date]
+
+  PASS 1 — File / structure:       PASS/FAIL
+  PASS 2 — Content / assignment:   PASS/FAIL
+  PASS 3 — Directions / looks-like: PASS/FAIL
+  PASS 4 — Bank / format:          PASS/FAIL
+  PASS 5 — MathJax / figures:      PASS/FAIL
+
+  Issues fixed: [list or NONE]
+  OVERALL: PASS — ZIP assembled  /  FAIL — [blocker]
+
+────────────────────────────────────────────────────────────────
+
+COMMON FAILURE MODES
+
+1.  Skipping ACTIVITY PLAN — always plan all 10 before writing line 1.
+2.  Paraphrasing docx directions — copy verbatim, word for word.
+3.  Generic Looks Like bullets — must name specific structure behaviors.
+4.  Bare text nodes in .prob-q without <p> tags — MathJax breaks.
+5.  Converting graph-block to ps-figure — don't; base.css handles it.
+6.  Using ps-figure instead of graph-block — wrong class for activities.
+7.  Writing Q and A content on the same page — always separate pages.
+8.  Repeating a structure more than twice across the unit.
+9.  Assigning anything other than Round Table to section 5 Act 1.
+10. Assigning anything other than Tarsia to section 5 Act 2.
+11. Tarsia with long word-problem stems — short stems only (<15 words).
+12. Round Table with single-step problems — must have 3+ steps.
+13. Missing @page landscape override in Stations HTML head.
+14. MathJax: bare $N in prose — use \$N.
+15. MathJax: \rac in output — corrupted \frac, fix before delivery.
+16. Delivering HTML files without a ZIP.
+17. Building without completing the PRE-BUILD SCAN.
+
+════════════════════════════════════════════════════════════════

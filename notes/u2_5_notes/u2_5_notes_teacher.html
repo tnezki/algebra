@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section 2.5 Notes — Linear Modeling with Data</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="../../css/base.css"/>
+<link rel="stylesheet" href="../../css/notes.css"/>
+</head>
+<body>
+<div class="container">
+
+<!-- TITLE -->
+<div class="notes-title">
+  <div class="title-kicker">Algebra 1 · Unit 2</div>
+  <div class="title-main">Section 2.5<br>Linear Modeling with Data</div>
+  <div class="title-sub">Use scatter plots and lines of fit to model real-world data.</div>
+  <div class="title-quote"><p><strong>Mathematical idea:</strong> A linear model can summarize a data trend, but predictions must be judged for reasonableness.</p></div>
+  <p style="margin-top:18px;color:#555;">Today you will describe association, estimate with a line of fit, and build approximate models from data. You will also decide when a linear model is useful enough for the question being asked.</p>
+</div>
+
+<!-- LEARNING TARGET -->
+<h2 class="h-target">Learning Target</h2>
+<div class="objectives">
+  <p><strong>Learning Target: Students will use linear models to represent and interpret real-world data.</strong></p>
+  <p><strong>I can statements</strong></p>
+  <ul>
+    <li>I can design linear models that represent patterns in real-world data.</li>
+    <li>I can predict values using a linear model and interpret the result.</li>
+    <li>I can assess whether a linear model fits a data situation well enough for the question being asked.</li>
+  </ul>
+</div>
+
+<!-- WHAT'S TO COME -->
+<h2 class="h-preview">What's To Come</h2>
+<p>This is a long-range preview for future lessons. Do not solve it today. Instead, annotate it individually. Circle anything familiar, underline symbols or directions that seem important, and write notes about what information you think will be needed later.</p>
+<p>As you annotate, ask yourself: What parts (words, symbols, graphs) do you KNOW? What parts look FAMILIAR? What parts look like jibberish?</p>
+<div class="annotation-box">
+  <p>A first line of fit for the plant data is $h=2.5w+42$. Revise the model after noticing it underpredicts weeks $6$ through $8$. Propose a better slope or intercept and justify using the scatter plot.</p>
+<figure class="notes-figure wu-img-500"><img alt="scatter plot with a positive association" src="figures/u2_bank_s5_scatter_height_sq_v1.png"/></figure>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher preview: Have students annotate for familiar features only. Future task ID 2-S5-DOK4.01; do not solve it today.</p></div>
+
+<!-- INTRO -->
+<h2 class="h-intro">Intro</h2>
+<div class="strategy-box">
+  <p><strong>Directions</strong></p>
+  <p>Read the introduction aloud with a partner or in a small group. As you read, annotate the text by highlighting important ideas, circling key vocabulary, and writing short notes about connections, questions, or predictions in the margins.</p>
+</div>
+<div class="reading-box">
+  <p>Scatter plots show patterns in data pairs. A positive association appears when the points tend to rise from left to right. That means larger input values are usually connected with larger output values.</p>
+  <p>A line of fit is a simple model for the overall trend. It helps you estimate values that are not listed exactly and interpret an average rate of change. The line does not need to pass through every point to be useful.</p>
+  <p>Predictions depend on how close the new input is to the collected data. Estimating near the data range usually uses the observed pattern, while predicting far outside the range can be risky. The farther the input is from the data, the more carefully the model should be questioned.</p>
+  <p>Tables and scatter plots work together in modeling. Tables show exact data values, while scatter plots show the shape and strength of the trend. A reasonable model should respect both views.</p>
+  <p>Strong data modeling includes a reasonableness check. Look for outliers, curved patterns, or places where the trend changes. A line can be helpful even when it is not perfect, but the model should fit the question being asked.</p>
+</div>
+<div class="notes-ws ws-ruled"><span class="ws-label">Your notes</span><p style="color:red;font-weight:bold;">Teacher: Listen for students naming the specific feature and representation from the reading, not just repeating the vocabulary word.</p></div>
+
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What does a positive association look like in a scatter plot?</li>
+    <li>What does a line of fit help you do?</li>
+    <li>Why should a prediction near the data range be treated differently from one far outside it?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answers: 1) What does a positive association look like in a scatter plot? is answered in paragraph A. 2) What does a line of fit help you do? is answered in paragraph B. 3) Paragraph C implies the answer; ask students to cite the sentence that supports their inference.</p></div>
+
+<!-- MATH NOTES 1 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">{title}</span>
+  </div>
+  <div class="math-notes-body">
+    {body}
+  </div>
+</div>
+
+<!-- EXAMPLE 1 -->
+<h3 class="h-example">Example 1: Describe Association</h3>
+<p>A scatter plot of practice hours and quiz scores rises from left to right.</p>
+
+<ol>
+  <li>Name the type of association.</li>
+  <li>What does that association mean in this context?</li>
+  <li>Name one reason the points might not fall exactly on a line.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Positive association; more practice is generally connected with higher scores; real data vary because of other factors. Misconception watch: require students to name the representation evidence they used.</p></div>
+
+<!-- YTI 1 -->
+<h3 class="h-yti">You Try It 1: Describe Association</h3>
+<p>A scatter plot of charging time and battery percentage rises from left to right.</p>
+
+<ol>
+  <li>Name the type of association.</li>
+  <li>What does that association mean in this context?</li>
+  <li>Name one reason the points might not fall exactly on a line.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Positive association; more charging time is generally connected with higher battery percentage; real devices may charge unevenly. Follow-up: ask one student to explain how this parallels the example without copying steps blindly.</p></div>
+
+<!-- STOP AND DISCUSS A -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What idea did Example 1 and You Try It 1 have in common?</li>
+    <li>What evidence would convince you that your answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Association describes the pattern, not a perfect rule for every point. Push students to cite a number, feature, or context phrase.</p></div>
+
+<!-- MATH NOTES 2 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">{title}</span>
+  </div>
+  <div class="math-notes-body">
+    {body}
+  </div>
+</div>
+
+<!-- EXAMPLE 2 -->
+<h3 class="h-example">Example 2: Predict with a Line of Fit</h3>
+<p>A line of fit for plant height is $h=3w+20$, where $w$ is weeks and $h$ is height in centimeters.</p>
+
+<ol>
+  <li>Predict the height at week 9.</li>
+  <li>Interpret the slope in context.</li>
+  <li>Explain whether week 9 is a reasonable prediction if data were collected through week 8.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $h(9)=47$ cm; slope is 3 cm per week; week 9 is close to week 8, so the prediction is reasonable but still an estimate. Misconception watch: require students to name the representation evidence they used.</p></div>
+
+<!-- YTI 2 -->
+<h3 class="h-yti">You Try It 2: Predict with a Line of Fit</h3>
+<p>A line of fit for pages read is $p=4d+12$, where $d$ is days and $p$ is pages.</p>
+
+<ol>
+  <li>Predict the pages read by day 7.</li>
+  <li>Interpret the slope in context.</li>
+  <li>Explain whether day 7 is reasonable if data were collected through day 6.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: $p(7)=40$ pages; slope is 4 pages per day; day 7 is close to day 6, so the prediction is reasonable. Follow-up: ask one student to explain how this parallels the example without copying steps blindly.</p></div>
+
+<!-- STOP AND DISCUSS B -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What idea did Example 2 and You Try It 2 have in common?</li>
+    <li>What evidence would convince you that your answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: The line of fit gives an average rate and a nearby prediction. Push students to cite a number, feature, or context phrase.</p></div>
+
+<!-- MATH NOTES 3 -->
+<div class="math-notes">
+  <div class="math-notes-header">
+    <span class="math-notes-label">Math Notes</span>
+    <span class="math-notes-title">{title}</span>
+  </div>
+  <div class="math-notes-body">
+    {body}
+  </div>
+</div>
+
+<!-- EXAMPLE 3 -->
+<h3 class="h-example">Example 3: Build a Model from a Table</h3>
+<p>The table shows approximate costs from a repair service.</p>
+<table class="values">
+<tr><th>Minutes</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr>
+<tr><td>Cost</td><td>15</td><td>22</td><td>29</td><td>35</td><td>43</td></tr>
+</table>
+<ol>
+  <li>Choose two reasonable points to estimate a slope.</li>
+  <li>Write an approximate linear model.</li>
+  <li>Use the model to predict the cost at 12 minutes.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Using (2,15) and (10,43) gives slope 3.5 and model $C=3.5m+8$; at 12 minutes, about 50 dollars. Misconception watch: require students to name the representation evidence they used.</p></div>
+
+<!-- YTI 3 -->
+<h3 class="h-yti">You Try It 3: Build a Model from a Table</h3>
+<p>The table shows pages read after several hours.</p>
+<table class="values">
+<tr><th>Hours</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>Pages</td><td>12</td><td>21</td><td>28</td><td>39</td><td>47</td></tr>
+</table>
+<ol>
+  <li>Choose two reasonable points to estimate a slope.</li>
+  <li>Write an approximate linear model.</li>
+  <li>Use the model to predict the pages after 6 hours.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Using (1,12) and (5,47) gives slope 8.75 and model $P=8.75h+3.25$; at 6 hours, about 55.75 pages. Follow-up: ask one student to explain how this parallels the example without copying steps blindly.</p></div>
+
+<!-- STOP AND DISCUSS C -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What idea did Example 3 and You Try It 3 have in common?</li>
+    <li>What evidence would convince you that your answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Different point choices can create different models, so the chosen points should represent the overall trend. Push students to cite a number, feature, or context phrase.</p></div>
+
+<!-- EXAMPLE 4 -->
+<h3 class="h-example">Example 4: Plan a Prediction Strategy</h3>
+<p>A data set was collected for input values $1$ through $8$, and you need to predict near $x=9$.</p>
+
+<ol>
+  <li>Describe how you would choose a line of fit.</li>
+  <li>Name one check that would make the prediction more reasonable.</li>
+  <li>Explain why this prediction is less risky than predicting at $x=30$.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Draw through the middle of the points, check residuals/outliers, and note that 9 is close to the data range while 30 is far outside. Misconception watch: require students to name the representation evidence they used.</p></div>
+
+<!-- YTI 4 -->
+<h3 class="h-yti">You Try It 4: Plan a Prediction Strategy</h3>
+<p>A data set was collected for input values $0$ through $6$, and you need to predict near $x=7$.</p>
+
+<ol>
+  <li>Describe how you would choose a line of fit.</li>
+  <li>Name one check that would make the prediction more reasonable.</li>
+  <li>Explain why this prediction is less risky than predicting at $x=25$.</li>
+</ol>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher answer key: Draw through the middle of the points, check for outliers or curvature, and note that 7 is close while 25 is far outside. Follow-up: ask one student to explain how this parallels the example without copying steps blindly.</p></div>
+
+<!-- STOP AND DISCUSS D -->
+<div class="strategy-box stop-discuss">
+  <p><strong>Stop and Discuss</strong></p>
+  <ol>
+    <li>What idea did Example 4 and You Try It 4 have in common?</li>
+    <li>What evidence would convince you that your answer is reasonable?</li>
+  </ol>
+</div>
+<div class="notes-ws ws-ruled"><p style="color:red;font-weight:bold;">Teacher discussion note: Prediction strategy must include a reasonableness check and attention to distance from the data range. Push students to cite a number, feature, or context phrase.</p></div>
+
+<!-- SUMMARY -->
+<h2 class="h-summary">Summary</h2>
+<div class="key-point">
+  <p>Linear modeling with data means using a line to summarize a trend in scattered real-world points.</p>
+  <p>Scatter plots show association, and a line of fit gives an approximate equation for prediction and interpretation.</p>
+  <p>A common error is treating a line of fit like it must pass through every data point.</p>
+  <p>Strong understanding means making predictions, interpreting slope in context, and explaining whether the model is reasonable for the question.</p>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="h-mistakes">Common Mistakes</h2>
+<div class="mistake-box">
+  <ul>
+    <li><strong>Calling every rising pattern linear.</strong> Why it is tempting: positive association can still curve. What to check instead: check whether a straight line fits well enough.</li>
+    <li><strong>Forcing the line through every point.</strong> Why it is tempting: equations in earlier units often matched exactly. What to check instead: remember data models are approximate.</li>
+    <li><strong>Using an outlier to set the line.</strong> Why it is tempting: an extreme point is easy to notice. What to check instead: choose points near the middle of the trend.</li>
+    <li><strong>Extrapolating too far.</strong> Why it is tempting: the equation continues algebraically. What to check instead: ask whether the input is near the data range.</li>
+    <li><strong>Forgetting context units.</strong> Why it is tempting: slope from data can feel abstract. What to check instead: name output units per input unit.</li>
+  </ul>
+</div>
+
+<!-- OPTIONAL REFLECTION -->
+<h2 class="h-reflection">Optional Future Task Reflection</h2>
+<div class="annotation-box">
+  <p>Look back at the future task. Do not solve it yet. Highlight one part that makes more sense now than it did at the beginning. Circle one part that still feels unfamiliar. Write one sentence about what representation you would look at first.</p>
+</div>
+
+<!-- EXIT TICKET -->
+<div class="exit-ticket-label">Exit Ticket</div>
+<div class="exit-ticket-grid">
+  <div class="et-cell">
+    <div class="et-cell-title">1 — Skill Check · DoK 1</div>
+    <p>State whether a scatter plot that rises from left to right shows positive association, negative association, or no association.</p>
+  </div>
+  <div class="et-cell">
+    <div class="et-cell-title">2 — Skill Check · DoK 2</div>
+    <p>Use the scatter plot and line of fit to estimate the plant height at week $9$. Then interpret the slope in context.</p>
+<figure class="notes-figure wu-img-500"><img alt="scatter plot with a positive association" src="figures/u2_bank_s5_scatter_height_sq_v1.png"/></figure>
+  </div>
+  <div class="et-cell">
+    <div class="et-cell-title">3 — What Did You Learn?</div>
+    <p>What is one idea about linear modeling with data you understand better now than at the start of class? Write at least one complete sentence.</p>
+  </div>
+  <div class="et-cell">
+    <div class="et-cell-title">4 — What Do You Need Help With?</div>
+    <p>What is one thing about linear modeling with data you still want to understand or practice? Be specific — name the idea, not just "everything."</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
