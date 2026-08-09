@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mathematical Hot Seat — Section 2.4</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
+</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/activities.css" rel="stylesheet"/>
+<style id="activity-local-overrides">
+/* Local correction pass: keep directions page scale, shrink problem/solution content, shrink graphs, and hide empty workspaces. */
+@page { size: letter portrait; margin: .35in; }
+@media screen, print {
+  .prob-head { font-size: 7.8pt !important; margin-bottom: 8px !important; padding-bottom: 4px !important; }
+  .prob-num { font-size: 22pt !important; margin-bottom: 6px !important; }
+  .prob-tag { font-size: 7.8pt !important; margin-bottom: 6px !important; }
+  .prob-q { font-size: 16.9pt !important; line-height: 1.25 !important; margin-bottom: 8px !important; }
+  .solution { font-size: 14.3pt !important; line-height: 1.25 !important; margin-top: 8px !important; padding-top: 8px !important; }
+  .solution ol, .solution ul { margin-top: 4px !important; margin-bottom: 0 !important; }
+  .solution li { margin-bottom: 2px !important; }
+  .work:empty, .workspace:empty { display: none !important; min-height: 0 !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+  .prob-q .graph-block img, .prob-q .ps-figure img { max-width: 5.69in !important; max-height: 3.68in !important; object-fit: contain !important; }
+  .prob-q .graph-block, .prob-q .ps-figure { margin: 8px auto !important; text-align: center !important; }
+  .exit-item, .stn-exit-item { font-size: 12.4pt !important; line-height: 1.25 !important; }
+
+  /* Exit tickets have no workspace: compact content only. */
+  .exit-no-work .exit-grid, .exit-ticket-page .exit-grid {
+    flex: 0 0 auto !important;
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+  }
+  .exit-no-work .problem, .exit-no-work .problem-body,
+  .exit-no-work .exit-item, .exit-no-work .stn-exit-item,
+  .exit-ticket-page .problem, .exit-ticket-page .problem-body {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .exit-no-work .workspace, .exit-no-work .work,
+  .exit-ticket-page .workspace, .exit-ticket-page .work {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .exit-no-work .problem-body::after, .exit-no-work .exit-item::after,
+  .exit-ticket-page .problem-body::after, .exit-ticket-page .exit-item::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Portrait station cards: four questions per page, duplicated in print order. */
+  .station-page {
+    width: auto !important;
+    max-width: 980px !important;
+    min-height: 9.3in !important;
+    border: 2px solid var(--text-dark) !important;
+    padding: 16px 18px !important;
+    margin: 0 auto !important;
+  }
+  .stn-header { grid-template-columns: 1fr 2.5in !important; }
+  .stn-header .act-title { font-size: 24pt !important; }
+  .station-header { font-size: 15pt !important; padding: 8px 12px !important; margin-bottom: 8px !important; }
+  .copy-note { top: 20px !important; right: 20px !important; font-size: 7.5pt !important; }
+  .station-grid { grid-template-columns: 1fr 1fr !important; grid-template-rows: 1fr 1fr !important; gap: 8px !important; flex: 1 !important; }
+  .station-card { font-size: 9.2pt !important; line-height: 1.18 !important; padding: 7px !important; overflow: hidden !important; }
+  .station-card h3 { font-size: 10pt !important; margin-bottom: 3px !important; }
+  .station-card-label { font-size: 7.2pt !important; margin-bottom: 3px !important; }
+  .station-card .prob-q { font-size: 9.2pt !important; line-height: 1.18 !important; margin: 0 !important; }
+  .station-card .solution { font-size: 8.2pt !important; line-height: 1.15 !important; margin: 4px 0 0 0 !important; padding-top: 4px !important; }
+  .station-card .solution ol { margin-left: 15px !important; }
+  .station-card .solution li { margin-bottom: 1px !important; }
+  .station-card .ps-figure, .station-card .graph-block { margin: 4px auto !important; }
+  .station-card .ps-figure img, .station-card .graph-block img { max-width: 100% !important; max-height: 1.35in !important; object-fit: contain !important; }
+  .station-card table.values { font-size: 8pt !important; margin: 4px auto !important; }
+  .page-footer { font-size: 7.2pt !important; padding-top: 6px !important; }
+}
+</style>
+</head>
+<body><div class="wrap">
+<section class="page">
+<div class="dir-header">
+<div>
+<div class="act-eyebrow">Unit 2 · Section 4 · Activity 1</div>
+<div class="act-title">Mathematical Hot Seat</div>
+<div class="act-subtitle">Comparing Linear Representations</div>
+</div>
+<div class="act-meta">
+<b>Source:</b> practice_set_2_4_2.html<br/>
+<b>Time:</b> 20–30 min<br/>
+<b>Groups:</b> Groups<br/>
+<b>Materials:</b> One whiteboard and one marker per member
+    </div>
+</div>
+<div class="dir-body">
+<div class="dir-text">
+<div class="dir-row">
+<span class="dir-label">Structure</span>
+        Verbal description only → Blind solving → Role rotation
+      </div>
+<div class="dir-row">
+<span class="dir-label">Setup</span>
+        Groups. One whiteboard and one marker per member.
+      </div>
+<div class="dir-row">
+<span class="dir-label">Directions</span>
+<ol>
+<li>One student per team sits facing away from the screen (the Hot Seat)</li><li>Teacher projects a problem — only teammates can see it</li><li>Teammates describe the problem using words only — no gestures, no writing</li><li>Hot Seat student solves based solely on the verbal description</li><li>After solving, the student turns around and compares to the original problem</li><li>Rotate the Hot Seat for each round</li>
+</ol>
+</div>
+<div class="dir-goal">
+<b>Goal:</b> Mathematical vocabulary + precise communication
+      </div>
+</div>
+<div class="looks-like">
+<div class="looks-good">
+<div class="looks-header">✓ Looks Like Success</div>
+<ul><li>Teammates describe slope, intercept, table, or graph features using words only.</li><li>The Hot Seat student solves without seeing the projected problem.</li><li>After solving, the team compares the verbal description to the original.</li></ul>
+</div>
+<div class="looks-bad">
+<div class="looks-header">✗ Doesn't Look Like</div>
+<ul><li>Teammates point, gesture, or write the problem for the Hot Seat student.</li><li>The Hot Seat student turns around before finishing.</li><li>The team skips the comparison after the answer is shown.</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 1</span>
+</div>
+<div class="prob-num">Problem 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>A graph starts at $8$ on the $y$-axis. What feature should you compare to the constant term in an equation?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 1</span>
+</div>
+<div class="prob-num">Solution 1</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>A graph starts at $8$ on the $y$-axis. What feature should you compare to the constant term in an equation?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 2</span>
+</div>
+<div class="prob-num">Problem 2</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>Which has the greater starting value: $y=2x+5$ or $y=2x-1$?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 2</span>
+</div>
+<div class="prob-num">Solution 2</div>
+<div class="prob-tag">Current · DOK 1</div>
+<div class="prob-q">
+<p>Which has the greater starting value: $y=2x+5$ or $y=2x-1$?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 3</span>
+</div>
+<div class="prob-num">Problem 3</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<p>The graph shows two plans. Estimate where the costs are equal and explain what that point means in the context.</p>
+<div class="ps-figure wu-img-350"><img alt="context graph with two linear plans" src="figures/u2_bank_s4_plan_compare_sq_v1.png"/></div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 3</span>
+</div>
+<div class="prob-num">Solution 3</div>
+<div class="prob-tag">Current · DOK 2</div>
+<div class="prob-q">
+<p>The graph shows two plans. Estimate where the costs are equal and explain what that point means in the context.</p>
+<div class="ps-figure wu-img-350"><img alt="context graph with two linear plans" src="figures/u2_bank_s4_plan_compare_sq_v1.png"/></div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 4</span>
+</div>
+<div class="prob-num">Problem 4</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>A student claims Plan B is always cheaper because it starts lower: Plan A is $A=20+5x$ and Plan B is $B=5+8x$. Critique the claim and include a value of $x$ that supports your reasoning.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 4</span>
+</div>
+<div class="prob-num">Solution 4</div>
+<div class="prob-tag">Current · DOK 3</div>
+<div class="prob-q">
+<p>A student claims Plan B is always cheaper because it starts lower: Plan A is $A=20+5x$ and Plan B is $B=5+8x$. Critique the claim and include a value of $x$ that supports your reasoning.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 5</span>
+</div>
+<div class="prob-num">Problem 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Complete the next output if the rate of change is ${4}$.</p>
+<table class="values">
+<tr><th>Input</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>Output</td><td>9</td><td>13</td><td>17</td><td>?</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 5</span>
+</div>
+<div class="prob-num">Solution 5</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Complete the next output if the rate of change is ${4}$.</p>
+<table class="values">
+<tr><th>Input</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>Output</td><td>9</td><td>13</td><td>17</td><td>?</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 6</span>
+</div>
+<div class="prob-num">Problem 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which description has a constant rate: adding ${3}$ pages every night or doubling pages every night?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 6</span>
+</div>
+<div class="prob-num">Solution 6</div>
+<div class="prob-tag">Mastery · DOK 1</div>
+<div class="prob-q">
+<p>Which description has a constant rate: adding ${3}$ pages every night or doubling pages every night?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 7</span>
+</div>
+<div class="prob-num">Problem 7</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>The graph shown models a membership plan. Write the rule for total points after $x$ hours, then find the total after ${6}$ hours.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S4-DOK2.04." src="figures/u0b_bank_s4_context_line_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 7</span>
+</div>
+<div class="prob-num">Solution 7</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>The graph shown models a membership plan. Write the rule for total points after $x$ hours, then find the total after ${6}$ hours.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S4-DOK2.04." src="figures/u0b_bank_s4_context_line_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 8</span>
+</div>
+<div class="prob-num">Problem 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A table has values $({1},{9})$, $({2},{13})$, $({3},{17})$, and $({4},{21})$. Write the equation by finding the rate and backing up to $x={0}$.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 8</span>
+</div>
+<div class="prob-num">Solution 8</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>A table has values $({1},{9})$, $({2},{13})$, $({3},{17})$, and $({4},{21})$. Write the equation by finding the rate and backing up to $x={0}$.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 9</span>
+</div>
+<div class="prob-num">Problem 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Ms. Cai’s class studies a tile pattern with rule $y={4}x+6$. Verify whether Figure ${12}$ has ${54}$ tiles, then explain your check.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 9</span>
+</div>
+<div class="prob-num">Solution 9</div>
+<div class="prob-tag">Mastery · DOK 2</div>
+<div class="prob-q">
+<p>Ms. Cai’s class studies a tile pattern with rule $y={4}x+6$. Verify whether Figure ${12}$ has ${54}$ tiles, then explain your check.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 10</span>
+</div>
+<div class="prob-num">Problem 10</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>Compare the table and the graph. Decide whether they could represent the same relationship, and justify your conclusion with at least two pieces of evidence.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>10</td><td>20</td><td>30</td><td>40</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK3.04." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 10</span>
+</div>
+<div class="prob-num">Solution 10</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>Compare the table and the graph. Decide whether they could represent the same relationship, and justify your conclusion with at least two pieces of evidence.</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>2</th><th>4</th><th>6</th></tr>
+<tr><td>$y$</td><td>10</td><td>20</td><td>30</td><td>40</td></tr>
+</table>
+<div class="ps-figure wu-img-350">
+<img alt="Supporting graph for 0B-S1-DOK3.04." src="figures/u0b_bank_s1_context_growth_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 11</span>
+</div>
+<div class="prob-num">Problem 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>The rule and table are supposed to match. Find the first mismatch, explain the correct value, and revise the table.</p>
+<p>Rule: $y={2}x+5$</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>8</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 11</span>
+</div>
+<div class="prob-num">Solution 11</div>
+<div class="prob-tag">Mastery · DOK 3</div>
+<div class="prob-q">
+<p>The rule and table are supposed to match. Find the first mismatch, explain the correct value, and revise the table.</p>
+<p>Rule: $y={2}x+5$</p>
+<table class="values">
+<tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td>$y$</td><td>5</td><td>7</td><td>8</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 12</span>
+</div>
+<div class="prob-num">Problem 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>Synthesize a linear relationship for a school fundraiser using a context, table, graph, and equation. Your model must have a nonzero starting value and a positive rate of change. Explain how each representation shows the same starting value and rate.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S4-DOK4.01." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 12</span>
+</div>
+<div class="prob-num">Solution 12</div>
+<div class="prob-tag">Mastery · DOK 4</div>
+<div class="prob-q">
+<p>Synthesize a linear relationship for a school fundraiser using a context, table, graph, and equation. Your model must have a nonzero starting value and a positive rate of change. Explain how each representation shows the same starting value and rate.</p>
+<div class="ps-figure wu-img-350">
+<img alt="Blank coordinate plane for 0B-S4-DOK4.01." src="figures/u0b_bank_blank_coordinate_sq_v1.png"/>
+</div>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 13</span>
+</div>
+<div class="prob-num">Problem 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>In $p=4n$, which variable is the output if $n$ is number of notebooks and $p$ is pages?</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 13</span>
+</div>
+<div class="prob-num">Solution 13</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>In $p=4n$, which variable is the output if $n$ is number of notebooks and $p$ is pages?</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 14</span>
+</div>
+<div class="prob-num">Problem 14</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>Use the table to find the output paired with input $5$.</p>
+<table class="values">
+<tr><th>input</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>output</td><td>7</td><td>9</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 14</span>
+</div>
+<div class="prob-num">Solution 14</div>
+<div class="prob-tag">Last · DOK 1</div>
+<div class="prob-q">
+<p>Use the table to find the output paired with input $5$.</p>
+<table class="values">
+<tr><th>input</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>output</td><td>7</td><td>9</td><td>11</td><td>13</td></tr>
+</table>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 15</span>
+</div>
+<div class="prob-num">Problem 15</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>Decide whether the context can be modeled as a function: each student ID number is assigned to one student name. Explain using input-output language.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 15</span>
+</div>
+<div class="prob-num">Solution 15</div>
+<div class="prob-tag">Last · DOK 2</div>
+<div class="prob-q">
+<p>Decide whether the context can be modeled as a function: each student ID number is assigned to one student name. Explain using input-output language.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Problem 16</span>
+</div>
+<div class="prob-num">Problem 16</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>Compare the expression $6n+4$ with the context: a club pays a \$6 one-time fee and \$4 per member. Does the expression match the context? Use the meaning of each term to justify your answer.</p>
+</div>
+</section>
+<section class="page">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1 · Mathematical Hot Seat</span>
+<span>Solution 16</span>
+</div>
+<div class="prob-num">Solution 16</div>
+<div class="prob-tag">Last · DOK 3</div>
+<div class="prob-q">
+<p>Compare the expression $6n+4$ with the context: a club pays a \$6 one-time fee and \$4 per member. Does the expression match the context? Use the meaning of each term to justify your answer.</p>
+</div>
+<div class="solution">
+<b>Solution:</b> <ol><li>Identify the quantities, representation, or rule named in the prompt.</li><li>Use the values exactly as given to compute slope, intercept, output, or comparison evidence.</li><li>Write a final statement that answers the question and includes units or context when the prompt gives them.</li></ol>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1</span>
+<span>Exit Ticket</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Compare $y=-2x+10$ and $y=4x-1$: which line increases faster?</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A table starts at 8 and changes by $-3$ each input. Write a rule.</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Name the slope and intercept of $y=\frac{1}{2}x-5$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Solve $4x+1=17$.</p>
+</div>
+</section>
+</div>
+</section>
+<section class="page exit-ticket-page exit-no-work">
+<div class="prob-head">
+<span>Unit 2.4 · Activity 1</span>
+<span>Exit Ticket Answer Key</span>
+</div>
+<div class="prob-num">Exit Ticket</div>
+<div class="exit-grid">
+<section class="problem" id="et1">
+<div class="problem-title">1.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Compare $y=-2x+10$ and $y=4x-1$: which line increases faster?</p>
+</div>
+</section>
+<section class="problem" id="et2">
+<div class="problem-title">2.<span class="problem-meta">Current · DOK 1–2</span></div>
+<div class="problem-body">
+<p>A table starts at 8 and changes by $-3$ each input. Write a rule.</p>
+</div>
+</section>
+<section class="problem" id="et3">
+<div class="problem-title">3.<span class="problem-meta">Last · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Name the slope and intercept of $y=\frac{1}{2}x-5$.</p>
+</div>
+</section>
+<section class="problem" id="et4">
+<div class="problem-title">4.<span class="problem-meta">Mastery · DOK 1–2</span></div>
+<div class="problem-body">
+<p>Solve $4x+1=17$.</p>
+</div>
+</section>
+</div>
+<div class="exit-key">
+<b>Key:</b>
+<ol>
+<li>$y=4x-1$ increases faster because its slope $4$ is greater than $-2$.</li><li>$y=-3x+8$.</li><li>Slope $=\frac{1}{2}$ and intercept $=-5$.</li><li>$4x+1=17\Rightarrow 4x=16\Rightarrow x=4$.</li>
+</ol>
+</div>
+</section>
+</div></body>
+</html>
