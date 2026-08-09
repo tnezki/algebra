@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 8 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.evidence-cell { background: #fff; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Unit 8 Progress Tracker</h1>
+<section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, model, and interpret situations using linear, quadratic, exponential, absolute value, and piecewise function representations to select appropriate models and support conclusions.</p></section>
+<section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+<h2>Progress Tracking</h2>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>DOK 1 reveals whether students can access the basic vocabulary, features, and pattern clues needed before selecting or building models across function families.</span></div>
+<div class="tracking-grid"><div class="tracking-cell"><h3>My Progress</h3><div class="check-list"><div>☐ Not Yet</div><div>☐ Getting There</div><div>☐ Got It!</div><div>☐ Teach It!</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence / Notes</h3></div></div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>DOK 2 reveals whether students can connect representations and carry out the procedures needed to build, transform, and use models.</span></div>
+<div class="tracking-grid"><div class="tracking-cell"><h3>My Progress</h3><div class="check-list"><div>☐ Not Yet</div><div>☐ Getting There</div><div>☐ Got It!</div><div>☐ Teach It!</div></div></div><div class="tracking-cell evidence-cell"><h3>Evidence / Notes</h3></div></div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>DOK 3 reveals whether students can reason about why a model, representation, or strategy is appropriate rather than only carrying out a procedure.</span></div>
+<div class="tracking-grid"><div class="tracking-cell2"><h3>My Progress</h3><div class="check-list"><div>☐ Not Yet</div><div>☐ Getting There</div><div>☐ Got It!</div><div>☐ Teach It!</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence / Notes</h3></div></div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>DOK 4 reveals whether students can synthesize function-family knowledge in short, complex tasks that require model choice, revision, and interpretation.</span></div>
+<div class="tracking-grid"><div class="tracking-cell2"><h3>My Progress</h3><div class="check-list"><div>☐ Not Yet</div><div>☐ Getting There</div><div>☐ Got It!</div><div>☐ Teach It!</div></div></div><div class="tracking-cell2 evidence-cell"><h3>Evidence / Notes</h3></div></div>
+</section>
+<div class="page-break"></div>
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+<tr><td class="rung-num">8</td><td>I can design a short modeling response that selects, analyzes, and revises a function model using data and context constraints.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">7</td><td>I can construct a synthesis task that connects multiple function families and representations to solve a complex problem.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">6</td><td>I can assess competing models by using patterns, features, residual observations, and contextual limits.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">5</td><td>I can determine which representation best reveals the needed features for a modeling or analysis question.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">4</td><td>I can apply transformations, key features, and domain restrictions across function families.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">3</td><td>I can construct equations and graphs from tables, features, and situations.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">2</td><td>I can use first differences, second differences, ratios, vertices, intercepts, and intervals to classify function behavior.</td><td>DOK 1</td><td>Essential</td></tr>
+<tr><td class="rung-num">1</td><td>I can apply function-family vocabulary to equations, graphs, tables, and contexts.</td><td>DOK 1</td><td>Essential</td></tr>
+</tbody></table>
+<section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+<div class="page-break"></div>
+<h2 class="practice-title">Unit 8 Practice by Depth of Knowledge</h2>
+<div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">DOK 1 reveals whether students can access the basic vocabulary, features, and pattern clues needed before selecting or building models across function families.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, representation recognition, or exit ticket</strong></p>
+<p>Purpose: DOK 1 reveals whether students can access the basic vocabulary, features, and pattern clues needed before selecting or building models across function families.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Model Family Clues <span class="timing-label">Can Be Assessed After Section 8.1</span> - Classify linear, quadratic, and exponential models from tables, equations, and graphs; name difference, ratio, direction, and opening clues; connect evidence to growth, decay, or family language.</li>
+<li>Transformation Basics <span class="timing-label">Can Be Assessed After Section 8.2</span> - Use transformation language across quadratic, absolute value, and exponential functions; identify shifted vertices, reflected or stretched graphs, and changed intercept or asymptote features; connect moved key points to parent functions.</li>
+<li>Absolute Value Basics <span class="timing-label">Can Be Assessed After Section 8.3</span> - Solve basic absolute value equations and inequalities; check possible solutions or no-solution cases; identify vertices, extrema, intercepts, and number-line intervals.</li>
+<li>Modeling Vocabulary <span class="timing-label">Can Be Assessed After Section 8.4</span> - Interpret modeling vocabulary for function families, associations, residuals, domain, interpolation, and extrapolation; connect representation advantages to model meaning; identify inputs and outputs in context.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 1 performance shows whether students can read the foundational clues needed for Unit 8 synthesis: function-family evidence, transformation language, absolute value features, and modeling vocabulary. The data separates vocabulary or recognition gaps from later model-selection and justification errors.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>For each table, identify the function behavior as linear, quadratic, exponential, or neither. State the evidence you used.</p>
+<table class="table-block"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>Table A</th><td>4</td><td>9</td><td>14</td><td>19</td></tr><tr><th>Table B</th><td>3</td><td>6</td><td>12</td><td>24</td></tr><tr><th>Table C</th><td>1</td><td>4</td><td>9</td><td>16</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Use the vocabulary list to complete each statement: vertex, intercept, constant ratio, interval, residual.</p>
+<ol class="lower-alpha"><li>A quadratic graph has a turning point called the __________.</li><li>A value where a graph crosses an axis is an __________.</li><li>Exponential tables can be identified by a __________.</li><li>A piecewise rule uses different formulas on different __________.</li></ol>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Use the graph to name one feature that would help classify each panel. Do not only name the family; give evidence from shape or behavior.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_family_compare_01.png" alt="four function graphs labeled A through D"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Classify each equation by function family.</p>
+<ol class="lower-alpha"><li>$y=5x-2$</li><li>$y=3(1.2)^x$</li><li>$y=(x-4)^2+1$</li><li>$y=2|x+3|-5$</li></ol>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Read the graph. Estimate the vertex and say whether the function has a minimum or maximum.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_abs_shifted_01.png" alt="absolute value graph on a coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Which representation gives the clearest evidence of a constant rate of change: a table of first differences, a graph with a turning point, or an equation with a constant multiplier? Explain briefly.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Find the first differences, second differences, and ratios when they are useful. Then choose the strongest evidence for the function family.</p>
+<table class="table-block"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><th>$y$</th><td>2</td><td>5</td><td>10</td><td>17</td><td>26</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Use the piecewise graph to estimate the output at $x=2$ and describe how the rate changes after the breakpoint.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_piecewise_01.png" alt="piecewise linear graph on a coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">DOK 2 reveals whether students can connect representations and carry out the procedures needed to build, transform, and use models.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Mini-quiz, graph/table task, matching task, partner check, or short written task</strong></p>
+<p>Purpose: DOK 2 reveals whether students can connect representations and carry out the procedures needed to build, transform, and use models.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Select a Model <span class="timing-label">Can Be Assessed After Section 8.1</span> - Select a linear, quadratic, or exponential model from data, graphs, and contexts; justify with differences, ratios, or graph features; write possible equations when a starting value and pattern are given.</li>
+<li>Transform and Graph <span class="timing-label">Can Be Assessed After Section 8.2</span> - Write transformed equations for quadratic, absolute value, and exponential parent functions; graph or infer key features from transformations; connect vertices, asymptotes, and parent functions to the transformed rule.</li>
+<li>Absolute Value and Piecewise Models <span class="timing-label">Can Be Assessed After Section 8.3</span> - Model absolute value and piecewise situations by solving equations and writing distance-from-target rules; evaluate interval-based functions at selected inputs; connect vertices, boundaries, and rule changes to the context.</li>
+<li>Modeling with Data <span class="timing-label">Can Be Assessed After Section 8.4</span> - Analyze data-based models using scatterplots, linear equations, intersections, and vertex-form constraints; make predictions within reasonable domains; explain interpolation, extrapolation, and stretch-factor reasoning.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 2 performance shows whether students can apply Unit 8 tools across representations: choosing model families from evidence, writing and graphing transformations, building absolute value or piecewise models, and using data models for predictions. The data highlights whether errors come from representation setup, calculation, or context interpretation.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A table begins at 6 and doubles each step. Construct an equation, make a table for $x=0,1,2,3,4$, and describe the graph shape.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Graph the transformed quadratic $g(x)=(x-3)^2-4$ on the blank coordinate plane. Label the vertex and at least two matching points.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_blank_grid_01.png" alt="blank coordinate plane"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Use the graph to write a possible absolute value equation in transformation form. Identify the vertex and the vertical stretch or compression.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_abs_shifted_01.png" alt="absolute value graph on a coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>The table shows a data pattern. Choose a linear, quadratic, or exponential model and write a possible equation.</p>
+<table class="table-block"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>$y$</th><td>12</td><td>18</td><td>27</td><td>40.5</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Use the scatter plot to estimate a line of best fit. Interpret the slope and intercept in context.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_scatter_linear_01.png" alt="scatter plot with a positive linear trend"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Use the blank axes and data table to make a scatterplot. Then decide whether a linear model is reasonable.</p>
+<table class="table-block"><tr><th>Cardboard area</th><td>50</td><td>150</td><td>250</td><td>350</td><td>450</td></tr><tr><th>Weight</th><td>95</td><td>230</td><td>410</td><td>610</td><td>870</td></tr></table>
+<div class="graph-block graph-md"><img src="figures/u8_pt_scatter_blank_01.png" alt="blank axes for a scatterplot"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Write a piecewise rule for a delivery fee that costs 4 dollars for the first 3 miles and then increases by 1.50 dollars per mile after that. State the domain intervals.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Compare the two candidate models shown. Estimate one input where the outputs are close, then describe which model is larger before and after that point.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_model_compare_01.png" alt="two function graphs on the same coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">DOK 3 reveals whether students can reason about why a model, representation, or strategy is appropriate rather than only carrying out a procedure.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p>
+<p>Purpose: DOK 3 reveals whether students can reason about why a model, representation, or strategy is appropriate rather than only carrying out a procedure.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Critique Model Choice <span class="timing-label">Can Be Assessed After Section 8.1</span> - Critique model-choice claims and representation mismatches; use differences, ratios, equations, tables, and scatterplots as evidence; revise incorrect values or justify whether a model is reasonable for the domain.</li>
+<li>Critique Transformations <span class="timing-label">Can Be Assessed After Section 8.2</span> - Evaluate transformation claims across function families; compare equations, graphs, and moved key points; revise imprecise language into accurate descriptions of shifts, stretches, and reflections.</li>
+<li>Reason with Absolute Value <span class="timing-label">Can Be Assessed After Section 8.3</span> - Develop reasoning for absolute value and piecewise models; repair mismatched tables, compare solution methods, and test symmetry or rate conditions; interpret domain and vertex meaning in context.</li>
+<li>Analyze Model Limits <span class="timing-label">Can Be Assessed After Section 8.4</span> - Analyze model limits using domain, trend, residual, and representation evidence; compare tables, scatterplots, graphing, and algebraic methods; judge when extrapolated predictions should or should not be trusted.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 3 performance shows whether students can use evidence to critique and revise reasoning, not just name or build models. These tasks reveal how well students defend model choices, transformation claims, absolute value or piecewise decisions, and the limits of predictions from data.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A student claims the table is exponential because the outputs increase faster each time. Critique the claim using differences and ratios, then choose a better model family.</p>
+<table class="table-block"><tr><th>$x$</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><th>$y$</th><td>2</td><td>5</td><td>10</td><td>17</td><td>26</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>The graph and equation are supposed to match: $y=|x-2|+1$. Analyze whether they match. If not, revise the equation or describe the graph correctly.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_abs_shifted_01.png" alt="absolute value graph on a coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Two students choose different models for the same situation: Student A chooses linear because the values increase, and Student B chooses quadratic because the change itself increases. Use the table to decide who has stronger evidence.</p>
+<table class="table-block"><tr><th>Time</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><th>Distance</th><td>0</td><td>3</td><td>12</td><td>27</td><td>48</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Use the scatter plot to explain why a model might be useful for prediction but still imperfect. Include one residual-style observation about overprediction or underprediction.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_scatter_linear_01.png" alt="scatter plot with a positive linear trend"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>A context says a runner travels away from a checkpoint, turns around, and returns. Explain why an absolute value or piecewise model may be more appropriate than a single linear model.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Compare the graph, table, and equation. Decide which representation best reveals the requested feature: intercepts, vertex, rate of change, or long-term behavior. Justify two choices.</p>
+<table class="table-block"><tr><th>Question</th><th>Best representation</th><th>Reason</th></tr><tr><td>Find the turning point</td><td>_____</td><td>_____</td></tr><tr><td>Estimate a prediction between data values</td><td>_____</td><td>_____</td></tr><tr><td>Identify repeated multiplication</td><td>_____</td><td>_____</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>The piecewise graph is used to model a delivery trip. Explain what the breakpoint could mean, why one rate before the breakpoint differs from the other rate, and one limitation of the model.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_piecewise_01.png" alt="piecewise linear graph on a coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>A student says the transformed function $g(x)=2f(x-3)+4$ only moves the graph right 3 and up 4. Critique the statement and describe the role of the factor 2.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">DOK 4 reveals whether students can synthesize function-family knowledge in short, complex tasks that require model choice, revision, and interpretation.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or capstone synthesis task</strong></p>
+<p>Purpose: DOK 4 reveals whether students can synthesize function-family knowledge in short, complex tasks that require model choice, revision, and interpretation.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Design a Model Response <span class="timing-label">Can Be Assessed After Section 8.4</span> - Design concise model-selection responses from patterns, tables, contexts, and comparison graphs; state assumptions, predictions, and decisive evidence; synthesize checklists for choosing among major function families.</li>
+<li>Design Transformations <span class="timing-label">Can Be Assessed After Section 8.2</span> - Recommend or design transformed functions from context constraints, vertices, points, and graphs; justify family choice and parameter meaning; revise flawed models using key features.</li>
+<li>Design Piecewise Models <span class="timing-label">Can Be Assessed After Section 8.3</span> - Create absolute value and piecewise models for two-part situations; choose domains, speeds, rates, and rule intervals; revise symmetric models when unequal rates require a better piecewise rule.</li>
+<li>Synthesize Modeling Evidence <span class="timing-label">Can Be Assessed After Section 8.5</span> - Synthesize modeling evidence from scatterplots, representations, functions, and constraints; choose or revise models for predictions and intersections; support conclusions with graph, residual, domain, and context evidence.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 performance shows whether students can synthesize Unit 8 ideas into short modeling arguments: choosing families, designing transformations, building absolute value or piecewise rules, and defending predictions from evidence. The data shows whether students can coordinate assumptions, constraints, representations, and conclusions without turning the task into a long project.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>Design a short modeling response for a data set of your choice. Include a table with at least five points, select a function family, write an equation, make one prediction, and explain one model limitation.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Create a synthesis task that uses at least two function families. Your task must include an equation, a graph or table, a context, and a question that requires comparing the two models.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>A school wants to model event attendance using the scatter plot. Build one possible model, interpret its parameters, and explain whether the model should be used beyond the displayed domain.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_scatter_linear_01.png" alt="scatter plot with a positive linear trend"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Revise a flawed model: A student uses $y=20x+50$ for data that appears to level off after $x=6$. Explain why the model may fail, propose a better representation or restriction, and justify your revision.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Use the comparison graph to recommend which model should be used for short-term predictions and which should be used for long-term predictions. Support your recommendation with features from the graph.</p>
+<div class="graph-block graph-md"><img src="figures/u8_pt_model_compare_01.png" alt="two function graphs on the same coordinate grid"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Design an absolute value or piecewise model for a real situation with a turning point or rate change. State the variables, equation or rule, domain restrictions, and what the key feature means.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>A data table has a nearly linear trend but one point is far from the pattern. Explain how the outlier affects the model, how you might revise the model, and what warning you would give with predictions.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Create a capstone solution pathway for a problem that includes a graph, a table, and an equation from different function families. Explain the order you would use the representations and why that order is efficient.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+</div>
+</body>
+</html>

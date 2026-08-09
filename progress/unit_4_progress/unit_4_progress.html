@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 4 Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.evidence-cell { background: #fff; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Unit 4 Progress Tracker</h1>
+<section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, represent, model, and interpret common function families and their transformations across graphs, equations, tables, and contexts.</p></section>
+<section class="key"><div class="key-title">Progress Tracking Key</div><div class="key-grid"><div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div><div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div><div><strong>Got It!:</strong><br/>I can do this independently.</div><div><strong>Teach It!:</strong><br/>I can teach it.</div></div></section>
+<h2>Progress Tracking</h2>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>DOK 1 reveals whether students can access the vocabulary, family features, transformation language, polynomial terms, and quadratic graph features needed for deeper work.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div></div>
+<div class="tracking-cell evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>DOK 2 reveals whether students can carry out procedures and connect representations when function family, transformation, or polynomial structure is given or strongly suggested.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell"><h3>Progress Tracking</h3><div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div></div>
+<div class="tracking-cell evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>DOK 3 reveals whether students can choose evidence, examine structure, critique claims, and select efficient representations for function families, transformations, and quadratics.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div></div>
+<div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>DOK 4 reveals whether students can synthesize function-family evidence, transformations, polynomial structure, and quadratic features in a short modeling or design setting.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell2"><h3>Progress Tracking</h3><div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div></div>
+<div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<div class="page-break"></div>
+<h2>Learning Ladder</h2>
+<table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+<tr><td class="rung-num">8</td><td>I can design a transformed function model that fits multiple constraints from a graph, table, equation, or context.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">7</td><td>I can construct and revise a quadratic or transformed-function representation so its features match a given situation.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">6</td><td>I can critique whether different representations support the same function family, transformation, or graph feature claim.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">5</td><td>I can assess which form of a polynomial or transformed function best supports a specific graph or context question.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">4</td><td>I can construct graphs and equations from key points after translations, stretches, compressions, and reflections.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">3</td><td>I can apply polynomial operations and expression structure to connect equivalent forms with graph features.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">2</td><td>I can use tables, equations, graphs, and contexts to classify common function families based on evidence.</td><td>DOK 1</td><td>Essential</td></tr>
+<tr><td class="rung-num">1</td><td>I can apply vocabulary for parent functions, transformations, polynomial terms, and quadratic features.</td><td>DOK 1</td><td>Essential</td></tr>
+</tbody></table>
+<section class="goal-box"><h3>Student Goal Setting</h3><div class="goal-grid"><div><strong>Current Rung</strong><div class="goal-line"></div></div><div><strong>Goal Rung</strong><div class="goal-line"></div></div></div></section>
+<div class="page-break"></div>
+<h2 class="practice-title">Unit 4 Practice by Depth of Knowledge</h2>
+<div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">DOK 1 reveals whether students can access the vocabulary, family features, transformation language, polynomial terms, and quadratic graph features needed for deeper work.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, representation recognition, or exit ticket</strong></p>
+<p>Purpose: DOK 1 reveals whether students can access the vocabulary, family features, transformation language, polynomial terms, and quadratic graph features needed for deeper work.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Function Family Recognition <span class="timing-label">Can Be Assessed After Section 4.1</span> - Classify linear, quadratic, and absolute value equations by family; connect equation forms to expected graph features or key points.</li>
+<li>Translation Recognition <span class="timing-label">Can Be Assessed After Section 4.2</span> - Use translation notation and key-point movement to name shifts in words; locate translated vertices for absolute value and quadratic equations.</li>
+<li>Transformation Vocabulary <span class="timing-label">Can Be Assessed After Section 4.3</span> - Represent reflections, vertical stretches, compressions, and translations with precise vocabulary; connect transformed key points to equation structure.</li>
+<li>Polynomial Feature Recognition <span class="timing-label">Can Be Assessed After Section 4.5</span> - Determine polynomial terms, product structure, factors, and intercepts from standard and factored forms; connect expression structure to quadratic graph features.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 1 performance shows whether students can quickly recognize family forms, translation notation, transformation vocabulary, polynomial terms, products, factors, and intercept clues before moving into graphing or modeling work.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A table has outputs $\,6, 10, 14, 18$ for consecutive inputs. Name the most likely function family and the evidence.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>For $y=2|x-5|+1$, name the function family and identify the key point shown by the equation form.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>For $g(x)=f(x-3)+4$, describe the translation from $f$ to $g$.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>In $g(x)=-3f(x)$, name the reflection and vertical scale factor.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>In $\,5x^2-7x+9$, identify the quadratic term, linear term, and constant term.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Which expression represents a product before it is simplified?</p>
+<ol class="lower-alpha"><li>$(x+4)+(x-2)$</li><li>$(x+4)(x-2)$</li><li>$x^2+2x-8$</li><li>$\,3x^2-5x+1$</li></ol>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-100"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>For $y=-(x-2)^2+7$, identify the vertex and state whether the graph has a maximum or minimum.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Name the quadratic form that most directly shows the $x$-intercepts, and describe the graph feature those intercepts represent.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-120"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">DOK 2 reveals whether students can carry out procedures and connect representations when function family, transformation, or polynomial structure is given or strongly suggested.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Mini-quiz, graph/table task, matching task, partner check, or short written task</strong></p>
+<p>Purpose: DOK 2 reveals whether students can carry out procedures and connect representations when function family, transformation, or polynomial structure is given or strongly suggested.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Graph-Based Family Classification <span class="timing-label">Can Be Assessed After Section 4.1</span> - Analyze graph sets and evidence cards to classify families; use rates, ratios, symmetry, and turning-point behavior beyond shape alone.</li>
+<li>Translation Graphing <span class="timing-label">Can Be Assessed After Section 4.2</span> - Construct translated absolute value and quadratic graphs from equations; mark vertices and key points; connect parent-to-translated movement to equations.</li>
+<li>Transformation Graphing <span class="timing-label">Can Be Assessed After Section 4.3</span> - Apply reflections, vertical scale factors, and translations to graph transformed quadratics and absolute value functions; plot vertices and transformed key points.</li>
+<li>Polynomial and Quadratic Graph Connections <span class="timing-label">Can Be Assessed After Section 4.5</span> - Use area models and distributive structure to expand products; connect factored quadratic form to intercepts, symmetry, vertex estimates, and sketches.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 2 work reveals whether students can classify function families with evidence, graph translated and transformed key points accurately, and connect polynomial products to quadratic graph features rather than treating each representation separately.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>Classify the function family represented by the table. State the evidence using first differences, second differences, or ratios.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>2</td><td>5</td><td>10</td><td>17</td></tr></table>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Use the blank coordinate plane to graph $y=|x-2|-3$. Plot the vertex and at least four key points.</p>
+<div class="graph-block graph-md"><img src="figures/u4_pt_blank_grid_01.png" alt="blank coordinate plane"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Compare the parent and translated graph. Describe the horizontal and vertical shift, then write a possible equation for the translated graph.</p>
+<div class="graph-block graph-md"><img src="figures/u4_pt_translation_abs_01.png" alt="parent and translated absolute value graphs"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>The point $(2,5)$ is on $f(x)$. Apply $g(x)=-2f(x)+3$ to this point and explain what changes in the output.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Write a transformed quadratic equation with vertex $(-3,4)$ that opens down and is vertically compressed by factor $\frac{1}{2}$.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Complete the area model for $(x+6)(x-4)$, then write the equivalent expanded expression.</p>
+<div class="graph-block graph-md"><img src="figures/u4_pt_area_blank_01.png" alt="blank area model for multiplying two binomials"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Simplify the expression and explain how like terms combine: $(4x^2-3x+8)-(x^2+5x-2)$.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-140"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Use the graph to identify the vertex, axis of symmetry, and two $x$-intercepts. Then write one sentence explaining how the features are connected.</p>
+<div class="graph-block graph-md"><img src="figures/u4_pt_quadratic_features_01.png" alt="quadratic graph with visible key features"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-160"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">DOK 3 reveals whether students can choose evidence, examine structure, critique claims, and select efficient representations for function families, transformations, and quadratics.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p>
+<p>Purpose: DOK 3 reveals whether students can choose evidence, examine structure, critique claims, and select efficient representations for function families, transformations, and quadratics.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Graph Evidence Critique <span class="timing-label">Can Be Assessed After Section 4.1</span> - Critique unsupported family claims with first differences, ratios, rate-change evidence, and representation consistency; revise mismatched table values when needed.</li>
+<li>Translation and Transformation Analysis <span class="timing-label">Can Be Assessed After Section 4.3</span> - Analyze translation and transformation errors using equation structure and graph evidence; revise incorrect horizontal shifts, vertices, openings, and scale-factor claims.</li>
+<li>Polynomial Area-Model Critique <span class="timing-label">Can Be Assessed After Section 4.4</span> - Simplify polynomial differences and products while checking signs, like terms, and area-model cells; revise mismatched products and labels.</li>
+<li>Quadratic Graph Feature Reasoning <span class="timing-label">Can Be Assessed After Section 4.5</span> - Interpret quadratic graph features through zeros, axis of symmetry, equivalent forms, and model constraints; justify which form best reveals each feature.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 3 performance shows whether students can critique family and transformation claims, diagnose polynomial and area-model errors, and reason from quadratic features or equivalent forms instead of relying on procedure or graph shape alone.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A student claims the table is exponential because the outputs get larger faster.</p>
+<table class="table-block"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>$y$</th><td>4</td><td>7</td><td>12</td><td>19</td><td>28</td></tr></table>
+<p>Critique the claim using differences or ratios, then state a better family choice.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>The equation $y=2|x-1|-3$ and the table are supposed to match.</p>
+<table class="table-block"><tr><th>$x$</th><td>-1</td><td>0</td><td>1</td><td>2</td></tr><tr><th>$y$</th><td>1</td><td>-1</td><td>-3</td><td>0</td></tr></table>
+<p>Find the first mismatch, justify it with substitution, and revise the incorrect output.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Two students graph $y=-\frac{1}{2}(x+2)^2+5$. One starts with the vertex and symmetry; the other transforms a parent-function table. Explain both methods and why they should produce the same graph.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>A student says $y=4(x-3)^2+1$ is wider than $y=x^2$ because the graph is multiplied by $\,4$. Make a reasonableness argument to support or reject the claim.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>A student simplifies $(3x^2+2x-7)-(x^2-5x+4)$ as $\,2x^2-3x-3$. Analyze the error and write a corrected simplification strategy.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>The area model shown was used to justify the product $(x+3)(x+5)$. Critique whether the labels and cells support that product, then explain what must be revised.</p>
+<div class="graph-block graph-md"><img src="figures/u4_pt_area_mismatch_01.png" alt="area model with cells to inspect for a mismatch"></div>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>For a quadratic context, compare factored form, vertex form, and expanded form. Which form is most efficient for finding zeros, maximum or minimum, and initial value? Justify each choice.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-200"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Analyze the structure of $y=(x+4)(x-2)$ and $y=x^2+2x-8$. Decide whether they are equivalent and explain which graph features each form makes easiest to see.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-180"></div>
+</section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">DOK 4 reveals whether students can synthesize function-family evidence, transformations, polynomial structure, and quadratic features in a short modeling or design setting.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or capstone synthesis task</strong></p>
+<p>Purpose: DOK 4 reveals whether students can synthesize function-family evidence, transformations, polynomial structure, and quadratic features in a short modeling or design setting.</p>
+<h3>Assessment Ideas</h3><ol class="assessment-ideas">
+<li>Four-Representation Graph Modeling <span class="timing-label">Can Be Assessed After Section 4.5</span> - Design coherent context, table, equation, and graph models for quadratic or other non-linear families; revise mixed representations so all evidence supports one family.</li>
+<li>Translated Function Graph Design <span class="timing-label">Can Be Assessed After Section 4.2</span> - Create translated absolute value and quadratic functions from vertex, point, and minimum constraints; synthesize equations, tables, sketches, and contexts that agree.</li>
+<li>Transformed Graph Model Synthesis <span class="timing-label">Can Be Assessed After Section 4.3</span> - Adapt transformed function equations to meet graph and context constraints; synthesize key-point tables, sketches, parameter meanings, and revised coefficients.</li>
+<li>Polynomial and Quadratic Model Design <span class="timing-label">Can Be Assessed After Section 4.5</span> - Model rectangle perimeter and area with polynomial expressions; revise flawed binomial products with area-model reasoning; create quadratic equations from zeros, vertex output, and graph constraints.</li>
+</ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can synthesize coherent models across contexts, tables, equations, and graphs for families, translations, transformations, polynomial expressions, and quadratic constraints. They also show whether students can revise inconsistent representations into one mathematically coherent model.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>Design a four-representation model for a quadratic with vertex $(1,-4)$ and $y$-intercept $\,5$. Include a short context, a four-row table, an equation, and a graph-feature description. Explain how all four representations show the same family.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>A teammate created a mixed model: the context says a value doubles each round, the table gives outputs $\,3,6,12,24$, and the equation is $y=(x-2)^2+3$. Revise the model so all representations support one family, and explain what you changed.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Create a translated absolute value function with vertex $(4,2)$ that passes through $(6,8)$. Show how the point condition determines the vertical scale, then describe the graph.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Create a transformed quadratic that passes through $(0,0)$ and has vertex $(-2,-8)$. Show how the point condition helps determine the vertical scale factor.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>A rectangle has length $x+7$ and width $\,2x-3$. Create a polynomial expression for its perimeter and another for its area. Explain why the expressions have different degrees and what each expression measures.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Create a quadratic model with zeros at $-2$ and $\,6$ and a vertical stretch that makes the vertex output $-16$. Show how the constraints determine the equation and identify the axis of symmetry.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-260"></div>
+</section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Two models are proposed for the same arch: $A(x)=-(x-2)^2+9$ and $B(x)=-(x-4)^2+9$. Recommend which model fits a symmetry line of $x=2$, and explain the consequence for matching intercepts and context constraints.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>A student wrote $P(t)=3(t-5)^2+12$ for a ball-height context that needs a maximum height at $t=5$. Revise the equation structure, explain the graph feature that changes, and describe one limitation of the model in context.</p>
+<div class="workspace-label">Workspace</div><div class="workspace workspace-240"></div>
+</section>
+</div>
+</body>
+</html>
