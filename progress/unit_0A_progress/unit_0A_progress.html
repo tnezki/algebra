@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 0A Progress Tracker</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+@page { size: letter; margin: 0.45in; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.42; color: #111; background: #fff; padding: 20px; font-size: 11pt; }
+.container { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 8px; line-height: 1.1; }
+h2 { font-size: 1.32rem; color: #111; border-left: 6px solid #111; padding-left: 10px; margin: 18px 0 10px; }
+h3 { font-size: 1.05rem; margin: 0 0 8px; color: #111; }
+p { margin-bottom: 8px; }
+ol, ul { margin-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; }
+.essential-standard { border: 2px solid #111; padding: 12px 14px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.essential-standard-title { font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+.key { border: 1px solid #222; padding: 10px 12px; margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.key-title { font-weight: 900; margin-bottom: 4px; text-transform: uppercase; }
+.key-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.key-grid div { border-left: 3px solid #111; padding-left: 8px; }
+.black-box, .black-dok { background: #111; color: white; padding: 11px 13px; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.black-box strong, .black-dok strong { display: block; font-size: 1.03rem; margin-bottom: 4px; }
+.black-box span, .black-dok .dok-small { display: block; font-size: .9rem; font-weight: 500; font-style: italic; color: #fff; }
+.tracking-card { border: 1px solid #222; margin: 0 0 14px; break-inside: avoid; page-break-inside: avoid; }
+.tracking-grid { display: grid; grid-template-columns: .9fr 1.4fr; border-top: 1px solid #222; }
+.tracking-cell { padding: 11px 12px; border-right: 1px solid #222; min-height: 220px; }
+.tracking-cell2 { padding: 11px 12px; border-right: 1px solid #222; min-height: 360px; }
+.tracking-cell:last-child, .tracking-cell2:last-child { border-right: 0; }
+.check-list div { margin: 5px 0; }
+.page-break { page-break-before: always; break-before: page; }
+.ladder-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; }
+.ladder-table th, .ladder-table td { border: 1px solid #111; padding: 8px 9px; vertical-align: top; }
+.ladder-table th { background: #111; color: #fff; text-align: left; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ladder-table tr:nth-child(even) td { background: #f3f3f3; }
+.rung-col, .dok-col, .level-col { width: 72px; }
+.rung-num { text-align: center; font-size: 1.25rem; font-weight: 900; }
+.goal-box { border: 2px solid #111; padding: 12px 14px; margin-top: 16px; break-inside: avoid; page-break-inside: avoid; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }
+.goal-line { border-bottom: 1px solid #111; min-height: 32px; padding-top: 6px; }
+.practice-title { color: #111; font-size: 1.45rem; margin: 20px 0 14px; border-left: 6px solid #111; padding-left: 10px; }
+.black-dok { margin: 18px 0 12px; }
+.dok-method-card { border: 1px solid #111; padding: 12px 14px; margin: 10px 0 16px; break-inside: avoid; page-break-inside: avoid; background: #fff; }
+.assessment-ideas { margin-left: 24px; }
+.timing-label { display: inline-block; border: 1px solid #111; padding: 1px 5px; font-weight: 800; color: #111; margin-left: 6px; background: #fff; }
+.what-tells { border-left: 5px solid #111; padding-left: 10px; margin-top: 10px; color: #111; }
+.problem { border: 1px solid #555; padding: 14px 14px 12px; margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
+.problem-number { font-weight: 900; font-size: 1.05rem; margin-bottom: 8px; color: #111; }
+.problem ol, .problem ul { margin-left: 24px; margin-bottom: 8px; }
+.table-block, table.values { width: auto; border-collapse: collapse; margin: 10px auto 12px; }
+.table-block th, .table-block td, table.values th, table.values td { border: 1px solid #333; padding: 6px 12px; text-align: center; vertical-align: middle; }
+.graph-block { margin: 10px 0 12px; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+.graph-block img { max-width: 100%; height: auto; border: 1px solid #bbb; background: #fff; }
+.graph-md img { max-width: 3.25in; }
+.graph-lg img { max-width: 4.0in; }
+.workspace-label { font-size: .82rem; font-weight: 700; color: #111; margin-top: 8px; }
+.workspace { width: 100%; height: 150px; border-top: 1px solid #777; margin-top: 8px; break-inside: avoid; page-break-inside: avoid; }
+.workspace-80{height:80px;} .workspace-100{height:100px;} .workspace-120{height:120px;} .workspace-140{height:140px;} .workspace-150{height:150px;} .workspace-160{height:160px;} .workspace-180{height:180px;} .workspace-200{height:200px;} .workspace-220{height:220px;} .workspace-240{height:240px;} .workspace-260{height:260px;} .workspace-300{height:300px;} .workspace-350{height:350px;} .workspace-400{height:400px;}
+.lower-alpha { list-style-type: lower-alpha; } .lower-roman { list-style-type: lower-roman; }
+blockquote { border-left: 5px solid #111; margin: 8px 0 10px 10px; padding: 6px 10px; background: #f7f7f7; font-style: italic; }
+@media print { body { padding: 0; font-size: 10.5pt; } .container { max-width: 100%; } .problem, .black-box, .black-dok, .tracking-card, .dok-method-card, .goal-box, .graph-block { break-inside: avoid; page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Unit 0A Progress Tracker</h1>
+<section class="essential-standard"><div class="essential-standard-title">Essential Standard</div><p>Students will analyze, represent, solve, model, interpret, and justify foundational algebra work involving rational number operations, expressions, equations, and inequalities in mathematical and contextual situations.</p></section>
+<section class="key">
+<div class="key-title">Progress Tracking Key</div>
+<div class="key-grid">
+<div><strong>Not Yet:</strong><br/>I need more instruction and practice.</div>
+<div><strong>Getting There:</strong><br/>I understand most of it but need more practice.</div>
+<div><strong>Got It!:</strong><br/>I can do this independently.</div>
+<div><strong>Teach It!:</strong><br/>I can teach it.</div>
+</div>
+</section>
+<h2>Progress Tracking</h2>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span>Purpose: DOK 1 reveals whether students have the prerequisite fluency and notation control needed for rational number operations, substitution, expressions, equations, and inequalities.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell"><h3>Progress Tracking</h3>
+<div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div>
+</div>
+<div class="tracking-cell evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span>Purpose: DOK 2 reveals whether students can select and carry out procedures across connected algebra foundations rather than completing isolated one-step tasks only.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell"><h3>Progress Tracking</h3>
+<div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div>
+</div>
+<div class="tracking-cell evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span>Purpose: DOK 3 reveals whether students can reason about why algebraic steps work, when results are reasonable, and how representations preserve meaning.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell2"><h3>Progress Tracking</h3>
+<div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div>
+</div>
+<div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<section class="tracking-card">
+<div class="black-box"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span>Purpose: DOK 4 reveals whether students can synthesize foundational algebra skills into compact models that connect operations, expressions, equations, inequalities, and context.</span></div>
+<div class="tracking-grid">
+<div class="tracking-cell2"><h3>Progress Tracking</h3>
+<div class="check-list"><div>&#9744; Teach It!</div><div>&#9744; Got It!</div><div>&#9744; Getting There</div><div>&#9744; Not Yet</div></div>
+</div>
+<div class="tracking-cell2 evidence-cell"><h3>Evidence</h3></div>
+</div>
+</section>
+<div class="page-break"></div><h2>Learning Ladder</h2>
+<table class="ladder-table"><thead><tr><th class="rung-col">Rung</th><th>I Can Statement</th><th class="dok-col">DOK</th><th class="level-col">Level</th></tr></thead><tbody>
+<tr><td class="rung-num">8</td><td>I can design a short model that uses rational numbers, expressions, equations, or inequalities to represent and solve a contextual situation.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">7</td><td>I can construct and revise an algebraic representation when a context includes operations, unknowns, or constraints.</td><td>DOK 4</td><td>Above</td></tr>
+<tr><td class="rung-num">6</td><td>I can critique a solution pathway for an equation or inequality by checking equivalence, operations, and contextual meaning.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">5</td><td>I can assess whether rewritten expressions, computed values, and solution sets are reasonable for the original problem.</td><td>DOK 3</td><td>Essential</td></tr>
+<tr><td class="rung-num">4</td><td>I can apply properties and inverse operations to rewrite expressions and solve one-variable equations or inequalities.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">3</td><td>I can construct number line graphs and algebraic steps that represent rational number operations, equations, and inequalities.</td><td>DOK 2</td><td>Essential</td></tr>
+<tr><td class="rung-num">2</td><td>I can use order of operations, substitution, and operation rules to calculate expression values and rational number results.</td><td>DOK 1</td><td>Essential</td></tr>
+<tr><td class="rung-num">1</td><td>I can classify symbols, terms, operations, equation signs, and inequality signs by how they function in algebraic work.</td><td>DOK 1</td><td>Essential</td></tr>
+</tbody></table>
+<section class="goal-box"><h3>Student Goal Setting</h3>
+<div class="goal-grid">
+<div><strong>Current Rung</strong><div class="goal-line"></div></div>
+<div><strong>Goal Rung</strong><div class="goal-line"></div></div>
+</div></section>
+<div class="page-break"></div><h2 class="practice-title">Unit 0A Practice by Depth of Knowledge</h2>
+<div class="black-dok"><strong>DOK 1 &mdash; Rungs 1&ndash;2</strong><span class="dok-small">Purpose: DOK 1 reveals whether students have the prerequisite fluency and notation control needed for rational number operations, substitution, expressions, equations, and inequalities.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: 3-5 minute warm-up, vocabulary check, representation recognition, or exit ticket</strong></p>
+<p>Purpose: DOK 1 reveals whether students have the prerequisite fluency and notation control needed for rational number operations, substitution, expressions, equations, and inequalities.</p>
+<h3>Assessment Ideas</h3>
+<ol class="assessment-ideas"><li>Rational Number Operations Check <span class="timing-label">Can Be Assessed After Section 0A.1</span> - Compute with integers, fractions, and decimals; apply sign rules across all four operations; use absolute value to find distance between two numbers.</li><li>Evaluate Expressions Check <span class="timing-label">Can Be Assessed After Section 0A.2</span> - Substitute given values into algebraic expressions; apply order of operations including exponents and absolute value; recognize when an expression is undefined.</li><li>Solve Linear Equations Check <span class="timing-label">Can Be Assessed After Section 0A.4</span> - Solve one- and two-step equations; verify a proposed solution by substitution; classify equations as one solution, no solution, or all real numbers.</li><li>Inequality Basics Check <span class="timing-label">Can Be Assessed After Section 0A.5</span> - Solve one-step inequalities including cases requiring sign reversal; identify open or closed boundary point and shade direction; graph a solution set on a number line.</li></ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 1 performance shows whether students can control signs across all four operations, substitute into expressions correctly, solve basic equations, and graph inequality solution sets before more complex algebraic reasoning begins.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>Classify each item by its algebra role: term, coefficient, operation, equation sign, or inequality sign.</p>
+<ol class="lower-alpha">
+<li>$-7x$ in $-7x+4$</li>
+<li>$-7$ in $-7x+4$</li>
+<li>$\ge$ in $m\ge 12$</li>
+<li>$=$ in $3p-1=14$</li>
+</ol>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Simplify each rational-number expression.</p>
+<ol class="lower-alpha">
+<li>$-18+7$</li>
+<li>$\frac{3}{4}-\frac{5}{6}$</li>
+<li>$(-2.5)(-1.2)$</li>
+<li>$-24\div 6$</li>
+</ol>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-120"></div></section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Evaluate each expression when $a=-2$ and $b=5$.</p>
+<ol class="lower-alpha">
+<li>$3a^2-2b$</li>
+<li>$|a-b|+4$</li>
+<li>$\frac{b+a}{a}$</li>
+</ol>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-120"></div></section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Solve each equation. Choose one solution to check by substitution.</p>
+<ol class="lower-alpha">
+<li>$x+9=-4$</li>
+<li>$5n=35$</li>
+<li>$2p-7=13$</li>
+</ol>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Graph $x\gt -3$ on the number line. Then write whether the boundary point should be open or closed.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_numberline_blank.png" alt="Blank number line for graphing an inequality">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Write an inequality represented by the number-line graph.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_inequality_graph_01.png" alt="Number-line graph for writing an inequality">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-100"></div></section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Simplify by combining like terms.</p>
+<ol class="lower-alpha">
+<li>$6x-4+3x+9$</li>
+<li>$8y-2x+5y+x$</li>
+<li>$4(a+2)+3a$ after distributing</li>
+</ol>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-120"></div></section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Complete the table for $h(n)=2n-3$.</p>
+<table class="table-block">
+<tr><th>$n$</th><td>$-2$</td><td>$0$</td><td>$4$</td></tr>
+<tr><th>$h(n)$</th><td></td><td></td><td></td></tr>
+</table>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-100"></div></section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 2 &mdash; Rungs 3&ndash;4</strong><span class="dok-small">Purpose: DOK 2 reveals whether students can select and carry out procedures across connected algebra foundations rather than completing isolated one-step tasks only.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Mini-quiz, graph/table task, matching task, partner check, or short written task</strong></p>
+<p>Purpose: DOK 2 reveals whether students can select and carry out procedures across connected algebra foundations rather than completing isolated one-step tasks only.</p>
+<h3>Assessment Ideas</h3>
+<ol class="assessment-ideas"><li>Rational Number Contexts <span class="timing-label">Can Be Assessed After Section 0A.1</span> - Model multi-step change scenarios with rational number expressions; scale quantities using multiplication and division; evaluate a mixed fraction-decimal expression with a sign-reasonableness check.</li><li>Expression Meaning <span class="timing-label">Can Be Assessed After Section 0A.3</span> - Evaluate and interpret linear model expressions in context; contrast two structurally different expressions to explain the difference in meaning; complete a function table and identify the minimum output.</li><li>Equation Contexts <span class="timing-label">Can Be Assessed After Section 0A.4</span> - Write and solve an equation from a perimeter context; solve multi-step equations using distribution and check by substitution; create a two-step equation with a specified solution and verify.</li><li>Solve and Graph Inequalities <span class="timing-label">Can Be Assessed After Section 0A.5</span> - Solve two-step inequalities and graph solution sets; solve inequalities with negative coefficients and explain direction changes; write and solve contextual inequalities; graph compound inequalities with boundary tests.</li></ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 2 performance shows whether students can apply rational number operations and algebraic procedures in context, interpret expression structure and meaning, and connect equation and inequality solving to number line representations.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A freezer temperature starts at $-4.5$ degrees. It drops $3.25$ degrees, rises $1.8$ degrees, then drops $0.75$ degree. Write one expression for the final temperature, calculate it, and state whether the final temperature is above or below $-5$ degrees.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-160"></div></section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>A club uses the expression $2.5m+8$ to estimate setup time in minutes for $m$ tables. Evaluate the expression for $m=6$ and interpret the result in the context.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>A rectangle has perimeter $54$ centimeters and width $9$ centimeters. Use $2l+2w=P$ to write and solve an equation for the length. Show the inverse-operation steps.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-160"></div></section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Use the rectangle model to write an equivalent expanded expression for $(x+5)(x+2)$. Fill in the cells mentally or on the model, then write the simplified expression.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_area_blank_01.png" alt="Blank rectangle model for multiplying two binomials">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Solve $-2m+6\gt 14$. Graph the solution set and explain why the inequality direction does or does not change.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_numberline_blank.png" alt="Blank number line for solving and graphing an inequality">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-160"></div></section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Two expressions are proposed for the words "triple the sum of a number and $4$": $3(n+4)$ and $3n+4$. Evaluate both when $n=5$, then explain which expression matches the words.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Complete the table for $g(x)=x^2-4x+3$. Then identify the smallest output shown.</p>
+<table class="table-block">
+<tr><th>$x$</th><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr>
+<tr><th>$g(x)$</th><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-140"></div></section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Create a two-step equation that has solution $r=-3$. Then solve your equation and check the solution by substitution.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-160"></div></section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 3 &mdash; Rungs 5&ndash;6</strong><span class="dok-small">Purpose: DOK 3 reveals whether students can reason about why algebraic steps work, when results are reasonable, and how representations preserve meaning.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Constructed response, model critique, strategy comparison, representation analysis, or discourse prompt</strong></p>
+<p>Purpose: DOK 3 reveals whether students can reason about why algebraic steps work, when results are reasonable, and how representations preserve meaning.</p>
+<h3>Assessment Ideas</h3>
+<ol class="assessment-ideas"><li>Rational Number Reasoning <span class="timing-label">Can Be Assessed After Section 0A.1</span> - Critique incorrect fraction operation claims and supply the corrected result; compute a total change using both fraction and decimal form and confirm the methods agree; construct a step-by-step strategy for evaluating a complex rational expression.</li><li>Expression Structure Analysis <span class="timing-label">Can Be Assessed After Section 0A.2</span> - Identify and correct evaluation errors caused by misapplying exponents or sign rules; analyze why operation order within an expression determines its value; match an expression to the context it correctly models.</li><li>Equivalent Expressions <span class="timing-label">Can Be Assessed After Section 0A.3</span> - Construct a strategy for verifying equivalence across all inputs rather than one test value; analyze what factored and expanded forms each reveal about structure; simplify an expression two ways and explain why the results agree.</li><li>Inequality Reasoning <span class="timing-label">Can Be Assessed After Section 0A.5</span> - Construct a strategy for solving and graphing a multi-step inequality addressing distribution, negative division, and boundary type; solve an inequality two ways and compare; analyze a student's boundary value claim and revise if needed.</li></ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 3 performance shows whether students can critique flawed reasoning, construct solution strategies, verify equivalence beyond a single test case, and reason about why boundary values and operation order determine the meaning of algebraic results.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>A student claims $-\frac{2}{3}+\frac{5}{6}=-\frac{7}{9}$ because the numerators and denominators were added separately. Critique the claim, correct the result, and explain the rule that should have been used.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-200"></div></section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>A student evaluates $-3x^2$ at $x=-4$ and gets $48$. Identify the likely misunderstanding, give the correct evaluation pathway, and explain why the sign matters.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Are $4(x-2)+3x$ and $7x-8$ equivalent for all values of $x$? Construct a strategy that proves or disproves equivalence without relying on only one test value.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>A student solves $5y-8=27$ by adding $8$ and then multiplying by $5$. Critique the pathway, revise it, and describe how substitution can confirm the final solution.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>The area model is intended to represent $(x+2)(x+4)$, but one cell is incorrect. Identify the mismatch, revise the cell, and explain how the model should expand.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_area_mismatch_01.png" alt="Area model with one incorrect cell for a critique task">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-200"></div></section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Construct a strategy for solving and graphing $-4(x+1)\le 12$. Your strategy must address distribution, division by a negative, and the number-line boundary.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_numberline_blank.png" alt="Blank number line for an inequality strategy">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-200"></div></section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>Compare two methods for solving $5-2p\gt 13$: inverse operations and testing values around the boundary. Explain how the two methods should support the same solution set.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-180"></div></section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>A class earns $18$ points, loses $2.5$ points per penalty, and needs at least $8$ points remaining. A student says $p=5$ penalties is reasonable. Use an inequality or expression check to decide whether the claim makes sense in context.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-200"></div></section>
+<div class="page-break"></div>
+<div class="black-dok"><strong>DOK 4 &mdash; Rungs 7&ndash;8</strong><span class="dok-small">Purpose: DOK 4 reveals whether students can synthesize foundational algebra skills into compact models that connect operations, expressions, equations, inequalities, and context.</span></div>
+<section class="dok-method-card">
+<p><strong>Format: Brief performance task, modeling task, critique-and-revise task, design task, or capstone synthesis task</strong></p>
+<p>Purpose: DOK 4 reveals whether students can synthesize foundational algebra skills into compact models that connect operations, expressions, equations, inequalities, and context.</p>
+<h3>Assessment Ideas</h3>
+<ol class="assessment-ideas"><li>Rational Number Models <span class="timing-label">Can Be Assessed After Section 0A.1</span> - Design a multi-entry change log with a required net change using at least one fraction, decimal, and integer; identify and correct a fraction-to-decimal conversion error in a given model; connect absolute value distance and signed addition as two representations of the same quantity.</li><li>Expression Design <span class="timing-label">Can Be Assessed After Section 0A.3</span> - Create an expression with specified structural features that evaluates to a target output; design a real-world context for a given expression and interpret the result; write a context where two structurally different expressions represent meaningfully different situations.</li><li>Equation Design <span class="timing-label">Can Be Assessed After Section 0A.4</span> - Create a one-variable equation requiring distribution with a specified solution and verify by substitution; write a real-world context for a given equation and interpret the solution; synthesize a table, equation, and written sentence for a situation.</li><li>Inequality Models <span class="timing-label">Can Be Assessed After Section 0A.5</span> - Design a real-world context for a given two-step inequality and describe feasible values; compare two student inequality models for the same situation and recommend the stronger model with justification; create a compound inequality with a minimum and maximum constraint and justify the bounds.</li></ol>
+<div class="what-tells"><strong>What this tells the teacher:</strong><br/>DOK 4 tasks reveal whether students can design original models, connect rational number operations, expression structure, equation solving, and inequality reasoning to real contexts. These should remain short performance tasks rather than large projects.</div>
+</section>
+<section class="problem"><div class="problem-number">1.</div>
+<p>Design a four-entry change log with a required net change of $-3.5$. Your log must include at least one integer, one decimal, and one fraction. Write the expression represented by the log and explain how the entries meet the net-change goal.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">2.</div>
+<p>Create an expression with one variable that uses parentheses, an exponent, and subtraction. Choose an input value so the expression evaluates to $18$. Show the substitution and explain the role of each operation.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">3.</div>
+<p>Create a one-variable equation with parentheses whose solution is $x=5$. The equation must require distribution before solving. Then write a short context for the equation and describe what the solution means.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">4.</div>
+<p>Two students model the same volunteer requirement. Model A is $v\ge 12$. Model B is $2v+3\ge 27$. Solve or interpret both models, then recommend which model is clearer for planning and justify your recommendation.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">5.</div>
+<p>Design a context that requires a compound inequality with both a minimum and a maximum value. Define the variable, write the compound inequality, and describe how the solution set would appear on a number line.</p>
+<div class="graph-block graph-md">
+<img src="figures/u0A_pt_numberline_blank.png" alt="Blank number line for designing a compound inequality model">
+</div>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">6.</div>
+<p>Synthesize three representations for one situation: a table, an equation, and a written sentence. Use a starting amount of $14$ and a constant increase of $3$ per step. Choose a target total and make the equation solve for the number of steps.</p>
+<table class="table-block">
+<tr><th>Steps</th><td>$0$</td><td>$1$</td><td>$2$</td><td></td></tr>
+<tr><th>Total</th><td>$14$</td><td></td><td></td><td></td></tr>
+</table>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+<section class="problem"><div class="problem-number">7.</div>
+<p>A context involves $9$ identical groups of $x+6$ objects. Recommend two equivalent expression forms and explain which form is better for seeing the number of groups and which form is better for calculating quickly when $x$ is known.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-240"></div></section>
+<section class="problem"><div class="problem-number">8.</div>
+<p>Revise this compact algebra model so it is complete: "Start with $20$ points, lose $1.5$ points for each mistake, and the score must stay above $8$." Write an expression, an inequality, and a sentence explaining any limitation of the model.</p>
+<div class="workspace-label">Workspace</div>
+<div class="workspace workspace-260"></div></section>
+</div>
+</body>
+</html>
