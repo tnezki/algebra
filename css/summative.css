@@ -137,4 +137,37 @@ li      { margin-bottom: 3px; }
 .data-table th:first-child,
 .data-table td:first-child { font-weight: 900; width: 0.72in; }
 
+.lower-alpha { list-style-type: lower-alpha; }
+
+/* ── PER-UNIT OVERRIDES ─────────────────────────────────────── */
+/* Units 0A, 0B, 1 use the defaults above unchanged. */
+
+body.unit-2 .data-table th:first-child,
+body.unit-2 .data-table td:first-child,
+body.unit-3 .data-table th:first-child,
+body.unit-3 .data-table td:first-child { width: 0.78in; }
+
+body.unit-4 .question-graph,
+body.unit-4 .answer-plane { max-height: 3.65in; }
+body.unit-4 .data-table th:first-child,
+body.unit-4 .data-table td:first-child { width: 0.78in; }
+
+body.unit-5 .question-graph,
+body.unit-5 .answer-plane,
+body.unit-6 .question-graph,
+body.unit-6 .answer-plane { max-height: 3.35in; }
+body.unit-5 .data-table th:first-child,
+body.unit-5 .data-table td:first-child,
+body.unit-6 .data-table th:first-child,
+body.unit-6 .data-table td:first-child { width: 0.78in; }
+
+body.unit-7 .question-graph,
+body.unit-7 .answer-plane,
+body.unit-8 .question-graph,
+body.unit-8 .answer-plane { max-height: 3.2in; }
+body.unit-7 .data-table th:first-child,
+body.unit-7 .data-table td:first-child,
+body.unit-8 .data-table th:first-child,
+body.unit-8 .data-table td:first-child { width: 0.78in; }
+
 @media print { body { font-size: 11.5pt; } }
