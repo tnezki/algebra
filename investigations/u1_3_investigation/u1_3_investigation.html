@@ -1,187 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>u1_3_investigation</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>U1.3 Investigation - Function Family Reunion</title>
 <script>
-window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
+window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: true } };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.42;color:#222;background:#fff;padding:20px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-.container{max-width:920px;margin:0 auto;}
-.print-page{min-height:7.1in;break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid;}
-.title-page{min-height:9.5in;display:flex;flex-direction:column;justify-content:center;text-align:center;border:4px solid #00003d;padding:42px;break-after:page;page-break-after:always;}
-.title-page .course{font-size:1rem;text-transform:uppercase;letter-spacing:2px;color:#555;margin-bottom:18px;}
-.title-page h1{color:#00003d;font-size:2.35rem;line-height:1.15;margin-bottom:18px;}
-.title-page .subtitle{font-size:1.35rem;color:#004d99;font-weight:700;margin-bottom:24px;}
-.title-page .details{font-size:1.05rem;color:#333;margin-top:18px;}
-h1{color:#00003d;font-size:2rem;margin-bottom:8px;} h2{color:#00003d;font-size:1.35rem;margin:8px 0 8px 0;border-left:5px solid #00003d;padding-left:10px;} h3{color:#004d99;font-size:1.05rem;margin:7px 0;}
-p{margin-bottom:8px;} ul,ol{margin-left:24px;margin-bottom:8px;} li{margin-bottom:5px;} strong{color:#00003d;}
-.header-strip{background:#00003d;color:#fff;padding:10px 14px;margin:0 0 14px 0;font-weight:700;font-size:1.1rem;break-after:avoid;}
-.problem,.teacher-box,.key-point{border:1px solid #777;padding:14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
-.problem-number{font-weight:700;color:#00003d;margin-bottom:8px;font-size:1.03rem;}
-.teacher-note,.rule-box{background:#f7f7f7;border-left:4px solid #00003d;padding:9px 11px;margin:10px 0;}
-.workspace{width:100%;margin-top:8px;border-top:1px solid #777;break-inside:avoid;page-break-inside:avoid;}
-.workspace-label{margin-top:8px;font-size:.86rem;font-weight:700;color:#444;}
-.workspace-80{height:80px} .workspace-100{height:100px} .workspace-120{height:120px} .workspace-150{height:150px} .workspace-180{height:180px} .workspace-220{height:220px}
-table{width:100%;border-collapse:collapse;margin:10px 0;break-inside:avoid;page-break-inside:avoid;}
-th,td{border:1px solid #888;padding:7px;text-align:center;vertical-align:middle;} th{background:#eaf1fb;color:#00003d;} td.left,th.left{text-align:left;}
-.student-entry td{height:60px;} .student-entry.short td{height:48px;}
-.mini-table{font-size:.98rem;margin:0 auto;} .mini-table th,.mini-table td{padding:5px;}
-.cut-line-note{font-size:.95rem;border:1px dashed #555;padding:7px 9px;margin:8px 0;background:#fafafa;}
-.cut-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px;align-items:stretch;}
-.cut-card{border:1.5px dashed #555;padding:12px;height:245px;min-height:245px;display:flex;flex-direction:column;justify-content:flex-start;break-inside:avoid;page-break-inside:avoid;background:#fff;overflow:hidden;}
-.cut-card-title{text-align:center;font-weight:800;color:#00003d;text-transform:uppercase;font-size:.95rem;letter-spacing:.35px;margin-bottom:8px;}
-.cut-card p{font-size:1.03rem;line-height:1.32;margin:0;}
-.mini-graph{width:100%;max-height:178px;object-fit:contain;margin-top:0;}
-.equation-card{display:flex;align-items:center;justify-content:center;flex:1;font-size:1.65rem;}
-.given-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0;align-items:stretch;}
-.given-box{border:1px solid #999;padding:10px;break-inside:avoid;page-break-inside:avoid;}
-.wodb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0;}
-.wodb-card{border:1px solid #777;padding:8px;text-align:center;break-inside:avoid;}
-.wodb-card img{width:100%;max-height:245px;object-fit:contain;}
-.big-letter{font-weight:800;color:#00003d;font-size:1.2rem;margin-bottom:4px;}
-.family-chip{display:inline-block;border:1px solid #777;padding:5px 8px;margin:3px;background:#fafafa;font-weight:700;}
-@media print{body{padding:10px} .container{max-width:100%} .title-page{min-height:9.75in} .print-page{min-height:7.35in} .cut-card-grid{gap:10px} .cut-card{height:245px;min-height:245px;padding:10px} .mini-graph{max-height:172px} .wodb-card img{max-height:225px}}
-</style>
-</head>
-<body><div class="container">
-<section class="title-page">
-  <div class="course">Algebra 1 - Unit 1</div>
-  <h1>Section 1.3 Investigation</h1>
-  <div class="subtitle">Function Family Reunion</div>
-  <p><strong>Investigation:</strong> Every function belongs somewhere. Can you figure out the families?</p>
-  <p><strong>Time:</strong> 15-20 minutes</p>
-  <p><strong>Format:</strong> Card sort, pattern hunt, Which One Doesn't Belong, and whole-class synthesis</p>
-  <div class="details">Learning Target: Recognize common function families from graphs, tables, equations, and contexts.</div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Investigation Directions</div>
-<div class="problem"><h2>Setup</h2><ul>
-<li><strong>Grouping:</strong> Partners or groups of 3.</li>
-<li><strong>Materials:</strong> Student handout, pencil, and scissors if physically cutting the cards.</li>
-<li><strong>Teacher setup:</strong> Decide whether students will cut cards or sort by writing card codes. Project the first two cards and ask what clues students notice.</li>
-<li><strong>Timing:</strong> 6 minutes for sorting, 5 minutes for family rules, 5 minutes for WODB challenges, 3-4 minutes for synthesis.</li>
-</ul></div>
-<div class="problem"><h2>Student Goal</h2><p>Today you will investigate why some functions belong to the same <strong>family</strong>. You will not be told the family names at first. Your job is to use evidence from graphs, tables, equations, and contexts.</p>
-<div class="rule-box"><strong>Investigation question:</strong> What clues help us recognize a function family?</div></div>
-<div class="problem"><h2>Norms</h2><ul><li>Sort by evidence, not guessing.</li><li>Use at least two clues before deciding.</li><li>Disagree by pointing to a graph, table, equation, or context.</li><li>Revise your sort when new evidence makes your thinking stronger.</li></ul></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 1: Family Reunion Mystery</div>
-<div class="problem"><h2>Sort the Cards</h2><p>You have cards from four function families. The family names are hidden for now.</p><ol><li>Sort the cards into four groups that seem to belong together.</li><li>Give each group a temporary family name, such as Family A, B, C, and D.</li><li>Record the strongest evidence that each group belongs together.</li></ol></div>
-<div class="problem"><h2>Record Your First Sort</h2><table class="student-entry"><tr><th>Temporary Family Name</th><th class="left">Card Codes in This Family</th><th class="left">Evidence: What do the cards have in common?</th></tr><tr><td>Family A</td><td></td><td></td></tr><tr><td>Family B</td><td></td><td></td></tr><tr><td>Family C</td><td></td><td></td></tr><tr><td>Family D</td><td></td><td></td></tr></table></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Cut Cards: Page 1 of 4</div>
-<div class="cut-line-note"><strong>Cut-sort option:</strong> Print these pages and cut along the dashed borders. Projection option: display each page and have students sort by card code.</div>
-<div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Graph Card 01</div><img class="mini-graph" src="figures/card_linear.png" alt="straight increasing graph"></div><div class="cut-card"><div class="cut-card-title">Graph Card 05</div><img class="mini-graph" src="figures/card_constant.png" alt="flat horizontal graph"></div><div class="cut-card"><div class="cut-card-title">Graph Card 09</div><img class="mini-graph" src="figures/card_exponential.png" alt="exponential growth graph"></div><div class="cut-card"><div class="cut-card-title">Graph Card 13</div><img class="mini-graph" src="figures/card_quadratic.png" alt="u-shaped graph"></div></div>
-</section>
-<section class="print-page">
-<div class="header-strip">Cut Cards: Page 2 of 4</div>
-<div class="cut-line-note"><strong>Cut-sort option:</strong> Print these pages and cut along the dashed borders. Projection option: display each page and have students sort by card code.</div>
-<div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Equation Card 02</div><div class="equation-card">$y=2x+1$</div></div><div class="cut-card"><div class="cut-card-title">Equation Card 06</div><div class="equation-card">$y=4$</div></div><div class="cut-card"><div class="cut-card-title">Equation Card 10</div><div class="equation-card">$y=2^x$</div></div><div class="cut-card"><div class="cut-card-title">Equation Card 14</div><div class="equation-card">$y=x^2$</div></div></div>
-</section>
-<section class="print-page">
-<div class="header-strip">Cut Cards: Page 3 of 4</div>
-<div class="cut-line-note"><strong>Cut-sort option:</strong> Print these pages and cut along the dashed borders. Projection option: display each page and have students sort by card code.</div>
-<div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Table Card 03</div><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>-1</td><td>-1</td></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr></table></div><div class="cut-card"><div class="cut-card-title">Table Card 07</div><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>4</td></tr></table></div><div class="cut-card"><div class="cut-card-title">Table Card 11</div><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>8</td></tr></table></div><div class="cut-card"><div class="cut-card-title">Table Card 15</div><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>-2</td><td>4</td></tr><tr><td>-1</td><td>1</td></tr><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr></table></div></div>
-</section>
-<section class="print-page">
-<div class="header-strip">Cut Cards: Page 4 of 4</div>
-<div class="cut-line-note"><strong>Cut-sort option:</strong> Print these pages and cut along the dashed borders. Projection option: display each page and have students sort by card code.</div>
-<div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Context Card 04</div><p>A taxi charges $1$ to unlock the ride and $2$ more for each mile.</p></div><div class="cut-card"><div class="cut-card-title">Context Card 08</div><p>A parking garage charges a flat $4$ weekend fee no matter how many hours you stay.</p></div><div class="cut-card"><div class="cut-card-title">Context Card 12</div><p>A rumor doubles each hour: 1 person, then 2, then 4, then 8.</p></div><div class="cut-card"><div class="cut-card-title">Context Card 16</div><p>The area of a square changes as the side length changes: $A=s^2$.</p></div></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 2: Family Rules</div>
-<div class="problem"><h2>Look for Family Clues</h2><p>Now study one family at a time. Do not worry about official names yet. Describe how each family behaves.</p><table class="student-entry"><tr><th>Family</th><th class="left">Graph Clue</th><th class="left">Table Clue</th><th class="left">Equation or Context Clue</th></tr><tr><td>A</td><td></td><td></td><td></td></tr><tr><td>B</td><td></td><td></td><td></td></tr><tr><td>C</td><td></td><td></td><td></td></tr><tr><td>D</td><td></td><td></td><td></td></tr></table></div>
-<div class="problem"><h2>Make a Claim</h2><p>Choose one family. Write a claim that begins: <strong>These cards belong together because...</strong></p><div class="workspace workspace-150"></div></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 3: Which One Doesn't Belong? Graph Round</div>
-<div class="problem"><p>One graph can be argued as the one that does not belong. More than one answer may be reasonable if your evidence is strong.</p><div class="wodb-grid">
-<div class="wodb-card"><div class="big-letter">A</div><img src="figures/wodb_graph_A.png" alt="Graph A"></div>
-<div class="wodb-card"><div class="big-letter">B</div><img src="figures/wodb_graph_B.png" alt="Graph B"></div>
-<div class="wodb-card"><div class="big-letter">C</div><img src="figures/wodb_graph_C.png" alt="Graph C"></div>
-<div class="wodb-card"><div class="big-letter">D</div><img src="figures/wodb_graph_D.png" alt="Graph D"></div>
-</div></div>
-<div class="problem"><table class="student-entry short"><tr><th>Which one?</th><th class="left">Evidence from the graph</th></tr><tr><td></td><td></td></tr></table></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 3: Which One Doesn't Belong? Table Round</div>
-<div class="problem"><p>Study the output patterns. Which table belongs to a different family from the others?</p><div class="given-grid">
-<div class="given-box"><h3>A</h3><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>9</td></tr></table></div>
-<div class="given-box"><h3>B</h3><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr></table></div>
-<div class="given-box"><h3>C</h3><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>16</td></tr></table></div>
-<div class="given-box"><h3>D</h3><table class="mini-table"><tr><th>Input $x$</th><th>Output $y$</th></tr><tr><td>0</td><td>-1</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>5</td></tr></table></div>
-</div></div>
-<div class="problem"><table class="student-entry short"><tr><th>Which one?</th><th class="left">Evidence from the table</th></tr><tr><td></td><td></td></tr></table></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 3: Which One Doesn't Belong? Equation Round</div>
-<div class="problem"><p>Study the structures of the equations. Which one does not belong with the others?</p><div class="given-grid">
-<div class="given-box"><h3>A</h3><p style="font-size:1.45rem;text-align:center;">$y=3x+2$</p></div>
-<div class="given-box"><h3>B</h3><p style="font-size:1.45rem;text-align:center;">$y=x^2$</p></div>
-<div class="given-box"><h3>C</h3><p style="font-size:1.45rem;text-align:center;">$y=-2x+5$</p></div>
-<div class="given-box"><h3>D</h3><p style="font-size:1.45rem;text-align:center;">$y=\frac{1}{2}x-4$</p></div>
-</div></div>
-<div class="problem"><table class="student-entry"><tr><th>Which one?</th><th class="left">Evidence from the equation</th></tr><tr><td></td><td></td></tr></table></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Part 4: Naming the Families</div>
-<div class="problem"><h2>Teacher Reveal</h2><p>Your teacher will now reveal the family names. Match the names to your sorted groups.</p><p><span class="family-chip">Constant</span><span class="family-chip">Linear</span><span class="family-chip">Exponential</span><span class="family-chip">Quadratic</span></p><table class="student-entry"><tr><th>Your Family</th><th>Official Name</th><th class="left">Best Clue for Recognizing This Family</th></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table></div>
-<div class="problem"><h2>Build the Big Idea</h2><p>A function family is...</p><div class="workspace workspace-100"></div><p>The easiest family for me to recognize is __________ because __________.</p><p>The hardest family for me to recognize is __________ because __________.</p></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Discussion Questions</div>
-<div class="problem"><ol>
-<li>What clues helped you identify a linear function?</li>
-<li>How can a table show exponential behavior differently from linear behavior?</li>
-<li>Why are quadratic and exponential functions easy to confuse at first?</li>
-<li>Which representation gave your group the strongest evidence: graph, table, equation, or context?</li>
-<li>How is classifying a function family different from building a full model for a situation?</li>
-</ol><div class="workspace-label">Class Notes / Final Discovery</div><div class="workspace workspace-180"></div></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Teaching Resource 1: Teacher Script</div>
-<div class="teacher-box"><h2>Purpose</h2><p>This investigation helps students discover that functions can be grouped into families because they share recognizable patterns across graphs, tables, equations, and contexts. The goal is classification using evidence, not full modeling or formal transformation work.</p></div>
-<div class="teacher-box"><h2>Launch: 2-3 minutes</h2><p><strong>Say:</strong> “At a family reunion, people may look different, but they share clues that show they belong together. Functions are similar. Today you will sort function cards into families before I tell you the family names.”</p><p><strong>Display:</strong> Show Graph Card 01 and Graph Card 13. Ask: “What is one way these are alike? What is one way they are different?”</p></div>
-<div class="teacher-box"><h2>Teacher Moves During Sorting</h2><ul><li>Ask, “What evidence made you put those together?”</li><li>Push students beyond “they both go up” by asking about shape, repeated differences, repeated multiplication, and equation structure.</li><li>Allow imperfect first sorts. The WODB rounds are designed to create revision.</li><li>Do not reveal the official names until Part 4.</li></ul></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Teaching Resource 1: Teacher Script Continued</div>
-<div class="teacher-box"><h2>Expected Student Observations</h2><ul><li><strong>Constant:</strong> Outputs stay the same; graph is horizontal; equation has no changing input term.</li><li><strong>Linear:</strong> Outputs change by equal differences; graph is a straight line; equation has $x$ to the first power.</li><li><strong>Exponential:</strong> Outputs multiply by the same factor; graph curves and changes faster; equation has the variable in the exponent.</li><li><strong>Quadratic:</strong> Graph is U-shaped; equation has $x^2$; table has symmetric values or changing first differences.</li></ul></div>
-<div class="teacher-box"><h2>Common Misconceptions</h2><ul><li>Students may think every increasing graph is linear.</li><li>Students may call any curve exponential.</li><li>Students may confuse quadratic and exponential because both curve upward.</li><li>Students may rely on one value in a table instead of the pattern across values.</li><li>Students may think classification means they must write a perfect equation for the situation.</li></ul></div>
-<div class="teacher-box"><h2>Closure / Synthesis</h2><div class="teacher-note"><p><strong>Final summary:</strong> Function families are groups of functions with shared behavior. We can classify a family using graph shape, table patterns, equation structure, and context clues.</p></div><p><strong>Exit prompt:</strong> “Name one family and give two clues that would help someone recognize it.”</p></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Teaching Resource 2: Answer Key</div>
-<div class="problem"><div class="problem-number">Part 1: Family Reunion Mystery</div><p><strong>Original task:</strong> Sort the function cards into families and record evidence for each group.</p><table><tr><th>Family</th><th>Cards</th><th class="left">Explanation</th></tr><tr><td>Linear</td><td>01, 02, 03, 04</td><td class="left">Straight graph, constant difference of 2, equation $y=2x+1$, context has a fixed start plus equal increase per mile.</td></tr><tr><td>Constant</td><td>05, 06, 07, 08</td><td class="left">Output remains 4; graph is horizontal; equation is $y=4$; context describes a flat fee.</td></tr><tr><td>Exponential</td><td>09, 10, 11, 12</td><td class="left">Outputs multiply by 2; equation has variable in the exponent; graph curves upward; context describes doubling.</td></tr><tr><td>Quadratic</td><td>13, 14, 15, 16</td><td class="left">Equation has $x^2$; graph is U-shaped; table is symmetric; square-area context matches squaring.</td></tr></table></div>
-<div class="problem"><div class="problem-number">Part 2: Family Rules</div><p><strong>Original task:</strong> Describe clues from graphs, tables, equations, and contexts.</p><ul><li>Constant: same output every time; horizontal graph.</li><li>Linear: equal additive change; straight graph.</li><li>Exponential: equal multiplicative change; variable in exponent.</li><li>Quadratic: $x^2$ structure; U-shaped graph; changing first differences.</li></ul></div>
-</section>
-
-<section class="print-page">
-<div class="header-strip">Teaching Resource 2: Answer Key Continued</div>
-<div class="problem"><div class="problem-number">WODB Graph Round</div><p><strong>Original task:</strong> Which graph does not belong? Justify with evidence.</p><p><strong>Likely answer:</strong> C does not belong because it is quadratic and curved, while A, B, and D are linear graphs. Accept other responses if mathematically justified, such as B because it decreases while A and D increase and C opens upward.</p></div>
-<div class="problem"><div class="problem-number">WODB Table Round</div><p><strong>Original task:</strong> Which table belongs to a different family?</p><p><strong>Answer:</strong> C. Tables A, B, and D have constant differences of 2, so they are linear. Table C multiplies by 2 each step, so it is exponential.</p></div>
-<div class="problem"><div class="problem-number">WODB Equation Round</div><p><strong>Original task:</strong> Which equation does not belong?</p><p><strong>Answer:</strong> B. Equations A, C, and D are linear because the variable is to the first power. Equation B is quadratic because it contains $x^2$.</p></div>
-<div class="problem"><div class="problem-number">Part 4: Naming the Families</div><p><strong>Original task:</strong> Match official names to sorted families and write the best clue.</p><ul><li>Constant: same output, horizontal graph.</li><li>Linear: straight line and constant difference.</li><li>Exponential: constant ratio or repeated multiplication.</li><li>Quadratic: U-shaped graph and $x^2$ structure.</li></ul></div>
-<div class="problem"><div class="problem-number">Discussion Questions</div><ol><li>Linear functions have straight graphs and constant differences.</li><li>Exponential tables multiply by a constant factor; linear tables add or subtract a constant amount.</li><li>Both can curve upward in early examples, but quadratic has $x^2$ behavior while exponential has repeated multiplication.</li><li>Answers vary; require evidence.</li><li>Classification identifies the type of behavior; modeling creates a specific rule for a situation.</li></ol></div>
-</section>
-
-</div></body></html>
+<link rel="stylesheet" href="../../css/investigation.css"/>
+</head><body><main class="container"><div class="inv-header">
+<div class="course">Algebra 1 · Unit 1 · Section 1.3 · Investigation</div>
+<h1>Function Family Reunion</h1>
+<p class="subtitle">Function Families</p>
+<div class="meta-grid"><div class="meta"><b>Time</b><br>20–25 minutes</div><div class="meta"><b>Format</b><br>Card sort + evidence rounds</div><div class="meta"><b>Name</b><br>________________</div></div>
+<div class="learning-target"><strong>Learning Target:</strong> Students will recognize common function families from graphs, tables, equations, and contexts.</div>
+</div>
+<div class="header-strip">Directions</div><div class="problem"><ul><li>Work with a partner or group of 3.</li><li>Sort by evidence, not by guessing from one graph.</li><li>Use at least two clues before deciding that representations belong to the same family.</li><li>Revise your sort when new evidence makes your reasoning stronger.</li></ul></div>
+<div class="header-strip">Part 1 · Family Reunion Mystery</div><div class="problem"><p>The cards come from four families. The official family names are hidden at first. Sort the 16 cards into four groups of four: one graph, equation, table, and context per family.</p><table><tr><th>Temporary Family</th><th>Card Codes</th><th class="left">Strongest Evidence</th></tr><tr><td>A</td><td></td><td class="blank left"></td></tr><tr><td>B</td><td></td><td class="blank left"></td></tr><tr><td>C</td><td></td><td class="blank left"></td></tr><tr><td>D</td><td></td><td class="blank left"></td></tr></table></div>
+<h3>Graph Cards</h3><div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Graph 01</div><img src="figures/card_linear.png" alt="Linear graph"/></div><div class="cut-card"><div class="cut-card-title">Graph 05</div><img src="figures/card_absolute.png" alt="Absolute value graph"/></div><div class="cut-card"><div class="cut-card-title">Graph 09</div><img src="figures/card_exponential.png" alt="Exponential graph"/></div><div class="cut-card"><div class="cut-card-title">Graph 13</div><img src="figures/card_quadratic.png" alt="Quadratic graph"/></div></div>
+<h3>Equation Cards</h3><div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Equation 02</div><div class="equation-center">$y=2x+1$</div></div><div class="cut-card"><div class="cut-card-title">Equation 06</div><div class="equation-center">$y=|x|$</div></div><div class="cut-card"><div class="cut-card-title">Equation 10</div><div class="equation-center">$y=2^x$</div></div><div class="cut-card"><div class="cut-card-title">Equation 14</div><div class="equation-center">$y=x^2$</div></div></div>
+<div class="page-break"></div><h3>Table Cards</h3><div class="cut-card-grid">
+<div class="cut-card"><div class="cut-card-title">Table 03</div><table class="mini-table"><tr><th>$x$</th><th>$y$</th></tr><tr><td>-1</td><td>-1</td></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr></table></div>
+<div class="cut-card"><div class="cut-card-title">Table 07</div><table class="mini-table"><tr><th>$x$</th><th>$y$</th></tr><tr><td>-2</td><td>2</td></tr><tr><td>-1</td><td>1</td></tr><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr></table></div>
+<div class="cut-card"><div class="cut-card-title">Table 11</div><table class="mini-table"><tr><th>$x$</th><th>$y$</th></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>8</td></tr></table></div>
+<div class="cut-card"><div class="cut-card-title">Table 15</div><table class="mini-table"><tr><th>$x$</th><th>$y$</th></tr><tr><td>-2</td><td>4</td></tr><tr><td>-1</td><td>1</td></tr><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr></table></div></div>
+<h3>Context Cards</h3><div class="cut-card-grid"><div class="cut-card"><div class="cut-card-title">Context 04</div><p>A taxi charges \$1 to unlock the ride and \$2 more for each mile.</p></div><div class="cut-card"><div class="cut-card-title">Context 08</div><p>The output is the distance from 0 on a number line for each input position.</p></div><div class="cut-card"><div class="cut-card-title">Context 12</div><p>A rumor doubles each hour: 1 person, then 2, then 4, then 8.</p></div><div class="cut-card"><div class="cut-card-title">Context 16</div><p>The area of a square changes as its side length changes: $A=s^2$.</p></div></div>
+<div class="header-strip">Part 2 · Family Evidence</div><div class="problem"><table><tr><th>Family</th><th>Graph clue</th><th>Table clue</th><th>Equation/context clue</th></tr><tr><td>A</td><td class="blank"></td><td></td><td></td></tr><tr><td>B</td><td class="blank"></td><td></td><td></td></tr><tr><td>C</td><td class="blank"></td><td></td><td></td></tr><tr><td>D</td><td class="blank"></td><td></td><td></td></tr></table><p>Choose one family and complete: <strong>These cards belong together because...</strong></p><div class="workspace workspace-80"></div></div>
+<div class="page-break"></div><div class="header-strip">Part 3 · Evidence Rounds</div><div class="problem"><h2>Graph Round</h2><p>Which graph could be described as “different” from the others? More than one answer can be defended if your evidence is mathematical.</p><div class="graph-grid"><div class="graph-box"><strong>A</strong><img src="figures/card_linear.png" alt="Graph A"/></div><div class="graph-box"><strong>B</strong><img src="figures/card_absolute.png" alt="Graph B"/></div><div class="graph-box"><strong>C</strong><img src="figures/card_exponential.png" alt="Graph C"/></div><div class="graph-box"><strong>D</strong><img src="figures/card_quadratic.png" alt="Graph D"/></div></div><p><strong>Claim:</strong> ______ does not belong because ________________________________________________.</p></div>
+<div class="problem"><h2>Table Round</h2><table><tr><th></th><th>$x=0$</th><th>$x=1$</th><th>$x=2$</th><th>$x=3$</th></tr><tr><th>A</th><td>3</td><td>5</td><td>7</td><td>9</td></tr><tr><th>B</th><td>1</td><td>3</td><td>5</td><td>7</td></tr><tr><th>C</th><td>2</td><td>4</td><td>8</td><td>16</td></tr><tr><th>D</th><td>-1</td><td>1</td><td>3</td><td>5</td></tr></table><p>Which table belongs to a different family? Use the pattern in the outputs as evidence.</p><div class="workspace workspace-60"></div></div>
+<div class="problem"><h2>Equation Round</h2><div class="two-col"><div class="model-card">A. $y=3x+2$</div><div class="model-card">B. $y=x^2$</div><div class="model-card">C. $y=-2x+5$</div><div class="model-card">D. $y=\frac{1}{2}x-4$</div></div><p>Which equation belongs to a different family? What structural clue did you use?</p><div class="workspace workspace-60"></div></div>
+<div class="header-strip">Part 4 · Name the Families</div><div class="problem"><p>Your teacher will reveal the names: <strong>Linear, Absolute Value, Exponential, Quadratic</strong>.</p><table><tr><th>Your Family</th><th>Official Name</th><th class="left">Best clue for recognizing it</th></tr><tr><td>A</td><td></td><td class="blank left"></td></tr><tr><td>B</td><td></td><td class="blank left"></td></tr><tr><td>C</td><td></td><td class="blank left"></td></tr><tr><td>D</td><td></td><td class="blank left"></td></tr></table><p><strong>A function family is...</strong></p><div class="workspace workspace-60"></div></div>
+</main></body></html>
