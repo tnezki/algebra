@@ -2045,48 +2045,39 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 
 
 
-# =============================================================================
-# UNIT 1 BANK CANONICAL FIGURES — APPENDED GENERATION BLOCKS
-# =============================================================================
+# UNIT 1 BANK CANONICAL FIGURES — appended below the authoritative final marker.
+if __name__ == '__main__':
+    # TYPE 1 — WTC relationship graph; neutral title avoids revealing the rule.
+    fig, ax = plt.subplots(figsize=(3.5, 3.5))
+    make_standard_graph(ax, [{'expr': lambda x: 2*x+1, 'deriv': lambda x: np.full_like(x,2.0), 'color':'steelblue'}], title='Relationship A')
+    save_graph(fig, 'u1_s1_wtc01_relationship.png')
+    plt.close(fig)
 
-# U1-S1-WTC01 — context graph
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-make_context_graph(
-    ax,
-    [{'expr': lambda x: 6*x, 'deriv': lambda x: np.zeros_like(x)+6,
-      'color':'steelblue', 'label':None}],
-    xmin=0, xmax=6, ymin=0, ymax=40,
-    xlabel='Time (min)', ylabel='Distance (m)', title=''
-)
-save_graph(fig, 'u1_s1_wtc01_context_graph.png')
-plt.close(fig)
+    # TYPE 4 — four unlabeled family shapes for pre-classification.
+    funcs=[
+      [{'expr':lambda x:0.7*x+1,'deriv':lambda x:np.full_like(x,0.7),'color':'steelblue'}],
+      [{'expr':lambda x:0.18*x**2-3,'deriv':lambda x:0.36*x,'color':'steelblue'}],
+      [{'expr':lambda x:0.45*(1.45**x),'deriv':lambda x:0.45*(1.45**x)*np.log(1.45),'color':'steelblue'}],
+      [{'expr':lambda x:0.8*np.abs(x)-2,'deriv':lambda x:0.8*np.sign(x),'color':'steelblue'}]
+    ]
+    fig=make_2x2_grid(funcs, titles=['A','B','C','D'])
+    fig.savefig(os.path.join(OUTPUT_DIR,'u1_s3_wtc01_families.png'),dpi=144,bbox_inches='tight')
+    print('Saved:', os.path.join(OUTPUT_DIR,'u1_s3_wtc01_families.png'))
+    plt.close(fig)
 
-# U1-S3-WTC01 — four family shapes; neutral titles only
-fig = make_2x2_grid(
-    [
-      [{'expr':lambda x: x, 'deriv':lambda x: np.zeros_like(x)+1, 'color':'steelblue','label':None}],
-      [{'expr':lambda x: 0.2*x**2-4, 'deriv':lambda x: 0.4*x, 'color':'steelblue','label':None}],
-      [{'expr':lambda x: 2**(x/2)-2, 'deriv':lambda x: (np.log(2)/2)*2**(x/2), 'color':'steelblue','label':None}],
-      [{'expr':lambda x: np.abs(x)-4, 'deriv':lambda x: np.where(x<0,-1,1), 'color':'steelblue','label':None}],
-    ],
-    titles=['A','B','C','D']
-)
-save_graph(fig, 'u1_s3_wtc01_function_families.png')
-plt.close(fig)
+    # TYPE 7 — rectangle model with products intentionally blank for student work.
+    make_rectangle_model([r'$2$'], [r'$x$', r'$3$'], [['','']], filename='u1_s4_note_ex04_rectangle.png')
+    plt.close('all')
 
-# U1-S4-WTC01 — rectangle structure model
-make_rectangle_model(
-    [r'$3$'], [r'$x$', r'$4$'], [[r'$3x$', r'$12$']],
-    filename='u1_s4_wtc01_rectangle_model.png'
-)
-plt.close('all')
+    # TYPE 19 — algebra tiles. The tiles themselves are the representation students interpret.
+    make_algebra_tiles({'x':2,'one':3}, filename='u1_s4_note_yti04_tiles.png')
+    plt.close('all')
 
-# U1-S4-NOTE-EX01 — algebra tiles
-make_algebra_tiles({'x':3, 'one':6}, filename='u1_s4_note_ex01_algebra_tiles.png')
-plt.close('all')
-
-# Secure summative blank number line; no answer-revealing labels
-fig, ax = plt.subplots(figsize=(3.5, 1.25))
-make_number_line_blank(ax, label=None, xmin=-10, xmax=10)
-save_graph(fig, 'u1_sum_numberline_blank.png')
-plt.close(fig)
+    # TYPE 2 — secure performance-task pricing graph. Neutral series labels only.
+    fig, ax = plt.subplots(figsize=(3.5,3.5))
+    make_context_graph(ax,[
+      {'expr':lambda x:18+6*x,'deriv':lambda x:np.full_like(x,6.0),'color':'steelblue','label':'Plan A'},
+      {'expr':lambda x:42+3*x,'deriv':lambda x:np.full_like(x,3.0),'color':'firebrick','label':'Plan B'}],
+      xmin=0,xmax=12,ymin=0,ymax=100,xlabel='Hours',ylabel='Cost (dollars)',title='Equipment Plans')
+    save_graph(fig,'u1_perf01_pricing.png')
+    plt.close(fig)
