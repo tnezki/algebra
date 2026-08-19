@@ -2045,82 +2045,48 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 
 
 
-# Unit 1 Assessment Bank graph-generation blocks
-# All figures use graph_tool.py functions. Styling is not overridden.
+# =============================================================================
+# UNIT 1 BANK CANONICAL FIGURES — APPENDED GENERATION BLOCKS
+# =============================================================================
 
-def _save_standard_blank(filename):
-    fig, ax = plt.subplots(figsize=(3.5, 3.5))
-    fig.patch.set_facecolor('white')
-    make_standard_graph(ax, [], title='')
-    save_graph(fig, filename)
-    plt.close(fig)
-
-_save_standard_blank('u1_bank_s1_coordinate_blank_sq_v1.png')
-_save_standard_blank('u1_bank_s5_coordinate_blank_sq_v1.png')
-
+# U1-S1-WTC01 — context graph
 fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_standard_graph(ax, [
-    {'expr': lambda x: 2*x + 1, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': None}
-], title='')
-save_graph(fig, 'u1_bank_s1_evidence_line_sq_v1.png')
+make_context_graph(
+    ax,
+    [{'expr': lambda x: 6*x, 'deriv': lambda x: np.zeros_like(x)+6,
+      'color':'steelblue', 'label':None}],
+    xmin=0, xmax=6, ymin=0, ymax=40,
+    xlabel='Time (min)', ylabel='Distance (m)', title=''
+)
+save_graph(fig, 'u1_s1_wtc01_context_graph.png')
 plt.close(fig)
 
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_context_graph(ax, [
-    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'steelblue', 'label': None}
-], xmin=0, xmax=10, ymin=0, ymax=50, xlabel='Tickets', ylabel='Cost', title='')
-save_graph(fig, 'u1_bank_s1_context_cost_sq_v1.png')
+# U1-S3-WTC01 — four family shapes; neutral titles only
+fig = make_2x2_grid(
+    [
+      [{'expr':lambda x: x, 'deriv':lambda x: np.zeros_like(x)+1, 'color':'steelblue','label':None}],
+      [{'expr':lambda x: 0.2*x**2-4, 'deriv':lambda x: 0.4*x, 'color':'steelblue','label':None}],
+      [{'expr':lambda x: 2**(x/2)-2, 'deriv':lambda x: (np.log(2)/2)*2**(x/2), 'color':'steelblue','label':None}],
+      [{'expr':lambda x: np.abs(x)-4, 'deriv':lambda x: np.where(x<0,-1,1), 'color':'steelblue','label':None}],
+    ],
+    titles=['A','B','C','D']
+)
+save_graph(fig, 'u1_s3_wtc01_function_families.png')
 plt.close(fig)
 
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_scatter_plot(ax, [0,1,1,2,3], [3,4,6,7,8], xmin=0, xmax=4, ymin=0, ymax=10, color='steelblue', point_size=40, line_of_best_fit=False, xlabel='Input', ylabel='Output', title='')
-save_graph(fig, 'u1_bank_s2_relation_points_sq_v1.png')
-plt.close(fig)
+# U1-S4-WTC01 — rectangle structure model
+make_rectangle_model(
+    [r'$3$'], [r'$x$', r'$4$'], [[r'$3x$', r'$12$']],
+    filename='u1_s4_wtc01_rectangle_model.png'
+)
+plt.close('all')
 
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_standard_graph(ax, [
-    {'expr': lambda x: -x + 4, 'deriv': lambda x: 0*x - 1, 'color': 'steelblue', 'label': None}
-], title='')
-save_graph(fig, 'u1_bank_s2_function_line_sq_v1.png')
-plt.close(fig)
+# U1-S4-NOTE-EX01 — algebra tiles
+make_algebra_tiles({'x':3, 'one':6}, filename='u1_s4_note_ex01_algebra_tiles.png')
+plt.close('all')
 
-fig = make_2x2_grid([
-    [{'expr': lambda x: x + 1, 'deriv': lambda x: 0*x + 1, 'color': 'steelblue', 'label': None}],
-    [{'expr': lambda x: x**2 - 4, 'deriv': lambda x: 2*x, 'color': 'steelblue', 'label': None}],
-    [{'expr': lambda x: 2**x, 'deriv': lambda x: np.log(2)*2**x, 'color': 'steelblue', 'label': None}],
-    [{'expr': lambda x: np.abs(x) - 3, 'deriv': lambda x: np.sign(x), 'color': 'steelblue', 'label': None}],
-], titles=['A','B','C','D'])
-save_graph(fig, 'u1_bank_s3_family_grid_sq_v1.png')
-plt.close(fig)
-
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_context_graph(ax, [
-    {'expr': lambda x: 2*(1.45**x), 'deriv': lambda x: 2*np.log(1.45)*(1.45**x), 'color': 'steelblue', 'label': None}
-], xmin=0, xmax=8, ymin=0, ymax=40, xlabel='Step', ylabel='Output', title='')
-save_graph(fig, 'u1_bank_s3_exp_context_sq_v1.png')
-plt.close(fig)
-
-fig = make_2x1_grid([
-    [{'expr': lambda x: np.abs(x+2) - 3, 'deriv': lambda x: np.sign(x+2), 'color': 'steelblue', 'label': None}],
-    [{'expr': lambda x: (x-1)**2 - 4, 'deriv': lambda x: 2*(x-1), 'color': 'steelblue', 'label': None}],
-], titles=['A','B'])
-save_graph(fig, 'u1_bank_s3_abs_quad_sq_v1.png')
-plt.close(fig)
-
-make_rectangle_model([r'$2x$', r'$3$'], [r'$x$', r'$5$'], [[r'$2x^2$', ''], ['', '']], 'u1_bank_s4_rect_blank_sq_v1.png')
-make_rectangle_model([r'$x$', r'$4$'], [r'$x$', r'$6$'], [[r'$x^2$', r'$6x$'], [r'$4x$', r'$20$']], 'u1_bank_s4_rect_mismatch_sq_v1.png')
-make_diamond(r'$-24$', '', '', r'$2$', 'u1_bank_s4_diamond_sq_v1.png')
-
-fig, ax = plt.subplots(figsize=(3.5, 3.5))
-fig.patch.set_facecolor('white')
-make_context_graph(ax, [
-    {'expr': lambda x: 15 + 2*x, 'deriv': lambda x: 0*x + 2, 'color': 'steelblue', 'label': 'Plan A'},
-    {'expr': lambda x: 5 + 4*x, 'deriv': lambda x: 0*x + 4, 'color': 'firebrick', 'label': 'Plan B'},
-], xmin=0, xmax=10, ymin=0, ymax=45, xlabel='Items', ylabel='Cost', title='')
-save_graph(fig, 'u1_bank_s5_balance_context_sq_v1.png')
+# Secure summative blank number line; no answer-revealing labels
+fig, ax = plt.subplots(figsize=(3.5, 1.25))
+make_number_line_blank(ax, label=None, xmin=-10, xmax=10)
+save_graph(fig, 'u1_sum_numberline_blank.png')
 plt.close(fig)
