@@ -6,7 +6,7 @@ import csv
 # ── CONFIGURE ───────────────────────────────────────────────────────────────
 # Default: folder this script lives in.
 # Optional command-line override:
-#   python fix_mathjax_v4.py /absolute/path/to/folder
+#   python fix_mathjax_v5.py /absolute/path/to/folder
 TARGET_FOLDER = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else Path(__file__).parent
 # ────────────────────────────────────────────────────────────────────────────
 
@@ -106,7 +106,7 @@ def _clean_serialized_attrs(attrs):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# V4 — MALFORMED DOLLAR / ESCAPED-HTML REPAIRS
+# V5 — MALFORMED DOLLAR / ESCAPED-HTML REPAIRS
 #
 # Two production failures are handled here:
 #
@@ -143,6 +143,29 @@ INLINE_PRESENTATION_TAG_RE = re.compile(
 )
 
 BARE_RAC_RE = re.compile(r'(?<![A-Za-z\\])rac\{')
+
+
+# A TeX relation command followed immediately by a LETTER variable is parsed as
+# one unknown command. Production example:
+#     \ltx   -> intended \lt x
+#
+# Conservative safeguards:
+#   • only common relation commands are repaired
+#   • q is excluded as the following variable so valid \leq / \geq / \neq
+#     commands are never rewritten
+#   • the variable must be followed by a normal mathematical boundary
+#
+# Examples repaired:
+#   \ltx -> \lt x
+#   \gty -> \gt y
+#   \lex -> \le x
+#   \gex -> \ge x
+#   \nex -> \ne x
+MERGED_RELATION_RE = re.compile(
+    r'\\(?P<rel>lt|gt|le|ge|ne)'
+    r'(?P<var>[a-pr-zA-PR-Z])'
+    r'(?=(?:\^|_|[+\-*/=<>),.;:\]}]|\\|$|\s))'
+)
 
 
 def repair_malformed_math_assignments(text):
@@ -331,6 +354,7 @@ def repair_math_blocks(text):
       • HTML entities in math:        &lt; -> \lt, &gt; -> \gt
       • raw comparison signs in math: < -> \lt, > -> \gt
       • literal tabs in math:         tab -> \qquad
+      • merged relation commands:     \ltx -> \lt x
 
     Returns (new_text, list_of_human_readable_hit_strings).
     """
@@ -343,6 +367,7 @@ def repair_math_blocks(text):
         'tabs': 0,
         'inline_html_tags': 0,
         'bare_rac': 0,
+        'merged_relation': 0,
     }
 
     def repl(match):
@@ -395,7 +420,15 @@ def repair_math_blocks(text):
             content = BARE_RAC_RE.sub(r'\\frac{', content)
             counts['bare_rac'] += n
 
-        # 6) Raw < and > are unsafe in HTML source inside math. Convert them.
+        # 6) Repair relation commands accidentally merged with a letter variable.
+        #    Example: \ltx -> \lt x
+        def relation_repl(match):
+            counts['merged_relation'] += 1
+            return '\\' + match.group('rel') + ' ' + match.group('var')
+
+        content = MERGED_RELATION_RE.sub(relation_repl, content)
+
+        # 7) Raw < and > are unsafe in HTML source inside math. Convert them.
         n = content.count('<')
         if n:
             content = content.replace('<', r'\lt ')
@@ -430,6 +463,11 @@ def repair_math_blocks(text):
     if counts['bare_rac']:
         hits.append(
             f"         {counts['bare_rac']}× dropped \\frac command repaired from bare rac{{"
+        )
+    if counts['merged_relation']:
+        hits.append(
+            f"         {counts['merged_relation']}× merged relation command separated "
+            "(for example \\ltx→\\lt x)"
         )
 
     return new_text, hits
@@ -587,13 +625,23 @@ def audit_file(path, text):
             f"    HTML INSIDE MATH: {inline_tag_math} presentation tag(s) remain inside MathJax blocks"
         )
 
-    # Bare dropped fraction command should be gone after V4 repair.
+    # Bare dropped fraction command should be gone after V5 repair.
     bare_rac = 0
     for block in math_blocks:
         bare_rac += len(BARE_RAC_RE.findall(block))
     if bare_rac:
         warnings.append(
             f"    DROPPED FRAC COMMAND: {bare_rac} bare rac{{...}} instance(s) remain inside math"
+        )
+
+    # Merged relation commands such as \\ltx should be gone after V5 repair.
+    merged_rel = 0
+    for block in math_blocks:
+        merged_rel += len(MERGED_RELATION_RE.findall(block))
+    if merged_rel:
+        warnings.append(
+            f"    MERGED RELATION COMMAND: {merged_rel} instance(s) remain "
+            "(for example \\ltx, \\lex, or \\nex)"
         )
 
     # Wrong CDN
@@ -720,7 +768,7 @@ for path in text_files:
         print(f"  ok     {path}")
 
 
-# ── V4 folder-level Bank structure audit ─────────────────────────────────────
+# ── V5 folder-level Bank structure audit ─────────────────────────────────────
 # If a canonical Bank HTML and mapping CSV sit together, compare the number of
 # real <article class="bank-item"> elements with mapping rows. This catches the
 # exact production failure where malformed math swallowed dozens of HTML cards.
