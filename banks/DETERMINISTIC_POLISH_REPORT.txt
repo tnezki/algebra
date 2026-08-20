@@ -1,0 +1,49 @@
+DETERMINISTIC POLISH REPORT
+========================================================================
+Target: banks
+
+SAFE AUTOMATIC FIXES
+  - ran supplied MathJax fixer
+  - MathJax fixer return code: 0
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/tarsia_2_3_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/tarsia_2_1_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/blooket_2_2_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/blooket_2_5_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/blooket_2_4_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit2/exports/blooket_2_3_practice_3.csv
+  -     AUDIT  BANK STRUCTURE MISMATCH: unit5.html has 501 real bank-item article(s), but unit5_mapping.csv has 854 mapping row(s).
+  -     AUDIT  BANK STRUCTURE MISMATCH: unit4.html has 212 real bank-item article(s), but unit4_mapping.csv has 854 mapping row(s).
+  -     AUDIT  BANK STRUCTURE MISMATCH: unit6.html has 523 real bank-item article(s), but unit6_mapping.csv has 854 mapping row(s).
+  -     AUDIT  BANK STRUCTURE MISMATCH: unit1.html has 837 real bank-item article(s), but unit1_mapping.csv has 854 mapping row(s).
+  -   
+  -   Done. 4 file(s) auto-fixed. 9 file(s) have audit warnings.
+
+HARD FAILURES
+  - DETERMINISTIC_POLISH_REPORT.txt: HARD: odd number of unescaped $ delimiters
+  - unit1/unit1.html: HARD: 274 escaped structural HTML tag pattern(s) remain
+  - unit1/unit1.html: BANK STRUCTURE: 837 real bank-item articles vs 854 mapping rows in unit1_mapping.csv
+  - unit1/unit1.html: BANK ID RESOLUTION: 17 mapped ID(s) do not resolve exactly once. Sample: U1-S4-NOTE-EX01, U1-S4-NOTE-YTI01, U1-S4-NOTE-EX02, U1-S4-NOTE-YTI02, U1-S4-NOTE-EX03, ...
+  - unit4/unit4.html: HARD: 15072 escaped structural HTML tag pattern(s) remain
+  - unit4/unit4.html: BANK STRUCTURE: 212 real bank-item articles vs 854 mapping rows in unit4_mapping.csv
+  - unit4/unit4.html: BANK ID RESOLUTION: 642 mapped ID(s) do not resolve exactly once. Sample: U4-S4-NOTE-EX01, U4-S4-NOTE-EX02, U4-S4-NOTE-EX03, U4-S4-NOTE-EX04, U4-S5-WTC01, ...
+  - unit5/unit5.html: HARD: odd number of unescaped $ delimiters
+  - unit5/unit5.html: HARD: 8668 escaped structural HTML tag pattern(s) remain
+  - unit5/unit5.html: BANK STRUCTURE: 501 real bank-item articles vs 854 mapping rows in unit5_mapping.csv
+  - unit5/unit5.html: BANK ID RESOLUTION: 353 mapped ID(s) do not resolve exactly once. Sample: U5-S1-P1-R02, U5-S1-P1-R04, U5-S1-P1-M01, U5-S1-P1-M02, U5-S1-P1-M03, ...
+  - unit6/unit6.html: HARD: 8064 escaped structural HTML tag pattern(s) remain
+  - unit6/unit6.html: BANK STRUCTURE: 523 real bank-item articles vs 854 mapping rows in unit6_mapping.csv
+  - unit6/unit6.html: BANK ID RESOLUTION: 331 mapped ID(s) do not resolve exactly once. Sample: U6-S3-P1-M02, U6-S3-P1-M04, U6-S3-P1-M06, U6-S3-P2-I01, U6-S3-P2-I02, ...
+
+REVIEW NOTES
+  - unit2/unit2.html: EXACT/NEAR PROMPT DUPLICATION CANDIDATES: 2 group(s), 2 extra copy/copies. Sample: U2-S1-TAR-R03, U2-S5-TAR-M04; U2-S2-TAR-R01, U2-S4-TAR-I07
+  - unit3/unit3.html: EXACT/NEAR PROMPT DUPLICATION CANDIDATES: 2 group(s), 2 extra copy/copies. Sample: U3-S1-P1-M03, U3-S3-P1-I05; U3-S1-P3-M05, U3-S3-P3-I02
+  - unit5/unit5.html: EXACT/NEAR PROMPT DUPLICATION CANDIDATES: 1 group(s), 1 extra copy/copies. Sample: U5-S3-PX-M06, U5-S3-PX-M07
+  - unit7/unit7.html: EXACT/NEAR PROMPT DUPLICATION CANDIDATES: 5 group(s), 5 extra copy/copies. Sample: U7-S1-P1-I05, U7-S4-P1-I06; U7-S3-PX-I06, U7-S3-TAR-I05; U7-S4-P2-I02, U7-S4-P2-I05; U7-S3-CYU-I02, U7-S3-TAR-I07; U7-S1-TAR-I06, U7-S4-TAR-I07
+  - unit8/unit8.html: EXACT/NEAR PROMPT DUPLICATION CANDIDATES: 9 group(s), 9 extra copy/copies. Sample: U8-S1-P2-I01, U8-S3-P2-R05; U8-S1-TAR-I01, U8-S3-TAR-R02; U8-S1-TAR-I08, U8-S3-TAR-R05; U8-S2-TAR-R05, U8-S2-WU1-PK01; U8-S4-TAR-I02, U8-S5-TAR-I04
+
+STATUS
+  FAIL — DO NOT DEPLOY
+
+NOTE
+  This script is a deterministic first pass. Semantic/curriculum review
+  should still be completed with Tool_Polish_Portable_Memory.txt.
