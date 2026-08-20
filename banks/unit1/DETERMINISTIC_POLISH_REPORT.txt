@@ -1,0 +1,34 @@
+DETERMINISTIC POLISH REPORT
+========================================================================
+Target: unit1
+
+SAFE AUTOMATIC FIXES
+  - ran supplied MathJax fixer
+  - MathJax fixer return code: 0
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/tarsia_1_1_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/blooket_1_2_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/blooket_1_3_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/blooket_1_4_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/tarsia_1_5_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/tarsia_1_2_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/blooket_1_1_practice_3.csv
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/tarsia_1_3_practice_3.txt
+  -     ok     /Users/troynezki/Documents/GitHub/algebra/banks/unit1/exports/tarsia_1_4_practice_3.txt
+  -     AUDIT  BANK STRUCTURE MISMATCH: unit1.html has 807 real bank-item article(s), but unit1_mapping.csv has 854 mapping row(s).
+  -   
+  -   Done. 1 file(s) auto-fixed. 2 file(s) have audit warnings.
+
+HARD FAILURES
+  - unit1.html: HARD: 858 escaped structural HTML tag pattern(s) remain
+  - unit1.html: BANK STRUCTURE: 807 real bank-item articles vs 854 mapping rows in unit1_mapping.csv
+  - unit1.html: BANK ID RESOLUTION: 47 mapped ID(s) do not resolve exactly once. Sample: U1-S4-NOTE-EX01, U1-S4-NOTE-YTI01, U1-S4-NOTE-EX02, U1-S4-NOTE-YTI02, U1-S4-NOTE-EX03, ...
+
+REVIEW NOTES
+  - NONE
+
+STATUS
+  FAIL — DO NOT DEPLOY
+
+NOTE
+  This script is a deterministic first pass. Semantic/curriculum review
+  should still be completed with Tool_Polish_Portable_Memory.txt.
