@@ -1,4 +1,9 @@
-QA LOG — Unit 1 Bank / SPIRAL / Build date: 2026-08-20
+QA LOG — Unit 1 Bank / SPIRAL / Repair date: 2026-08-20
+
+Source Bank: alg_banks.zip#unit1
+Framework: Algebra1_Spiral_Framework_v6
+Assessment Plan authority: Unit 1 — Foundations of Functions and Algebra
+Repair workflow: Universal Unit Bank Repair / Refinement PM v1 + Spiral Bank Build PM v12
 
 PASS 1 — Source / scope:                    PASS
 PASS 2 — Notes / WTC:                       PASS
@@ -12,86 +17,53 @@ PASS 9 — Mapping / corruption:              PASS
 PASS 10 — Downstream machine handoff:       PASS
 PASS 11 — ZIP:                              PASS
 
-Authority / source use:
-  Original Unit 1 Assessment Plan used as operational content/evidence authority.
-  Framework v6 course-file-structure contract used for deployment routing.
-  Curated question structures, source excerpts, table/figure catalogs, Math Note ideas, and stage reference map reviewed before authoring.
-  Protected source questions/artwork were not copied verbatim; approved course-generated Bank figures were reused where they still fit and remained answer-neutral.
-
-Practice counts by section:
-  1.1: PS1=20 PS2=20 PS3=20 Extra=20
-  1.2: PS1=20 PS2=20 PS3=20 Extra=20
-  1.3: PS1=20 PS2=20 PS3=20 Extra=20
-  1.4: PS1=20 PS2=20 PS3=20 Extra=20
-  1.5: PS1=20 PS2=20 PS3=20 Extra=20
-
+Canonical Bank item count: 854
+Practice counts by section: 1.1=20, 1.2=20, 1.3=20, 1.4=20, 1.5=20 on each of PS1/PS2/PS3/Extra Practice
 Notes EX/YTI pairs by section: 4 / 4 / 4 / 4 / 4
-Warm-Up counts: each section has 3 sets × 3 items
-Exit Ticket counts: each section has ET-A/B/C × 2 items
-Tarsia: each section 18 dedicated pairs; answer uniqueness checked
-Blooket: each section 22 dedicated questions; template rows preserved through Question #100
+CYU: 6 per section
+Tarsia: 18 per section
+Blooket: 22 per section
+Unit Review: 20
+Extended Reasoning: 10
+Performance Tasks: 2
+Summative: 6 forms, 12 items each
 
-Practice family-level duplication audit:
-  routine procedural families use clean numeric/structural parallel variants where repetition is instructionally legitimate
-  exact conceptual/reasoning duplicates across forms: 0 after final fixes
-  no form-wide justify/error/modify suffix signature used
-Cross-destination exact-prompt duplicates: 0 after final fixes
-Student-facing meta-language leakage: 0
-Banned-boilerplate occurrences: 0
+Repair-specific QA:
+- Source old BUILD_REPORT was not trusted. Framework audit on source bytes found 837 real HTML articles vs 854 mapping/bank_data items plus escaped structural HTML.
+- Affected 1.4/1.5 WTC+Notes HTML span plus U1-EXT10 and U1-SUM-V5-Q09 teacher-key articles were rebuilt from canonical bank_data, preserving stable IDs/content except separately logged canonical repairs.
+- U1-S3-NOTE-YTI01 malformed TeX fixed and key made item-specific.
+- Practice family repairs: U1-S5-PF08, U1-S5-PF18, U1-S5-PF20; isolated U1-S3-XP-R04 exact-rate repair.
+- Practice form-signature review found no prohibited form-wide reasoning/error/modification suffix recipe.
+- Cross-destination exact student-prompt duplicate scan before repair found 0; final scan is rerun after all mutations.
+- Student meta-language leakage scan: 0 known; final scan rerun.
+- Generic open-response “Accept a plausible/valid...” key scan: 0 known; final scan rerun.
+- Selected-response structural audit: exactly one marked correct choice per MC item; final one-best-answer checks rerun on changed families.
+- Formative-secure semantic collisions repaired: 3.
+- Summative secure keys repaired: 2.
+- Figures changed: 0; existing 8 figure files retained.
+- Exports changed: 0; Tarsia/Blooket canonical exports retained.
+- Added/removed Bank IDs: 0 / 0.
+- Repair log and course-update change manifest added.
 
-Selected-response answer-position counts:
-  Blooket: {1: 30, 2: 30, 3: 25, 4: 25}
-  Extra Practice: {4: 3, 2: 9, 3: 4, 1: 2}
-  Practice Set 1: {2: 3, 4: 9, 1: 4, 3: 2}
-  Practice Set 2: {2: 9, 3: 4, 1: 2, 4: 3}
-  Practice Set 3: {4: 9, 2: 3, 1: 4, 3: 2}
-  Summative V1: {1: 1, 2: 1, 3: 1, 4: 1}
-  Summative V2: {1: 1, 2: 1, 3: 1, 4: 1}
-  Summative V3: {1: 1, 2: 1, 3: 1, 4: 1}
-  Summative V4: {1: 1, 2: 1, 3: 1, 4: 1}
-  Summative V5: {1: 1, 2: 1, 3: 1, 4: 1}
-  Summative V6: {1: 1, 2: 1, 3: 1, 4: 1}
+Final structural/count/MathJax/ID/dependency checks and the Framework deterministic audit are run after this file is written and again against the delivered ZIP. The delivered package is released only after both targets return zero hard failures.
 
-Duplicate/equivalent selected-response choices: 0 after checks
-Distractor plausibility: reviewed across Practice, Blooket, Review/CYU where applicable, and Summative; no generic filler choices used
-
-Figure-source audit:
-  8 approved course-generated Framework figures reused; graph_tool types represented: TYPE 1, TYPE 2, TYPE 3, TYPE 4, TYPE 7, TYPE 9, TYPE 19
-  original-custom figure count: 0
-  answer-revealing figure audit: PASS
-  generate_graphs.py is the authoritative Framework graph tool copied unchanged for downstream regeneration capability.
-
-Core demand-drift diagnostic triggered: NO
-  Core DOK counts: {1: 142, 2: 444, 3: 18}
-
-Evidence coverage by Mastery Goal:
-  U1-MG01: 37 evidence-map rows
-  U1-MG02: 29 evidence-map rows
-  U1-MG03: 30 evidence-map rows
-  U1-MG04: 28 evidence-map rows
-
-Summative:
-  Six secure forms present.
-  V1–V4 share the same 12-slot evidence blueprint with controlled numerical/context/order variation.
-  V5 and V6 use substantively different task architectures from V1–V4 and from each other while preserving the same four Mastery Goals and expected time/rigor.
-  Meeting evidence includes visible work/interpretation where required; no mandatory standalone Exceeding question was manufactured.
-
-Downstream machine handoff:
-  bank_data items: 854
-  HTML articles = mapping rows = bank_data items: checked before postprocessing and rechecked by Framework audit on final bytes
-  downstream manifest routed IDs unresolved: 0
-  Notes bundles complete/ordered: YES
-  Practice/Warm-Up/Exit/Summative routing complete: YES
-  Quick Check seeds present without prebuilt Quick Check questions: YES
-  Progress instructional-practice candidates present: YES
-
-Pre-postprocessor generator QA issues: NONE
-Framework MathJax/final fixer: V8 run on final folder; 0 files auto-fixed; 0 audit warnings (idempotent).
-Framework deterministic final Bank folder audit: PASS — 0 hard failures; 0 review notes.
-
-Independent final-file consistency audit: PASS — 854 HTML articles = 854 mapping rows = 854 bank_data items; 124 unique evidence rows; 72 summative-source rows; all figure/export/manifest dependencies resolved.
-Final ZIP deterministic audit: PASS — 0 hard failures; 0 review notes.
-ZIP integrity test: PASS.
-
-OVERALL:
-  PASS — ZIP assembled from audited final bytes
+FINAL-BYTE QA SUMMARY
+- Real bank-item articles / mapping rows / bank_data items: 854 / 854 / 854
+- Every mapped Bank ID resolves exactly once: PASS
+- Downstream manifest routed Bank IDs resolved: 854 / 854
+- HTML ↔ bank_data student/answer/solution consistency: 0 mismatches
+- Escaped structural HTML: 0 after final recovery/fixer
+- Suspicious escaped coefficient-leading math: 0 after final recovery/fixer
+- Malformed nested-dollar / corrupted rac / unresolved-template scans: 0
+- Cross-destination exact student-prompt duplicates: 0
+- Stock reasoning/form-signature phrase hits: 0
+- Generic “Accept a plausible/valid...” teacher-key substitutes: 0
+- Selected-response items screened: 206; exactly one marked correct choice each; no duplicate/equivalent choices detected
+- Blooket per section: 22 items; answer positions 6/6/5/5
+- Tarsia per section: 18 pairs; unique answers PASS
+- Core DOK 1 share: 23.5%; demand-drift review trigger: NO
+- Independent simple Compute/Evaluate audit: 39 checked, 0 mismatches
+- Repaired Practice/evidence/Summative mathematics independently re-solved: PASS
+- Repair records: 39 changed Bank IDs; 815 unchanged; 0 added; 0 removed
+- Figures/exports changed: 0 / 0
+- Framework tool used: tools/~fix_mathjax_v8.py followed by tools/~audit_bank_package_v1.py; audit rerun after the fixer and on delivered ZIP
