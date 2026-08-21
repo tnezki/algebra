@@ -1,87 +1,94 @@
-/* ============================================================
-   bank.css — Algebra 1
-   tnezki.github.io/algebra/css/bank.css
-   Path from file: ../../../../css/bank.css
+/* Algebra/Spiral Bank — preferred v13 visual treatment.
+   Production path: css/bank.css
+   Load after ../../css/base.css.
+   Keep .bank-item as the canonical machine-auditable article class. */
 
-   Depends on: base.css
-   ============================================================ */
-
-/* ── BANK INTRO ─────────────────────────────────────────────── */
-.bank-intro {
-    border: 2px solid var(--navy);
-    padding: 12px 14px;
-    margin: 12px 0 16px 0;
-    background: var(--blue-bg);
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #1d2433;
 }
 
-/* ── DOK SECTIONS (shared pattern with assessment_plan) ─────── */
-.dok-bar {
-    background: #000;
-    color: #fff;
-    font-weight: 900;
-    font-size: 15pt;
-    padding: 9px 12px;
-    margin: 18px 0 10px 0;
-    break-after: avoid;
-    page-break-after: avoid;
-}
-.dok-method-card {
-    border: 1px solid var(--border);
-    padding: 12px 14px;
-    margin: 10px 0 16px 0;
-    background: var(--bg);
-    break-inside: avoid;
-    page-break-inside: avoid;
+h1,
+h2,
+h3 {
+  color: #1f3864;
 }
 
-/* ── ASSESSMENT CARDS ───────────────────────────────────────── */
-.assessment-card {
-    border: 1px solid var(--border);
-    padding: 12px 14px;
-    margin: 12px 0;
-    background: var(--bg);
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-.assessment-card p  { margin-bottom: 7px; }
-.assessment-card ol,
-.assessment-card ul { margin-left: 26px; }
-
-.problem-number {
-    font-weight: 900;
-    color: var(--navy);
-    font-size: 13pt;
-    margin-bottom: 8px;
-}
-.problem-meta {
-    color: var(--muted);
-    font-weight: 700;
-    font-size: 10.5pt;
-    margin-left: 8px;
-}
-.performance-notes {
-    border-left: 5px solid #444;
-    background: #f7f7f7;
-    padding: 8px 10px;
-    margin-top: 10px;
-    font-size: 10pt;
-}
-.lower-alpha { list-style-type: lower-alpha; }
-
-/* ── SECTION HEAD ───────────────────────────────────────────── */
-.section-head {
-    border: 2px solid var(--navy);
-    background: var(--blue-bg);
-    padding: 12px 14px;
-    margin: 18px 0 12px 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
+.nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  z-index: 4;
 }
 
-/* ── WORKSPACE NOTE ─────────────────────────────────────────── */
-.workspace-note {
-    font-size: 9.5pt;
-    color: var(--muted);
-    font-style: italic;
-    margin-top: 6px;
+/* .item is retained temporarily for legacy rendering; new Banks should emit .bank-item. */
+.bank-item,
+.item {
+  border: 1px solid #d7dce5;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 12px 0;
+}
+
+.meta {
+  font-size: 12px;
+  color: #596579;
+}
+
+.answer {
+  background: #f1f6f1;
+  border-left: 4px solid #437a43;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+img {
+  max-width: 560px;
+  max-height: 380px;
+  display: block;
+  margin: 10px auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 5px 9px;
+}
+
+.secure,
+.bank-item.secure {
+  border-color: #8b5a2b;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Keeps sticky navigation from covering a section after an anchor jump. */
+h2[id],
+h3[id],
+section[id] {
+  scroll-margin-top: 64px;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
