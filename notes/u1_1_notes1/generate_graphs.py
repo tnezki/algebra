@@ -2052,7 +2052,7 @@ if __name__ == '__main__':
         ax,
         [{'expr': lambda x: 2*x + 5, 'deriv': lambda x: 2 + 0*x, 'color': 'steelblue'}],
         xmin=0, xmax=5, ymin=0, ymax=16,
-        xlabel='Weeks', ylabel='Height (cm)', title=''
+        xlabel='Weeks', ylabel='Height (cm)', title='Plant Height'
     )
     fig.savefig(os.path.join(OUTPUT_DIR, 'u1_s11_four_forms.png'), dpi=144, bbox_inches='tight')
     plt.close(fig)
