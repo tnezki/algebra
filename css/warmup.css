@@ -48,19 +48,24 @@
 }
 
 /* Two-problem Notability layout.
-   Continuation pages (no header): 4.68in per card.
-   Header pages: 4.42in per card because the day header also occupies space.
-   Both are roughly 0.25in shorter than the previous full-fill result. */
+   NOTE: Notability's HTML importer does NOT respect @page size/margins or
+   break-before rules — it flattens the doc into a continuous flow and cuts
+   pages on its own, at a measured usable height of ~9.0in (confirmed via
+   ruler test), not the 11in - margins (~10.04in) the old @page math assumed.
+   These values are sized to that measured 9.0in ceiling, with a safety
+   margin, rather than to the CSS @page box.
+   Continuation pages (no header): 4.30in per card.
+   Header pages: 4.10in per card because the day header also occupies space. */
 .warmup-page.wu-count-2 > .problem.half {
-    flex: 0 0 4.68in;
-    height: 4.68in;
-    min-height: 4.68in;
+    flex: 0 0 4.30in;
+    height: 4.30in;
+    min-height: 4.30in;
 }
 
 .warmup-page.wu-count-2 > .warmup-header ~ .problem.half {
-    flex-basis: 4.42in;
-    height: 4.42in;
-    min-height: 4.42in;
+    flex-basis: 4.10in;
+    height: 4.10in;
+    min-height: 4.10in;
 }
 
 .warmup-page:first-child {
