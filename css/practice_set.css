@@ -5,8 +5,7 @@
    the CYU check) — single-column layout, problems sit directly
    inside each .dok-section, no wrapper grid div. No DOK header
    boxes, no problem numbering/meta labels — problem number is
-   inlined as the first character of the question text. No borders
-   on problem cards.
+   inlined as the first character of the question text. Ordinary Practice problems use rounded full borders; CYU keeps its grid contract.
    Workspace height is set per-problem with a .ws-N utility class
    (N = pixels tall; ws-10 through ws-960 in steps of 10, plus
    ws-25 as the starting default — 960px (~10in) is basically a
@@ -25,19 +24,21 @@ h1 {
   padding: 0 0 7px 0;
   margin: 0 0 12px 0;
   border: 0;
-  border-bottom: 2px solid var(--navy);
+  border-bottom: 4px solid var(--navy);
 }
 
 .dok-section { margin: 0 0 14px 0; }
 
 .problem {
-  padding: 8px 0;
-  margin: 0 0 10px 0;
+  padding: 10px 12px;
+  margin: 0 0 12px 0;
   background: var(--bg);
   break-inside: avoid;
   page-break-inside: avoid;
   display: flex;
   flex-direction: column;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
 }
 .problem .problem-body { display: flex; flex-direction: column; flex: 1; }
 .problem .workspace:last-child { margin-top: auto; }
@@ -235,8 +236,10 @@ table.values.compact-table td {
 .cyu-grid .problem {
   margin: 0;
   padding: 10px 12px;
+  border: 0;
   border-right: 1px solid #7f8791;
   border-bottom: 1px solid #7f8791;
+  border-radius: 0;
   background: #fff;
   min-width: 0;
 }
