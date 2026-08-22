@@ -1,5 +1,5 @@
 /* ============================================================
-   notes_layout_v3.css — Algebra Notes layout pilot
+   notes_layout_v4.css — Algebra Notes layout pilot
    Load AFTER base.css and notes.css.
 
    QUICK MANUAL CONTROLS
@@ -8,12 +8,57 @@
 :root {
   --notes-graph-max-width: 2.40in;
   --notes-graph-max-height: 2.40in;
-  --notes-workspace-height: 2.50in;
+  --notes-workspace-height: 2.00in;
   --notes-misc-workspace-height: 9.0in;
   --notes-ican-font-size: 15pt;
   --notes-compact-table-min-width: 2.35in;
   --notes-compact-table-cell-pad-y: 7px;
   --notes-compact-table-cell-pad-x: 12px;
+}
+
+
+/* ── TITLE CARD ───────────────────────────────────────────────
+   Restore a clear visual container around the section identity.
+   These rules intentionally override the thin top-rule treatment. */
+.notes-title {
+  border: 4px solid var(--navy, #0b174f) !important;
+  border-radius: 10px !important;
+  background: #f7f9fc !important;
+  padding: 14px 18px 16px 18px !important;
+  margin: 0 0 18px 0 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.notes-title .title-kicker {
+  color: var(--navy-mid, #315b8a) !important;
+  font-size: 9.5pt !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  margin-bottom: 5px !important;
+}
+
+.notes-title .title-main {
+  color: var(--navy, #0b174f) !important;
+  font-size: 23pt !important;
+  line-height: 1.08 !important;
+  font-weight: 800 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.notes-title .title-sub {
+  color: #333 !important;
+  font-size: 12.5pt !important;
+  font-weight: 700 !important;
+  margin: 0 0 7px 0 !important;
+}
+
+.notes-title .title-quote {
+  color: #555 !important;
+  font-size: 11pt !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
 }
 
 /* ── I-CAN START ────────────────────────────────────────────── */
@@ -51,7 +96,7 @@ figure.notes-graph img {
 /* ── TASK PAGINATION ────────────────────────────────────────── */
 /* Keep the COMPLETE task together when it fits:
    heading + table/graph + prompt + writing workspace.
-   The 2.5in default workspace makes this practical for most tasks. */
+   The 2.0in default workspace makes this practical for most tasks. */
 .notes-task {
   margin: 0;
   padding: 0;
