@@ -22,7 +22,7 @@
     --wu-ink: #1f2933;
 }
 
-@page { size: 8.5in 11in; margin: .25in .25in; }
+@page { size: 8.5in 11in; margin: .48in .52in; }
 
 * { box-sizing: border-box; }
 
@@ -33,26 +33,34 @@
 }
 
 /* One physical Notability/print page.
-   Use a definite page height (not min-height) so flex children can
-   actually divide the available writing area. 9.95in leaves a small
-   safety margin inside the 10.04in printable content height and avoids
-   a rounding overflow that can create an unwanted blank page. */
+   Do NOT force a full-page container height: Notability/PDF print margins
+   can interpret that as overflow and create an extra blank page. The
+   two-problem layout below uses fixed card heights with about 0.25in of
+   extra safety removed from EACH card. */
 .warmup-page {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 9.0in;
-    min-height: 9.0in;
-    max-height: 9.0in;
+    height: auto;
+    min-height: 0;
     break-before: page;
     page-break-before: always;
 }
 
-/* Two problems share the whole usable page. The header, when present,
-   takes only its natural height; the two cards split everything left. */
+/* Two-problem Notability layout.
+   Continuation pages (no header): 4.68in per card.
+   Header pages: 4.42in per card because the day header also occupies space.
+   Both are roughly 0.25in shorter than the previous full-fill result. */
 .warmup-page.wu-count-2 > .problem.half {
-    flex: 1 1 0;
-    min-height: 0;
+    flex: 0 0 4.68in;
+    height: 4.68in;
+    min-height: 4.68in;
+}
+
+.warmup-page.wu-count-2 > .warmup-header ~ .problem.half {
+    flex-basis: 4.42in;
+    height: 4.42in;
+    min-height: 4.42in;
 }
 
 .warmup-page:first-child {
@@ -370,7 +378,7 @@ table.values th {
 
 @media print {
     .warmups-container { max-width: none; }
-    .warmup-page { gap: 8px; margin: 0; height: 9.95in; min-height: 9.95in; }
+    .warmup-page { gap: 8px; margin: 0; height: auto; min-height: 0; }
 
     .warmup-header {
         border-radius: 6px;
