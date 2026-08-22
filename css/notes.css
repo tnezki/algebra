@@ -1,9 +1,8 @@
 /* ============================================================
-   notes_layout_v4.css — Algebra Notes layout pilot
+   notes_layout_v5.css — Algebra Notes layout pilot
    Load AFTER base.css and notes.css.
 
    QUICK MANUAL CONTROLS
-   Change these first when tuning the PDF.
    ============================================================ */
 :root {
   --notes-graph-max-width: 2.40in;
@@ -16,10 +15,7 @@
   --notes-compact-table-cell-pad-x: 12px;
 }
 
-
-/* ── TITLE CARD ───────────────────────────────────────────────
-   Restore a clear visual container around the section identity.
-   These rules intentionally override the thin top-rule treatment. */
+/* ── TITLE CARD ─────────────────────────────────────────────── */
 .notes-title {
   border: 4px solid var(--navy, #0b174f) !important;
   border-radius: 10px !important;
@@ -29,7 +25,6 @@
   break-inside: avoid-page;
   page-break-inside: avoid;
 }
-
 .notes-title .title-kicker {
   color: var(--navy-mid, #315b8a) !important;
   font-size: 9.5pt !important;
@@ -38,7 +33,6 @@
   letter-spacing: .7px;
   margin-bottom: 5px !important;
 }
-
 .notes-title .title-main {
   color: var(--navy, #0b174f) !important;
   font-size: 23pt !important;
@@ -46,19 +40,38 @@
   font-weight: 800 !important;
   margin: 0 0 6px 0 !important;
 }
-
 .notes-title .title-sub {
   color: #333 !important;
   font-size: 12.5pt !important;
   font-weight: 700 !important;
   margin: 0 0 7px 0 !important;
 }
-
 .notes-title .title-quote {
   color: #555 !important;
   font-size: 11pt !important;
   line-height: 1.35 !important;
   margin: 0 !important;
+}
+
+/* ── WHAT'S TO COME ──────────────────────────────────────────
+   HTML now wraps the COMPLETE WTC: heading + directions +
+   stimulus + questions + 2in workspace. */
+.notes-wtc {
+  margin: 0;
+  padding: 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.notes-wtc > .h-preview {
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+.notes-wtc .annotation-box,
+.notes-wtc figure,
+.notes-wtc ol,
+.notes-wtc li {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
 }
 
 /* ── I-CAN START ────────────────────────────────────────────── */
@@ -68,12 +81,94 @@
   padding: 6px 12px !important;
   margin: 18px 0 10px 0 !important;
 }
-
-/* Keep only the I-Can heading + its opening reading together.
-   Do NOT lock the entire I-Can section to one page. */
 .notes-ican-start {
   break-inside: avoid-page;
   page-break-inside: avoid;
+}
+
+/* ── MATH NOTES ───────────────────────────────────────────────
+   Explicit here so the block does not depend on an older
+   notes.css having every newer Math Notes class. */
+.math-notes {
+  margin: 14px 0 16px 0 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.math-notes-header {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 10px !important;
+  border: 3px solid var(--navy, #0b174f) !important;
+  border-radius: 8px !important;
+  background: #f5f8fc !important;
+  color: var(--navy, #0b174f) !important;
+  padding: 6px 12px !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.25 !important;
+}
+.math-notes-label {
+  font-size: 10.5pt !important;
+  font-weight: 850 !important;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  white-space: nowrap;
+}
+.math-notes-label::before { content: "📐 "; }
+.math-notes-title {
+  font-size: 12.5pt !important;
+  font-weight: 800 !important;
+}
+.math-notes-body {
+  padding: 2px 2px 0 2px !important;
+}
+.rep-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  margin: 8px 0 !important;
+}
+.rep-card {
+  border: 1px solid #c7d1df !important;
+  border-radius: 6px !important;
+  background: #fbfcfe !important;
+  padding: 9px 10px !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.rep-card strong {
+  color: var(--navy, #0b174f);
+}
+
+/* ── STOP AND DISCUSS ─────────────────────────────────────────
+   Keep prompt + workspace together and make the discussion cue
+   visually unmistakable without dominating the page. */
+.notes-discuss-task {
+  margin: 14px 0 16px 0;
+  padding: 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.stop-discuss {
+  border: 2px solid #a73737 !important;
+  border-left: 7px solid #a73737 !important;
+  border-radius: 8px !important;
+  background: #fff7f7 !important;
+  color: #333 !important;
+  padding: 11px 14px !important;
+  margin: 0 !important;
+  font-size: 11pt !important;
+  line-height: 1.45 !important;
+}
+.stop-discuss strong {
+  display: block;
+  color: #8d2424 !important;
+  font-size: 11.5pt !important;
+  font-weight: 850 !important;
+  letter-spacing: .15px;
+  margin-bottom: 3px;
+}
+.notes-discuss-task > .notes-ws {
+  margin-top: 8px !important;
 }
 
 /* ── GRAPH SIZE ─────────────────────────────────────────────── */
@@ -82,7 +177,6 @@ figure.notes-graph {
   break-inside: avoid-page;
   page-break-inside: avoid;
 }
-
 figure.notes-graph img {
   width: auto !important;
   max-width: var(--notes-graph-max-width) !important;
@@ -94,27 +188,21 @@ figure.notes-graph img {
 }
 
 /* ── TASK PAGINATION ────────────────────────────────────────── */
-/* Keep the COMPLETE task together when it fits:
-   heading + table/graph + prompt + writing workspace.
-   The 2.0in default workspace makes this practical for most tasks. */
 .notes-task {
   margin: 0;
   padding: 0;
   break-inside: avoid-page;
   page-break-inside: avoid;
 }
-
 .notes-task-content {
   break-inside: avoid-page;
   page-break-inside: avoid;
 }
-
 .notes-task-content .h-example,
 .notes-task-content .h-yti {
   break-after: avoid-page;
   page-break-after: avoid;
 }
-
 .notes-task-content table,
 .notes-task-content figure,
 .notes-task-content tr {
@@ -122,7 +210,7 @@ figure.notes-graph img {
   page-break-inside: avoid;
 }
 
-/* Workspace is inside .notes-task and therefore travels with the task when it fits. */
+/* Default writing space: 2in. */
 .notes-ws,
 .notes-task-workspace {
   height: var(--notes-workspace-height) !important;
@@ -130,8 +218,6 @@ figure.notes-graph img {
 }
 
 /* ── COMPACT TWO-COLUMN DATA TABLES ─────────────────────────── */
-/* Stay 50/50, but do not stretch across the full note width.
-   The table grows only as much as its content/minimum requires. */
 table.compact-table {
   width: max-content !important;
   min-width: var(--notes-compact-table-min-width);
@@ -139,11 +225,7 @@ table.compact-table {
   table-layout: fixed !important;
   margin: 8px auto 10px auto !important;
 }
-
-table.compact-table col.half-col {
-  width: 50%;
-}
-
+table.compact-table col.half-col { width: 50%; }
 table.compact-table th,
 table.compact-table td {
   width: 50%;
@@ -154,19 +236,13 @@ table.compact-table td {
 }
 
 /* ── SUMMARY / COMMON MISTAKES / MISC PAGE ─────────────────── */
-/* No workspace after Summary. */
-.h-summary + .summary-list {
-  margin-bottom: 14px;
-}
-
+.h-summary + .summary-list { margin-bottom: 14px; }
 .notes-mistakes-block,
 .mistake-table,
 .mistake-table tr {
   break-inside: avoid-page;
   page-break-inside: avoid;
 }
-
-/* Separate blank page after Common Mistakes for miscellaneous work. */
 .notes-misc-workspace {
   height: var(--notes-misc-workspace-height);
   min-height: var(--notes-misc-workspace-height);
@@ -178,7 +254,10 @@ table.compact-table td {
 }
 
 @media print {
+  .notes-wtc,
   .notes-ican-start,
+  .math-notes,
+  .notes-discuss-task,
   .notes-task,
   .notes-task-content,
   .notes-task-content table,
@@ -190,13 +269,11 @@ table.compact-table td {
     break-inside: avoid-page !important;
     page-break-inside: avoid !important;
   }
-
   .notes-ws,
   .notes-task-workspace {
     height: var(--notes-workspace-height) !important;
     min-height: var(--notes-workspace-height) !important;
   }
-
   .notes-misc-workspace {
     height: var(--notes-misc-workspace-height) !important;
     min-height: var(--notes-misc-workspace-height) !important;
