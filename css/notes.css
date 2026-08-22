@@ -1,18 +1,42 @@
 /* ============================================================
-   notes_layout_v5.css — Algebra Notes layout pilot
+   notes_layout_v11.css — Algebra Notes typography/scale pilot
    Load AFTER base.css and notes.css.
 
    QUICK MANUAL CONTROLS
    ============================================================ */
 :root {
-  --notes-graph-max-width: 2.40in;
-  --notes-graph-max-height: 2.40in;
+  --notes-graph-max-width: 2.52in;
+  --notes-graph-max-height: 2.52in;
   --notes-workspace-height: 2.00in;
   --notes-misc-workspace-height: 9.0in;
-  --notes-ican-font-size: 15pt;
+  --notes-ican-font-size: 13pt;
   --notes-compact-table-min-width: 2.35in;
   --notes-compact-table-cell-pad-y: 7px;
   --notes-compact-table-cell-pad-x: 12px;
+}
+
+
+/* ── V11 GLOBAL TYPOGRAPHY TEST ──────────────────────────────
+   Test only: reduce the normal Notes reading/question/table text
+   by about 2pt while keeping the existing hierarchy. */
+.container p,
+.container li,
+.container td,
+.container th,
+.container figcaption {
+  font-size: 9pt !important;
+}
+
+.container .h-target,
+.container .h-vocab,
+.container .h-summary,
+.container .h-mistakes {
+  font-size: 18pt !important;
+}
+
+.container .h-example,
+.container .h-yti {
+  font-size: 13pt !important;
 }
 
 /* ── TITLE CARD ─────────────────────────────────────────────── */
@@ -27,7 +51,7 @@
 }
 .notes-title .title-kicker {
   color: var(--navy-mid, #315b8a) !important;
-  font-size: 9.5pt !important;
+  font-size: 7.5pt !important;
   font-weight: 800 !important;
   text-transform: uppercase;
   letter-spacing: .7px;
@@ -35,20 +59,20 @@
 }
 .notes-title .title-main {
   color: var(--navy, #0b174f) !important;
-  font-size: 23pt !important;
+  font-size: 21pt !important;
   line-height: 1.08 !important;
   font-weight: 800 !important;
   margin: 0 0 6px 0 !important;
 }
 .notes-title .title-sub {
   color: #333 !important;
-  font-size: 12.5pt !important;
+  font-size: 10.5pt !important;
   font-weight: 700 !important;
   margin: 0 0 7px 0 !important;
 }
 .notes-title .title-quote {
   color: #555 !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   line-height: 1.35 !important;
   margin: 0 !important;
 }
@@ -107,7 +131,7 @@
   line-height: 1.25 !important;
 }
 .math-notes-label {
-  font-size: 10.5pt !important;
+  font-size: 8.5pt !important;
   font-weight: 850 !important;
   text-transform: uppercase;
   letter-spacing: .6px;
@@ -115,7 +139,7 @@
 }
 .math-notes-label::before { content: "📐 "; }
 .math-notes-title {
-  font-size: 12.5pt !important;
+  font-size: 10.5pt !important;
   font-weight: 800 !important;
 }
 .math-notes-body {
@@ -156,13 +180,13 @@
   color: #333 !important;
   padding: 11px 14px !important;
   margin: 0 !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   line-height: 1.45 !important;
 }
 .stop-discuss strong {
   display: block;
   color: #8d2424 !important;
-  font-size: 11.5pt !important;
+  font-size: 9.5pt !important;
   font-weight: 850 !important;
   letter-spacing: .15px;
   margin-bottom: 3px;
@@ -319,7 +343,7 @@ table.compact-table td {
 }
 .vocab-sort-directions {
   margin: 0 0 10px 0 !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   line-height: 1.4 !important;
 }
 .vocab-sort-directions strong {
@@ -344,7 +368,7 @@ table.compact-table td {
   background: #eaf0f9 !important;
   color: var(--navy, #0b174f) !important;
   text-align: left !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   font-weight: 850 !important;
   padding: 10px 12px !important;
 }
@@ -374,7 +398,7 @@ table.compact-table td {
 .wtc-instructions .wtc-do-not-solve {
   margin: 0 0 4px 0 !important;
   color: #7a4f00 !important;
-  font-size: 11.5pt !important;
+  font-size: 9.5pt !important;
   font-weight: 900 !important;
   letter-spacing: .4px !important;
 }
@@ -391,7 +415,7 @@ table.compact-table td {
 }
 .skim-section-directions {
   margin: 0 0 12px 0 !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   line-height: 1.4 !important;
 }
 .skim-section-directions strong {
@@ -415,7 +439,7 @@ table.compact-table td {
   background: #eaf0f9 !important;
   color: var(--navy, #0b174f) !important;
   text-align: left !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
   font-weight: 900 !important;
   padding: 12px 14px !important;
 }
@@ -454,7 +478,7 @@ table.compact-table td {
   border-radius: 0 !important;
   padding: 5px 0 5px 14px !important;
   margin: 18px 0 12px 0 !important;
-  font-size: 22pt !important;
+  font-size: 20pt !important;
   line-height: 1.12 !important;
   font-weight: 900 !important;
   letter-spacing: 0 !important;
@@ -477,12 +501,12 @@ table.compact-table td {
 .close-reading-instructions p {
   margin: 0 !important;
   line-height: 1.42 !important;
-  font-size: 11pt !important;
+  font-size: 9pt !important;
 }
 .close-reading-instructions .close-reading-title {
   margin: 0 0 4px 0 !important;
   color: var(--navy, #0b174f) !important;
-  font-size: 11.5pt !important;
+  font-size: 9.5pt !important;
   font-weight: 900 !important;
   letter-spacing: .35px !important;
 }
@@ -510,7 +534,7 @@ table.compact-table td {
   border-radius: 0 !important;
   padding: 5px 0 5px 14px !important;
   margin: 18px 0 12px 0 !important;
-  font-size: 22pt !important;
+  font-size: 20pt !important;
   line-height: 1.12 !important;
   font-weight: 900 !important;
   letter-spacing: 0 !important;
