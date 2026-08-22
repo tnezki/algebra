@@ -281,6 +281,34 @@ table.compact-table td {
 }
 
 
+/* ── COMPLETE VOCABULARY PREVIEW WRAPPER ─────────────────────
+   Heading + vocabulary list + sort directions + sort table are
+   one print unit whenever the complete block fits on a page. */
+.vocab-preview-section {
+  margin: 14px 0 20px 0;
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+.vocab-preview-section > .h-vocab {
+  break-after: avoid-page !important;
+  page-break-after: avoid !important;
+}
+.vocab-preview-section > .vocab-box {
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+
+@media print {
+  .vocab-preview-section,
+  .vocab-preview-section > .h-vocab,
+  .vocab-preview-section > .vocab-box,
+  .vocab-preview-section .vocab-sort-task,
+  .vocab-preview-section .vocab-sort-table {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+}
+
 /* ── VOCABULARY SORT ─────────────────────────────────────────
    Active prior-knowledge task. Directions + 3-column sort table
    stay together when the block fits on the next page. */
@@ -464,6 +492,34 @@ table.compact-table td {
   .close-reading-instructions,
   .notes-ican-start > .h-intro,
   .notes-ican-start > .reading-box {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+
+/* ── V9 LET'S GET STARTED SECTION HEADING ───────────────────
+   Section heading for the pre-reading skim activity. It lives
+   inside .skim-section-task so heading + directions + table
+   remain one print unit whenever they fit. */
+.lets-get-started-heading {
+  color: var(--navy, #0b174f) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 7px solid var(--navy, #0b174f) !important;
+  border-radius: 0 !important;
+  padding: 5px 0 5px 14px !important;
+  margin: 18px 0 12px 0 !important;
+  font-size: 22pt !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  break-after: avoid-page !important;
+  page-break-after: avoid !important;
+}
+
+@media print {
+  .lets-get-started-heading {
     break-inside: avoid-page !important;
     page-break-inside: avoid !important;
   }
