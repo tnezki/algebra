@@ -1,33 +1,33 @@
 /* ============================================================
-   notes_pilot.css — Unit 1 Notes layout tuning
-   Loaded AFTER the existing canonical notes.css.
+   notes_layout_v2.css — Algebra Notes layout pilot
+   Load AFTER base.css and notes.css.
 
-   QUICK MANUAL ADJUSTMENTS — change only these values first.
+   QUICK MANUAL CONTROLS
+   Change these first when tuning the PDF.
    ============================================================ */
 :root {
-  /* 80% of the current rendered graph width. */
   --notes-graph-width: 80%;
-
-  /* 80% of the prior 4.25in default writing space = 3.40in. */
   --notes-workspace-height: 3.40in;
-
-  /* Blank miscellaneous work area after Common Mistakes. */
   --notes-misc-workspace-height: 9.0in;
-
-  /* Slightly smaller I-Can section heading. */
   --notes-ican-font-size: 15pt;
+  --notes-compact-table-min-width: 2.35in;
+  --notes-compact-table-cell-pad-y: 7px;
+  --notes-compact-table-cell-pad-x: 12px;
 }
 
-/* ── I-CAN SECTION HEADERS ─────────────────────────────────── */
+/* ── I-CAN START ────────────────────────────────────────────── */
 .h-intro.notes-ican-heading {
   font-size: var(--notes-ican-font-size) !important;
-  line-height: 1.24 !important;
-  padding-top: 7px !important;
-  padding-bottom: 7px !important;
-  margin-top: 18px !important;
-  margin-bottom: 10px !important;
-  break-after: avoid-page;
-  page-break-after: avoid;
+  line-height: 1.22 !important;
+  padding: 6px 12px !important;
+  margin: 18px 0 10px 0 !important;
+}
+
+/* Keep only the I-Can heading + its opening reading together.
+   Do NOT lock the entire I-Can section to one page. */
+.notes-ican-start {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
 }
 
 /* ── GRAPH SIZE ─────────────────────────────────────────────── */
@@ -46,18 +46,78 @@ figure.notes-graph img {
   margin-right: auto !important;
 }
 
-/* ── STANDARD WORKSPACE SIZE ────────────────────────────────── */
-.notes-ws {
+/* ── TASK PAGINATION ────────────────────────────────────────── */
+/* The heading + table/graph + prompt are one printable unit.
+   The writing workspace is intentionally OUTSIDE this no-break unit.
+   This avoids the previous giant block that pushed whole tasks around. */
+.notes-task {
+  margin: 0;
+  padding: 0;
+}
+
+.notes-task-content {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.notes-task-content .h-example,
+.notes-task-content .h-yti {
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+
+.notes-task-content table,
+.notes-task-content figure,
+.notes-task-content tr {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+/* Workspace can flow independently from the prompt block. */
+.notes-ws,
+.notes-task-workspace {
   height: var(--notes-workspace-height) !important;
   min-height: var(--notes-workspace-height) !important;
 }
 
-/* Summary no longer owns a writing-space block. */
-.teacher-summary-note {
-  margin: 8px 0 12px 0;
+/* ── COMPACT TWO-COLUMN DATA TABLES ─────────────────────────── */
+/* Stay 50/50, but do not stretch across the full note width.
+   The table grows only as much as its content/minimum requires. */
+table.compact-table {
+  width: max-content !important;
+  min-width: var(--notes-compact-table-min-width);
+  max-width: 100% !important;
+  table-layout: fixed !important;
+  margin: 8px auto 10px auto !important;
 }
 
-/* Separate, nearly blank page for miscellaneous work. */
+table.compact-table col.half-col {
+  width: 50%;
+}
+
+table.compact-table th,
+table.compact-table td {
+  width: 50%;
+  padding: var(--notes-compact-table-cell-pad-y)
+           var(--notes-compact-table-cell-pad-x) !important;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ── SUMMARY / COMMON MISTAKES / MISC PAGE ─────────────────── */
+/* No workspace after Summary. */
+.h-summary + .summary-list {
+  margin-bottom: 14px;
+}
+
+.notes-mistakes-block,
+.mistake-table,
+.mistake-table tr {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+/* Separate blank page after Common Mistakes for miscellaneous work. */
 .notes-misc-workspace {
   height: var(--notes-misc-workspace-height);
   min-height: var(--notes-misc-workspace-height);
@@ -68,42 +128,21 @@ figure.notes-graph img {
   page-break-before: always;
 }
 
-/* ── KEEP LOGICAL TASKS TOGETHER WHEN PRINTING ─────────────── */
-.notes-keep-together,
-.notes-task-block,
-.notes-mistakes-block,
-table,
-figure,
-tr {
-  break-inside: avoid-page !important;
-  page-break-inside: avoid !important;
-}
-
-.h-example,
-.h-yti,
-.h-mistakes {
-  break-after: avoid-page;
-  page-break-after: avoid;
-}
-
-thead {
-  display: table-header-group;
-}
-
-tfoot {
-  display: table-footer-group;
-}
-
-/* Keep a task's heading, representation/prompt, and workspace as one unit
-   whenever it can fit on a page. */
-.notes-task-block {
-  margin: 0;
-  padding: 0;
-}
-
-/* ── PRINT-SPECIFIC REINFORCEMENT ───────────────────────────── */
 @media print {
-  .notes-ws {
+  .notes-ican-start,
+  .notes-task-content,
+  .notes-task-content table,
+  .notes-task-content figure,
+  .notes-task-content tr,
+  .notes-mistakes-block,
+  .mistake-table,
+  .mistake-table tr {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  .notes-ws,
+  .notes-task-workspace {
     height: var(--notes-workspace-height) !important;
     min-height: var(--notes-workspace-height) !important;
   }
@@ -111,15 +150,5 @@ tfoot {
   .notes-misc-workspace {
     height: var(--notes-misc-workspace-height) !important;
     min-height: var(--notes-misc-workspace-height) !important;
-  }
-
-  .notes-keep-together,
-  .notes-task-block,
-  .notes-mistakes-block,
-  table,
-  figure,
-  tr {
-    break-inside: avoid-page !important;
-    page-break-inside: avoid !important;
   }
 }
