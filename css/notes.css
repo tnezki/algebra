@@ -279,3 +279,74 @@ table.compact-table td {
     min-height: var(--notes-misc-workspace-height) !important;
   }
 }
+
+
+/* ── VOCABULARY SORT ─────────────────────────────────────────
+   Active prior-knowledge task. Directions + 3-column sort table
+   stay together when the block fits on the next page. */
+.vocab-sort-task {
+  margin: 8px 0 18px 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.vocab-sort-directions {
+  margin: 0 0 10px 0 !important;
+  font-size: 11pt !important;
+  line-height: 1.4 !important;
+}
+.vocab-sort-directions strong {
+  color: var(--navy, #0b174f);
+  font-weight: 850;
+}
+.vocab-sort-table {
+  width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.vocab-sort-table th,
+.vocab-sort-table td {
+  width: 33.333% !important;
+  border: 1px solid #777 !important;
+  vertical-align: top !important;
+}
+.vocab-sort-table th {
+  background: #eaf0f9 !important;
+  color: var(--navy, #0b174f) !important;
+  text-align: left !important;
+  font-size: 11pt !important;
+  font-weight: 850 !important;
+  padding: 10px 12px !important;
+}
+.vocab-sort-table tr.vocab-sort-space td {
+  height: 2.15in !important;
+  padding: 8px 10px !important;
+}
+
+/* ── WTC PREVIEW INSTRUCTIONS ────────────────────────────────
+   Visually separate preview/annotation directions from the
+   mathematical questions that follow. */
+.wtc-instructions {
+  margin: 8px 0 12px 0 !important;
+  padding: 10px 14px !important;
+  border: 2px solid #b7831f !important;
+  border-left: 7px solid #b7831f !important;
+  border-radius: 8px !important;
+  background: #fffaf0 !important;
+  color: #333 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.wtc-instructions p {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.wtc-instructions .wtc-do-not-solve {
+  margin: 0 0 4px 0 !important;
+  color: #7a4f00 !important;
+  font-size: 11.5pt !important;
+  font-weight: 900 !important;
+  letter-spacing: .4px !important;
+}
