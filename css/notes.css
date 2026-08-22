@@ -1,13 +1,14 @@
 /* ============================================================
-   notes_layout_v2.css — Algebra Notes layout pilot
+   notes_layout_v3.css — Algebra Notes layout pilot
    Load AFTER base.css and notes.css.
 
    QUICK MANUAL CONTROLS
    Change these first when tuning the PDF.
    ============================================================ */
 :root {
-  --notes-graph-width: 80%;
-  --notes-workspace-height: 3.40in;
+  --notes-graph-max-width: 2.40in;
+  --notes-graph-max-height: 2.40in;
+  --notes-workspace-height: 2.50in;
   --notes-misc-workspace-height: 9.0in;
   --notes-ican-font-size: 15pt;
   --notes-compact-table-min-width: 2.35in;
@@ -39,7 +40,8 @@ figure.notes-graph {
 
 figure.notes-graph img {
   width: auto !important;
-  max-width: var(--notes-graph-width) !important;
+  max-width: var(--notes-graph-max-width) !important;
+  max-height: var(--notes-graph-max-height) !important;
   height: auto !important;
   display: block;
   margin-left: auto !important;
@@ -47,12 +49,14 @@ figure.notes-graph img {
 }
 
 /* ── TASK PAGINATION ────────────────────────────────────────── */
-/* The heading + table/graph + prompt are one printable unit.
-   The writing workspace is intentionally OUTSIDE this no-break unit.
-   This avoids the previous giant block that pushed whole tasks around. */
+/* Keep the COMPLETE task together when it fits:
+   heading + table/graph + prompt + writing workspace.
+   The 2.5in default workspace makes this practical for most tasks. */
 .notes-task {
   margin: 0;
   padding: 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
 }
 
 .notes-task-content {
@@ -73,7 +77,7 @@ figure.notes-graph img {
   page-break-inside: avoid;
 }
 
-/* Workspace can flow independently from the prompt block. */
+/* Workspace is inside .notes-task and therefore travels with the task when it fits. */
 .notes-ws,
 .notes-task-workspace {
   height: var(--notes-workspace-height) !important;
@@ -130,6 +134,7 @@ table.compact-table td {
 
 @media print {
   .notes-ican-start,
+  .notes-task,
   .notes-task-content,
   .notes-task-content table,
   .notes-task-content figure,
