@@ -350,3 +350,121 @@ table.compact-table td {
   font-weight: 900 !important;
   letter-spacing: .4px !important;
 }
+
+
+/* ── STEP 2: SKIM THE SECTION ────────────────────────────────
+   Reading Apprenticeship preview before close reading begins.
+   Left prompt cells are fixed-width; right cells are generous
+   ruled writing areas for Notability annotation. */
+.skim-section-task {
+  margin: 16px 0 22px 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.skim-section-directions {
+  margin: 0 0 12px 0 !important;
+  font-size: 11pt !important;
+  line-height: 1.4 !important;
+}
+.skim-section-directions strong {
+  font-weight: 900 !important;
+}
+.skim-section-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin: 0 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.skim-section-table th,
+.skim-section-table td {
+  border: 1px solid #777 !important;
+  vertical-align: top !important;
+}
+.skim-section-table th {
+  width: 16% !important;
+  background: #eaf0f9 !important;
+  color: var(--navy, #0b174f) !important;
+  text-align: left !important;
+  font-size: 11pt !important;
+  font-weight: 900 !important;
+  padding: 12px 14px !important;
+}
+.skim-section-table td {
+  height: 1.55in !important;
+  padding: 10px 12px !important;
+  background-color: #fff !important;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 0.37in,
+    #edf0f5 0.38in,
+    #edf0f5 0.385in
+  ) !important;
+}
+
+@media print {
+  .skim-section-task,
+  .skim-section-table,
+  .skim-section-table tr {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+
+/* ── V8 VISUAL POLISH: WHAT'S TO COME HEADER ────────────────
+   Match the strong section header treatment used elsewhere:
+   navy left rule + large navy title, without turning the whole
+   section into a filled card. */
+.notes-wtc > .h-preview {
+  color: var(--navy, #0b174f) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 7px solid var(--navy, #0b174f) !important;
+  border-radius: 0 !important;
+  padding: 5px 0 5px 14px !important;
+  margin: 18px 0 12px 0 !important;
+  font-size: 22pt !important;
+  line-height: 1.12 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+}
+
+/* ── V8 CLOSE-READING DIRECTIONS ─────────────────────────────
+   Lives INSIDE .notes-ican-start so directions + I Can heading +
+   opening reading travel as one instructional block in print. */
+.close-reading-instructions {
+  margin: 16px 0 10px 0 !important;
+  padding: 10px 14px !important;
+  border: 2px solid #2d6a9f !important;
+  border-left: 7px solid #2d6a9f !important;
+  border-radius: 8px !important;
+  background: #f3f8fd !important;
+  color: #263238 !important;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.close-reading-instructions p {
+  margin: 0 !important;
+  line-height: 1.42 !important;
+  font-size: 11pt !important;
+}
+.close-reading-instructions .close-reading-title {
+  margin: 0 0 4px 0 !important;
+  color: var(--navy, #0b174f) !important;
+  font-size: 11.5pt !important;
+  font-weight: 900 !important;
+  letter-spacing: .35px !important;
+}
+
+@media print {
+  .notes-wtc > .h-preview,
+  .close-reading-instructions,
+  .notes-ican-start > .h-intro,
+  .notes-ican-start > .reading-box {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+}
