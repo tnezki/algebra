@@ -2044,42 +2044,73 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-
-# UNIT 1 GENERATION CALLS — appended without modifying the authoritative tool above.
+# UNIT 1 REPRESENTATION-UPGRADE GENERATION CALLS — appended only below authoritative tool.
 if __name__ == '__main__':
-    # Section 1.1 practice graphs
-    specs = [
+    line_specs = [
         ('s1_practice_graph_p1.png', 2.0, -1.0),
         ('s1_practice_graph_p2.png', -1.0, 3.0),
         ('s1_practice_graph_p3.png', 0.5, -2.0),
         ('s1_practice_graph_ep.png', -2.0, 4.0),
-        ('s5_review_linear.png', 2.0, 3.0),
+        ('s1_p1_q18_graph.png', 1.0, 2.0),
+        ('s1_p1_q19_graph.png', -2.0, 5.0),
+        ('s1_p1_q20_graph.png', 1.0, 3.0),
+        ('s1_p2_q18_graph.png', 2.0, -5.0),
+        ('s1_p2_q19_graph.png', 0.5, -3.0),
+        ('s1_p2_q20_graph.png', -0.5, 1.0),
+        ('s1_cyu_q05_graph.png', 3.0, -4.0),
+        ('s1_p3_q17_graph.png', 3.0, -2.0),
+        ('s1_p3_q18_graph.png', -1.0, 5.0),
+        ('s1_p3_q19_graph.png', 2.0, 2.0),
+        ('s1_p3_q20_graph.png', -2.0, 3.0),
+        ('s1_ep_q18_graph.png', 0.5, 1.0),
+        ('s1_ep_q19_graph.png', -1.0, -3.0),
+        ('s1_ep_q20_graph.png', -1.0, 0.0),
+        ('s1_eta_q04_graph.png', -1.5, 4.0),
     ]
-    for filename, m, b in specs:
+    for filename, m, b in line_specs:
         fig, ax = plt.subplots(figsize=(3.5,3.5))
         make_standard_graph(ax, [{'expr':lambda x,m=m,b=b: m*x+b,
                                   'deriv':lambda x,m=m: np.zeros_like(x)+m,
                                   'color':'steelblue'}])
         save_graph(fig, filename); plt.close(fig)
 
-    # Section 1.3 family graphs
-    family_specs = [
+    retained_family_specs = [
         ('s3_graph_linear.png', lambda x: 2*x+1, lambda x: np.zeros_like(x)+2),
         ('s3_graph_quad.png', lambda x: x**2-4, lambda x: 2*x),
         ('s3_graph_exp.png', lambda x: 2**(x/2)-1, lambda x: (np.log(2)/2)*(2**(x/2))),
         ('s3_graph_abs.png', lambda x: np.abs(x)-3, lambda x: np.sign(x)),
+    ]
+    for filename, f, fp in retained_family_specs:
+        fig, ax = plt.subplots(figsize=(3.5,3.5))
+        make_standard_graph(ax, [{'expr':f,'deriv':fp,'color':'steelblue'}])
+        save_graph(fig, filename); plt.close(fig)
+
+    family_specs = [
+        ('s3_p1_q14_linear.png', lambda x: -x+2, lambda x: np.zeros_like(x)-1),
+        ('s3_p1_q15_linear.png', lambda x: 1.5*x-4, lambda x: np.zeros_like(x)+1.5),
+        ('s3_p1_q16_linear.png', lambda x: 3*x+1, lambda x: np.zeros_like(x)+3),
+        ('s3_eta_q04_linear.png', lambda x: -3*x-1, lambda x: np.zeros_like(x)-3),
+        ('s3_p2_q13_quad.png', lambda x: (x-1)**2-2, lambda x: 2*(x-1)),
+        ('s3_p2_q14_quad.png', lambda x: 0.5*x**2+1, lambda x: x),
+        ('s3_p2_q15_quad.png', lambda x: -(x+2)**2+3, lambda x: -2*(x+2)),
+        ('s3_p2_q16_quad.png', lambda x: 2*x**2-3, lambda x: 4*x),
+        ('s3_p3_q14_exp.png', lambda x: 1.5**x-2, lambda x: np.log(1.5)*(1.5**x)),
+        ('s3_p3_q15_exp.png', lambda x: 0.5**x+1, lambda x: np.log(0.5)*(0.5**x)),
+        ('s3_p3_q16_exp.png', lambda x: 2**((x-2)/2)+2, lambda x: (np.log(2)/2)*(2**((x-2)/2))),
+        ('s3_ep_q14_abs.png', lambda x: np.abs(x-2)+1, lambda x: np.sign(x-2)),
+        ('s3_ep_q15_abs.png', lambda x: -np.abs(x+1)+4, lambda x: -np.sign(x+1)),
+        ('s3_ep_q16_abs.png', lambda x: 0.5*np.abs(x)-2, lambda x: 0.5*np.sign(x)),
+        ('s3_cyu_q04_abs.png', lambda x: np.abs(x+3)-1, lambda x: np.sign(x+3)),
     ]
     for filename, f, fp in family_specs:
         fig, ax = plt.subplots(figsize=(3.5,3.5))
         make_standard_graph(ax, [{'expr':f,'deriv':fp,'color':'steelblue'}])
         save_graph(fig, filename); plt.close(fig)
 
-    # Reusable blank number line
     fig, ax = plt.subplots(figsize=(3.5,1.25))
     make_number_line_blank(ax, xmin=-10, xmax=10)
     save_graph(fig, 'blank_numline.png'); plt.close(fig)
 
-    # Algebra Diamond retrieval routine figures
     make_diamond(r'$-12$', '', '', r'$-1$', filename='diamond_11.png')
     make_diamond(r'$18$', '', '', r'$9$', filename='diamond_12.png')
     make_diamond(r'$-20$', '', '', r'$-1$', filename='diamond_13.png')

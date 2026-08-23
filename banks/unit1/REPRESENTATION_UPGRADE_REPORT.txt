@@ -1,0 +1,68 @@
+UNIT 1 BANK — 3d REPRESENTATION & FIGURE UPGRADE REPORT
+========================================================================
+Course: Algebra 1
+Unit: 1 — Foundations of Functions and Algebra
+Focused pass: 3d Representation / Figure Upgrade
+Current Framework checked: v6.35
+
+MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+- Current Framework Unit 1 title/sections match the Bank.
+- All 15 exact section I-can statements in the current Framework are present in the Bank I-can map.
+- No learning-target, stage, mastery-goal, or section architecture was remapped.
+
+FIGURE-USE INVENTORY SUMMARY
+- Canonical Bank items: 755.
+- Canonical items using figures after repair: 59.
+- Final figure files: 50.
+- Repeated content-bearing figure files reviewed: 8.
+- Those 8 reused files covered 38 independent item uses before repair.
+- New distinct content-bearing figures generated: 30.
+- True orphan production figures removed: 1 (s5_review_linear.png).
+- Student-facing descriptive figure captions removed: 59 canonical item instances and both rendered Bank views.
+
+FINAL ITEM-LEVEL DISPOSITION
+- KEEP: 0
+- UPGRADE: 29
+  Retained the strong figure/representation but removed prohibited visible descriptive captions and synchronized canonical text/presentation.
+- REPLACE: 30
+  Replaced an accidentally shared content-bearing graph with a genuinely distinct graph instance while preserving target, destination, representation type, and difficulty role.
+- INVESTIGATE: 0 unresolved
+  Two HTML-visible graph uses initially lacked canonical figures metadata; both were resolved and given unique figure instances.
+
+INDEPENDENT-GRAPH UNIQUENESS GATE
+- PASS.
+- No content-bearing graph file is now shared by independent canonical Bank items.
+- No exact duplicate figure bytes remain among production figure files.
+- New line graphs were also checked by generation signature/equation so a renamed file could not pass merely by having a different filename.
+- Practice, Notes YTI, CYU, and Exit Ticket graph uses that had shared an instantiated graph now have distinct content-bearing graph instances.
+
+INTENTIONAL SHARING EXCEPTION
+- figures/blank_numline.png is intentionally shared by 10 items.
+  Reason: it is a neutral blank workspace scaffold with no item-specific mathematical information, explicitly allowed by the 3d PM.
+- Connected multipart WTC figures remain shared only inside their own coherent canonical task; they are not reused across independent Bank items.
+
+CORRECTNESS / SYNCHRONIZATION
+- All canonical figure references resolve.
+- Canonical figures metadata and student_html image references agree for every item.
+- Teaching and review HTML each render 755 Bank items.
+- Teaching/review HTML contain no student-facing figcaption elements.
+- Prompt/answer values were rechecked for every changed Section 1.1 graph-reading item.
+- New Section 1.3 family graphs preserve the intended family while changing the instantiated graph.
+- No orphan figure files remain.
+- generate_graphs.py is the current Framework v12 graph tool copied intact with Unit-specific calls appended only in the approved area.
+- ~finalize_bank.py is the current Framework finalizer copy.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+- Representation semantic audit: PASS.
+- Current Framework MathJax v10 fixer: PASS with 0 audit warnings.
+- Current Algebra Bank finalizer: PASS.
+- Required files / teaching-review canonical counts / MathJax / resolved inventory / exports / Summative profile / graph generation / mechanical cleanup: PASS.
+
+SYSTEM LESSONS FOR REVIEW
+1. Future figure-use maps should merge canonical figures metadata with actual student_html <img> references; metadata-only inventory can miss stale or empty canonical figure lists.
+2. Independent-graph uniqueness QA should compare file hashes AND generation signatures/equations/data. Filename uniqueness alone is insufficient.
+3. A deterministic audit for student-facing <figcaption> elements would prevent a universal representation-caption rule from regressing.
+4. A deterministic audit should flag any item whose student_html image references and canonical figures metadata disagree.
+5. For content-bearing graphs in high-abundance destinations, authoring should default to one generated instance per independent canonical item unless a shared stimulus is explicitly mapped.
+
+No secure Summative prompt text is quoted in this report.

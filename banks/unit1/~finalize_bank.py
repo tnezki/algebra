@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Algebra Bank Finalizer v7 SAFE — embeds authoritative MathJax v9 repair engine
+# Algebra Bank Finalizer v7 SAFE — embeds authoritative MathJax v10 repair engine
 # Mechanical repair only; concise computer checks + targeted teacher review.
 from pathlib import Path
 from collections import defaultdict
 import argparse, csv, html, json, re, shutil, subprocess, sys, zipfile
 
-# --- EMBEDDED AUTHORITATIVE MATHJAX v9 REPAIR/AUDIT ENGINE ---
+# --- EMBEDDED AUTHORITATIVE MATHJAX v10 REPAIR/AUDIT ENGINE ---
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 1 — BYTE-LEVEL AUTO-FIXES
 # Control-character corruptions where a Python escape sequence replaced the
@@ -62,6 +62,66 @@ REGEX_FIXES = [
      r"\] → $$ — wrong display-close delimiter"),
 ]
 
+
+# V10 — CANONICAL MATHJAX CONFIG REPAIR
+#
+# This tool intentionally normalizes content delimiters from \(...\) / \[...\]
+# to $...$ / $$...$$ (see REGEX_FIXES above). Therefore HTML that loads MathJax
+# must also enable the canonical dollar delimiters. A recent PT/QC generator used
+# parenthesis/bracket-only MathJax configuration; after this fixer normalized the
+# content, the browser displayed literal dollar signs. V10 repairs that mismatch.
+MATHJAX_CONFIG_SCRIPT_RE = re.compile(
+    r'(<script\b[^>]*>\s*window\.MathJax\s*=\s*\{.*?</script>)',
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def repair_mathjax_config_html(text):
+    """Normalize MathJax HTML config to the established dollar-delimiter contract."""
+    hits = 0
+
+    def repl(match):
+        nonlocal hits
+        block = match.group(1)
+        original = block
+
+        # Replace any one-line inlineMath/displayMath declarations in the
+        # window.MathJax config. This also repairs the malformed historical
+        # inlineMath declaration that incorrectly included display delimiters.
+        block = re.sub(
+            r'(?m)^(?P<indent>\s*)inlineMath\s*:\s*[^\r\n]+$',
+            lambda m: m.group('indent') + "inlineMath: [['$','$']],",
+            block,
+        )
+        if re.search(r'(?m)^\s*displayMath\s*:', block):
+            block = re.sub(
+                r'(?m)^(?P<indent>\s*)displayMath\s*:\s*[^\r\n]+$',
+                lambda m: m.group('indent') + "displayMath: [['$$','$$']],",
+                block,
+            )
+        else:
+            # Insert displayMath immediately after inlineMath if missing.
+            block = re.sub(
+                r"(?m)^(?P<indent>\s*)inlineMath:\s*\[\['\$','\$'\]\],\s*$",
+                lambda m: m.group(0) + "\n" + m.group('indent') + "displayMath: [['$$','$$']],",
+                block,
+                count=1,
+            )
+
+        # Ensure escaped currency works with dollar-delimited MathJax.
+        if re.search(r'(?m)^\s*processEscapes\s*:', block):
+            block = re.sub(
+                r'(?m)^(?P<indent>\s*)processEscapes\s*:\s*(?:true|false)\s*,?\s*$',
+                lambda m: m.group('indent') + 'processEscapes: true',
+                block,
+            )
+
+        if block != original:
+            hits += 1
+        return block
+
+    new_text = MATHJAX_CONFIG_SCRIPT_RE.sub(repl, text)
+    return new_text, hits
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 3 — MATH-STRUCTURE + MATH-BLOCK AUTO-FIXES
@@ -884,7 +944,7 @@ def audit_file(path, text):
         warnings.append("    HEAD ORDER: window.MathJax config appears AFTER the CDN script")
 
     return warnings
-# --- END EMBEDDED MATHJAX v9 ENGINE ---
+# --- END EMBEDDED MATHJAX v10 ENGINE ---
 
 CANONICAL_BANK_CSS = '''/* Base Bank - canonical clean teacher inspection style.
    Production location: css/bank.css
@@ -1026,8 +1086,10 @@ def sync_shared_css(base):
     return False
 
 def _normalize_mathjax_head_and_nav(text):
-    # Locked dollar-delimited MathJax config before CDN + visible nav whitespace.
+    # V10: keep dollar-delimited content and MathJax configuration aligned before CDN.
     if 'window.MathJax' in text:
+        text,_=repair_mathjax_config_html(text)
+        # Existing simple configs are replaced wholesale with the locked canonical block.
         text=MATHJAX_CONFIG_RE.sub(CANONICAL_MATHJAX,text,count=1)
     elif 'cdn.jsdelivr.net/npm/mathjax' in text:
         text=text.replace('<script async src="https://cdn.jsdelivr.net/npm/mathjax',CANONICAL_MATHJAX+'\n<script async src="https://cdn.jsdelivr.net/npm/mathjax',1)
@@ -1125,6 +1187,13 @@ def _fast_residual_math_audit(path,text):
             warnings.append('BARE CURRENCY-LIKE $[digit] remains outside math')
         if 'mathjax' in text.lower() and ('cdnjs' in text or 'unpkg' in text):
             warnings.append('WRONG MATHJAX CDN remains')
+        if 'window.MathJax' in text:
+            has_inline_dollar=bool(re.search(r"inlineMath\s*:\s*\[\s*\[\s*['\"]\$['\"]\s*,\s*['\"]\$['\"]",text))
+            has_display_dollar=bool(re.search(r"displayMath\s*:\s*\[\s*\[\s*['\"]\$\$['\"]\s*,\s*['\"]\$\$['\"]",text))
+            if math_blocks and not has_inline_dollar:
+                warnings.append('MATHJAX CONFIG MISMATCH: $...$ content exists but inlineMath does not enable $ delimiters')
+            if '$$' in text and not has_display_dollar:
+                warnings.append('MATHJAX CONFIG MISMATCH: $$...$$ content exists but displayMath does not enable $$ delimiters')
         config_pos=text.find('window.MathJax');cdn_pos=text.find('cdn.jsdelivr.net')
         if config_pos!=-1 and cdn_pos!=-1 and config_pos>cdn_pos:
             warnings.append('MATHJAX CONFIG appears after CDN')
@@ -1136,7 +1205,7 @@ def _fast_residual_math_audit(path,text):
     return warnings
 
 def safe_repair_files(base):
-    """Apply authoritative v9 repairs silently; return only unresolved audit warnings."""
+    """Apply authoritative v10 repairs silently; return only unresolved audit warnings."""
     changed=0
     residual=[]
     for p in base.rglob('*'):
