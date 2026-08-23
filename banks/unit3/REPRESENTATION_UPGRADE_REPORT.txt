@@ -1,0 +1,63 @@
+UNIT 3 BANK — REPRESENTATION & FIGURE UPGRADE REPORT (3d)
+================================================================
+Course: Algebra 1
+Unit: 3 — Systems and Constraints
+Current Framework used: v6.35
+Focused PM: Base Bank Representation & Figure Upgrade v1.1
+
+MAP SAFETY
+MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+The Unit 3 target/evidence architecture was preserved. No I-can, learning-target, destination, family, or mastery mapping was remapped in this pass.
+
+FIGURE-USE INVENTORY SUMMARY
+- Canonical items reviewed: 743.
+- Figure-bearing canonical items reviewed: 128.
+- Initial referenced figure files: 119.
+- Initial exact-byte repeated content-bearing figure groups: 28, spanning 111 item occurrences.
+- Initial direct same-path reuse cases: 9.
+- The prompts use the representations as evidence-bearing content (graph reading/intersection, graph-to-inequality translation, feasible-region interpretation, or Diamond work); no decorative figure was retained as a counted representation.
+- Final referenced figure files: 128, one content-bearing figure path per figure-bearing canonical item.
+- Final exact-byte duplicate groups among referenced figures: 0.
+- Final missing figure references: 0.
+- Final orphan production figures: 0.
+
+KEEP / UPGRADE / REPLACE / INVESTIGATE
+- KEEP: 42 figure-bearing items retained their existing figure instance.
+- UPGRADE: 7 figure-bearing items required correctness/readability repair.
+- REPLACE: 79 figure-bearing items received a genuinely new comparable figure instance because independent-question reuse remained.
+- INVESTIGATE: 0 unresolved cases.
+
+CORRECTNESS / READABILITY REPAIRS
+- Repaired 1 linear-inequality Example whose answer did not match the rendered boundary/shading.
+- Repaired 2 systems-of-inequalities items whose listed feasible point did not satisfy the rendered overlap.
+- Rebuilt all 4 Section 3.3 break-even graph instances because the stated intersection was outside the authoritative graph tool's visible window; the new intersections are visible and the answer keys were synchronized.
+- Rechecked every final graph-bearing item against its generation parameters and answer/key; 0 graph-answer mismatches remain.
+- Representative rendered figures were visually inspected for clipping, legibility, boundary style, shading, overlap, and visible intersections.
+
+NEW / REMOVED FIGURES AND GENERATION HYGIENE
+- 86 content-bearing figure instances were newly re-authored in this focused pass.
+- 9 additional figure filenames were introduced to split direct same-path reuse cleanly.
+- Orphan figures removed: 0 (the input had no true orphan production figures).
+- generate_graphs.py was rebuilt from the current authoritative Framework graph tool with a clean Unit 3 call set: one generation call per final output figure, rather than stale overwrite chains from prior passes.
+- The current Framework self-contained finalizer replaced the prior embedded finalizer for this output.
+
+INTENTIONAL SHARED-FIGURE EXCEPTIONS
+- None across independent canonical items. Content-bearing figure reuse is no longer present.
+- WTC shared-stimulus logic remains intact inside each coherent WTC item; it does not require cross-item reuse of the same production asset here.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+- Representation uniqueness gate: PASS (0 repeated referenced image hashes; 0 shared content-bearing paths).
+- Prompt/figure/answer mathematical consistency audit: PASS (0 issues).
+- Figure path/package hygiene: PASS (128 referenced; 128 present; 0 missing; 0 orphaned).
+- Image sanity/readability checks: PASS (no near-blank or undersized outputs detected).
+- Framework MathJax fixer v10: PASS with 0 auto-fixes and 0 audit warnings before finalizer.
+- Framework finalizer: REVIEW with every mechanical check PASS, no BROKEN / MUST FIX items, and one inherited Practice wording heuristic for 12 graph-critique questions. That heuristic was reviewed as outside this focused representation defect set and does not indicate a figure/path/key failure.
+
+SYSTEM LESSONS FOR REVIEW
+1. A broad Bank upgrade can still miss representation duplication when different filenames render identical pixels. The representation pass must compare hashes and generation signatures, not filenames alone.
+2. In-place overwrite calls can make a later graph silently stop matching an earlier canonical answer. A clean one-call-per-output generation section makes source-to-byte behavior auditable.
+3. Graph correctness includes visibility: a mathematically correct intersection outside the displayed window is not usable evidence for a graph-reading task.
+4. For independent graph-reading items, variation should change the actual mathematical instance while preserving target, evidence job, representation type, and natural Algebra 1 values.
+
+FINAL PRINCIPLE APPLIED
+ONE INDEPENDENT QUESTION INSTANCE -> ITS OWN CONTENT-BEARING GRAPH, unless reuse is explicitly purposeful.

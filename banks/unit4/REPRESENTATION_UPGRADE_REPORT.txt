@@ -1,0 +1,180 @@
+UNIT 4 BANK - REPRESENTATION & FIGURE UPGRADE REPORT
+======================================================================
+Pass: 3d Bank Representation Upgrade
+Framework authority: Algebra 1 Framework v6.35
+Unit: 4 - Function Families and Transformations
+
+MAP SAFETY
+----------------------------------------------------------------------
+MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+
+The existing Unit 4 mapping and inventory were strong and were not remapped.
+Canonical inventory remained 743 items across Sections 4.1-4.5. This pass
+changed representation instances and synchronized affected prompts/answers
+only where the representation itself required a corresponding content fix.
+
+FIGURE-USE SUMMARY
+----------------------------------------------------------------------
+Canonical items with file-based figures: 143
+Final figure references:                143
+Final PNG files:                        143
+Distinct SHA-256 figure hashes:         143
+Missing referenced figures:             0
+Orphan/stale figure files:               0
+Changed canonical items:               126
+New figure filenames created:          126
+
+Figure-bearing items by representation label:
+- Graph: 107
+- Area model: 22
+- Scatter plot: 5
+- Diamond: 5
+- Table + Graph: 4
+
+Major destination counts among figure-bearing items:
+- Practice Set 1: 26
+- Practice Set 2: 26
+- Practice Set 3: 24
+- Extra Practice: 20
+- CYU: 8
+- Notes YTI: 6
+- WTC: 5
+- Notes Example: 5
+- Warm-Up 1: 5
+- Exit Ticket A: 5
+- Secure Summative V1-V4: 2 figures per form
+- Warm-Up 2: 2
+- Warm-Up 3: 2
+- Secure Summative V6: 1
+
+REPEATED CONTENT-BEARING FIGURE CASES REVIEWED
+----------------------------------------------------------------------
+The incoming bank had 11 repeated content-bearing figure assets spanning
+137 independent item uses. These were reviewed under the hard rule that an
+independent question instance receives its own content-bearing figure unless
+an allowed sharing exception applies.
+
+Incoming repeated assets and use counts:
+- figures/u4_s41_family_gallery.png: 31
+- figures/u4_s42_translation_pair.png: 14
+- figures/u4_s45_quadratic_graph.png: 14
+- figures/u4_s43_quad_transform_pair.png: 13
+- figures/u4_s43_transform_pair.png: 13
+- figures/u4_s44_area_partial.png: 12
+- figures/u4_s42_abs_shift_pair.png: 11
+- figures/u4_s45_down_quadratic.png: 11
+- figures/u4_s44_area_complete.png: 10
+- figures/u4_sum_compare_graph.png: 4
+- figures/u4_sum_scatter_a.png: 4
+
+Final state: no content-bearing figure file is reused across independent
+canonical items. The final bank also has no duplicate PNG byte hashes, so the
+upgrade is not a filename-only copy/rename workaround.
+
+KEEP / UPGRADE / REPLACE / INVESTIGATE
+----------------------------------------------------------------------
+Reviewed figure-bearing item instances: 143
+- KEEP: 17
+  - 11 sound original figures retained as the single remaining instance after
+    splitting formerly repeated assets.
+  - 6 already-unique incoming figure instances remained sound and unchanged.
+- UPGRADE: 13
+  - Used where prompt/answer/representation synchronization or representation
+    fidelity required a content-level repair rather than simple instance
+    replacement.
+- REPLACE: 113
+  - Replaced repeated content-bearing figures with independent mathematically
+    valid instances while preserving the mapped target and task architecture.
+- INVESTIGATE: 0
+
+CORRECTNESS / SYNCHRONIZATION REPAIRS
+----------------------------------------------------------------------
+1. A Section 4.3 table-plus-graph WTC had a transformed graph containing an
+   additional vertical shift that was not present in the table. The graph and
+   answer were corrected so the table, graph, and transformation now encode
+   the same relationship.
+
+2. Area-model items were checked for complete-versus-partial model alignment.
+   Mismatched cases were corrected so each prompt refers to the model state
+   actually displayed, and answers now address the displayed task rather than
+   a second unseen model.
+
+3. Repeated transformation graphs, quadratic graphs, family galleries, area
+   models, and applicable secure-form figures were replaced with independent
+   mathematical instances. Where a changed figure altered numeric features,
+   the corresponding prompt/answer evidence was synchronized.
+
+4. Secure summative prompt text was not reproduced in this report. Parallel
+   secure forms retain their intended structure while using distinct
+   content-bearing figure instances where figures are present.
+
+NEW FIGURES / AUTHORING CONTRACT
+----------------------------------------------------------------------
+- 126 new figure filenames were added.
+- The current Framework graph tool base (~graph_tool_v12.py) was preserved
+  intact and Unit 4 generation calls were appended to it.
+- The current Framework finalizer (~finalize_bank.py) was used.
+- The current Framework MathJax fixer (~fix_mathjax_v10.py) was run before
+  finalization.
+- No descriptive figcaptions were introduced.
+
+ORPHAN REMOVALS
+----------------------------------------------------------------------
+Orphan/stale figure files removed: 0
+
+All incoming production figures that remained were intentionally retained for
+one valid canonical item. The generator and final figure directory contain no
+unreferenced production PNGs after the upgrade.
+
+INTENTIONAL SHARE EXCEPTIONS
+----------------------------------------------------------------------
+Cross-item file-sharing exceptions used in the final bank: 0
+
+Connected/multipart WTC stimuli may legitimately share a representation
+inside one canonical item, but each figure-bearing canonical item in this bank
+now points to its own file.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+----------------------------------------------------------------------
+Representation-specific semantic QA: PASS
+- 743 canonical items retained
+- 143 figure-bearing item uses
+- 143 unique figure references
+- 143 unique PNG hashes
+- 0 missing figure references
+- 0 orphan figure files
+- 0 disallowed figcaptions
+- 0 invalid control-character findings
+- targeted table/graph and area-model synchronization checks passed
+
+Framework MathJax fixer: PASS
+- 0 audit warnings
+- one evidence-map file received permitted notation normalization
+
+Framework finalizer: PASS
+- Required files: PASS
+- Teaching/review HTML / mapping / JSON: PASS (743 in both HTML views)
+- MathJax / HTML: PASS
+- Resolved Algebra inventory: PASS
+- Exports: PASS
+- Summative profile: PASS
+- Question review scan: PASS
+- Graph generation: PASS
+- Mechanical cleanup: PASS
+- Broken / must fix: NONE
+- Might need a look: NONE
+
+SYSTEM LESSONS
+----------------------------------------------------------------------
+- Figure QA must test underlying mathematical instance/bytes, not just filenames;
+  unique filenames can still hide copied content.
+- Table-plus-graph tasks need same-instance synchronization across every
+  representation and the answer key; an answer should not explain away a
+  transformation that the table never encoded.
+- Area-model prompts should ask about the singular model actually shown unless
+  a second model is intentionally supplied.
+- Parallel secure forms may preserve structure while still requiring distinct
+  content-bearing figure instances.
+- A representation-specialist pass can preserve a strong unit map while making
+  substantial figure-level corrections; remapping is not required when the
+  instructional architecture is already sound.

@@ -1,0 +1,34 @@
+BANK FINALIZER REPORT
+========================================================================
+Status: PASS (targeted finalizer checks; full driver graph-regeneration step exceeded runtime limit)
+Course family: spiral_math
+
+COMPUTER CHECKS
+- Required files: PASS
+- Teaching/review HTML / mapping / JSON: PASS (743 in both HTML views)
+- MathJax / HTML: PASS
+- Resolved Algebra inventory: PASS
+- Exports: PASS
+- Summative profile: PASS
+- Question review scan: PASS
+- Graph assets: PASS (143/143 referenced; no missing/orphans; hashes unchanged from the already-finalized 3e input because this 3f pass changed no figure-bearing items)
+- Mechanical cleanup: PASS
+
+COUNTS
+- Canonical items: 743
+- Sections: 5
+- Figures: 143
+- Export files: 10
+- Summatives: V1=8, V2=8, V3=8, V4=8, V5=8, V6=8
+- Summative est. minutes: V1=42.0, V2=42.0, V3=42.0, V4=42.0, V5=42.0, V6=42.0
+
+BROKEN / MUST FIX
+- NONE
+
+MIGHT NEED A LOOK
+- NONE
+
+FINAL ZIP: unit4_bank_FINAL.zip
+
+RUNTIME NOTE
+The full ~finalize_bank.py driver was attempted twice, but its initial graph-regeneration phase exceeded the execution limit. This Evidence/Assessment pass changed no figures or graph-generation code. Figure hashes were verified unchanged, then the current finalizer's cleanup, safe-repair, checks(), and make_zip() routines were run directly; all checks passed and ZIP CRC integrity passed.
