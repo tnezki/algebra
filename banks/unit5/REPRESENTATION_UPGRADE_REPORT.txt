@@ -1,0 +1,102 @@
+UNIT 5 BANK REPRESENTATION & FIGURE UPGRADE REPORT
+==================================================
+Course: Algebra 1
+Unit: 5 - Factoring and Quadratic Functions
+Framework authority: v6.35
+Upgrade pass: 3d Representation / Figure Upgrade
+Date: 2026-08-23
+
+MAP SAFETY
+----------
+MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+- The Unit 5 learning-target, family, stage, response-mode, and secure assessment architecture was preserved.
+- No item IDs, section counts, canonical inventory counts, or mastery-goal coverage were remapped.
+- Representation metadata was corrected only where the student-facing item did not actually use the claimed representation.
+
+FIGURE-USE INVENTORY
+--------------------
+Original production figure assets reviewed: 20
+Final production figure assets: 21
+Final referenced figure names: 21
+Missing figure references: 0
+Orphan production figures: 0
+Distinct-figure byte collisions: 0
+Canonical Bank items retained: 731
+
+Original-asset disposition:
+- KEEP: 12
+- UPGRADE: 5
+- REPLACE: 3
+- INVESTIGATE: 0
+
+The KEEP count includes 11 retained content-bearing figures plus one neutral blank coordinate-plane workspace. The five UPGRADE figures are the Unit 5 Warm-Up diamond models, corrected so the values students are asked to complete are actually blank and the shown side values are mathematically consistent. The three REPLACE figures are independent Practice quadratic graphs that had reused mathematical graph instances; each replacement now has genuinely different mathematical content.
+
+REPEATED CONTENT-BEARING FIGURE REVIEW
+---------------------------------------
+Repeated content-bearing collision groups reviewed: 2
+- Three unjustified repeated independent graph instances beyond the retained anchors were replaced with new root/equation instances.
+- Uniqueness was checked by mathematical meaning as well as file bytes and filenames.
+
+NEW / REMOVED FIGURES
+---------------------
+Changed or newly generated figure assets in this pass: 9
+- 5 corrected diamond renders
+- 3 replacement Practice quadratic graphs
+- 1 newly added secure alternate inequality-error graph stimulus
+The production graph script regenerated all 21 final figure assets after the calls were synchronized.
+Orphan figures removed: 0
+
+INTENTIONAL SHARING EXCEPTION
+-----------------------------
+`figures/u5_5_5_blank_plane.png` is intentionally shared across 9 secure graphing items. It is a neutral blank coordinate workspace and carries no question-specific mathematical information. This is the explicit neutral-workspace reuse exception allowed by the Representation Upgrade PM; it is not a duplicated content-bearing stimulus.
+
+REPRESENTATION HONESTY / SYNCHRONIZATION
+----------------------------------------
+- All graph-labeled items now include an actual graph image.
+- 11 items whose task was equation/context reasoning rather than graph reading were relabeled to their honest representation type without changing their mathematical task.
+- 1 secure alternate graph-error item was upgraded from a prose-only graph description to a real incorrect graph stimulus.
+- 33 originally Table-labeled items were reviewed: 23 now render real HTML data tables, 5 remain explicit student table-building tasks, and 5 were corrected to Equation because a table was not actually part of the task.
+- Three replacement graph items were synchronized across canonical JSON, both HTML views, answer keys, CSV maps, and graph-generation calls.
+- All five diamond generation calls now leave the student-completion fields blank; answer keys remain synchronized with the visible side values.
+- No descriptive figure captions leak answers.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+---------------------------------
+Semantic representation audit: PASS
+- 731 canonical items retained
+- 139 instructional items in each of Sections 5.1-5.5
+- 36 secure Summative items retained
+- 21/21 production figures referenced; 0 missing; 0 orphan
+- no two distinct figure files are byte-identical
+- all graph-labeled items have actual graph stimuli
+- table representations and explicit table-build tasks pass representation-honesty checks
+
+Framework MathJax final-byte fixer: PASS
+- supported files scanned: 19
+- automatic fixes: 0
+- audit warnings: 0
+
+Bank finalizer: PASS
+- required files: PASS
+- teaching/review HTML, mapping, and canonical JSON: PASS
+- MathJax / HTML: PASS
+- resolved Algebra inventory: PASS
+- exports: PASS
+- Summative profile: PASS
+- question review scan: PASS
+- graph generation: PASS
+- mechanical cleanup: PASS
+- broken / must fix: NONE
+- might need a look: NONE
+
+ZIP integrity: PASS
+- deployable ZIP tested with no CRC/member errors
+- no temp/debug/junk files or finalizer report artifacts are shipped inside the Bank ZIP
+
+SYSTEM LESSONS FOR REVIEW
+-------------------------
+1. Representation metadata is not evidence that the representation actually exists. Future Bank builds should audit the final student-facing bytes/action: a Graph item must contain a usable graph, and a Table item must contain a real table or explicitly require the student to build one.
+2. Completion-model generators should expose only the givens. A fully completed diamond can leak the answer and can hide incorrect generated values.
+3. Figure uniqueness must be checked by mathematical meaning, not only filename or hash. Independently named graphs can still reuse the same roots, equation, data, or answer-bearing instance.
+4. When a task asks students to critique a visual error, instantiate the flawed visual itself when the representation is the evidence being analyzed; prose describing the graph is weaker evidence.
+5. Neutral blank workspaces are legitimate shared assets. Keep them as explicit reuse exceptions so uniqueness gates focus on content-bearing representations.

@@ -1,0 +1,73 @@
+UNIT 7 REPRESENTATION & FIGURE UPGRADE REPORT
+=============================================
+
+Course: Algebra 1
+Unit 7: Exponential Functions and Modeling
+Pass: 3d Representation / Figure Upgrade v1.1
+
+MAP SAFETY
+- MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+- Exact Unit 7 I-can mapping, spiral routing, mastery goals, and evidence architecture were preserved.
+
+FIGURE-USE INVENTORY
+- Canonical Bank items: 755
+- Representation-bearing items: 79
+- Content-bearing figure references: 80
+- Before pass: 20 production figure files serving those 80 references.
+- After pass: 80 production figure files, 80 unique canonical paths, and 80 unique SHA-256 image hashes.
+- Missing referenced figures: 0
+- Orphan production figures: 0
+
+REPEATED CONTENT-BEARING FIGURE CASES REVIEWED
+- 12 repeated cases reviewed in the incoming Bank:
+  - 10 repeated-path figure groups used by multiple independent items.
+  - 2 additional cross-filename cases where differently named files had identical image bytes.
+- All unjustified independent-item reuse was removed.
+
+DECISIONS (representation-bearing item level)
+- KEEP: 17
+- UPGRADE: 2
+- REPLACE: 60
+- INVESTIGATE: 0
+
+FIGURE CHANGES
+- New figure files generated: 60
+- Existing content-bearing figure files regenerated in place: 2
+- Total production figures after the pass: 80
+- Orphan figures removed: 0
+- Notes Example/YTI, Practice, Extra Practice, CYU, Warm-Up, Exit Ticket, and mastery graph instances were synchronized where affected.
+- Secure Summative V1-V4 already had distinct figure instances and were preserved.
+
+INTENTIONAL SHARING / EXCEPTIONS
+- No production figure file remains shared across independent Bank items.
+- Section 3 WTC intentionally keeps a coherent two-graph shared stimulus inside one connected WTC item; those graph files are not reused by independent items.
+- Neutral/prerequisite Diamond figures remain unique and unchanged in purpose.
+
+CORRECTNESS / READABILITY
+- Regenerated graphs, comparison graphs, quadratic-root graphs, function-family grids, scatter plots, Diamonds, and secure-form figures were visually reviewed.
+- Prompt/figure/answer agreement: PASS
+- Representation action/use check: PASS
+- No answer-leaking captions added.
+- Graph-tool authoritative code preserved; only the approved Unit-specific append area was changed.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+- Canonical JSON -> figure metadata -> embedded student_html -> teaching HTML -> review HTML synchronization: PASS
+- Figure path resolution: PASS
+- Independent-graph uniqueness by path and image hash: PASS
+- Framework MathJax fixer v10: PASS; 0 files changed; 0 audit warnings
+- Bank finalizer: PASS
+- Teaching/review HTML / mapping / JSON: PASS (755 items)
+- MathJax / HTML: PASS
+- Resolved Algebra inventory: PASS
+- Exports: PASS
+- Summative profile: PASS
+- Graph generation: PASS
+- Mechanical cleanup: PASS
+- Broken / must fix: NONE
+- Might need a look: NONE
+
+SYSTEM LESSONS FOR REVIEW
+1. Representation uniqueness needs a hash/geometry-aware audit, not a filename-only audit. The incoming Bank had differently named files with identical pixels.
+2. Canonical figure changes must update BOTH the item's figures metadata and any figure src embedded inside student_html, then synchronize both HTML views.
+3. The current graph tool contains more than one "PASTE YOUR GRAPH CODE BELOW THIS LINE" marker. Append logic should target the FINAL approved marker; using the first marker can truncate later graph capabilities.
+4. The general Bank/finalizer QA does not currently enforce independent-item image-hash uniqueness. Keeping this specialist pass (or adding an equivalent automated gate) prevents fake visual abundance from surviving package QA.
