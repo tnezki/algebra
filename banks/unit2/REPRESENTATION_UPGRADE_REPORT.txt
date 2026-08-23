@@ -1,0 +1,46 @@
+UNIT 2 BANK — REPRESENTATION & FIGURE UPGRADE REPORT
+====================================================================
+Pass: 3d Representation / Figure Upgrade v1.1
+Current Framework used for this pass: Algebra 1 v6.35
+Source Bank metadata: Algebra 1 v6.34 (preserved; this was a focused post-build pass)
+
+MAP SAFETY: STRONG - LOCKED FOR REPRESENTATION PASS
+
+FIGURE-USE INVENTORY
+- Canonical items: 743
+- Figure-bearing Bank items: 114
+- Unique figure references before pass: 29
+- Repeated content-bearing figure cases reviewed: 14 asset groups / 99 item uses
+- Independent duplicate uses replaced: 85
+- Unique figure references after pass: 114
+
+KEEP / UPGRADE / REPLACE / INVESTIGATE
+- KEEP: 13 previously repeated legacy figure instances retained as the single canonical use for that asset, plus all previously unique figures
+- UPGRADE: 1 retained graph-comparison item revised so every plotted line is used by the prompt
+- REPLACE: 85 independent item figure instances replaced with genuinely new mathematical/data instances
+- INVESTIGATE: 0
+
+New figures generated: 85
+Orphan figures removed: 0 (each legacy repeated asset remains referenced exactly once; no stale duplicate copies were created)
+
+INTENTIONAL SHARING EXCEPTIONS
+- WTC shared-stimulus figures remain intentionally shared only inside their own connected multipart WTC item; no figure file is reused across independent Bank IDs after this pass.
+- Neutral Diamond/other one-off scaffolds were not rewritten because they were already unique per item.
+
+SEMANTIC CHECKS COMPLETED BEFORE FINALIZER
+- Every changed line graph has a distinct slope/intercept geometry and a recomputed answer key.
+- Every changed context graph has a distinct model and a recomputed in-range prediction.
+- Every changed scatter plot uses distinct data while preserving positive-linear, negative-linear, or curved evidence roles.
+- The graph-vs-equation family now uses a single relevant graphed relationship for independent items; the one retained two-line anchor explicitly asks students to use both plotted lines.
+- Canonical JSON, teaching HTML, review HTML, and affected Practice Set 3 Tarsia text exports were synchronized.
+- Secure Summative prompts were not exposed or changed; their already-unique figure instances were preserved.
+
+FINAL SEMANTIC / FINAL-BYTE STATUS
+- Representation semantic pass: PASS before deterministic finalizer.
+- Repeated figure-reference gate: PASS (0 figure files referenced by more than one Bank ID).
+- Deterministic graph/MathJax/finalizer/ZIP status: PASS — current Framework finalizer passed required files, HTML/JSON mapping, MathJax, locked inventory, exports, Summatives, graph generation, mechanical cleanup, and ZIP creation with no review items.
+
+SYSTEM LESSONS FOR REVIEW
+- A Bank can satisfy graph/table representation floors while still creating fake abundance by routing many independent questions to one content-bearing graph. Figure-use uniqueness must be audited after authoring.
+- Filename counts alone are insufficient; the figure-use map should be keyed by Bank ID and semantic generation parameters.
+- Graph-comparison items should not carry an unused plotted relationship. If a line is visible, the prompt should use it or the line should be removed.
