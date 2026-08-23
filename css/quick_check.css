@@ -1,6 +1,6 @@
 /* ============================================================
    quick_check.css — Print-first Quick Checks
-   Prototype format: US Letter portrait, up to two pages, 8–15 minutes.
+   Approved format: US Letter portrait, up to two pages, 8–15 minutes; doubled blank workspace.
    Designed for collection + scanning into a student portfolio.
    ============================================================ */
 
@@ -214,13 +214,13 @@ html, body {
   margin-top: 6px;
   background: #fff;
 }
-.response-space.small { min-height: .70in; }
-.response-space.medium { min-height: 1.20in; }
-.response-space.large { min-height: 1.80in; }
-.response-space.xlarge { min-height: 2.40in; }
+.response-space.small { min-height: 1.40in; }
+.response-space.medium { min-height: 2.40in; }
+.response-space.large { min-height: 3.60in; }
+.response-space.xlarge { min-height: 4.80in; }
 
 .equation-response {
-  min-height: .55in;
+  min-height: 1.10in;
   padding-top: 2px;
   /* Intentionally no underline. */
 }
@@ -272,4 +272,20 @@ html, body {
     break-inside: avoid-page !important;
     page-break-inside: avoid !important;
   }
+}
+
+/* MULTI-VERSION SINGLE-HTML SUPPORT
+   One section HTML may contain six complete printable Quick Check forms. */
+.qc-version {
+  break-inside: auto;
+  page-break-inside: auto;
+}
+@media print {
+  .qc-version:not(:last-child) {
+    break-after: page;
+    page-break-after: always;
+  }
+}
+@media screen {
+  .quick-check.qc-version { margin-bottom: 20px; }
 }
