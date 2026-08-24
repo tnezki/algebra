@@ -1,0 +1,978 @@
+{
+  "course": "Algebra 1",
+  "unit": 8,
+  "framework_version": "v6.35",
+  "canonical_source": "unit8_bank_data.json",
+  "teaching_view": "unit8.html",
+  "review_view": "unit8_review.html",
+  "sections": [
+    {
+      "section_id": "8.1",
+      "title": "Selecting Appropriate Models",
+      "exact_i_cans": [
+        "I can construct evidence from tables, graphs, and contexts to choose a linear, quadratic, or exponential model.",
+        "I can apply rate, second-difference, and ratio patterns to select an appropriate function family.",
+        "I can determine whether a chosen model is reasonable for a situation and its data pattern."
+      ],
+      "routes": {
+        "WTC": [
+          "U8-S1-WTC-001"
+        ],
+        "Notes Example": [
+          "U8-S1-EX-01",
+          "U8-S1-EX-02",
+          "U8-S1-EX-03",
+          "U8-S1-EX-04",
+          "U8-S1-EX-05",
+          "U8-S1-EX-06"
+        ],
+        "Notes YTI": [
+          "U8-S1-YTI-01",
+          "U8-S1-YTI-02",
+          "U8-S1-YTI-03",
+          "U8-S1-YTI-04",
+          "U8-S1-YTI-05",
+          "U8-S1-YTI-06"
+        ],
+        "Practice Set 1": [
+          "U8-S1-P1-01",
+          "U8-S1-P1-02",
+          "U8-S1-P1-03",
+          "U8-S1-P1-04",
+          "U8-S1-P1-05",
+          "U8-S1-P1-06",
+          "U8-S1-P1-07",
+          "U8-S1-P1-08",
+          "U8-S1-P1-09",
+          "U8-S1-P1-10",
+          "U8-S1-P1-11",
+          "U8-S1-P1-12",
+          "U8-S1-P1-13",
+          "U8-S1-P1-14",
+          "U8-S1-P1-15",
+          "U8-S1-P1-16",
+          "U8-S1-P1-17",
+          "U8-S1-P1-18",
+          "U8-S1-P1-19",
+          "U8-S1-P1-20",
+          "U8-S1-P1-21",
+          "U8-S1-P1-22",
+          "U8-S1-P1-23",
+          "U8-S1-P1-24"
+        ],
+        "Practice Set 2": [
+          "U8-S1-P2-01",
+          "U8-S1-P2-02",
+          "U8-S1-P2-03",
+          "U8-S1-P2-04",
+          "U8-S1-P2-05",
+          "U8-S1-P2-06",
+          "U8-S1-P2-07",
+          "U8-S1-P2-08",
+          "U8-S1-P2-09",
+          "U8-S1-P2-10",
+          "U8-S1-P2-11",
+          "U8-S1-P2-12",
+          "U8-S1-P2-13",
+          "U8-S1-P2-14",
+          "U8-S1-P2-15",
+          "U8-S1-P2-16",
+          "U8-S1-P2-17",
+          "U8-S1-P2-18",
+          "U8-S1-P2-19",
+          "U8-S1-P2-20",
+          "U8-S1-P2-21",
+          "U8-S1-P2-22",
+          "U8-S1-P2-23",
+          "U8-S1-P2-24"
+        ],
+        "Practice Set 3": [
+          "U8-S1-P3-01",
+          "U8-S1-P3-02",
+          "U8-S1-P3-03",
+          "U8-S1-P3-04",
+          "U8-S1-P3-05",
+          "U8-S1-P3-06",
+          "U8-S1-P3-07",
+          "U8-S1-P3-08",
+          "U8-S1-P3-09",
+          "U8-S1-P3-10",
+          "U8-S1-P3-11",
+          "U8-S1-P3-12",
+          "U8-S1-P3-13",
+          "U8-S1-P3-14",
+          "U8-S1-P3-15",
+          "U8-S1-P3-16",
+          "U8-S1-P3-17",
+          "U8-S1-P3-18",
+          "U8-S1-P3-19",
+          "U8-S1-P3-20",
+          "U8-S1-P3-21",
+          "U8-S1-P3-22",
+          "U8-S1-P3-23",
+          "U8-S1-P3-24"
+        ],
+        "Extra Practice": [
+          "U8-S1-PX-01",
+          "U8-S1-PX-02",
+          "U8-S1-PX-03",
+          "U8-S1-PX-04",
+          "U8-S1-PX-05",
+          "U8-S1-PX-06",
+          "U8-S1-PX-07",
+          "U8-S1-PX-08",
+          "U8-S1-PX-09",
+          "U8-S1-PX-10",
+          "U8-S1-PX-11",
+          "U8-S1-PX-12",
+          "U8-S1-PX-13",
+          "U8-S1-PX-14",
+          "U8-S1-PX-15",
+          "U8-S1-PX-16",
+          "U8-S1-PX-17",
+          "U8-S1-PX-18",
+          "U8-S1-PX-19",
+          "U8-S1-PX-20",
+          "U8-S1-PX-21",
+          "U8-S1-PX-22",
+          "U8-S1-PX-23",
+          "U8-S1-PX-24"
+        ],
+        "CYU": [
+          "U8-S1-CYU-01",
+          "U8-S1-CYU-02",
+          "U8-S1-CYU-03",
+          "U8-S1-CYU-04",
+          "U8-S1-CYU-05",
+          "U8-S1-CYU-06"
+        ],
+        "Warm-Up 1": [
+          "U8-S1-WU1-01",
+          "U8-S1-WU1-02",
+          "U8-S1-WU1-03",
+          "U8-S1-WU1-04"
+        ],
+        "Warm-Up 2": [
+          "U8-S1-WU2-01",
+          "U8-S1-WU2-02",
+          "U8-S1-WU2-03",
+          "U8-S1-WU2-04"
+        ],
+        "Warm-Up 3": [
+          "U8-S1-WU3-01",
+          "U8-S1-WU3-02",
+          "U8-S1-WU3-03",
+          "U8-S1-WU3-04"
+        ],
+        "Exit Ticket A": [
+          "U8-S1-ETA-01",
+          "U8-S1-ETA-02",
+          "U8-S1-ETA-03",
+          "U8-S1-ETA-04"
+        ],
+        "Exit Ticket B": [
+          "U8-S1-ETB-01",
+          "U8-S1-ETB-02",
+          "U8-S1-ETB-03",
+          "U8-S1-ETB-04"
+        ],
+        "Exit Ticket C": [
+          "U8-S1-ETC-01",
+          "U8-S1-ETC-02",
+          "U8-S1-ETC-03",
+          "U8-S1-ETC-04"
+        ]
+      }
+    },
+    {
+      "section_id": "8.2",
+      "title": "Transformations Across Function Families",
+      "exact_i_cans": [
+        "I can build transformed function rules from parent functions across linear, quadratic, exponential, and absolute value families.",
+        "I can use key points and key features to graph transformations across multiple function families.",
+        "I can formulate a transformation description that connects parameter changes to key point shifts across function families."
+      ],
+      "routes": {
+        "WTC": [
+          "U8-S2-WTC-001"
+        ],
+        "Notes Example": [
+          "U8-S2-EX-01",
+          "U8-S2-EX-02",
+          "U8-S2-EX-03",
+          "U8-S2-EX-04",
+          "U8-S2-EX-05",
+          "U8-S2-EX-06"
+        ],
+        "Notes YTI": [
+          "U8-S2-YTI-01",
+          "U8-S2-YTI-02",
+          "U8-S2-YTI-03",
+          "U8-S2-YTI-04",
+          "U8-S2-YTI-05",
+          "U8-S2-YTI-06"
+        ],
+        "Practice Set 1": [
+          "U8-S2-P1-01",
+          "U8-S2-P1-02",
+          "U8-S2-P1-03",
+          "U8-S2-P1-04",
+          "U8-S2-P1-05",
+          "U8-S2-P1-06",
+          "U8-S2-P1-07",
+          "U8-S2-P1-08",
+          "U8-S2-P1-09",
+          "U8-S2-P1-10",
+          "U8-S2-P1-11",
+          "U8-S2-P1-12",
+          "U8-S2-P1-13",
+          "U8-S2-P1-14",
+          "U8-S2-P1-15",
+          "U8-S2-P1-16",
+          "U8-S2-P1-17",
+          "U8-S2-P1-18",
+          "U8-S2-P1-19",
+          "U8-S2-P1-20",
+          "U8-S2-P1-21",
+          "U8-S2-P1-22",
+          "U8-S2-P1-23",
+          "U8-S2-P1-24"
+        ],
+        "Practice Set 2": [
+          "U8-S2-P2-01",
+          "U8-S2-P2-02",
+          "U8-S2-P2-03",
+          "U8-S2-P2-04",
+          "U8-S2-P2-05",
+          "U8-S2-P2-06",
+          "U8-S2-P2-07",
+          "U8-S2-P2-08",
+          "U8-S2-P2-09",
+          "U8-S2-P2-10",
+          "U8-S2-P2-11",
+          "U8-S2-P2-12",
+          "U8-S2-P2-13",
+          "U8-S2-P2-14",
+          "U8-S2-P2-15",
+          "U8-S2-P2-16",
+          "U8-S2-P2-17",
+          "U8-S2-P2-18",
+          "U8-S2-P2-19",
+          "U8-S2-P2-20",
+          "U8-S2-P2-21",
+          "U8-S2-P2-22",
+          "U8-S2-P2-23",
+          "U8-S2-P2-24"
+        ],
+        "Practice Set 3": [
+          "U8-S2-P3-01",
+          "U8-S2-P3-02",
+          "U8-S2-P3-03",
+          "U8-S2-P3-04",
+          "U8-S2-P3-05",
+          "U8-S2-P3-06",
+          "U8-S2-P3-07",
+          "U8-S2-P3-08",
+          "U8-S2-P3-09",
+          "U8-S2-P3-10",
+          "U8-S2-P3-11",
+          "U8-S2-P3-12",
+          "U8-S2-P3-13",
+          "U8-S2-P3-14",
+          "U8-S2-P3-15",
+          "U8-S2-P3-16",
+          "U8-S2-P3-17",
+          "U8-S2-P3-18",
+          "U8-S2-P3-19",
+          "U8-S2-P3-20",
+          "U8-S2-P3-21",
+          "U8-S2-P3-22",
+          "U8-S2-P3-23",
+          "U8-S2-P3-24"
+        ],
+        "Extra Practice": [
+          "U8-S2-PX-01",
+          "U8-S2-PX-02",
+          "U8-S2-PX-03",
+          "U8-S2-PX-04",
+          "U8-S2-PX-05",
+          "U8-S2-PX-06",
+          "U8-S2-PX-07",
+          "U8-S2-PX-08",
+          "U8-S2-PX-09",
+          "U8-S2-PX-10",
+          "U8-S2-PX-11",
+          "U8-S2-PX-12",
+          "U8-S2-PX-13",
+          "U8-S2-PX-14",
+          "U8-S2-PX-15",
+          "U8-S2-PX-16",
+          "U8-S2-PX-17",
+          "U8-S2-PX-18",
+          "U8-S2-PX-19",
+          "U8-S2-PX-20",
+          "U8-S2-PX-21",
+          "U8-S2-PX-22",
+          "U8-S2-PX-23",
+          "U8-S2-PX-24"
+        ],
+        "CYU": [
+          "U8-S2-CYU-01",
+          "U8-S2-CYU-02",
+          "U8-S2-CYU-03",
+          "U8-S2-CYU-04",
+          "U8-S2-CYU-05",
+          "U8-S2-CYU-06"
+        ],
+        "Warm-Up 1": [
+          "U8-S2-WU1-01",
+          "U8-S2-WU1-02",
+          "U8-S2-WU1-03",
+          "U8-S2-WU1-04"
+        ],
+        "Warm-Up 2": [
+          "U8-S2-WU2-01",
+          "U8-S2-WU2-02",
+          "U8-S2-WU2-03",
+          "U8-S2-WU2-04"
+        ],
+        "Warm-Up 3": [
+          "U8-S2-WU3-01",
+          "U8-S2-WU3-02",
+          "U8-S2-WU3-03",
+          "U8-S2-WU3-04"
+        ],
+        "Exit Ticket A": [
+          "U8-S2-ETA-01",
+          "U8-S2-ETA-02",
+          "U8-S2-ETA-03",
+          "U8-S2-ETA-04"
+        ],
+        "Exit Ticket B": [
+          "U8-S2-ETB-01",
+          "U8-S2-ETB-02",
+          "U8-S2-ETB-03",
+          "U8-S2-ETB-04"
+        ],
+        "Exit Ticket C": [
+          "U8-S2-ETC-01",
+          "U8-S2-ETC-02",
+          "U8-S2-ETC-03",
+          "U8-S2-ETC-04"
+        ]
+      }
+    },
+    {
+      "section_id": "8.3",
+      "title": "Absolute Value Functions and Piecewise Thinking",
+      "exact_i_cans": [
+        "I can design an absolute value or piecewise representation for situations with distance, change in direction, or two-part behavior.",
+        "I can apply key features of absolute value graphs to interpret vertex, intercepts, and rate of change.",
+        "I can predict outputs and intervals from absolute value and piecewise rules in context."
+      ],
+      "routes": {
+        "WTC": [
+          "U8-S3-WTC-001"
+        ],
+        "Notes Example": [
+          "U8-S3-EX-01",
+          "U8-S3-EX-02",
+          "U8-S3-EX-03",
+          "U8-S3-EX-04",
+          "U8-S3-EX-05",
+          "U8-S3-EX-06"
+        ],
+        "Notes YTI": [
+          "U8-S3-YTI-01",
+          "U8-S3-YTI-02",
+          "U8-S3-YTI-03",
+          "U8-S3-YTI-04",
+          "U8-S3-YTI-05",
+          "U8-S3-YTI-06"
+        ],
+        "Practice Set 1": [
+          "U8-S3-P1-01",
+          "U8-S3-P1-02",
+          "U8-S3-P1-03",
+          "U8-S3-P1-04",
+          "U8-S3-P1-05",
+          "U8-S3-P1-06",
+          "U8-S3-P1-07",
+          "U8-S3-P1-08",
+          "U8-S3-P1-09",
+          "U8-S3-P1-10",
+          "U8-S3-P1-11",
+          "U8-S3-P1-12",
+          "U8-S3-P1-13",
+          "U8-S3-P1-14",
+          "U8-S3-P1-15",
+          "U8-S3-P1-16",
+          "U8-S3-P1-17",
+          "U8-S3-P1-18",
+          "U8-S3-P1-19",
+          "U8-S3-P1-20",
+          "U8-S3-P1-21",
+          "U8-S3-P1-22",
+          "U8-S3-P1-23",
+          "U8-S3-P1-24"
+        ],
+        "Practice Set 2": [
+          "U8-S3-P2-01",
+          "U8-S3-P2-02",
+          "U8-S3-P2-03",
+          "U8-S3-P2-04",
+          "U8-S3-P2-05",
+          "U8-S3-P2-06",
+          "U8-S3-P2-07",
+          "U8-S3-P2-08",
+          "U8-S3-P2-09",
+          "U8-S3-P2-10",
+          "U8-S3-P2-11",
+          "U8-S3-P2-12",
+          "U8-S3-P2-13",
+          "U8-S3-P2-14",
+          "U8-S3-P2-15",
+          "U8-S3-P2-16",
+          "U8-S3-P2-17",
+          "U8-S3-P2-18",
+          "U8-S3-P2-19",
+          "U8-S3-P2-20",
+          "U8-S3-P2-21",
+          "U8-S3-P2-22",
+          "U8-S3-P2-23",
+          "U8-S3-P2-24"
+        ],
+        "Practice Set 3": [
+          "U8-S3-P3-01",
+          "U8-S3-P3-02",
+          "U8-S3-P3-03",
+          "U8-S3-P3-04",
+          "U8-S3-P3-05",
+          "U8-S3-P3-06",
+          "U8-S3-P3-07",
+          "U8-S3-P3-08",
+          "U8-S3-P3-09",
+          "U8-S3-P3-10",
+          "U8-S3-P3-11",
+          "U8-S3-P3-12",
+          "U8-S3-P3-13",
+          "U8-S3-P3-14",
+          "U8-S3-P3-15",
+          "U8-S3-P3-16",
+          "U8-S3-P3-17",
+          "U8-S3-P3-18",
+          "U8-S3-P3-19",
+          "U8-S3-P3-20",
+          "U8-S3-P3-21",
+          "U8-S3-P3-22",
+          "U8-S3-P3-23",
+          "U8-S3-P3-24"
+        ],
+        "Extra Practice": [
+          "U8-S3-PX-01",
+          "U8-S3-PX-02",
+          "U8-S3-PX-03",
+          "U8-S3-PX-04",
+          "U8-S3-PX-05",
+          "U8-S3-PX-06",
+          "U8-S3-PX-07",
+          "U8-S3-PX-08",
+          "U8-S3-PX-09",
+          "U8-S3-PX-10",
+          "U8-S3-PX-11",
+          "U8-S3-PX-12",
+          "U8-S3-PX-13",
+          "U8-S3-PX-14",
+          "U8-S3-PX-15",
+          "U8-S3-PX-16",
+          "U8-S3-PX-17",
+          "U8-S3-PX-18",
+          "U8-S3-PX-19",
+          "U8-S3-PX-20",
+          "U8-S3-PX-21",
+          "U8-S3-PX-22",
+          "U8-S3-PX-23",
+          "U8-S3-PX-24"
+        ],
+        "CYU": [
+          "U8-S3-CYU-01",
+          "U8-S3-CYU-02",
+          "U8-S3-CYU-03",
+          "U8-S3-CYU-04",
+          "U8-S3-CYU-05",
+          "U8-S3-CYU-06"
+        ],
+        "Warm-Up 1": [
+          "U8-S3-WU1-01",
+          "U8-S3-WU1-02",
+          "U8-S3-WU1-03",
+          "U8-S3-WU1-04"
+        ],
+        "Warm-Up 2": [
+          "U8-S3-WU2-01",
+          "U8-S3-WU2-02",
+          "U8-S3-WU2-03",
+          "U8-S3-WU2-04"
+        ],
+        "Warm-Up 3": [
+          "U8-S3-WU3-01",
+          "U8-S3-WU3-02",
+          "U8-S3-WU3-03",
+          "U8-S3-WU3-04"
+        ],
+        "Exit Ticket A": [
+          "U8-S3-ETA-01",
+          "U8-S3-ETA-02",
+          "U8-S3-ETA-03",
+          "U8-S3-ETA-04"
+        ],
+        "Exit Ticket B": [
+          "U8-S3-ETB-01",
+          "U8-S3-ETB-02",
+          "U8-S3-ETB-03",
+          "U8-S3-ETB-04"
+        ],
+        "Exit Ticket C": [
+          "U8-S3-ETC-01",
+          "U8-S3-ETC-02",
+          "U8-S3-ETC-03",
+          "U8-S3-ETC-04"
+        ]
+      }
+    },
+    {
+      "section_id": "8.4",
+      "title": "Modeling Investigation",
+      "exact_i_cans": [
+        "I can formulate a mathematical model from real-world data and state the assumptions used.",
+        "I can extend a model to make predictions within a reasonable domain.",
+        "I can critique how well a model fits data, constraints, and the situation being studied."
+      ],
+      "routes": {
+        "WTC": [
+          "U8-S4-WTC-001"
+        ],
+        "Notes Example": [
+          "U8-S4-EX-01",
+          "U8-S4-EX-02",
+          "U8-S4-EX-03",
+          "U8-S4-EX-04",
+          "U8-S4-EX-05",
+          "U8-S4-EX-06"
+        ],
+        "Notes YTI": [
+          "U8-S4-YTI-01",
+          "U8-S4-YTI-02",
+          "U8-S4-YTI-03",
+          "U8-S4-YTI-04",
+          "U8-S4-YTI-05",
+          "U8-S4-YTI-06"
+        ],
+        "Practice Set 1": [
+          "U8-S4-P1-01",
+          "U8-S4-P1-02",
+          "U8-S4-P1-03",
+          "U8-S4-P1-04",
+          "U8-S4-P1-05",
+          "U8-S4-P1-06",
+          "U8-S4-P1-07",
+          "U8-S4-P1-08",
+          "U8-S4-P1-09",
+          "U8-S4-P1-10",
+          "U8-S4-P1-11",
+          "U8-S4-P1-12",
+          "U8-S4-P1-13",
+          "U8-S4-P1-14",
+          "U8-S4-P1-15",
+          "U8-S4-P1-16",
+          "U8-S4-P1-17",
+          "U8-S4-P1-18",
+          "U8-S4-P1-19",
+          "U8-S4-P1-20",
+          "U8-S4-P1-21",
+          "U8-S4-P1-22",
+          "U8-S4-P1-23",
+          "U8-S4-P1-24"
+        ],
+        "Practice Set 2": [
+          "U8-S4-P2-01",
+          "U8-S4-P2-02",
+          "U8-S4-P2-03",
+          "U8-S4-P2-04",
+          "U8-S4-P2-05",
+          "U8-S4-P2-06",
+          "U8-S4-P2-07",
+          "U8-S4-P2-08",
+          "U8-S4-P2-09",
+          "U8-S4-P2-10",
+          "U8-S4-P2-11",
+          "U8-S4-P2-12",
+          "U8-S4-P2-13",
+          "U8-S4-P2-14",
+          "U8-S4-P2-15",
+          "U8-S4-P2-16",
+          "U8-S4-P2-17",
+          "U8-S4-P2-18",
+          "U8-S4-P2-19",
+          "U8-S4-P2-20",
+          "U8-S4-P2-21",
+          "U8-S4-P2-22",
+          "U8-S4-P2-23",
+          "U8-S4-P2-24"
+        ],
+        "Practice Set 3": [
+          "U8-S4-P3-01",
+          "U8-S4-P3-02",
+          "U8-S4-P3-03",
+          "U8-S4-P3-04",
+          "U8-S4-P3-05",
+          "U8-S4-P3-06",
+          "U8-S4-P3-07",
+          "U8-S4-P3-08",
+          "U8-S4-P3-09",
+          "U8-S4-P3-10",
+          "U8-S4-P3-11",
+          "U8-S4-P3-12",
+          "U8-S4-P3-13",
+          "U8-S4-P3-14",
+          "U8-S4-P3-15",
+          "U8-S4-P3-16",
+          "U8-S4-P3-17",
+          "U8-S4-P3-18",
+          "U8-S4-P3-19",
+          "U8-S4-P3-20",
+          "U8-S4-P3-21",
+          "U8-S4-P3-22",
+          "U8-S4-P3-23",
+          "U8-S4-P3-24"
+        ],
+        "Extra Practice": [
+          "U8-S4-PX-01",
+          "U8-S4-PX-02",
+          "U8-S4-PX-03",
+          "U8-S4-PX-04",
+          "U8-S4-PX-05",
+          "U8-S4-PX-06",
+          "U8-S4-PX-07",
+          "U8-S4-PX-08",
+          "U8-S4-PX-09",
+          "U8-S4-PX-10",
+          "U8-S4-PX-11",
+          "U8-S4-PX-12",
+          "U8-S4-PX-13",
+          "U8-S4-PX-14",
+          "U8-S4-PX-15",
+          "U8-S4-PX-16",
+          "U8-S4-PX-17",
+          "U8-S4-PX-18",
+          "U8-S4-PX-19",
+          "U8-S4-PX-20",
+          "U8-S4-PX-21",
+          "U8-S4-PX-22",
+          "U8-S4-PX-23",
+          "U8-S4-PX-24"
+        ],
+        "CYU": [
+          "U8-S4-CYU-01",
+          "U8-S4-CYU-02",
+          "U8-S4-CYU-03",
+          "U8-S4-CYU-04",
+          "U8-S4-CYU-05",
+          "U8-S4-CYU-06"
+        ],
+        "Warm-Up 1": [
+          "U8-S4-WU1-01",
+          "U8-S4-WU1-02",
+          "U8-S4-WU1-03",
+          "U8-S4-WU1-04"
+        ],
+        "Warm-Up 2": [
+          "U8-S4-WU2-01",
+          "U8-S4-WU2-02",
+          "U8-S4-WU2-03",
+          "U8-S4-WU2-04"
+        ],
+        "Warm-Up 3": [
+          "U8-S4-WU3-01",
+          "U8-S4-WU3-02",
+          "U8-S4-WU3-03",
+          "U8-S4-WU3-04"
+        ],
+        "Exit Ticket A": [
+          "U8-S4-ETA-01",
+          "U8-S4-ETA-02",
+          "U8-S4-ETA-03",
+          "U8-S4-ETA-04"
+        ],
+        "Exit Ticket B": [
+          "U8-S4-ETB-01",
+          "U8-S4-ETB-02",
+          "U8-S4-ETB-03",
+          "U8-S4-ETB-04"
+        ],
+        "Exit Ticket C": [
+          "U8-S4-ETC-01",
+          "U8-S4-ETC-02",
+          "U8-S4-ETC-03",
+          "U8-S4-ETC-04"
+        ]
+      }
+    },
+    {
+      "section_id": "8.5",
+      "title": "Function Synthesis and Capstone Analysis",
+      "exact_i_cans": [
+        "I can construct a solution pathway that connects equations, graphs, tables, and contexts across function families.",
+        "I can use multiple representations to solve complex function problems and interpret results.",
+        "I can assess competing solution strategies and choose the representation that best supports the conclusion."
+      ],
+      "routes": {
+        "WTC": [
+          "U8-S5-WTC-001"
+        ],
+        "Notes Example": [
+          "U8-S5-EX-01",
+          "U8-S5-EX-02",
+          "U8-S5-EX-03",
+          "U8-S5-EX-04",
+          "U8-S5-EX-05",
+          "U8-S5-EX-06"
+        ],
+        "Notes YTI": [
+          "U8-S5-YTI-01",
+          "U8-S5-YTI-02",
+          "U8-S5-YTI-03",
+          "U8-S5-YTI-04",
+          "U8-S5-YTI-05",
+          "U8-S5-YTI-06"
+        ],
+        "Practice Set 1": [
+          "U8-S5-P1-01",
+          "U8-S5-P1-02",
+          "U8-S5-P1-03",
+          "U8-S5-P1-04",
+          "U8-S5-P1-05",
+          "U8-S5-P1-06",
+          "U8-S5-P1-07",
+          "U8-S5-P1-08",
+          "U8-S5-P1-09",
+          "U8-S5-P1-10",
+          "U8-S5-P1-11",
+          "U8-S5-P1-12",
+          "U8-S5-P1-13",
+          "U8-S5-P1-14",
+          "U8-S5-P1-15",
+          "U8-S5-P1-16",
+          "U8-S5-P1-17",
+          "U8-S5-P1-18",
+          "U8-S5-P1-19",
+          "U8-S5-P1-20",
+          "U8-S5-P1-21",
+          "U8-S5-P1-22",
+          "U8-S5-P1-23",
+          "U8-S5-P1-24"
+        ],
+        "Practice Set 2": [
+          "U8-S5-P2-01",
+          "U8-S5-P2-02",
+          "U8-S5-P2-03",
+          "U8-S5-P2-04",
+          "U8-S5-P2-05",
+          "U8-S5-P2-06",
+          "U8-S5-P2-07",
+          "U8-S5-P2-08",
+          "U8-S5-P2-09",
+          "U8-S5-P2-10",
+          "U8-S5-P2-11",
+          "U8-S5-P2-12",
+          "U8-S5-P2-13",
+          "U8-S5-P2-14",
+          "U8-S5-P2-15",
+          "U8-S5-P2-16",
+          "U8-S5-P2-17",
+          "U8-S5-P2-18",
+          "U8-S5-P2-19",
+          "U8-S5-P2-20",
+          "U8-S5-P2-21",
+          "U8-S5-P2-22",
+          "U8-S5-P2-23",
+          "U8-S5-P2-24"
+        ],
+        "Practice Set 3": [
+          "U8-S5-P3-01",
+          "U8-S5-P3-02",
+          "U8-S5-P3-03",
+          "U8-S5-P3-04",
+          "U8-S5-P3-05",
+          "U8-S5-P3-06",
+          "U8-S5-P3-07",
+          "U8-S5-P3-08",
+          "U8-S5-P3-09",
+          "U8-S5-P3-10",
+          "U8-S5-P3-11",
+          "U8-S5-P3-12",
+          "U8-S5-P3-13",
+          "U8-S5-P3-14",
+          "U8-S5-P3-15",
+          "U8-S5-P3-16",
+          "U8-S5-P3-17",
+          "U8-S5-P3-18",
+          "U8-S5-P3-19",
+          "U8-S5-P3-20",
+          "U8-S5-P3-21",
+          "U8-S5-P3-22",
+          "U8-S5-P3-23",
+          "U8-S5-P3-24"
+        ],
+        "Extra Practice": [
+          "U8-S5-PX-01",
+          "U8-S5-PX-02",
+          "U8-S5-PX-03",
+          "U8-S5-PX-04",
+          "U8-S5-PX-05",
+          "U8-S5-PX-06",
+          "U8-S5-PX-07",
+          "U8-S5-PX-08",
+          "U8-S5-PX-09",
+          "U8-S5-PX-10",
+          "U8-S5-PX-11",
+          "U8-S5-PX-12",
+          "U8-S5-PX-13",
+          "U8-S5-PX-14",
+          "U8-S5-PX-15",
+          "U8-S5-PX-16",
+          "U8-S5-PX-17",
+          "U8-S5-PX-18",
+          "U8-S5-PX-19",
+          "U8-S5-PX-20",
+          "U8-S5-PX-21",
+          "U8-S5-PX-22",
+          "U8-S5-PX-23",
+          "U8-S5-PX-24"
+        ],
+        "CYU": [
+          "U8-S5-CYU-01",
+          "U8-S5-CYU-02",
+          "U8-S5-CYU-03",
+          "U8-S5-CYU-04",
+          "U8-S5-CYU-05",
+          "U8-S5-CYU-06"
+        ],
+        "Warm-Up 1": [
+          "U8-S5-WU1-01",
+          "U8-S5-WU1-02",
+          "U8-S5-WU1-03",
+          "U8-S5-WU1-04"
+        ],
+        "Warm-Up 2": [
+          "U8-S5-WU2-01",
+          "U8-S5-WU2-02",
+          "U8-S5-WU2-03",
+          "U8-S5-WU2-04"
+        ],
+        "Warm-Up 3": [
+          "U8-S5-WU3-01",
+          "U8-S5-WU3-02",
+          "U8-S5-WU3-03",
+          "U8-S5-WU3-04"
+        ],
+        "Exit Ticket A": [
+          "U8-S5-ETA-01",
+          "U8-S5-ETA-02",
+          "U8-S5-ETA-03",
+          "U8-S5-ETA-04"
+        ],
+        "Exit Ticket B": [
+          "U8-S5-ETB-01",
+          "U8-S5-ETB-02",
+          "U8-S5-ETB-03",
+          "U8-S5-ETB-04"
+        ],
+        "Exit Ticket C": [
+          "U8-S5-ETC-01",
+          "U8-S5-ETC-02",
+          "U8-S5-ETC-03",
+          "U8-S5-ETC-04"
+        ]
+      }
+    }
+  ],
+  "summative": {
+    "V1": [
+      "U8-SUM-V1-Q01",
+      "U8-SUM-V1-Q02",
+      "U8-SUM-V1-Q03",
+      "U8-SUM-V1-Q04",
+      "U8-SUM-V1-Q05",
+      "U8-SUM-V1-Q06",
+      "U8-SUM-V1-Q07",
+      "U8-SUM-V1-Q08"
+    ],
+    "V2": [
+      "U8-SUM-V2-Q01",
+      "U8-SUM-V2-Q02",
+      "U8-SUM-V2-Q03",
+      "U8-SUM-V2-Q04",
+      "U8-SUM-V2-Q05",
+      "U8-SUM-V2-Q06",
+      "U8-SUM-V2-Q07",
+      "U8-SUM-V2-Q08"
+    ],
+    "V3": [
+      "U8-SUM-V3-Q01",
+      "U8-SUM-V3-Q02",
+      "U8-SUM-V3-Q03",
+      "U8-SUM-V3-Q04",
+      "U8-SUM-V3-Q05",
+      "U8-SUM-V3-Q06",
+      "U8-SUM-V3-Q07",
+      "U8-SUM-V3-Q08"
+    ],
+    "V4": [
+      "U8-SUM-V4-Q01",
+      "U8-SUM-V4-Q02",
+      "U8-SUM-V4-Q03",
+      "U8-SUM-V4-Q04",
+      "U8-SUM-V4-Q05",
+      "U8-SUM-V4-Q06",
+      "U8-SUM-V4-Q07",
+      "U8-SUM-V4-Q08"
+    ],
+    "V5": [
+      "U8-SUM-V5-Q01",
+      "U8-SUM-V5-Q02",
+      "U8-SUM-V5-Q03",
+      "U8-SUM-V5-Q04",
+      "U8-SUM-V5-Q05",
+      "U8-SUM-V5-Q06",
+      "U8-SUM-V5-Q07",
+      "U8-SUM-V5-Q08"
+    ],
+    "V6": [
+      "U8-SUM-V6-Q01",
+      "U8-SUM-V6-Q02",
+      "U8-SUM-V6-Q03",
+      "U8-SUM-V6-Q04",
+      "U8-SUM-V6-Q05",
+      "U8-SUM-V6-Q06",
+      "U8-SUM-V6-Q07",
+      "U8-SUM-V6-Q08"
+    ]
+  },
+  "exports": {
+    "tarsia": [
+      "exports/tarsia_8_1_practice_3.txt",
+      "exports/tarsia_8_2_practice_3.txt",
+      "exports/tarsia_8_3_practice_3.txt",
+      "exports/tarsia_8_4_practice_3.txt",
+      "exports/tarsia_8_5_practice_3.txt"
+    ],
+    "blooket": [
+      "exports/blooket_8_1_practice_3.csv",
+      "exports/blooket_8_2_practice_3.csv",
+      "exports/blooket_8_3_practice_3.csv",
+      "exports/blooket_8_4_practice_3.csv",
+      "exports/blooket_8_5_practice_3.csv"
+    ]
+  }
+}

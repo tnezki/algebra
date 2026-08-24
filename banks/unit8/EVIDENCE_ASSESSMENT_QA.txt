@@ -1,0 +1,46 @@
+UNIT 8 - 3f EVIDENCE & ASSESSMENT QA
+=====================================
+
+SEMANTIC GATES
+- Canonical item count 743: PASS
+- Unique bank IDs: PASS
+- Exit A/B/C counts 20/20/20: PASS
+- Exit B exact Review learning_target routes: PASS
+- Exit C explicit mastery_goal_id routes: PASS
+- Exit C exact Mastery learning_target routes: PASS
+- Formal Table claims in Exit/Summative evidence backed by actual <table>: PASS
+- DOK/rigor honesty review on modified evidence items: PASS
+
+SUMMATIVE GATES
+- V1-V6 counts 8 each: PASS
+- Constructed/open-response course profile preserved: PASS
+- Estimated time 44.0 minutes each: PASS
+- Mastery distribution every form MG01=2, MG02=2, MG03=2, MG04=1, MG05=1: PASS
+- V1-V4 common question-family set: PASS
+- V1-V4 scrambled order preserved: PASS
+- V5 ALT family set disjoint from V1-V4: PASS
+- V6 ALT family set disjoint from V1-V4: PASS
+- V5 and V6 ALT family sets disjoint from each other: PASS
+
+SECURITY GATES
+- Exact secure/nonsecure student-prompt matches: 0 - PASS
+- Substantive secure/nonsecure equation-instance overlaps: 0 - PASS
+- Substantive V5/V6 equation-instance repeats against V1-V4: 0 - PASS
+- Secure report disclosure rule: PASS (no secure prompts/answers/full item text quoted)
+
+CROSS-ARTIFACT GATES
+- unit8_mapping.csv rows 743 and IDs resolve: PASS
+- unit8_evidence_map.csv rows 108 and IDs resolve: PASS
+- unit8_summative_source_map.csv rows 48 and IDs resolve: PASS
+- representation_figure_use_map.csv rows 70 and files/hash/bytes resolve: PASS
+- New graph references resolve: PASS
+- Canonical JSON / teaching HTML / review HTML synchronization: verified by finalizer clone - PASS
+
+FINAL-BYTE GATES
+- Framework ~fix_mathjax_v10.py: PASS, 0 audit warnings
+- Clone ~finalize_bank.py: PASS
+- Clone BROKEN / MUST FIX: NONE
+- Clone MIGHT NEED A LOOK: NONE
+- Final ZIP integrity: PASS
+
+QA STATUS: PASS
