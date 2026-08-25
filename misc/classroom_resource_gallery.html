@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math & Science Classroom Resource Gallery</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#fff; --ink:#1f2937; --muted:#6b7280;
+    --line:#d8dde7; --accent:#3456d1; --accent2:#eef2ff; --shadow:0 8px 26px rgba(31,41,55,.09);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .wrap{max-width:1200px;margin:auto;padding:18px 22px}
+  h1{font-size:clamp(1.35rem,2.2vw,2rem);margin:0 0 6px}
+  .sub{color:var(--muted);font-size:.95rem;margin:0}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+  input,select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px;font:inherit;color:var(--ink)}
+  input{min-width:min(100%,320px);flex:1}
+  main.wrap{padding-top:24px;padding-bottom:50px}
+  .count{color:var(--muted);font-size:.9rem;margin:0 0 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:330px}
+  .thumb{height:190px;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line);cursor:pointer;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:contain;display:block}
+  .meta{padding:14px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .meta h2{font-size:1rem;line-height:1.25;margin:0}
+  .tag{display:inline-flex;align-self:flex-start;background:var(--accent2);color:#3048a6;border-radius:999px;padding:4px 8px;font-size:.74rem;font-weight:700}
+  .filename{font-size:.78rem;color:var(--muted);word-break:break-word;margin:0}
+  .actions{display:flex;gap:8px;margin-top:auto}
+  button,a.btn{appearance:none;border:0;text-decoration:none;border-radius:9px;padding:9px 11px;font:inherit;font-weight:700;cursor:pointer;text-align:center;flex:1}
+  button.preview{background:#eef1f7;color:#263248}
+  a.download{background:var(--accent);color:#fff}
+  .empty{display:none;text-align:center;padding:55px 20px;color:var(--muted)}
+
+  dialog{width:min(94vw,1050px);height:min(90vh,850px);padding:0;border:0;border-radius:16px;box-shadow:0 30px 100px rgba(0,0,0,.35)}
+  dialog::backdrop{background:rgba(12,18,30,.65)}
+  .modalHead{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);background:#fff}
+  .modalHead strong{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .modalHead button,.modalHead a{flex:0 0 auto;padding:8px 11px}
+  .modalBody{height:calc(100% - 59px);background:#e9edf3;display:grid;place-items:center;overflow:auto}
+  .modalBody img{max-width:100%;max-height:100%;object-fit:contain;background:#fff}
+  .modalBody iframe{width:100%;height:100%;border:0;background:#fff}
+  .close{background:#eff1f5;color:#1f2937}
+  .open{background:#fff;border:1px solid var(--line)!important;color:#1f2937;text-decoration:none;border-radius:9px;font-weight:700}
+  @media (max-width:600px){.thumb{height:165px}.actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Math & Science Classroom Resource Gallery</h1>
+    <p class="sub">Preview a resource first, then download only what you want. Everything works locally from this folder.</p>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search resources..." aria-label="Search resources">
+      <select id="category" aria-label="Filter by category">
+        <option value="all">All categories</option>
+        <option value="Graphing">Graphing</option>
+        <option value="Reference">Reference</option>
+        <option value="Record Sheet">Record Sheets</option>
+      </select>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="count" id="count"></p>
+  <section class="grid" id="gallery"></section>
+  <div class="empty" id="empty">No resources match that search.</div>
+</main>
+
+<dialog id="previewDialog">
+  <div class="modalHead">
+    <strong id="previewTitle">Preview</strong>
+    <a class="open" id="openNew" target="_blank" rel="noopener">Open full size</a>
+    <a class="btn download" id="modalDownload" download>Download</a>
+    <button class="close" id="closeDialog" type="button">Close</button>
+  </div>
+  <div class="modalBody" id="modalBody"></div>
+</dialog>
+
+<script>
+const resources = [
+  {title:'Blank Graph Grid', file:'grid.png', thumb:'grid.png', category:'Graphing', type:'image'},
+  {title:'Blank Number Line', file:'number_line_blank.png', thumb:'number_line_blank.png', category:'Graphing', type:'image'},
+  {title:'Number Line -10 to 10', file:'number_line_neg10_to_10.png', thumb:'number_line_neg10_to_10.png', category:'Graphing', type:'image'},
+  {title:'Coordinate Plane', file:'plane.png', thumb:'plane.png', category:'Graphing', type:'image'},
+  {title:'Blank Unit Circle', file:'small_unit_circle.png', thumb:'small_unit_circle.png', category:'Graphing', type:'image'},
+  {title:'Parent Functions Reference', file:'Parent Functions.pdf', thumb:'thumb_parent_functions.png', category:'Reference', type:'pdf'},
+  {title:'Parent Functions Reference - Alternate Filename', file:'parent_fuctions.pdf', thumb:'thumb_parent_fuctions_alt.png', category:'Reference', type:'pdf'},
+  {title:'Record Sheet - 1', file:'Record Sheet-1.pdf', thumb:'thumb_record_sheet_1.png', category:'Record Sheet', type:'pdf'},
+  {title:'Record Sheet - 2', file:'Record Sheet-2.pdf', thumb:'thumb_record_sheet_2.png', category:'Record Sheet', type:'pdf'},
+  {title:'Record Sheet - 6', file:'Record Sheet-6.pdf', thumb:'thumb_record_sheet_6.png', category:'Record Sheet', type:'pdf'},
+  {title:'Record Sheet - 8', file:'Record Sheet-8.pdf', thumb:'thumb_record_sheet_8.png', category:'Record Sheet', type:'pdf'}
+];
+
+const gallery = document.getElementById('gallery');
+const search = document.getElementById('search');
+const category = document.getElementById('category');
+const count = document.getElementById('count');
+const empty = document.getElementById('empty');
+const dialog = document.getElementById('previewDialog');
+const modalBody = document.getElementById('modalBody');
+const previewTitle = document.getElementById('previewTitle');
+const modalDownload = document.getElementById('modalDownload');
+const openNew = document.getElementById('openNew');
+
+function card(r){
+  const el = document.createElement('article');
+  el.className = 'card';
+  el.innerHTML = `
+    <div class="thumb" role="button" tabindex="0" aria-label="Preview ${r.title}">
+      <img src="${encodeURI(r.thumb)}" alt="Thumbnail preview of ${r.title}" loading="lazy">
+    </div>
+    <div class="meta">
+      <span class="tag">${r.category}</span>
+      <h2>${r.title}</h2>
+      <p class="filename">${r.file}</p>
+      <div class="actions">
+        <button class="preview" type="button">Preview</button>
+        <a class="btn download" href="${encodeURI(r.file)}" download>Download</a>
+      </div>
+    </div>`;
+  const show = () => preview(r);
+  el.querySelector('.preview').addEventListener('click', show);
+  el.querySelector('.thumb').addEventListener('click', show);
+  el.querySelector('.thumb').addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') show(); });
+  return el;
+}
+
+function render(){
+  const q = search.value.trim().toLowerCase();
+  const c = category.value;
+  const filtered = resources.filter(r =>
+    (c === 'all' || r.category === c) &&
+    (!q || `${r.title} ${r.file} ${r.category}`.toLowerCase().includes(q))
+  );
+  gallery.replaceChildren(...filtered.map(card));
+  count.textContent = `${filtered.length} resource${filtered.length === 1 ? '' : 's'}`;
+  empty.style.display = filtered.length ? 'none' : 'block';
+}
+
+function preview(r){
+  previewTitle.textContent = r.title;
+  modalDownload.href = encodeURI(r.file);
+  modalDownload.setAttribute('download', r.file);
+  openNew.href = encodeURI(r.file);
+  modalBody.replaceChildren();
+  if(r.type === 'pdf'){
+    const frame = document.createElement('iframe');
+    frame.src = encodeURI(r.file) + '#view=FitH';
+    frame.title = `PDF preview of ${r.title}`;
+    modalBody.appendChild(frame);
+  } else {
+    const img = document.createElement('img');
+    img.src = encodeURI(r.file);
+    img.alt = r.title;
+    modalBody.appendChild(img);
+  }
+  dialog.showModal();
+}
+
+search.addEventListener('input', render);
+category.addEventListener('change', render);
+document.getElementById('closeDialog').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', e => { if(e.target === dialog) dialog.close(); });
+render();
+</script>
+</body>
+</html>
