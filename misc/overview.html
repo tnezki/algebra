@@ -5,394 +5,1080 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Algebra 1 Course Overview</title>
 <style>
-:root{
-  --navy:#123f67;
-  --navy-2:#0d3152;
-  --gold:#f4c434;
-  --gold-soft:#fff7dc;
-  --ink:#17212b;
-  --muted:#5f6b76;
-  --line:#d6dde4;
+:root {
+  --navy:#123f68;
+  --navy-2:#1f527e;
+  --gold:#f3c433;
+  --gold-soft:#fff6d6;
+  --ink:#18212b;
+  --muted:#5c6875;
+  --line:#d7dee6;
   --paper:#ffffff;
-  --bg:#f3f6f8;
-  --blue-soft:#eef5fb;
-  --green-soft:#edf7f1;
-  --shadow:0 12px 30px rgba(20,44,68,.10);
+  --bg:#f5f7fa;
+  --good:#eaf4ef;
+  --shadow:0 12px 34px rgba(24,33,43,.08);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:22px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
-a{color:#1769a5}
-a:hover{color:#0d4d7d}
-.hero{background:linear-gradient(135deg,var(--navy-2),var(--navy));color:#fff;padding:38px 20px 34px;border-bottom:6px solid var(--gold)}
-.hero-inner{max-width:1120px;margin:0 auto}
-.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#f8d967;margin-bottom:8px}
-h1{font-size:clamp(2rem,5vw,3.35rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.035em}
-.hero p{max-width:850px;margin:0;font-size:1.08rem;color:#eaf1f6}
-main{max-width:1120px;margin:0 auto;padding:24px 18px 70px}
-.jump{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px;margin:-8px 0 24px}
-.jump strong{display:block;margin-bottom:10px;color:var(--navy)}
-.jump-links{display:flex;flex-wrap:wrap;gap:8px}
-.jump a{text-decoration:none;border:1px solid #bfd1df;background:#f8fbfd;color:var(--navy);padding:7px 11px;border-radius:999px;font-size:.91rem;font-weight:700}
-.jump a:hover{background:var(--blue-soft)}
-.section{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:24px;margin:0 0 24px}
-.section-title{display:flex;gap:12px;align-items:center;margin-bottom:15px}
-.section-kicker{background:var(--gold);color:#111;padding:5px 9px;border-radius:7px;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-h2{margin:0;color:var(--navy);font-size:1.75rem;letter-spacing:-.02em}
-h3{color:var(--navy);margin:1.2rem 0 .4rem;font-size:1.12rem}
-p{margin:.45rem 0 .8rem}
-ul{margin:.45rem 0 .95rem;padding-left:1.3rem}
-li{margin:.28rem 0}
-.lead{font-size:1.06rem;color:#344350}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:760px){.grid-2{grid-template-columns:1fr}}
-.callout{border-left:5px solid var(--gold);background:var(--gold-soft);padding:12px 14px;border-radius:8px;margin:12px 0}
-.info{background:var(--blue-soft);border:1px solid #cfe0ee;border-radius:10px;padding:13px 14px}
-.good{background:var(--green-soft);border:1px solid #cbe6d5;border-radius:10px;padding:13px 14px}
-.mini-title{font-weight:800;color:var(--navy);margin-bottom:4px}
-.proficiency{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
-.proficiency div{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fbfcfd}
-.proficiency b{display:block;color:var(--navy);margin-bottom:3px}
-@media(max-width:820px){.proficiency{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.proficiency{grid-template-columns:1fr}}
-.unit{padding:0;overflow:hidden}
-.unit-head{background:var(--navy);color:#fff;padding:18px 22px;border-bottom:5px solid var(--gold)}
-.unit-head .unit-num{font-size:.78rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#f7d760}
-.unit-head h2{color:#fff;margin-top:2px;font-size:1.7rem}
-.unit-body{padding:20px 22px 23px}
-.standard{background:#f7fafc;border:1px solid #dce5eb;border-radius:10px;padding:12px 14px;margin-bottom:16px}
-.standard b{color:var(--navy)}
-.section-row{padding:12px 0;border-top:1px solid #e4e9ed}
-.section-row:first-of-type{border-top:0}
-.section-row h3{margin:0 0 4px;font-size:1.05rem}
-.target{margin:0;color:#364754}
-.icans{margin-top:18px;background:#fbfcfd;border:1px solid #dce3e8;border-radius:12px;padding:15px 16px}
-.icans h3{margin:0 0 8px}
-.icans ol{margin:0;padding-left:1.45rem}
-.icans li{padding-left:.15rem;margin:.38rem 0}
-.note-small{font-size:.88rem;color:var(--muted);margin-top:8px}
-footer{max-width:1120px;margin:0 auto 45px;padding:0 18px;color:var(--muted);font-size:.88rem;text-align:center}
-#topButton{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border:0;border-radius:50%;background:var(--navy);color:white;font-size:1.35rem;font-weight:900;cursor:pointer;box-shadow:0 6px 18px rgba(10,42,70,.28);opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s ease;z-index:50}
-#topButton.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-#topButton:hover{background:#0b2e4d}
-@media print{body{background:white}.hero{padding:24px 0}.jump,#topButton{display:none}.section{box-shadow:none;break-inside:avoid}.unit{break-inside:auto}.unit-head{break-after:avoid}main{max-width:none;padding:12px 0}.section{border-color:#bbb}}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+}
+a{color:var(--navy-2)}
+.hero{
+  background:linear-gradient(135deg,var(--navy),#0b3153);
+  color:#fff;
+  padding:44px 22px 34px;
+}
+.hero-inner,.page{max-width:1050px;margin:0 auto}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 14px;letter-spacing:-.035em}
+.hero p{max-width:820px;margin:0;font-size:1.06rem;color:#edf4fa}
+.quick-nav{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.nav-chip{
+  display:inline-block;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.09);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:.88rem;
+  font-weight:700;
+}
+.nav-chip:hover{background:rgba(255,255,255,.18)}
+.page{padding:28px 18px 70px}
+.content-section{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:26px;
+  margin:0 0 24px;
+  scroll-margin-top:18px;
+}
+.content-section h2{font-size:1.9rem;line-height:1.15;margin:0 0 18px;color:var(--navy)}
+.content-section h3{margin:0;color:var(--navy);font-size:1.1rem}
+.lead{font-size:1.05rem;color:#344252}
+.columns{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+@media(max-width:760px){.columns{grid-template-columns:1fr}}
+.info-card{
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:16px;
+  background:#fbfcfd;
+}
+.info-card h3{margin-bottom:6px}
+.info-card p:last-child,.info-card ul:last-child{margin-bottom:0}
+.stage-row{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:14px;
+}
+@media(max-width:720px){.stage-row{grid-template-columns:1fr}}
+.stage{
+  padding:14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.stage strong{display:block;color:var(--navy);margin-bottom:3px}
+.callout{
+  border-left:5px solid var(--gold);
+  background:var(--gold-soft);
+  border-radius:9px;
+  padding:15px 17px;
+  margin:16px 0;
+}
+.status-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin-top:12px;
+}
+@media(max-width:760px){.status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.status-grid{grid-template-columns:1fr}}
+.status{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:11px;
+  background:#fff;
+}
+.status strong{color:var(--navy);display:block}
+.philosophy-points{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+@media(max-width:760px){.philosophy-points{grid-template-columns:1fr}}
+.phil-point{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:15px;
+  background:#fbfcfd;
+}
+.phil-point strong{color:var(--navy);display:block;margin-bottom:4px}
+.unit-section{padding-top:23px}
+.unit-kicker{
+  display:inline-block;
+  background:var(--gold);
+  color:#111;
+  font-weight:900;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:5px 10px;
+  border-radius:999px;
+  margin-bottom:8px;
+}
+.essential-standard{
+  border-left:5px solid var(--navy);
+  background:#f0f5f9;
+  border-radius:9px;
+  padding:14px 16px;
+  margin-bottom:18px;
+}
+.essential-standard strong{color:var(--navy)}
+.essential-standard p{margin:5px 0 0}
+.section-grid{display:grid;gap:12px}
+.section-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px 18px;
+  background:#fff;
+}
+.section-heading{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.section-number{
+  flex:0 0 auto;
+  background:var(--navy);
+  color:#fff;
+  font-weight:900;
+  border-radius:999px;
+  font-size:.78rem;
+  padding:4px 9px;
+}
+.section-card p{margin:0 0 9px}
+.ican-block{
+  background:var(--good);
+  border:1px solid #cfe2d6;
+  border-radius:10px;
+  padding:12px 14px;
+}
+.ican-title{font-weight:900;color:#24593c;margin-bottom:5px}
+.ican-block ul{margin:0;padding-left:21px}
+.ican-block li+li{margin-top:4px}
+.footer{
+  color:var(--muted);
+  text-align:center;
+  font-size:.88rem;
+  margin-top:28px;
+}
+#topButton{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:99;
+  display:none;
+  border:0;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(0,0,0,.22);
+  padding:11px 15px;
+  font:inherit;
+  font-weight:850;
+  cursor:pointer;
+}
+#topButton:hover{background:var(--navy-2)}
+ul{padding-left:22px}
 </style>
 </head>
 <body id="top">
+
 <header class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Manistee Area Public Schools · Algebra 1</div>
     <h1>Algebra 1 Course Overview</h1>
-    <p>This course builds algebraic fluency and mathematical reasoning through spiraled learning, multiple representations, purposeful practice, and a body of evidence collected over time. Use this page as a quick guide to the course syllabus, learning philosophy, and the major learning in each unit.</p>
+    <p>
+      Algebra 1 develops durable mathematical understanding through reasoning, representation,
+      modeling, practice, retrieval, and evidence gathered over time. This page summarizes the
+      current course philosophy and the eight-unit learning framework.
+    </p>
+    <nav class="quick-nav" aria-label="Page sections">
+      <a class="nav-chip" href="#syllabus">Syllabus</a>
+      <a class="nav-chip" href="#philosophy">Philosophy</a>
+      <a class="nav-chip" href="#unit-1">Unit 1</a>
+<a class="nav-chip" href="#unit-2">Unit 2</a>
+<a class="nav-chip" href="#unit-3">Unit 3</a>
+<a class="nav-chip" href="#unit-4">Unit 4</a>
+<a class="nav-chip" href="#unit-5">Unit 5</a>
+<a class="nav-chip" href="#unit-6">Unit 6</a>
+<a class="nav-chip" href="#unit-7">Unit 7</a>
+<a class="nav-chip" href="#unit-8">Unit 8</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <nav class="jump" aria-label="Page sections">
-    <strong>Jump to a section</strong>
-    <div class="jump-links">
-      <a href="#syllabus">Syllabus</a>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#unit1">Unit 1</a><a href="#unit2">Unit 2</a><a href="#unit3">Unit 3</a><a href="#unit4">Unit 4</a>
-      <a href="#unit5">Unit 5</a><a href="#unit6">Unit 6</a><a href="#unit7">Unit 7</a><a href="#unit8">Unit 8</a>
-      <a href="#unit0a">Unit 0A</a><a href="#unit0b">Unit 0B</a>
+<main class="page">
+
+<section id="syllabus" class="content-section">
+  <h2>Syllabus</h2>
+  <p class="lead">
+    Algebra 1 is a foundation course for future high-school mathematics. Students develop fluency
+    with algebraic reasoning, equations, inequalities, functions, modeling, and data while learning
+    to explain, represent, justify, and apply mathematical ideas.
+  </p>
+
+  <div class="columns">
+    <div class="info-card">
+      <h3>Major Topics</h3>
+      <p>
+        Expressions, equations and inequalities; multiple representations; linear functions and
+        modeling; systems and constraints; function families and transformations; polynomial
+        structure; quadratic functions; exponential functions; data modeling; and function analysis.
+      </p>
     </div>
-  </nav>
+    <div class="info-card">
+      <h3>How Learning Is Organized</h3>
+      <p>
+        The course is intentionally spiraled. Important ideas return across units so students have
+        repeated opportunities to retrieve, connect, strengthen, and apply learning rather than
+        treating a topic as finished after one test.
+      </p>
+    </div>
+  </div>
 
-  <section class="section" id="syllabus">
-    <div class="section-title"><span class="section-kicker">Course Guide</span><h2>Syllabus</h2></div>
-    <p class="lead"><strong>Algebra 1</strong> is a foundation course for future high school mathematics. Students develop fluency with algebraic reasoning, equations, inequalities, functions, modeling, and data while learning to communicate mathematical thinking clearly and accurately.</p>
+  <div class="stage-row">
+    <div class="stage"><strong>Current Learning</strong>Content being newly taught in the current unit.</div>
+    <div class="stage"><strong>Retrieval</strong>Purposeful return to recently learned content for spacing, connection, and retention.</div>
+    <div class="stage"><strong>Mastery</strong>Durable learning currently being gathered as formal portfolio and summative evidence.</div>
+  </div>
 
-    <div class="grid-2">
-      <div>
-        <h3>Major Topics</h3>
-        <p>Expressions, equations and inequalities; proportional reasoning; linear functions; systems; function families and transformations; polynomial structure; factoring; quadratic functions; exponential functions; data and modeling; and connections among graphs, tables, equations, and contexts.</p>
+  <div class="callout">
+    <strong>Assessment and grading:</strong> Practice creates learning; assessment gathers evidence.
+    The portfolio organizes evidence over time, and the grade communicates the teacher's best current
+    professional judgment of what a student actually understands.
+  </div>
+
+  <div class="columns">
+    <div class="info-card">
+      <h3>Evidence of Learning</h3>
+      <p>
+        Evidence may come from Exit Tickets, Quick Checks, Performance Tasks, investigations or labs,
+        quizzes, written explanations, modeling, Summatives, and other valid opportunities.
+        No single assessment is intended to tell the whole story.
+      </p>
+    </div>
+    <div class="info-card">
+      <h3>How Proficiency Is Judged</h3>
+      <p>
+        Proficiency is based on a body of evidence and considers quality, consistency, independence,
+        reasoning, representation use, recency, and the broader pattern over time. The course does not
+        rely on simple averaging, a "latest score wins" rule, or one weak event as the sole decision.
+      </p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:20px">Progress Labels</h3>
+  <div class="status-grid">
+    <div class="status"><strong>Not Yet</strong>Insufficient evidence currently supports the learning goal.</div>
+    <div class="status"><strong>Approaching</strong>Meaningful progress is visible, but the body of evidence is not yet consistently sufficient.</div>
+    <div class="status"><strong>Meeting</strong>The body of evidence supports independent performance of the learning goal.</div>
+    <div class="status"><strong>Exceeding</strong>Evidence shows strong transfer, connection, critique, modeling, or depth beyond the expected level.</div>
+  </div>
+
+  <div class="columns" style="margin-top:16px">
+    <div class="info-card">
+      <h3>Progress Trackers and Portfolio Evidence</h3>
+      <p>
+        Progress Trackers connect exact learning goals to current evidence status and a useful next
+        move. They are not point sheets and do not convert DOK levels or learning-ladder rungs into
+        automatic grades.
+      </p>
+    </div>
+    <div class="info-card">
+      <h3>Additional Evidence and Reassessment</h3>
+      <p>
+        Learning develops over time. Additional practice, feedback, reteaching, revision, and later
+        assessment opportunities can provide new evidence. New evidence is interpreted as part of the
+        complete pattern rather than simply replacing points.
+      </p>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-top:16px">
+    <div class="info-card">
+      <h3>Student Responsibilities</h3>
+      <ul>
+        <li>Engage actively in mathematical work and discussion.</li>
+        <li>Attempt challenging problems and use feedback productively.</li>
+        <li>Explain reasoning and use appropriate mathematical representations.</li>
+        <li>Monitor progress and revisit previous learning.</li>
+        <li>Seek support and continue building evidence of understanding.</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Family Partnership</h3>
+      <p>
+        Families are encouraged to ask about current learning goals, evidence of understanding,
+        strengths, misconceptions, feedback, and next steps—not just an isolated assignment score.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy" class="content-section">
+  <h2>Philosophy</h2>
+  <p class="lead">
+    Meaningful mathematical learning develops over time. The course is designed so instruction,
+    practice, retrieval, assessment, reflection, and feedback work together to build understanding
+    that students can use beyond the immediate lesson.
+  </p>
+
+  <div class="philosophy-points">
+    <div class="phil-point">
+      <strong>Learning Architecture Comes First</strong>
+      Exact I Can statements and the current Unit Assessment Plan define the learning and evidence
+      that matter. Questions and resources are built from those learning jobs rather than from a
+      random inventory of topics.
+    </div>
+    <div class="phil-point">
+      <strong>Practice and Assessment Have Different Jobs</strong>
+      Practice primarily creates learning. Assessment gathers evidence of what a student can
+      currently understand and do independently and helps determine what should happen next.
+    </div>
+    <div class="phil-point">
+      <strong>Spiraling Is Purposeful</strong>
+      Current Learning, Retrieval, and Mastery are deliberately different stages. Important ideas
+      return across time so students strengthen retention and connect new learning to earlier work.
+    </div>
+    <div class="phil-point">
+      <strong>Multiple Representations Are Mathematical Content</strong>
+      Graphs, tables, equations, contexts, diagrams, and other representations matter when students
+      actually read, build, compare, translate, or interpret them—not when they are merely decorative.
+    </div>
+    <div class="phil-point">
+      <strong>Reasoning and Communication Matter</strong>
+      Correct answers are important, but students also learn to interpret, justify, compare,
+      critique, model, and communicate mathematical ideas clearly when those forms of reasoning are
+      part of the target.
+    </div>
+    <div class="phil-point">
+      <strong>Productive Repetition Has Value</strong>
+      Repeated work can build fluency, accuracy, notation control, discrimination, confidence, and
+      conceptual strength. Variety is used when it broadens thinking, not simply to make every prompt
+      look different.
+    </div>
+    <div class="phil-point">
+      <strong>The Portfolio Holds the Larger Story</strong>
+      Individual evidence points contribute to a broader picture. Quality, consistency, independence,
+      reasoning, representation use, recency, and growth all matter when judging current proficiency.
+    </div>
+    <div class="phil-point">
+      <strong>Teacher Judgment Remains Central</strong>
+      Grades communicate demonstrated proficiency rather than compliance or accumulated points.
+      Professional judgment—not a mechanical average—determines what the body of evidence currently
+      supports.
+    </div>
+    <div class="phil-point">
+      <strong>Teacher Choice Is Built In</strong>
+      The course is a rich menu of useful options. Teachers may skip, shorten, substitute, combine,
+      reorder, or spend longer on resources while preserving the learning and evidence architecture.
+    </div>
+    <div class="phil-point">
+      <strong>Progress Should Point Forward</strong>
+      Feedback and Progress Trackers should help students identify what they currently understand,
+      what misconception or gap matters most, and what next move will strengthen the evidence.
+    </div>
+  </div>
+</section>
+
+
+    <section id="unit-1" class="content-section unit-section">
+      <div class="unit-kicker">Unit 1</div>
+      <h2>Foundations of Functions and Algebra</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will represent and interpret relationships by connecting tables, graphs, equations, and contexts that model the same situation.</p>
       </div>
-      <div>
-        <h3>Instructional Approach</h3>
-        <p>The course is intentionally spiraled. Important ideas return throughout the year through retrieval, practice, discussion, modeling, and later applications. Students are not expected to permanently master an idea after one lesson or one assessment.</p>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">1.1</span>
+            <h3>Multiple Representations of Relationships</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will connect tables, graphs, equations, and contexts that represent the same relationship.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct a table, graph, equation, or context from another representation of the same relationship.</li>
+<li>I can use features in one representation to work with a related table, graph, equation, or context.</li>
+<li>I can determine whether two representations belong to the same relationship using evidence from values, rates, or patterns.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">1.2</span>
+            <h3>Inputs, Outputs, and Functions</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate a rule that connects inputs to outputs in a table, graph, equation, or context.</li>
+<li>I can apply an input-output rule to generate missing values and ordered pairs.</li>
+<li>I can assess whether a rule gives one output for each input in a situation.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">1.3</span>
+            <h3>Function Families</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will recognize common function families from graphs, tables, equations, and contexts.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design examples of linear, quadratic, exponential, and absolute value relationships using more than one representation.</li>
+<li>I can extend patterns in tables, graphs, equations, and contexts to work with common function families.</li>
+<li>I can critique a proposed function family choice using evidence from rate of change, shape, or equation structure.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">1.4</span>
+            <h3>Expressions and Structure</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will interpret and rewrite algebraic expressions by identifying structure, meaning, and equivalent forms.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build equivalent expressions by using structure, grouping, and properties of operations.</li>
+<li>I can apply rewriting strategies to make the meaning of an expression easier to work with.</li>
+<li>I can determine whether two expressions are equivalent by using structure, substitution, or properties.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">1.5</span>
+            <h3>Equations as Models</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will write, solve, and interpret equations that model situations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct an equation that models a situation using meaningful quantities and operations.</li>
+<li>I can use solution steps to solve an equation and connect the result to the situation.</li>
+<li>I can predict whether a solution is reasonable by interpreting it in the original context.</li></ul>
+          </div>
+        </article>
+        
       </div>
-    </div>
-
-    <h3>Practice, Assessment, and the Portfolio</h3>
-    <p>Practice exists primarily to <strong>create learning</strong>. Assessment gathers evidence of what a student can currently do independently. That evidence may come from Exit Tickets, Quick Checks, Performance Tasks, investigations, quizzes, written explanations, modeling, Summative Assessments, and other valid opportunities.</p>
-    <div class="callout"><strong>Grades are not simple point averages.</strong> The portfolio organizes evidence across time, and the course grade communicates the teacher's best current professional judgment of what the student actually understands. Quality, consistency, independence, reasoning, representation use, recency, and the broader pattern all matter.</div>
-
-    <div class="grid-2">
-      <div class="info">
-        <div class="mini-title">Gradebook Organization</div>
-        <p><strong>90% Formative Assessment Evidence</strong><br><strong>10% Summative Assessment Evidence</strong></p>
-        <p class="note-small">These categories organize evidence; they should not be interpreted as a license to reduce proficiency to simple averaging.</p>
+    </section>
+    
+    <section id="unit-2" class="content-section unit-section">
+      <div class="unit-kicker">Unit 2</div>
+      <h2>Linear Functions and Modeling</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will interpret, represent, solve, and model linear relationships by using slope as a measure of constant rate of change across graphs, tables, equations, data, and contextual situations.</p>
       </div>
-      <div class="good">
-        <div class="mini-title">Feedback and Progress</div>
-        <p>Students use Progress Trackers and evaluation reports to connect exact learning goals to evidence, current status, strengths, misconceptions, and a next move.</p>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">2.1</span>
+            <h3>Rate of Change and Slope</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will interpret slope as a measure of constant rate of change.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct rate-of-change statements from tables, graphs, and situations.</li>
+<li>I can apply slope calculations to interpret constant change between quantities.</li>
+<li>I can determine whether a slope value is reasonable for a given context.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">2.2</span>
+            <h3>Graphing Linear Functions</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will graph linear functions and interpret key features.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build graphs of linear functions using slope and intercept information.</li>
+<li>I can use key features of a line to interpret a relationship.</li>
+<li>I can extend a graph to predict outputs within a meaningful range.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">2.3</span>
+            <h3>Writing Linear Equations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will write linear equations from graphs, tables, and situations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate linear equations from graphs, tables, and situations.</li>
+<li>I can apply slope-intercept structure to connect rate and starting value.</li>
+<li>I can design equivalent equations that represent the same linear relationship.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">2.4</span>
+            <h3>Comparing Linear Representations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will analyze and compare linear relationships using multiple representations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct comparison models for linear relationships shown in different forms.</li>
+<li>I can use slope and intercept information to interpret similarities and differences.</li>
+<li>I can critique conclusions about linear relationships using evidence from representations.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">2.5</span>
+            <h3>Linear Modeling with Data</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will use linear models to represent and interpret real-world data.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design linear models that represent patterns in real-world data.</li>
+<li>I can predict values using a linear model and interpret the result.</li>
+<li>I can assess whether a linear model fits a data situation well enough for the question being asked.</li></ul>
+          </div>
+        </article>
+        
       </div>
-    </div>
-
-    <h3>Current Progress Language</h3>
-    <div class="proficiency">
-      <div><b>Not Yet</b>Insufficient evidence of the learning goal at this time.</div>
-      <div><b>Approaching</b>Meaningful progress is visible, but evidence is still incomplete or inconsistent.</div>
-      <div><b>Meeting</b>The body of evidence supports independent performance of the learning goal.</div>
-      <div><b>Exceeding</b>The student demonstrates strong transfer, connection, critique, modeling, or depth beyond the core expectation.</div>
-    </div>
-
-    <h3>Reassessment and Continued Learning</h3>
-    <p>Students may receive opportunities for targeted reteaching, revision, additional practice, Crewtime support, and reassessment. Reassessment is intended to strengthen understanding and provide new evidence—not simply replace points.</p>
-  </section>
-
-  <section class="section" id="philosophy">
-    <div class="section-title"><span class="section-kicker">Why We Learn This Way</span><h2>Philosophy</h2></div>
-    <p class="lead">The course is built on a simple belief: <strong>meaningful learning develops over time.</strong> Algebra 1 is not just a collection of procedures. Students learn to recognize patterns, represent relationships, explain reasoning, critique conclusions, model situations, and use mathematics flexibly.</p>
-
-    <div class="grid-2">
-      <div>
-        <h3>Exact Learning Goals Drive the Course</h3>
-        <p>I-can statements are the instructional spine. Notes, practice, investigations, discussion, assessments, and later retrieval should connect to those learning jobs rather than functioning as unrelated assignments.</p>
-
-        <h3>Spiraling and Retrieval</h3>
-        <p>Important ideas are revisited across units. Repetition is often valuable when it builds fluency, accuracy, retention, pattern recognition, or confidence. The goal is purposeful repetition, not repetition created only because a template makes it easy.</p>
-
-        <h3>Multiple Representations</h3>
-        <p>Graphs, equations, tables, contexts, number lines, models, and other representations are part of the mathematics—not decoration. Students should read, build, compare, translate, and interpret representations when the learning goal calls for it.</p>
+    </section>
+    
+    <section id="unit-3" class="content-section unit-section">
+      <div class="unit-kicker">Unit 3</div>
+      <h2>Systems and Constraints</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will solve, represent, interpret, and justify systems and constraints using graphs, algebraic methods, solution types, and contextual meaning.</p>
       </div>
-      <div>
-        <h3>Productive Struggle and Discussion</h3>
-        <p>Students learn by trying ideas, making mistakes, explaining thinking, questioning reasoning, and revising approaches. Collaboration and mathematical discourse are used to make thinking visible, not simply to divide the work.</p>
-
-        <h3>Rich Menu and Teacher Choice</h3>
-        <p>The course provides a rich menu of useful learning options. Teachers may skip, shorten, substitute, combine, reorder, or spend longer on resources. More material is useful when it provides genuine learning opportunities; purposeless filler is not.</p>
-
-        <h3>Assessment as Evidence</h3>
-        <p>Exit Tickets are quick evidence pulses; Quick Checks and Performance Tasks can provide deeper evidence later. No single weak event should define proficiency, and “latest score wins” is not the rule. The portfolio looks across the body of evidence.</p>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">3.1</span>
+            <h3>Graphing and Elimination</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will solve systems graphically and by elimination while interpreting the meaning of different solution types.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct graphical representations of systems and connect intersection points to solutions.</li>
+<li>I can use elimination to solve systems and interpret the solution type.</li>
+<li>I can determine whether a system has one solution, no solution, or infinitely many solutions from algebraic and graphical evidence.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">3.2</span>
+            <h3>Solving Systems by Substitution</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will solve systems using substitution and choose efficient forms for solving.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate a substitution plan when one equation is already written in an efficient form.</li>
+<li>I can apply substitution to solve systems and interpret the ordered-pair solution.</li>
+<li>I can assess which algebraic method is more efficient for a given system.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">3.3</span>
+            <h3>Writing and Solving Systems from Situations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will create and solve systems that model real-world situations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build a system of equations that represents two constraints in a situation.</li>
+<li>I can predict the meaning of a solution before solving from the context and variables.</li>
+<li>I can design a solution pathway that connects equations, calculations, and a contextual conclusion.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">3.4</span>
+            <h3>Graphing Linear Inequalities</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will graph and interpret linear inequalities.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct a boundary line and shaded region for a linear inequality.</li>
+<li>I can use test points to interpret which region satisfies an inequality.</li>
+<li>I can critique a graph of a linear inequality using the boundary, shading, and solution region.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">3.5</span>
+            <h3>Linear Systems of Inequalities</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will analyze and interpret systems of linear inequalities.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate a system of inequalities that represents multiple constraints.</li>
+<li>I can extend graphing strategies to represent overlapping solution regions.</li>
+<li>I can apply feasible-region reasoning to interpret possible solutions in context.</li></ul>
+          </div>
+        </article>
+        
       </div>
-    </div>
+    </section>
+    
+    <section id="unit-4" class="content-section unit-section">
+      <div class="unit-kicker">Unit 4</div>
+      <h2>Function Families and Transformations</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will analyze, represent, model, and interpret common function families and their transformations across graphs, equations, tables, and contexts.</p>
+      </div>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">4.1</span>
+            <h3>Recognizing Function Families</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will identify common function families from graphs, equations, tables, and contexts.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct evidence for a function family using patterns in graphs, equations, tables, and contexts.</li>
+<li>I can apply family features to sort representations into linear, quadratic, exponential, absolute value, and other familiar forms.</li>
+<li>I can determine which representation gives the strongest evidence for a function family when features seem similar.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">4.2</span>
+            <h3>Translations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will graph and write translated functions using key points and key features.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build translated graphs by moving key points and key features from a parent function.</li>
+<li>I can use horizontal and vertical shifts to write equations for translated functions.</li>
+<li>I can predict how changing values in an equation moves a graph left, right, up, or down.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">4.3</span>
+            <h3>Transformations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will analyze and graph transformations involving stretches, compressions, and reflections.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design transformed graphs using stretches, compressions, reflections, and translations of parent functions.</li>
+<li>I can apply transformation rules to key points and features across function families.</li>
+<li>I can assess whether an equation, graph, or table represents the same transformed function.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">4.4</span>
+            <h3>Polynomial Operations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will add, subtract, and multiply polynomial expressions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate polynomial sums, differences, and products from area, perimeter, and expression contexts.</li>
+<li>I can use structure and like terms to add, subtract, and multiply polynomial expressions.</li>
+<li>I can extend polynomial operations to equivalent expressions written in different forms.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">4.5</span>
+            <h3>Polynomial Structure and Quadratic Graphs</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will connect polynomial expressions to quadratic graphs and key features.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct connections between polynomial structure, quadratic graphs, and key features.</li>
+<li>I can predict graph features from equivalent quadratic expressions.</li>
+<li>I can critique whether a polynomial expression supports a claimed vertex, intercept, axis of symmetry, or direction of opening.</li></ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section id="unit-5" class="content-section unit-section">
+      <div class="unit-kicker">Unit 5</div>
+      <h2>Factoring and Quadratic Functions</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will analyze polynomial structure, represent quadratic expressions in useful forms, solve for zeros, and interpret how factors connect to graphs and key features.</p>
+      </div>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">5.1</span>
+            <h3>GCF and Structure</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will identify common factors and use structure to rewrite polynomial expressions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct equivalent polynomial expressions by factoring out a greatest common factor.</li>
+<li>I can apply structure to rewrite polynomial expressions in a more useful form.</li>
+<li>I can determine whether a rewritten expression is reasonable by checking common factors and equivalent products.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">5.2</span>
+            <h3>Factoring Trinomials</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will factor quadratic trinomials using patterns, products, sums, and structure.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build factored forms of quadratic trinomials using product-sum relationships.</li>
+<li>I can use patterns in coefficients and constants to factor quadratic trinomials.</li>
+<li>I can predict missing factors or terms by extending product-sum reasoning.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">5.3</span>
+            <h3>Special Factoring Patterns</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will recognize and factor special polynomial patterns.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design a strategy for factoring special polynomial patterns.</li>
+<li>I can apply difference-of-squares and perfect-square-trinomial patterns.</li>
+<li>I can assess whether a polynomial fits a special factoring pattern before rewriting it.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">5.4</span>
+            <h3>Factored Form and Zeros</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will connect factors, zeros, intercepts, and graphs of quadratic functions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate quadratic functions in factored form from zeros or intercepts.</li>
+<li>I can use factored form to predict zeros and x-intercepts of quadratic graphs.</li>
+<li>I can extend connections among factors, zeros, intercepts, and graph behavior.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">5.5</span>
+            <h3>Comparing Quadratic Forms</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will compare standard, vertex, and factored forms of quadratic functions and determine which form best reveals key features.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct equivalent quadratic forms to reveal different key features.</li>
+<li>I can interpret standard, vertex, and factored forms to read key features of quadratic functions.</li>
+<li>I can critique which quadratic form best supports a given question or context.</li></ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section id="unit-6" class="content-section unit-section">
+      <div class="unit-kicker">Unit 6</div>
+      <h2>Solving and Modeling with Quadratics</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will solve quadratic equations, analyze solution methods, model quadratic situations, and interpret solutions in equations, graphs, and contexts.</p>
+      </div>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">6.1</span>
+            <h3>Solving Quadratics by Factoring</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will solve quadratic equations using factored form and interpret solutions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct factored quadratic equations from given zeros, intercepts, or contextual constraints.</li>
+<li>I can apply the zero product property to solve quadratic equations in factored form.</li>
+<li>I can determine whether solutions make sense in relation to a graph or context.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">6.2</span>
+            <h3>Completing the Square</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will solve quadratic equations by completing the square and connect the process to vertex form.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build perfect-square trinomials by adding the needed constant term.</li>
+<li>I can use completing the square to solve quadratic equations and write equivalent vertex-form expressions.</li>
+<li>I can predict how completing the square reveals the vertex and symmetry of a quadratic function.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">6.3</span>
+            <h3>Quadratic Formula</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will solve quadratic equations using the quadratic formula and interpret solutions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design a coefficient map that organizes $a$, $b$, and $c$ before using the quadratic formula.</li>
+<li>I can apply the quadratic formula to solve equations with rational, irrational, or no real solutions.</li>
+<li>I can assess how the discriminant predicts the number and type of real solutions.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">6.4</span>
+            <h3>Choosing and Defending Solution Methods</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will compare factoring, completing the square, and the quadratic formula and select efficient solution methods.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate a solution-method plan based on the structure of a quadratic equation.</li>
+<li>I can use factoring, completing the square, or the quadratic formula when the equation structure supports the method.</li>
+<li>I can critique a selected solution method for efficiency, accuracy, and fit to the equation.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">6.5</span>
+            <h3>Quadratic Modeling and Optimization</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will use quadratic functions to model real-world situations and interpret maximums, minimums, and intercepts.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct quadratic models from real-world constraints, data, or key features.</li>
+<li>I can extend quadratic models to predict maximums, minimums, intercepts, and meaningful solution values.</li>
+<li>I can assess whether a quadratic model and its solutions are reasonable for the situation.</li></ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section id="unit-7" class="content-section unit-section">
+      <div class="unit-kicker">Unit 7</div>
+      <h2>Exponential Functions and Modeling</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will analyze, represent, model, and interpret exponential relationships using patterns, tables, graphs, equations, and real-world situations.</p>
+      </div>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">7.1</span>
+            <h3>Recognizing Growth and Decay</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will identify exponential relationships from patterns, tables, graphs, and situations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct evidence from patterns, tables, graphs, and situations to support an exponential growth or decay relationship.</li>
+<li>I can apply repeated multiplication and constant ratios to exponential patterns.</li>
+<li>I can determine whether a relationship is exponential by checking how values change across representations.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">7.2</span>
+            <h3>Writing Exponential Equations</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will write exponential equations from tables, graphs, and situations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build exponential equations using an initial value and a growth or decay factor.</li>
+<li>I can use exponential equations to predict values from tables, graphs, and situations.</li>
+<li>I can formulate exponential equations that represent repeated percent increase or decrease.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">7.3</span>
+            <h3>Graphing and Analyzing Exponential Functions</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will graph exponential functions and analyze key features.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design graphs of exponential functions using key points, growth or decay factors, and asymptote behavior.</li>
+<li>I can apply key features of exponential graphs to interpret domain, range, intercepts, and end behavior.</li>
+<li>I can assess whether a graph is reasonable for an exponential equation or situation.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">7.4</span>
+            <h3>Comparing Function Families</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will compare linear, quadratic, and exponential functions using multiple representations.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate comparisons among linear, quadratic, and exponential functions using rates, differences, ratios, and graph features.</li>
+<li>I can use tables, graphs, equations, and situations to distinguish additive, quadratic, and multiplicative patterns.</li>
+<li>I can critique claims about function families using evidence from multiple representations.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">7.5</span>
+            <h3>Exponential Modeling with Data</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will create and analyze exponential models using real-world data.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct exponential models from real-world data using an initial value and a growth or decay factor.</li>
+<li>I can extend exponential models to make predictions and interpret results in context.</li>
+<li>I can assess model fit and limitations when exponential data do not follow a perfect pattern.</li></ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    <section id="unit-8" class="content-section unit-section">
+      <div class="unit-kicker">Unit 8</div>
+      <h2>Function Analysis, Modeling, and Synthesis</h2>
+      <div class="essential-standard">
+        <strong>Essential Standard / Enduring Understanding</strong>
+        <p>Students will analyze, model, and interpret situations using linear, quadratic, exponential, absolute value, and piecewise function representations to select appropriate models and support conclusions.</p>
+      </div>
+      <div class="section-grid">
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">8.1</span>
+            <h3>Selecting Appropriate Models</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will determine whether a situation is best modeled by a linear, quadratic, or exponential function.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct evidence from tables, graphs, and contexts to choose a linear, quadratic, or exponential model.</li>
+<li>I can apply rate, second-difference, and ratio patterns to select an appropriate function family.</li>
+<li>I can determine whether a chosen model is reasonable for a situation and its data pattern.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">8.2</span>
+            <h3>Transformations Across Function Families</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will analyze transformations across multiple function families.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can build transformed function rules from parent functions across linear, quadratic, exponential, and absolute value families.</li>
+<li>I can use key points and key features to graph transformations across multiple function families.</li>
+<li>I can formulate a transformation description that connects parameter changes to key point shifts across function families.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">8.3</span>
+            <h3>Absolute Value Functions and Piecewise Thinking</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will analyze and model situations involving absolute value functions.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can design an absolute value or piecewise representation for situations with distance, change in direction, or two-part behavior.</li>
+<li>I can apply key features of absolute value graphs to interpret vertex, intercepts, and rate of change.</li>
+<li>I can predict outputs and intervals from absolute value and piecewise rules in context.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">8.4</span>
+            <h3>Modeling Investigation</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will create and analyze mathematical models using real-world data.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can formulate a mathematical model from real-world data and state the assumptions used.</li>
+<li>I can extend a model to make predictions within a reasonable domain.</li>
+<li>I can critique how well a model fits data, constraints, and the situation being studied.</li></ul>
+          </div>
+        </article>
+        
+        <article class="section-card">
+          <div class="section-heading">
+            <span class="section-number">8.5</span>
+            <h3>Function Synthesis and Capstone Analysis</h3>
+          </div>
+          <p><strong>Learning Target:</strong> Students will synthesize understanding of function families and representations to solve complex problems.</p>
+          <div class="ican-block">
+            <div class="ican-title">I Can Statements</div>
+            <ul><li>I can construct a solution pathway that connects equations, graphs, tables, and contexts across function families.</li>
+<li>I can use multiple representations to solve complex function problems and interpret results.</li>
+<li>I can assess competing solution strategies and choose the representation that best supports the conclusion.</li></ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
 
-    <div class="callout"><strong>Technology supports professional judgment; it does not replace it.</strong> AI-supported evaluation may help organize evidence, identify patterns, and generate useful feedback, but instructional decisions, proficiency judgments, interventions, reassessment opportunities, and final grades remain the responsibility of the teacher.</div>
-  </section>
+<div class="footer">
+  Algebra 1 Course Overview · Current framework: Units 1–8
+</div>
 
-  <section class="section unit" id="unit1">
-    <div class="unit-head"><div class="unit-num">Unit 1</div><h2>Foundations of Functions and Algebra</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will connect tables, graphs, equations, and contexts that represent the same relationship.</div>
-      <div class="section-row"><h3>Section 1.1: Multiple Representations of Relationships</h3><p class="target"><strong>Learning Target:</strong> Students will connect tables, graphs, equations, and contexts that represent the same relationship.</p></div>
-      <div class="section-row"><h3>Section 1.2: Inputs, Outputs, and Functions</h3><p class="target"><strong>Learning Target:</strong> Students will interpret functions as rules that connect inputs and outputs without relying on formal domain and range language.</p></div>
-      <div class="section-row"><h3>Section 1.3: Function Families</h3><p class="target"><strong>Learning Target:</strong> Students will recognize common function families from graphs, tables, equations, and contexts.</p></div>
-      <div class="section-row"><h3>Section 1.4: Expressions and Structure</h3><p class="target"><strong>Learning Target:</strong> Students will interpret and rewrite algebraic expressions by identifying structure, meaning, and equivalent forms.</p></div>
-      <div class="section-row"><h3>Section 1.5: Equations as Models</h3><p class="target"><strong>Learning Target:</strong> Students will write, solve, and interpret equations that model situations.</p></div>
-      <div class="icans"><h3>Unit 1 I Can Statements</h3><ol>
-        <li>I can design a coherent model that uses rational numbers, expressions, equations, or inequalities to represent and solve a contextual situation.</li>
-        <li>I can construct and revise an algebraic representation when a context includes operations, unknowns, or constraints.</li>
-        <li>I can critique a solution pathway for an equation or inequality by checking equivalence, operations, and contextual meaning.</li>
-        <li>I can assess whether rewritten expressions, computed values, and solution sets are reasonable for the original problem.</li>
-        <li>I can apply properties and inverse operations to rewrite expressions and solve one-variable equations or inequalities.</li>
-        <li>I can construct number line graphs and algebraic steps that represent rational number operations, equations, and inequalities.</li>
-        <li>I can use order of operations, substitution, and operation rules to calculate expression values and rational number results.</li>
-        <li>I can classify symbols, terms, operations, equation signs, and inequality signs by how they function in algebraic work.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit2">
-    <div class="unit-head"><div class="unit-num">Unit 2</div><h2>Linear Functions and Modeling</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will interpret slope as a measure of constant rate of change.</div>
-      <div class="section-row"><h3>Section 2.1: Rate of Change and Slope</h3><p class="target"><strong>Learning Target:</strong> Students will interpret slope as a measure of constant rate of change.</p></div>
-      <div class="section-row"><h3>Section 2.2: Graphing Linear Functions</h3><p class="target"><strong>Learning Target:</strong> Students will graph linear functions and interpret key features.</p></div>
-      <div class="section-row"><h3>Section 2.3: Writing Linear Equations</h3><p class="target"><strong>Learning Target:</strong> Students will write linear equations from graphs, tables, and situations.</p></div>
-      <div class="section-row"><h3>Section 2.4: Comparing Linear Representations</h3><p class="target"><strong>Learning Target:</strong> Students will analyze and compare linear relationships using multiple representations.</p></div>
-      <div class="section-row"><h3>Section 2.5: Linear Modeling with Data</h3><p class="target"><strong>Learning Target:</strong> Students will use linear models to represent and interpret real-world data.</p></div>
-      <div class="icans"><h3>Unit 2 I Can Statements</h3><ol>
-        <li>I can design a coherent linear model that connects a context or data set to a graph, table, equation, prediction, and conclusion.</li>
-        <li>I can construct and revise a comparison of two linear relationships using evidence from multiple representations.</li>
-        <li>I can critique a conclusion about a linear relationship by checking rate, starting value, scale, and representation evidence.</li>
-        <li>I can assess whether tables, graphs, situations, or data patterns are reasonably represented by a linear model.</li>
-        <li>I can apply slope and starting value information to write, graph, interpret, and use a linear equation.</li>
-        <li>I can construct and connect tables, graphs, equations, and contexts for the same linear relationship.</li>
-        <li>I can use coordinate-plane features, ordered pairs, intercepts, input-output rules, and slope calculations correctly.</li>
-        <li>I can classify basic representations as tables, graphs, equations, rules, rates, intercepts, or contexts.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit3">
-    <div class="unit-head"><div class="unit-num">Unit 3</div><h2>Systems and Constraints</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will solve systems graphically and by elimination while interpreting the meaning of different solution types.</div>
-      <div class="section-row"><h3>Section 3.1: Graphing and Elimination</h3><p class="target"><strong>Learning Target:</strong> Students will solve systems graphically and by elimination while interpreting the meaning of different solution types.</p></div>
-      <div class="section-row"><h3>Section 3.2: Solving Systems by Substitution</h3><p class="target"><strong>Learning Target:</strong> Students will solve systems using substitution and choose efficient forms for solving.</p></div>
-      <div class="section-row"><h3>Section 3.3: Writing and Solving Systems from Situations</h3><p class="target"><strong>Learning Target:</strong> Students will create and solve systems that model real-world situations.</p></div>
-      <div class="section-row"><h3>Section 3.4: Graphing Linear Inequalities</h3><p class="target"><strong>Learning Target:</strong> Students will graph and interpret linear inequalities.</p></div>
-      <div class="section-row"><h3>Section 3.5: Linear Systems of Inequalities</h3><p class="target"><strong>Learning Target:</strong> Students will analyze and interpret systems of linear inequalities.</p></div>
-      <div class="icans"><h3>Unit 3 I Can Statements</h3><ol>
-        <li>I can design a system of equations or inequalities that models multiple real-world constraints and communicate a justified conclusion.</li>
-        <li>I can construct and revise graphical and algebraic representations so they describe the same system and solution set.</li>
-        <li>I can critique a system solution or method by checking equations, graphs, solution type, and contextual meaning.</li>
-        <li>I can assess whether an intersection, feasible region, or ordered pair is reasonable evidence for the stated constraints.</li>
-        <li>I can apply graphing, elimination, and substitution accurately to solve systems and interpret their solutions.</li>
-        <li>I can construct boundary lines, shaded regions, and overlapping feasible regions for linear inequalities.</li>
-        <li>I can use slope, intercepts, equivalent equations, test points, and ordered pairs correctly during system work.</li>
-        <li>I can identify systems, constraints, intersections, boundary types, solution regions, and common solution types.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit4">
-    <div class="unit-head"><div class="unit-num">Unit 4</div><h2>Function Families and Transformations</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will identify common function families from graphs, equations, tables, and contexts.</div>
-      <div class="section-row"><h3>Section 4.1: Recognizing Function Families</h3><p class="target"><strong>Learning Target:</strong> Students will identify common function families from graphs, equations, tables, and contexts.</p></div>
-      <div class="section-row"><h3>Section 4.2: Translations</h3><p class="target"><strong>Learning Target:</strong> Students will graph and write translated functions using key points and key features.</p></div>
-      <div class="section-row"><h3>Section 4.3: Transformations</h3><p class="target"><strong>Learning Target:</strong> Students will analyze and graph transformations involving stretches, compressions, and reflections.</p></div>
-      <div class="section-row"><h3>Section 4.4: Polynomial Operations</h3><p class="target"><strong>Learning Target:</strong> Students will add, subtract, and multiply polynomial expressions.</p></div>
-      <div class="section-row"><h3>Section 4.5: Polynomial Structure and Quadratic Graphs</h3><p class="target"><strong>Learning Target:</strong> Students will connect polynomial expressions to quadratic graphs and key features.</p></div>
-      <div class="icans"><h3>Unit 4 I Can Statements</h3><ol>
-        <li>I can design and explain a transformed function model that connects a parent function, equation, graph, key features, and context.</li>
-        <li>I can construct and revise transformed graphs and equivalent polynomial forms to reveal useful features.</li>
-        <li>I can critique a claimed function family, transformation, or quadratic feature using evidence from multiple representations.</li>
-        <li>I can assess whether an equation, graph, table, and set of key points describe the same transformed function.</li>
-        <li>I can apply translations, reflections, stretches, compressions, and polynomial operations accurately.</li>
-        <li>I can construct transformed graphs from parent functions and connect polynomial structure to quadratic graph features.</li>
-        <li>I can combine like terms, multiply polynomial expressions, and locate key points and intercepts correctly.</li>
-        <li>I can identify common function families, parent functions, transformation types, polynomial forms, and quadratic features.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit5">
-    <div class="unit-head"><div class="unit-num">Unit 5</div><h2>Factoring and Quadratic Functions</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will identify common factors and use structure to rewrite polynomial expressions.</div>
-      <div class="section-row"><h3>Section 5.1: GCF and Structure</h3><p class="target"><strong>Learning Target:</strong> Students will identify common factors and use structure to rewrite polynomial expressions.</p></div>
-      <div class="section-row"><h3>Section 5.2: Factoring Trinomials</h3><p class="target"><strong>Learning Target:</strong> Students will factor quadratic trinomials using patterns, products, sums, and structure.</p></div>
-      <div class="section-row"><h3>Section 5.3: Special Factoring Patterns</h3><p class="target"><strong>Learning Target:</strong> Students will recognize and factor special polynomial patterns.</p></div>
-      <div class="section-row"><h3>Section 5.4: Factored Form and Zeros</h3><p class="target"><strong>Learning Target:</strong> Students will connect factors, zeros, intercepts, and graphs of quadratic functions.</p></div>
-      <div class="section-row"><h3>Section 5.5: Comparing Quadratic Forms</h3><p class="target"><strong>Learning Target:</strong> Students will compare standard, vertex, and factored forms of quadratic functions and determine which form best reveals key features.</p></div>
-      <div class="icans"><h3>Unit 5 I Can Statements</h3><ol>
-        <li>I can design a quadratic representation that uses the form best suited to the context, graph features, or question being answered.</li>
-        <li>I can construct and revise equivalent standard, vertex, and factored forms to reveal different quadratic features.</li>
-        <li>I can critique a factorization or quadratic-form choice by checking structure, products, zeros, and graph evidence.</li>
-        <li>I can assess whether factors, zeros, intercepts, and graph features are reasonable and mutually consistent.</li>
-        <li>I can apply GCF, trinomial, and special-pattern factoring strategies accurately to polynomial expressions.</li>
-        <li>I can construct factored forms from zeros or intercepts and connect them to quadratic graphs.</li>
-        <li>I can multiply binomial factors, identify factor pairs, and use the zero product property correctly.</li>
-        <li>I can identify factors, GCFs, special patterns, zeros, intercepts, and standard, vertex, and factored forms.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit6">
-    <div class="unit-head"><div class="unit-num">Unit 6</div><h2>Solving and Modeling with Quadratics</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will solve quadratic equations using factored form and interpret solutions.</div>
-      <div class="section-row"><h3>Section 6.1: Solving Quadratics by Factoring</h3><p class="target"><strong>Learning Target:</strong> Students will solve quadratic equations using factored form and interpret solutions.</p></div>
-      <div class="section-row"><h3>Section 6.2: Completing the Square</h3><p class="target"><strong>Learning Target:</strong> Students will solve quadratic equations by completing the square and connect the process to vertex form.</p></div>
-      <div class="section-row"><h3>Section 6.3: Quadratic Formula</h3><p class="target"><strong>Learning Target:</strong> Students will solve quadratic equations using the quadratic formula and interpret solutions.</p></div>
-      <div class="section-row"><h3>Section 6.4: Choosing and Defending Solution Methods</h3><p class="target"><strong>Learning Target:</strong> Students will compare factoring, completing the square, and the quadratic formula and select efficient solution methods.</p></div>
-      <div class="section-row"><h3>Section 6.5: Quadratic Modeling and Optimization</h3><p class="target"><strong>Learning Target:</strong> Students will use quadratic functions to model real-world situations and interpret maximums, minimums, and intercepts.</p></div>
-      <div class="icans"><h3>Unit 6 I Can Statements</h3><ol>
-        <li>I can design and defend a quadratic model that connects context, equation, graph, and a meaningful conclusion.</li>
-        <li>I can construct and revise equivalent quadratic forms to choose an efficient strategy.</li>
-        <li>I can critique a quadratic method or model using structure, discriminant, graph, and context evidence.</li>
-        <li>I can assess whether roots, extrema, intercepts, and predictions are reasonable.</li>
-        <li>I can apply factoring, completing the square, and the quadratic formula accurately.</li>
-        <li>I can construct factored or vertex forms and use graph features to support solutions.</li>
-        <li>I can use coefficients, discriminants, the zero product property, and perfect squares correctly.</li>
-        <li>I can identify quadratic forms, methods, zeros, vertices, discriminants, extrema, and intercepts.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit7">
-    <div class="unit-head"><div class="unit-num">Unit 7</div><h2>Exponential Functions and Modeling</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will identify exponential relationships from patterns, tables, graphs, and situations.</div>
-      <div class="section-row"><h3>Section 7.1: Recognizing Growth and Decay</h3><p class="target"><strong>Learning Target:</strong> Students will identify exponential relationships from patterns, tables, graphs, and situations.</p></div>
-      <div class="section-row"><h3>Section 7.2: Writing Exponential Equations</h3><p class="target"><strong>Learning Target:</strong> Students will write exponential equations from tables, graphs, and situations.</p></div>
-      <div class="section-row"><h3>Section 7.3: Graphing and Analyzing Exponential Functions</h3><p class="target"><strong>Learning Target:</strong> Students will graph exponential functions and analyze key features.</p></div>
-      <div class="section-row"><h3>Section 7.4: Comparing Function Families</h3><p class="target"><strong>Learning Target:</strong> Students will compare linear, quadratic, and exponential functions using multiple representations.</p></div>
-      <div class="section-row"><h3>Section 7.5: Exponential Modeling with Data</h3><p class="target"><strong>Learning Target:</strong> Students will create and analyze exponential models using real-world data.</p></div>
-      <div class="icans"><h3>Unit 7 I Can Statements</h3><ol>
-        <li>I can design an exponential model from data or context and communicate predictions, assumptions, fit, and limitations.</li>
-        <li>I can construct and revise exponential equations, graphs, tables, and contexts so they represent the same growth or decay relationship.</li>
-        <li>I can critique a function-family claim or exponential model using differences, ratios, graph features, and contextual evidence.</li>
-        <li>I can assess whether an exponential graph, equation, prediction, or model fit is reasonable for the situation.</li>
-        <li>I can apply initial values and growth or decay factors to write, graph, interpret, and use exponential functions.</li>
-        <li>I can construct comparisons among linear, quadratic, and exponential functions using multiple representations.</li>
-        <li>I can compute constant ratios, percent-change factors, key points, intercepts, and predictions correctly.</li>
-        <li>I can identify growth, decay, initial value, factors, asymptotes, differences, ratios, and common function families.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit8">
-    <div class="unit-head"><div class="unit-num">Unit 8</div><h2>Function Analysis, Modeling, and Synthesis</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will determine whether a situation is best modeled by a linear, quadratic, or exponential function.</div>
-      <div class="section-row"><h3>Section 8.1: Selecting Appropriate Models</h3><p class="target"><strong>Learning Target:</strong> Students will determine whether a situation is best modeled by a linear, quadratic, or exponential function.</p></div>
-      <div class="section-row"><h3>Section 8.2: Transformations Across Function Families</h3><p class="target"><strong>Learning Target:</strong> Students will analyze transformations across multiple function families.</p></div>
-      <div class="section-row"><h3>Section 8.3: Absolute Value Functions and Piecewise Thinking</h3><p class="target"><strong>Learning Target:</strong> Students will analyze and model situations involving absolute value functions.</p></div>
-      <div class="section-row"><h3>Section 8.4: Modeling Investigation</h3><p class="target"><strong>Learning Target:</strong> Students will create and analyze mathematical models using real-world data.</p></div>
-      <div class="section-row"><h3>Section 8.5: Function Synthesis and Capstone Analysis</h3><p class="target"><strong>Learning Target:</strong> Students will synthesize understanding of function families and representations to solve complex problems.</p></div>
-      <div class="icans"><h3>Unit 8 I Can Statements</h3><ol>
-        <li>I can design and defend a model that connects function choice, representations, assumptions, predictions, and conclusions.</li>
-        <li>I can construct and revise representations across function families to improve a model or solution.</li>
-        <li>I can critique competing models using rates, features, fit, constraints, and representation evidence.</li>
-        <li>I can assess whether a model, transformation, prediction, or domain is reasonable.</li>
-        <li>I can apply linear, quadratic, exponential, absolute value, and piecewise methods accurately.</li>
-        <li>I can construct transformed functions and connect key points, features, and parameters across families.</li>
-        <li>I can compute and interpret rates, differences, ratios, intercepts, vertices, intervals, and predictions.</li>
-        <li>I can identify function families, representations, transformations, assumptions, constraints, domains, and features.</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit0a">
-    <div class="unit-head"><div class="unit-num">Unit 0A · Review</div><h2>Algebra Foundations Review</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will accurately perform operations with integers, fractions, and decimals while interpreting results in mathematical and contextual situations.</div>
-      <div class="section-row"><h3>Section 0A.1: Rational Number Operations</h3><p class="target"><strong>Learning Target:</strong> Students will accurately perform operations with integers, fractions, and decimals while interpreting results in mathematical and contextual situations.</p></div>
-      <div class="section-row"><h3>Section 0A.2: Order of Operations and Evaluating Expressions</h3><p class="target"><strong>Learning Target:</strong> Students will evaluate numerical and algebraic expressions correctly using substitution and order of operations.</p></div>
-      <div class="section-row"><h3>Section 0A.3: Expressions and Properties</h3><p class="target"><strong>Learning Target:</strong> Students will analyze and rewrite algebraic expressions using properties of operations and algebraic structure.</p></div>
-      <div class="section-row"><h3>Section 0A.4: Solving Equations</h3><p class="target"><strong>Learning Target:</strong> Students will solve one-variable equations and interpret solutions within mathematical and contextual situations.</p></div>
-      <div class="section-row"><h3>Section 0A.5: Solving and Graphing Inequalities</h3><p class="target"><strong>Learning Target:</strong> Students will solve inequalities, represent solution sets graphically, and interpret solutions in context.</p></div>
-      <div class="icans"><h3>Unit 0A I Can Statements</h3><ol>
-        <li>I can accurately perform operations with integers, fractions, and decimals while interpreting results in mathematical and contextual situations.</li>
-        <li>I can evaluate numerical and algebraic expressions correctly using substitution and order of operations.</li>
-        <li>I can analyze and rewrite algebraic expressions using properties of operations and algebraic structure.</li>
-        <li>I can solve one-variable equations and interpret solutions within mathematical and contextual situations.</li>
-        <li>I can solve inequalities, represent solution sets graphically, and interpret solutions in context.</li>
-      </ol><p class="note-small">These student-facing I-can statements are direct first-person conversions of the current Unit 0A learning targets.</p></div>
-    </div>
-  </section>
-
-  <section class="section unit" id="unit0b">
-    <div class="unit-head"><div class="unit-num">Unit 0B · Review</div><h2>Functions and Linear Readiness</h2></div>
-    <div class="unit-body">
-      <div class="standard"><b>Essential Standard:</b> Students will interpret and create graphs on the coordinate plane while connecting points, axes, intercepts, and graphical information to mathematical situations.</div>
-      <div class="section-row"><h3>Section 0B.1: Coordinate Plane and Graph Interpretation</h3><p class="target"><strong>Learning Target:</strong> Students will interpret and create graphs on the coordinate plane while connecting points, axes, intercepts, and graphical information to mathematical situations.</p></div>
-      <div class="section-row"><h3>Section 0B.2: Patterns and Input-Output Rules</h3><p class="target"><strong>Learning Target:</strong> Students will identify patterns and represent relationships using input-output rules, tables, words, and symbols.</p></div>
-      <div class="section-row"><h3>Section 0B.3: Linear Patterns and Rate of Change</h3><p class="target"><strong>Learning Target:</strong> Students will recognize constant rate of change in tables, graphs, visual patterns, and situations.</p></div>
-      <div class="section-row"><h3>Section 0B.4: Writing Linear Relationships</h3><p class="target"><strong>Learning Target:</strong> Students will represent linear relationships using tables, graphs, equations, and contextual descriptions.</p></div>
-      <div class="section-row"><h3>Section 0B.5: Comparing Representations</h3><p class="target"><strong>Learning Target:</strong> Students will compare relationships using equations, graphs, tables, visual patterns, and contexts, then justify conclusions.</p></div>
-      <div class="icans"><h3>Unit 0B I Can Statements</h3><ol>
-        <li>I can interpret and create graphs on the coordinate plane while connecting points, axes, intercepts, and graphical information to mathematical situations.</li>
-        <li>I can identify patterns and represent relationships using input-output rules, tables, words, and symbols.</li>
-        <li>I can recognize constant rate of change in tables, graphs, visual patterns, and situations.</li>
-        <li>I can represent linear relationships using tables, graphs, equations, and contextual descriptions.</li>
-        <li>I can compare relationships using equations, graphs, tables, visual patterns, and contexts, then justify conclusions.</li>
-      </ol><p class="note-small">These student-facing I-can statements are direct first-person conversions of the current Unit 0B learning targets.</p></div>
-    </div>
-  </section>
 </main>
 
-<footer>Algebra 1 · Course Overview · Syllabus, Philosophy, and Unit Learning</footer>
-<button id="topButton" type="button" aria-label="Back to top" title="Back to top">↑</button>
+<button id="topButton" type="button" aria-label="Back to top">↑ Top</button>
+
 <script>
-const topButton=document.getElementById('topButton');
-window.addEventListener('scroll',()=>topButton.classList.toggle('show',window.scrollY>450));
-topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const topButton = document.getElementById("topButton");
+function updateTopButton() {
+  topButton.style.display = window.scrollY > 500 ? "block" : "none";
+}
+window.addEventListener("scroll", updateTopButton, {passive:true});
+updateTopButton();
+topButton.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
 </script>
+
 </body>
 </html>
