@@ -211,6 +211,10 @@ a.cal-link:focus-visible {
 <a href="https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing" target="_blank" rel="noopener">Upload Spot</a>
     </nav>
 
+    <div id="live-sheet-test" style="text-align:center;padding:8px 12px;font-size:.82rem;color:#64748b;border-left:1px solid #cbd5e1;border-right:1px solid #cbd5e1;background:#fff;">
+      Checking live Student Calendar…
+    </div>
+
     <div class="calendar-wrap">
       <table aria-label="Algebra 1 student agenda">
         
@@ -239,5 +243,47 @@ a.cal-link:focus-visible {
 
     <div class="note">Links open the corresponding class resource in a new tab.</div>
   </div>
+
+<script>
+(function () {
+  const status = document.getElementById("live-sheet-test");
+
+  window.agendaSheetTest = function (response) {
+    try {
+      const row = response && response.table && response.table.rows && response.table.rows[0];
+      const cell = row && row.c && row.c[0];
+      const value = cell && (cell.f || cell.v);
+
+      if (value !== null && value !== undefined && value !== "") {
+        status.textContent = "Live sheet connection: OK — Student Calendar A3 = " + value;
+        status.style.color = "#166534";
+      } else {
+        throw new Error("No value returned");
+      }
+    } catch (err) {
+      status.textContent = "Live sheet connection failed.";
+      status.style.color = "#b91c1c";
+    }
+  };
+
+  const script = document.createElement("script");
+  const cacheBust = Date.now();
+  script.src =
+    "https://docs.google.com/spreadsheets/d/1Qga2eTz0Nfgu8wIw5L-ZGC2xRtb4fOUoUXN-TyxuASE/gviz/tq" +
+    "?gid=2143927343" +
+    "&range=A3:A3" +
+    "&headers=0" +
+    "&tqx=out:json;responseHandler:agendaSheetTest" +
+    "&_=" + cacheBust;
+
+  script.onerror = function () {
+    status.textContent = "Live sheet connection failed.";
+    status.style.color = "#b91c1c";
+  };
+
+  document.body.appendChild(script);
+})();
+</script>
+
 </body>
 </html>
