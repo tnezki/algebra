@@ -155,16 +155,19 @@ def read_calendar():
             dates = [cell_info(wsv, wsl, date_row, c)[0] for c in range(1, 6)]
             start = next((date_key(x) for x in dates if date_key(x)), None)
 
-            # Rows below the top block are the archived weeks.
-            # Skip only an exact duplicate of the current top week.
-            if current_start and start and start == current_start:
-                continue
+            # Keep every week in the lower calendar.
+            # Highlight the one that matches the top current-week block.
+            is_current = bool(current_start and start and start == current_start)
 
             end_row = min(next_date_row - 1, date_row + 10)
             items = [gather_items(wsv, wsl, date_row + 1, end_row, c) for c in range(1, 6)]
 
             if any(items):
-                previous.append({"dates": dates, "items": items})
+                previous.append({
+                    "dates": dates,
+                    "items": items,
+                    "is_current": is_current,
+                })
 
         return {
             "current": {"dates": current_dates, "items": current_items},
@@ -187,7 +190,7 @@ def render_link(label, url, kind=""):
     return f'<span class="{classes} no-link">{html.escape(label)}</span>'
 
 
-def render_week(dates, items_by_day, current=False):
+def render_week(dates, items_by_day, current=False, archive_current=False):
     if current:
         weekday_row = "".join(
             f"<th><div class='dow'>{d}</div></th>" for d in DAY_NAMES
@@ -202,11 +205,11 @@ def render_week(dates, items_by_day, current=False):
         cls = "current-week"
     else:
         cells = "".join(
-            f"<th><div class='dow'>{d}</div><div class='date'>{html.escape(x)}</div></th>"
-            for d, x in zip(DAY_NAMES, dates)
+            f"<th><div class='date'>{html.escape(x)}</div></th>"
+            for x in dates
         )
         header = f'<tr class="week-head">{cells}</tr>'
-        cls = "previous-week"
+        cls = "calendar-current-week" if archive_current else "previous-week"
 
     row_count = max([len(x) for x in items_by_day] + [1])
     body_rows = []
@@ -248,7 +251,12 @@ def build_html(calendar):
             '<td colspan="5">Previous Weeks</td>'
             '</tr></tbody>'
             + "".join(
-                render_week(w["dates"], w["items"], current=False)
+                render_week(
+                    w["dates"],
+                    w["items"],
+                    current=False,
+                    archive_current=w.get("is_current", False),
+                )
                 for w in calendar["previous"]
             )
         )
@@ -393,6 +401,34 @@ a.cal-link:focus-visible {{
   font-size:1.05rem;
   font-weight:800;
   padding:10px 8px;
+}}
+
+.calendar-current-week .week-head th {{
+  background:var(--gold);
+  color:#10243d;
+  border-top:5px solid var(--navy-dark);
+  padding:7px 6px;
+  font-weight:850;
+}}
+.calendar-current-week .week-head th .date {{
+  color:#10243d;
+  font-size:.95rem;
+}}
+.calendar-current-week tr td {{
+  background:#fff !important;
+  border-color:#cfd4da;
+}}
+.calendar-current-week tr:nth-child(even) td {{
+  background:#fffaf0 !important;
+}}
+.calendar-current-week .cal-link.lesson {{
+  background:var(--lesson);
+  border:1px solid #e1c86d;
+  color:var(--navy-dark);
+}}
+.calendar-current-week .cal-link.holiday {{
+  background:#f6edcf;
+  color:#475569;
 }}
 
 .previous-week .week-head th {{
