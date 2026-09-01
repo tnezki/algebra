@@ -192,16 +192,11 @@ def render_link(label, url, kind=""):
 
 def render_week(dates, items_by_day, current=False, archive_current=False):
     if current:
-        weekday_row = "".join(
-            f"<th><div class='dow'>{d}</div></th>" for d in DAY_NAMES
+        cells = "".join(
+            f"<th><div class='dow'>{d}</div><div class='date'>{html.escape(x)}</div></th>"
+            for d, x in zip(DAY_NAMES, dates)
         )
-        date_row = "".join(
-            f"<th><div class='date'>{html.escape(x)}</div></th>" for x in dates
-        )
-        header = (
-            f'<tr class="week-head">{weekday_row}</tr>'
-            f'<tr class="current-date-row">{date_row}</tr>'
-        )
+        header = f'<tr class="week-head">{cells}</tr>'
         cls = "current-week"
     else:
         cells = "".join(
@@ -273,11 +268,13 @@ def build_html(calendar):
 <style>
 :root {{
   --navy:#173f6d;
-  --navy-dark:#0f2f52;
-  --gold:#d9b84f;
+  --navy-dark:#173f6d;
+  --gold:#e0bd4f;
+  --gold-light:#fff0b8;
+  --gold-pale:#fff8df;
   --ink:#1f2937;
   --muted:#64748b;
-  --lesson:#fff4c7;
+  --lesson:#fff0b8;
   --link:#173f6d;
 }}
 * {{ box-sizing:border-box; }}
@@ -308,20 +305,20 @@ body {{
   font-weight:600;
 }}
 .resources {{
-  border:1px solid #c8b675;
+  border:1px solid var(--gold);
   border-top:0;
   padding:12px 14px 13px;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:8px;
-  background:#f8f3df;
+  background:#fff9e9;
 }}
 .resources a {{
   text-decoration:none;
   color:var(--navy-dark);
   background:#fff;
-  border:1px solid #c9ad52;
+  border:1px solid var(--gold);
   border-radius:999px;
   padding:7px 11px;
   font-size:.88rem;
@@ -329,7 +326,7 @@ body {{
 }}
 .resources a:hover,
 .resources a:focus-visible {{
-  background:var(--lesson);
+  background:var(--gold-light);
   border-color:var(--navy);
 }}
 .calendar-wrap {{
@@ -383,20 +380,57 @@ a.cal-link:focus-visible {{
 .no-link {{ cursor:default; }}
 
 .current-week .week-head th {{
-  background:var(--navy-dark);
+  background:var(--navy);
   color:#fff;
+  text-align:left;
+  padding:9px 10px 10px;
 }}
-.current-week .current-date-row th {{
-  background:var(--gold);
-  color:#10243d;
-  padding:7px 6px;
+.current-week .dow {{
+  font-size:1.02rem;
   font-weight:850;
+  line-height:1.1;
 }}
-.current-week .current-date-row .date {{ font-size:.95rem; }}
-.current-week tr:nth-child(even) td {{ background:#fffaf0; }}
+.current-week .date {{
+  margin-top:4px;
+  font-size:1.22rem;
+  font-weight:900;
+  text-align:left;
+}}
+.current-week td {{
+  padding:0;
+  height:48px;
+  min-height:48px;
+  background:#fff;
+}}
+.current-week .cal-link {{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:48px;
+  padding:10px 8px;
+  font-size:1.08rem;
+  font-weight:750;
+  line-height:1.25;
+}}
+.current-week .cal-link.lesson {{
+  background:#fff;
+  border:0;
+  color:var(--navy);
+  font-size:1.12rem;
+  font-weight:900;
+  text-decoration:underline;
+}}
+.current-week .cal-link.holiday {{
+  font-size:1.08rem;
+  font-weight:900;
+}}
+.current-week tr:nth-child(odd):not(.week-head) td {{
+  background:var(--gold-light);
+}}
 
 .previous-weeks-divider td {{
-  background:#d9b84f !important;
+  background:var(--gold) !important;
   color:#10243d;
   font-size:1.05rem;
   font-weight:800;
@@ -404,27 +438,32 @@ a.cal-link:focus-visible {{
 }}
 
 .calendar-current-week .week-head th {{
-  background:var(--gold);
-  color:#10243d;
-  border-top:5px solid var(--navy-dark);
-  padding:7px 6px;
+  background:var(--navy);
+  color:#fff;
+  border-top:5px solid var(--gold);
+  padding:8px 9px;
   font-weight:850;
+  text-align:left;
 }}
 .calendar-current-week .week-head th .date {{
-  color:#10243d;
-  font-size:.95rem;
+  color:#fff;
+  font-size:1rem;
+  font-weight:900;
+  text-align:left;
 }}
 .calendar-current-week tr td {{
   background:#fff !important;
   border-color:#cfd4da;
 }}
-.calendar-current-week tr:nth-child(even) td {{
-  background:#fffaf0 !important;
+.calendar-current-week tr:nth-child(odd):not(.week-head) td {{
+  background:var(--gold-light) !important;
 }}
 .calendar-current-week .cal-link.lesson {{
-  background:var(--lesson);
-  border:1px solid #e1c86d;
-  color:var(--navy-dark);
+  background:#fff;
+  border:0;
+  color:var(--navy);
+  font-weight:900;
+  text-decoration:underline;
 }}
 .calendar-current-week .cal-link.holiday {{
   background:#f6edcf;
@@ -435,6 +474,8 @@ a.cal-link:focus-visible {{
   background:#3f4650;
   color:#fff;
   border-top:5px solid #20242a;
+  text-align:left;
+  padding-left:9px;
 }}
 .previous-week .week-head th .date {{ color:#e5e7eb; }}
 .previous-week tr td {{
