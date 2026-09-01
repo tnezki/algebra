@@ -1,37 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="300">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
 <title>Algebra 1 Agenda 2026-2027</title>
 <style>
 :root {
   --navy:#173f6d;
   --navy-dark:#0f2f52;
+  --gold:#d9b84f;
   --ink:#1f2937;
   --muted:#64748b;
-  --line:#c8b675;
-  --soft:#fbf8ee;
   --lesson:#fff4c7;
-  --holiday:#f6edcf;
   --link:#173f6d;
 }
-
 * { box-sizing:border-box; }
-
 body {
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#ffffff;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
   color:var(--ink);
 }
-
 .wrapper {
   width:min(1180px, calc(100% - 24px));
   margin:18px auto 40px;
 }
-
 .titlebar {
   background:var(--navy);
   color:#fff;
@@ -39,21 +33,17 @@ body {
   border-radius:10px 10px 0 0;
   text-align:center;
 }
-
 .titlebar h1 {
   margin:0;
   font-size:clamp(1.55rem, 3vw, 2.25rem);
   font-weight:800;
-  letter-spacing:.01em;
 }
-
 .titlebar .small {
   font-size:.64em;
   font-weight:600;
 }
-
 .resources {
-  border:1px solid var(--line);
+  border:1px solid #c8b675;
   border-top:0;
   padding:12px 14px 13px;
   display:flex;
@@ -62,7 +52,6 @@ body {
   gap:8px;
   background:#f8f3df;
 }
-
 .resources a {
   text-decoration:none;
   color:var(--navy-dark);
@@ -73,71 +62,33 @@ body {
   font-size:.88rem;
   font-weight:700;
 }
-
 .resources a:hover,
 .resources a:focus-visible {
   background:var(--lesson);
   border-color:var(--navy);
 }
-
 .calendar-wrap {
   overflow-x:auto;
-  border:1px solid var(--line);
+  border:1px solid #c8b675;
   border-top:0;
 }
-
 table {
   border-collapse:collapse;
   width:100%;
   min-width:760px;
   table-layout:fixed;
 }
-
 th, td {
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+  border-right:1px solid #cfd4da;
+  border-bottom:1px solid #cfd4da;
   text-align:center;
   vertical-align:middle;
 }
-
 tr > *:last-child { border-right:0; }
-
-.week-head th {
-  background:var(--navy-dark);
-  color:white;
-  padding:8px 6px;
-}
-
-.dow {
-  font-size:.9rem;
-  font-weight:800;
-}
-
-.date {
-  margin-top:2px;
-  font-size:.82rem;
-  font-weight:600;
-  opacity:.85;
-}
-
-td {
-  padding:5px 6px;
-  background:#fff;
-  height:34px;
-}
-
-.week-block tr:nth-child(even) td {
-  background:#fffaf0;
-}
-
-.week-block tr:nth-child(odd) td {
-  background:#ffffff;
-}
-
-.week-block tr td:first-child {
-  border-left:0;
-}
-
+.week-head th { padding:8px 6px; }
+.dow { font-size:.9rem; font-weight:800; }
+.date { margin-top:2px; font-size:.82rem; font-weight:700; }
+td { padding:5px 6px; background:#fff; height:34px; }
 .cal-link {
   display:block;
   width:100%;
@@ -148,141 +99,94 @@ td {
   padding:4px 5px;
   border-radius:5px;
 }
-
 a.cal-link:hover,
 a.cal-link:focus-visible {
   background:#fff4c7;
   text-decoration:underline;
 }
-
 .cal-link.lesson {
   background:var(--lesson);
   border:1px solid #e1c86d;
   font-weight:800;
   color:var(--navy-dark);
 }
-
 .cal-link.holiday {
-  background:var(--holiday);
+  background:#f6edcf;
   color:#475569;
   font-weight:800;
 }
-
-.no-link {
-  cursor:default;
-}
-
-.week-block + .week-block .week-head th {
-  border-top:8px solid white;
-}
-
-.note {
-  text-align:center;
-  color:var(--muted);
-  font-size:.78rem;
-  margin-top:8px;
-}
-
+.no-link { cursor:default; }
 
 .current-week .week-head th {
-  background: var(--navy-dark);
-  border-bottom: 0;
+  background:var(--navy-dark);
+  color:#fff;
 }
-
 .current-week .current-date-row th {
-  background: #d9b84f;
-  color: #10243d;
-  padding: 7px 6px;
-  font-weight: 850;
-  border-top: 1px solid #ffffff55;
+  background:var(--gold);
+  color:#10243d;
+  padding:7px 6px;
+  font-weight:850;
 }
-
-.current-week .current-date-row .date {
-  font-size: .95rem;
-  opacity: 1;
-}
+.current-week .current-date-row .date { font-size:.95rem; }
+.current-week tr:nth-child(even) td { background:#fffaf0; }
 
 .previous-weeks-divider td {
-  background: #d9b84f !important;
-  color: #10243d;
-  font-size: 1.05rem;
-  font-weight: 800;
-  padding: 10px 8px;
-  text-align: center;
-  letter-spacing: .01em;
+  background:#d9b84f !important;
+  color:#10243d;
+  font-size:1.05rem;
+  font-weight:800;
+  padding:10px 8px;
 }
 
 .previous-week .week-head th {
-  background: #3f4650;
-  color: #ffffff;
-  border-top: 5px solid #20242a;
+  background:#3f4650;
+  color:#fff;
+  border-top:5px solid #20242a;
 }
-
-.previous-week .week-head th .date {
-  color: #e5e7eb;
-  opacity: 1;
-}
-
+.previous-week .week-head th .date { color:#e5e7eb; }
 .previous-week tr td {
-  background: #ffffff !important;
-  border-color: #cfd4da;
+  background:#fff !important;
+  border-color:#cfd4da;
 }
-
 .previous-week tr:nth-child(even) td {
-  background: #f3f4f6 !important;
+  background:#f3f4f6 !important;
 }
-
 .previous-week .cal-link.lesson {
-  background: #e5e7eb;
-  border: 1px solid #c7ccd1;
-  color: #2f3740;
+  background:#e5e7eb;
+  border:1px solid #c7ccd1;
+  color:#2f3740;
 }
-
 .previous-week .cal-link.holiday {
-  background: #eceff2;
-  color: #4b5563;
+  background:#eceff2;
+  color:#4b5563;
 }
-
 .previous-week a.cal-link:hover,
 .previous-week a.cal-link:focus-visible {
-  background: #e2e6ea;
+  background:#e2e6ea;
 }
-
-.previous-week tr:nth-child(2) td {
-  border-top: 2px solid #aeb4bb;
-}
-
-.week-block + .week-block .week-head th {
-  border-top: 6px solid #20242a;
+.updated {
+  text-align:center;
+  color:var(--muted);
+  font-size:.76rem;
+  padding-top:8px;
 }
 
 @media (max-width:700px) {
-  .wrapper {
-    width:100%;
-    margin:0;
-  }
-  .titlebar {
-    border-radius:0;
-  }
-  .resources {
-    justify-content:flex-start;
-    padding:10px;
-  }
-  .resources a {
-    font-size:.8rem;
-    padding:6px 9px;
-  }
+  .wrapper { width:100%; margin:0; }
+  .titlebar { border-radius:0; }
+  .resources { justify-content:flex-start; padding:10px; }
+  .resources a { font-size:.8rem; padding:6px 9px; }
 }
 </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="titlebar">
-      <h1>Algebra 1 <span class="small">– Agenda 2026-2027</span></h1>
-    </header>
+<div class="wrapper">
+  <header class="titlebar">
+    <h1>Algebra 1 <span class="small">– Agenda 2026-2027</span></h1>
+  </header>
 
-    <nav class="resources" aria-label="Student resources">
-      <a href="https://tnezki.github.io/algebra/" target="_blank" rel="noopener">Course Website</a>
+  <nav class="resources" aria-label="Student resources">
+    <a href="https://tnezki.github.io/algebra/" target="_blank" rel="noopener">Course Website</a>
 <a href="https://tnezki.github.io/algebra/misc/overview.html" target="_blank" rel="noopener">Overview</a>
 <a href="https://tnezki.github.io/textbooks/alg/index.html" target="_blank" rel="noopener">Textbook</a>
 <a href="https://technology.cpm.org/general/tiles/" target="_blank" rel="noopener">Virtual Tools</a>
@@ -291,31 +195,16 @@ a.cal-link:focus-visible {
 <a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener">GeoGebra</a>
 <a href="https://mariners.instructure.com/" target="_blank" rel="noopener">Canvas</a>
 <a href="https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing" target="_blank" rel="noopener">Upload Spot</a>
-    </nav>
+  </nav>
 
-    <div class="calendar-wrap">
-      <table aria-label="Algebra 1 student agenda">
-        
-      <tbody class="week-block current-week">
-        <tr class="week-head"><th><div class='dow'>Monday</div></th><th><div class='dow'>Tuesday</div></th><th><div class='dow'>Wednesday</div></th><th><div class='dow'>Thursday</div></th><th><div class='dow'>Friday</div></th></tr><tr class="current-date-row"><th><div class='date'>8/31</div></th><th><div class='date'>9/1</div></th><th><div class='date'>9/2</div></th><th><div class='date'>9/3</div></th><th><div class='date'>9/4</div></th></tr>
-        <tr><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/0_1_1_welcome.html" target="_blank" rel="noopener">0.1 Get Acquainted</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/0_1_2_welcome.html" target="_blank" rel="noopener">0.1 Get Acquainted</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/0_1_3_welcome.html" target="_blank" rel="noopener">0.1 Get Acquainted</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/0_2_1_welcome.html" target="_blank" rel="noopener">House Keeping</a></td><td><span class="cal-link holiday no-link">Labor Day</span></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/warmups/first_4_days_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/warmups/first_4_days_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/warmups/first_4_days_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/warmups/first_4_days_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/notes/0_1_get_acquainted_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/investigation/0_1_cube_patterns_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/investigation/0_1_cube_patterns_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/activities/0_1_act1/0_1_act1.html" target="_blank" rel="noopener">Activity</a></td><td></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/practice/0_1_practice.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/practice/0_1_practice.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/activities/0_1_act1/0_1_act1.html" target="_blank" rel="noopener">Activity</a></td><td><span class="cal-link no-link">Return Portfolio</span></td><td></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/practice/0_1_extra_practice.html" target="_blank" rel="noopener">Extra Practice</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/practice/0_1_practice.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://docs.google.com/document/d/1rrToxZ84-VGe-75JeIofcH6FXqdCFiE-MNlwDZNvMs4/edit?usp=sharing" target="_blank" rel="noopener">Overview</a></td><td></td></tr><tr><td></td><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/misc/first_4_days/practice/0_1_extra_practice.html" target="_blank" rel="noopener">Extra Practice</a></td><td><span class="cal-link no-link">Survey</span></td><td></td></tr>
-      </tbody><tbody class="previous-weeks-divider"><tr><td colspan="5">Previous Weeks</td></tr></tbody><tbody class="week-block previous-week">
-        <tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>9/7</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/8</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/9</div></th><th><div class='dow'>Thursday</div><div class='date'>9/10</div></th><th><div class='dow'>Friday</div><div class='date'>9/11</div></th></tr>
-        <tr><td><span class="cal-link holiday no-link">Labor Day</span></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_1_1_welcome.html" target="_blank" rel="noopener">1.1: Multi Repres.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_1_2_welcome.html" target="_blank" rel="noopener">1.1: Multi Repres.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_1_3_welcome.html" target="_blank" rel="noopener">1.1: Multi Repres.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_2_1_welcome.html" target="_blank" rel="noopener">1.2: I/O &amp; Functions</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_1_demo/u1_1_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_1_demo/u1_1_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_1_demo/u1_1_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_2_demo/u1_2_demo.html" target="_blank" rel="noopener">Demo</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_1_notes/u1_1_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_1_notes/u1_1_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_1_notes/u1_1_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_2_notes/u1_2_notes.html" target="_blank" rel="noopener">Notes</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_1_investigation/u1_1_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_1_investigation/u1_1_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_1_investigation/u1_1_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_2_investigation/u1_2_investigation.html" target="_blank" rel="noopener">Investigation</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_1_act1/u1_1_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_1_act1/u1_1_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_1_act1/u1_1_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_2_act1/u1_2_act1.html" target="_blank" rel="noopener">Activity</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_1/practice_set_1_1.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_1/practice_set_1_1.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_1/practice_set_1_1.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_2/practice_set_1_2.html" target="_blank" rel="noopener">Practice Set</a></td></tr>
-      </tbody><tbody class="week-block previous-week">
-        <tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>9/14</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/15</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/16</div></th><th><div class='dow'>Thursday</div><div class='date'>9/17</div></th><th><div class='dow'>Friday</div><div class='date'>9/18</div></th></tr>
-        <tr><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_2_2_welcome.html" target="_blank" rel="noopener">1.2: I/O &amp; Functions</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_2_3_welcome.html" target="_blank" rel="noopener">1.2: I/O &amp; Functions</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_3_1_welcome.html" target="_blank" rel="noopener">1.3: Fn Families</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_3_2_welcome.html" target="_blank" rel="noopener">1.3: Fn Families</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_3_3_welcome.html" target="_blank" rel="noopener">1.3: Fn Families</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_2_demo/u1_2_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_2_demo/u1_2_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_3_demo/u1_3_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_3_demo/u1_3_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_3_demo/u1_3_demo.html" target="_blank" rel="noopener">Demo</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_2_notes/u1_2_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_2_notes/u1_2_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_3_notes/u1_3_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_3_notes/u1_3_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_3_notes/u1_3_notes.html" target="_blank" rel="noopener">Notes</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_2_investigation/u1_2_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_2_investigation/u1_2_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_3_investigation/u1_3_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_3_investigation/u1_3_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_3_investigation/u1_3_investigation.html" target="_blank" rel="noopener">Investigation</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_2_act1/u1_2_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_2_act1/u1_2_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_3_act1/u1_3_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_3_act1/u1_3_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_3_act1/u1_3_act1.html" target="_blank" rel="noopener">Activity</a></td></tr><tr><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_2/practice_set_1_2.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_2/practice_set_1_2.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_3/practice_set_1_3.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_3/practice_set_1_3.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_3/practice_set_1_3.html" target="_blank" rel="noopener">Practice Set</a></td></tr>
-      </tbody><tbody class="week-block previous-week">
-        <tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>9/21</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/22</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/23</div></th><th><div class='dow'>Thursday</div><div class='date'>9/24</div></th><th><div class='dow'>Friday</div><div class='date'>9/25</div></th></tr>
-        <tr><td><span class="cal-link holiday no-link">PD</span></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_4_1_welcome.html" target="_blank" rel="noopener">1.4: Exprs &amp; Struct.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_4_2_welcome.html" target="_blank" rel="noopener">1.4: Exprs &amp; Struct.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_4_3_welcome.html" target="_blank" rel="noopener">1.4: Exprs &amp; Struct.</a></td><td><a class="cal-link lesson" href="https://tnezki.github.io/algebra/misc/welcomes/slides/1_5_1_welcome.html" target="_blank" rel="noopener">1.5: Eqns as Models</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/warmups/unit_1_warmups/unit_1_warmups.html" target="_blank" rel="noopener">Warm Up</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_4_demo/u1_4_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_4_demo/u1_4_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_4_demo/u1_4_demo.html" target="_blank" rel="noopener">Demo</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/demo/u1_5_demo/u1_5_demo.html" target="_blank" rel="noopener">Demo</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_4_notes/u1_4_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_4_notes/u1_4_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_4_notes/u1_4_notes.html" target="_blank" rel="noopener">Notes</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/notes/u1_5_notes/u1_5_notes.html" target="_blank" rel="noopener">Notes</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_4_investigation/u1_4_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_4_investigation/u1_4_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_4_investigation/u1_4_investigation.html" target="_blank" rel="noopener">Investigation</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/investigations/u1_5_investigation/u1_5_investigation.html" target="_blank" rel="noopener">Investigation</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_4_act1/u1_4_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_4_act1/u1_4_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_4_act1/u1_4_act1.html" target="_blank" rel="noopener">Activity</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/activities/u1_5_act1/u1_5_act1.html" target="_blank" rel="noopener">Activity</a></td></tr><tr><td></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_4/practice_set_1_4.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_4/practice_set_1_4.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_4/practice_set_1_4.html" target="_blank" rel="noopener">Practice Set</a></td><td><a class="cal-link" href="https://tnezki.github.io/algebra/practice_sets/practice_sets_1_5/practice_set_1_5.html" target="_blank" rel="noopener">Practice Set</a></td></tr>
-      </tbody>
-    
-      </table>
-    </div>
-
-    <div class="note">Links open the corresponding class resource in a new tab.</div>
+  <div class="calendar-wrap">
+    <table aria-label="Algebra 1 student agenda">
+      <tbody class="week-block current-week"><tr class="week-head"><th><div class='dow'>Monday</div></th><th><div class='dow'>Tuesday</div></th><th><div class='dow'>Wednesday</div></th><th><div class='dow'>Thursday</div></th><th><div class='dow'>Friday</div></th></tr><tr class="current-date-row"><th><div class='date'>9/21</div></th><th><div class='date'>9/22</div></th><th><div class='date'>9/23</div></th><th><div class='date'>9/24</div></th><th><div class='date'>9/25</div></th></tr><tr><td><span class="cal-link lesson no-link">=&#x27;Teacher Calendar&#x27;!D3</span></td><td><span class="cal-link lesson no-link">1.4: Exprs &amp; Struct.</span></td><td><span class="cal-link lesson no-link">1.4: Exprs &amp; Struct.</span></td><td><span class="cal-link lesson no-link">1.4: Exprs &amp; Struct.</span></td><td><span class="cal-link lesson no-link">1.5: Eqns as Models</span></td></tr><tr><td><span class="cal-link no-link">PD</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td></tr><tr><td><span class="cal-link no-link">=&#x27;Teacher Calendar&#x27;!D5</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td></tr><tr><td><span class="cal-link no-link">=&#x27;Teacher Calendar&#x27;!D6</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td></tr><tr><td><span class="cal-link no-link">=&#x27;Teacher Calendar&#x27;!D7</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td></tr><tr><td><span class="cal-link no-link">=&#x27;Teacher Calendar&#x27;!D8</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td></tr><tr><td><span class="cal-link no-link">=&#x27;Teacher Calendar&#x27;!D9</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td></tr></tbody>
+      <tbody class="previous-weeks-divider"><tr><td colspan="5">Previous Weeks</td></tr></tbody><tbody class="week-block previous-week"><tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>8/31</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/1</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/2</div></th><th><div class='dow'>Thursday</div><div class='date'>9/3</div></th><th><div class='dow'>Friday</div><div class='date'>9/4</div></th></tr><tr><td><span class="cal-link lesson no-link">0.1 Get Acquainted</span></td><td><span class="cal-link lesson no-link">0.1 Get Acquainted</span></td><td><span class="cal-link lesson no-link">0.1 Get Acquainted</span></td><td><span class="cal-link lesson no-link">House Keeping</span></td><td><span class="cal-link holiday no-link">Labor Day</span></td></tr><tr><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f102b50&gt;</span></td></tr><tr><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f374c80&gt;</span></td></tr><tr><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Return Portfolio</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f3847d0&gt;</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f384870&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f363650&gt;</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Overview</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f3654e0&gt;</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f365780&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2eb8f0&gt;</span></td><td><span class="cal-link no-link">Extra Practice</span></td><td><span class="cal-link no-link">Survey</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2eba10&gt;</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2eba70&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebad0&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebb30&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebb90&gt;</span></td><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebbf0&gt;</span></td></tr></tbody><tbody class="week-block previous-week"><tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>9/7</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/8</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/9</div></th><th><div class='dow'>Thursday</div><div class='date'>9/10</div></th><th><div class='dow'>Friday</div><div class='date'>9/11</div></th></tr><tr><td><span class="cal-link lesson no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebc50&gt;</span></td><td><span class="cal-link lesson no-link">1.1: Multi Repres.</span></td><td><span class="cal-link lesson no-link">1.1: Multi Repres.</span></td><td><span class="cal-link lesson no-link">1.1: Multi Repres.</span></td><td><span class="cal-link lesson no-link">1.2: I/O &amp; Functions</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f2ebe30&gt;</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f304050&gt;</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f304230&gt;</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f304410&gt;</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f3045f0&gt;</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td></tr><tr><td><span class="cal-link no-link">&lt;openpyxl.worksheet.formula.ArrayFormula object at 0x10f3047d0&gt;</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td></tr></tbody><tbody class="week-block previous-week"><tr class="week-head"><th><div class='dow'>Monday</div><div class='date'>9/14</div></th><th><div class='dow'>Tuesday</div><div class='date'>9/15</div></th><th><div class='dow'>Wednesday</div><div class='date'>9/16</div></th><th><div class='dow'>Thursday</div><div class='date'>9/17</div></th><th><div class='dow'>Friday</div><div class='date'>9/18</div></th></tr><tr><td><span class="cal-link lesson no-link">1.2: I/O &amp; Functions</span></td><td><span class="cal-link lesson no-link">1.2: I/O &amp; Functions</span></td><td><span class="cal-link lesson no-link">1.3: Fn Families</span></td><td><span class="cal-link lesson no-link">1.3: Fn Families</span></td><td><span class="cal-link lesson no-link">1.3: Fn Families</span></td></tr><tr><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td><td><span class="cal-link no-link">Warm Up</span></td></tr><tr><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td><td><span class="cal-link no-link">Demo</span></td></tr><tr><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td><td><span class="cal-link no-link">Notes</span></td></tr><tr><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td><td><span class="cal-link no-link">Investigation</span></td></tr><tr><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td><td><span class="cal-link no-link">Activity</span></td></tr><tr><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td><td><span class="cal-link no-link">Practice Set</span></td></tr></tbody>
+    </table>
   </div>
 
-
+  <div class="updated">Agenda generated 2026-08-31 20:18</div>
+</div>
 </body>
 </html>
