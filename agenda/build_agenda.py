@@ -35,7 +35,7 @@ DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 
 def safe_text(value):
-    if value is None:
+    if value is None or value.__class__.__name__ == "ArrayFormula":
         return ""
     if isinstance(value, (datetime, date)):
         return f"{value.month}/{value.day}"
@@ -80,7 +80,8 @@ def cell_info(ws_values, ws_links, row, col):
     vc = ws_values.cell(row=row, column=col)
     lc = ws_links.cell(row=row, column=col)
 
-    value = vc.value if vc.value is not None else lc.value
+    # Keep evaluated blank formulas blank instead of displaying the formula.
+    value = vc.value
     link = None
 
     for c in (vc, lc):
