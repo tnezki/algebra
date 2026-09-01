@@ -155,7 +155,9 @@ def read_calendar():
             dates = [cell_info(wsv, wsl, date_row, c)[0] for c in range(1, 6)]
             start = next((date_key(x) for x in dates if date_key(x)), None)
 
-            if current_start and start and start >= current_start:
+            # Rows below the top block are the archived weeks.
+            # Skip only an exact duplicate of the current top week.
+            if current_start and start and start == current_start:
                 continue
 
             end_row = min(next_date_row - 1, date_row + 10)
