@@ -76,34 +76,178 @@ def date_key(value, school_start_year=2026):
         return None
 
 
-def cell_info(ws_values, ws_links, row, col):
+
+def direct_cell_link(cell):
+    if cell.hyperlink and cell.hyperlink.target:
+        return cell.hyperlink.target
+
+    formula = cell.value
+    if isinstance(formula, str) and formula.startswith("="):
+        match = re.search(r'HYPERLINK\(\s*"([^"]+)"', formula, re.I)
+        if match:
+            return match.group(1)
+
+    return None
+
+
+def normalized_key(value):
+    if isinstance(value, float) and value.is_integer():
+        return int(value)
+    return value
+
+
+def normalized_label(value):
+    return re.sub(r"\s+", " ", safe_text(value)).strip().casefold()
+
+
+def build_date_to_pacing_key(teacher_values):
+    mapping = {}
+
+    # Teacher Calendar historical/current week blocks use dates in D:H.
+    # The corresponding Pacing day number is repeated in I:M on the
+    # content rows directly below each date row.
+    for row in range(1, min(teacher_values.max_row, 600) + 1):
+        date_values = [
+            teacher_values.cell(row=row, column=col).value
+            for col in range(4, 9)
+        ]
+
+        if sum(1 for value in date_values if looks_like_date(value)) < 4:
+            continue
+
+        for day_index, date_value in enumerate(date_values):
+            key_date = date_key(date_value)
+            if not key_date:
+                continue
+
+            key_col = 9 + day_index
+            pacing_key = None
+
+            # The key is normally in row+1, and is repeated down the block.
+            # Search a few rows so holidays/blank first rows do not matter.
+            for source_row in range(
+                row + 1,
+                min(row + 12, teacher_values.max_row + 1),
+            ):
+                candidate = normalized_key(
+                    teacher_values.cell(
+                        row=source_row,
+                        column=key_col,
+                    ).value
+                )
+                if candidate not in (None, ""):
+                    pacing_key = candidate
+                    break
+
+            if pacing_key not in (None, ""):
+                mapping[key_date] = pacing_key
+
+    return mapping
+
+
+def build_pacing_link_lookup(pacing_values, pacing_formulas):
+    lookup = {}
+    direct_link_count = 0
+
+    for row in range(1, min(pacing_values.max_row, 500) + 1):
+        pacing_key = normalized_key(
+            pacing_values.cell(row=row, column=1).value
+        )
+        if pacing_key in (None, ""):
+            continue
+
+        row_links = lookup.setdefault(pacing_key, {})
+
+        for col in range(2, min(pacing_values.max_column, 26) + 1):
+            label = safe_text(
+                pacing_values.cell(row=row, column=col).value
+            )
+            if not label:
+                continue
+
+            link = (
+                direct_cell_link(
+                    pacing_formulas.cell(row=row, column=col)
+                )
+                or direct_cell_link(
+                    pacing_values.cell(row=row, column=col)
+                )
+            )
+
+            if link:
+                direct_link_count += 1
+                row_links.setdefault(normalized_label(label), link)
+
+    return lookup, direct_link_count
+
+
+def cell_info(
+    ws_values,
+    ws_links,
+    row,
+    col,
+    day_date=None,
+    date_to_pacing_key=None,
+    pacing_links=None,
+):
     vc = ws_values.cell(row=row, column=col)
     lc = ws_links.cell(row=row, column=col)
 
     # Keep evaluated blank formulas blank instead of displaying the formula.
     value = vc.value
-    link = None
+    label = safe_text(value)
 
-    for c in (vc, lc):
-        if c.hyperlink and c.hyperlink.target:
-            link = c.hyperlink.target
-            break
+    link = direct_cell_link(vc) or direct_cell_link(lc)
 
-    formula = lc.value
-    if not link and isinstance(formula, str) and formula.startswith("="):
-        m = re.search(r'HYPERLINK\(\s*"([^"]+)"', formula, re.I)
-        if m:
-            link = m.group(1)
+    # Google XLSX export drops hyperlinks inherited through formulas on
+    # Student Calendar. Restore them by date/day-number + exact displayed label.
+    if (
+        not link
+        and label
+        and day_date is not None
+        and date_to_pacing_key is not None
+        and pacing_links is not None
+    ):
+        key_date = date_key(day_date)
+        pacing_key = (
+            date_to_pacing_key.get(key_date)
+            if key_date is not None
+            else None
+        )
 
-    return safe_text(value), link
+        if pacing_key is not None:
+            link = pacing_links.get(pacing_key, {}).get(
+                normalized_label(label)
+            )
+
+    return label, link
 
 
-def gather_items(ws_values, ws_links, start_row, end_row, col):
+def gather_items(
+    ws_values,
+    ws_links,
+    start_row,
+    end_row,
+    col,
+    day_date=None,
+    date_to_pacing_key=None,
+    pacing_links=None,
+):
     items = []
+
     for row in range(start_row, end_row + 1):
-        label, url = cell_info(ws_values, ws_links, row, col)
+        label, url = cell_info(
+            ws_values,
+            ws_links,
+            row,
+            col,
+            day_date=day_date,
+            date_to_pacing_key=date_to_pacing_key,
+            pacing_links=pacing_links,
+        )
         if label:
             items.append((label, url))
+
     return items
 
 
@@ -122,29 +266,108 @@ def download_workbook():
     return Path(f.name)
 
 
+
 def read_calendar():
     xlsx = download_workbook()
-    try:
-        wb_values = load_workbook(xlsx, data_only=True, read_only=False)
-        wb_links = load_workbook(xlsx, data_only=False, read_only=False)
 
-        if SHEET_NAME not in wb_values.sheetnames:
-            raise RuntimeError(f"Missing sheet: {SHEET_NAME}")
+    try:
+        wb_values = load_workbook(
+            xlsx,
+            data_only=True,
+            read_only=False,
+        )
+        wb_links = load_workbook(
+            xlsx,
+            data_only=False,
+            read_only=False,
+        )
+
+        required = (SHEET_NAME, "Teacher Calendar", "Pacing")
+        for sheet_name in required:
+            if sheet_name not in wb_values.sheetnames:
+                raise RuntimeError(f"Missing sheet: {sheet_name}")
 
         wsv = wb_values[SHEET_NAME]
         wsl = wb_links[SHEET_NAME]
 
-        current_dates = [cell_info(wsv, wsl, 2, c)[0] for c in range(1, 6)]
-        current_items = [gather_items(wsv, wsl, 3, 9, c) for c in range(1, 6)]
-        current_start = next((date_key(x) for x in current_dates if date_key(x)), None)
+        teacher_values = wb_values["Teacher Calendar"]
+        pacing_values = wb_values["Pacing"]
+        pacing_formulas = wb_links["Pacing"]
+
+        date_to_pacing_key = build_date_to_pacing_key(
+            teacher_values
+        )
+        pacing_links, direct_link_count = build_pacing_link_lookup(
+            pacing_values,
+            pacing_formulas,
+        )
+
+        print(
+            f"Teacher dates mapped to Pacing days: "
+            f"{len(date_to_pacing_key)}"
+        )
+        print(
+            f"Pacing direct hyperlinks available: "
+            f"{direct_link_count}"
+        )
+
+        if len(date_to_pacing_key) < 20:
+            raise RuntimeError(
+                "Too few Teacher Calendar dates mapped to Pacing."
+            )
+
+        if direct_link_count < 100:
+            raise RuntimeError(
+                "Too few direct Pacing hyperlinks were found."
+            )
+
+        current_date_values = [
+            wsv.cell(row=2, column=col).value
+            for col in range(1, 6)
+        ]
+        current_dates = [
+            safe_text(value)
+            for value in current_date_values
+        ]
+
+        current_items = [
+            gather_items(
+                wsv,
+                wsl,
+                3,
+                9,
+                col,
+                day_date=current_date_values[col - 1],
+                date_to_pacing_key=date_to_pacing_key,
+                pacing_links=pacing_links,
+            )
+            for col in range(1, 6)
+        ]
+
+        current_start = next(
+            (
+                date_key(value)
+                for value in current_date_values
+                if date_key(value)
+            ),
+            None,
+        )
 
         archive_date_rows = []
-        for r in range(11, min(wsv.max_row, 500) + 1):
-            values = [wsv.cell(r, c).value for c in range(1, 6)]
-            if sum(1 for v in values if looks_like_date(v)) >= 4:
-                archive_date_rows.append(r)
+
+        for row in range(11, min(wsv.max_row, 500) + 1):
+            values = [
+                wsv.cell(row=row, column=col).value
+                for col in range(1, 6)
+            ]
+
+            if sum(
+                1 for value in values if looks_like_date(value)
+            ) >= 4:
+                archive_date_rows.append(row)
 
         previous = []
+
         for i, date_row in enumerate(archive_date_rows):
             next_date_row = (
                 archive_date_rows[i + 1]
@@ -152,27 +375,66 @@ def read_calendar():
                 else min(date_row + 11, wsv.max_row + 1)
             )
 
-            dates = [cell_info(wsv, wsl, date_row, c)[0] for c in range(1, 6)]
-            start = next((date_key(x) for x in dates if date_key(x)), None)
+            archive_date_values = [
+                wsv.cell(row=date_row, column=col).value
+                for col in range(1, 6)
+            ]
+            dates = [
+                safe_text(value)
+                for value in archive_date_values
+            ]
 
-            # Keep every week in the lower calendar.
-            # Highlight the one that matches the top current-week block.
-            is_current = bool(current_start and start and start == current_start)
+            start_date = next(
+                (
+                    date_key(value)
+                    for value in archive_date_values
+                    if date_key(value)
+                ),
+                None,
+            )
 
-            end_row = min(next_date_row - 1, date_row + 10)
-            items = [gather_items(wsv, wsl, date_row + 1, end_row, c) for c in range(1, 6)]
+            is_current = bool(
+                current_start
+                and start_date
+                and start_date == current_start
+            )
+
+            end_row = min(
+                next_date_row - 1,
+                date_row + 10,
+            )
+
+            items = [
+                gather_items(
+                    wsv,
+                    wsl,
+                    date_row + 1,
+                    end_row,
+                    col,
+                    day_date=archive_date_values[col - 1],
+                    date_to_pacing_key=date_to_pacing_key,
+                    pacing_links=pacing_links,
+                )
+                for col in range(1, 6)
+            ]
 
             if any(items):
-                previous.append({
-                    "dates": dates,
-                    "items": items,
-                    "is_current": is_current,
-                })
+                previous.append(
+                    {
+                        "dates": dates,
+                        "items": items,
+                        "is_current": is_current,
+                    }
+                )
 
         return {
-            "current": {"dates": current_dates, "items": current_items},
+            "current": {
+                "dates": current_dates,
+                "items": current_items,
+            },
             "previous": previous,
         }
+
     finally:
         try:
             xlsx.unlink()
@@ -364,7 +626,7 @@ td {{ padding:5px 6px; background:#fff; height:34px; }}
 a.cal-link:hover,
 a.cal-link:focus-visible {{
   background:#fff4c7;
-  text-decoration:underline;
+  text-decoration:none;
 }}
 .cal-link.lesson {{
   background:var(--lesson);
@@ -419,7 +681,7 @@ a.cal-link:focus-visible {{
   color:var(--navy);
   font-size:1.12rem;
   font-weight:900;
-  text-decoration:underline;
+  text-decoration:none;
 }}
 .current-week .cal-link.holiday {{
   font-size:1.08rem;
@@ -463,7 +725,7 @@ a.cal-link:focus-visible {{
   border:0;
   color:var(--navy);
   font-weight:900;
-  text-decoration:underline;
+  text-decoration:none;
 }}
 .calendar-current-week .cal-link.holiday {{
   background:#f6edcf;
