@@ -561,10 +561,10 @@ a.cal-link:focus-visible {{
 .no-link {{ cursor:default; }}
 .empty-week {{ color:var(--muted); font-size:.8rem; padding:10px; }}
 
-/* Featured current week: gold header + light gold alternating rows. */
+/* Featured current week: navy day/date header + light gold alternating rows. */
 .current-week .week-head th {{
-  background:var(--gold);
-  color:var(--navy);
+  background:var(--navy);
+  color:#fff;
   text-align:left;
   padding:7px 6px 8px;
 }}
@@ -578,7 +578,7 @@ a.cal-link:focus-visible {{
   font-size:1rem;
   font-weight:900;
   text-align:left;
-  color:var(--navy);
+  color:#fff;
 }}
 .current-week td {{
   padding:0;
