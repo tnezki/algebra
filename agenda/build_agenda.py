@@ -30,7 +30,7 @@ RESOURCE_LINKS = [
     ("Textbook", "https://tnezki.github.io/textbooks/algebra/index.html"),
     ("Virtual Tools", "https://technology.cpm.org/general/tiles/"),
     ("Vernier", "https://videoanalysis.app/"),
-    ("Venier Hints", "https://docs.google.com/document/d/1GihYf2MAXI7G2eIRL6x_J330focOVzB3dFdayrFiMR0/edit?usp=sharing"),
+    ("Vernier Hints", "https://docs.google.com/document/d/1GihYf2MAXI7G2eIRL6x_J330focOVzB3dFdayrFiMR0/edit?usp=sharing"),
     ("Printables", "https://tnezki.github.io/algebra/misc/printables/aaagallery_index.html"),
     ("Upload Spot", "https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing"),
     ("Desmos", "https://www.desmos.com/calculator"),
@@ -254,24 +254,20 @@ def resolve_item_link(teacher_value_cell, teacher_formula_cell, label, pacing_ke
 
 def read_week_rows(week, teacher_values, teacher_formulas, pacing_links):
     """
-    Preserve source-row alignment. A source row is rendered when at least one day
-    has x in its marker column. Unchecked days stay blank on that rendered row.
+    Publish only cells whose marker contains x. Each day is compacted independently
+    so unchecked source rows do not create blank gaps in that day's agenda column.
+    The selected items still remain in their original top-to-bottom order.
     """
-    rendered_rows = []
+    day_items = [[] for _ in CONTENT_COLS]
 
     for row in range(week["content_start"], week["content_end"] + 1):
-        cells = []
-        row_has_selected_item = False
-
         for day_index, (marker_col, content_col) in enumerate(zip(MARKER_COLS, CONTENT_COLS)):
             selected = is_x(teacher_values.cell(row=row, column=marker_col).value)
             label = safe_text(teacher_values.cell(row=row, column=content_col).value)
 
             if not selected or not label:
-                cells.append(None)
                 continue
 
-            row_has_selected_item = True
             url = resolve_item_link(
                 teacher_values.cell(row=row, column=content_col),
                 teacher_formulas.cell(row=row, column=content_col),
@@ -279,12 +275,13 @@ def read_week_rows(week, teacher_values, teacher_formulas, pacing_links):
                 week["pacing_keys"][day_index],
                 pacing_links,
             )
-            cells.append((label, url))
+            day_items[day_index].append((label, url))
 
-        if row_has_selected_item:
-            rendered_rows.append(cells)
-
-    return rendered_rows
+    row_count = max((len(items) for items in day_items), default=0)
+    return [
+        [items[row_index] if row_index < len(items) else None for items in day_items]
+        for row_index in range(row_count)
+    ]
 
 
 def read_calendar_from_path(xlsx, today=None):
