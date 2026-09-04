@@ -24,15 +24,19 @@ MARKER_COLS = [2, 4, 6, 8, 10]   # B, D, F, H, J
 CONTENT_COLS = [3, 5, 7, 9, 11]  # C, E, G, I, K
 
 RESOURCE_LINKS = [
-    ("Course Website", "https://tnezki.github.io/algebra/"),
     ("Overview", "https://tnezki.github.io/algebra/misc/overview.html"),
-    ("Textbook", "https://tnezki.github.io/textbooks/alg/index.html"),
+    ("Agenda", "https://tnezki.github.io/algebra/agenda/index.html"),
+    ("Web Site", "https://tnezki.github.io/algebra/"),
+    ("Textbook", "https://tnezki.github.io/textbooks/algebra/index.html"),
     ("Virtual Tools", "https://technology.cpm.org/general/tiles/"),
+    ("Vernier", "https://videoanalysis.app/"),
+    ("Venier Hints", "https://docs.google.com/document/d/1GihYf2MAXI7G2eIRL6x_J330focOVzB3dFdayrFiMR0/edit?usp=sharing"),
     ("Printables", "https://tnezki.github.io/algebra/misc/printables/aaagallery_index.html"),
-    ("Desmos", "https://www.desmos.com/calculator"),
-    ("GeoGebra", "https://www.geogebra.org/graphing"),
-    ("Canvas", "https://mariners.instructure.com/"),
     ("Upload Spot", "https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing"),
+    ("Desmos", "https://www.desmos.com/calculator"),
+    ("Canvas", "https://mariners.instructure.com/"),
+    ("Line Graph Practice", "https://www.geogebra.org/m/EzCuXRvT"),
+    ("GeoGebra", "https://www.geogebra.org/graphing"),
 ]
 
 
