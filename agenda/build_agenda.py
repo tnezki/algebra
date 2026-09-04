@@ -1,4 +1,3 @@
-\
 #!/usr/bin/env python3
 
 from __future__ import annotations
@@ -13,11 +12,16 @@ import requests
 from openpyxl import load_workbook
 
 SPREADSHEET_ID = "1Qga2eTz0Nfgu8wIw5L-ZGC2xRtb4fOUoUXN-TyxuASE"
-SHEET_NAME = "Student Calendar"
 EXPORT_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}/export?format=xlsx"
 
 HERE = Path(__file__).resolve().parent
 OUTPUT = HERE / "index.html"
+
+TEACHER_SHEET = "Teacher Calendar"
+PACING_SHEET = "Pacing"
+DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+MARKER_COLS = [2, 4, 6, 8, 10]   # B, D, F, H, J
+CONTENT_COLS = [3, 5, 7, 9, 11]  # C, E, G, I, K
 
 RESOURCE_LINKS = [
     ("Course Website", "https://tnezki.github.io/algebra/"),
@@ -31,8 +35,6 @@ RESOURCE_LINKS = [
     ("Upload Spot", "https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing"),
 ]
 
-DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
 
 def safe_text(value):
     if value is None or value.__class__.__name__ == "ArrayFormula":
@@ -44,12 +46,26 @@ def safe_text(value):
     return str(value).strip()
 
 
+def normalized_key(value):
+    if isinstance(value, float) and value.is_integer():
+        return int(value)
+    return value
+
+
+def normalized_label(value):
+    return re.sub(r"\s+", " ", safe_text(value)).strip().casefold()
+
+
+def is_x(value):
+    return safe_text(value).casefold() == "x"
+
+
 def looks_like_date(value):
     if isinstance(value, (datetime, date)):
         return True
     if value is None:
         return False
-    return bool(re.fullmatch(r"\d{1,2}/\d{1,2}(?:/\d{2,4})?", str(value).strip()))
+    return bool(re.fullmatch(r"\d{1,2}/\d{1,2}(?:/\d{2,4})?", safe_text(value)))
 
 
 def date_key(value, school_start_year=2026):
@@ -59,22 +75,29 @@ def date_key(value, school_start_year=2026):
         return value
     if value is None:
         return None
-    m = re.fullmatch(r"(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?", str(value).strip())
-    if not m:
+
+    match = re.fullmatch(
+        r"(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?",
+        safe_text(value),
+    )
+    if not match:
         return None
-    month, day = int(m.group(1)), int(m.group(2))
-    year_text = m.group(3)
+
+    month = int(match.group(1))
+    day = int(match.group(2))
+    year_text = match.group(3)
+
     if year_text:
         year = int(year_text)
         if year < 100:
             year += 2000
     else:
         year = school_start_year if month >= 7 else school_start_year + 1
+
     try:
         return date(year, month, day)
     except ValueError:
         return None
-
 
 
 def direct_cell_link(cell):
@@ -90,54 +113,20 @@ def direct_cell_link(cell):
     return None
 
 
-def normalized_key(value):
-    if isinstance(value, float) and value.is_integer():
-        return int(value)
-    return value
+def download_workbook():
+    response = requests.get(
+        EXPORT_URL,
+        timeout=45,
+        headers={"User-Agent": "Mozilla/5.0 AgendaBuilder/2.0"},
+    )
+    response.raise_for_status()
+    if len(response.content) < 1000:
+        raise RuntimeError("Google returned an unexpectedly small workbook export.")
 
-
-def normalized_label(value):
-    return re.sub(r"\s+", " ", safe_text(value)).strip().casefold()
-
-
-def build_date_to_pacing_key(teacher_values):
-    mapping = {}
-
-    for row in range(1, min(teacher_values.max_row, 600) + 1):
-        date_values = [
-            teacher_values.cell(row=row, column=col).value
-            for col in range(4, 9)
-        ]
-
-        if sum(1 for value in date_values if looks_like_date(value)) < 4:
-            continue
-
-        for day_index, date_value in enumerate(date_values):
-            key_date = date_key(date_value)
-            if not key_date:
-                continue
-
-            key_col = 9 + day_index
-            pacing_key = None
-
-            for source_row in range(
-                row + 1,
-                min(row + 12, teacher_values.max_row + 1),
-            ):
-                candidate = normalized_key(
-                    teacher_values.cell(
-                        row=source_row,
-                        column=key_col,
-                    ).value
-                )
-                if candidate not in (None, ""):
-                    pacing_key = candidate
-                    break
-
-            if pacing_key not in (None, ""):
-                mapping[key_date] = pacing_key
-
-    return mapping
+    handle = tempfile.NamedTemporaryFile(suffix=".xlsx", delete=False)
+    handle.write(response.content)
+    handle.close()
+    return Path(handle.name)
 
 
 def build_pacing_link_lookup(pacing_values, pacing_formulas):
@@ -145,30 +134,21 @@ def build_pacing_link_lookup(pacing_values, pacing_formulas):
     direct_link_count = 0
 
     for row in range(1, min(pacing_values.max_row, 500) + 1):
-        pacing_key = normalized_key(
-            pacing_values.cell(row=row, column=1).value
-        )
+        pacing_key = normalized_key(pacing_values.cell(row=row, column=1).value)
         if pacing_key in (None, ""):
             continue
 
         row_links = lookup.setdefault(pacing_key, {})
 
         for col in range(2, min(pacing_values.max_column, 26) + 1):
-            label = safe_text(
-                pacing_values.cell(row=row, column=col).value
-            )
+            label = safe_text(pacing_values.cell(row=row, column=col).value)
             if not label:
                 continue
 
             link = (
-                direct_cell_link(
-                    pacing_formulas.cell(row=row, column=col)
-                )
-                or direct_cell_link(
-                    pacing_values.cell(row=row, column=col)
-                )
+                direct_cell_link(pacing_formulas.cell(row=row, column=col))
+                or direct_cell_link(pacing_values.cell(row=row, column=col))
             )
-
             if link:
                 direct_link_count += 1
                 row_links.setdefault(normalized_label(label), link)
@@ -176,265 +156,183 @@ def build_pacing_link_lookup(pacing_values, pacing_formulas):
     return lookup, direct_link_count
 
 
-def cell_info(
-    ws_values,
-    ws_links,
-    row,
-    col,
-    day_date=None,
-    date_to_pacing_key=None,
-    pacing_links=None,
-):
-    vc = ws_values.cell(row=row, column=col)
-    lc = ws_links.cell(row=row, column=col)
+def find_teacher_weeks(teacher_values):
+    """Find each weekly block from the five date cells in C/E/G/I/K."""
+    date_rows = []
 
-    label = safe_text(vc.value)
-    link = direct_cell_link(vc) or direct_cell_link(lc)
+    for row in range(1, teacher_values.max_row + 1):
+        values = [teacher_values.cell(row=row, column=col).value for col in CONTENT_COLS]
+        if sum(1 for value in values if looks_like_date(value)) >= 4:
+            date_rows.append(row)
 
-    if (
-        not link
-        and label
-        and day_date is not None
-        and date_to_pacing_key is not None
-        and pacing_links is not None
-    ):
-        key_date = date_key(day_date)
-        pacing_key = (
-            date_to_pacing_key.get(key_date)
-            if key_date is not None
-            else None
+    if not date_rows:
+        raise RuntimeError("Could not find weekly date rows in Teacher Calendar.")
+
+    weeks = []
+    for index, date_row in enumerate(date_rows):
+        pacing_row = date_row - 1
+        next_date_row = date_rows[index + 1] if index + 1 < len(date_rows) else None
+        content_start = date_row + 1
+        content_end = (
+            next_date_row - 2
+            if next_date_row is not None
+            else min(date_row + 25, teacher_values.max_row)
         )
 
-        if pacing_key is not None:
-            link = pacing_links.get(pacing_key, {}).get(
-                normalized_label(label)
+        dates_raw = [teacher_values.cell(row=date_row, column=col).value for col in CONTENT_COLS]
+        dates = [safe_text(value) for value in dates_raw]
+        date_keys = [date_key(value) for value in dates_raw]
+        pacing_keys = [
+            normalized_key(teacher_values.cell(row=pacing_row, column=col).value)
+            for col in CONTENT_COLS
+        ]
+
+        week_number = safe_text(teacher_values.cell(row=date_row, column=1).value)
+        manual_current = any(
+            is_x(teacher_values.cell(row=row, column=1).value)
+            for row in range(pacing_row, content_end + 1)
+        )
+
+        weeks.append(
+            {
+                "week_number": week_number,
+                "pacing_row": pacing_row,
+                "date_row": date_row,
+                "content_start": content_start,
+                "content_end": content_end,
+                "dates_raw": dates_raw,
+                "dates": dates,
+                "date_keys": date_keys,
+                "pacing_keys": pacing_keys,
+                "manual_current": manual_current,
+            }
+        )
+
+    return weeks
+
+
+def choose_current_week(weeks, today=None):
+    today = today or date.today()
+
+    marked = [index for index, week in enumerate(weeks) if week["manual_current"]]
+    if len(marked) == 1:
+        return marked[0]
+    if len(marked) > 1:
+        print("Warning: more than one Teacher Calendar week has x in column A; using date instead.")
+
+    for index, week in enumerate(weeks):
+        valid = [d for d in week["date_keys"] if d is not None]
+        if valid and min(valid) <= today <= max(valid):
+            return index
+
+    earlier = []
+    for index, week in enumerate(weeks):
+        valid = [d for d in week["date_keys"] if d is not None]
+        if valid and min(valid) <= today:
+            earlier.append((min(valid), index))
+
+    if earlier:
+        return max(earlier)[1]
+
+    return 0
+
+
+def resolve_item_link(teacher_value_cell, teacher_formula_cell, label, pacing_key, pacing_links):
+    direct = direct_cell_link(teacher_formula_cell) or direct_cell_link(teacher_value_cell)
+    if direct:
+        return direct
+
+    if pacing_key not in (None, "") and label:
+        return pacing_links.get(pacing_key, {}).get(normalized_label(label))
+
+    return None
+
+
+def read_week_rows(week, teacher_values, teacher_formulas, pacing_links):
+    """
+    Preserve source-row alignment. A source row is rendered when at least one day
+    has x in its marker column. Unchecked days stay blank on that rendered row.
+    """
+    rendered_rows = []
+
+    for row in range(week["content_start"], week["content_end"] + 1):
+        cells = []
+        row_has_selected_item = False
+
+        for day_index, (marker_col, content_col) in enumerate(zip(MARKER_COLS, CONTENT_COLS)):
+            selected = is_x(teacher_values.cell(row=row, column=marker_col).value)
+            label = safe_text(teacher_values.cell(row=row, column=content_col).value)
+
+            if not selected or not label:
+                cells.append(None)
+                continue
+
+            row_has_selected_item = True
+            url = resolve_item_link(
+                teacher_values.cell(row=row, column=content_col),
+                teacher_formulas.cell(row=row, column=content_col),
+                label,
+                week["pacing_keys"][day_index],
+                pacing_links,
             )
+            cells.append((label, url))
 
-    return label, link
+        if row_has_selected_item:
+            rendered_rows.append(cells)
 
-
-def gather_items(
-    ws_values,
-    ws_links,
-    start_row,
-    end_row,
-    col,
-    day_date=None,
-    date_to_pacing_key=None,
-    pacing_links=None,
-):
-    items = []
-
-    for row in range(start_row, end_row + 1):
-        label, url = cell_info(
-            ws_values,
-            ws_links,
-            row,
-            col,
-            day_date=day_date,
-            date_to_pacing_key=date_to_pacing_key,
-            pacing_links=pacing_links,
-        )
-        if label:
-            items.append((label, url))
-
-    return items
+    return rendered_rows
 
 
-def download_workbook():
-    response = requests.get(
-        EXPORT_URL,
-        timeout=45,
-        headers={"User-Agent": "Mozilla/5.0 AgendaBuilder/1.0"},
+def read_calendar_from_path(xlsx, today=None):
+    wb_values = load_workbook(xlsx, data_only=True, read_only=False)
+    wb_formulas = load_workbook(xlsx, data_only=False, read_only=False)
+
+    for sheet_name in (TEACHER_SHEET, PACING_SHEET):
+        if sheet_name not in wb_values.sheetnames:
+            raise RuntimeError(f"Missing sheet: {sheet_name}")
+
+    teacher_values = wb_values[TEACHER_SHEET]
+    teacher_formulas = wb_formulas[TEACHER_SHEET]
+    pacing_values = wb_values[PACING_SHEET]
+    pacing_formulas = wb_formulas[PACING_SHEET]
+
+    pacing_links, direct_link_count = build_pacing_link_lookup(
+        pacing_values,
+        pacing_formulas,
     )
-    response.raise_for_status()
-    if len(response.content) < 1000:
-        raise RuntimeError("Google returned an unexpectedly small workbook export.")
-    f = tempfile.NamedTemporaryFile(suffix=".xlsx", delete=False)
-    f.write(response.content)
-    f.close()
-    return Path(f.name)
+    weeks = find_teacher_weeks(teacher_values)
+    current_index = choose_current_week(weeks, today=today)
 
+    for week in weeks:
+        week["rows"] = read_week_rows(
+            week,
+            teacher_values,
+            teacher_formulas,
+            pacing_links,
+        )
+
+    current = weeks[current_index]
+    previous = [week for week in weeks[:current_index] if week["rows"]]
+    previous.reverse()
+
+    print(f"Teacher Calendar weekly blocks found: {len(weeks)}")
+    print(
+        f"Current week: {current.get('week_number') or '?'} | "
+        + ", ".join(current["dates"])
+    )
+    print(f"Pacing direct hyperlinks available: {direct_link_count}")
+    print(f"Previous published weeks: {len(previous)}")
+
+    return {
+        "current": current,
+        "previous": previous,
+    }
 
 
 def read_calendar():
     xlsx = download_workbook()
-
     try:
-        wb_values = load_workbook(xlsx, data_only=True, read_only=False)
-        wb_links = load_workbook(xlsx, data_only=False, read_only=False)
-
-        required = (SHEET_NAME, "Teacher Calendar", "Pacing")
-        for sheet_name in required:
-            if sheet_name not in wb_values.sheetnames:
-                raise RuntimeError(f"Missing sheet: {sheet_name}")
-
-        wsv = wb_values[SHEET_NAME]
-        wsl = wb_links[SHEET_NAME]
-        teacher_values = wb_values["Teacher Calendar"]
-        pacing_values = wb_values["Pacing"]
-        pacing_formulas = wb_links["Pacing"]
-
-        weekday_row = None
-        for row in range(1, min(wsv.max_row, 60) + 1):
-            labels = [
-                safe_text(wsv.cell(row=row, column=col).value)
-                for col in range(1, 6)
-            ]
-            if labels == DAY_NAMES:
-                weekday_row = row
-                break
-
-        if weekday_row is None:
-            raise RuntimeError(
-                "Could not find Monday-Friday header in Student Calendar."
-            )
-
-        current_date_row = weekday_row + 1
-
-        marker_row = None
-        for row in range(current_date_row + 1, min(wsv.max_row, 100) + 1):
-            label = safe_text(wsv.cell(row=row, column=1).value)
-            if label.lower().startswith("previous weeks"):
-                marker_row = row
-                break
-
-        if marker_row is None:
-            raise RuntimeError(
-                "Could not find the Previous Weeks marker in Student Calendar."
-            )
-
-        current_item_start = current_date_row + 1
-        current_item_end = marker_row - 1
-
-        current_date_values = [
-            wsv.cell(row=current_date_row, column=col).value
-            for col in range(1, 6)
-        ]
-
-        if sum(1 for value in current_date_values if looks_like_date(value)) < 4:
-            raise RuntimeError(
-                "Current date row does not contain a normal Monday-Friday week."
-            )
-
-        date_to_pacing_key = build_date_to_pacing_key(teacher_values)
-        pacing_links, direct_link_count = build_pacing_link_lookup(
-            pacing_values,
-            pacing_formulas,
-        )
-
-        print(
-            f"Student Calendar layout: weekdays row {weekday_row}, "
-            f"dates row {current_date_row}, "
-            f"activities rows {current_item_start}-{current_item_end}, "
-            f"previous weeks start after row {marker_row}"
-        )
-        print(
-            "Current dates: "
-            + ", ".join(safe_text(value) for value in current_date_values)
-        )
-        print(f"Pacing direct hyperlinks available: {direct_link_count}")
-
-        if direct_link_count < 100:
-            raise RuntimeError("Too few Pacing hyperlinks were found.")
-
-        current_dates = [safe_text(value) for value in current_date_values]
-
-        current_items = [
-            gather_items(
-                wsv,
-                wsl,
-                current_item_start,
-                current_item_end,
-                col,
-                day_date=current_date_values[col - 1],
-                date_to_pacing_key=date_to_pacing_key,
-                pacing_links=pacing_links,
-            )
-            for col in range(1, 6)
-        ]
-
-        current_start = next(
-            (
-                date_key(value)
-                for value in current_date_values
-                if date_key(value)
-            ),
-            None,
-        )
-
-        archive_date_rows = []
-        for row in range(marker_row + 1, min(wsv.max_row, 500) + 1):
-            values = [
-                wsv.cell(row=row, column=col).value
-                for col in range(1, 6)
-            ]
-            if sum(1 for value in values if looks_like_date(value)) >= 4:
-                archive_date_rows.append(row)
-
-        previous = []
-
-        for i, date_row in enumerate(archive_date_rows):
-            next_date_row = (
-                archive_date_rows[i + 1]
-                if i + 1 < len(archive_date_rows)
-                else min(date_row + 12, wsv.max_row + 1)
-            )
-
-            archive_date_values = [
-                wsv.cell(row=date_row, column=col).value
-                for col in range(1, 6)
-            ]
-            dates = [safe_text(value) for value in archive_date_values]
-
-            start_date = next(
-                (
-                    date_key(value)
-                    for value in archive_date_values
-                    if date_key(value)
-                ),
-                None,
-            )
-
-            is_current = bool(
-                current_start
-                and start_date
-                and start_date == current_start
-            )
-
-            end_row = next_date_row - 1
-
-            items = [
-                gather_items(
-                    wsv,
-                    wsl,
-                    date_row + 1,
-                    end_row,
-                    col,
-                    day_date=archive_date_values[col - 1],
-                    date_to_pacing_key=date_to_pacing_key,
-                    pacing_links=pacing_links,
-                )
-                for col in range(1, 6)
-            ]
-
-            if any(items):
-                previous.append(
-                    {
-                        "dates": dates,
-                        "items": items,
-                        "is_current": is_current,
-                    }
-                )
-
-        return {
-            "current": {
-                "dates": current_dates,
-                "items": current_items,
-            },
-            "previous": previous,
-        }
-
+        return read_calendar_from_path(xlsx)
     finally:
         try:
             xlsx.unlink()
@@ -452,39 +350,47 @@ def render_link(label, url, kind=""):
     return f'<span class="{classes} no-link">{html.escape(label)}</span>'
 
 
-def render_week(dates, items_by_day, current=False, archive_current=False):
+def item_kind(label, row_index):
+    if row_index != 0:
+        return ""
+    low = label.casefold()
+    if any(term in low for term in ("labor day", "pd", "no school", "holiday", "break")):
+        return "holiday"
+    return "lesson"
+
+
+def render_week(week, current=False):
     if current:
         cells = "".join(
-            f"<th><div class='dow'>{d}</div><div class='date'>{html.escape(x)}</div></th>"
-            for d, x in zip(DAY_NAMES, dates)
+            f"<th><div class='dow'>{day}</div><div class='date'>{html.escape(day_date)}</div></th>"
+            for day, day_date in zip(DAY_NAMES, week["dates"])
         )
-        header = f'<tr class="week-head">{cells}</tr>'
         cls = "current-week"
     else:
         cells = "".join(
-            f"<th><div class='date'>{html.escape(x)}</div></th>"
-            for x in dates
+            f"<th><div class='date'>{html.escape(day_date)}</div></th>"
+            for day_date in week["dates"]
         )
-        header = f'<tr class="week-head">{cells}</tr>'
-        cls = "calendar-current-week" if archive_current else "previous-week"
+        cls = "previous-week"
 
-    row_count = max([len(x) for x in items_by_day] + [1])
+    header = f'<tr class="week-head">{cells}</tr>'
     body_rows = []
 
-    for i in range(row_count):
+    for row_index, row_cells in enumerate(week["rows"]):
         tds = []
-        for items in items_by_day:
-            if i >= len(items):
+        for item in row_cells:
+            if item is None:
                 tds.append("<td></td>")
                 continue
 
-            label, url = items[i]
-            kind = ""
-            if i == 0:
-                low = label.lower()
-                kind = "holiday" if any(x in low for x in ("labor day", "pd", "no school", "holiday")) else "lesson"
+            label, url = item
+            kind = item_kind(label, row_index)
             tds.append(f"<td>{render_link(label, url, kind)}</td>")
+
         body_rows.append("<tr>" + "".join(tds) + "</tr>")
+
+    if not body_rows:
+        body_rows.append('<tr><td colspan="5" class="empty-week">No published agenda items.</td></tr>')
 
     return f'<tbody class="week-block {cls}">{header}{"".join(body_rows)}</tbody>'
 
@@ -495,28 +401,14 @@ def build_html(calendar):
         for label, url in RESOURCE_LINKS
     )
 
-    current_html = render_week(
-        calendar["current"]["dates"],
-        calendar["current"]["items"],
-        current=True,
-    )
+    current_html = render_week(calendar["current"], current=True)
 
-    previous_html = ""
-    if calendar["previous"]:
-        previous_html = (
-            '<tbody class="previous-weeks-divider"><tr>'
-            '<td colspan="5">Previous Weeks</td>'
-            '</tr></tbody>'
-            + "".join(
-                render_week(
-                    w["dates"],
-                    w["items"],
-                    current=False,
-                    archive_current=w.get("is_current", False),
-                )
-                for w in calendar["previous"]
-            )
-        )
+    previous_html = (
+        '<tbody class="previous-weeks-divider"><tr>'
+        '<td colspan="5">Previous Weeks</td>'
+        '</tr></tbody>'
+        + "".join(render_week(week, current=False) for week in calendar["previous"])
+    )
 
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -642,6 +534,7 @@ a.cal-link:focus-visible {{
   font-weight:800;
 }}
 .no-link {{ cursor:default; }}
+.empty-week {{ color:var(--muted); font-size:.8rem; padding:10px; }}
 
 .current-week .week-head th {{
   background:var(--navy);
@@ -699,39 +592,6 @@ a.cal-link:focus-visible {{
   font-size:.96rem;
   font-weight:800;
   padding:9px 7px;
-}}
-
-.calendar-current-week .week-head th {{
-  background:var(--navy);
-  color:#fff;
-  border-top:5px solid var(--gold);
-  padding:8px 9px;
-  font-weight:850;
-  text-align:left;
-}}
-.calendar-current-week .week-head th .date {{
-  color:#fff;
-  font-size:1rem;
-  font-weight:900;
-  text-align:left;
-}}
-.calendar-current-week tr td {{
-  background:#fff !important;
-  border-color:#cfd4da;
-}}
-.calendar-current-week tr:nth-child(odd):not(.week-head) td {{
-  background:var(--gold-light) !important;
-}}
-.calendar-current-week .cal-link.lesson {{
-  background:#fff;
-  border:0;
-  color:var(--navy);
-  font-weight:900;
-  text-decoration:none;
-}}
-.calendar-current-week .cal-link.holiday {{
-  background:#f6edcf;
-  color:#475569;
 }}
 
 .previous-week .week-head th {{
