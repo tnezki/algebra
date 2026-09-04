@@ -374,7 +374,7 @@ def render_week(week, current=False, list_state=None):
         cls = {
             "past": "previous-week",
             "current": "all-current-week",
-            "future": "future-week",
+            "future": "previous-week",
         }.get(list_state, "future-week")
 
     header = f'<tr class="week-head">{cells}</tr>'
@@ -626,37 +626,21 @@ a.cal-link:focus-visible {{
   border-color:#cfd4da;
 }}
 .all-current-week tr:nth-child(even) td {{
-  background:var(--gold-light) !important;
+  background:#f3f4f6 !important;
 }}
 .all-current-week .cal-link.lesson {{
-  background:#fff;
-  border:0;
+  background:#e5e7eb;
+  border:1px solid #c7ccd1;
   color:var(--navy);
   font-weight:900;
 }}
-
-.future-week .week-head th {{
-  background:var(--gold-pale);
-  color:var(--navy);
-  border-top:3px solid var(--gold);
-  text-align:left;
-  padding-left:9px;
+.all-current-week .cal-link.holiday {{
+  background:#eceff2;
+  color:#4b5563;
 }}
-.future-week .week-head th .date {{
-  color:var(--navy);
-  font-weight:850;
-}}
-.future-week tr td {{
-  background:#fff !important;
-  border-color:#d7dce2;
-}}
-.future-week tr:nth-child(even) td {{
-  background:#fffdf6 !important;
-}}
-.future-week .cal-link.lesson {{
-  background:var(--gold-pale);
-  border:1px solid #eadca7;
-  color:var(--navy);
+.all-current-week a.cal-link:hover,
+.all-current-week a.cal-link:focus-visible {{
+  background:#e2e6ea;
 }}
 
 .previous-week .week-head th {{
