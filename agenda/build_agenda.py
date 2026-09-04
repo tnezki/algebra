@@ -547,7 +547,7 @@ body {{
   color:var(--ink);
 }}
 .wrapper {{
-  width:min(1180px, calc(100% - 24px));
+  width:min(980px, calc(100% - 24px));
   margin:18px auto 40px;
 }}
 .titlebar {{
@@ -599,7 +599,8 @@ body {{
 table {{
   border-collapse:collapse;
   width:100%;
-  min-width:760px;
+  max-width:100%;
+  min-width:0;
   table-layout:fixed;
 }}
 th, td {{
@@ -609,19 +610,20 @@ th, td {{
   vertical-align:middle;
 }}
 tr > *:last-child {{ border-right:0; }}
-.week-head th {{ padding:8px 6px; }}
-.dow {{ font-size:.9rem; font-weight:800; }}
-.date {{ margin-top:2px; font-size:.82rem; font-weight:700; }}
-td {{ padding:5px 6px; background:#fff; height:34px; }}
+.week-head th {{ width:20%; padding:7px 5px; }}
+.dow {{ font-size:.82rem; font-weight:800; }}
+.date {{ margin-top:2px; font-size:.76rem; font-weight:700; }}
+td {{ padding:4px 5px; background:#fff; height:32px; }}
 .cal-link {{
   display:block;
   width:100%;
   text-decoration:none;
   color:var(--link);
-  font-size:.88rem;
+  font-size:.82rem;
   font-weight:650;
-  padding:4px 5px;
+  padding:4px 4px;
   border-radius:5px;
+  overflow-wrap:anywhere;
 }}
 a.cal-link:hover,
 a.cal-link:focus-visible {{
@@ -645,23 +647,23 @@ a.cal-link:focus-visible {{
   background:var(--navy);
   color:#fff;
   text-align:left;
-  padding:9px 10px 10px;
+  padding:7px 6px 8px;
 }}
 .current-week .dow {{
-  font-size:1.02rem;
+  font-size:.86rem;
   font-weight:850;
-  line-height:1.1;
+  line-height:1.08;
 }}
 .current-week .date {{
-  margin-top:4px;
-  font-size:1.22rem;
+  margin-top:3px;
+  font-size:1rem;
   font-weight:900;
   text-align:left;
 }}
 .current-week td {{
   padding:0;
-  height:48px;
-  min-height:48px;
+  height:40px;
+  min-height:40px;
   background:#fff;
 }}
 .current-week .cal-link {{
@@ -669,22 +671,22 @@ a.cal-link:focus-visible {{
   align-items:center;
   justify-content:center;
   width:100%;
-  min-height:48px;
-  padding:10px 8px;
-  font-size:1.08rem;
+  min-height:40px;
+  padding:7px 4px;
+  font-size:.90rem;
   font-weight:750;
-  line-height:1.25;
+  line-height:1.15;
 }}
 .current-week .cal-link.lesson {{
   background:#fff;
   border:0;
   color:var(--navy);
-  font-size:1.12rem;
+  font-size:.96rem;
   font-weight:900;
   text-decoration:none;
 }}
 .current-week .cal-link.holiday {{
-  font-size:1.08rem;
+  font-size:.90rem;
   font-weight:900;
 }}
 .current-week tr:nth-child(odd):not(.week-head) td {{
@@ -692,11 +694,11 @@ a.cal-link:focus-visible {{
 }}
 
 .previous-weeks-divider td {{
-  background:var(--gold) !important;
-  color:#10243d;
-  font-size:1.05rem;
+  background:var(--navy) !important;
+  color:#fff;
+  font-size:.96rem;
   font-weight:800;
-  padding:10px 8px;
+  padding:9px 7px;
 }}
 
 .calendar-current-week .week-head th {{
