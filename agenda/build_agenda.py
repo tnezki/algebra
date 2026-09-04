@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import re
 import tempfile
+import time
 from datetime import date, datetime
 from pathlib import Path
 
@@ -118,10 +119,17 @@ def direct_cell_link(cell):
 
 
 def download_workbook():
+    # A unique query string avoids a stale Google export being reused by an
+    # intermediary cache. Cache-control headers provide a second safeguard.
+    url = f"{EXPORT_URL}&cachebust={time.time_ns()}"
     response = requests.get(
-        EXPORT_URL,
+        url,
         timeout=45,
-        headers={"User-Agent": "Mozilla/5.0 AgendaBuilder/2.0"},
+        headers={
+            "User-Agent": "Mozilla/5.0 AgendaBuilder/2.1",
+            "Cache-Control": "no-cache, no-store, max-age=0",
+            "Pragma": "no-cache",
+        },
     )
     response.raise_for_status()
     if len(response.content) < 1000:
@@ -161,7 +169,7 @@ def build_pacing_link_lookup(pacing_values, pacing_formulas):
 
 
 def find_teacher_weeks(teacher_values):
-    """Find each weekly block from the five date cells in C/E/G/I/K."""
+    """Find weekly blocks from the five date cells in C/E/G/I/K."""
     date_rows = []
 
     for row in range(1, teacher_values.max_row + 1):
@@ -253,11 +261,7 @@ def resolve_item_link(teacher_value_cell, teacher_formula_cell, label, pacing_ke
 
 
 def read_week_rows(week, teacher_values, teacher_formulas, pacing_links):
-    """
-    Publish only cells whose marker contains x. Each day is compacted independently
-    so unchecked source rows do not create blank gaps in that day's agenda column.
-    The selected items still remain in their original top-to-bottom order.
-    """
+    """Publish checked nonblank items and compact each day independently."""
     day_items = [[] for _ in CONTENT_COLS]
 
     for row in range(week["content_start"], week["content_end"] + 1):
@@ -278,10 +282,11 @@ def read_week_rows(week, teacher_values, teacher_formulas, pacing_links):
             day_items[day_index].append((label, url))
 
     row_count = max((len(items) for items in day_items), default=0)
-    return [
+    rows = [
         [items[row_index] if row_index < len(items) else None for items in day_items]
         for row_index in range(row_count)
     ]
+    return rows, day_items
 
 
 def read_calendar_from_path(xlsx, today=None):
@@ -305,7 +310,7 @@ def read_calendar_from_path(xlsx, today=None):
     current_index = choose_current_week(weeks, today=today)
 
     for week in weeks:
-        week["rows"] = read_week_rows(
+        week["rows"], week["day_items"] = read_week_rows(
             week,
             teacher_values,
             teacher_formulas,
@@ -321,6 +326,9 @@ def read_calendar_from_path(xlsx, today=None):
     )
     print(f"Pacing direct hyperlinks available: {direct_link_count}")
     print(f"All weeks listed below current week: {len(weeks)}")
+    for day_name, items in zip(DAY_NAMES, current["day_items"]):
+        labels = ", ".join(label for label, _ in items) or "(none)"
+        print(f"  {day_name}: {labels}")
 
     return {
         "current": current,
@@ -375,7 +383,7 @@ def render_week(week, current=False, list_state=None):
             "past": "previous-week",
             "current": "all-current-week",
             "future": "previous-week",
-        }.get(list_state, "future-week")
+        }.get(list_state, "previous-week")
 
     header = f'<tr class="week-head">{cells}</tr>'
     body_rows = []
@@ -441,6 +449,8 @@ def build_html(calendar):
   --gold:#e0bd4f;
   --gold-light:#fff0b8;
   --gold-pale:#fff8df;
+  --current-row-a:#fffaf0;
+  --current-row-b:#fff1bd;
   --ink:#1f2937;
   --muted:#64748b;
   --lesson:#fff0b8;
@@ -551,9 +561,10 @@ a.cal-link:focus-visible {{
 .no-link {{ cursor:default; }}
 .empty-week {{ color:var(--muted); font-size:.8rem; padding:10px; }}
 
+/* Featured current week: gold header + light gold alternating rows. */
 .current-week .week-head th {{
-  background:var(--navy);
-  color:#fff;
+  background:var(--gold);
+  color:var(--navy);
   text-align:left;
   padding:7px 6px 8px;
 }}
@@ -567,12 +578,16 @@ a.cal-link:focus-visible {{
   font-size:1rem;
   font-weight:900;
   text-align:left;
+  color:var(--navy);
 }}
 .current-week td {{
   padding:0;
   height:40px;
   min-height:40px;
-  background:#fff;
+  background:var(--current-row-a);
+}}
+.current-week tr:nth-child(odd):not(.week-head) td {{
+  background:var(--current-row-b);
 }}
 .current-week .cal-link {{
   display:flex;
@@ -586,8 +601,8 @@ a.cal-link:focus-visible {{
   line-height:1.15;
 }}
 .current-week .cal-link.lesson {{
-  background:#fff;
-  border:0;
+  background:rgba(255,255,255,.45);
+  border:1px solid #dbc36d;
   color:var(--navy);
   font-size:.96rem;
   font-weight:900;
@@ -596,9 +611,6 @@ a.cal-link:focus-visible {{
 .current-week .cal-link.holiday {{
   font-size:.90rem;
   font-weight:900;
-}}
-.current-week tr:nth-child(odd):not(.week-head) td {{
-  background:var(--gold-light);
 }}
 
 .previous-weeks-divider td {{
@@ -609,40 +621,42 @@ a.cal-link:focus-visible {{
   padding:9px 7px;
 }}
 
+/* The current week is highlighted again inside ALL WEEKS. */
 .all-current-week .week-head th {{
-  background:var(--navy);
-  color:#fff;
-  border-top:5px solid var(--gold);
+  background:var(--gold);
+  color:var(--navy);
+  border-top:5px solid var(--navy);
   text-align:left;
   padding-left:9px;
 }}
 .all-current-week .week-head th .date {{
-  color:#fff;
+  color:var(--navy);
   font-size:.9rem;
   font-weight:900;
 }}
 .all-current-week tr td {{
-  background:#fff !important;
-  border-color:#cfd4da;
+  background:var(--current-row-a) !important;
+  border-color:#d8c77f;
 }}
 .all-current-week tr:nth-child(even) td {{
-  background:#f3f4f6 !important;
+  background:var(--current-row-b) !important;
 }}
 .all-current-week .cal-link.lesson {{
-  background:#e5e7eb;
-  border:1px solid #c7ccd1;
+  background:#fff6d5;
+  border:1px solid #dbc36d;
   color:var(--navy);
   font-weight:900;
 }}
 .all-current-week .cal-link.holiday {{
-  background:#eceff2;
+  background:#f6edcf;
   color:#4b5563;
 }}
 .all-current-week a.cal-link:hover,
 .all-current-week a.cal-link:focus-visible {{
-  background:#e2e6ea;
+  background:#ffe99b;
 }}
 
+/* Every non-current week stays in the compact gray reference style. */
 .previous-week .week-head th {{
   background:#3f4650;
   color:#fff;
