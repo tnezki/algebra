@@ -313,8 +313,6 @@ def read_calendar_from_path(xlsx, today=None):
         )
 
     current = weeks[current_index]
-    previous = [week for week in weeks[:current_index] if week["rows"]]
-    previous.reverse()
 
     print(f"Teacher Calendar weekly blocks found: {len(weeks)}")
     print(
@@ -322,11 +320,12 @@ def read_calendar_from_path(xlsx, today=None):
         + ", ".join(current["dates"])
     )
     print(f"Pacing direct hyperlinks available: {direct_link_count}")
-    print(f"Previous published weeks: {len(previous)}")
+    print(f"All weeks listed below current week: {len(weeks)}")
 
     return {
         "current": current,
-        "previous": previous,
+        "current_index": current_index,
+        "all_weeks": weeks,
     }
 
 
@@ -360,7 +359,7 @@ def item_kind(label, row_index):
     return "lesson"
 
 
-def render_week(week, current=False):
+def render_week(week, current=False, list_state=None):
     if current:
         cells = "".join(
             f"<th><div class='dow'>{day}</div><div class='date'>{html.escape(day_date)}</div></th>"
@@ -372,7 +371,11 @@ def render_week(week, current=False):
             f"<th><div class='date'>{html.escape(day_date)}</div></th>"
             for day_date in week["dates"]
         )
-        cls = "previous-week"
+        cls = {
+            "past": "previous-week",
+            "current": "all-current-week",
+            "future": "future-week",
+        }.get(list_state, "future-week")
 
     header = f'<tr class="week-head">{cells}</tr>'
     body_rows = []
@@ -404,11 +407,22 @@ def build_html(calendar):
 
     current_html = render_week(calendar["current"], current=True)
 
-    previous_html = (
+    all_weeks_html = (
         '<tbody class="previous-weeks-divider"><tr>'
-        '<td colspan="5">Previous Weeks</td>'
+        '<td colspan="5">ALL WEEKS</td>'
         '</tr></tbody>'
-        + "".join(render_week(week, current=False) for week in calendar["previous"])
+        + "".join(
+            render_week(
+                week,
+                current=False,
+                list_state=(
+                    "past" if index < calendar["current_index"]
+                    else "current" if index == calendar["current_index"]
+                    else "future"
+                ),
+            )
+            for index, week in enumerate(calendar["all_weeks"])
+        )
     )
 
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -595,6 +609,56 @@ a.cal-link:focus-visible {{
   padding:9px 7px;
 }}
 
+.all-current-week .week-head th {{
+  background:var(--navy);
+  color:#fff;
+  border-top:5px solid var(--gold);
+  text-align:left;
+  padding-left:9px;
+}}
+.all-current-week .week-head th .date {{
+  color:#fff;
+  font-size:.9rem;
+  font-weight:900;
+}}
+.all-current-week tr td {{
+  background:#fff !important;
+  border-color:#cfd4da;
+}}
+.all-current-week tr:nth-child(even) td {{
+  background:var(--gold-light) !important;
+}}
+.all-current-week .cal-link.lesson {{
+  background:#fff;
+  border:0;
+  color:var(--navy);
+  font-weight:900;
+}}
+
+.future-week .week-head th {{
+  background:var(--gold-pale);
+  color:var(--navy);
+  border-top:3px solid var(--gold);
+  text-align:left;
+  padding-left:9px;
+}}
+.future-week .week-head th .date {{
+  color:var(--navy);
+  font-weight:850;
+}}
+.future-week tr td {{
+  background:#fff !important;
+  border-color:#d7dce2;
+}}
+.future-week tr:nth-child(even) td {{
+  background:#fffdf6 !important;
+}}
+.future-week .cal-link.lesson {{
+  background:var(--gold-pale);
+  border:1px solid #eadca7;
+  color:var(--navy);
+}}
+
 .previous-week .week-head th {{
   background:#3f4650;
   color:#fff;
@@ -651,7 +715,7 @@ a.cal-link:focus-visible {{
   <div class="calendar-wrap">
     <table aria-label="Algebra 1 student agenda">
       {current_html}
-      {previous_html}
+      {all_weeks_html}
     </table>
   </div>
 
