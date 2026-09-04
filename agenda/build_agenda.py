@@ -370,7 +370,7 @@ def item_kind(label, row_index):
 def render_week(week, current=False, list_state=None):
     if current:
         cells = "".join(
-            f"<th><div class='dow'>{day}</div><div class='date'>{html.escape(day_date)}</div></th>"
+            f"<th><span class='dow'>{day}</span><span class='date'>{html.escape(day_date)}</span></th>"
             for day, day_date in zip(DAY_NAMES, week["dates"])
         )
         cls = "current-week"
@@ -470,17 +470,17 @@ body {{
 .titlebar {{
   background:var(--navy);
   color:#fff;
-  padding:16px 22px;
+  padding:7px 11px;
   border-radius:10px 10px 0 0;
   text-align:center;
 }}
 .titlebar h1 {{
   margin:0;
-  font-size:clamp(1.55rem, 3vw, 2.25rem);
+  font-size:.88rem;
   font-weight:800;
 }}
 .titlebar .small {{
-  font-size:.64em;
+  font-size:1em;
   font-weight:600;
 }}
 .resources {{
@@ -490,6 +490,8 @@ body {{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+  align-items:center;
+  text-align:center;
   gap:8px;
   background:#fff9e9;
 }}
@@ -561,23 +563,24 @@ a.cal-link:focus-visible {{
 .no-link {{ cursor:default; }}
 .empty-week {{ color:var(--muted); font-size:.8rem; padding:10px; }}
 
-/* Featured current week: navy day/date header + light gold alternating rows. */
+/* Featured current week: compact navy day/date header + light gold alternating rows. */
 .current-week .week-head th {{
   background:var(--navy);
   color:#fff;
   text-align:left;
-  padding:7px 6px 8px;
+  padding:7px 6px;
 }}
 .current-week .dow {{
+  display:inline;
   font-size:.86rem;
   font-weight:850;
   line-height:1.08;
 }}
 .current-week .date {{
-  margin-top:3px;
-  font-size:1rem;
+  display:inline;
+  margin:0 0 0 6px;
+  font-size:.86rem;
   font-weight:900;
-  text-align:left;
   color:#fff;
 }}
 .current-week td {{
@@ -695,7 +698,7 @@ a.cal-link:focus-visible {{
 @media (max-width:700px) {{
   .wrapper {{ width:100%; margin:0; }}
   .titlebar {{ border-radius:0; }}
-  .resources {{ justify-content:flex-start; padding:10px; }}
+  .resources {{ justify-content:center; padding:10px; }}
   .resources a {{ font-size:.8rem; padding:6px 9px; }}
 }}
 </style>
