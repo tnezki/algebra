@@ -1,0 +1,72 @@
+{
+  "schema": "algebra-bank-inventory-map/1.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "status": "PASS",
+  "framework_version": "v7.1",
+  "bank_profile_version": "v2.1",
+  "canonical_destinations": [
+    {
+      "id": "exit",
+      "slice": "exit_map.json",
+      "status": "canonical",
+      "mapped_records": 20
+    },
+    {
+      "id": "summative",
+      "slice": "summative_map.json",
+      "status": "canonical_secure",
+      "mapped_records": 48,
+      "forms": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ]
+    },
+    {
+      "id": "practice_1",
+      "slice": "practice1_map.json",
+      "status": "canonical",
+      "mapped_records": 60
+    },
+    {
+      "id": "wtc",
+      "slice": "wtc_map.json",
+      "status": "canonical",
+      "mapped_records": 5
+    },
+    {
+      "id": "seeds",
+      "slice": "seed_map.json",
+      "status": "canonical_when_useful",
+      "mapped_records": 6
+    }
+  ],
+  "not_bank_inventory": [
+    "Extra Practice",
+    "CYU",
+    "Practice Set 2",
+    "Practice Set 3",
+    "fixed Notes Example/YTI pairs",
+    "finished Warm-Up questions",
+    "legacy 139-per-section inventory"
+  ],
+  "downstream_generated": {
+    "Extra Practice": "Practice build",
+    "CYU": "Practice build",
+    "Notes Examples/YTIs": "Notes build",
+    "Warm-Ups": "Framework warmup_progression_map",
+    "middle practice": "artifact build time"
+  },
+  "counts": {
+    "exit": 20,
+    "summative": 48,
+    "practice_1": 60,
+    "wtc": 5,
+    "seeds": 6,
+    "finished_question_task_design_slots": 133
+  }
+}
