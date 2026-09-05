@@ -9,6 +9,7 @@
   "records": [
     {
       "record_id": "WTC-1.1",
+      "design_slot_id": "WTC-1.1",
       "record_mode": "design_only",
       "destination": "WTC",
       "section_id": "1.1",
@@ -28,7 +29,7 @@
         "Use values, rate, or pattern as evidence."
       ],
       "evidence_job": "Connect a context/rule, table, and graph for one relationship and use carried-forward values to reconcile the representations.",
-      "student_action": "Work through a four-part shared-stimulus routine in which each later part uses a representation/result built in an earlier part.",
+      "student_action": "Work through a four-part shared-stimulus routine in which later parts use representations/results created or found in earlier parts.",
       "candidate_question_structure_ids": [
         "PROC-MULTISTEP-CHAIN-01"
       ],
@@ -42,6 +43,7 @@
         "representation_values",
         "representation_type",
         "context_evidence",
+        "values_units",
         "wording_profile"
       ],
       "required_variation_axes": [],
@@ -54,35 +56,36 @@
       "source_basis": [
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
           "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
-          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
-          "version": "1.2"
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
       "security_role": "instructional_exposed_wtc",
-      "structure_fit_notes": "A real intermediate result/decision is required and carried into the final result; labeled parts alone are not treated as multi-step.",
+      "semantic_task_kind": "multistep",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "wording_profile": "natural_direct",
       "representation_routes": [
         {
           "route_type": "student_constructed",
           "surface_type": "blank_semantic_table",
-          "implementation": "explicit answer-neutral table response surface with only task-required headers/givens prefilled",
+          "implementation": "explicit answer-neutral response surface; task-required labels/givens may be supplied but no completed mathematical answer is pre-rendered",
           "answer_neutral": true
         },
         {
           "route_type": "student_constructed",
           "surface_type": "blank_coordinate_plane",
-          "implementation": "explicit answer-neutral response surface; axes/scale may be supplied but no completed mathematical answer is pre-rendered",
+          "implementation": "explicit answer-neutral response surface; task-required labels/givens may be supplied but no completed mathematical answer is pre-rendered",
           "answer_neutral": true
         }
       ],
       "dependency_contract": {
-        "intermediate_result_needed": "table values created in part (a) and graph constructed from them in part (b)",
-        "carried_forward_to_final": "the final reconciliation explicitly uses those created representations and the value read from them"
+        "intermediate_result_needed": "table values from part (a) and graph constructed from those values in part (b)",
+        "carried_forward_to_final": "the final reconciliation explicitly uses the student-created representations and the value read from them"
       },
       "wtc_shared_stimulus": true,
       "wtc_part_count": 4,
@@ -99,7 +102,7 @@
         },
         {
           "label": "c",
-          "student_action": "Use the graph constructed in part (b) to read a requested value/feature."
+          "student_action": "Use the graph from part (b) to read a requested value/feature."
         },
         {
           "label": "d",
@@ -110,6 +113,7 @@
     },
     {
       "record_id": "WTC-1.2",
+      "design_slot_id": "WTC-1.2",
       "record_mode": "design_only",
       "destination": "WTC",
       "section_id": "1.2",
@@ -128,14 +132,14 @@
         "Write ordered pairs from inputs and outputs.",
         "Decide whether each input has only one output."
       ],
-      "evidence_job": "Use one input-output rule through outputs, ordered pairs, a representation, and a final function judgment.",
-      "student_action": "Work through a four-part shared-stimulus routine in which each later part uses a representation/result built in an earlier part.",
+      "evidence_job": "Use one input-output rule through a connected table, ordered-pair, and function decision sequence.",
+      "student_action": "Work through a four-part shared-stimulus routine in which later parts use representations/results created or found in earlier parts.",
       "candidate_question_structure_ids": [
         "PROC-MULTISTEP-CHAIN-01"
       ],
       "selected_question_structure_id": "PROC-MULTISTEP-CHAIN-01",
       "response_mode": "extended_constructed",
-      "representation_mode": "mixed_table_graph",
+      "representation_mode": "mixed_table_mapping",
       "representation_need": "required",
       "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
       "allowed_variation_axes": [
@@ -143,6 +147,7 @@
         "representation_values",
         "representation_type",
         "context_evidence",
+        "values_units",
         "wording_profile"
       ],
       "required_variation_axes": [],
@@ -155,35 +160,35 @@
       "source_basis": [
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
           "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
-          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
-          "version": "1.2"
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
       "security_role": "instructional_exposed_wtc",
-      "structure_fit_notes": "A real intermediate result/decision is required and carried into the final result; labeled parts alone are not treated as multi-step.",
+      "semantic_task_kind": "multistep",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "wording_profile": "natural_direct",
       "representation_routes": [
         {
           "route_type": "student_constructed",
           "surface_type": "blank_semantic_table",
-          "implementation": "explicit answer-neutral table response surface with only task-required headers/givens prefilled",
+          "implementation": "explicit answer-neutral response surface; task-required labels/givens may be supplied but no completed mathematical answer is pre-rendered",
           "answer_neutral": true
         },
         {
-          "route_type": "student_constructed",
-          "surface_type": "blank_coordinate_plane",
-          "implementation": "explicit answer-neutral response surface; axes/scale may be supplied but no completed mathematical answer is pre-rendered",
+          "route_type": "semantic_html_mapping",
+          "renderer": "accessible HTML/SVG mapping diagram or ordered-pair display",
           "answer_neutral": true
         }
       ],
       "dependency_contract": {
-        "intermediate_result_needed": "outputs and ordered pairs from parts (a)-(b)",
-        "carried_forward_to_final": "those results populate the representation used for the final function judgment"
+        "intermediate_result_needed": "completed outputs and ordered pairs from parts (b)-(c)",
+        "carried_forward_to_final": "the function decision in part (d) is made from those carried-forward input-output pairs"
       },
       "wtc_shared_stimulus": true,
       "wtc_part_count": 4,
@@ -192,25 +197,26 @@
       "parts": [
         {
           "label": "a",
-          "student_action": "Use the shared rule to compute missing outputs."
+          "student_action": "Identify the input/output quantities in the shared relationship."
         },
         {
           "label": "b",
-          "student_action": "Carry the input/output results into ordered pairs."
+          "student_action": "Use the rule to complete outputs for the given inputs in a table."
         },
         {
           "label": "c",
-          "student_action": "Represent the ordered pairs in a table or graph response surface."
+          "student_action": "Convert the completed table rows into ordered pairs."
         },
         {
           "label": "d",
-          "student_action": "Use the completed representation to decide whether each input has only one output and explain."
+          "student_action": "Use the ordered pairs from part (c) to decide whether the displayed relationship is a function and explain why."
         }
       ],
       "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
       "record_id": "WTC-1.3",
+      "design_slot_id": "WTC-1.3",
       "record_mode": "design_only",
       "destination": "WTC",
       "section_id": "1.3",
@@ -229,14 +235,14 @@
         "Use a table, graph, equation, or context as evidence.",
         "Explain why one family is more likely than another."
       ],
-      "evidence_job": "Analyze one shared relationship through a table, change pattern, graph, and family claim.",
-      "student_action": "Work through a four-part shared-stimulus routine in which each later part uses a representation/result built in an earlier part.",
+      "evidence_job": "Analyze one small data set for change behavior, then carry that evidence into a family classification and explanation.",
+      "student_action": "Work through a four-part shared-stimulus routine in which later parts use representations/results created or found in earlier parts.",
       "candidate_question_structure_ids": [
         "PROC-MULTISTEP-CHAIN-01"
       ],
       "selected_question_structure_id": "PROC-MULTISTEP-CHAIN-01",
       "response_mode": "extended_constructed",
-      "representation_mode": "mixed_table_graph",
+      "representation_mode": "semantic_data_table",
       "representation_need": "required",
       "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
       "allowed_variation_axes": [
@@ -244,6 +250,7 @@
         "representation_values",
         "representation_type",
         "context_evidence",
+        "values_units",
         "wording_profile"
       ],
       "required_variation_axes": [],
@@ -256,35 +263,28 @@
       "source_basis": [
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
           "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
-          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
-          "version": "1.2"
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
       "security_role": "instructional_exposed_wtc",
-      "structure_fit_notes": "A real intermediate result/decision is required and carried into the final result; labeled parts alone are not treated as multi-step.",
-      "representation_routes": [
-        {
-          "route_type": "student_constructed",
-          "surface_type": "blank_semantic_table",
-          "implementation": "explicit answer-neutral table response surface with only task-required headers/givens prefilled",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
-          "surface_type": "blank_coordinate_plane",
-          "implementation": "explicit answer-neutral response surface; axes/scale may be supplied but no completed mathematical answer is pre-rendered",
-          "answer_neutral": true
-        }
-      ],
+      "semantic_task_kind": "multistep",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "wording_profile": "natural_direct",
+      "representation_route": {
+        "route_type": "semantic_html_table",
+        "renderer": "semantic HTML <table>",
+        "required_class": "values",
+        "answer_neutral": true
+      },
       "dependency_contract": {
-        "intermediate_result_needed": "extended table values and change pattern, then the graph built from those values",
-        "carried_forward_to_final": "the final family justification must cite evidence produced in the earlier parts"
+        "intermediate_result_needed": "change evidence computed in part (a) and the family classification in part (b)",
+        "carried_forward_to_final": "parts (c)-(d) use that evidence/classification to predict and justify rather than restarting independently"
       },
       "wtc_shared_stimulus": true,
       "wtc_part_count": 4,
@@ -293,25 +293,26 @@
       "parts": [
         {
           "label": "a",
-          "student_action": "Extend the shared table using its pattern."
+          "student_action": "Compute useful change evidence from consecutive rows of the shared table."
         },
         {
           "label": "b",
-          "student_action": "Use the completed values to describe how the change behaves."
+          "student_action": "Use the change evidence from part (a) to select the most likely function family from a small set."
         },
         {
           "label": "c",
-          "student_action": "Construct or complete a graph from the table."
+          "student_action": "Use the selected family pattern to predict one nearby value."
         },
         {
           "label": "d",
-          "student_action": "Use the table-change and graph evidence together to identify the most likely family and justify."
+          "student_action": "Explain the family choice using the change evidence and the prediction consistency."
         }
       ],
       "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
       "record_id": "WTC-1.4",
+      "design_slot_id": "WTC-1.4",
       "record_mode": "design_only",
       "destination": "WTC",
       "section_id": "1.4",
@@ -330,21 +331,22 @@
         "Combine like terms.",
         "Use the distributive property correctly."
       ],
-      "evidence_job": "Use the structure of one shared expression through identification, rewriting/evaluation, and an equivalence check.",
-      "student_action": "Work through a four-part shared-stimulus routine in which each later part uses a representation/result built in an earlier part.",
+      "evidence_job": "Decompose one expression through structure, rewriting, simplification, and a substitution check.",
+      "student_action": "Work through a four-part shared-stimulus routine in which later parts use representations/results created or found in earlier parts.",
       "candidate_question_structure_ids": [
         "PROC-MULTISTEP-CHAIN-01"
       ],
       "selected_question_structure_id": "PROC-MULTISTEP-CHAIN-01",
       "response_mode": "extended_constructed",
       "representation_mode": "equation_relationship",
-      "representation_need": "required",
+      "representation_need": "as_needed",
       "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
       "allowed_variation_axes": [
         "givens_evidence_set",
         "representation_values",
         "representation_type",
         "context_evidence",
+        "values_units",
         "wording_profile"
       ],
       "required_variation_axes": [],
@@ -357,26 +359,27 @@
       "source_basis": [
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
           "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
-          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
-          "version": "1.2"
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
       "security_role": "instructional_exposed_wtc",
-      "structure_fit_notes": "A real intermediate result/decision is required and carried into the final result; labeled parts alone are not treated as multi-step.",
+      "semantic_task_kind": "multistep",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "wording_profile": "natural_direct",
       "representation_route": {
-        "route_type": "mathjax",
-        "renderer": "MathJax",
+        "route_type": "direct_math_text",
+        "renderer": "MathJax/HTML mathematical text",
         "answer_neutral": true
       },
       "dependency_contract": {
-        "intermediate_result_needed": "rewritten expression and the two evaluations from earlier parts",
-        "carried_forward_to_final": "the final equivalence conclusion is based on those carried-forward results"
+        "intermediate_result_needed": "rewritten expression from part (b) and simplified expression from part (c)",
+        "carried_forward_to_final": "the final substitution check compares the original expression with the carried-forward simplified form"
       },
       "wtc_shared_stimulus": true,
       "wtc_part_count": 4,
@@ -385,25 +388,26 @@
       "parts": [
         {
           "label": "a",
-          "student_action": "Identify the requested term/coefficient/factor structure in the shared expression."
+          "student_action": "Identify the expression parts that control the first rewrite."
         },
         {
           "label": "b",
-          "student_action": "Rewrite/simplify the expression using the needed distribution or like-term work."
+          "student_action": "Apply the distributive property or another needed equivalent rewrite."
         },
         {
           "label": "c",
-          "student_action": "Evaluate the original and rewritten forms at the same supplied value."
+          "student_action": "Combine like terms using the rewritten expression from part (b)."
         },
         {
           "label": "d",
-          "student_action": "Use the carried-forward evaluations to decide whether the rewrite preserved value and explain."
+          "student_action": "Use a supplied value to check that the original and final expressions from the earlier parts agree."
         }
       ],
       "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
       "record_id": "WTC-1.5",
+      "design_slot_id": "WTC-1.5",
       "record_mode": "design_only",
       "destination": "WTC",
       "section_id": "1.5",
@@ -422,14 +426,14 @@
         "Use equivalent steps to solve when needed.",
         "Check and interpret a solution in context."
       ],
-      "evidence_job": "Decompose one situation into variable definition, equation, solution, check, and interpretation.",
-      "student_action": "Work through a four-part shared-stimulus routine in which each later part uses a representation/result built in an earlier part.",
+      "evidence_job": "Model one situation by defining the unknown, writing/solving the equation, checking it, and interpreting the checked solution.",
+      "student_action": "Work through a four-part shared-stimulus routine in which later parts use representations/results created or found in earlier parts.",
       "candidate_question_structure_ids": [
         "PROC-MULTISTEP-CHAIN-01"
       ],
       "selected_question_structure_id": "PROC-MULTISTEP-CHAIN-01",
       "response_mode": "extended_constructed",
-      "representation_mode": "mixed_context_equation",
+      "representation_mode": "context_equation",
       "representation_need": "required",
       "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
       "allowed_variation_axes": [
@@ -437,6 +441,7 @@
         "representation_values",
         "representation_type",
         "context_evidence",
+        "values_units",
         "wording_profile"
       ],
       "required_variation_axes": [],
@@ -449,33 +454,34 @@
       "source_basis": [
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
           "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
           "repository": "tnezki/memories",
-          "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
-          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
-          "version": "1.2"
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
       "security_role": "instructional_exposed_wtc",
-      "structure_fit_notes": "A real intermediate result/decision is required and carried into the final result; labeled parts alone are not treated as multi-step.",
+      "semantic_task_kind": "multistep",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "wording_profile": "natural_direct",
       "representation_routes": [
         {
           "route_type": "direct_text",
-          "renderer": "course HTML/text surface",
+          "renderer": "HTML/prose context",
           "answer_neutral": true
         },
         {
-          "route_type": "mathjax",
-          "renderer": "MathJax",
+          "route_type": "direct_math_text",
+          "renderer": "MathJax/HTML mathematical text",
           "answer_neutral": true
         }
       ],
       "dependency_contract": {
-        "intermediate_result_needed": "equation from part (a), solution from part (b), and contextual check from part (c)",
-        "carried_forward_to_final": "each result is required in sequence to produce the final contextual interpretation"
+        "intermediate_result_needed": "variable/equation from parts (a)-(b) and solved/checked value from part (c)",
+        "carried_forward_to_final": "the final interpretation is the meaning of the checked solution, not an independent question"
       },
       "wtc_shared_stimulus": true,
       "wtc_part_count": 4,
@@ -484,19 +490,19 @@
       "parts": [
         {
           "label": "a",
-          "student_action": "Define the variable and write an equation that matches the shared situation."
+          "student_action": "Define a variable for the requested unknown in the shared situation."
         },
         {
           "label": "b",
-          "student_action": "Use the equation from part (a) to solve for the requested quantity."
+          "student_action": "Use that variable to write an equation that matches the situation."
         },
         {
           "label": "c",
-          "student_action": "Check the solution in the original equation/context."
+          "student_action": "Solve the equation from part (b) and check the solution in the original relationship."
         },
         {
           "label": "d",
-          "student_action": "Interpret the checked solution in the original situation."
+          "student_action": "Interpret the checked solution in the context with correct quantity meaning/units."
         }
       ],
       "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
