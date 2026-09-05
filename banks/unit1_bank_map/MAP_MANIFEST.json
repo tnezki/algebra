@@ -1,0 +1,94 @@
+{
+  "schema": "algebra-bank-map-manifest/2.0",
+  "status": "PASS",
+  "course": "Algebra 1",
+  "unit": 1,
+  "job": "3a - Build Bank Map",
+  "map_fingerprint": "15ce0fe6702681358cc94f66ecc30615034e587cfec9b2ca5111e9b77df6a53f",
+  "pinned_snapshot": {
+    "system": "tnezki/memories@0d3ba12a23f9707c80dd40cdf5328f360d490936",
+    "course_repository": "tnezki/algebra@e359bab2a74e624c14562b47914cb2d71264c6f2"
+  },
+  "question_design": {
+    "status": "PASS",
+    "path": "unit1_question_design_map.json",
+    "record_count": 193
+  },
+  "qa": {
+    "status": "PASS",
+    "audit_scope": {
+      "records_checked": 193,
+      "exit_records": 20,
+      "summative_records": 48,
+      "practice1_records": 120,
+      "wtc_routines": 5
+    },
+    "semantic_question_structure_audit": {
+      "construction_vs_read_only_conflicts_found": 0,
+      "invalid_multistep_mappings_found": 0,
+      "invalid_error_diagnosis_mappings_found": 0,
+      "incomplete_mixed_representation_routes_found": 0,
+      "student_construction_response_surface_conflicts_found": 0
+    },
+    "mechanical_findings": []
+  },
+  "required_destination_slices": [
+    "exit_map.json",
+    "summative_map.json",
+    "practice1_map.json",
+    "wtc_map.json",
+    "seed_map.json"
+  ],
+  "support_files": [
+    "unit1_question_design_map.json",
+    "bank_inventory_map.json",
+    "MAP_REPORT.txt"
+  ],
+  "files": [
+    {
+      "path": "unit1_question_design_map.json",
+      "sha256": "376112a2c9ca5a2b5336d49626dbb6c3a4fa2cea78da0388fbf56811f98621ca",
+      "bytes": 793721
+    },
+    {
+      "path": "bank_inventory_map.json",
+      "sha256": "898005f22a1c48fcd9849dddc6aae4c2e642d51d9917eb0ae0bded9ee6278a5d",
+      "bytes": 2392
+    },
+    {
+      "path": "exit_map.json",
+      "sha256": "f1a618f162b074594a86878ab7fbb83992647cc03d27df652aa667bb3ad62eb3",
+      "bytes": 68749
+    },
+    {
+      "path": "summative_map.json",
+      "sha256": "5e97a6201836bc8eae2967e8b1f1ae14f94f2c287d151edc46d568a8d2cbba51",
+      "bytes": 186925
+    },
+    {
+      "path": "practice1_map.json",
+      "sha256": "d9c4b96a6eb8834ff830d25b726df36c9a719f96d84c3d2fbc89d2e14265bbb9",
+      "bytes": 384602
+    },
+    {
+      "path": "wtc_map.json",
+      "sha256": "daa401a6452aaa754e7e3edd6e86deaafc389ba9fe1c7e26580280c0b17c0d52",
+      "bytes": 21479
+    },
+    {
+      "path": "seed_map.json",
+      "sha256": "1a1d969fc9c647678ed22664cafb8a81ea960714a3bd61b308abde3c50d0c2a9",
+      "bytes": 526
+    },
+    {
+      "path": "MAP_REPORT.txt",
+      "sha256": "d37ce9b52b5e630c41266e71ce6a6b4bebd72f9ac7dfd06d18aec67a762e110d",
+      "bytes": 4763
+    }
+  ],
+  "self_hash_policy": "MAP_MANIFEST.json intentionally does not hash itself; map_fingerprint is derived from the seven core JSON design files.",
+  "output_contract": {
+    "zip_name": "unit1_bank_map.zip",
+    "zip_root": "unit1_bank_map/"
+  }
+}

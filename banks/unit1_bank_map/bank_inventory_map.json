@@ -1,0 +1,75 @@
+{
+  "schema": "algebra-bank-inventory-map/2.0",
+  "status": "PASS",
+  "course": "Algebra 1",
+  "unit": 1,
+  "framework_version": "v7.2",
+  "profile_version": "v2.2",
+  "canonical_destinations": [
+    {
+      "destination": "Exit",
+      "slice": "exit_map.json",
+      "count": 20,
+      "role": "official four-question rolling mastery evidence across 5 sections"
+    },
+    {
+      "destination": "Summative",
+      "slice": "summative_map.json",
+      "count": 48,
+      "role": "6 secure forms x 8 blueprint slots; exactly 2 opportunities per each of 4 current Unit Mastery Goals; ~39 minutes/form"
+    },
+    {
+      "destination": "Practice1",
+      "slice": "practice1_map.json",
+      "count": 120,
+      "role": "5 sections x exactly 24 = 8 Intro + 8 Review + 8 Mastery"
+    },
+    {
+      "destination": "WTC",
+      "slice": "wtc_map.json",
+      "count": 5,
+      "role": "one connected 4-part shared-stimulus preview/decomposition routine per section"
+    },
+    {
+      "destination": "Seeds",
+      "slice": "seed_map.json",
+      "count": 0,
+      "role": "canonical only when useful; no quota; zero filler seeds mapped now"
+    }
+  ],
+  "not_bank_inventory": [
+    "Extra Practice",
+    "CYU",
+    "Practice Set 2",
+    "Practice Set 3",
+    "fixed Notes Example/YTI pairs",
+    "finished Warm-Up questions",
+    "legacy 139-per-section inventory"
+  ],
+  "downstream_generation_notes": {
+    "Extra Practice": "generated later by Practice build from map + Practice1 + seeds + Question Structure",
+    "CYU": "generated later by Practice build",
+    "Warm-Ups": "generated from Framework warmup progression; not Bank questions",
+    "Notes Examples/YTIs": "purpose-authored/refined during Notes; not fixed Bank inventory"
+  },
+  "total_top_level_design_records": 193,
+  "authorities": [
+    {
+      "repository": "tnezki/memories",
+      "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+      "path": "frameworks/Algebra_1/FRAMEWORK.txt",
+      "version": "v7.2"
+    },
+    {
+      "repository": "tnezki/memories",
+      "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+      "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+      "version": "v2.2"
+    },
+    {
+      "repository": "tnezki/memories",
+      "commit": "0d3ba12a23f9707c80dd40cdf5328f360d490936",
+      "path": "pms_build/bank_map.txt"
+    }
+  ]
+}
