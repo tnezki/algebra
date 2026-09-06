@@ -1,95 +1,100 @@
 {
-  "schema_version": "pms.bank.manifest.v1",
-  "artifact": "algebra_1_unit_1_complete_bank",
+  "schema": "algebra-bank-manifest/2.0",
+  "status": "COMPLETE",
+  "ready_for_downstream": true,
+  "pending": [],
+  "qa_status": "PASS",
   "course": "Algebra 1",
   "course_id": "Algebra_1",
-  "unit": "1",
-  "profile_id": "algebra1_locked",
-  "ready_for_downstream": true,
-  "counts": {
+  "unit": 1,
+  "job": "3b - Build Complete Bank",
+  "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+  "accepted_map_root": "banks/unit1_bank_map",
+  "course_profile": {
+    "identity": "Algebra1_Spiral_Framework bank course profile",
+    "version": "v2.3",
+    "framework_version": "v7.2"
+  },
+  "question_structure_version": "v1.2",
+  "canonical_destination_paths": [
+    "exit.json",
+    "summative.json",
+    "practice1.json",
+    "wtc.json",
+    "seeds.json"
+  ],
+  "record_counts": {
+    "question_records": 193,
     "Exit": 20,
     "Summative": 48,
     "Practice1": 120,
     "WTC": 5,
-    "Seeds": 6,
-    "production_question_records": 193
+    "seeds": 6
   },
-  "products": {
-    "Exit": {
-      "enabled": true,
-      "path": "banks/unit1/exit.json"
+  "unit_viewer_path": "banks/unit1/unit1.html",
+  "inspection_path": "banks/unit1/inspection.html",
+  "map_fidelity_report_path": "banks/unit1/MAP_FIDELITY_REPORT.json",
+  "provenance_path": "banks/unit1/PROVENANCE.json",
+  "files": [
+    {
+      "path": "BUILD_REPORT.txt",
+      "sha256": "65fe2b63b91a6c51bae327cfaf7a922a782cf10f99a5059a762f5d71a874835b",
+      "bytes": 2459
     },
-    "Summative": {
-      "enabled": true,
-      "secure": true,
-      "versions": [
-        "V1",
-        "V2",
-        "V3",
-        "V4",
-        "V5",
-        "V6"
-      ],
-      "path": "banks/unit1/summative.json"
+    {
+      "path": "ITEM_INDEX.json",
+      "sha256": "ff33b4e06c701dcb7182dfd8d546463614234e945830854bca27aec87accfa99",
+      "bytes": 65864
     },
-    "Practice1": {
-      "enabled": true,
-      "path": "banks/unit1/practice1.json"
+    {
+      "path": "MAP_FIDELITY_REPORT.json",
+      "sha256": "1f25ed19b26f8b7b3e6afea897ab545ed8fda5508edea149b66ed86f913d12b2",
+      "bytes": 11691
     },
-    "Practice2": {
-      "enabled": false
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "8cf5780b200b88b4e43574265d17659583bfbf6232fc6fc01156703b9a6506cb",
+      "bytes": 1313
     },
-    "WTC": {
-      "enabled": true,
-      "path": "banks/unit1/wtc.json"
+    {
+      "path": "exit.json",
+      "sha256": "5f2c33cb9c6ecee902d697a83935e73b6575f2d7008e8621091669284c8987a8",
+      "bytes": 106023
     },
-    "Seeds": {
-      "enabled": true,
-      "quota_enforced": false,
-      "path": "banks/unit1/seeds.json"
+    {
+      "path": "inspection.html",
+      "sha256": "aa9db0f4d9d89fe17ddf46887d15b0e201bdbbeea13f6535743696862c63fc2b",
+      "bytes": 1053
+    },
+    {
+      "path": "practice1.json",
+      "sha256": "9a288eed5ab44902eb7792d6e17a194baea57cf470273e9a9d148f1bf1cc8263",
+      "bytes": 578121
+    },
+    {
+      "path": "seeds.json",
+      "sha256": "cf1ea101c03af95882214e7bb5868e7afac076fe52c278b4b0308255b470569c",
+      "bytes": 6479
+    },
+    {
+      "path": "summative.json",
+      "sha256": "b9ffb1392b8a577dc089d1d85a2c0b118f2b10ede899eaf4e9df493192a716a4",
+      "bytes": 277713
+    },
+    {
+      "path": "unit1.html",
+      "sha256": "d8a167df156724e68b06331c557f0eec7fa5691b3bac4be4cea4e52e31477b3e",
+      "bytes": 8347
+    },
+    {
+      "path": "wtc.json",
+      "sha256": "897d002435246b23be1c1e6c98a93e1aa3223b910f11d50ae2e86ffab1a2db34",
+      "bytes": 28115
     }
-  },
-  "source_commits": {
-    "memories": "35add483eabd6d02299e18c8dae6735187a970c0",
-    "course": "265943ef9796b04712d2fe13c6673ec0873c1d07"
-  },
-  "accepted_map_root": "banks/unit1_bank_map",
-  "files": {
-    "banks/unit1/BUILD_REPORT.txt": {
-      "sha256": "6ec55560907f976b1e8b7cf08f359ade446f9078c7da5b30131a62a1188f2d8d",
-      "bytes": 3494
-    },
-    "banks/unit1/ITEM_INDEX.json": {
-      "sha256": "51c76c1f2b95b848f38a869b8e802b4a92497c93289279858175a301250f5b01",
-      "bytes": 36767
-    },
-    "banks/unit1/PROVENANCE.json": {
-      "sha256": "23ef51cf4243f0642c6fe004ce880893fe403d26c1ef068d5f05692c2e1be2e1",
-      "bytes": 809
-    },
-    "banks/unit1/exit.json": {
-      "sha256": "1d7d5d06cfac0cf0a36401e7dc2ee2efe471e109156af697c99fcfc5db5a81a6",
-      "bytes": 31615
-    },
-    "banks/unit1/inspection.html": {
-      "sha256": "28ce82b4d61de84ba8a2547e9beb2304601e392451525f77f54ce185d9792c5f",
-      "bytes": 1536
-    },
-    "banks/unit1/practice1.json": {
-      "sha256": "a72e533b791ccfee4bcfce3cf2f559160b8208fcb7a96acf502381c6613d2a95",
-      "bytes": 269670
-    },
-    "banks/unit1/seeds.json": {
-      "sha256": "4f2b37dc22952007d9e0dd04a850499d609e302abb249ef406d2e2668d6a31b7",
-      "bytes": 5390
-    },
-    "banks/unit1/summative.json": {
-      "sha256": "284d26540671c1ccaf3f78f92b19b965a22ba2332fb28bdec1a162cf7999bf7e",
-      "bytes": 52487
-    },
-    "banks/unit1/wtc.json": {
-      "sha256": "9a8ea6fde3ad8666ad0029adc77dc48139b6935efb5dfeaf5a21001b6f2444e4",
-      "bytes": 11980
-    }
+  ],
+  "self_hash_policy": "BANK_MANIFEST.json intentionally does not hash itself.",
+  "output_contract": {
+    "zip_name": "unit1_bank_complete.zip",
+    "zip_root": "banks/unit1/"
   }
 }

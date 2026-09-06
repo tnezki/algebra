@@ -1,25 +1,37 @@
 {
-  "schema_version": "pms.bank.provenance.v1",
-  "course_id": "Algebra_1",
-  "unit": "1",
-  "build_authority": "pms_build/bank_complete.txt",
-  "profile": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-  "accepted_map_root": "banks/unit1_bank_map",
-  "pinned": {
-    "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-    "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07"
+  "schema": "algebra-bank-provenance/2.0",
+  "status": "COMPLETE",
+  "course": "Algebra 1",
+  "unit": 1,
+  "built_at_utc": "2026-09-05T13:49:24.846545+00:00",
+  "request_pins": {
+    "system": "tnezki/memories@b3e878f0ff066666251d9ccb13004be65b95f325",
+    "course_repository": "tnezki/algebra@c46b438b88600756a6c955aa8045b4149e8ba96f"
   },
-  "accepted_map_counts": {
-    "Exit": 20,
-    "Summative": 48,
-    "Practice1": 120,
-    "WTC": 5,
-    "Seeds": 6,
-    "question_design_rows": 193
+  "accepted_map": {
+    "root": "banks/unit1_bank_map",
+    "fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+    "original_snapshot": {
+      "system": "tnezki/memories@35add483eabd6d02299e18c8dae6735187a970c0",
+      "course_repository": "tnezki/algebra@54ded012b91f2bda6a31b9abb0d7f1d47db9601c"
+    }
   },
-  "notes": [
-    "Fresh build from accepted 3a row/slot map.",
-    "Summative artifacts are secure references only; no question text or keys are stored.",
-    "Practice 2 is disabled and not emitted."
-  ]
+  "current_authority_recheck": {
+    "framework": "Algebra 1 v7.2",
+    "bank_profile": "v2.3",
+    "question_structure": "v1.2",
+    "result": "PASS — no contradiction found with the accepted map."
+  },
+  "authoring_mode": "fresh replacement from accepted 3a map; prior Unit Bank ignored as curriculum authority",
+  "registered_graph_tool": {
+    "repository": "tnezki/memories",
+    "commit": "b3e878f0ff066666251d9ccb13004be65b95f325",
+    "path": "Tools/~graph_tool_v12.py",
+    "functions_referenced": [
+      "make_standard_graph",
+      "make_context_graph",
+      "make_number_line",
+      "make_2x2_grid"
+    ]
+  }
 }
