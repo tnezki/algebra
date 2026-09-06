@@ -1,13 +1,17 @@
 {
-  "schema": "algebra-bank-render-qa/2.1",
-  "status": "PASS",
+  "schema": "algebra-bank-render-qa/2.2-repair-checkpoint",
+  "status": "INCOMPLETE",
   "graph_tool_expected_count": 74,
   "graph_tool_executed_count": 74,
   "graph_tool_execution_mismatches": [],
   "unregistered_graph_markup_mismatches": [],
+  "representation_component_mismatches": [],
   "representation_markup_mismatches": [],
   "graph_semantic_mode_mismatches": [],
   "graph_answer_leak_mismatches": [],
+  "graph_required_evidence_out_of_view_mismatches": [
+    {"code":"AUDIT_NOT_EXECUTED_IN_SANDBOX","detail":"Pinned binary figures and complete authored bank could be read through GitHub metadata/content tools but could not be materialized into the sandbox for required finished-output graph evidence containment inspection."}
+  ],
   "graph_range_clip_mismatches": [],
   "graph_aspect_distortion_mismatches": [],
   "unresolved_representation_refs": [],
@@ -16,23 +20,15 @@
   "matching_order_leak_mismatches": [],
   "duplicate_prompt_review_mismatches": [],
   "table_layout_contract_mismatches": [],
+  "viewer_compact_metadata_mismatches": [],
   "viewer_metadata_mismatches": [],
-  "issue_count": 0,
+  "secure_viewer_leak_mismatches": [],
+  "required_schema_keys_missing": [],
+  "issue_count": 1,
   "registered_tool": {
     "path": "Tools/~graph_tool_v12.py",
     "sha256": "eaf5ab36936697f9f49c255c0f2dfcb64c94858c1e4769dfd2431e042e4453b5",
     "git_blob": "dd7eacf178262ab5608851f8a69524b216933ed0"
   },
-  "asset_count": 74,
-  "qa_methods": [
-    "clean graph regeneration using the registered tool source copy",
-    "record-to-asset resolution",
-    "PIL dimension/native-aspect inspection",
-    "HTML DOM/CSS contract inspection",
-    "metadata trace coverage inspection",
-    "duplicate prompt audit",
-    "secure-viewer leak scan"
-  ],
-  "graph_generation_log": "GRAPH_GENERATION_LOG.txt",
-  "graph_generation_exit_code": 0
+  "note": "This report intentionally does not claim PASS. It adds every field required by the current Step 3b PM and records the one audit that could not be executed against locally materialized finished assets."
 }
