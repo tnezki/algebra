@@ -1,380 +1,516 @@
 {
-  "schema_version": "pms.bank.wtc.v1",
-  "course_id": "Algebra_1",
-  "unit": "1",
+  "schema": "algebra-bank-wtc/2.0",
+  "status": "COMPLETE",
+  "course": "Algebra 1",
+  "unit": 1,
   "count": 5,
-  "routines": [
+  "records": [
     {
-      "id": "WTC-1.1",
+      "record_id": "WTC-1.1",
+      "source_map_record_id": "WTC-1.1",
+      "record_mode": "authored",
       "destination": "WTC",
-      "storage_name": "WTC",
-      "section": "1.1",
+      "section_id": "1.1",
+      "stage": "Intro",
+      "form": null,
+      "slot": null,
       "target_id": "1.1-LT",
-      "target_title": "Coordinate-Plane Graphs",
-      "standard_ids": [
-        "HSF-IF.B.4",
-        "HSF-IF.C.7"
+      "target_text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship.",
+      "primary_i_can_id": "1.1-INTRO-IC1",
+      "primary_i_can_text": "Find matching values across different representations.",
+      "supporting_i_can_ids": [
+        "1.1-INTRO-IC2",
+        "1.1-INTRO-IC3",
+        "1.1-INTRO-IC4"
       ],
-      "concept": "Coordinate-Plane Graphs",
-      "capability": "Interpretation",
-      "level": "L1",
-      "difficulty": "Medium",
-      "cognitive_demand": "Apply",
-      "display_type": "access",
-      "routine_display_title": "What to Chart",
-      "shared_stimulus_required": true,
-      "shared_representation": {
-        "type": "partial_coordinate_graph",
-        "x_label": "time (min)",
-        "y_label": "distance (m)",
-        "points": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            3
-          ],
-          [
-            2,
-            6
-          ]
-        ],
-        "missing_point_input": 3,
-        "scale": 1
+      "supporting_i_can_texts": [
+        "Create a table or graph from another representation.",
+        "Check whether two representations describe the same relationship.",
+        "Use values, rate, or pattern as evidence."
+      ],
+      "evidence_job": "Connect a rule, table, and graph through carried-forward values.",
+      "student_action": "Complete a connected representation chain.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "extended_constructed",
+      "representation_mode": "mixed_table_graph",
+      "representation_need": "required",
+      "representation_route": {
+        "route_type": "direct_html",
+        "answer_neutral": true
       },
-      "prompts": [
+      "security_role": "instructional_exposed_wtc",
+      "variation_axes_used": [],
+      "student_text": "Work through parts (a)-(d). Use each earlier result in the next part.",
+      "student_html": "<div class=\"prompt\">Work through parts (a)-(d). Use each earlier result in the next part.</div><div class=\"shared-stimulus\"><b>Shared relationship:</b> y=2x+1</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td class=\"blank-cell\">&nbsp;</td></tr><tr><td>0</td><td class=\"blank-cell\">&nbsp;</td></tr><tr><td>2</td><td class=\"blank-cell\">&nbsp;</td></tr><tr><td>4</td><td class=\"blank-cell\">&nbsp;</td></tr></tbody></table><div class=\"response-surface\"><div class=\"response-label\">Use this plane in part (b).</div><svg class=\"graph\" viewBox=\"0 0 360 300\" role=\"img\" aria-label=\"Graph\"><rect x=\"0\" y=\"0\" width=\"360\" height=\"300\" fill=\"white\" stroke=\"#bbb\"/><line x1=\"42.0\" y1=\"42\" x2=\"42.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"42.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-6</text><line x1=\"65.0\" y1=\"42\" x2=\"65.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"65.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-5</text><line x1=\"88.0\" y1=\"42\" x2=\"88.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"88.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-4</text><line x1=\"111.0\" y1=\"42\" x2=\"111.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"111.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-3</text><line x1=\"134.0\" y1=\"42\" x2=\"134.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"134.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-2</text><line x1=\"157.0\" y1=\"42\" x2=\"157.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"157.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">-1</text><line x1=\"180.0\" y1=\"42\" x2=\"180.0\" y2=\"258\" stroke=\"#ccc\"/><line x1=\"203.0\" y1=\"42\" x2=\"203.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"203.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">1</text><line x1=\"226.0\" y1=\"42\" x2=\"226.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"226.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">2</text><line x1=\"249.0\" y1=\"42\" x2=\"249.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"249.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">3</text><line x1=\"272.0\" y1=\"42\" x2=\"272.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"272.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">4</text><line x1=\"295.0\" y1=\"42\" x2=\"295.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"295.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">5</text><line x1=\"318.0\" y1=\"42\" x2=\"318.0\" y2=\"258\" stroke=\"#ccc\"/><text x=\"318.0\" y=\"165.0\" text-anchor=\"middle\" font-size=\"10\">6</text><line x1=\"42\" y1=\"258.0\" x2=\"318\" y2=\"258.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"261.0\" text-anchor=\"end\" font-size=\"10\">-6</text><line x1=\"42\" y1=\"240.0\" x2=\"318\" y2=\"240.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"243.0\" text-anchor=\"end\" font-size=\"10\">-5</text><line x1=\"42\" y1=\"222.0\" x2=\"318\" y2=\"222.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"225.0\" text-anchor=\"end\" font-size=\"10\">-4</text><line x1=\"42\" y1=\"204.0\" x2=\"318\" y2=\"204.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"207.0\" text-anchor=\"end\" font-size=\"10\">-3</text><line x1=\"42\" y1=\"186.0\" x2=\"318\" y2=\"186.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"189.0\" text-anchor=\"end\" font-size=\"10\">-2</text><line x1=\"42\" y1=\"168.0\" x2=\"318\" y2=\"168.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"171.0\" text-anchor=\"end\" font-size=\"10\">-1</text><line x1=\"42\" y1=\"150.0\" x2=\"318\" y2=\"150.0\" stroke=\"#ccc\"/><line x1=\"42\" y1=\"132.0\" x2=\"318\" y2=\"132.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"135.0\" text-anchor=\"end\" font-size=\"10\">1</text><line x1=\"42\" y1=\"114.0\" x2=\"318\" y2=\"114.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"117.0\" text-anchor=\"end\" font-size=\"10\">2</text><line x1=\"42\" y1=\"96.0\" x2=\"318\" y2=\"96.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"99.0\" text-anchor=\"end\" font-size=\"10\">3</text><line x1=\"42\" y1=\"78.0\" x2=\"318\" y2=\"78.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"81.0\" text-anchor=\"end\" font-size=\"10\">4</text><line x1=\"42\" y1=\"60.0\" x2=\"318\" y2=\"60.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"63.0\" text-anchor=\"end\" font-size=\"10\">5</text><line x1=\"42\" y1=\"42.0\" x2=\"318\" y2=\"42.0\" stroke=\"#ccc\"/><text x=\"173.0\" y=\"45.0\" text-anchor=\"end\" font-size=\"10\">6</text><text x=\"180.0\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\">Graph</text></svg></div>",
+      "answer": "(a) -1,1,5,9; (b) points on y=2x+1; (c) 7; (d) all encode the same input-output rule.",
+      "solution_text": "Substitute to make the table, graph those same pairs, read x=3 on the graph, and reconcile the matching rule/value evidence.",
+      "solution_html": "<div class=\"solution\">Substitute to make the table, graph those same pairs, read x=3 on the graph, and reconcile the matching rule/value evidence.</div>",
+      "parts": [
         {
-          "id": "WTC-1.1-P1",
-          "prompt": "Complete the next point if the pattern continues.",
-          "expected_response": "(3, 9)"
+          "label": "a",
+          "student_action": "Use y=2x+1 to complete the table for x=-1, 0, 2, 4."
         },
         {
-          "id": "WTC-1.1-P2",
-          "prompt": "Describe what the point (2, 6) means in this context.",
-          "expected_response": "2 minutes and 6 meters"
+          "label": "b",
+          "student_action": "Plot the ordered pairs from part (a) on the blank coordinate plane and connect the pattern."
         },
         {
-          "id": "WTC-1.1-P3",
-          "prompt": "Circle or name the interval with the same rate as the first interval.",
-          "expected_response": "All shown equal-length intervals"
+          "label": "c",
+          "student_action": "Use your graph from part (b) to find the output when x=3."
         },
         {
-          "id": "WTC-1.1-P4",
-          "prompt": "Would changing the y-axis scale change the data values? Explain.",
-          "expected_response": "No; only the visual spacing changes"
-        },
-        {
-          "id": "WTC-1.1-P5",
-          "prompt": "Write one sentence describing the overall relationship.",
-          "expected_response": "Distance increases by 3 meters per minute"
+          "label": "d",
+          "student_action": "Explain how the table from (a), graph from (b), and value from (c) show the same relationship."
         }
       ],
-      "answer_bearing_asset_allowed": false,
-      "source_map_id": "WTC-1.1",
-      "map_rationale": "Accepted 3a section 1.1 WTC routine: shared representation with 4-6 student decisions/actions.",
-      "provenance": {
-        "accepted_map_file": "banks/unit1_bank_map/wtc_map.json",
-        "accepted_map_record_id": "WTC-1.1",
-        "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-        "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07",
-        "authoring_mode": "fresh_from_accepted_3a_map"
-      }
+      "wtc_shared_stimulus": true,
+      "wtc_part_count": 4,
+      "coverage_role": "wtc_frq_practice",
+      "coverage_counts_toward_unit_i_can_floor": false,
+      "dependency_contract": {
+        "intermediate_result_needed": "table values from part (a) and graph constructed from those values in part (b)",
+        "carried_forward_to_final": "the final reconciliation explicitly uses the student-created representations and the value read from them"
+      },
+      "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
+      "allowed_variation_axes": [
+        "givens_evidence_set",
+        "representation_values",
+        "representation_type",
+        "context_evidence",
+        "values_units",
+        "wording_profile"
+      ],
+      "required_variation_axes": [],
+      "forbidden_variation_axes": [
+        "secure_exit_prompt_reuse",
+        "secure_summative_prompt_reuse",
+        "unrelated_multipart_padding",
+        "difficulty_inflation"
+      ],
+      "source_basis": [
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
+        },
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        }
+      ],
+      "semantic_task_kind": "multistep",
+      "wording_profile": "natural_direct",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
-      "id": "WTC-1.2",
+      "record_id": "WTC-1.2",
+      "source_map_record_id": "WTC-1.2",
+      "record_mode": "authored",
       "destination": "WTC",
-      "storage_name": "WTC",
-      "section": "1.2",
+      "section_id": "1.2",
+      "stage": "Intro",
+      "form": null,
+      "slot": null,
       "target_id": "1.2-LT",
-      "target_title": "Input/Output Rules",
-      "standard_ids": [
-        "HSF-IF.A.2"
+      "target_text": "Use input-output rules and the basic idea of a function.",
+      "primary_i_can_id": "1.2-INTRO-IC1",
+      "primary_i_can_text": "Identify the input and output in a relationship.",
+      "supporting_i_can_ids": [
+        "1.2-INTRO-IC2",
+        "1.2-INTRO-IC3",
+        "1.2-INTRO-IC4"
       ],
-      "concept": "Input/Output Rules",
-      "capability": "Interpretation",
-      "level": "L1",
-      "difficulty": "Medium",
-      "cognitive_demand": "Apply",
-      "display_type": "access",
-      "routine_display_title": "What to Chart",
-      "shared_stimulus_required": true,
-      "shared_representation": {
-        "type": "function_machine",
-        "rule": "multiply by 3, then subtract 2",
-        "inputs": [
-          -1,
-          0,
-          2,
-          5
-        ]
+      "supporting_i_can_texts": [
+        "Use a rule to find outputs.",
+        "Write ordered pairs from inputs and outputs.",
+        "Decide whether each input has only one output."
+      ],
+      "evidence_job": "Carry one input-output rule through table, pairs, and function decision.",
+      "student_action": "Build and interpret connected representations.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "extended_constructed",
+      "representation_mode": "mixed_table_mapping",
+      "representation_need": "required",
+      "representation_route": {
+        "route_type": "semantic_html_mapping",
+        "renderer": "accessible HTML/SVG mapping diagram or ordered-pair display",
+        "answer_neutral": true
       },
-      "prompts": [
+      "security_role": "instructional_exposed_wtc",
+      "variation_axes_used": [],
+      "student_text": "Complete parts (a)-(d) using the same input-output rule.",
+      "student_html": "<div class=\"prompt\">Complete parts (a)-(d) using the same input-output rule.</div><div class=\"shared-stimulus\"><b>Shared rule:</b> y=3x-2</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td class=\"blank-cell\">&nbsp;</td></tr><tr><td>2</td><td class=\"blank-cell\">&nbsp;</td></tr><tr><td>5</td><td class=\"blank-cell\">&nbsp;</td></tr></tbody></table>",
+      "answer": "(a) x input, y output; (b) -2,4,13; (c) (0,-2),(2,4),(5,13); (d) yes, each input has one output.",
+      "solution_text": "Every part reuses y=3x-2. The completed rows become ordered pairs, and those pairs show one output for each input.",
+      "solution_html": "<div class=\"solution\">Every part reuses y=3x-2. The completed rows become ordered pairs, and those pairs show one output for each input.</div>",
+      "parts": [
         {
-          "id": "WTC-1.2-P1",
-          "prompt": "Find all four outputs.",
-          "expected_response": "[-5,-2,4,13]"
+          "label": "a",
+          "student_action": "Identify which quantity is the input and which is the output for the rule y=3x-2."
         },
         {
-          "id": "WTC-1.2-P2",
-          "prompt": "Write two input-output pairs.",
-          "expected_response": "Any two correct pairs"
+          "label": "b",
+          "student_action": "Use the rule to complete outputs for x=0, 2, 5."
         },
         {
-          "id": "WTC-1.2-P3",
-          "prompt": "Explain what the machine does in your own words.",
-          "expected_response": "y=3x-2"
+          "label": "c",
+          "student_action": "Turn the completed rows from part (b) into ordered pairs."
         },
         {
-          "id": "WTC-1.2-P4",
-          "prompt": "Predict the output for input 10 without extending a table one row at a time.",
-          "expected_response": "28"
-        },
-        {
-          "id": "WTC-1.2-P5",
-          "prompt": "Does any listed input have two outputs? Explain what that tells you.",
-          "expected_response": "No; each input has exactly one output"
+          "label": "d",
+          "student_action": "Use the ordered pairs from part (c) to decide whether this displayed relationship is a function and explain why."
         }
       ],
-      "answer_bearing_asset_allowed": false,
-      "source_map_id": "WTC-1.2",
-      "map_rationale": "Accepted 3a section 1.2 WTC routine: shared representation with 4-6 student decisions/actions.",
-      "provenance": {
-        "accepted_map_file": "banks/unit1_bank_map/wtc_map.json",
-        "accepted_map_record_id": "WTC-1.2",
-        "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-        "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07",
-        "authoring_mode": "fresh_from_accepted_3a_map"
-      }
+      "wtc_shared_stimulus": true,
+      "wtc_part_count": 4,
+      "coverage_role": "wtc_frq_practice",
+      "coverage_counts_toward_unit_i_can_floor": false,
+      "dependency_contract": {
+        "intermediate_result_needed": "completed outputs and ordered pairs from parts (b)-(c)",
+        "carried_forward_to_final": "the function decision in part (d) is made from those carried-forward input-output pairs"
+      },
+      "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
+      "allowed_variation_axes": [
+        "givens_evidence_set",
+        "representation_values",
+        "representation_type",
+        "context_evidence",
+        "values_units",
+        "wording_profile"
+      ],
+      "required_variation_axes": [],
+      "forbidden_variation_axes": [
+        "secure_exit_prompt_reuse",
+        "secure_summative_prompt_reuse",
+        "unrelated_multipart_padding",
+        "difficulty_inflation"
+      ],
+      "source_basis": [
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
+        },
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        }
+      ],
+      "semantic_task_kind": "multistep",
+      "wording_profile": "natural_direct",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
-      "id": "WTC-1.3",
+      "record_id": "WTC-1.3",
+      "source_map_record_id": "WTC-1.3",
+      "record_mode": "authored",
       "destination": "WTC",
-      "storage_name": "WTC",
-      "section": "1.3",
+      "section_id": "1.3",
+      "stage": "Intro",
+      "form": null,
+      "slot": null,
       "target_id": "1.3-LT",
-      "target_title": "Recognize Function Families",
-      "standard_ids": [
-        "HSF-IF.B.4",
-        "HSF-IF.C.7"
+      "target_text": "Notice how common function families change in different ways.",
+      "primary_i_can_id": "1.3-INTRO-IC1",
+      "primary_i_can_text": "Recognize a linear pattern from constant rate.",
+      "supporting_i_can_ids": [
+        "1.3-INTRO-IC2",
+        "1.3-INTRO-IC3",
+        "1.3-INTRO-IC4"
       ],
-      "concept": "Function Families",
-      "capability": "Analysis",
-      "level": "L2",
-      "difficulty": "Medium-Hard",
-      "cognitive_demand": "Analyze",
-      "display_type": "access",
-      "routine_display_title": "What to Chart",
-      "shared_stimulus_required": true,
-      "shared_representation": {
-        "type": "family_comparison",
-        "A": {
-          "table": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              4
-            ],
-            [
-              2,
-              7
-            ],
-            [
-              3,
-              10
-            ]
-          ]
-        },
-        "B": {
-          "table": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              2
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              3,
-              8
-            ]
-          ]
-        }
+      "supporting_i_can_texts": [
+        "Notice basic quadratic, exponential, and absolute-value shapes or patterns.",
+        "Use a table, graph, equation, or context as evidence.",
+        "Explain why one family is more likely than another."
+      ],
+      "evidence_job": "Use change evidence to classify, predict, and justify a function family.",
+      "student_action": "Analyze one data set in a dependent chain.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "extended_constructed",
+      "representation_mode": "semantic_data_table",
+      "representation_need": "required",
+      "representation_route": {
+        "route_type": "semantic_html_table",
+        "renderer": "semantic HTML <table>",
+        "required_class": "values",
+        "answer_neutral": true
       },
-      "prompts": [
+      "security_role": "instructional_exposed_wtc",
+      "variation_axes_used": [],
+      "student_text": "Analyze the shared table through parts (a)-(d).",
+      "student_html": "<div class=\"prompt\">Analyze the shared table through parts (a)-(d).</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>12</td></tr><tr><td>3</td><td>24</td></tr></tbody></table>",
+      "answer": "(a) ratios are 2; (b) exponential; (c) 48; (d) constant multiplicative change supports exponential growth.",
+      "solution_text": "Each output is multiplied by 2. That carried-forward ratio identifies exponential behavior and predicts 48 next.",
+      "solution_html": "<div class=\"solution\">Each output is multiplied by 2. That carried-forward ratio identifies exponential behavior and predicts 48 next.</div>",
+      "parts": [
         {
-          "id": "WTC-1.3-P1",
-          "prompt": "Find the successive output changes for A.",
-          "expected_response": "+3,+3,+3"
+          "label": "a",
+          "student_action": "Compute useful change evidence between consecutive outputs."
         },
         {
-          "id": "WTC-1.3-P2",
-          "prompt": "Find the successive output ratios for B.",
-          "expected_response": "x2,x2,x2"
+          "label": "b",
+          "student_action": "Use your change evidence from (a) to classify the most likely family: linear, quadratic, or exponential."
         },
         {
-          "id": "WTC-1.3-P3",
-          "prompt": "Classify A as linear or non-linear and justify.",
-          "expected_response": "Linear, constant first difference"
+          "label": "c",
+          "student_action": "Use the family pattern selected in (b) to predict the output when x=4."
         },
         {
-          "id": "WTC-1.3-P4",
-          "prompt": "Classify B as exponential-like or not and justify.",
-          "expected_response": "Exponential-like, constant multiplicative factor"
-        },
-        {
-          "id": "WTC-1.3-P5",
-          "prompt": "Name one feature that most clearly distinguishes the two families.",
-          "expected_response": "Additive vs multiplicative constant change"
+          "label": "d",
+          "student_action": "Explain why the evidence from (a) and the prediction from (c) support your family choice."
         }
       ],
-      "answer_bearing_asset_allowed": false,
-      "source_map_id": "WTC-1.3",
-      "map_rationale": "Accepted 3a section 1.3 WTC routine: shared representation with 4-6 student decisions/actions.",
-      "provenance": {
-        "accepted_map_file": "banks/unit1_bank_map/wtc_map.json",
-        "accepted_map_record_id": "WTC-1.3",
-        "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-        "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07",
-        "authoring_mode": "fresh_from_accepted_3a_map"
-      }
+      "wtc_shared_stimulus": true,
+      "wtc_part_count": 4,
+      "coverage_role": "wtc_frq_practice",
+      "coverage_counts_toward_unit_i_can_floor": false,
+      "dependency_contract": {
+        "intermediate_result_needed": "change evidence computed in part (a) and the family classification in part (b)",
+        "carried_forward_to_final": "parts (c)-(d) use that evidence/classification to predict and justify rather than restarting independently"
+      },
+      "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
+      "allowed_variation_axes": [
+        "givens_evidence_set",
+        "representation_values",
+        "representation_type",
+        "context_evidence",
+        "values_units",
+        "wording_profile"
+      ],
+      "required_variation_axes": [],
+      "forbidden_variation_axes": [
+        "secure_exit_prompt_reuse",
+        "secure_summative_prompt_reuse",
+        "unrelated_multipart_padding",
+        "difficulty_inflation"
+      ],
+      "source_basis": [
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
+        },
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        }
+      ],
+      "semantic_task_kind": "multistep",
+      "wording_profile": "natural_direct",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
-      "id": "WTC-1.4",
+      "record_id": "WTC-1.4",
+      "source_map_record_id": "WTC-1.4",
+      "record_mode": "authored",
       "destination": "WTC",
-      "storage_name": "WTC",
-      "section": "1.4",
+      "section_id": "1.4",
+      "stage": "Intro",
+      "form": null,
+      "slot": null,
       "target_id": "1.4-LT",
-      "target_title": "Expressions as Changing Quantities",
-      "standard_ids": [
-        "HSA-SSE.A.1",
-        "HSA-SSE.A.2",
-        "HSF-IF.B.4"
+      "target_text": "Read, evaluate, and rewrite expressions without changing their value.",
+      "primary_i_can_id": "1.4-INTRO-IC1",
+      "primary_i_can_text": "Identify terms, coefficients, and factors.",
+      "supporting_i_can_ids": [
+        "1.4-INTRO-IC2",
+        "1.4-INTRO-IC3",
+        "1.4-INTRO-IC4"
       ],
-      "concept": "Expressions as Changing Quantities",
-      "capability": "Interpretation",
-      "level": "L2",
-      "difficulty": "Medium",
-      "cognitive_demand": "Analyze",
-      "display_type": "access",
-      "routine_display_title": "What to Chart",
-      "shared_stimulus_required": true,
-      "shared_representation": {
-        "type": "context_expression",
-        "context": "A school club pays a $12 setup fee and $4 for each custom button ordered.",
-        "expression": "C=4b+12"
+      "supporting_i_can_texts": [
+        "Substitute values into an expression.",
+        "Combine like terms.",
+        "Use the distributive property correctly."
+      ],
+      "evidence_job": "Decompose one expression through structure, rewriting, simplification, and a check.",
+      "student_action": "Carry one expression through a connected rewrite chain.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "extended_constructed",
+      "representation_mode": "equation_relationship",
+      "representation_need": "as_needed",
+      "representation_route": {
+        "route_type": "direct_math_text",
+        "renderer": "MathJax/HTML mathematical text",
+        "answer_neutral": true
       },
-      "prompts": [
+      "security_role": "instructional_exposed_wtc",
+      "variation_axes_used": [],
+      "student_text": "Use the same expression for parts (a)-(d).",
+      "student_html": "<div class=\"prompt\">Use the same expression for parts (a)-(d).</div><div class=\"math\">3(2x-5)+4x+1</div>",
+      "answer": "(a) factor 3 with (2x-5); (b) 6x-15+4x+1; (c) 10x-14; (d) both equal 6 at x=2.",
+      "solution_text": "Distribute 3, combine x-terms and constants, then substitute x=2 into both forms to verify the value is unchanged.",
+      "solution_html": "<div class=\"solution\">Distribute 3, combine x-terms and constants, then substitute x=2 into both forms to verify the value is unchanged.</div>",
+      "parts": [
         {
-          "id": "WTC-1.4-P1",
-          "prompt": "Identify the input quantity and variable.",
-          "expected_response": "number of buttons, b"
+          "label": "a",
+          "student_action": "Identify the factor and grouped terms that control the first rewrite."
         },
         {
-          "id": "WTC-1.4-P2",
-          "prompt": "Identify the dependent quantity.",
-          "expected_response": "total cost C"
+          "label": "b",
+          "student_action": "Distribute using the structure identified in (a)."
         },
         {
-          "id": "WTC-1.4-P3",
-          "prompt": "Explain what 4 means with units.",
-          "expected_response": "4 dollars per button"
+          "label": "c",
+          "student_action": "Combine like terms in the expression from (b)."
         },
         {
-          "id": "WTC-1.4-P4",
-          "prompt": "Explain what 12 means with units.",
-          "expected_response": "12-dollar fixed setup fee"
-        },
-        {
-          "id": "WTC-1.4-P5",
-          "prompt": "Describe how C changes when b increases by 5 without building a full table.",
-          "expected_response": "C increases by $20"
+          "label": "d",
+          "student_action": "At x=2, evaluate both the original expression and your final expression from (c) to check equivalence."
         }
       ],
-      "answer_bearing_asset_allowed": false,
-      "source_map_id": "WTC-1.4",
-      "map_rationale": "Accepted 3a section 1.4 WTC routine: shared representation with 4-6 student decisions/actions.",
-      "provenance": {
-        "accepted_map_file": "banks/unit1_bank_map/wtc_map.json",
-        "accepted_map_record_id": "WTC-1.4",
-        "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-        "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07",
-        "authoring_mode": "fresh_from_accepted_3a_map"
-      }
+      "wtc_shared_stimulus": true,
+      "wtc_part_count": 4,
+      "coverage_role": "wtc_frq_practice",
+      "coverage_counts_toward_unit_i_can_floor": false,
+      "dependency_contract": {
+        "intermediate_result_needed": "rewritten expression from part (b) and simplified expression from part (c)",
+        "carried_forward_to_final": "the final substitution check compares the original expression with the carried-forward simplified form"
+      },
+      "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
+      "allowed_variation_axes": [
+        "givens_evidence_set",
+        "representation_values",
+        "representation_type",
+        "context_evidence",
+        "values_units",
+        "wording_profile"
+      ],
+      "required_variation_axes": [],
+      "forbidden_variation_axes": [
+        "secure_exit_prompt_reuse",
+        "secure_summative_prompt_reuse",
+        "unrelated_multipart_padding",
+        "difficulty_inflation"
+      ],
+      "source_basis": [
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
+        },
+        {
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        }
+      ],
+      "semantic_task_kind": "multistep",
+      "wording_profile": "natural_direct",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts."
     },
     {
-      "id": "WTC-1.5",
+      "record_id": "WTC-1.5",
+      "source_map_record_id": "WTC-1.5",
+      "record_mode": "authored",
       "destination": "WTC",
-      "storage_name": "WTC",
-      "section": "1.5",
+      "section_id": "1.5",
+      "stage": "Intro",
+      "form": null,
+      "slot": null,
       "target_id": "1.5-LT",
-      "target_title": "Equations as Models",
-      "standard_ids": [
-        "HSA-CED.A.1",
-        "HSA-SSE.A.1"
+      "target_text": "Write an equation from a situation and explain what its solution means.",
+      "primary_i_can_id": "1.5-INTRO-IC1",
+      "primary_i_can_text": "Define a variable.",
+      "supporting_i_can_ids": [
+        "1.5-INTRO-IC2",
+        "1.5-INTRO-IC3",
+        "1.5-INTRO-IC4"
       ],
-      "concept": "Equations as Models",
-      "capability": "Validation",
-      "level": "L2",
-      "difficulty": "Medium-Hard",
-      "cognitive_demand": "Analyze",
-      "display_type": "access",
-      "routine_display_title": "What to Chart",
-      "shared_stimulus_required": true,
-      "shared_representation": {
-        "type": "modeling_context",
-        "context": "A delivery service charges a $6 base fee plus $2.50 per mile.",
-        "variables": {
-          "m": "miles",
-          "C": "total cost in dollars"
+      "supporting_i_can_texts": [
+        "Write an equation that matches a situation.",
+        "Use equivalent steps to solve when needed.",
+        "Check and interpret a solution in context."
+      ],
+      "evidence_job": "Model one situation from variable definition through contextual interpretation.",
+      "student_action": "Build and solve a connected equation model.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "extended_constructed",
+      "representation_mode": "context_equation",
+      "representation_need": "required",
+      "security_role": "instructional_exposed_wtc",
+      "variation_axes_used": [],
+      "student_text": "Model and solve the same situation through parts (a)-(d).",
+      "student_html": "<div class=\"prompt\">Model and solve the same situation through parts (a)-(d).</div><div class=\"context-box\">Museum group: $12 reservation fee + $7 per ticket = $54 total.</div>",
+      "answer": "(a) t=tickets; (b) 12+7t=54; (c) t=6 and 12+7(6)=54; (d) the group bought 6 tickets.",
+      "solution_text": "Define the unknown, translate the context into an equation, solve and check it, then interpret the checked value.",
+      "solution_html": "<div class=\"solution\">Define the unknown, translate the context into an equation, solve and check it, then interpret the checked value.</div>",
+      "parts": [
+        {
+          "label": "a",
+          "student_action": "Define a variable for the unknown number of museum tickets."
+        },
+        {
+          "label": "b",
+          "student_action": "Use that variable to write an equation for a $12 reservation fee plus $7 per ticket totaling $54."
+        },
+        {
+          "label": "c",
+          "student_action": "Solve the equation from (b) and check the value in the original relationship."
+        },
+        {
+          "label": "d",
+          "student_action": "Interpret the checked solution using the quantity and units from the situation."
         }
+      ],
+      "wtc_shared_stimulus": true,
+      "wtc_part_count": 4,
+      "coverage_role": "wtc_frq_practice",
+      "coverage_counts_toward_unit_i_can_floor": false,
+      "dependency_contract": {
+        "intermediate_result_needed": "variable/equation from parts (a)-(b) and solved/checked value from part (c)",
+        "carried_forward_to_final": "the final interpretation is the meaning of the checked solution, not an independent question"
       },
-      "prompts": [
+      "difficulty_intent": "instructional preview/decomposition; intentionally below secure summative transfer demand",
+      "allowed_variation_axes": [
+        "givens_evidence_set",
+        "representation_values",
+        "representation_type",
+        "context_evidence",
+        "values_units",
+        "wording_profile"
+      ],
+      "required_variation_axes": [],
+      "forbidden_variation_axes": [
+        "secure_exit_prompt_reuse",
+        "secure_summative_prompt_reuse",
+        "unrelated_multipart_padding",
+        "difficulty_inflation"
+      ],
+      "source_basis": [
         {
-          "id": "WTC-1.5-P1",
-          "prompt": "Write an equation for total cost.",
-          "expected_response": "C=2.5m+6"
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html"
         },
         {
-          "id": "WTC-1.5-P2",
-          "prompt": "Explain the meaning of the coefficient.",
-          "expected_response": "$2.50 per mile"
-        },
-        {
-          "id": "WTC-1.5-P3",
-          "prompt": "Explain the meaning of the constant.",
-          "expected_response": "$6 base fee"
-        },
-        {
-          "id": "WTC-1.5-P4",
-          "prompt": "Predict the total cost for 8 miles.",
-          "expected_response": "$26"
-        },
-        {
-          "id": "WTC-1.5-P5",
-          "prompt": "A student proposes C=6m+2.5. Decide whether that model is reasonable and explain.",
-          "expected_response": "No; coefficient and constant meanings are reversed"
+          "repository": "tnezki/memories",
+          "commit": "35add483eabd6d02299e18c8dae6735187a970c0",
+          "path": "_question_structure/QUESTION_STRUCTURE_CORE.md"
         }
       ],
-      "answer_bearing_asset_allowed": false,
-      "source_map_id": "WTC-1.5",
-      "map_rationale": "Accepted 3a section 1.5 WTC routine: shared representation with 4-6 student decisions/actions.",
-      "provenance": {
-        "accepted_map_file": "banks/unit1_bank_map/wtc_map.json",
-        "accepted_map_record_id": "WTC-1.5",
-        "memories_commit": "35add483eabd6d02299e18c8dae6735187a970c0",
-        "course_commit": "265943ef9796b04712d2fe13c6673ec0873c1d07",
-        "authoring_mode": "fresh_from_accepted_3a_map"
-      }
+      "semantic_task_kind": "multistep",
+      "wording_profile": "natural_direct",
+      "structure_fit_notes": "Question Structure, student action, response mode, representation, and route are intentionally aligned.",
+      "shared_stimulus_contract": "One coherent mathematical relationship/situation supplies every part; no independent add-on parts.",
+      "representation_routes": [
+        {
+          "route_type": "direct_text",
+          "renderer": "HTML/prose context",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "direct_math_text",
+          "renderer": "MathJax/HTML mathematical text",
+          "answer_neutral": true
+        }
+      ]
     }
   ]
 }
