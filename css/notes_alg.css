@@ -1,5 +1,5 @@
 /* ============================================================
-   notes_alg.css — Algebra 1 Notes textbook-style PILOT v0.1
+   notes_alg.css — Algebra 1 Notes textbook-style PILOT v0.2
    Load AFTER ../../css/base.css
    Visual inspiration: the project's AP Calculus textbook language:
    paper page, serif reading, sans labels, red section banner,
@@ -588,5 +588,233 @@ body.notes-alg .teacher-support ol{
   body.notes-alg.teacher-copy .notes-ws,
   body.notes-alg.teacher-copy .notes-task-workspace{
     min-height:0;
+  }
+}
+/* ============================================================
+   PILOT v0.2 ADDITIONS
+   Complete toolbox + visual-first Math Notes
+   ============================================================ */
+
+/* ---------- WHY IT MATTERS ---------- */
+body.notes-alg .why-it-matters{
+  margin:9px 0 0;
+  padding:7px 10px;
+  border-left:3px solid var(--alg-red);
+  background:#fffafa;
+  color:#3f3f3f;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.9pt;
+  line-height:1.35;
+}
+body.notes-alg .why-it-matters strong{
+  color:var(--alg-red-deep);
+}
+
+/* ---------- LET'S GET STARTED ---------- */
+body.notes-alg .lets-get-started{
+  padding:0 0 2px;
+}
+body.notes-alg .starter-visual{
+  margin:9px 0 8px;
+  padding:10px 12px;
+  border:1px solid #9fcbd8;
+  background:#f7fcfe;
+  text-align:center;
+}
+body.notes-alg .starter-prompt{
+  margin:8px 0 6px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9.2pt;
+  font-weight:700;
+  color:#243746;
+}
+body.notes-alg .starter-response{
+  min-height:.72in;
+  margin:7px 0 0;
+  border-bottom:1px solid #d9dfe5;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fff 0,
+      #fff .31in,
+      #edf0f4 .32in,
+      #edf0f4 .325in
+    );
+}
+
+/* ---------- CANONICAL WTC ---------- */
+body.notes-alg .notes-wtc{
+  margin:18px 0 24px;
+  padding:0 0 12px;
+  border:1px solid #cbbf9f;
+  border-top:4px solid var(--alg-red);
+  background:var(--alg-cream-2);
+}
+body.notes-alg .notes-wtc > h2,
+body.notes-alg .notes-wtc .h-wtc{
+  margin:0;
+  padding:8px 12px 6px;
+  color:var(--alg-red-deep);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:14pt;
+  font-weight:700;
+}
+body.notes-alg .notes-wtc > :not(h2):not(.h-wtc){
+  margin-left:12px;
+  margin-right:12px;
+}
+
+/* ---------- VISUAL-FIRST MATH NOTES ---------- */
+body.notes-alg .math-notes-body{
+  display:block;
+}
+body.notes-alg .math-visual{
+  margin:8px 0 9px;
+  font-family:Arial,Helvetica,sans-serif;
+}
+body.notes-alg .math-visual-caption{
+  margin:5px 0 0;
+  color:var(--alg-muted);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.2pt;
+  line-height:1.3;
+}
+
+/* Flow diagrams: Input -> Rule -> Output; Situation -> Equation -> Meaning */
+body.notes-alg .math-flow{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+  gap:8px;
+  align-items:center;
+}
+body.notes-alg .math-flow-node{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 10px;
+  border:1px solid #8ba8c3;
+  background:#fff;
+  color:var(--alg-blue);
+  text-align:center;
+  font-weight:800;
+  line-height:1.2;
+}
+body.notes-alg .math-flow-arrow{
+  color:var(--alg-red);
+  font-size:19pt;
+  font-weight:800;
+  line-height:1;
+}
+
+/* Side-by-side mathematical comparisons */
+body.notes-alg .math-compare-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:8px;
+}
+body.notes-alg .math-compare-card{
+  min-width:0;
+  padding:9px 10px;
+  border:1px solid #9db7d3;
+  background:#fff;
+  text-align:center;
+}
+body.notes-alg .math-compare-card strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--alg-blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.8pt;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+
+/* Annotated expressions / equations */
+body.notes-alg .annotated-expression{
+  padding:12px;
+  border:1px solid #c8d5e1;
+  background:#fff;
+  text-align:center;
+}
+body.notes-alg .annotated-expression .expression-main{
+  margin:2px 0 9px;
+  font-size:15pt;
+  font-weight:700;
+}
+body.notes-alg .annotation-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px;
+}
+body.notes-alg .annotation-tag{
+  padding:4px 7px;
+  border-radius:3px;
+  background:var(--alg-light-blue);
+  color:var(--alg-blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.3pt;
+  font-weight:700;
+}
+
+/* Visual pair: representation next to short reference text */
+body.notes-alg .math-visual-split{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,.72fr);
+  gap:12px;
+  align-items:center;
+}
+body.notes-alg .math-visual-split > *{
+  min-width:0;
+}
+
+/* ---------- COMMON MISTAKES: FINAL TEXTBOOK CALLOUT ---------- */
+body.notes-alg .common-mistakes{
+  margin:24px 0 0;
+  padding:0 0 11px;
+  border:1px solid #d8b4b4;
+  border-top:4px solid var(--alg-red);
+  background:#fffafa;
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .common-mistakes .h-mistakes{
+  margin:0;
+  padding:8px 11px 6px;
+  border:0;
+  color:var(--alg-red-deep);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:14pt;
+}
+body.notes-alg .common-mistakes .mistake-table{
+  width:calc(100% - 22px);
+  margin:4px 11px 0;
+}
+body.notes-alg .common-mistakes .mistake-table th{
+  background:#f7e8e8;
+  color:var(--alg-red-deep);
+}
+body.notes-alg .common-mistakes .mistake-table td{
+  background:#fff;
+  vertical-align:top;
+}
+
+/* If legacy builds omit the wrapper, keep the old h-mistakes usable. */
+body.notes-alg .notes-summary + .h-mistakes,
+body.notes-alg .section-summary + .h-mistakes{
+  margin-top:24px;
+}
+
+@media(max-width:760px){
+  body.notes-alg .math-flow{
+    grid-template-columns:1fr;
+  }
+  body.notes-alg .math-flow-arrow{
+    transform:rotate(90deg);
+    justify-self:center;
+  }
+  body.notes-alg .math-visual-split{
+    grid-template-columns:1fr;
   }
 }
