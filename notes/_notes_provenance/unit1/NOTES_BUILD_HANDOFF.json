@@ -1,29 +1,36 @@
 {
-  "schema": "algebra-notes-build-handoff/1.0",
-  "status": "PASS",
+  "schema": "algebra-notes-build-handoff/1.1",
+  "status": "PASS_WITH_UPSTREAM_WTC_REVIEW",
   "course": "Algebra 1",
   "unit": 1,
   "job": "4 - Build Notes",
   "pm": {
     "path": "pms_build/notes.txt",
-    "git_blob": "6bb144454fa5d31de078d6d2880a1ff1e0499427",
-    "identity": "BUILD NOTES — SINGLE PASS / BANK-V2.3 — ALGEBRA TEXTBOOK-STYLE PILOT",
+    "git_blob": "239e65e6b931827a250046f6c1bc2196c1ff388c",
+    "identity": "BUILD NOTES \u2014 SINGLE PASS / BANK-V2.3 \u2014 ALGEBRA TEXTBOOK-STYLE PILOT vNEXT.1",
     "status": "PILOT",
     "revision_date": "2026-09-06"
   },
   "pins": {
-    "system": "tnezki/memories@e5b0abdd30e52cd55ca25f2e197ed6c1eb2dfd2d",
-    "course_repository": "tnezki/algebra@7a338425fe0c29bfb3c95f3f7c03c0b115b6d802"
+    "system": "tnezki/memories@65f460494960bce8dfd25c458e9f57065ebf13bf",
+    "course_repository": "tnezki/algebra@b05533b8bc7426c95816e6fb52af3e6592569554"
   },
   "framework": {
     "path": "frameworks/Algebra_1/FRAMEWORK.txt",
-    "git_blob": "6b1b554953899e0ddedadf24d5c5ebf2ba2fa104",
-    "version": "v7.2",
+    "git_blob": "96f454cbaed6331c419c76192d4d51d02e11cfcf",
+    "version": "v7.3",
+    "notes_profile_path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/notes_course_profile.json",
     "assessment_plan_path": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
     "assessment_plan_git_blob": "aa1479664b2c5d1b51016d71de4c3c1ca592d2d0"
   },
+  "question_structure": {
+    "path": "_question_structure/QUESTION_STRUCTURE_CORE.md",
+    "git_blob": "599554f68aa8489ef47b8c9a90871909f946a021",
+    "version": "1.2"
+  },
   "bank": {
     "manifest_path": "banks/unit1/BANK_MANIFEST.json",
+    "manifest_git_blob": "53e998a6f2ea3e85892fcf7ef0d535b5823bb438",
     "schema": "algebra-complete-bank-manifest/2.3",
     "status": "COMPLETE",
     "qa_status": "PASS",
@@ -31,19 +38,20 @@
     "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
     "accepted_map_root": "source_map/",
     "recovered_matching_artifact": "algebra_1_u1_bank_complete(2).zip",
-    "recovery_verification": "map fingerprint and every MAP_MANIFEST-listed file hash verified"
+    "recovery_verification": "current BANK_MANIFEST git blob matched exactly; accepted-map fingerprint and every MAP_MANIFEST-listed file hash verified"
   },
+  "source_mode": "Framework + exact Unit Assessment Plan + completed Bank + accepted source_map + current Question Structure; no external textbook/source spine declared.",
   "stylesheet": {
     "required_links": [
       "../../css/base.css",
       "../../css/notes_alg.css"
     ],
     "base_css_git_blob": "e19415ff1bed602106dc85d61426914f898c77d3",
+    "base_css_sha256": "f6a58ca83bbf97f33026179320d3c6aeda67e72f30a8f6bedfb69268b8a361dd",
     "notes_alg_css_path": "css/notes_alg.css",
-    "notes_alg_css_git_blob": "5181bb8543cbb462ba870f87f82bbdfd2b0ddf1c",
-    "notes_alg_css_sha256": "7acfe9e2d295fd3681edb77f430f179c3813f3d9c3377ab4aecde76520d057be",
-    "inline_style_used": false,
-    "base_css_sha256": "f6a58ca83bbf97f33026179320d3c6aeda67e72f30a8f6bedfb69268b8a361dd"
+    "notes_alg_css_git_blob": "b2b08130bd069a7b61bc9a6610146693329c4377",
+    "notes_alg_css_sha256": "4e8538e70f00c70c7e9ed9739cc3755cbd6fa8599bf13034b406327ed358d06f",
+    "inline_style_used": false
   },
   "routine_plan": {
     "1.1": {
@@ -51,110 +59,139 @@
         "title_shell",
         "exact_learning_target",
         "exact_i_cans",
+        "why_it_matters",
+        "lets_get_started",
+        "canonical_wtc",
         "i_can_reading",
+        "visual_first_math_notes",
         "one_example_yti_pair_per_i_can",
-        "section_summary"
+        "section_summary",
+        "common_mistakes_final"
       ],
-      "optional_included": [
-        "vocabulary_preview"
-      ],
+      "optional_included": [],
       "optional_omitted": [
-        "WTC",
-        "skim_preview",
-        "close_reading_directions",
+        "talk_to_the_text",
         "Stop & Discuss",
         "reflection"
       ],
       "generated_pair_count": 4,
-      "second_pairs": 0
+      "second_pairs": 0,
+      "wtc_id": "WTC-1.1"
     },
     "1.2": {
       "core": [
         "title_shell",
         "exact_learning_target",
         "exact_i_cans",
+        "why_it_matters",
+        "lets_get_started",
+        "canonical_wtc",
         "i_can_reading",
+        "visual_first_math_notes",
         "one_example_yti_pair_per_i_can",
-        "section_summary"
+        "section_summary",
+        "common_mistakes_final"
       ],
-      "optional_included": [
-        "common_mistakes"
-      ],
+      "optional_included": [],
       "optional_omitted": [
-        "WTC",
-        "skim_preview",
-        "close_reading_directions",
+        "talk_to_the_text",
         "Stop & Discuss",
         "reflection"
       ],
       "generated_pair_count": 4,
-      "second_pairs": 0
+      "second_pairs": 0,
+      "wtc_id": "WTC-1.2"
     },
     "1.3": {
       "core": [
         "title_shell",
         "exact_learning_target",
         "exact_i_cans",
+        "why_it_matters",
+        "lets_get_started",
+        "canonical_wtc",
         "i_can_reading",
+        "visual_first_math_notes",
         "one_example_yti_pair_per_i_can",
-        "section_summary"
+        "section_summary",
+        "common_mistakes_final"
       ],
-      "optional_included": [],
+      "optional_included": [
+        "vocabulary_preview"
+      ],
       "optional_omitted": [
-        "WTC",
-        "skim_preview",
-        "close_reading_directions",
+        "talk_to_the_text",
         "Stop & Discuss",
         "reflection"
       ],
       "generated_pair_count": 4,
-      "second_pairs": 0
+      "second_pairs": 0,
+      "wtc_id": "WTC-1.3"
     },
     "1.4": {
       "core": [
         "title_shell",
         "exact_learning_target",
         "exact_i_cans",
+        "why_it_matters",
+        "lets_get_started",
+        "canonical_wtc",
         "i_can_reading",
+        "visual_first_math_notes",
         "one_example_yti_pair_per_i_can",
-        "section_summary"
+        "section_summary",
+        "common_mistakes_final"
       ],
       "optional_included": [
-        "vocabulary_preview",
-        "common_mistakes"
+        "vocabulary_preview"
       ],
       "optional_omitted": [
-        "WTC",
-        "skim_preview",
-        "close_reading_directions",
+        "talk_to_the_text",
         "Stop & Discuss",
         "reflection"
       ],
       "generated_pair_count": 4,
-      "second_pairs": 0
+      "second_pairs": 0,
+      "wtc_id": "WTC-1.4"
     },
     "1.5": {
       "core": [
         "title_shell",
         "exact_learning_target",
         "exact_i_cans",
+        "why_it_matters",
+        "lets_get_started",
+        "canonical_wtc",
         "i_can_reading",
+        "visual_first_math_notes",
         "one_example_yti_pair_per_i_can",
-        "section_summary"
+        "section_summary",
+        "common_mistakes_final"
       ],
       "optional_included": [],
       "optional_omitted": [
-        "WTC",
-        "skim_preview",
-        "close_reading_directions",
+        "talk_to_the_text",
         "Stop & Discuss",
         "reflection"
       ],
       "generated_pair_count": 4,
-      "second_pairs": 0
+      "second_pairs": 0,
+      "wtc_id": "WTC-1.5"
     }
   },
   "generated_tasks": [
+    {
+      "task_id": "NOTES-U1-S1-START-01",
+      "task_kind": "starter",
+      "i_can_id": "1.1-INTRO-IC1",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "activate prior knowledge and preview a useful representation/pattern",
+      "student_action": "Choose one table row and use the rule to check whether the two representations agree at that input.",
+      "representation_route": "semantic_html_css",
+      "calibration_ids": [],
+      "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+      "exit_firewall_checked": true
+    },
     {
       "task_id": "NOTES-U1-S1-IC1-EX1",
       "i_can_id": "1.1-INTRO-IC1",
@@ -254,11 +291,23 @@
       "i_can_id": "1.1-INTRO-IC4",
       "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
       "evidence_job": "Use values, rate, or pattern as evidence.",
-      "student_action": "Use a table’s starting value and rate to judge whether it supports a context description.",
+      "student_action": "Use a table\u2019s starting value and rate to judge whether it supports a context description.",
       "representation_route": "semantic_html_table + context",
       "calibration_ids": [
         "P1-1.1-INTRO-08"
       ],
+      "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+      "exit_firewall_checked": true
+    },
+    {
+      "task_id": "NOTES-U1-S2-START-01",
+      "task_kind": "starter",
+      "i_can_id": "1.2-INTRO-IC1",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "evidence_job": "activate prior knowledge and preview a useful representation/pattern",
+      "student_action": "What number comes out? Which number is the input?",
+      "representation_route": "semantic_html_css",
+      "calibration_ids": [],
       "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
       "exit_firewall_checked": true
     },
@@ -363,6 +412,18 @@
       "calibration_ids": [
         "P1-1.2-INTRO-08"
       ],
+      "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+      "exit_firewall_checked": true
+    },
+    {
+      "task_id": "NOTES-U1-S3-START-01",
+      "task_kind": "starter",
+      "i_can_id": "1.3-INTRO-IC1",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "evidence_job": "activate prior knowledge and preview a useful representation/pattern",
+      "student_action": "Which pattern changes by adding the same amount? Which changes by multiplying by the same factor?",
+      "representation_route": "semantic_html_css",
+      "calibration_ids": [],
       "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
       "exit_firewall_checked": true
     },
@@ -473,6 +534,18 @@
       "exit_firewall_checked": true
     },
     {
+      "task_id": "NOTES-U1-S4-START-01",
+      "task_kind": "starter",
+      "i_can_id": "1.4-INTRO-IC1",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "evidence_job": "activate prior knowledge and preview a useful representation/pattern",
+      "student_action": "Before simplifying, what does the 5 multiply?",
+      "representation_route": "semantic_html_css",
+      "calibration_ids": [],
+      "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+      "exit_firewall_checked": true
+    },
+    {
       "task_id": "NOTES-U1-S4-IC1-EX1",
       "i_can_id": "1.4-INTRO-IC1",
       "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
@@ -574,6 +647,18 @@
       "calibration_ids": [
         "P1-1.4-INTRO-08"
       ],
+      "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
+      "exit_firewall_checked": true
+    },
+    {
+      "task_id": "NOTES-U1-S5-START-01",
+      "task_kind": "starter",
+      "i_can_id": "1.5-INTRO-IC1",
+      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "evidence_job": "activate prior knowledge and preview a useful representation/pattern",
+      "student_action": "What quantity is unknown if you want to know how many games were played? Choose a variable name for it.",
+      "representation_route": "semantic_html_css",
+      "calibration_ids": [],
       "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
       "exit_firewall_checked": true
     },
@@ -682,592 +767,490 @@
       "exit_firewall_checked": true
     }
   ],
+  "generated_ex_yti_ids_by_i_can": {
+    "1.1-INTRO-IC1": [
+      "NOTES-U1-S1-IC1-EX1",
+      "NOTES-U1-S1-IC1-YTI1"
+    ],
+    "1.1-INTRO-IC2": [
+      "NOTES-U1-S1-IC2-EX1",
+      "NOTES-U1-S1-IC2-YTI1"
+    ],
+    "1.1-INTRO-IC3": [
+      "NOTES-U1-S1-IC3-EX1",
+      "NOTES-U1-S1-IC3-YTI1"
+    ],
+    "1.1-INTRO-IC4": [
+      "NOTES-U1-S1-IC4-EX1",
+      "NOTES-U1-S1-IC4-YTI1"
+    ],
+    "1.2-INTRO-IC1": [
+      "NOTES-U1-S2-IC1-EX1",
+      "NOTES-U1-S2-IC1-YTI1"
+    ],
+    "1.2-INTRO-IC2": [
+      "NOTES-U1-S2-IC2-EX1",
+      "NOTES-U1-S2-IC2-YTI1"
+    ],
+    "1.2-INTRO-IC3": [
+      "NOTES-U1-S2-IC3-EX1",
+      "NOTES-U1-S2-IC3-YTI1"
+    ],
+    "1.2-INTRO-IC4": [
+      "NOTES-U1-S2-IC4-EX1",
+      "NOTES-U1-S2-IC4-YTI1"
+    ],
+    "1.3-INTRO-IC1": [
+      "NOTES-U1-S3-IC1-EX1",
+      "NOTES-U1-S3-IC1-YTI1"
+    ],
+    "1.3-INTRO-IC2": [
+      "NOTES-U1-S3-IC2-EX1",
+      "NOTES-U1-S3-IC2-YTI1"
+    ],
+    "1.3-INTRO-IC3": [
+      "NOTES-U1-S3-IC3-EX1",
+      "NOTES-U1-S3-IC3-YTI1"
+    ],
+    "1.3-INTRO-IC4": [
+      "NOTES-U1-S3-IC4-EX1",
+      "NOTES-U1-S3-IC4-YTI1"
+    ],
+    "1.4-INTRO-IC1": [
+      "NOTES-U1-S4-IC1-EX1",
+      "NOTES-U1-S4-IC1-YTI1"
+    ],
+    "1.4-INTRO-IC2": [
+      "NOTES-U1-S4-IC2-EX1",
+      "NOTES-U1-S4-IC2-YTI1"
+    ],
+    "1.4-INTRO-IC3": [
+      "NOTES-U1-S4-IC3-EX1",
+      "NOTES-U1-S4-IC3-YTI1"
+    ],
+    "1.4-INTRO-IC4": [
+      "NOTES-U1-S4-IC4-EX1",
+      "NOTES-U1-S4-IC4-YTI1"
+    ],
+    "1.5-INTRO-IC1": [
+      "NOTES-U1-S5-IC1-EX1",
+      "NOTES-U1-S5-IC1-YTI1"
+    ],
+    "1.5-INTRO-IC2": [
+      "NOTES-U1-S5-IC2-EX1",
+      "NOTES-U1-S5-IC2-YTI1"
+    ],
+    "1.5-INTRO-IC3": [
+      "NOTES-U1-S5-IC3-EX1",
+      "NOTES-U1-S5-IC3-YTI1"
+    ],
+    "1.5-INTRO-IC4": [
+      "NOTES-U1-S5-IC4-EX1",
+      "NOTES-U1-S5-IC4-YTI1"
+    ]
+  },
   "second_pair_reasons": {},
+  "wtc": {
+    "count": 5,
+    "ids": [
+      "WTC-1.1",
+      "WTC-1.2",
+      "WTC-1.3",
+      "WTC-1.4",
+      "WTC-1.5"
+    ],
+    "canonical_preserved": true,
+    "upstream_exit_overlap_review": [
+      {
+        "wtc_id": "WTC-1.1",
+        "exit_id": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.1547,
+        "same_equation_stimulus": [
+          "y=2x+1"
+        ],
+        "same_numeric_dataset": false,
+        "action": "UPSTREAM_REVIEW_ONLY_CANONICAL_WTC_PRESERVED"
+      },
+      {
+        "wtc_id": "WTC-1.1",
+        "exit_id": "EXIT-1.5-Q2-NEW",
+        "text_similarity": 0.1108,
+        "same_equation_stimulus": [
+          "y=2x+1"
+        ],
+        "same_numeric_dataset": false,
+        "action": "UPSTREAM_REVIEW_ONLY_CANONICAL_WTC_PRESERVED"
+      }
+    ]
+  },
   "exit_firewall": {
-    "checked_against_exit_record_count": 20,
+    "status": "PASS",
+    "generated_task_count": 45,
+    "exit_record_count": 20,
     "notes_exit_duplicate_count": 0,
-    "threshold_text_similarity": 0.62,
-    "details": [
+    "task_audits": [
+      {
+        "task_id": "NOTES-U1-S1-START-01",
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3922,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
+        "pass": true
+      },
       {
         "task_id": "NOTES-U1-S1-IC1-EX1",
-        "closest_exit": "EXIT-1.2-Q4-REASSESS",
-        "text_similarity": 0.301,
-        "generated_numbers": [
-          "-2",
-          "7",
-          "0",
-          "3",
-          "3",
-          "-3",
-          "-2",
-          "3",
-          "3"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.3601,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC1-YTI1",
-        "closest_exit": "EXIT-1.4-Q3-REASSESS",
-        "text_similarity": 0.4152,
-        "generated_numbers": [
-          "4",
-          "6",
-          "0",
-          "6",
-          "2",
-          "14",
-          "5",
-          "26",
-          "5"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3056,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC2-EX1",
-        "closest_exit": "EXIT-1.5-Q2-NEW",
-        "text_similarity": 0.5479,
-        "generated_numbers": [
-          "2",
-          "5",
-          "-1",
-          "0",
-          "2",
-          "4"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.4308,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC2-YTI1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.4733,
-        "generated_numbers": [
-          "-3",
-          "4",
-          "-1",
-          "2",
-          "1",
-          "0",
-          "3",
-          "-2"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3596,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC3-EX1",
-        "closest_exit": "EXIT-1.2-Q2-NEW",
-        "text_similarity": 0.3852,
-        "generated_numbers": [
-          "0",
-          "5",
-          "1",
-          "8",
-          "2",
-          "11",
-          "3",
-          "14",
-          "3",
-          "5"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.3554,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC3-YTI1",
         "closest_exit": "EXIT-1.2-Q4-REASSESS",
-        "text_similarity": 0.3598,
-        "generated_numbers": [
-          "-1",
-          "1",
-          "0",
-          "3",
-          "2",
-          "8",
-          "2",
-          "3"
-        ],
+        "text_similarity": 0.4099,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC4-EX1",
-        "closest_exit": "EXIT-1.2-Q2-NEW",
-        "text_similarity": 0.3948,
-        "generated_numbers": [
-          "3",
-          "1",
-          "0",
-          "1",
-          "2",
-          "7",
-          "4",
-          "13"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.4444,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S1-IC4-YTI1",
         "closest_exit": "EXIT-1.3-Q1-NEW",
-        "text_similarity": 0.3468,
-        "generated_numbers": [
-          "12",
-          "5",
-          "0",
-          "12",
-          "1",
-          "17",
-          "3",
-          "27",
-          "5",
-          "37"
-        ],
+        "text_similarity": 0.3711,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
+        "pass": true
+      },
+      {
+        "task_id": "NOTES-U1-S2-START-01",
+        "closest_exit": "EXIT-1.1-Q4-NEW",
+        "text_similarity": 0.3333,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC1-EX1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.3191,
-        "generated_numbers": [
-          "1",
-          "3",
-          "2",
-          "6",
-          "4",
-          "12"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2963,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC1-YTI1",
-        "closest_exit": "EXIT-1.4-Q3-REASSESS",
-        "text_similarity": 0.32,
-        "generated_numbers": [
-          "1.8",
-          "32"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.3168,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC2-EX1",
-        "closest_exit": "EXIT-1.2-Q4-REASSESS",
-        "text_similarity": 0.5472,
-        "generated_numbers": [
-          "4",
-          "1",
-          "2",
-          "6"
-        ],
+        "closest_exit": "EXIT-1.1-Q2-NEW",
+        "text_similarity": 0.4421,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC2-YTI1",
-        "closest_exit": "EXIT-1.5-Q2-NEW",
-        "text_similarity": 0.5,
-        "generated_numbers": [
-          "3",
-          "8",
-          "0",
-          "5",
-          "9"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3525,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC3-EX1",
         "closest_exit": "EXIT-1.5-Q1-NEW",
-        "text_similarity": 0.3973,
-        "generated_numbers": [
-          "-2",
-          "5",
-          "1",
-          "2",
-          "4",
-          "-1"
-        ],
+        "text_similarity": 0.4032,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC3-YTI1",
         "closest_exit": "EXIT-1.5-Q1-NEW",
-        "text_similarity": 0.5839,
-        "generated_numbers": [
-          "2",
-          "7",
-          "-3",
-          "0",
-          "2"
-        ],
+        "text_similarity": 0.4615,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC4-EX1",
-        "closest_exit": "EXIT-1.5-Q1-NEW",
-        "text_similarity": 0.4056,
-        "generated_numbers": [
-          "1",
-          "7",
-          "2",
-          "7",
-          "3",
-          "9",
-          "4",
-          "10"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2662,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S2-IC4-YTI1",
-        "closest_exit": "EXIT-1.1-Q4-NEW",
-        "text_similarity": 0.4694,
-        "generated_numbers": [
-          "-2",
-          "3",
-          "0",
-          "6",
-          "-2",
-          "5",
-          "4",
-          "9"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3891,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
+        "pass": true
+      },
+      {
+        "task_id": "NOTES-U1-S3-START-01",
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.3068,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC1-EX1",
         "closest_exit": "EXIT-1.3-Q1-NEW",
-        "text_similarity": 0.3908,
-        "generated_numbers": [
-          "0",
-          "-1",
-          "2",
-          "5",
-          "4",
-          "11",
-          "6",
-          "17"
-        ],
+        "text_similarity": 0.3909,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC1-YTI1",
-        "closest_exit": "EXIT-1.4-Q4-REASSESS",
-        "text_similarity": 0.3374,
-        "generated_numbers": [
-          "1",
-          "2",
-          "2",
-          "5",
-          "3",
-          "10",
-          "4",
-          "17"
-        ],
+        "closest_exit": "EXIT-1.1-Q4-NEW",
+        "text_similarity": 0.3043,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC2-EX1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.2379,
-        "generated_numbers": [
-          "-2",
-          "-3",
-          "4",
-          "1",
-          "4",
-          "2",
-          "-1",
-          "-1",
-          "1",
-          "1",
-          "2",
-          "1",
-          "0",
-          "1",
-          "0",
-          "1",
-          "0",
-          "1",
-          "3",
-          "1",
-          "2",
-          "1",
-          "2",
-          "5",
-          "4",
-          "4",
-          "2"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.288,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC2-YTI1",
         "closest_exit": "EXIT-1.2-Q4-REASSESS",
-        "text_similarity": 0.3077,
-        "generated_numbers": [
-          "5",
-          "2",
-          "1",
-          "2",
-          "3",
-          "2"
-        ],
+        "text_similarity": 0.3036,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC3-EX1",
-        "closest_exit": "EXIT-1.2-Q2-NEW",
-        "text_similarity": 0.3801,
-        "generated_numbers": [
-          "0",
-          "6",
-          "1",
-          "12",
-          "2",
-          "24",
-          "3",
-          "48"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2961,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC3-YTI1",
-        "closest_exit": "EXIT-1.3-Q2-NEW",
-        "text_similarity": 0.2803,
-        "generated_numbers": [
-          "24",
-          "1.5"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3186,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC4-EX1",
-        "closest_exit": "EXIT-1.2-Q2-NEW",
-        "text_similarity": 0.3734,
-        "generated_numbers": [
-          "0",
-          "2",
-          "1",
-          "6",
-          "2",
-          "18",
-          "3",
-          "54"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.3258,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S3-IC4-YTI1",
-        "closest_exit": "EXIT-1.2-Q2-NEW",
-        "text_similarity": 0.3562,
-        "generated_numbers": [
-          "-2",
-          "1",
-          "-1",
-          "0",
-          "0",
-          "1",
-          "1",
-          "4",
-          "2",
-          "9"
-        ],
+        "closest_exit": "EXIT-1.1-Q2-NEW",
+        "text_similarity": 0.3971,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
+        "pass": true
+      },
+      {
+        "task_id": "NOTES-U1-S4-START-01",
+        "closest_exit": "EXIT-1.1-Q4-NEW",
+        "text_similarity": 0.3548,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC1-EX1",
-        "closest_exit": "EXIT-1.1-Q4-NEW",
-        "text_similarity": 0.4271,
-        "generated_numbers": [
-          "7",
-          "2",
-          "-3",
-          "5",
-          "7",
-          "2"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.3522,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC1-YTI1",
-        "closest_exit": "EXIT-1.1-Q4-NEW",
-        "text_similarity": 0.3804,
-        "generated_numbers": [
-          "-4",
-          "9",
-          "2"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2774,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC2-EX1",
-        "closest_exit": "EXIT-1.5-Q2-NEW",
-        "text_similarity": 0.3696,
-        "generated_numbers": [
-          "-2",
-          "5",
-          "2",
-          "2",
-          "-3"
-        ],
+        "closest_exit": "EXIT-1.3-Q3-REASSESS",
+        "text_similarity": 0.2643,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC2-YTI1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.459,
-        "generated_numbers": [
-          "4",
-          "2",
-          "6",
-          "3",
-          "-2"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3067,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC3-EX1",
-        "closest_exit": "EXIT-1.2-Q1-NEW",
-        "text_similarity": 0.3333,
-        "generated_numbers": [
-          "5",
-          "3",
-          "-2",
-          "8"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.3175,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC3-YTI1",
-        "closest_exit": "EXIT-1.3-Q3-REASSESS",
-        "text_similarity": 0.3509,
-        "generated_numbers": [
-          "4",
-          "7",
-          "3",
-          "9",
-          "2",
-          "5"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.2791,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC4-EX1",
         "closest_exit": "EXIT-1.1-Q2-NEW",
-        "text_similarity": 0.463,
-        "generated_numbers": [
-          "-3",
-          "2",
-          "5"
-        ],
+        "text_similarity": 0.3922,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S4-IC4-YTI1",
-        "closest_exit": "EXIT-1.1-Q3-NEW",
-        "text_similarity": 0.3939,
-        "generated_numbers": [
-          "4",
-          "3",
-          "2",
-          "-5"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.25,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
+        "pass": true
+      },
+      {
+        "task_id": "NOTES-U1-S5-START-01",
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.2418,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC1-EX1",
-        "closest_exit": "EXIT-1.3-Q1-NEW",
-        "text_similarity": 0.3415,
-        "generated_numbers": [
-          "18",
-          "4",
-          "74"
-        ],
+        "closest_exit": "EXIT-1.5-Q1-NEW",
+        "text_similarity": 0.3595,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC1-YTI1",
-        "closest_exit": "EXIT-1.3-Q2-NEW",
-        "text_similarity": 0.402,
-        "generated_numbers": [
-          "46",
-          "15"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.2638,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC2-EX1",
-        "closest_exit": "EXIT-1.3-Q2-NEW",
-        "text_similarity": 0.3613,
-        "generated_numbers": [
-          "7",
-          "2",
-          "23"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2521,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC2-YTI1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.3897,
-        "generated_numbers": [
-          "5",
-          "26"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2725,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC3-EX1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.3106,
-        "generated_numbers": [
-          "9",
-          "31",
-          "5",
-          "9",
-          "31"
-        ],
+        "closest_exit": "EXIT-1.3-Q1-NEW",
+        "text_similarity": 0.2959,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC3-YTI1",
-        "closest_exit": "EXIT-1.1-Q1-NEW",
-        "text_similarity": 0.3089,
-        "generated_numbers": [
-          "4",
-          "3",
-          "25",
-          "4",
-          "3",
-          "25"
-        ],
+        "closest_exit": "EXIT-1.1-Q4-NEW",
+        "text_similarity": 0.2648,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC4-EX1",
-        "closest_exit": "EXIT-1.3-Q1-NEW",
-        "text_similarity": 0.37,
-        "generated_numbers": [
-          "6",
-          "3",
-          "27",
-          "6",
-          "3",
-          "27"
-        ],
+        "closest_exit": "EXIT-1.2-Q4-REASSESS",
+        "text_similarity": 0.3711,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       },
       {
         "task_id": "NOTES-U1-S5-IC4-YTI1",
-        "closest_exit": "EXIT-1.3-Q2-NEW",
-        "text_similarity": 0.3934,
-        "generated_numbers": [
-          "12",
-          "40",
-          "12",
-          "4",
-          "40",
-          "8"
-        ],
+        "closest_exit": "EXIT-1.1-Q4-NEW",
+        "text_similarity": 0.3455,
+        "same_numeric_dataset": false,
+        "same_equation_stimulus": false,
         "pass": true
       }
     ],
-    "representation_asset_collision_count": 0
+    "canonical_wtc_review_count": 2
   },
   "source_map_copy": {
     "status": "UNCHANGED",
@@ -1324,217 +1307,231 @@
     "map_manifest_unchanged": true
   },
   "qa": {
-    "status": "PASS",
+    "status": "PASS_WITH_RENDERER_NOTE",
     "checks": {
       "1.1_student": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true
       },
       "1.1_teacher": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true,
+        "teacher_support_for_wtc": true,
+        "teacher_support_for_all_tasks": true
       },
       "1.2_student": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true
       },
       "1.2_teacher": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true,
+        "teacher_support_for_wtc": true,
+        "teacher_support_for_all_tasks": true
       },
       "1.3_student": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true
       },
       "1.3_teacher": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true,
+        "teacher_support_for_wtc": true,
+        "teacher_support_for_all_tasks": true
       },
       "1.4_student": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true
       },
       "1.4_teacher": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true,
+        "teacher_support_for_wtc": true,
+        "teacher_support_for_all_tasks": true
       },
       "1.5_student": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
+        "no_summative_refs": true,
+        "semantic_tables": true
       },
       "1.5_teacher": {
         "base_css_exact": true,
-        "notes_css_exact": true,
-        "stylesheet_order": true,
-        "no_inline_style_tag": true,
+        "no_style_tag": true,
+        "no_inline_style": true,
         "body_contract": true,
+        "exact_lt": true,
+        "exact_icans": true,
+        "why_one_sentence": true,
+        "starter_once": true,
+        "wtc_once": true,
         "task_count_8": true,
-        "teacher_support_count": true,
+        "visual_math_notes_4": true,
         "summary_present": true,
+        "common_mistakes_final": true,
         "no_exit_check": true,
-        "no_secure_summative_text": true,
-        "no_figcaption": true,
-        "exact_i_can_headings": true
-      },
-      "generated_task_ids_unique": {
-        "pass": true,
-        "count": 40
-      },
-      "notes_exit_duplicate_count": {
-        "pass": true,
-        "count": 0
-      },
-      "source_map_hashes": {
-        "pass": true,
-        "files_checked": 8
-      },
-      "image_manifest": {
-        "pass": true,
-        "image_count": 2
-      },
-      "render_qa": {
-        "pass": true,
-        "files_rendered": 10,
-        "horizontal_overflow_count": 0,
-        "broken_image_count": 0,
-        "raw_tex_remaining_count": 0,
-        "mathjax_container_count": 248
+        "no_summative_refs": true,
+        "semantic_tables": true,
+        "teacher_support_for_wtc": true,
+        "teacher_support_for_all_tasks": true
       }
     },
-    "warnings": []
-  },
-  "render_qa": {
-    "status": "PASS",
-    "method": "local Chromium render with exact pinned base.css + exact pinned notes_alg.css + local MathJax bundle; all external network requests suppressed",
-    "files_rendered": 10,
-    "horizontal_overflow_count": 0,
-    "broken_image_count": 0,
-    "raw_tex_remaining_count": 0,
-    "mathjax_container_count": 248,
-    "task_count_per_file": [
-      8,
-      8,
-      8,
-      8,
-      8,
-      8,
-      8,
-      8,
-      8,
-      8
+    "warnings": [
+      "Canonical WTC/Exit stimulus overlap flagged for upstream review; canonical WTC preserved unchanged.",
+      "Headless Chromium is non-terminating in this container; render QA used a closed-source local WeasyPrint fallback plus independent local MathJax parsing. Final HTML/CSS contract was not modified."
     ],
-    "i_can_heading_count_per_file": [
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4
-    ],
-    "visual_spot_checks": [
-      "u1_1_notes/u1_1_notes.html",
-      "u1_3_notes/u1_3_notes.html",
-      "u1_4_notes/u1_4_notes_teacher.html"
-    ],
-    "exact_css": {
-      "base_css_git_blob": "e19415ff1bed602106dc85d61426914f898c77d3",
-      "base_css_sha256": "f6a58ca83bbf97f33026179320d3c6aeda67e72f30a8f6bedfb69268b8a361dd",
-      "notes_alg_css_git_blob": "5181bb8543cbb462ba870f87f82bbdfd2b0ddf1c",
-      "notes_alg_css_sha256": "7acfe9e2d295fd3681edb77f430f179c3813f3d9c3377ab4aecde76520d057be"
+    "render_qa": {
+      "status": "PASS_WITH_RENDERER_NOTE",
+      "files_rendered": 10,
+      "engine": "WeasyPrint 68 fallback + local MathJax parser",
+      "reason_for_fallback": "Container Chromium 144 headless did not terminate even on a minimal page in this environment; no public browser/network fallback was used.",
+      "css_identity_used": {
+        "base_css_git_blob": "e19415ff1bed602106dc85d61426914f898c77d3",
+        "base_css_sha256": "f6a58ca83bbf97f33026179320d3c6aeda67e72f30a8f6bedfb69268b8a361dd",
+        "notes_alg_css_git_blob": "b2b08130bd069a7b61bc9a6610146693329c4377",
+        "notes_alg_css_sha256": "4e8538e70f00c70c7e9ed9739cc3755cbd6fa8599bf13034b406327ed358d06f"
+      },
+      "weasy_internal_compatibility_overrides": [
+        "width:max-content -> width:auto for QA renderer only",
+        "width:calc(100% - 22px) -> width:95% for QA renderer only"
+      ],
+      "final_artifact_css_modified": false,
+      "local_image_reference_count": 6,
+      "broken_image_count": 0,
+      "mathjax_expressions_parsed": 154,
+      "mathjax_parse_failures": 0,
+      "visual_spot_checks": [
+        "1.1 student title/starter",
+        "1.1 student canonical WTC + graph response surface",
+        "1.3 student visual-first Math Notes + Example",
+        "1.4 teacher Math Notes + EX/YTI supports"
+      ],
+      "visual_spot_check_result": "PASS; no clipping/overlap observed in reviewed render pages",
+      "note": "WeasyPrint does not execute MathJax JavaScript, so TeX appeared raw in QA PDFs; final HTML retains the normal MathJax runtime, and all 154 TeX expressions parsed successfully with the local project-compatible MathJax package."
     }
   }
 }
