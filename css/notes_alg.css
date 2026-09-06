@@ -1,0 +1,592 @@
+/* ============================================================
+   notes_alg.css — Algebra 1 Notes textbook-style PILOT v0.1
+   Load AFTER ../../css/base.css
+   Visual inspiration: the project's AP Calculus textbook language:
+   paper page, serif reading, sans labels, red section banner,
+   blue examples/definitions, cyan review accents, cream references.
+
+   This file is the visual authority for Algebra Notes pilot pages.
+   Do not duplicate these styles inline in section HTML.
+   ============================================================ */
+
+:root{
+  --alg-red:#b3131b;
+  --alg-red-deep:#8e1016;
+  --alg-blue:#0b4f8a;
+  --alg-cyan:#10a8d6;
+  --alg-ink:#222;
+  --alg-muted:#5d5d5d;
+  --alg-paper:#fff;
+  --alg-cream:#f8efd9;
+  --alg-cream-2:#fbf6e9;
+  --alg-light-blue:#eaf2fa;
+  --alg-page-bg:#efefec;
+  --alg-line:#aeb7bf;
+  --alg-soft-line:#d8dde2;
+  --alg-workspace:1.8in;
+  --alg-graph-max-height:3.35in;
+  --content-media-max-height:3.35in;
+}
+
+/* ---------- PAGE ---------- */
+body.notes-alg{
+  margin:0;
+  background:var(--alg-page-bg);
+  color:var(--alg-ink);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.48;
+  font-size:10.4pt;
+}
+body.notes-alg .notes-page{
+  max-width:980px;
+  min-height:100vh;
+  margin:0 auto;
+  padding:28px 34px 42px;
+  background:var(--alg-paper);
+  box-shadow:0 0 28px rgba(0,0,0,.10);
+}
+body.notes-alg p,
+body.notes-alg li{
+  font-family:Georgia,"Times New Roman",serif;
+}
+body.notes-alg h1,
+body.notes-alg h2,
+body.notes-alg h3,
+body.notes-alg h4,
+body.notes-alg th,
+body.notes-alg .title-kicker,
+body.notes-alg .title-sub,
+body.notes-alg .annotation-box,
+body.notes-alg .teacher-support{
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/* ---------- TEXTBOOK SECTION BANNER ---------- */
+body.notes-alg .notes-title{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  grid-template-areas:
+    "kicker kicker"
+    "section title"
+    "quote quote";
+  align-items:stretch;
+  margin:0 0 22px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+body.notes-alg .notes-title .title-kicker{
+  grid-area:kicker;
+  margin:0 0 8px;
+  color:var(--alg-muted);
+  font-size:8pt;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+body.notes-alg .notes-title .title-sub{
+  grid-area:section;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  margin:0;
+  padding:9px 13px 9px 0;
+  color:var(--alg-red);
+  font-size:18pt;
+  line-height:1;
+  font-weight:800;
+}
+body.notes-alg .notes-title .title-main{
+  grid-area:title;
+  display:flex;
+  align-items:center;
+  margin:0;
+  padding:9px 14px 10px;
+  background:var(--alg-red);
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22pt;
+  line-height:1.08;
+  font-weight:400;
+}
+body.notes-alg .notes-title .title-quote{
+  grid-area:quote;
+  margin:8px 0 0 150px;
+  color:var(--alg-muted);
+  font-size:9.5pt;
+  font-style:italic;
+  line-height:1.35;
+}
+
+/* ---------- TARGET / WHAT YOU'LL LEARN ---------- */
+body.notes-alg .objectives{
+  margin:0 0 20px 150px;
+  padding:10px 14px 11px;
+  border-top:1px solid #888;
+  border-bottom:1px solid #888;
+  background:#fff;
+}
+body.notes-alg .objectives .h-target{
+  margin:0 0 6px;
+  padding:0;
+  border:0;
+  color:var(--alg-red);
+  font-size:10pt;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+body.notes-alg .objectives p{
+  margin:4px 0 7px;
+}
+body.notes-alg .objectives ul{
+  margin:5px 0 0 18px;
+}
+body.notes-alg .objectives li{
+  margin:3px 0;
+}
+
+/* ---------- OPTIONAL OPENING ROUTINES ---------- */
+body.notes-alg .vocab-preview-section,
+body.notes-alg .notes-wtc,
+body.notes-alg .skim-section-task{
+  margin:18px 0 22px;
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .h-vocab,
+body.notes-alg .h-preview,
+body.notes-alg .lets-get-started-heading{
+  margin:0 0 8px;
+  padding:0 0 5px;
+  border:0;
+  border-bottom:3px solid var(--alg-red);
+  color:var(--alg-red);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15pt;
+  font-weight:700;
+}
+body.notes-alg .vocab-list{
+  margin:7px 0 10px;
+  color:var(--alg-blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9.3pt;
+  font-weight:700;
+  line-height:1.5;
+}
+body.notes-alg .vocab-sort-task{
+  padding:10px 12px 12px;
+  border:1px solid #cbbf9f;
+  background:var(--alg-cream-2);
+}
+body.notes-alg .vocab-sort-directions,
+body.notes-alg .skim-section-directions{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.8pt;
+  color:var(--alg-muted);
+}
+body.notes-alg .vocab-sort-table,
+body.notes-alg .skim-section-table{
+  width:100%;
+  margin:9px 0 0;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+body.notes-alg .vocab-sort-table th{
+  width:33.333%;
+  background:var(--alg-cream);
+  color:var(--alg-red-deep);
+  text-align:left;
+  font-size:8.7pt;
+}
+body.notes-alg .vocab-sort-table .vocab-sort-space td{
+  height:1.25in;
+  background:#fff;
+}
+body.notes-alg .skim-section-table th{
+  width:18%;
+  background:var(--alg-light-blue);
+  color:var(--alg-blue);
+  font-size:8.7pt;
+}
+body.notes-alg .skim-section-table td{
+  height:1.15in;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fff 0,
+      #fff .34in,
+      #edf0f4 .35in,
+      #edf0f4 .355in
+    );
+}
+
+/* ---------- WTC ---------- */
+body.notes-alg .wtc-instructions{
+  margin:8px 0 12px;
+  padding:9px 12px;
+  border-top:1px solid #b89d70;
+  border-bottom:1px solid #b89d70;
+  background:var(--alg-cream-2);
+  color:var(--alg-ink);
+}
+body.notes-alg .wtc-do-not-solve{
+  display:block;
+  color:var(--alg-red-deep);
+  font-size:9pt;
+  font-weight:800;
+  letter-spacing:.04em;
+  margin-bottom:3px;
+}
+
+/* ---------- TALK TO THE TEXT / CLOSE READING ---------- */
+body.notes-alg .close-reading-instructions{
+  margin:14px 0 10px;
+  padding:8px 11px;
+  border-top:1px solid #8ba8c3;
+  border-bottom:1px solid #8ba8c3;
+  background:var(--alg-light-blue);
+  color:#263238;
+}
+body.notes-alg .close-reading-title{
+  display:block;
+  color:var(--alg-blue);
+  font-size:8.8pt;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:2px;
+}
+body.notes-alg .close-reading-instructions p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.7pt;
+}
+
+/* ---------- I-CAN READING COMPARTMENTS ---------- */
+body.notes-alg .notes-ican-start{
+  margin:22px 0 26px;
+}
+body.notes-alg .h-intro.notes-ican-heading{
+  margin:0 0 10px;
+  padding:5px 0 6px 11px;
+  border:0;
+  border-left:5px solid var(--alg-red);
+  color:var(--alg-ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12.2pt;
+  line-height:1.25;
+  font-weight:800;
+  background:transparent;
+  break-after:avoid-page;
+  page-break-after:avoid;
+}
+body.notes-alg .notes-ican-start > p,
+body.notes-alg .reading-box p,
+body.notes-alg .notes-reading p{
+  margin:.5rem 0;
+  font-size:10.4pt;
+}
+
+/* ---------- TEXTBOOK-LIKE REFERENCE / DEFINITION ---------- */
+body.notes-alg .math-notes,
+body.notes-alg .definition-box,
+body.notes-alg .formula-relationship{
+  margin:14px 0 17px;
+  border:2px solid var(--alg-blue);
+  background:var(--alg-cream-2);
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .math-notes-header{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  padding:7px 10px 0;
+  border:0;
+  background:transparent;
+}
+body.notes-alg .math-notes-label{
+  color:var(--alg-ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.5pt;
+  font-weight:800;
+  text-transform:uppercase;
+}
+body.notes-alg .math-notes-title{
+  color:var(--alg-blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:10.3pt;
+  font-weight:800;
+}
+body.notes-alg .math-notes-body{
+  padding:5px 10px 10px;
+}
+body.notes-alg .formula-display{
+  text-align:center;
+  font-size:12pt;
+}
+
+/* ---------- EXAMPLE / YOU TRY IT ---------- */
+body.notes-alg .notes-task{
+  margin:16px 0 20px;
+  padding:0 0 0 12px;
+  border-left:2px solid var(--alg-blue);
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .notes-task-content{
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .h-example,
+body.notes-alg .h-yti{
+  margin:0 0 7px;
+  padding:0;
+  border:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:10pt;
+  line-height:1.25;
+  font-weight:800;
+  break-after:avoid-page;
+  page-break-after:avoid;
+}
+body.notes-alg .h-example{
+  color:var(--alg-blue);
+}
+body.notes-alg .h-yti{
+  color:var(--alg-red);
+}
+body.notes-alg .h-example::first-letter,
+body.notes-alg .h-yti::first-letter{
+  font-weight:900;
+}
+body.notes-alg .notes-task .representation,
+body.notes-alg .notes-task figure,
+body.notes-alg .notes-task table{
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .notes-ws,
+body.notes-alg .notes-task-workspace{
+  width:100%;
+  min-height:var(--alg-workspace);
+  margin:9px 0 0;
+  border:0;
+  border-top:1px solid #cfd5db;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fff 0,
+      #fff .36in,
+      #edf0f4 .37in,
+      #edf0f4 .375in
+    );
+}
+
+/* ---------- STOP & DISCUSS / QUICK REVIEW LANGUAGE ---------- */
+body.notes-alg .notes-discuss-task{
+  margin:16px 0 20px;
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg .stop-discuss{
+  margin:0;
+  padding:0;
+  border:1px solid #86c7da;
+  background:#fff;
+}
+body.notes-alg .stop-discuss > strong{
+  display:block;
+  padding:6px 9px;
+  background:var(--alg-cyan);
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:11.5pt;
+  font-weight:700;
+}
+body.notes-alg .stop-discuss ol{
+  margin:9px 10px 10px 30px;
+}
+body.notes-alg .stop-discuss li{
+  margin:5px 0;
+}
+
+/* ---------- FIGURES / GRAPHS ---------- */
+body.notes-alg figure,
+body.notes-alg .notes-graph,
+body.notes-alg .representation{
+  text-align:center;
+  break-inside:avoid-page;
+  page-break-inside:avoid;
+}
+body.notes-alg figure img,
+body.notes-alg .notes-graph img,
+body.notes-alg .representation img,
+body.notes-alg .graph-img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  max-height:var(--alg-graph-max-height) !important;
+  height:auto;
+  margin:8px auto;
+  object-fit:contain;
+}
+body.notes-alg figcaption{
+  max-width:560px;
+  margin:4px auto 0;
+  color:var(--alg-muted);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8.2pt;
+  text-align:left;
+}
+body.notes-alg .figure-label{
+  color:var(--alg-cyan);
+  font-weight:800;
+}
+
+/* ---------- TABLES ---------- */
+body.notes-alg table{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9pt;
+}
+body.notes-alg table.values,
+body.notes-alg table.compact-table{
+  width:max-content;
+  max-width:100%;
+  margin:10px auto 13px;
+}
+body.notes-alg table.values th,
+body.notes-alg table.compact-table th{
+  background:var(--alg-light-blue);
+  color:var(--alg-blue);
+}
+body.notes-alg table.values td,
+body.notes-alg table.values th,
+body.notes-alg table.compact-table td,
+body.notes-alg table.compact-table th{
+  padding:6px 12px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+/* ---------- SUMMARY / CLOSE ---------- */
+body.notes-alg .section-summary,
+body.notes-alg .notes-summary{
+  margin:22px 0 0;
+  padding:10px 13px;
+  border:1px solid #9db7d3;
+  background:var(--alg-light-blue);
+}
+body.notes-alg .h-summary{
+  margin:0 0 6px;
+  padding:0;
+  border:0;
+  color:var(--alg-blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12pt;
+}
+body.notes-alg .summary-list{
+  margin:5px 0 0 20px;
+}
+body.notes-alg .h-mistakes{
+  margin:18px 0 8px;
+  padding:0 0 4px;
+  border:0;
+  border-bottom:2px solid var(--alg-red);
+  color:var(--alg-red);
+  font-size:12pt;
+}
+body.notes-alg .mistake-table{
+  margin-top:7px;
+}
+
+/* ---------- TEACHER COPY ---------- */
+body.notes-alg.teacher-copy .notes-ws,
+body.notes-alg.teacher-copy .notes-task-workspace{
+  min-height:0;
+  height:auto;
+  background:none;
+  border-top:1px dashed #cfd5db;
+  margin-top:6px;
+}
+body.notes-alg .teacher-support{
+  margin:9px 0 15px;
+  padding:9px 11px;
+  border-left:4px solid #b42318;
+  background:#fff7f6;
+  color:#a01816;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9pt;
+  font-weight:700;
+}
+body.notes-alg .teacher-support p,
+body.notes-alg .teacher-support li{
+  color:#a01816;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9pt;
+}
+body.notes-alg .teacher-support ul,
+body.notes-alg .teacher-support ol{
+  margin:5px 0 6px 22px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:760px){
+  body.notes-alg .notes-page{
+    padding:18px 16px 30px;
+  }
+  body.notes-alg .notes-title{
+    grid-template-columns:72px minmax(0,1fr);
+  }
+  body.notes-alg .notes-title .title-sub{
+    font-size:13pt;
+    padding-right:8px;
+  }
+  body.notes-alg .notes-title .title-main{
+    font-size:17pt;
+  }
+  body.notes-alg .notes-title .title-quote,
+  body.notes-alg .objectives{
+    margin-left:0;
+  }
+}
+
+/* ---------- PRINT / NOTABILITY ---------- */
+@media print{
+  body.notes-alg{
+    background:#fff;
+    font-size:10pt;
+  }
+  body.notes-alg .notes-page{
+    max-width:none;
+    min-height:0;
+    margin:0;
+    padding:0;
+    box-shadow:none;
+  }
+  body.notes-alg .notes-title,
+  body.notes-alg .objectives,
+  body.notes-alg .vocab-preview-section,
+  body.notes-alg .notes-wtc,
+  body.notes-alg .skim-section-task,
+  body.notes-alg .close-reading-instructions,
+  body.notes-alg .math-notes,
+  body.notes-alg .notes-discuss-task,
+  body.notes-alg .notes-task,
+  body.notes-alg .notes-task-content,
+  body.notes-alg figure,
+  body.notes-alg table.values,
+  body.notes-alg table.compact-table{
+    break-inside:avoid-page;
+    page-break-inside:avoid;
+  }
+  body.notes-alg .notes-ws,
+  body.notes-alg .notes-task-workspace{
+    min-height:var(--alg-workspace);
+  }
+  body.notes-alg.teacher-copy .notes-ws,
+  body.notes-alg.teacher-copy .notes-task-workspace{
+    min-height:0;
+  }
+}
