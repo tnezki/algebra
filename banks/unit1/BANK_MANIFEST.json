@@ -1,5 +1,5 @@
 {
-  "schema": "algebra-complete-bank-manifest/2.0",
+  "schema": "algebra-complete-bank-manifest/2.1",
   "status": "COMPLETE",
   "course": "Algebra 1",
   "unit": 1,
@@ -8,101 +8,91 @@
   "pending": [],
   "qa_status": "PASS",
   "accepted_map_fingerprint": "38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753",
-  "accepted_map_root": "banks/unit1_bank_map",
+  "accepted_map_root": "source_map/",
   "framework_version": "v7.2",
   "bank_profile_version": "v2.3",
   "question_structure_version": "v1.2",
   "pinned_snapshot": {
-    "system": "tnezki/memories@aff5ab32f6d965cb8bd8047f13f3916d573f2430",
-    "course_repository": "tnezki/algebra@1061a80ed428d09ff0a2a673ab37600f37c18df5"
+    "system": "tnezki/memories@2d1925ec2ebc544de668ba48e48d52c90c7d3004",
+    "course_repository": "tnezki/algebra@ba73adf4f718902fb81c56169d2f793627bbfa42"
   },
-  "canonical_destinations": {
-    "Exit": {
-      "path": "exit.json",
-      "count": 20
-    },
-    "Summative": {
-      "path": "summative_secure.json",
-      "count": 48,
-      "forms": [
-        "V1",
-        "V2",
-        "V3",
-        "V4",
-        "V5",
-        "V6"
-      ],
-      "secure": true
-    },
-    "Practice 1": {
-      "path": "practice1.json",
-      "count": 120,
-      "per_section": 24,
-      "stage_counts": {
-        "Intro": 8,
-        "Review": 8,
-        "Mastery": 8
-      }
-    },
-    "WTC": {
-      "path": "wtc.json",
-      "count": 5
-    },
-    "Seeds": {
-      "path": "seeds.json",
-      "count": 6
-    }
-  },
-  "support_files": {
-    "item_index": "ITEM_INDEX.json",
-    "map_fidelity": "MAP_FIDELITY_REPORT.json",
-    "render_qa": "RENDER_QA_REPORT.json",
-    "viewer": "unit1.html",
-    "inspection": "inspection.html",
-    "provenance": "PROVENANCE.json",
-    "build_report": "BUILD_REPORT.txt",
-    "graph_generator": "generate_graphs.py"
-  },
+  "compatibility_status": "COMPATIBLE_DRIFT",
+  "canonical_destinations": [
+    "exit.json",
+    "summative_secure.json",
+    "practice1.json",
+    "wtc.json",
+    "seeds.json"
+  ],
+  "support_files": [
+    "ITEM_INDEX.json",
+    "PROVENANCE.json",
+    "BUILD_REPORT.txt",
+    "MAP_FIDELITY_REPORT.json",
+    "RENDER_QA_REPORT.json",
+    "inspection.html",
+    "unit1.html",
+    "generate_graphs.py",
+    "GRAPH_GENERATION_LOG.txt",
+    "source_map/"
+  ],
   "counts": {
-    "question_task_records": 193,
-    "seed_records": 6,
-    "canonical_records_total": 199,
-    "generated_graph_assets": 74
+    "question_records": 193,
+    "total_canonical_records": 199,
+    "Exit": 20,
+    "Summative": 48,
+    "Practice1": 120,
+    "WTC": 5,
+    "Seeds": 6,
+    "Summative_forms": 6,
+    "graphs": 74
   },
   "security": {
-    "public_viewer_summative": "metadata_only",
-    "secure_summative_source": "summative_secure.json"
+    "summative": "secure",
+    "public_teacher_viewer": "safe blueprint/metadata lineage only; no secure prompt, key, or solution"
+  },
+  "registered_graph_tool": {
+    "path": "Tools/~graph_tool_v12.py",
+    "sha256": "eaf5ab36936697f9f49c255c0f2dfcb64c94858c1e4769dfd2431e042e4453b5",
+    "git_blob": "dd7eacf178262ab5608851f8a69524b216933ed0",
+    "graph_tool_expected_count": 74,
+    "graph_tool_executed_count": 74
   },
   "files": [
     {
       "path": "BUILD_REPORT.txt",
-      "sha256": "507cebdd2be66ec355f8c5c4af3b4c21e7d2d3eb6050b73209b057730c65e0f6",
-      "bytes": 845
+      "sha256": "0419eabb0b69b5f444d00a09a9bb03bffc496e6d23cfd0c383bb7a9533f88ba2",
+      "bytes": 1841
+    },
+    {
+      "path": "GRAPH_GENERATION_LOG.txt",
+      "sha256": "e784a1936fed4a3a287855d61462ec60ebb338a44acd39cd79c5062945b5a779",
+      "bytes": 60561
     },
     {
       "path": "ITEM_INDEX.json",
-      "sha256": "cb0436ceb5663598b9dad4ff60c000bcdaf440655ef470eb85f2c233d2aba3f9",
-      "bytes": 56816
+      "sha256": "073821cb81f7407fe788fbdbeaab81183b9c904e32bb8ee5aad2bfb8e50714d3",
+      "bytes": 57505
     },
     {
       "path": "MAP_FIDELITY_REPORT.json",
-      "sha256": "8dcf2054fd60b70d6bcaa53c70f180a2a1c425148cd99d5d00f13ad51d096a2e",
-      "bytes": 9577
+      "sha256": "05d88b630944d02f6b9b6da61d68ffa4ca81abee195cd81fa9793aa010f4dc52",
+      "bytes": 9578
     },
     {
       "path": "PROVENANCE.json",
-      "sha256": "e6cee19073f2969a5d4a6b39cb0f599d31b8fcf6fd17c01a4215efb7ef5372de",
-      "bytes": 909
+      "sha256": "954095ca50a88654fec183bd0b1c1235af385eda9e9e662530461ad4f3b56c42",
+      "bytes": 1483
     },
     {
       "path": "RENDER_QA_REPORT.json",
-      "sha256": "f2c86700e97e90608346eac491dd51d87f5915b5064488808851e393a3a76329",
-      "bytes": 15004
+      "sha256": "7322beaa3a02d22c8204969a90f7fe1e0cee7e2071b990f203c55c377031b7a8",
+      "bytes": 1359
     },
     {
       "path": "exit.json",
-      "sha256": "3b72c73ccb10484a05dc2537bf697dd662132a2d11093093cc215feadf3a460a",
-      "bytes": 87311
+      "sha256": "b5318026a507321dc150cdf08678c798fd8be2d888cbf3094fe0fca065f0b255",
+      "bytes": 92243
     },
     {
       "path": "figures/exit-1_1-q1-new_blank.png",
@@ -481,13 +471,13 @@
     },
     {
       "path": "inspection.html",
-      "sha256": "7d323863b0542ca20cb453ef272edc966e5b8185fd569690ca17f58f39a83339",
-      "bytes": 132876
+      "sha256": "cf3e5fbe3ee1961f853b3e8dbff621f71a642daf51ffe02386fe70ecfe7ba731",
+      "bytes": 942238
     },
     {
       "path": "practice1.json",
-      "sha256": "20b7889a548a7d0cffc394220e388a4eab2571af0146204ae7e8aef802c10781",
-      "bytes": 492653
+      "sha256": "33f34dc8ff3f586d492d55bf4ec6954a57f754772603b0f8a6cb62ba116ae446",
+      "bytes": 510868
     },
     {
       "path": "seeds.json",
@@ -495,19 +485,64 @@
       "bytes": 5041
     },
     {
+      "path": "source_map/MAP_MANIFEST.json",
+      "sha256": "a6c17c164b98587ff6e1adca0b12a38b827c97d6db61ea18557f83e205907bbd",
+      "bytes": 2957
+    },
+    {
+      "path": "source_map/MAP_REPORT.txt",
+      "sha256": "988d000b0bb8e6b8edc21c2d3389f6e58937df6831ae9c6a89d3c11ee9798e61",
+      "bytes": 5713
+    },
+    {
+      "path": "source_map/bank_inventory_map.json",
+      "sha256": "8aab1611ebd42a0d0aabe10a7e560f5e9342bc9a423bbcb221fd8f8954d2ce60",
+      "bytes": 2455
+    },
+    {
+      "path": "source_map/exit_map.json",
+      "sha256": "cd7641da39ca881fc9b2a218eee920c93868f515aa4cb7474afcae6988c58b86",
+      "bytes": 64961
+    },
+    {
+      "path": "source_map/practice1_map.json",
+      "sha256": "d4d4a7d606aa1b20eb705c13fe682421b409ffd6e9c6408bcbc5cf6efb1b1b71",
+      "bytes": 368722
+    },
+    {
+      "path": "source_map/seed_map.json",
+      "sha256": "43b1d394c379a43cde4ffab233624c02380b2868a724dc609f3377598eb1739d",
+      "bytes": 3705
+    },
+    {
+      "path": "source_map/summative_map.json",
+      "sha256": "4f7ddf2074cf8fd682fd9a20505d5befd14007249d989e77fd8fefdad10e400b",
+      "bytes": 188863
+    },
+    {
+      "path": "source_map/unit1_question_design_map.json",
+      "sha256": "c8fa3a5194678ab68f4989ddd7a772a3182019daf713601a18a92bcb81ddc802",
+      "bytes": 731406
+    },
+    {
+      "path": "source_map/wtc_map.json",
+      "sha256": "ff1d81f2877a790bef18efd48e1cb1e228c242cdc3ed2a7383d0d30cd2321715",
+      "bytes": 21779
+    },
+    {
       "path": "summative_secure.json",
-      "sha256": "cedd70306c6b22dc5f5effa5e5eb260e6aa415f79f44baa80a48c984926b995e",
-      "bytes": 251704
+      "sha256": "88897b84fcfa709b446dc558cc56eaa921215d26e0ac7348dde864c5e1fb3715",
+      "bytes": 259102
     },
     {
       "path": "unit1.html",
-      "sha256": "25516606c9732c328e085a5b4b74325bbd8fd731caa7906335d08e138ef3b393",
-      "bytes": 132863
+      "sha256": "70b258d19ad1202a0e985a63668ec4390b9ff71e2edc4d4dc77bcdb59250713e",
+      "bytes": 941215
     },
     {
       "path": "wtc.json",
-      "sha256": "f312ca79f376ecca1fbfc51b4dd05cf0107bf6b025e722ff7a2848c207504f33",
-      "bytes": 36104
+      "sha256": "c3638b63aada894e06df204dffa5468b5a24b4528717abccfa67bd014e4b13f2",
+      "bytes": 36515
     }
   ]
 }
