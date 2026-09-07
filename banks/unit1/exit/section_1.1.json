@@ -21,66 +21,64 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Plot and read ordered pairs.",
-      "student_action": "plot/read ordered pairs on a coordinate plane",
+      "student_action": "Plot supplied ordered pairs and identify the requested point.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
-      "representation_mode": "graph",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "opening_new_carryforward",
+      "slot_role": "opening_new",
+      "family_id": "U1-S1.1-EXIT-Q1",
       "item_id": "U1-S1.1-EXIT-Q1",
       "source_map_record_id": "U1-S1.1-EXIT-Q1",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Plot the points (-5, 4), (3, -6), and (7, 2). Then write the ordered pair in Quadrant IV.",
-      "student_html": "<p>Plot the points (-5, 4), (3, -6), and (7, 2). Then write the ordered pair in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Plot (-5, 4), (3, -6), and (7, 2); identify the point in Quadrant IV.",
+      "student_html": "<p>Plot the three ordered pairs on the coordinate plane. Then write the ordered pair in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
       "answer": "(3, -6)",
-      "solution_text": "Quadrant IV has positive x and negative y. Among the plotted points, (3, -6) has that sign pattern.",
-      "solution_html": "<p>Quadrant IV has positive x and negative y. Among the plotted points, (3, -6) has that sign pattern.</p>",
+      "solution_text": "The only point with positive x and negative y is (3, -6).",
+      "solution_html": "<p>The only point with positive x and negative y is (3, -6).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Plot the points (-5, 4), (3, -6), and (7, 2). Then write the ordered pair in Quadrant IV."
+            "text": "Plot the three ordered pairs on the coordinate plane. Then write the ordered pair in Quadrant IV."
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -8,
-            "y_max": 8,
-            "x_label": "x",
-            "y_label": "y"
+            "x_min": -10,
+            "x_max": 10,
+            "y_min": -10,
+            "y_max": 10,
+            "semantic_mode": "construction_surface"
           }
         }
       ],
@@ -88,16 +86,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_293f093d4bc08df4.png"
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_293f093d4bc08df4.png"
+          "figures/graph_85b9bfa5a0dc334f.png"
         ]
       },
-      "instantiation_summary": "Exit new coordinate plot [(-5, 4), (3, -6), (7, 2)]"
+      "instantiation_summary": "three points; Quadrant IV identification"
     },
     {
       "design_slot_id": "U1-S1.1-EXIT-Q2",
@@ -118,46 +116,46 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Read a graph accurately using its scale.",
-      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
+      "student_action": "Read the plotted point at the specified x-coordinate.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "opening_new_carryforward",
+      "slot_role": "opening_new",
+      "family_id": "U1-S1.1-EXIT-Q2",
       "item_id": "U1-S1.1-EXIT-Q2",
       "source_map_record_id": "U1-S1.1-EXIT-Q2",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "What is the ordered pair of the plotted point with x-coordinate -2?",
-      "student_html": "<p>What is the ordered pair of the plotted point with x-coordinate -2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5cbbe356c6d8fe65.png\" alt=\"Graph\"></div>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read the plotted point with x-coordinate -2.",
+      "student_html": "<p>What is the ordered pair of the plotted point with x-coordinate -2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_4e1e110d72d922d7.png\" alt=\"Graph\"></div>",
       "answer": "(-2, 3)",
-      "solution_text": "Locate x = -2 on the horizontal axis and read the vertical coordinate 3.",
-      "solution_html": "<p>Locate x = -2 on the horizontal axis and read the vertical coordinate 3.</p>",
+      "solution_text": "At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).",
+      "solution_html": "<p>At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).</p>",
       "choices": [],
       "prompt_blocks": [
         {
@@ -174,10 +172,10 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [
               [
@@ -201,16 +199,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_5cbbe356c6d8fe65.png"
+          "file": "figures/graph_4e1e110d72d922d7.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_5cbbe356c6d8fe65.png"
+          "figures/graph_4e1e110d72d922d7.png"
         ]
       },
-      "instantiation_summary": "Exit new graph-scale read"
+      "instantiation_summary": "point-read graph"
     },
     {
       "design_slot_id": "U1-S1.1-EXIT-Q3",
@@ -231,52 +229,52 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Use the x- and y-axes correctly.",
-      "student_action": "use axis roles correctly while locating or recording a coordinate",
+      "student_action": "Read x and y coordinates and connect each to horizontal/vertical position.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "opening_new",
+      "family_id": "U1-S1.1-EXIT-Q3",
       "item_id": "U1-S1.1-EXIT-Q3",
       "source_map_record_id": "U1-S1.1-EXIT-Q3",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Point P is shown. Which coordinate tells how far P is to the right of the y-axis, and which coordinate tells how far it is below the x-axis?",
-      "student_html": "<p>Point P is shown. Which coordinate tells how far P is to the right of the y-axis, and which coordinate tells how far it is below the x-axis?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_0d6982cc8740660b.png\" alt=\"Graph\"></div>",
-      "answer": "The x-coordinate 5 gives the horizontal position; the y-coordinate -3 gives the vertical position.",
-      "solution_text": "The first coordinate is read on the x-axis and the second on the y-axis, so P = (5, -3).",
-      "solution_html": "<p>The first coordinate is read on the x-axis and the second on the y-axis, so P = (5, -3).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read point P and explain the meaning of each coordinate.",
+      "student_html": "<p>Point P is shown. State the x-coordinate and y-coordinate, and describe what each coordinate tells you about its location.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_f78217870bbfe8cf.png\" alt=\"Graph\"></div>",
+      "answer": "x = 5, y = -3",
+      "solution_text": "The x-coordinate 5 means 5 units right of the y-axis. The y-coordinate -3 means 3 units below the x-axis.",
+      "solution_html": "<p>The x-coordinate 5 means 5 units right of the y-axis. The y-coordinate -3 means 3 units below the x-axis.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Point P is shown. Which coordinate tells how far P is to the right of the y-axis, and which coordinate tells how far it is below the x-axis?"
+            "text": "Point P is shown. State the x-coordinate and y-coordinate, and describe what each coordinate tells you about its location."
           }
         },
         {
@@ -287,10 +285,10 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [
               [
@@ -306,16 +304,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_0d6982cc8740660b.png"
+          "file": "figures/graph_f78217870bbfe8cf.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_0d6982cc8740660b.png"
+          "figures/graph_f78217870bbfe8cf.png"
         ]
       },
-      "instantiation_summary": "Exit new axis-role read"
+      "instantiation_summary": "single point axis meaning"
     },
     {
       "design_slot_id": "U1-S1.1-EXIT-Q4",
@@ -336,77 +334,72 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Identify and interpret intercepts when they are shown.",
-      "student_action": "identify an intercept and state its mathematical or contextual meaning",
+      "student_action": "Identify the x- and y-intercepts from a coordinate graph.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "opening_new",
+      "family_id": "U1-S1.1-EXIT-Q4",
       "item_id": "U1-S1.1-EXIT-Q4",
       "source_map_record_id": "U1-S1.1-EXIT-Q4",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The graph shows the amount of water in a tank over time. Identify the y-intercept and explain what it means at time 0.",
-      "student_html": "<p>The graph shows the amount of water in a tank over time. Identify the y-intercept and explain what it means at time 0.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_549b20faf880140a.png\" alt=\"Graph\"></div>",
-      "answer": "(0, 6); the tank starts with 6 liters.",
-      "solution_text": "The y-intercept is where time is 0. The graph crosses the y-axis at 6, so the starting amount is 6 liters.",
-      "solution_html": "<p>The y-intercept is where time is 0. The graph crosses the y-axis at 6, so the starting amount is 6 liters.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify both intercepts.",
+      "student_html": "<p>Use the graph to identify both intercepts of the line.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_a6efed5d7534b096.png\" alt=\"Graph\"></div>",
+      "answer": "x-intercept (4, 0); y-intercept (0, 4)",
+      "solution_text": "The line crosses the y-axis at 4 and the x-axis at 4.",
+      "solution_html": "<p>The line crosses the y-axis at 4 and the x-axis at 4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The graph shows the amount of water in a tank over time. Identify the y-intercept and explain what it means at time 0."
+            "text": "Use the graph to identify both intercepts of the line."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "context",
-            "x_label": "time (min)",
-            "y_label": "water (L)",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
             "bounds": {
-              "x_min": 0,
-              "x_max": 6,
-              "y_min": 0,
-              "y_max": 20
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [],
             "connect_points": false,
             "line": {
-              "slope": 2,
-              "intercept": 6
+              "slope": -1,
+              "intercept": 4
             }
           }
         }
@@ -415,16 +408,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_549b20faf880140a.png"
+          "file": "figures/graph_a6efed5d7534b096.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_549b20faf880140a.png"
+          "figures/graph_a6efed5d7534b096.png"
         ]
       },
-      "instantiation_summary": "Exit new contextual intercept"
+      "instantiation_summary": "line with intercepts"
     }
   ]
 }

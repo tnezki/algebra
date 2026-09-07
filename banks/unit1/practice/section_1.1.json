@@ -15,129 +15,89 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC01",
+        "i_can_id": "U1-S1.1-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Find matching values across different representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Match corresponding values across two representations of one relationship.",
-      "student_action": "locate and match corresponding input-output values",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "evidence_job": "Find matching values across different representations.",
+      "student_action": "Connect a table row to an ordered pair.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-01",
       "source_map_record_id": "U1-S1.1-P1-INTRO-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table and graph show the same relationship. Find the output that matches input 0, and state the ordered pair.",
-      "student_html": "<p>The table and graph show the same relationship. Find the output that matches input 0, and state the ordered pair.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>5</td></tr><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>2</td></tr><tr><td>4</td><td>0</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_f6390567990be865.png\" alt=\"Graph\"></div>",
-      "answer": "4; (0, 4)",
-      "solution_text": "At x = 0, the table gives y = 4; the graph passes through the same point, so the matching pair is (0, 4).",
-      "solution_html": "<p>At x = 0, the table gives y = 4; the graph passes through the same point, so the matching pair is (0, 4).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write the ordered pair for input 3.",
+      "student_html": "<p>Use the table to write the ordered pair for input 3.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>5</td></tr><tr><td>3</td><td>11</td></tr></tbody></table>",
+      "answer": "(3, 11)",
+      "solution_text": "Input 3 corresponds to output 11.",
+      "solution_html": "<p>Input 3 corresponds to output 11.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table and graph show the same relationship. Find the output that matches input 0, and state the ordered pair."
+            "text": "Use the table to write the ordered pair for input 3."
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "x",
-              "y"
+              "input",
+              "output"
             ],
             "rows": [
               [
-                "-1",
-                "5"
+                0,
+                2
               ],
               [
-                "0",
-                "4"
+                1,
+                5
               ],
               [
-                "2",
-                "2"
-              ],
-              [
-                "4",
-                "0"
+                3,
+                11
               ]
             ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -5,
-              "x_max": 5,
-              "y_min": -10,
-              "y_max": 12
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": -1,
-              "intercept": 4
-            }
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_f6390567990be865.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_f6390567990be865.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "match table/graph values for y=-1x+4"
+      "instantiation_summary": "table to ordered pair"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-02",
@@ -152,101 +112,72 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC02",
+        "i_can_id": "U1-S1.1-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Create a table or graph from another representation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Create a table or coordinate graph from a different representation.",
-      "student_action": "translate one relationship into a new table or graph",
-      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
+      "evidence_job": "Create a table or graph from another representation.",
+      "student_action": "Use a rule to find an output.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-02",
       "source_map_record_id": "U1-S1.1-P1-INTRO-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to plot three points on the blank coordinate plane.",
-      "student_html": "<p>Use the rule to plot three points on the blank coordinate plane.</p><div class=\"equation-card\">\\[y=-1x+4\\]</div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7253b23ea81a32f6.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "Points such as (-2, 6), (0, 4), (2, 2)",
-      "solution_text": "Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.",
-      "solution_html": "<p>Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the output.",
+      "student_html": "<p>Use the rule to find the output for input 4.</p><div class=\"equation-card\">\\[y=2x+3\\]</div>",
+      "answer": "11",
+      "solution_text": "2(4)+3=11.",
+      "solution_html": "<p>2(4)+3=11.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to plot three points on the blank coordinate plane."
+            "text": "Use the rule to find the output for input 4."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=-1x+4"
-          }
-        },
-        {
-          "type": "response_surface",
-          "data": {
-            "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -10,
-            "y_max": 10,
-            "x_label": "x",
-            "y_label": "y"
+            "latex": "y=2x+3"
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_7253b23ea81a32f6.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_7253b23ea81a32f6.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "equation-to-graph y=-1x+4 using [(-2, 6), (0, 4), (2, 2)]"
+      "instantiation_summary": "rule evaluation"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-03",
@@ -261,70 +192,61 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC03",
+        "i_can_id": "U1-S1.1-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Check whether two representations describe the same relationship."
       },
       "supporting_i_cans": [],
       "evidence_job": "Check whether two representations describe the same relationship.",
-      "student_action": "compare corresponding values and pattern to decide consistency",
+      "student_action": "Create a graph from a table.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_graph",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-03",
       "source_map_record_id": "U1-S1.1-P1-INTRO-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.",
-      "student_html": "<p>Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.</p><div class=\"equation-card\">\\[y=-1x+4\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>5</td></tr><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>2</td></tr><tr><td>4</td><td>2</td></tr></tbody></table>",
-      "answer": "No, they do not represent the same relationship.",
-      "solution_text": "For x = 4, the equation gives y = 0, but the table gives 2. One mismatched pair is enough to show the representations are not the same.",
-      "solution_html": "<p>For x = 4, the equation gives y = 0, but the table gives 2. One mismatched pair is enough to show the representations are not the same.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Graph the table.",
+      "student_html": "<p>Plot the table on the coordinate plane.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>-1</td></tr><tr><td>0</td><td>3</td></tr><tr><td>2</td><td>7</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "Points (-2,-1), (0,3), (2,7)",
+      "solution_text": "Plot each input-output row as an ordered pair.",
+      "solution_html": "<p>Plot each input-output row as an ordered pair.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-1x+4"
+            "text": "Plot the table on the coordinate plane."
           }
         },
         {
@@ -336,32 +258,46 @@
             ],
             "rows": [
               [
-                "-1",
-                "5"
+                -2,
+                -1
               ],
               [
-                "0",
-                "4"
+                0,
+                3
               ],
               [
-                "2",
-                "2"
-              ],
-              [
-                "4",
-                "2"
+                2,
+                7
               ]
             ]
+          }
+        },
+        {
+          "type": "response_surface",
+          "data": {
+            "kind": "blank_coordinate_grid",
+            "x_min": -10,
+            "x_max": 10,
+            "y_min": -10,
+            "y_max": 10,
+            "semantic_mode": "construction_surface"
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [],
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
+        }
+      ],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_85b9bfa5a0dc334f.png"
+        ]
       },
-      "instantiation_summary": "equation/table equivalence check for y=-1x+4"
+      "instantiation_summary": "table to graph"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-04",
@@ -376,62 +312,65 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC04",
+        "i_can_id": "U1-S1.1-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Use values, rate, or pattern as evidence."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use values, rate, or pattern as evidence when connecting representations.",
-      "student_action": "cite quantitative evidence that links two representations",
-      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Use values, rate, or pattern as evidence.",
+      "student_action": "Check two representations using matching values.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-04",
       "source_map_record_id": "U1-S1.1-P1-INTRO-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Explain what rate or pattern must stay the same when this relationship is written in another representation.",
-      "student_html": "<p>Explain what rate or pattern must stay the same when this relationship is written in another representation.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>7</td></tr><tr><td>0</td><td>5</td></tr><tr><td>2</td><td>1</td></tr><tr><td>4</td><td>-3</td></tr></tbody></table><div class=\"equation-card\">\\[y=-2x+5\\]</div>",
-      "answer": "The output changes by -2 for each increase of 1 in x; that constant rate must be preserved.",
-      "solution_text": "Consecutive input increases of 1 change the output by -2. The coefficient of x in the equation is also -2, confirming the same rate.",
-      "solution_html": "<p>Consecutive input increases of 1 change the output by -2. The coefficient of x in the equation is also -2, confirming the same rate.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Check representation agreement.",
+      "student_html": "<p>Does the table match the rule? Give one matching value as evidence.</p><div class=\"equation-card\">\\[y=x+4\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>5</td><td>9</td></tr></tbody></table>",
+      "answer": "Yes",
+      "solution_text": "For example, x=2 gives y=6 in both representations.",
+      "solution_html": "<p>For example, x=2 gives y=6 in both representations.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Explain what rate or pattern must stay the same when this relationship is written in another representation."
+            "text": "Does the table match the rule? Give one matching value as evidence."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=x+4"
           }
         },
         {
@@ -443,38 +382,28 @@
             ],
             "rows": [
               [
-                "-1",
-                "7"
+                0,
+                4
               ],
               [
-                "0",
-                "5"
+                2,
+                6
               ],
               [
-                "2",
-                "1"
-              ],
-              [
-                "4",
-                "-3"
+                5,
+                9
               ]
             ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-2x+5"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "preserve rate -2 across representations"
+      "instantiation_summary": "agreement evidence"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-05",
@@ -489,129 +418,62 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC01",
+        "i_can_id": "U1-S1.1-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Find matching values across different representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Match corresponding values across two representations of one relationship in a second representation or slightly less-scaffolded case.",
-      "student_action": "locate and match corresponding input-output values",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Find matching values across different representations.",
+      "student_action": "Translate a context value into an input-output pair.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-05",
       "source_map_record_id": "U1-S1.1-P1-INTRO-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table and graph show the same relationship. Find the output that matches input 4, and state the ordered pair.",
-      "student_html": "<p>The table and graph show the same relationship. Find the output that matches input 4, and state the ordered pair.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>5</td></tr><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>2</td></tr><tr><td>4</td><td>0</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_f6390567990be865.png\" alt=\"Graph\"></div>",
-      "answer": "0; (4, 0)",
-      "solution_text": "At x = 4, the table gives y = 0; the graph passes through the same point, so the matching pair is (4, 0).",
-      "solution_html": "<p>At x = 4, the table gives y = 0; the graph passes through the same point, so the matching pair is (4, 0).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write the input-output pair.",
+      "student_html": "<p>A machine adds 6 to every input. Write the ordered pair for input -1.</p>",
+      "answer": "(-1, 5)",
+      "solution_text": "-1+6=5.",
+      "solution_html": "<p>-1+6=5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table and graph show the same relationship. Find the output that matches input 4, and state the ordered pair."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "-1",
-                "5"
-              ],
-              [
-                "0",
-                "4"
-              ],
-              [
-                "2",
-                "2"
-              ],
-              [
-                "4",
-                "0"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -5,
-              "x_max": 5,
-              "y_min": -10,
-              "y_max": 12
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": -1,
-              "intercept": 4
-            }
+            "text": "A machine adds 6 to every input. Write the ordered pair for input -1."
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_f6390567990be865.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_f6390567990be865.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "match table/graph values for y=-1x+4"
+      "instantiation_summary": "context pair"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-06",
@@ -626,101 +488,62 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC02",
+        "i_can_id": "U1-S1.1-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Create a table or graph from another representation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Create a table or coordinate graph from a different representation in a second representation or slightly less-scaffolded case.",
-      "student_action": "translate one relationship into a new table or graph",
-      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Create a table or graph from another representation.",
+      "student_action": "Evaluate a simple function notation value.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-06",
       "source_map_record_id": "U1-S1.1-P1-INTRO-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to plot three points on the blank coordinate plane.",
-      "student_html": "<p>Use the rule to plot three points on the blank coordinate plane.</p><div class=\"equation-card\">\\[y=3x-2\\]</div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7253b23ea81a32f6.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "Points such as (-2, -8), (0, -2), (2, 4)",
-      "solution_text": "Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.",
-      "solution_html": "<p>Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate f(2).",
+      "student_html": "<p>If f(x) = 3x - 1, find f(2).</p>",
+      "answer": "5",
+      "solution_text": "3(2)-1=5.",
+      "solution_html": "<p>3(2)-1=5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to plot three points on the blank coordinate plane."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=3x-2"
-          }
-        },
-        {
-          "type": "response_surface",
-          "data": {
-            "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -10,
-            "y_max": 10,
-            "x_label": "x",
-            "y_label": "y"
+            "text": "If f(x) = 3x - 1, find f(2)."
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_7253b23ea81a32f6.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_7253b23ea81a32f6.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "equation-to-graph y=3x-2 using [(-2, -8), (0, -2), (2, 4)]"
+      "instantiation_summary": "function notation preview"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-07",
@@ -735,70 +558,65 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC03",
+        "i_can_id": "U1-S1.1-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Check whether two representations describe the same relationship."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check whether two representations describe the same relationship in a second representation or slightly less-scaffolded case.",
-      "student_action": "compare corresponding values and pattern to decide consistency",
+      "evidence_job": "Check whether two representations describe the same relationship.",
+      "student_action": "Make a table from a rule.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "guided_intro_transfer",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-07",
       "source_map_record_id": "U1-S1.1-P1-INTRO-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.",
-      "student_html": "<p>Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.</p><div class=\"equation-card\">\\[y=-3x+3\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>6</td></tr><tr><td>0</td><td>3</td></tr><tr><td>2</td><td>-3</td></tr><tr><td>4</td><td>-7</td></tr></tbody></table>",
-      "answer": "No, they do not represent the same relationship.",
-      "solution_text": "For x = 4, the equation gives y = -9, but the table gives -7. One mismatched pair is enough to show the representations are not the same.",
-      "solution_html": "<p>For x = 4, the equation gives y = -9, but the table gives -7. One mismatched pair is enough to show the representations are not the same.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Complete the table.",
+      "student_html": "<p>Use the rule to complete the table.</p><div class=\"equation-card\">\\[y=-x+2\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>?</td></tr><tr><td>1</td><td>?</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>",
+      "answer": "3, 1, -2",
+      "solution_text": "Substitute each x-value into the rule.",
+      "solution_html": "<p>Substitute each x-value into the rule.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence."
+            "text": "Use the rule to complete the table."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=-3x+3"
+            "latex": "y=-x+2"
           }
         },
         {
@@ -810,20 +628,16 @@
             ],
             "rows": [
               [
-                "-1",
-                "6"
+                -1,
+                "?"
               ],
               [
-                "0",
-                "3"
+                1,
+                "?"
               ],
               [
-                "2",
-                "-3"
-              ],
-              [
-                "4",
-                "-7"
+                4,
+                "?"
               ]
             ]
           }
@@ -832,10 +646,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "equation/table equivalence check for y=-3x+3"
+      "instantiation_summary": "rule to table"
     },
     {
       "design_slot_id": "U1-S1.1-P1-INTRO-08",
@@ -850,105 +664,62 @@
         "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.1-IC04",
+        "i_can_id": "U1-S1.1-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Use values, rate, or pattern as evidence."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use values, rate, or pattern as evidence when connecting representations in a second representation or slightly less-scaffolded case.",
-      "student_action": "cite quantitative evidence that links two representations",
+      "evidence_job": "Use values, rate, or pattern as evidence.",
+      "student_action": "Use rate and starting value to connect representations.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.1-P1-INTRO-08",
       "source_map_record_id": "U1-S1.1-P1-INTRO-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Explain what rate or pattern must stay the same when this relationship is written in another representation.",
-      "student_html": "<p>Explain what rate or pattern must stay the same when this relationship is written in another representation.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-4</td></tr><tr><td>0</td><td>0</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>16</td></tr></tbody></table><div class=\"equation-card\">\\[y=4x+0\\]</div>",
-      "answer": "The output changes by 4 for each increase of 1 in x; that constant rate must be preserved.",
-      "solution_text": "Consecutive input increases of 1 change the output by 4. The coefficient of x in the equation is also 4, confirming the same rate.",
-      "solution_html": "<p>Consecutive input increases of 1 change the output by 4. The coefficient of x in the equation is also 4, confirming the same rate.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write the matching rule.",
+      "student_html": "<p>The table changes by +2 in y whenever x increases by 1 and starts at \\(y=3\\) when \\(x=0\\). Which rule matches it? Write the rule.</p>",
+      "answer": "y = 2x + 3",
+      "solution_text": "Rate 2 gives the coefficient and start 3 gives the constant.",
+      "solution_html": "<p>Rate 2 gives the coefficient and start 3 gives the constant.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Explain what rate or pattern must stay the same when this relationship is written in another representation."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "-1",
-                "-4"
-              ],
-              [
-                "0",
-                "0"
-              ],
-              [
-                "2",
-                "8"
-              ],
-              [
-                "4",
-                "16"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=4x+0"
+            "text": "The table changes by +2 in y whenever x increases by 1 and starts at y=3 when x=0. Which rule matches it? Write the rule."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "preserve rate 4 across representations"
+      "instantiation_summary": "pattern to rule"
     },
     {
       "design_slot_id": "U1-S1.1-P1-MASTERY-01",
@@ -969,66 +740,63 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Plot and read ordered pairs.",
-      "student_action": "plot/read ordered pairs on a coordinate plane",
+      "student_action": "Plot supplied ordered pairs and identify the requested point.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
-      "representation_mode": "graph",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.1-P1-MASTERY-01",
       "source_map_record_id": "U1-S1.1-P1-MASTERY-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Plot the points (-6, 1), (3, 6), (4, -3) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.",
-      "student_html": "<p>Plot the points (-6, 1), (3, 6), (4, -3) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "(4, -3)",
-      "solution_text": "Plot each point using x first and y second. The point with positive x and negative y is (4, -3), so it lies in Quadrant IV.",
-      "solution_html": "<p>Plot each point using x first and y second. The point with positive x and negative y is (4, -3), so it lies in Quadrant IV.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Plot (-5, 4), (3, -6), and (7, 2); identify the point in Quadrant IV.",
+      "student_html": "<p>Plot the three ordered pairs on the coordinate plane. Then write the ordered pair in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "(3, -6)",
+      "solution_text": "The only point with positive x and negative y is (3, -6).",
+      "solution_html": "<p>The only point with positive x and negative y is (3, -6).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Plot the points (-6, 1), (3, 6), (4, -3) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV."
+            "text": "Plot the three ordered pairs on the coordinate plane. Then write the ordered pair in Quadrant IV."
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -8,
-            "y_max": 8,
-            "x_label": "x",
-            "y_label": "y"
+            "x_min": -10,
+            "x_max": 10,
+            "y_min": -10,
+            "y_max": 10,
+            "semantic_mode": "construction_surface"
           }
         }
       ],
@@ -1036,19 +804,131 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_293f093d4bc08df4.png"
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_293f093d4bc08df4.png"
+          "figures/graph_85b9bfa5a0dc334f.png"
         ]
       },
-      "instantiation_summary": "coordinate plotting with points [(-6, 1), (3, 6), (4, -3)]"
+      "instantiation_summary": "three points; Quadrant IV identification"
     },
     {
       "design_slot_id": "U1-S1.1-P1-MASTERY-02",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC01",
+        "source_i_can_index": 1,
+        "text": "Plot and read ordered pairs."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Read an ordered pair from a coordinate graph.",
+      "student_action": "Read the plotted point at the specified x-coordinate.",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation",
+          "context",
+          "signs",
+          "scale"
+        ],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
+        "forbidden": [
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
+        ]
+      },
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.1-P1-MASTERY-02",
+      "source_map_record_id": "U1-S1.1-P1-MASTERY-02",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read the plotted point with x-coordinate -2.",
+      "student_html": "<p>What is the ordered pair of the plotted point with x-coordinate -2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_4e1e110d72d922d7.png\" alt=\"Graph\"></div>",
+      "answer": "(-2, 3)",
+      "solution_text": "At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).",
+      "solution_html": "<p>At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "What is the ordered pair of the plotted point with x-coordinate -2?"
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
+            },
+            "points": [
+              [
+                -6,
+                -2
+              ],
+              [
+                -2,
+                3
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_4e1e110d72d922d7.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_4e1e110d72d922d7.png"
+        ]
+      },
+      "instantiation_summary": "point-read graph"
+    },
+    {
+      "design_slot_id": "U1-S1.1-P1-MASTERY-03",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.1",
@@ -1066,157 +946,51 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Use the x- and y-axes correctly.",
-      "student_action": "use axis roles correctly while locating or recording a coordinate",
+      "student_action": "Read x and y coordinates and connect each to horizontal/vertical position.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.1-P1-MASTERY-02",
-      "source_map_record_id": "U1-S1.1-P1-MASTERY-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.",
-      "student_html": "<p>Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_cc9a672bdbe0bffc.png\" alt=\"Graph\"></div>",
-      "answer": "The x-coordinate -5 gives the horizontal position; the y-coordinate 2 gives the vertical position.",
-      "solution_text": "The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (-5, 2).",
-      "solution_html": "<p>The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (-5, 2).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
-            },
-            "points": [
-              [
-                -5,
-                2
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_cc9a672bdbe0bffc.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_cc9a672bdbe0bffc.png"
-        ]
-      },
-      "instantiation_summary": "axis roles at point (-5, 2)"
-    },
-    {
-      "design_slot_id": "U1-S1.1-P1-MASTERY-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Read a graph accurately using its scale.",
-      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+        "required": [
+          "preserve evidence target and usable difficulty"
         ],
-        "required": [],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.1-P1-MASTERY-03",
       "source_map_record_id": "U1-S1.1-P1-MASTERY-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 0?",
-      "student_html": "<p>Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 0?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5cbae6694d0161a1.png\" alt=\"Graph\"></div>",
-      "answer": "(0, -2)",
-      "solution_text": "Locate x = 0 on the horizontal axis and read the corresponding vertical coordinate. The point is (0, -2).",
-      "solution_html": "<p>Locate x = 0 on the horizontal axis and read the corresponding vertical coordinate. The point is (0, -2).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read point P and explain the meaning of each coordinate.",
+      "student_html": "<p>Point P is shown. State the x-coordinate and y-coordinate, and describe what each coordinate tells you about its location.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_f78217870bbfe8cf.png\" alt=\"Graph\"></div>",
+      "answer": "x = 5, y = -3",
+      "solution_text": "The x-coordinate 5 means 5 units right of the y-axis. The y-coordinate -3 means 3 units below the x-axis.",
+      "solution_html": "<p>The x-coordinate 5 means 5 units right of the y-axis. The y-coordinate -3 means 3 units below the x-axis.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 0?"
+            "text": "Point P is shown. State the x-coordinate and y-coordinate, and describe what each coordinate tells you about its location."
           }
         },
         {
@@ -1227,23 +1001,15 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [
               [
-                -5,
-                5
-              ],
-              [
-                0,
-                -2
-              ],
-              [
-                3,
-                6
+                5,
+                -3
               ]
             ],
             "connect_points": false
@@ -1254,16 +1020,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_5cbae6694d0161a1.png"
+          "file": "figures/graph_f78217870bbfe8cf.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_5cbae6694d0161a1.png"
+          "figures/graph_f78217870bbfe8cf.png"
         ]
       },
-      "instantiation_summary": "scaled coordinate read with target (0, -2)"
+      "instantiation_summary": "single point axis meaning"
     },
     {
       "design_slot_id": "U1-S1.1-P1-MASTERY-04",
@@ -1284,57 +1050,51 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Identify and interpret intercepts when they are shown.",
-      "student_action": "identify an intercept and state its mathematical or contextual meaning",
+      "student_action": "Identify the x- and y-intercepts from a coordinate graph.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.1-P1-MASTERY-04",
       "source_map_record_id": "U1-S1.1-P1-MASTERY-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when x = 0.",
-      "student_html": "<p>Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when \\(x=0\\).</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_11df691600d75a9d.png\" alt=\"Graph\"></div>",
-      "answer": "(0, 4); when x = 0, y = 4.",
-      "solution_text": "The y-intercept is where the graph crosses the y-axis. That occurs at y = 4, so the intercept is (0, 4).",
-      "solution_html": "<p>The y-intercept is where the graph crosses the y-axis. That occurs at y = 4, so the intercept is (0, 4).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify both intercepts.",
+      "student_html": "<p>Use the graph to identify both intercepts of the line.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_a6efed5d7534b096.png\" alt=\"Graph\"></div>",
+      "answer": "x-intercept (4, 0); y-intercept (0, 4)",
+      "solution_text": "The line crosses the y-axis at 4 and the x-axis at 4.",
+      "solution_html": "<p>The line crosses the y-axis at 4 and the x-axis at 4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when x = 0."
+            "text": "Use the graph to identify both intercepts of the line."
           }
         },
         {
@@ -1345,15 +1105,15 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [],
             "connect_points": false,
             "line": {
-              "slope": 2,
+              "slope": -1,
               "intercept": 4
             }
           }
@@ -1363,221 +1123,19 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_11df691600d75a9d.png"
+          "file": "figures/graph_a6efed5d7534b096.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_11df691600d75a9d.png"
+          "figures/graph_a6efed5d7534b096.png"
         ]
       },
-      "instantiation_summary": "line y=2x+4 intercept interpretation"
+      "instantiation_summary": "line with intercepts"
     },
     {
       "design_slot_id": "U1-S1.1-P1-MASTERY-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC01",
-        "source_i_can_index": 1,
-        "text": "Plot and read ordered pairs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Plot and read ordered pairs with independently chosen or meaningfully varied values/representation.",
-      "student_action": "plot/read ordered pairs on a coordinate plane",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.1-P1-MASTERY-05",
-      "source_map_record_id": "U1-S1.1-P1-MASTERY-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Plot the points (-5, -2), (1, 4), (4, -6) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.",
-      "student_html": "<p>Plot the points (-5, -2), (1, 4), (4, -6) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "(4, -6)",
-      "solution_text": "Plot each point using x first and y second. The point with positive x and negative y is (4, -6), so it lies in Quadrant IV.",
-      "solution_html": "<p>Plot each point using x first and y second. The point with positive x and negative y is (4, -6), so it lies in Quadrant IV.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Plot the points (-5, -2), (1, 4), (4, -6) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV."
-          }
-        },
-        {
-          "type": "response_surface",
-          "data": {
-            "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -8,
-            "y_max": 8,
-            "x_label": "x",
-            "y_label": "y"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_293f093d4bc08df4.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_293f093d4bc08df4.png"
-        ]
-      },
-      "instantiation_summary": "coordinate plotting with points [(-5, -2), (1, 4), (4, -6)]"
-    },
-    {
-      "design_slot_id": "U1-S1.1-P1-MASTERY-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC02",
-        "source_i_can_index": 2,
-        "text": "Use the x- and y-axes correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use the x- and y-axes correctly with independently chosen or meaningfully varied values/representation.",
-      "student_action": "use axis roles correctly while locating or recording a coordinate",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.1-P1-MASTERY-06",
-      "source_map_record_id": "U1-S1.1-P1-MASTERY-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.",
-      "student_html": "<p>Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7aae8283b3d5b988.png\" alt=\"Graph\"></div>",
-      "answer": "The x-coordinate 6 gives the horizontal position; the y-coordinate -3 gives the vertical position.",
-      "solution_text": "The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (6, -3).",
-      "solution_html": "<p>The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (6, -3).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
-            },
-            "points": [
-              [
-                6,
-                -3
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_7aae8283b3d5b988.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_7aae8283b3d5b988.png"
-        ]
-      },
-      "instantiation_summary": "axis roles at point (6, -3)"
-    },
-    {
-      "design_slot_id": "U1-S1.1-P1-MASTERY-07",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.1",
@@ -1594,53 +1152,52 @@
         "text": "Read a graph using its scale."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Read a graph accurately using its scale with independently chosen or meaningfully varied values/representation.",
-      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
+      "evidence_job": "Read a graph using its scale.",
+      "student_action": "Read a plotted coordinate accurately from the graph scale.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.1-P1-MASTERY-07",
-      "source_map_record_id": "U1-S1.1-P1-MASTERY-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 2?",
-      "student_html": "<p>Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_bbcf41dac6569a5b.png\" alt=\"Graph\"></div>",
-      "answer": "(2, 5)",
-      "solution_text": "Locate x = 2 on the horizontal axis and read the corresponding vertical coordinate. The point is (2, 5).",
-      "solution_html": "<p>Locate x = 2 on the horizontal axis and read the corresponding vertical coordinate. The point is (2, 5).</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.1-P1-MASTERY-05",
+      "source_map_record_id": "U1-S1.1-P1-MASTERY-05",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read the y-coordinate at x = -8.",
+      "student_html": "<p>Read the graph carefully. What is the y-coordinate of the point whose x-coordinate is -8?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_c8e7d169e88269d2.png\" alt=\"Graph\"></div>",
+      "answer": "6",
+      "solution_text": "The plotted point at x = -8 is (-8, 6), so the y-coordinate is 6.",
+      "solution_html": "<p>The plotted point at x = -8 is (-8, 6), so the y-coordinate is 6.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 2?"
+            "text": "Read the graph carefully. What is the y-coordinate of the point whose x-coordinate is -8?"
           }
         },
         {
@@ -1651,23 +1208,23 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [
               [
-                -6,
-                -3
+                -8,
+                6
               ],
               [
-                2,
-                5
+                -4,
+                2
               ],
               [
-                7,
-                1
+                6,
+                -4
               ]
             ],
             "connect_points": false
@@ -1678,19 +1235,113 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_bbcf41dac6569a5b.png"
+          "file": "figures/graph_c8e7d169e88269d2.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_bbcf41dac6569a5b.png"
+          "figures/graph_c8e7d169e88269d2.png"
         ]
       },
-      "instantiation_summary": "scaled coordinate read with target (2, 5)"
+      "instantiation_summary": "scaled coordinate read"
     },
     {
-      "design_slot_id": "U1-S1.1-P1-MASTERY-08",
+      "design_slot_id": "U1-S1.1-P1-MASTERY-06",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC01",
+        "source_i_can_index": 1,
+        "text": "Plot and read ordered pairs."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs.",
+      "student_action": "Plot two points and compare their y-coordinates.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_graph",
+      "representation_mode": "student_constructed_graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation",
+          "context",
+          "signs",
+          "scale"
+        ],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
+        "forbidden": [
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
+        ]
+      },
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.1-P1-MASTERY-06",
+      "source_map_record_id": "U1-S1.1-P1-MASTERY-06",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Plot A(-4, -5) and B(6, 2); compare y-coordinates.",
+      "student_html": "<p>Plot A(-4, -5) and B(6, 2). Which point has the greater y-coordinate?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "B",
+      "solution_text": "Point B has y = 2 and point A has y = -5; 2 is greater.",
+      "solution_html": "<p>Point B has y = 2 and point A has y = -5; 2 is greater.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Plot A(-4, -5) and B(6, 2). Which point has the greater y-coordinate?"
+          }
+        },
+        {
+          "type": "response_surface",
+          "data": {
+            "kind": "blank_coordinate_grid",
+            "x_min": -10,
+            "x_max": 10,
+            "y_min": -10,
+            "y_max": 10,
+            "semantic_mode": "construction_surface"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_85b9bfa5a0dc334f.png"
+        ]
+      },
+      "instantiation_summary": "two-point plot and compare"
+    },
+    {
+      "design_slot_id": "U1-S1.1-P1-MASTERY-07",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.1",
@@ -1707,78 +1358,72 @@
         "text": "Identify and interpret intercepts when they are shown."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Identify and interpret intercepts when they are shown with independently chosen or meaningfully varied values/representation.",
-      "student_action": "identify an intercept and state its mathematical or contextual meaning",
+      "evidence_job": "Identify and interpret intercepts when they are shown.",
+      "student_action": "Identify the y-intercept and state its coordinate meaning.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.1-P1-MASTERY-08",
-      "source_map_record_id": "U1-S1.1-P1-MASTERY-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The graph models water in the tank. Identify the y-intercept and explain what it means when the input is 0.",
-      "student_html": "<p>The graph models water in the tank. Identify the y-intercept and explain what it means when the input is 0.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_aa57ea759a8de504.png\" alt=\"Graph\"></div>",
-      "answer": "(0, 2); the starting value is 2.",
-      "solution_text": "The y-intercept occurs where x = 0. Substituting x = 0 gives y = 2, so the graph crosses at (0, 2). In context, 2 is the starting value.",
-      "solution_html": "<p>The y-intercept occurs where x = 0. Substituting x = 0 gives y = 2, so the graph crosses at (0, 2). In context, 2 is the starting value.</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.1-P1-MASTERY-07",
+      "source_map_record_id": "U1-S1.1-P1-MASTERY-07",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify the y-intercept.",
+      "student_html": "<p>Use the graph to identify the y-intercept and explain what the coordinate means on the coordinate plane.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_926f822e3a6f7f15.png\" alt=\"Graph\"></div>",
+      "answer": "(0, -3)",
+      "solution_text": "At the y-intercept x = 0. The line crosses the y-axis at y = -3.",
+      "solution_html": "<p>At the y-intercept x = 0. The line crosses the y-axis at y = -3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The graph models water in the tank. Identify the y-intercept and explain what it means when the input is 0."
+            "text": "Use the graph to identify the y-intercept and explain what the coordinate means on the coordinate plane."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "context",
-            "x_label": "time (min)",
-            "y_label": "water (L)",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
             "bounds": {
-              "x_min": -2,
-              "x_max": 6,
-              "y_min": -8,
-              "y_max": 12
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [],
             "connect_points": false,
             "line": {
-              "slope": -2,
-              "intercept": 2
+              "slope": 2,
+              "intercept": -3
             }
           }
         }
@@ -1787,16 +1432,128 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_aa57ea759a8de504.png"
+          "file": "figures/graph_926f822e3a6f7f15.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_aa57ea759a8de504.png"
+          "figures/graph_926f822e3a6f7f15.png"
         ]
       },
-      "instantiation_summary": "line y=-2x+2 intercept interpretation"
+      "instantiation_summary": "y-intercept read"
+    },
+    {
+      "design_slot_id": "U1-S1.1-P1-MASTERY-08",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC02",
+        "source_i_can_index": 2,
+        "text": "Use the x- and y-axes correctly."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use the x- and y-axes correctly.",
+      "student_action": "Identify a point on an axis and name the axis.",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation",
+          "context",
+          "signs",
+          "scale"
+        ],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
+        "forbidden": [
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
+        ]
+      },
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.1-P1-MASTERY-08",
+      "source_map_record_id": "U1-S1.1-P1-MASTERY-08",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify the plotted point on an axis.",
+      "student_html": "<p>Which plotted point lies on an axis? Name the axis.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_e204b25d5c3443cf.png\" alt=\"Graph\"></div>",
+      "answer": "(-7, 0), on the x-axis",
+      "solution_text": "A point lies on the x-axis when its y-coordinate is 0.",
+      "solution_html": "<p>A point lies on the x-axis when its y-coordinate is 0.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Which plotted point lies on an axis? Name the axis."
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
+            },
+            "points": [
+              [
+                -7,
+                0
+              ],
+              [
+                0,
+                5
+              ],
+              [
+                2,
+                -8
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_e204b25d5c3443cf.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_e204b25d5c3443cf.png"
+        ]
+      },
+      "instantiation_summary": "axis point identification"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-01",
@@ -1811,84 +1568,99 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC01",
+        "i_can_id": "U2-MG04-IC01",
         "source_i_can_index": 1,
-        "text": "Create a new representation from a given representation."
+        "text": "Make a graph from a table."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Create a new representation from a given relationship.",
-      "student_action": "translate a given table, graph, rule, or context into another representation",
+      "evidence_job": "Make a graph from a table.",
+      "student_action": "Plot the table values on a coordinate plane.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-01",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to plot three points on the blank coordinate plane.",
-      "student_html": "<p>Use the rule to plot three points on the blank coordinate plane.</p><div class=\"equation-card\">\\[y=2x+1\\]</div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7253b23ea81a32f6.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "Points such as (-2, -3), (0, 1), (2, 5)",
-      "solution_text": "Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.",
-      "solution_html": "<p>Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Graph the table.",
+      "student_html": "<p>Plot the ordered pairs from the table on the blank coordinate plane.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>-3</td></tr><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>5</td></tr><tr><td>4</td><td>9</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "Points (-2,-3), (0,1), (2,5), (4,9)",
+      "solution_text": "Each table row gives one ordered pair to plot.",
+      "solution_html": "<p>Each table row gives one ordered pair to plot.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to plot three points on the blank coordinate plane."
+            "text": "Plot the ordered pairs from the table on the blank coordinate plane."
           }
         },
         {
-          "type": "equation",
+          "type": "table",
           "data": {
-            "latex": "y=2x+1"
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                -2,
+                -3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                4,
+                9
+              ]
+            ]
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
+            "x_min": -10,
+            "x_max": 10,
             "y_min": -10,
             "y_max": 10,
-            "x_label": "x",
-            "y_label": "y"
+            "semantic_mode": "construction_surface"
           }
         }
       ],
@@ -1896,16 +1668,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_7253b23ea81a32f6.png"
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_7253b23ea81a32f6.png"
+          "figures/graph_85b9bfa5a0dc334f.png"
         ]
       },
-      "instantiation_summary": "equation-to-graph y=2x+1 using [(-2, -3), (0, 1), (2, 5)]"
+      "instantiation_summary": "table to graph"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-02",
@@ -1920,62 +1692,65 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC02",
+        "i_can_id": "U2-MG04-IC02",
         "source_i_can_index": 2,
-        "text": "Preserve matching input-output values across representations."
+        "text": "Make a table from a rule or equation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preserve corresponding values across representations.",
-      "student_action": "use matching input-output values to complete or check a new representation",
+      "evidence_job": "Make a table from a rule or equation.",
+      "student_action": "Use a rule to complete a table.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-02",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table and graph show the same relationship. Find the output that matches input -1, and state the ordered pair.",
-      "student_html": "<p>The table and graph show the same relationship. Find the output that matches input -1, and state the ordered pair.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-5</td></tr><tr><td>0</td><td>-2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>4</td><td>10</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_14c220361c98303d.png\" alt=\"Graph\"></div>",
-      "answer": "-5; (-1, -5)",
-      "solution_text": "At x = -1, the table gives y = -5; the graph passes through the same point, so the matching pair is (-1, -5).",
-      "solution_html": "<p>At x = -1, the table gives y = -5; the graph passes through the same point, so the matching pair is (-1, -5).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Make the table from the rule.",
+      "student_html": "<p>Use the rule to complete the table.</p><div class=\"equation-card\">\\[y=2x-1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>?</td></tr><tr><td>0</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></tbody></table>",
+      "answer": "-3, -1, 5",
+      "solution_text": "Substitute each input into y=2x-1.",
+      "solution_html": "<p>Substitute each input into y=2x-1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table and graph show the same relationship. Find the output that matches input -1, and state the ordered pair."
+            "text": "Use the rule to complete the table."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=2x-1"
           }
         },
         {
@@ -1987,60 +1762,28 @@
             ],
             "rows": [
               [
-                "-1",
-                "-5"
+                -1,
+                "?"
               ],
               [
-                "0",
-                "-2"
+                0,
+                "?"
               ],
               [
-                "2",
-                "4"
-              ],
-              [
-                "4",
-                "10"
+                3,
+                "?"
               ]
             ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -5,
-              "x_max": 5,
-              "y_min": -10,
-              "y_max": 12
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": 3,
-              "intercept": -2
-            }
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_14c220361c98303d.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_14c220361c98303d.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "match table/graph values for y=3x-2"
+      "instantiation_summary": "rule to table"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-03",
@@ -2055,95 +1798,80 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC03",
+        "i_can_id": "U2-MG04-IC03",
         "source_i_can_index": 3,
-        "text": "Preserve the important rate or pattern when changing representation."
+        "text": "Use a context to make a table, graph, or rule when enough information is given."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preserve the rate or pattern while changing representation.",
-      "student_action": "identify the structural pattern and carry it into a new representation",
+      "evidence_job": "Use a context to make a table, graph, or rule when enough information is given.",
+      "student_action": "Represent a context with a table.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_table",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "answer-neutral table cells"
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-03",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Complete the table so it preserves the constant rate shown by the equation.",
-      "student_html": "<p>Complete the table so it preserves the constant rate shown by the equation.</p><div class=\"equation-card\">\\[y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></tbody></table>",
-      "answer": "At x = 2, y = 5; at x = 3, y = 7.",
-      "solution_text": "The coefficient of x is 2, so each increase of 1 in x changes y by 2. Starting from y=1 gives the missing values 5 and 7.",
-      "solution_html": "<p>The coefficient of x is 2, so each increase of 1 in x changes y by 2. Starting from y=1 gives the missing values 5 and 7.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Make a table for the parking cost.",
+      "student_html": "<p>A parking lot charges a $4 entry fee plus $2 per hour. Complete a table for 0, 1, 3, and 5 hours.</p><table class=\"values\"><thead><tr><th>hours</th><th>cost ($)</th></tr></thead><tbody><tr><td>0</td><td>?</td></tr><tr><td>1</td><td>?</td></tr><tr><td>3</td><td>?</td></tr><tr><td>5</td><td>?</td></tr></tbody></table>",
+      "answer": "$4, $6, $10, $14",
+      "solution_text": "Use cost = 4 + 2(hours).",
+      "solution_html": "<p>Use cost = 4 + 2(hours).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Complete the table so it preserves the constant rate shown by the equation."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+1"
+            "text": "A parking lot charges a $4 entry fee plus $2 per hour. Complete a table for 0, 1, 3, and 5 hours."
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "x",
-              "y"
+              "hours",
+              "cost ($)"
             ],
             "rows": [
               [
-                "0",
-                "1"
-              ],
-              [
-                "1",
-                "3"
-              ],
-              [
-                "2",
+                0,
                 "?"
               ],
               [
-                "3",
+                1,
+                "?"
+              ],
+              [
+                3,
+                "?"
+              ],
+              [
+                5,
                 "?"
               ]
             ]
@@ -2153,10 +1881,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "preserve rate 2 while completing table"
+      "instantiation_summary": "context to table"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-04",
@@ -2171,70 +1899,65 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC04",
+        "i_can_id": "U2-MG04-IC04",
         "source_i_can_index": 4,
-        "text": "Check a new representation against the original relationship."
+        "text": "Check matching inputs, outputs, and patterns to make sure the representations agree."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check a new representation against the source relationship.",
-      "student_action": "test values and pattern to verify two representations are consistent",
+      "evidence_job": "Check matching inputs, outputs, and patterns to make sure the representations agree.",
+      "student_action": "Check whether a table matches a rule.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-04",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.",
-      "student_html": "<p>Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.</p><div class=\"equation-card\">\\[y=3x-2\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-5</td></tr><tr><td>0</td><td>-2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>4</td><td>10</td></tr></tbody></table>",
-      "answer": "Yes, they represent the same relationship.",
-      "solution_text": "Substituting the listed x-values into the equation produces the same y-values in the table, so the representations agree.",
-      "solution_html": "<p>Substituting the listed x-values into the equation produces the same y-values in the table, so the representations agree.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Check whether the representations agree.",
+      "student_html": "<p>Does the table match the rule? Support your answer with at least two rows.</p><div class=\"equation-card\">\\[y=3x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>7</td></tr><tr><td>4</td><td>13</td></tr></tbody></table>",
+      "answer": "Yes",
+      "solution_text": "For x=0, y=1; for x=2, y=7; for x=4, y=13. Every row matches y=3x+1.",
+      "solution_html": "<p>For x=0, y=1; for x=2, y=7; for x=4, y=13. Every row matches y=3x+1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence."
+            "text": "Does the table match the rule? Support your answer with at least two rows."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=3x-2"
+            "latex": "y=3x+1"
           }
         },
         {
@@ -2246,20 +1969,16 @@
             ],
             "rows": [
               [
-                "-1",
-                "-5"
+                0,
+                1
               ],
               [
-                "0",
-                "-2"
+                2,
+                7
               ],
               [
-                "2",
-                "4"
-              ],
-              [
-                "4",
-                "10"
+                4,
+                13
               ]
             ]
           }
@@ -2268,10 +1987,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "equation/table equivalence check for y=3x-2"
+      "instantiation_summary": "agreement check"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-05",
@@ -2286,84 +2005,95 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC01",
+        "i_can_id": "U2-MG04-IC01",
         "source_i_can_index": 1,
-        "text": "Create a new representation from a given representation."
+        "text": "Make a graph from a table."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Create a new representation from a given relationship with a new representation or context at Review demand.",
-      "student_action": "translate a given table, graph, rule, or context into another representation",
+      "evidence_job": "Make a graph from a table.",
+      "student_action": "Plot a second table on a coordinate plane.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-05",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to plot three points on the blank coordinate plane.",
-      "student_html": "<p>Use the rule to plot three points on the blank coordinate plane.</p><div class=\"equation-card\">\\[y=-2x+5\\]</div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7253b23ea81a32f6.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "Points such as (-2, 9), (0, 5), (2, 1)",
-      "solution_text": "Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.",
-      "solution_html": "<p>Choose input values, substitute them into the rule, and plot the resulting ordered pairs. The listed three points all satisfy the rule.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Graph the table.",
+      "student_html": "<p>Graph the relationship in the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-3</td><td>5</td></tr><tr><td>0</td><td>2</td></tr><tr><td>3</td><td>-1</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "Points (-3,5), (0,2), (3,-1)",
+      "solution_text": "Plot each row as an ordered pair.",
+      "solution_html": "<p>Plot each row as an ordered pair.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to plot three points on the blank coordinate plane."
+            "text": "Graph the relationship in the table."
           }
         },
         {
-          "type": "equation",
+          "type": "table",
           "data": {
-            "latex": "y=-2x+5"
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                -3,
+                5
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                -1
+              ]
+            ]
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
+            "x_min": -10,
+            "x_max": 10,
             "y_min": -10,
             "y_max": 10,
-            "x_label": "x",
-            "y_label": "y"
+            "semantic_mode": "construction_surface"
           }
         }
       ],
@@ -2371,16 +2101,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_7253b23ea81a32f6.png"
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_7253b23ea81a32f6.png"
+          "figures/graph_85b9bfa5a0dc334f.png"
         ]
       },
-      "instantiation_summary": "equation-to-graph y=-2x+5 using [(-2, 9), (0, 5), (2, 1)]"
+      "instantiation_summary": "table to graph 2"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-06",
@@ -2395,62 +2125,65 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC02",
+        "i_can_id": "U2-MG04-IC02",
         "source_i_can_index": 2,
-        "text": "Preserve matching input-output values across representations."
+        "text": "Make a table from a rule or equation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preserve corresponding values across representations with a new representation or context at Review demand.",
-      "student_action": "use matching input-output values to complete or check a new representation",
+      "evidence_job": "Make a table from a rule or equation.",
+      "student_action": "Create a table using selected inputs.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-06",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table and graph show the same relationship. Find the output that matches input 2, and state the ordered pair.",
-      "student_html": "<p>The table and graph show the same relationship. Find the output that matches input 2, and state the ordered pair.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-5</td></tr><tr><td>0</td><td>-2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>4</td><td>10</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_14c220361c98303d.png\" alt=\"Graph\"></div>",
-      "answer": "4; (2, 4)",
-      "solution_text": "At x = 2, the table gives y = 4; the graph passes through the same point, so the matching pair is (2, 4).",
-      "solution_html": "<p>At x = 2, the table gives y = 4; the graph passes through the same point, so the matching pair is (2, 4).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Complete the table.",
+      "student_html": "<p>Create outputs for \\(x=-2\\), 1, and 4.</p><div class=\"equation-card\">\\[y=-x+6\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>?</td></tr><tr><td>1</td><td>?</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>",
+      "answer": "8, 5, 2",
+      "solution_text": "Substitute the three inputs into y=-x+6.",
+      "solution_html": "<p>Substitute the three inputs into y=-x+6.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table and graph show the same relationship. Find the output that matches input 2, and state the ordered pair."
+            "text": "Create outputs for x = -2, 1, and 4."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=-x+6"
           }
         },
         {
@@ -2462,60 +2195,28 @@
             ],
             "rows": [
               [
-                "-1",
-                "-5"
+                -2,
+                "?"
               ],
               [
-                "0",
-                "-2"
+                1,
+                "?"
               ],
               [
-                "2",
-                "4"
-              ],
-              [
-                "4",
-                "10"
+                4,
+                "?"
               ]
             ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -5,
-              "x_max": 5,
-              "y_min": -10,
-              "y_max": 12
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": 3,
-              "intercept": -2
-            }
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_14c220361c98303d.png"
-        }
-      ],
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": [
-          "figures/graph_14c220361c98303d.png"
-        ]
+        "pilot_version": "0.8.0",
+        "graph_files": []
       },
-      "instantiation_summary": "match table/graph values for y=3x-2"
+      "instantiation_summary": "rule to table 2"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-07",
@@ -2530,108 +2231,62 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC03",
+        "i_can_id": "U2-MG04-IC03",
         "source_i_can_index": 3,
-        "text": "Preserve the important rate or pattern when changing representation."
+        "text": "Use a context to make a table, graph, or rule when enough information is given."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preserve the rate or pattern while changing representation with a new representation or context at Review demand.",
-      "student_action": "identify the structural pattern and carry it into a new representation",
+      "evidence_job": "Use a context to make a table, graph, or rule when enough information is given.",
+      "student_action": "Write a rule for a context.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_table",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "answer-neutral table cells"
-        }
-      ],
-      "difficulty_intent": "review_application",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-07",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Complete the table so it preserves the constant rate shown by the equation.",
-      "student_html": "<p>Complete the table so it preserves the constant rate shown by the equation.</p><div class=\"equation-card\">\\[y=-2x+4\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></tbody></table>",
-      "answer": "At x = 2, y = 0; at x = 3, y = -2.",
-      "solution_text": "The coefficient of x is -2, so each increase of 1 in x changes y by -2. Starting from y=4 gives the missing values 0 and -2.",
-      "solution_html": "<p>The coefficient of x is -2, so each increase of 1 in x changes y by -2. Starting from y=4 gives the missing values 0 and -2.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write a rule from the context.",
+      "student_html": "<p>A streaming service costs $8 per month plus $3 for each movie rental. Write a rule for total monthly cost C when r movies are rented.</p>",
+      "answer": "C = 8 + 3r",
+      "solution_text": "The fixed cost is 8 and each rental adds 3.",
+      "solution_html": "<p>The fixed cost is 8 and each rental adds 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Complete the table so it preserves the constant rate shown by the equation."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-2x+4"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "0",
-                "4"
-              ],
-              [
-                "1",
-                "2"
-              ],
-              [
-                "2",
-                "?"
-              ],
-              [
-                "3",
-                "?"
-              ]
-            ]
+            "text": "A streaming service costs $8 per month plus $3 for each movie rental. Write a rule for total monthly cost C when r movies are rented."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "preserve rate -2 while completing table"
+      "instantiation_summary": "context to rule"
     },
     {
       "design_slot_id": "U1-S1.1-P1-REVIEW-08",
@@ -2646,107 +2301,104 @@
         "text": "Create a new representation of a relationship and check that the important values and pattern stay the same."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG04-RIC04",
+        "i_can_id": "U2-MG04-IC04",
         "source_i_can_index": 4,
-        "text": "Check a new representation against the original relationship."
+        "text": "Check matching inputs, outputs, and patterns to make sure the representations agree."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check a new representation against the source relationship with a new representation or context at Review demand.",
-      "student_action": "test values and pattern to verify two representations are consistent",
+      "evidence_job": "Check matching inputs, outputs, and patterns to make sure the representations agree.",
+      "student_action": "Compare a graph and equation for matching rate and intercept.",
       "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_graph_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.1-P1-REVIEW-08",
       "source_map_record_id": "U1-S1.1-P1-REVIEW-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.",
-      "student_html": "<p>Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence.</p><div class=\"equation-card\">\\[y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-1</td></tr><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>5</td></tr><tr><td>4</td><td>9</td></tr></tbody></table>",
-      "answer": "Yes, they represent the same relationship.",
-      "solution_text": "Substituting the listed x-values into the equation produces the same y-values in the table, so the representations agree.",
-      "solution_html": "<p>Substituting the listed x-values into the equation produces the same y-values in the table, so the representations agree.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Check graph-equation agreement.",
+      "student_html": "<p>Does the graph represent the equation? Explain using slope and intercept.</p><div class=\"equation-card\">\\[y=-2x+4\\]</div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_c0bd18cdacdbe9a1.png\" alt=\"Graph\"></div>",
+      "answer": "Yes",
+      "solution_text": "The graph has slope -2 and y-intercept 4, matching the equation.",
+      "solution_html": "<p>The graph has slope -2 and y-intercept 4, matching the equation.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the table and equation represent the same relationship. Use at least one input-output check as evidence."
+            "text": "Does the graph represent the equation? Explain using slope and intercept."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=2x+1"
+            "latex": "y=-2x+4"
           }
         },
         {
-          "type": "table",
+          "type": "graph",
           "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "-1",
-                "-1"
-              ],
-              [
-                "0",
-                "1"
-              ],
-              [
-                "2",
-                "5"
-              ],
-              [
-                "4",
-                "9"
-              ]
-            ]
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
+            },
+            "points": [],
+            "connect_points": false,
+            "line": {
+              "slope": -2,
+              "intercept": 4
+            }
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [],
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_c0bd18cdacdbe9a1.png"
+        }
+      ],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_c0bd18cdacdbe9a1.png"
+        ]
       },
-      "instantiation_summary": "equation/table equivalence check for y=2x+1"
+      "instantiation_summary": "graph equation check"
     }
   ]
 }

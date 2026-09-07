@@ -15,65 +15,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC01",
+        "i_can_id": "U1-S1.5-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Define a variable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Define a variable for an unknown quantity in a situation.",
-      "student_action": "state what a variable represents with units or quantity meaning",
+      "evidence_job": "Define a variable.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "context",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        }
-      ],
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-01",
       "source_map_record_id": "U1-S1.5-P1-INTRO-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A skating rink charges a $6 entry fee plus $4 per hour. The total cost is $26. Define a variable for the unknown quantity.",
-      "student_html": "<p>A skating rink charges a $6 entry fee plus $4 per hour. The total cost is $26. Define a variable for the unknown quantity.</p>",
-      "answer": "Let h = number of hours.",
-      "solution_text": "The unknown in the situation is number of hours, so h is a clear variable choice.",
-      "solution_html": "<p>The unknown in the situation is number of hours, so h is a clear variable choice.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation.",
+      "student_html": "<p>A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation.</p>",
+      "answer": "Let m be movies; 6 + 4m = 30",
+      "solution_text": "The fixed fee is 6 and each movie adds 4, so total cost is 6+4m.",
+      "solution_html": "<p>The fixed fee is 6 and each movie adds 4, so total cost is 6+4m.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A skating rink charges a $6 entry fee plus $4 per hour. The total cost is $26. Define a variable for the unknown quantity."
+            "text": "A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "define variable h for number of hours"
+      "instantiation_summary": "equation context 1"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-02",
@@ -88,71 +85,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC02",
+        "i_can_id": "U1-S1.5-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Write an equation that matches a situation."
       },
       "supporting_i_cans": [],
       "evidence_job": "Write an equation that matches a situation.",
-      "student_action": "translate quantitative relationships from words into an equation",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "constructed_equation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-02",
       "source_map_record_id": "U1-S1.5-P1-INTRO-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A club charges $8 to join plus $3 per visit. A member has paid $29. Write an equation that represents the situation.",
-      "student_html": "<p>A club charges $8 to join plus $3 per visit. A member has paid $29. Write an equation that represents the situation.</p>",
-      "answer": "8+3v=29",
-      "solution_text": "The fixed amount is added to the per-unit amount times the unknown, giving 8+3v=29.",
-      "solution_html": "<p>The fixed amount is added to the per-unit amount times the unknown, giving 8+3v=29.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation.",
+      "student_html": "<p>A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation.</p>",
+      "answer": "Let d be miles; 5 + 3d = 26",
+      "solution_text": "The starting fee is 5 and each mile adds 3.",
+      "solution_html": "<p>The starting fee is 5 and each mile adds 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A club charges $8 to join plus $3 per visit. A member has paid $29. Write an equation that represents the situation."
+            "text": "A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "context-to-equation 8+3v=29"
+      "instantiation_summary": "equation context 2"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-03",
@@ -167,72 +155,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC03",
+        "i_can_id": "U1-S1.5-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Use equivalent steps to solve when needed."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use equivalent steps to solve an equation when needed.",
-      "student_action": "solve an equation using valid inverse operations",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
+      "evidence_job": "Use equivalent steps to solve when needed.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-03",
       "source_map_record_id": "U1-S1.5-P1-INTRO-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Solve the equation using equivalent steps.",
-      "student_html": "<p>Solve the equation using equivalent steps.</p><div class=\"equation-card\">\\[5+2m=19\\]</div>",
-      "answer": "m=7",
-      "solution_text": "Undo the fixed amount first, then divide by the coefficient of m. This gives m = 7.",
-      "solution_html": "<p>Undo the fixed amount first, then divide by the coefficient of m. This gives m = 7.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks.",
+      "student_html": "<p>You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks.</p>",
+      "answer": "5 notebooks",
+      "solution_text": "Let n be notebooks: 50-7n=15, so 7n=35 and n=5.",
+      "solution_html": "<p>Let n be notebooks: 50-7n=15, so 7n=35 and n=5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve the equation using equivalent steps."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "5+2m=19"
+            "text": "You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "solve contextual equation 5+2m=19"
+      "instantiation_summary": "equation context 3"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-04",
@@ -247,77 +225,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC04",
+        "i_can_id": "U1-S1.5-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Check and interpret a solution in context."
       },
       "supporting_i_cans": [],
       "evidence_job": "Check and interpret a solution in context.",
-      "student_action": "verify a solution and state what it means for the original quantities",
-      "question_structure_id": "VERIFY-REASONABLENESS-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-04",
       "source_map_record_id": "U1-S1.5-P1-INTRO-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A club charges $8 to join plus $3 per visit. A member has paid $29. A student says the solution is 7. Check the solution and interpret it in the situation.",
-      "student_html": "<p>A club charges $8 to join plus $3 per visit. A member has paid $29. A student says the solution is 7. Check the solution and interpret it in the situation.</p><div class=\"equation-card\">\\[8+3v=29\\]</div>",
-      "answer": "Yes. 7 is correct; it means number of visits = 7.",
-      "solution_text": "Substituting v = 7 makes the equation true. Therefore the solution means number of visits is 7.",
-      "solution_html": "<p>Substituting v = 7 makes the equation true. Therefore the solution means number of visits is 7.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase.",
+      "student_html": "<p>A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase.</p>",
+      "answer": "4 members per week",
+      "solution_text": "Let w be weekly increase: 18+4w=34, so 4w=16 and w=4.",
+      "solution_html": "<p>Let w be weekly increase: 18+4w=34, so 4w=16 and w=4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A club charges $8 to join plus $3 per visit. A member has paid $29. A student says the solution is 7. Check the solution and interpret it in the situation."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "8+3v=29"
+            "text": "A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "verify and interpret solution 7 for 8+3v=29"
+      "instantiation_summary": "equation context 4"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-05",
@@ -332,65 +295,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC01",
+        "i_can_id": "U1-S1.5-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Define a variable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Define a variable for an unknown quantity in a situation in a second representation or slightly less-scaffolded case.",
-      "student_action": "state what a variable represents with units or quantity meaning",
+      "evidence_job": "Define a variable.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "context",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-05",
       "source_map_record_id": "U1-S1.5-P1-INTRO-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A club charges $8 to join plus $3 per visit. A member has paid $29. Define a variable for the unknown quantity.",
-      "student_html": "<p>A club charges $8 to join plus $3 per visit. A member has paid $29. Define a variable for the unknown quantity.</p>",
-      "answer": "Let v = number of visits.",
-      "solution_text": "The unknown in the situation is number of visits, so v is a clear variable choice.",
-      "solution_html": "<p>The unknown in the situation is number of visits, so v is a clear variable choice.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months.",
+      "student_html": "<p>A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months.</p>",
+      "answer": "4 months",
+      "solution_text": "20+15m=80, so 15m=60 and m=4.",
+      "solution_html": "<p>20+15m=80, so 15m=60 and m=4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A club charges $8 to join plus $3 per visit. A member has paid $29. Define a variable for the unknown quantity."
+            "text": "A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "define variable v for number of visits"
+      "instantiation_summary": "equation context 5"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-06",
@@ -405,71 +365,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC02",
+        "i_can_id": "U1-S1.5-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Write an equation that matches a situation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Write an equation that matches a situation in a second representation or slightly less-scaffolded case.",
-      "student_action": "translate quantitative relationships from words into an equation",
+      "evidence_job": "Write an equation that matches a situation.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "constructed_equation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-06",
       "source_map_record_id": "U1-S1.5-P1-INTRO-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A fundraiser starts with $12 and earns $6 per item sold. The total is $42. Write an equation that represents the situation.",
-      "student_html": "<p>A fundraiser starts with $12 and earns $6 per item sold. The total is $42. Write an equation that represents the situation.</p>",
-      "answer": "12+6n=42",
-      "solution_text": "The fixed amount is added to the per-unit amount times the unknown, giving 12+6n=42.",
-      "solution_html": "<p>The fixed amount is added to the per-unit amount times the unknown, giving 12+6n=42.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup.",
+      "student_html": "<p>A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup.</p>",
+      "answer": "130 mL",
+      "solution_text": "750-5c=100, so 5c=650 and c=130.",
+      "solution_html": "<p>750-5c=100, so 5c=650 and c=130.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A fundraiser starts with $12 and earns $6 per item sold. The total is $42. Write an equation that represents the situation."
+            "text": "A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "context-to-equation 12+6n=42"
+      "instantiation_summary": "equation context 6"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-07",
@@ -484,72 +435,62 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC03",
+        "i_can_id": "U1-S1.5-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Use equivalent steps to solve when needed."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use equivalent steps to solve an equation when needed in a second representation or slightly less-scaffolded case.",
-      "student_action": "solve an equation using valid inverse operations",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Use equivalent steps to solve when needed.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-07",
       "source_map_record_id": "U1-S1.5-P1-INTRO-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Solve the equation using equivalent steps.",
-      "student_html": "<p>Solve the equation using equivalent steps.</p><div class=\"equation-card\">\\[12+6n=42\\]</div>",
-      "answer": "n=5",
-      "solution_text": "Undo the fixed amount first, then divide by the coefficient of n. This gives n = 5.",
-      "solution_html": "<p>Undo the fixed amount first, then divide by the coefficient of n. This gives n = 5.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve.",
+      "student_html": "<p>A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve.</p>",
+      "answer": "13 students",
+      "solution_text": "42-s=29, so s=13.",
+      "solution_html": "<p>42-s=29, so s=13.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve the equation using equivalent steps."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "12+6n=42"
+            "text": "A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "solve contextual equation 12+6n=42"
+      "instantiation_summary": "equation context 7"
     },
     {
       "design_slot_id": "U1-S1.5-P1-INTRO-08",
@@ -564,166 +505,65 @@
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.5-IC04",
+        "i_can_id": "U1-S1.5-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Check and interpret a solution in context."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check and interpret a solution in context in a second representation or slightly less-scaffolded case.",
-      "student_action": "verify a solution and state what it means for the original quantities",
-      "question_structure_id": "VERIFY-REASONABLENESS-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Check and interpret a solution in context.",
+      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.5-P1-INTRO-08",
       "source_map_record_id": "U1-S1.5-P1-INTRO-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A fundraiser starts with $12 and earns $6 per item sold. The total is $42. A student says the solution is 5. Check the solution and interpret it in the situation.",
-      "student_html": "<p>A fundraiser starts with $12 and earns $6 per item sold. The total is $42. A student says the solution is 5. Check the solution and interpret it in the situation.</p><div class=\"equation-card\">\\[12+6n=42\\]</div>",
-      "answer": "Yes. 5 is correct; it means number of items sold = 5.",
-      "solution_text": "Substituting n = 5 makes the equation true. Therefore the solution means number of items sold is 5.",
-      "solution_html": "<p>Substituting n = 5 makes the equation true. Therefore the solution means number of items sold is 5.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed.",
+      "student_html": "<p>A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed.</p>",
+      "answer": "7 days",
+      "solution_text": "72+24d=240, so 24d=168 and d=7.",
+      "solution_html": "<p>72+24d=240, so 24d=168 and d=7.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A fundraiser starts with $12 and earns $6 per item sold. The total is $42. A student says the solution is 5. Check the solution and interpret it in the situation."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "12+6n=42"
+            "text": "A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "verify and interpret solution 5 for 12+6n=42"
+      "instantiation_summary": "equation context 8"
     },
     {
       "design_slot_id": "U1-S1.5-P1-MASTERY-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC01",
-        "source_i_can_index": 1,
-        "text": "Use input/output language and ordered pairs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use input/output language and ordered pairs.",
-      "student_action": "identify input/output roles and record a corresponding ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-01",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The rule maps input x to output y. Find the output for x = 3 and write the result as an ordered pair.",
-      "student_html": "<p>The rule maps input x to output y. Find the output for \\(x=3\\) and write the result as an ordered pair.</p><div class=\"equation-card\">\\[y=3x+2\\]</div>",
-      "answer": "Output 11; (3, 11)",
-      "solution_text": "Substitute x = 3 to get y = 11. Ordered pairs are written (input, output), so the pair is (3, 11).",
-      "solution_html": "<p>Substitute x = 3 to get y = 11. Ordered pairs are written (input, output), so the pair is (3, 11).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "The rule maps input x to output y. Find the output for x = 3 and write the result as an ordered pair."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=3x+2"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
-      },
-      "instantiation_summary": "input-output pair for y=3x+2 at x=3"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-02",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.5",
@@ -741,66 +581,146 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Use a rule to find an output from an input.",
-      "student_action": "apply an input-output rule to compute an output",
+      "student_action": "Use a rule to compute an output.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-02",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to find the output when the input is -2.",
-      "student_html": "<p>Use the rule to find the output when the input is -2.</p><div class=\"equation-card\">\\[y=4x-1\\]</div>",
-      "answer": "-9",
-      "solution_text": "Substitute x = -2: y = 4(-2) -1 = -9.",
-      "solution_html": "<p>Substitute x = -2: y = 4(-2) -1 = -9.</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-01",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-01",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the output for input 6.",
+      "student_html": "<p>Use the rule to find the output when the input is 6.</p><div class=\"equation-card\">\\[y=3x-2\\]</div>",
+      "answer": "16",
+      "solution_text": "3(6)-2=16.",
+      "solution_html": "<p>3(6)-2=16.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to find the output when the input is -2."
+            "text": "Use the rule to find the output when the input is 6."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=4x-1"
+            "latex": "y=3x-2"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "rule output y=4x-1 at x=-2"
+      "instantiation_summary": "forward rule"
+    },
+    {
+      "design_slot_id": "U1-S1.5-P1-MASTERY-02",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.5",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG04",
+        "title": "Input / Output Rules",
+        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG04-IC01",
+        "source_i_can_index": 1,
+        "text": "Use input/output language and ordered pairs."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use input/output language and ordered pairs.",
+      "student_action": "Use a rule and record the result as an ordered pair.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "type": "mathjax_equation"
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation",
+          "context",
+          "signs",
+          "scale"
+        ],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
+        "forbidden": [
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
+        ]
+      },
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-02",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-02",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the ordered pair for x = -2.",
+      "student_html": "<p>For the rule shown, find the output when \\(x=-2\\) and write the result as an ordered pair.</p><div class=\"equation-card\">\\[y=2x+5\\]</div>",
+      "answer": "(-2, 1)",
+      "solution_text": "2(-2)+5=1, so the ordered pair is (-2, 1).",
+      "solution_html": "<p>2(-2)+5=1, so the ordered pair is (-2, 1).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "For the rule shown, find the output when x = -2 and write the result as an ordered pair."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=2x+5"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.8.0",
+        "graph_files": []
+      },
+      "instantiation_summary": "ordered pair from rule"
     },
     {
       "design_slot_id": "U1-S1.5-P1-MASTERY-03",
@@ -821,95 +741,66 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Find a missing input or output when enough information is given.",
-      "student_action": "work forward or backward through a rule to find a missing value",
+      "student_action": "Work backward from an output to find the input.",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.5-P1-MASTERY-03",
       "source_map_record_id": "U1-S1.5-P1-MASTERY-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table follows the rule. Find the missing input that produces output 7.",
-      "student_html": "<p>The table follows the rule. Find the missing input that produces output 7.</p><div class=\"equation-card\">\\[y=2x-1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>-1</td></tr><tr><td>?</td><td>7</td></tr><tr><td>3</td><td>5</td></tr></tbody></table>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the missing input.",
+      "student_html": "<p>For the rule shown, what input gives an output of 19?</p><div class=\"equation-card\">\\[y=4x+3\\]</div>",
       "answer": "4",
-      "solution_text": "Set 7 = 2x -1 and solve. The result is x = 4.",
-      "solution_html": "<p>Set 7 = 2x -1 and solve. The result is x = 4.</p>",
+      "solution_text": "Set 4x+3=19, so 4x=16 and x=4.",
+      "solution_html": "<p>Set 4x+3=19, so 4x=16 and x=4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table follows the rule. Find the missing input that produces output 7."
+            "text": "For the rule shown, what input gives an output of 19?"
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=2x-1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "0",
-                "-1"
-              ],
-              [
-                "?",
-                "7"
-              ],
-              [
-                "3",
-                "5"
-              ]
-            ]
+            "latex": "y=4x+3"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "missing table value for rule y=2x-1"
+      "instantiation_summary": "inverse input"
     },
     {
       "design_slot_id": "U1-S1.5-P1-MASTERY-04",
@@ -930,57 +821,59 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Use a rule to build or extend a table.",
-      "student_action": "apply a rule across multiple inputs to complete or extend a table",
+      "student_action": "Use a rule to complete a value table.",
       "question_structure_id": "TABLE-RECONSTRUCT-MISSING-CELLS-01",
-      "response_mode": "constructed_table",
-      "representation_mode": "table",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "answer-neutral table cells"
+          "type": "mathjax_equation"
+        },
+        {
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.5-P1-MASTERY-04",
       "source_map_record_id": "U1-S1.5-P1-MASTERY-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Complete the missing outputs in the table using the rule.",
-      "student_html": "<p>Complete the missing outputs in the table using the rule.</p><div class=\"equation-card\">\\[y=2x-1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>-3</td></tr><tr><td>0</td><td>-1</td></tr><tr><td>2</td><td>?</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>",
-      "answer": "3 and 7",
-      "solution_text": "Substitute x = 2 and x = 4 into the rule to obtain 3 and 7.",
-      "solution_html": "<p>Substitute x = 2 and x = 4 into the rule to obtain 3 and 7.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Complete the table.",
+      "student_html": "<p>Complete the missing outputs using the rule.</p><div class=\"equation-card\">\\[y=-2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>?</td></tr><tr><td>0</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></tbody></table>",
+      "answer": "5, 1, -5",
+      "solution_text": "Substitute each x-value into y=-2x+1: 5, 1, and -5.",
+      "solution_html": "<p>Substitute each x-value into y=-2x+1: 5, 1, and -5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Complete the missing outputs in the table using the rule."
+            "text": "Complete the missing outputs using the rule."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=2x-1"
+            "latex": "y=-2x+1"
           }
         },
         {
@@ -992,19 +885,15 @@
             ],
             "rows": [
               [
-                "-1",
-                "-3"
-              ],
-              [
-                "0",
-                "-1"
-              ],
-              [
-                "2",
+                -2,
                 "?"
               ],
               [
-                "4",
+                0,
+                "?"
+              ],
+              [
+                3,
                 "?"
               ]
             ]
@@ -1014,99 +903,13 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "extend table for y=2x-1"
+      "instantiation_summary": "table extension"
     },
     {
       "design_slot_id": "U1-S1.5-P1-MASTERY-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC01",
-        "source_i_can_index": 1,
-        "text": "Use input/output language and ordered pairs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use input/output language and ordered pairs with independently chosen or meaningfully varied values/representation.",
-      "student_action": "identify input/output roles and record a corresponding ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-05",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The rule maps input x to output y. Find the output for x = 1 and write the result as an ordered pair.",
-      "student_html": "<p>The rule maps input x to output y. Find the output for \\(x=1\\) and write the result as an ordered pair.</p><div class=\"equation-card\">\\[y=-3x+1\\]</div>",
-      "answer": "Output -2; (1, -2)",
-      "solution_text": "Substitute x = 1 to get y = -2. Ordered pairs are written (input, output), so the pair is (1, -2).",
-      "solution_html": "<p>Substitute x = 1 to get y = -2. Ordered pairs are written (input, output), so the pair is (1, -2).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "The rule maps input x to output y. Find the output for x = 1 and write the result as an ordered pair."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-3x+1"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
-      },
-      "instantiation_summary": "input-output pair for y=-3x+1 at x=1"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-06",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.5",
@@ -1123,70 +926,70 @@
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use a rule to find an output from an input with independently chosen or meaningfully varied values/representation.",
-      "student_action": "apply an input-output rule to compute an output",
+      "evidence_job": "Use a rule to find an output from an input.",
+      "student_action": "Evaluate a rule at a negative input.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-06",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to find the output when the input is 3.",
-      "student_html": "<p>Use the rule to find the output when the input is 3.</p><div class=\"equation-card\">\\[y=6x-2\\]</div>",
-      "answer": "16",
-      "solution_text": "Substitute x = 3: y = 6(3) -2 = 16.",
-      "solution_html": "<p>Substitute x = 3: y = 6(3) -2 = 16.</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-05",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-05",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the output.",
+      "student_html": "<p>Use the rule to find the output when \\(x=-4\\).</p><div class=\"equation-card\">\\[y=-3x+2\\]</div>",
+      "answer": "14",
+      "solution_text": "-3(-4)+2=12+2=14.",
+      "solution_html": "<p>-3(-4)+2=12+2=14.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to find the output when the input is 3."
+            "text": "Use the rule to find the output when x = -4."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=6x-2"
+            "latex": "y=-3x+2"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "rule output y=6x-2 at x=3"
+      "instantiation_summary": "negative input"
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-07",
+      "design_slot_id": "U1-S1.5-P1-MASTERY-06",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.5",
@@ -1203,84 +1006,81 @@
         "text": "Find a missing input or output when enough information is given."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Find a missing input or output when enough information is given with independently chosen or meaningfully varied values/representation.",
-      "student_action": "work forward or backward through a rule to find a missing value",
+      "evidence_job": "Find a missing input or output when enough information is given.",
+      "student_action": "Find a missing output from a rule and table.",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-07",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table follows the rule. Find the missing output.",
-      "student_html": "<p>The table follows the rule. Find the missing output.</p><div class=\"equation-card\">\\[y=-2x+5\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>2</td><td>?</td></tr><tr><td>3</td><td>-1</td></tr></tbody></table>",
-      "answer": "1",
-      "solution_text": "Substitute x = 2: y = -2(2) +5 = 1.",
-      "solution_html": "<p>Substitute x = 2: y = -2(2) +5 = 1.</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-06",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-06",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the missing output.",
+      "student_html": "<p>Use the rule to fill the missing table entry.</p><div class=\"equation-card\">\\[y=x-7\\]</div><table class=\"values\"><thead><tr><th>input x</th><th>output y</th></tr></thead><tbody><tr><td>2</td><td>-5</td></tr><tr><td>8</td><td>1</td></tr><tr><td>11</td><td>?</td></tr></tbody></table>",
+      "answer": "4",
+      "solution_text": "11-7=4.",
+      "solution_html": "<p>11-7=4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table follows the rule. Find the missing output."
+            "text": "Use the rule to fill the missing table entry."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=-2x+5"
+            "latex": "y=x-7"
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "x",
-              "y"
+              "input x",
+              "output y"
             ],
             "rows": [
               [
-                "0",
-                "5"
+                2,
+                -5
               ],
               [
-                "2",
+                8,
+                1
+              ],
+              [
+                11,
                 "?"
-              ],
-              [
-                "3",
-                "-1"
               ]
             ]
           }
@@ -1289,13 +1089,13 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "missing table value for rule y=-2x+5"
+      "instantiation_summary": "missing output"
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-08",
+      "design_slot_id": "U1-S1.5-P1-MASTERY-07",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.5",
@@ -1312,58 +1112,60 @@
         "text": "Use a rule to build or extend a table."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use a rule to build or extend a table with independently chosen or meaningfully varied values/representation.",
-      "student_action": "apply a rule across multiple inputs to complete or extend a table",
+      "evidence_job": "Use a rule to build or extend a table.",
+      "student_action": "Extend a table consistently with the rule.",
       "question_structure_id": "TABLE-RECONSTRUCT-MISSING-CELLS-01",
-      "response_mode": "constructed_table",
-      "representation_mode": "table",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "answer-neutral table cells"
+          "type": "mathjax_equation"
+        },
+        {
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-08",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Complete the missing outputs in the table using the rule.",
-      "student_html": "<p>Complete the missing outputs in the table using the rule.</p><div class=\"equation-card\">\\[y=-2x+5\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>7</td></tr><tr><td>0</td><td>5</td></tr><tr><td>2</td><td>?</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>",
-      "answer": "1 and -3",
-      "solution_text": "Substitute x = 2 and x = 4 into the rule to obtain 1 and -3.",
-      "solution_html": "<p>Substitute x = 2 and x = 4 into the rule to obtain 1 and -3.</p>",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-07",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-07",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Extend the table.",
+      "student_html": "<p>Use the rule to extend the table by finding the outputs for \\(x=4\\) and \\(x=7\\).</p><div class=\"equation-card\">\\[y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>4</td><td>?</td></tr><tr><td>7</td><td>?</td></tr></tbody></table>",
+      "answer": "9 and 15",
+      "solution_text": "2(4)+1=9 and 2(7)+1=15.",
+      "solution_html": "<p>2(4)+1=9 and 2(7)+1=15.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Complete the missing outputs in the table using the rule."
+            "text": "Use the rule to extend the table by finding the outputs for x = 4 and x = 7."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=-2x+5"
+            "latex": "y=2x+1"
           }
         },
         {
@@ -1375,19 +1177,19 @@
             ],
             "rows": [
               [
-                "-1",
-                "7"
+                1,
+                3
               ],
               [
-                "0",
-                "5"
+                2,
+                5
               ],
               [
-                "2",
+                4,
                 "?"
               ],
               [
-                "4",
+                7,
                 "?"
               ]
             ]
@@ -1397,10 +1199,90 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "extend table for y=-2x+5"
+      "instantiation_summary": "extend table"
+    },
+    {
+      "design_slot_id": "U1-S1.5-P1-MASTERY-08",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.5",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG04",
+        "title": "Input / Output Rules",
+        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG04-IC01",
+        "source_i_can_index": 1,
+        "text": "Use input/output language and ordered pairs."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use input/output language and ordered pairs.",
+      "student_action": "Interpret input and output values in a rule.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "type": "mathjax_equation"
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation",
+          "context",
+          "signs",
+          "scale"
+        ],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
+        "forbidden": [
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
+        ]
+      },
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
+      "item_id": "U1-S1.5-P1-MASTERY-08",
+      "source_map_record_id": "U1-S1.5-P1-MASTERY-08",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the input-output pair.",
+      "student_html": "<p>For the rule shown, the input is 5. Find the output and write the input-output pair.</p><div class=\"equation-card\">\\[y=10-x\\]</div>",
+      "answer": "(5, 5)",
+      "solution_text": "10-5=5, so input 5 maps to output 5.",
+      "solution_html": "<p>10-5=5, so input 5 maps to output 5.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "For the rule shown, the input is 5. Find the output and write the input-output pair."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=10-x"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.8.0",
+        "graph_files": []
+      },
+      "instantiation_summary": "input-output pair"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-01",
@@ -1415,64 +1297,65 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC01",
+        "i_can_id": "U2-MG01-IC01",
         "source_i_can_index": 1,
-        "text": "Compare rates or patterns across two relationships."
+        "text": "Compare two relationships shown in different representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare rates or patterns across two relationships.",
-      "student_action": "extract comparable rate or pattern evidence from two representations",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Compare two relationships shown in different representations.",
+      "student_action": "Compare two relationships using their outputs at a common input.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-01",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.",
-      "student_html": "<p>Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>9</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=-2x+6\\]</div>",
-      "answer": "A has rate 3; B has rate -2.",
-      "solution_text": "In A, the output changes by 3 for each 1-unit increase in x. In B, the coefficient of x is -2. A is greater.",
-      "solution_html": "<p>In A, the output changes by 3 for each 1-unit increase in x. In B, the coefficient of x is -2. A is greater.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare the outputs at x = 4.",
+      "student_html": "<p>Relationship A is shown by the rule and Relationship B by the table. Which has the greater output when \\(x=4\\)?</p><div class=\"equation-card\">\\[A: y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>12</td></tr></tbody></table>",
+      "answer": "Relationship B",
+      "solution_text": "A gives 9; B gives 12, so B is greater.",
+      "solution_html": "<p>A gives 9; B gives 12, so B is greater.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change."
+            "text": "Relationship A is shown by the rule and Relationship B by the table. Which has the greater output when x = 4?"
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "A: y=2x+1"
           }
         },
         {
@@ -1480,42 +1363,32 @@
           "data": {
             "headers": [
               "x",
-              "A(x)"
+              "B output"
             ],
             "rows": [
               [
-                "0",
-                "0"
+                0,
+                4
               ],
               [
-                "1",
-                "3"
+                2,
+                8
               ],
               [
-                "2",
-                "6"
-              ],
-              [
-                "3",
-                "9"
+                4,
+                12
               ]
             ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=-2x+6"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare rates 3 and -2"
+      "instantiation_summary": "equation vs table comparison"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-02",
@@ -1530,64 +1403,56 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC02",
+        "i_can_id": "U2-MG01-IC02",
         "source_i_can_index": 2,
-        "text": "Compare starting values or intercepts when they are meaningful."
+        "text": "Use values, rates, starting values, or patterns as evidence."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare starting values or intercepts when meaningful.",
-      "student_action": "identify comparable starting features and state which is greater or different",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
+      "student_action": "Compare constant rates from two tables.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-02",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Compare the starting values of the two relationships, using x = 0 as the starting input.",
-      "student_html": "<p>Compare the starting values of the two relationships, using \\(x=0\\) as the starting input.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>10</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=3x+1\\]</div>",
-      "answer": "A starts at -2; B starts at 1.",
-      "solution_text": "For A, the table shows A(0) = -2. For B, the constant term gives B(0) = 1.",
-      "solution_html": "<p>For A, the table shows A(0) = -2. For B, the constant term gives B(0) = 1.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare the rates.",
+      "student_html": "<p>Which relationship changes faster? Use rate as evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>A</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>2</td><td>5</td></tr><tr><td>2</td><td>8</td><td>9</td></tr><tr><td>4</td><td>14</td><td>13</td></tr></tbody></table>",
+      "answer": "Relationship A",
+      "solution_text": "A changes 6 over 2, rate 3. B changes 4 over 2, rate 2.",
+      "solution_html": "<p>A changes 6 over 2, rate 3. B changes 4 over 2, rate 2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Compare the starting values of the two relationships, using x = 0 as the starting input."
+            "text": "Which relationship changes faster? Use rate as evidence."
           }
         },
         {
@@ -1595,42 +1460,36 @@
           "data": {
             "headers": [
               "x",
-              "A(x)"
+              "A",
+              "B"
             ],
             "rows": [
               [
-                "0",
-                "-2"
+                0,
+                2,
+                5
               ],
               [
-                "1",
-                "2"
+                2,
+                8,
+                9
               ],
               [
-                "2",
-                "6"
-              ],
-              [
-                "3",
-                "10"
+                4,
+                14,
+                13
               ]
             ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=3x+1"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare starting values -2 and 1"
+      "instantiation_summary": "two-table rate compare"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-03",
@@ -1645,105 +1504,72 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC03",
+        "i_can_id": "U2-MG01-IC03",
         "source_i_can_index": 3,
-        "text": "Compare outputs for a specified input."
+        "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare outputs for a specified input.",
-      "student_action": "evaluate or read both relationships at the same input and compare outputs",
+      "evidence_job": "Explain which relationship is greater, faster, or starts higher when the question asks.",
+      "student_action": "Compare starting values from equations.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-03",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Compare the outputs of the two relationships when x = 4.",
-      "student_html": "<p>Compare the outputs of the two relationships when \\(x=4\\).</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>3</td></tr><tr><td>4</td><td>1</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=2x-1\\]</div>",
-      "answer": "A(4) = 1; B(4) = 7.",
-      "solution_text": "Read or compute A(4) = 1. Substitute x = 4 into B to get 7. B is larger by 6.",
-      "solution_html": "<p>Read or compute A(4) = 1. Substitute x = 4 into B to get 7. B is larger by 6.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare starting values.",
+      "student_html": "<p>Which relationship starts higher when \\(x=0\\)?</p><div class=\"equation-card\">\\[A: y=4x-2\\qquad B: y=x+5\\]</div>",
+      "answer": "Relationship B",
+      "solution_text": "At x=0, A=-2 and B=5.",
+      "solution_html": "<p>At x=0, A=-2 and B=5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Compare the outputs of the two relationships when x = 4."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A(x)"
-            ],
-            "rows": [
-              [
-                "0",
-                "5"
-              ],
-              [
-                "1",
-                "4"
-              ],
-              [
-                "2",
-                "3"
-              ],
-              [
-                "4",
-                "1"
-              ]
-            ]
+            "text": "Which relationship starts higher when x = 0?"
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "B(x)=2x-1"
+            "latex": "A: y=4x-2\\qquad B: y=x+5"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare outputs at x=4: 1 vs 7"
+      "instantiation_summary": "equation starts compare"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-04",
@@ -1758,64 +1584,65 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC04",
+        "i_can_id": "U2-MG01-IC04",
         "source_i_can_index": 4,
-        "text": "Support a comparison with evidence from each representation."
+        "text": "Support a comparison with information from the representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Support a relationship comparison with evidence from each representation.",
-      "student_action": "make a comparison claim and cite quantitative evidence from both sources",
-      "question_structure_id": "MODEL-COMPARE-TWO-LINEAR-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "student_action": "Use two pieces of evidence to compare relationships.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "mixed_table_equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "mathjax_equation"
         },
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-04",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.",
-      "student_html": "<p>Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>2</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=2x-1\\]</div>",
-      "answer": "B.",
-      "solution_text": "From A's table, the change in output per 1 input is -1. In B's equation, the coefficient of x is 2. Comparing -1 and 2 supports the conclusion.",
-      "solution_html": "<p>From A&#x27;s table, the change in output per 1 input is -1. In B&#x27;s equation, the coefficient of x is 2. Comparing -1 and 2 supports the conclusion.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare rate and starting value.",
+      "student_html": "<p>Compare the two relationships. State which has the greater rate and which has the greater starting value.</p><div class=\"equation-card\">\\[A: y=3x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>10</td></tr></tbody></table>",
+      "answer": "A has greater rate; B has greater starting value",
+      "solution_text": "A rate=3, start=1. B rate=2, start=6.",
+      "solution_html": "<p>A rate=3, start=1. B rate=2, start=6.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation."
+            "text": "Compare the two relationships. State which has the greater rate and which has the greater starting value."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "A: y=3x+1"
           }
         },
         {
@@ -1823,42 +1650,32 @@
           "data": {
             "headers": [
               "x",
-              "A(x)"
+              "B"
             ],
             "rows": [
               [
-                "0",
-                "5"
+                0,
+                6
               ],
               [
-                "1",
-                "4"
+                1,
+                8
               ],
               [
-                "2",
-                "3"
-              ],
-              [
-                "3",
-                "2"
+                2,
+                10
               ]
             ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=2x-1"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "evidence-based comparison rates -1,2"
+      "instantiation_summary": "rate and start comparison"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-05",
@@ -1873,107 +1690,62 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC01",
+        "i_can_id": "U2-MG01-IC01",
         "source_i_can_index": 1,
-        "text": "Compare rates or patterns across two relationships."
+        "text": "Compare two relationships shown in different representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare rates or patterns across two relationships with a new representation or context at Review demand.",
-      "student_action": "extract comparable rate or pattern evidence from two representations",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "review_application",
+      "evidence_job": "Compare two relationships shown in different representations.",
+      "student_action": "Compare equation and context at a specific input.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-05",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.",
-      "student_html": "<p>Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>10</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=3x+1\\]</div>",
-      "answer": "A has rate 4; B has rate 3.",
-      "solution_text": "In A, the output changes by 4 for each 1-unit increase in x. In B, the coefficient of x is 3. A is greater.",
-      "solution_html": "<p>In A, the output changes by 4 for each 1-unit increase in x. In B, the coefficient of x is 3. A is greater.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare costs at 4 hours.",
+      "student_html": "<p>Plan A costs \\(C=5\\)h + 10 dollars for h hours. Plan B costs $28 for 4 hours. Which costs less for 4 hours?</p>",
+      "answer": "Plan B",
+      "solution_text": "Plan A costs 5(4)+10=30; Plan B costs 28.",
+      "solution_html": "<p>Plan A costs 5(4)+10=30; Plan B costs 28.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A(x)"
-            ],
-            "rows": [
-              [
-                "0",
-                "-2"
-              ],
-              [
-                "1",
-                "2"
-              ],
-              [
-                "2",
-                "6"
-              ],
-              [
-                "3",
-                "10"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=3x+1"
+            "text": "Plan A costs C = 5h + 10 dollars for h hours. Plan B costs $28 for 4 hours. Which costs less for 4 hours?"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare rates 4 and 3"
+      "instantiation_summary": "context equation compare"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-06",
@@ -1988,107 +1760,62 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC02",
+        "i_can_id": "U2-MG01-IC02",
         "source_i_can_index": 2,
-        "text": "Compare starting values or intercepts when they are meaningful."
+        "text": "Use values, rates, starting values, or patterns as evidence."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare starting values or intercepts when meaningful with a new representation or context at Review demand.",
-      "student_action": "identify comparable starting features and state which is greater or different",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "review_application",
+      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
+      "student_action": "Compare rates from context descriptions.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-06",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Compare the starting values of the two relationships, using x = 0 as the starting input.",
-      "student_html": "<p>Compare the starting values of the two relationships, using \\(x=0\\) as the starting input.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=1x+4\\]</div>",
-      "answer": "A starts at 1; B starts at 4.",
-      "solution_text": "For A, the table shows A(0) = 1. For B, the constant term gives B(0) = 4.",
-      "solution_html": "<p>For A, the table shows A(0) = 1. For B, the constant term gives B(0) = 4.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare constant rates.",
+      "student_html": "<p>Runner A travels 9 miles in 1.5 hours at a constant rate. Runner B travels 10 miles in 2 hours at a constant rate. Who is faster?</p>",
+      "answer": "Runner A",
+      "solution_text": "A rate=6 mph; B rate=5 mph.",
+      "solution_html": "<p>A rate=6 mph; B rate=5 mph.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Compare the starting values of the two relationships, using x = 0 as the starting input."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A(x)"
-            ],
-            "rows": [
-              [
-                "0",
-                "1"
-              ],
-              [
-                "1",
-                "3"
-              ],
-              [
-                "2",
-                "5"
-              ],
-              [
-                "3",
-                "7"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=1x+4"
+            "text": "Runner A travels 9 miles in 1.5 hours at a constant rate. Runner B travels 10 miles in 2 hours at a constant rate. Who is faster?"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare starting values 1 and 4"
+      "instantiation_summary": "context rate compare"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-07",
@@ -2103,105 +1830,72 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC03",
+        "i_can_id": "U2-MG01-IC03",
         "source_i_can_index": 3,
-        "text": "Compare outputs for a specified input."
+        "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Compare outputs for a specified input with a new representation or context at Review demand.",
-      "student_action": "evaluate or read both relationships at the same input and compare outputs",
+      "evidence_job": "Explain which relationship is greater, faster, or starts higher when the question asks.",
+      "student_action": "Compare outputs from two rules.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-07",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Compare the outputs of the two relationships when x = 3.",
-      "student_html": "<p>Compare the outputs of the two relationships when \\(x=3\\).</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>9</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=-2x+6\\]</div>",
-      "answer": "A(3) = 9; B(3) = 0.",
-      "solution_text": "Read or compute A(3) = 9. Substitute x = 3 into B to get 0. A is larger by 9.",
-      "solution_html": "<p>Read or compute A(3) = 9. Substitute x = 3 into B to get 0. A is larger by 9.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare outputs at x=-2.",
+      "student_html": "<p>At \\(x=-2\\), which relationship has the greater output?</p><div class=\"equation-card\">\\[A: y=-x+4\\qquad B: y=2x+7\\]</div>",
+      "answer": "Relationship A",
+      "solution_text": "A=6 and B=3.",
+      "solution_html": "<p>A=6 and B=3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Compare the outputs of the two relationships when x = 3."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A(x)"
-            ],
-            "rows": [
-              [
-                "0",
-                "0"
-              ],
-              [
-                "1",
-                "3"
-              ],
-              [
-                "2",
-                "6"
-              ],
-              [
-                "3",
-                "9"
-              ]
-            ]
+            "text": "At x = -2, which relationship has the greater output?"
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "B(x)=-2x+6"
+            "latex": "A: y=-x+4\\qquad B: y=2x+7"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "compare outputs at x=3: 9 vs 0"
+      "instantiation_summary": "equation output compare"
     },
     {
       "design_slot_id": "U1-S1.5-P1-REVIEW-08",
@@ -2216,64 +1910,56 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-RIC04",
+        "i_can_id": "U2-MG01-IC04",
         "source_i_can_index": 4,
-        "text": "Support a comparison with evidence from each representation."
+        "text": "Support a comparison with information from the representations."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Support a relationship comparison with evidence from each representation with a new representation or context at Review demand.",
-      "student_action": "make a comparison claim and cite quantitative evidence from both sources",
-      "question_structure_id": "MODEL-COMPARE-TWO-LINEAR-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "student_action": "Make and support a comparison from table data.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.5-P1-REVIEW-08",
       "source_map_record_id": "U1-S1.5-P1-REVIEW-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.",
-      "student_html": "<p>Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=1x+4\\]</div>",
-      "answer": "A.",
-      "solution_text": "From A's table, the change in output per 1 input is 2. In B's equation, the coefficient of x is 1. Comparing 2 and 1 supports the conclusion.",
-      "solution_html": "<p>From A&#x27;s table, the change in output per 1 input is 2. In B&#x27;s equation, the coefficient of x is 1. Comparing 2 and 1 supports the conclusion.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Compare growth rates.",
+      "student_html": "<p>Which relationship grows faster? Cite two intervals from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>A</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>1</td><td>5</td><td>5</td></tr><tr><td>2</td><td>9</td><td>8</td></tr><tr><td>3</td><td>13</td><td>11</td></tr></tbody></table>",
+      "answer": "Relationship A",
+      "solution_text": "A increases by 4 each step; B increases by 3 each step.",
+      "solution_html": "<p>A increases by 4 each step; B increases by 3 each step.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation."
+            "text": "Which relationship grows faster? Cite two intervals from the table."
           }
         },
         {
@@ -2281,42 +1967,41 @@
           "data": {
             "headers": [
               "x",
-              "A(x)"
+              "A",
+              "B"
             ],
             "rows": [
               [
-                "0",
-                "1"
+                0,
+                1,
+                2
               ],
               [
-                "1",
-                "3"
+                1,
+                5,
+                5
               ],
               [
-                "2",
-                "5"
+                2,
+                9,
+                8
               ],
               [
-                "3",
-                "7"
+                3,
+                13,
+                11
               ]
             ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B(x)=1x+4"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "evidence-based comparison rates 2,1"
+      "instantiation_summary": "table growth compare"
     }
   ]
 }
