@@ -3,19 +3,19 @@
   "section": "1.4",
   "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
   "shared_stimulus": {
-    "student_text": "Study the expression as a structure made of terms, coefficients, and grouped factors.",
-    "student_html": "<p>Use the same expression for all four parts.</p><div class=\"equation-card\">\\[3(2x-5)+4x+7\\]</div>",
+    "student_text": "Two students rewrote the same expression in different ways.",
+    "student_html": "<div class=\"equation-card\">\\[3(x+4)+2x\\]</div><p>Student A writes 5x + 12. Student B writes 5x + 4.</p>",
     "content_blocks": [
-      {
-        "type": "prose",
-        "data": {
-          "text": "Use the same expression for all four parts."
-        }
-      },
       {
         "type": "equation",
         "data": {
-          "latex": "3(2x-5)+4x+7"
+          "latex": "3(x+4)+2x"
+        }
+      },
+      {
+        "type": "prose",
+        "data": {
+          "text": "Student A writes 5x + 12. Student B writes 5x + 4."
         }
       }
     ],
@@ -35,70 +35,70 @@
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.4-IC01",
+        "i_can_id": "U1-S1.4-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Identify terms, coefficients, and factors."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preview identify terms, coefficients, and factors using one shared section stimulus without requiring formal mastery.",
-      "student_action": "notice and identify",
+      "evidence_job": "Identify terms, coefficients, and factors.",
+      "student_action": "Respond to Part A using the shared stimulus and prior knowledge.",
       "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "shared_stimulus",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "shared_stimulus",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS"
         }
       ],
-      "difficulty_intent": "preview_reasoning",
+      "difficulty_intent": "preview",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "wtc_preview",
-      "slot_role": "wtc_part_A",
+      "security_role": "instructional_preview",
+      "slot_role": "part_a",
       "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
       "part_label": "Part A",
       "wtc_id": "U1-S1.4-WTC",
-      "family_id": "U1-S1.4-WTC-FAMILY",
       "item_id": "U1-S1.4-WTC-A",
       "source_map_record_id": "U1-S1.4-WTC-A",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Identify the coefficient of x inside the parentheses and the factor multiplying the parentheses.",
-      "student_html": "<p>Identify the coefficient of x inside the parentheses and the factor multiplying the parentheses.</p>",
-      "answer": "Coefficient 2; factor 3.",
-      "solution_text": "Inside the group, 2 multiplies x. Outside the group, 3 multiplies the entire quantity.",
-      "solution_html": "<p>Inside the group, 2 multiplies x. Outside the group, 3 multiplies the entire quantity.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "What part of the original expression should be handled first if you expand it?",
+      "student_html": "<p>What part of the original expression should be handled first if you expand it?</p>",
+      "answer": "Distribute 3 to both terms inside the parentheses.",
+      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
+      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Identify the coefficient of x inside the parentheses and the factor multiplying the parentheses."
+            "text": "What part of the original expression should be handled first if you expand it?"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.4 terms coefficients factors"
+      "instantiation_summary": "WTC 1.4 Part A"
     },
     {
       "design_slot_id": "U1-S1.4-WTC-B",
@@ -113,70 +113,70 @@
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.4-IC02",
+        "i_can_id": "U1-S1.4-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Substitute values into an expression."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preview substitute values into an expression using one shared section stimulus without requiring formal mastery.",
-      "student_action": "attempt a representation or calculation",
+      "evidence_job": "Substitute values into an expression.",
+      "student_action": "Respond to Part B using the shared stimulus and prior knowledge.",
       "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "shared_stimulus",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "shared_stimulus",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS"
         }
       ],
-      "difficulty_intent": "preview_reasoning",
+      "difficulty_intent": "preview",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "wtc_preview",
-      "slot_role": "wtc_part_B",
+      "security_role": "instructional_preview",
+      "slot_role": "part_b",
       "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
       "part_label": "Part B",
       "wtc_id": "U1-S1.4-WTC",
-      "family_id": "U1-S1.4-WTC-FAMILY",
       "item_id": "U1-S1.4-WTC-B",
       "source_map_record_id": "U1-S1.4-WTC-B",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression when x = 2.",
-      "student_html": "<p>Evaluate the expression when \\(x=2\\).</p>",
-      "answer": "12",
-      "solution_text": "3(2(2)-5)+4(2)+7 = 3(-1)+8+7 = 12.",
-      "solution_html": "<p>3(2(2)-5)+4(2)+7 = 3(-1)+8+7 = 12.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Which student result seems more plausible? Explain without doing every step if you can.",
+      "student_html": "<p>Which student result seems more plausible? Explain without doing every step if you can.</p>",
+      "answer": "Student A",
+      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
+      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression when x = 2."
+            "text": "Which student result seems more plausible? Explain without doing every step if you can."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.4 substitution"
+      "instantiation_summary": "WTC 1.4 Part B"
     },
     {
       "design_slot_id": "U1-S1.4-WTC-C",
@@ -191,70 +191,70 @@
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.4-IC03",
+        "i_can_id": "U1-S1.4-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Combine like terms."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preview combine like terms using one shared section stimulus without requiring formal mastery.",
-      "student_action": "compare or test a feature",
+      "evidence_job": "Combine like terms.",
+      "student_action": "Respond to Part C using the shared stimulus and prior knowledge.",
       "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "shared_stimulus",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "shared_stimulus",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS"
         }
       ],
-      "difficulty_intent": "preview_reasoning",
+      "difficulty_intent": "preview",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "wtc_preview",
-      "slot_role": "wtc_part_C",
+      "security_role": "instructional_preview",
+      "slot_role": "part_c",
       "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
       "part_label": "Part C",
       "wtc_id": "U1-S1.4-WTC",
-      "family_id": "U1-S1.4-WTC-FAMILY",
       "item_id": "U1-S1.4-WTC-C",
       "source_map_record_id": "U1-S1.4-WTC-C",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "After distributing, which terms are like terms and can be combined?",
-      "student_html": "<p>After distributing, which terms are like terms and can be combined?</p>",
-      "answer": "6x and 4x; -15 and 7.",
-      "solution_text": "Distributing gives 6x - 15 + 4x + 7. The variable terms combine with each other, and the constants combine with each other.",
-      "solution_html": "<p>Distributing gives 6x - 15 + 4x + 7. The variable terms combine with each other, and the constants combine with each other.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Rewrite the original expression in an equivalent simplified form.",
+      "student_html": "<p>Rewrite the original expression in an equivalent simplified form.</p>",
+      "answer": "5x + 12",
+      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
+      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "After distributing, which terms are like terms and can be combined?"
+            "text": "Rewrite the original expression in an equivalent simplified form."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.4 combine like terms"
+      "instantiation_summary": "WTC 1.4 Part C"
     },
     {
       "design_slot_id": "U1-S1.4-WTC-D",
@@ -269,70 +269,70 @@
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.4-IC04",
+        "i_can_id": "U1-S1.4-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Use the distributive property correctly."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Preview use the distributive property correctly using one shared section stimulus without requiring formal mastery.",
-      "student_action": "explain a prediction or conclusion with evidence",
+      "evidence_job": "Use the distributive property correctly.",
+      "student_action": "Respond to Part D using the shared stimulus and prior knowledge.",
       "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "shared_stimulus",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "shared_stimulus",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS"
         }
       ],
-      "difficulty_intent": "preview_reasoning",
+      "difficulty_intent": "preview",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "wtc_preview",
-      "slot_role": "wtc_part_D",
+      "security_role": "instructional_preview",
+      "slot_role": "part_d",
       "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
       "part_label": "Part D",
       "wtc_id": "U1-S1.4-WTC",
-      "family_id": "U1-S1.4-WTC-FAMILY",
       "item_id": "U1-S1.4-WTC-D",
       "source_map_record_id": "U1-S1.4-WTC-D",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the distributive property and simplify the expression.",
-      "student_html": "<p>Use the distributive property and simplify the expression.</p>",
-      "answer": "10x - 8",
-      "solution_text": "3(2x-5)=6x-15. Then 6x+4x=10x and -15+7=-8.",
-      "solution_html": "<p>3(2x-5)=6x-15. Then 6x+4x=10x and -15+7=-8.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Choose a value of x and describe how substitution could check your simplified expression.",
+      "student_html": "<p>Choose a value of x and describe how substitution could check your simplified expression.</p>",
+      "answer": "Example x=2: original and simplified form should both equal 22.",
+      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
+      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the distributive property and simplify the expression."
+            "text": "Choose a value of x and describe how substitution could check your simplified expression."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.4 distribute and simplify"
+      "instantiation_summary": "WTC 1.4 Part D"
     }
   ]
 }

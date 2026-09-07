@@ -15,71 +15,89 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC01",
+        "i_can_id": "U1-S1.2-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Identify the input and output in a relationship."
       },
       "supporting_i_cans": [],
       "evidence_job": "Identify the input and output in a relationship.",
-      "student_action": "identify which quantity is input and which is output",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "student_action": "Identify input and output values.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-01",
       "source_map_record_id": "U1-S1.2-P1-INTRO-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A candle's remaining height is recorded as time passes. Identify the input quantity and the output quantity.",
-      "student_html": "<p>A candle&#x27;s remaining height is recorded as time passes. Identify the input quantity and the output quantity.</p>",
-      "answer": "Input: time. Output: remaining height.",
-      "solution_text": "The input is the quantity chosen or controlled first (time); the output is the quantity that depends on it (remaining height).",
-      "solution_html": "<p>The input is the quantity chosen or controlled first (time); the output is the quantity that depends on it (remaining height).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify the input and output.",
+      "student_html": "<p>In the table, what is the input and what is the corresponding output in the row containing input 4?</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>4</td><td>9</td></tr><tr><td>6</td><td>13</td></tr></tbody></table>",
+      "answer": "input 4; output 9",
+      "solution_text": "The row pairs input 4 with output 9.",
+      "solution_html": "<p>The row pairs input 4 with output 9.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A candle's remaining height is recorded as time passes. Identify the input quantity and the output quantity."
+            "text": "In the table, what is the input and what is the corresponding output in the row containing input 4?"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "input",
+              "output"
+            ],
+            "rows": [
+              [
+                1,
+                3
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                6,
+                13
+              ]
+            ]
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "input/output identification: time->remaining height"
+      "instantiation_summary": "input-output identification"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-02",
@@ -94,72 +112,72 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC02",
+        "i_can_id": "U1-S1.2-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Use a rule to find outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use an input-output rule to find outputs from given inputs.",
-      "student_action": "substitute inputs into a rule and compute outputs",
+      "evidence_job": "Use a rule to find outputs.",
+      "student_action": "Use an input-output rule to compute an output.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-02",
       "source_map_record_id": "U1-S1.2-P1-INTRO-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to find the output when the input is 4.",
-      "student_html": "<p>Use the rule to find the output when the input is 4.</p><div class=\"equation-card\">\\[y=3x+2\\]</div>",
-      "answer": "14",
-      "solution_text": "Substitute x = 4: y = 3(4) +2 = 14.",
-      "solution_html": "<p>Substitute x = 4: y = 3(4) +2 = 14.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the output.",
+      "student_html": "<p>Use the rule to find the output when the input is 5.</p><div class=\"equation-card\">\\[y=2x+1\\]</div>",
+      "answer": "11",
+      "solution_text": "2(5)+1=11.",
+      "solution_html": "<p>2(5)+1=11.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to find the output when the input is 4."
+            "text": "Use the rule to find the output when the input is 5."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=3x+2"
+            "latex": "y=2x+1"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "rule output y=3x+2 at x=4"
+      "instantiation_summary": "rule output"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-03",
@@ -174,56 +192,56 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC03",
+        "i_can_id": "U1-S1.2-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Write ordered pairs from inputs and outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Write ordered pairs from matched inputs and outputs.",
-      "student_action": "pair each input with its corresponding output in correct order",
+      "evidence_job": "Write ordered pairs from inputs and outputs.",
+      "student_action": "Write table rows as ordered pairs.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-03",
       "source_map_record_id": "U1-S1.2-P1-INTRO-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Write the table as a set of ordered pairs.",
-      "student_html": "<p>Write the table as a set of ordered pairs.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>-4</td><td>6</td></tr><tr><td>1</td><td>-2</td></tr><tr><td>3</td><td>4</td></tr></tbody></table>",
-      "answer": "(-4, 6), (1, -2), (3, 4)",
-      "solution_text": "Each ordered pair is written as (input, output), using each table row in order.",
-      "solution_html": "<p>Each ordered pair is written as (input, output), using each table row in order.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write the ordered pairs.",
+      "student_html": "<p>Write the three rows as ordered pairs.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>-2</td><td>5</td></tr><tr><td>0</td><td>1</td></tr><tr><td>3</td><td>7</td></tr></tbody></table>",
+      "answer": "(-2,5), (0,1), (3,7)",
+      "solution_text": "Each input-output row becomes (input, output).",
+      "solution_html": "<p>Each input-output row becomes (input, output).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Write the table as a set of ordered pairs."
+            "text": "Write the three rows as ordered pairs."
           }
         },
         {
@@ -235,16 +253,16 @@
             ],
             "rows": [
               [
-                "-4",
-                "6"
+                -2,
+                5
               ],
               [
-                "1",
-                "-2"
+                0,
+                1
               ],
               [
-                "3",
-                "4"
+                3,
+                7
               ]
             ]
           }
@@ -253,10 +271,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "table-to-ordered-pairs [[-4, 6], [1, -2], [3, 4]]"
+      "instantiation_summary": "ordered pairs"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-04",
@@ -271,62 +289,56 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC04",
+        "i_can_id": "U1-S1.2-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Decide whether each input has only one output."
       },
       "supporting_i_cans": [],
       "evidence_job": "Decide whether each input has only one output.",
-      "student_action": "classify a relation as a function or not using the one-output-per-input condition",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "student_action": "Check the function condition.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
       "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-04",
       "source_map_record_id": "U1-S1.2-P1-INTRO-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the relation is a function. Explain using the input-output rule.",
-      "student_html": "<p>Decide whether the relation is a function. Explain using the input-output rule.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>4</td><td>8</td></tr><tr><td>5</td><td>10</td></tr><tr><td>6</td><td>10</td></tr><tr><td>7</td><td>13</td></tr></tbody></table>",
-      "answer": "Yes, it is a function.",
-      "solution_text": "Each input appears once and is paired with exactly one output. Repeated outputs are allowed.",
-      "solution_html": "<p>Each input appears once and is paired with exactly one output. Repeated outputs are allowed.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether it is a function.",
+      "student_html": "<p>Is the relation a function? Explain.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>1</td><td>9</td></tr></tbody></table>",
+      "answer": "No",
+      "solution_text": "Input 1 is paired with two different outputs, 4 and 9.",
+      "solution_html": "<p>Input 1 is paired with two different outputs, 4 and 9.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the relation is a function. Explain using the input-output rule."
+            "text": "Is the relation a function? Explain."
           }
         },
         {
@@ -338,20 +350,16 @@
             ],
             "rows": [
               [
-                "4",
-                "8"
+                1,
+                4
               ],
               [
-                "5",
-                "10"
+                2,
+                6
               ],
               [
-                "6",
-                "10"
-              ],
-              [
-                "7",
-                "13"
+                1,
+                9
               ]
             ]
           }
@@ -360,10 +368,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "function classification table variant 13"
+      "instantiation_summary": "function condition"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-05",
@@ -378,71 +386,62 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC01",
+        "i_can_id": "U1-S1.2-INTRO-IC01",
         "source_i_can_index": 1,
         "text": "Identify the input and output in a relationship."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Identify the input and output in a relationship in a second representation or slightly less-scaffolded case.",
-      "student_action": "identify which quantity is input and which is output",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Identify the input and output in a relationship.",
+      "student_action": "Identify input/output roles in a context.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-05",
       "source_map_record_id": "U1-S1.2-P1-INTRO-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A recipe scales flour amount with number of batches. Identify the input quantity and the output quantity.",
-      "student_html": "<p>A recipe scales flour amount with number of batches. Identify the input quantity and the output quantity.</p>",
-      "answer": "Input: number of batches. Output: cups of flour.",
-      "solution_text": "The input is the quantity chosen or controlled first (number of batches); the output is the quantity that depends on it (cups of flour).",
-      "solution_html": "<p>The input is the quantity chosen or controlled first (number of batches); the output is the quantity that depends on it (cups of flour).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Identify input and output.",
+      "student_html": "<p>A rule takes a number of tickets purchased as input and total cost as output. If 3 tickets cost $24, name the input and output for this example.</p>",
+      "answer": "input 3 tickets; output $24",
+      "solution_text": "Tickets purchased is the input quantity; total cost is the output quantity.",
+      "solution_html": "<p>Tickets purchased is the input quantity; total cost is the output quantity.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A recipe scales flour amount with number of batches. Identify the input quantity and the output quantity."
+            "text": "A rule takes a number of tickets purchased as input and total cost as output. If 3 tickets cost $24, name the input and output for this example."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "input/output identification: number of batches->cups of flour"
+      "instantiation_summary": "context input-output"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-06",
@@ -457,72 +456,62 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC02",
+        "i_can_id": "U1-S1.2-INTRO-IC02",
         "source_i_can_index": 2,
         "text": "Use a rule to find outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use an input-output rule to find outputs from given inputs in a second representation or slightly less-scaffolded case.",
-      "student_action": "substitute inputs into a rule and compute outputs",
+      "evidence_job": "Use a rule to find outputs.",
+      "student_action": "Evaluate a simple rule.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-06",
       "source_map_record_id": "U1-S1.2-P1-INTRO-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the rule to find the output when the input is 2.",
-      "student_html": "<p>Use the rule to find the output when the input is 2.</p><div class=\"equation-card\">\\[y=5x+3\\]</div>",
-      "answer": "13",
-      "solution_text": "Substitute x = 2: y = 5(2) +3 = 13.",
-      "solution_html": "<p>Substitute x = 2: y = 5(2) +3 = 13.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the output.",
+      "student_html": "<p>A machine follows the rule output = input - 6. Find the output for input -2.</p>",
+      "answer": "-8",
+      "solution_text": "-2-6=-8.",
+      "solution_html": "<p>-2-6=-8.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the rule to find the output when the input is 2."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=5x+3"
+            "text": "A machine follows the rule output = input - 6. Find the output for input -2."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "rule output y=5x+3 at x=2"
+      "instantiation_summary": "verbal rule output"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-07",
@@ -537,89 +526,62 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC03",
+        "i_can_id": "U1-S1.2-INTRO-IC03",
         "source_i_can_index": 3,
         "text": "Write ordered pairs from inputs and outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Write ordered pairs from matched inputs and outputs in a second representation or slightly less-scaffolded case.",
-      "student_action": "pair each input with its corresponding output in correct order",
+      "evidence_job": "Write ordered pairs from inputs and outputs.",
+      "student_action": "Write an input-output pair.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-07",
       "source_map_record_id": "U1-S1.2-P1-INTRO-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Write the table as a set of ordered pairs.",
-      "student_html": "<p>Write the table as a set of ordered pairs.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>0</td><td>-3</td></tr><tr><td>2</td><td>1</td></tr><tr><td>5</td><td>7</td></tr></tbody></table>",
-      "answer": "(0, -3), (2, 1), (5, 7)",
-      "solution_text": "Each ordered pair is written as (input, output), using each table row in order.",
-      "solution_html": "<p>Each ordered pair is written as (input, output), using each table row in order.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Write the ordered pair.",
+      "student_html": "<p>Input 7 produces output -1. Write the ordered pair.</p>",
+      "answer": "(7, -1)",
+      "solution_text": "Ordered pairs are written (input, output).",
+      "solution_html": "<p>Ordered pairs are written (input, output).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Write the table as a set of ordered pairs."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                "0",
-                "-3"
-              ],
-              [
-                "2",
-                "1"
-              ],
-              [
-                "5",
-                "7"
-              ]
-            ]
+            "text": "Input 7 produces output -1. Write the ordered pair."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "table-to-ordered-pairs [[0, -3], [2, 1], [5, 7]]"
+      "instantiation_summary": "single ordered pair"
     },
     {
       "design_slot_id": "U1-S1.2-P1-INTRO-08",
@@ -634,99 +596,62 @@
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1-S1.2-IC04",
+        "i_can_id": "U1-S1.2-INTRO-IC04",
         "source_i_can_index": 4,
         "text": "Decide whether each input has only one output."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Decide whether each input has only one output in a second representation or slightly less-scaffolded case.",
-      "student_action": "classify a relation as a function or not using the one-output-per-input condition",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "guided_intro_transfer",
+      "evidence_job": "Decide whether each input has only one output.",
+      "student_action": "Explain repeated-output behavior.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_intro",
+      "security_role": "formative_practice",
+      "slot_role": "intro",
       "item_id": "U1-S1.2-P1-INTRO-08",
       "source_map_record_id": "U1-S1.2-P1-INTRO-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the relation is a function. Explain using the input-output rule.",
-      "student_html": "<p>Decide whether the relation is a function. Explain using the input-output rule.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>4</td><td>8</td></tr><tr><td>5</td><td>10</td></tr><tr><td>5</td><td>12</td></tr><tr><td>6</td><td>14</td></tr></tbody></table>",
-      "answer": "No, it is not a function.",
-      "solution_text": "The input 5 is paired with two different outputs, so one input does not have exactly one output.",
-      "solution_html": "<p>The input 5 is paired with two different outputs, so one input does not have exactly one output.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether it is a function.",
+      "student_html": "<p>Inputs 2 and 5 both produce output 8, and every input has exactly one output. Is the relation a function? Explain.</p>",
+      "answer": "Yes",
+      "solution_text": "Repeated outputs are allowed; each input still has exactly one output.",
+      "solution_html": "<p>Repeated outputs are allowed; each input still has exactly one output.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the relation is a function. Explain using the input-output rule."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                "4",
-                "8"
-              ],
-              [
-                "5",
-                "10"
-              ],
-              [
-                "5",
-                "12"
-              ],
-              [
-                "6",
-                "14"
-              ]
-            ]
+            "text": "Inputs 2 and 5 both produce output 8, and every input has exactly one output. Is the relation a function? Explain."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "function classification table variant 88"
+      "instantiation_summary": "repeated output function"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-01",
@@ -746,67 +671,67 @@
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Substitute a value for a variable.",
-      "student_action": "substitute a given value using correct grouping",
+      "evidence_job": "Substitute a value for a variable and evaluate.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-01",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression when p = 2.",
-      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[4p^{2}-p+6,\\qquad p=2\\]</div>",
-      "answer": "20",
-      "solution_text": "4(2)^2-2+6=16-2+6=20",
-      "solution_html": "<p>4(2)^2-2+6=16-2+6=20</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Substitute x = 4 into the expression and evaluate.",
+      "student_html": "<p>Substitute \\(x=4\\) into the expression and evaluate.</p><div class=\"equation-card\">\\[3x+5\\]</div>",
+      "answer": "17",
+      "solution_text": "Substitute the given value(s) (x = 4) and follow order of operations to get 17.",
+      "solution_html": "<p>Substitute the given value(s) (x = 4) and follow order of operations to get 17.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression for the given value."
+            "text": "Substitute x = 4 into the expression and evaluate."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4p^{2}-p+6,\\qquad p=2"
+            "latex": "3x+5"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "substitution p=2 into 4p^2-p+6"
+      "instantiation_summary": "expression 1 with x = 4"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-02",
@@ -821,72 +746,72 @@
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Use order of operations correctly."
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use order of operations correctly.",
-      "student_action": "evaluate an expression in correct operation order",
+      "evidence_job": "Evaluate expressions with positive and negative numbers.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-02",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate using the order of operations.",
-      "student_html": "<p>Evaluate using the order of operations.</p><div class=\"equation-card\">\\[4+3(5-2)^2\\]</div>",
-      "answer": "31",
-      "solution_text": "Do parentheses first: 5-2=3. Then square: 3^2=9. Multiply: 3(9)=27. Add 4 to get 31.",
-      "solution_html": "<p>Do parentheses first: 5-2=3. Then square: 3^2=9. Multiply: 3(9)=27. Add 4 to get 31.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Substitute a = -2 and b = 5, then evaluate.",
+      "student_html": "<p>Substitute \\(a=-2\\) and \\(b=5\\), then evaluate.</p><div class=\"equation-card\">\\[2a-3b\\]</div>",
+      "answer": "-19",
+      "solution_text": "Substitute the given value(s) (a = -2, b = 5) and follow order of operations to get -19.",
+      "solution_html": "<p>Substitute the given value(s) (a = -2, b = 5) and follow order of operations to get -19.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate using the order of operations."
+            "text": "Substitute a = -2 and b = 5, then evaluate."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4+3(5-2)^2"
+            "latex": "2a-3b"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "order of operations case 13"
+      "instantiation_summary": "expression 2 with a = -2, b = 5"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-03",
@@ -907,66 +832,66 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Evaluate expressions with positive and negative numbers.",
-      "student_action": "evaluate accurately with signed values and grouping",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-03",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression using the given signed value.",
-      "student_html": "<p>Evaluate the expression using the given signed value.</p><div class=\"equation-card\">\\[4-2(3-y),\\qquad y=-1\\]</div>",
-      "answer": "-4",
-      "solution_text": "Substitute -1 for y: 4-2(3-(-1))=4-2(4)=-4.",
-      "solution_html": "<p>Substitute -1 for y: 4-2(3-(-1))=4-2(4)=-4.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate the expression for m = -3.",
+      "student_html": "<p>Evaluate the expression for \\(m=-3\\).</p><div class=\"equation-card\">\\[-4m+7\\]</div>",
+      "answer": "19",
+      "solution_text": "Substitute the given value(s) (m = -3) and follow order of operations to get 19.",
+      "solution_html": "<p>Substitute the given value(s) (m = -3) and follow order of operations to get 19.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression using the given signed value."
+            "text": "Evaluate the expression for m = -3."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4-2(3-y),\\qquad y=-1"
+            "latex": "-4m+7"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "signed evaluation y=-1 in 4-2(3-y)"
+      "instantiation_summary": "expression 3 with m = -3"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-04",
@@ -981,72 +906,72 @@
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
+        "i_can_id": "U1-MG03-IC02",
+        "source_i_can_index": 2,
+        "text": "Use order of operations correctly."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check whether an answer is reasonable.",
-      "student_action": "judge a proposed or computed value using sign, magnitude, and operation sense",
-      "question_structure_id": "VERIFY-REASONABLENESS-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "evidence_job": "Use substitution and order of operations correctly.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-04",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value.",
-      "student_html": "<p>A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value.</p><div class=\"equation-card\">\\[2x^2-3x+1,\\qquad x=-2\\]</div>",
-      "answer": "The claim is not reasonable; the correct value is 15.",
-      "solution_text": "Substitute -2 carefully, using parentheses for the signed value. Evaluating the expression gives 15, not 9, so the claim is not reasonable.",
-      "solution_html": "<p>Substitute -2 carefully, using parentheses for the signed value. Evaluating the expression gives 15, not 9, so the claim is not reasonable.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for n = -1 using order of operations.",
+      "student_html": "<p>Evaluate for \\(n=-1\\) using order of operations.</p><div class=\"equation-card\">\\[6-2(3+n)\\]</div>",
+      "answer": "2",
+      "solution_text": "Substitute the given value(s) (n = -1) and follow order of operations to get 2.",
+      "solution_html": "<p>Substitute the given value(s) (n = -1) and follow order of operations to get 2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value."
+            "text": "Evaluate for n = -1 using order of operations."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "2x^2-3x+1,\\qquad x=-2"
+            "latex": "6-2(3+n)"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "reasonableness check with incorrect claim 9"
+      "instantiation_summary": "expression 4 with n = -1"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-05",
@@ -1066,67 +991,67 @@
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Substitute a value for a variable with independently chosen or meaningfully varied values/representation.",
-      "student_action": "substitute a given value using correct grouping",
+      "evidence_job": "Substitute a value for a variable and evaluate.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-05",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression when x = -2.",
-      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[3x^{2}-5,\\qquad x=-2\\]</div>",
-      "answer": "7",
-      "solution_text": "3(-2)^2-5=12-5=7",
-      "solution_html": "<p>3(-2)^2-5=12-5=7</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for p = -4.",
+      "student_html": "<p>Evaluate for \\(p=-4\\).</p><div class=\"equation-card\">\\[5p-2p+9\\]</div>",
+      "answer": "-3",
+      "solution_text": "Substitute the given value(s) (p = -4) and follow order of operations to get -3.",
+      "solution_html": "<p>Substitute the given value(s) (p = -4) and follow order of operations to get -3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression for the given value."
+            "text": "Evaluate for p = -4."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "3x^{2}-5,\\qquad x=-2"
+            "latex": "5p-2p+9"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "substitution x=-2 into 3x^2-5"
+      "instantiation_summary": "expression 5 with p = -4"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-06",
@@ -1146,67 +1071,67 @@
         "text": "Use order of operations correctly."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use order of operations correctly with independently chosen or meaningfully varied values/representation.",
-      "student_action": "evaluate an expression in correct operation order",
+      "evidence_job": "Use substitution and order of operations correctly.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-06",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate using the order of operations.",
-      "student_html": "<p>Evaluate using the order of operations.</p><div class=\"equation-card\">\\[18\\div3+2(4-1)\\]</div>",
-      "answer": "12",
-      "solution_text": "Divide 18 by 3 to get 6. Evaluate 4-1=3, then 2(3)=6. Add to get 12.",
-      "solution_html": "<p>Divide 18 by 3 to get 6. Evaluate 4-1=3, then 2(3)=6. Add to get 12.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for q = 5.",
+      "student_html": "<p>Evaluate for \\(q=5\\).</p><div class=\"equation-card\">\\[-3(q-2)+4\\]</div>",
+      "answer": "-5",
+      "solution_text": "Substitute the given value(s) (q = 5) and follow order of operations to get -5.",
+      "solution_html": "<p>Substitute the given value(s) (q = 5) and follow order of operations to get -5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate using the order of operations."
+            "text": "Evaluate for q = 5."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "18\\div3+2(4-1)"
+            "latex": "-3(q-2)+4"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "order of operations case 58"
+      "instantiation_summary": "expression 6 with q = 5"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-07",
@@ -1226,67 +1151,67 @@
         "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Evaluate expressions with positive and negative numbers with independently chosen or meaningfully varied values/representation.",
-      "student_action": "evaluate accurately with signed values and grouping",
+      "evidence_job": "Evaluate expressions with positive and negative numbers.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-07",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression using the given signed value.",
-      "student_html": "<p>Evaluate the expression using the given signed value.</p><div class=\"equation-card\">\\[6-3(2+n),\\qquad n=-5\\]</div>",
-      "answer": "15",
-      "solution_text": "Substitute -5 for n: 6-3(2+(-5))=6-3(-3)=15.",
-      "solution_html": "<p>Substitute -5 for n: 6-3(2+(-5))=6-3(-3)=15.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for r = -5 and s = 4.",
+      "student_html": "<p>Evaluate for \\(r=-5\\) and \\(s=4\\).</p><div class=\"equation-card\">\\[2r+3s-1\\]</div>",
+      "answer": "1",
+      "solution_text": "Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.",
+      "solution_html": "<p>Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression using the given signed value."
+            "text": "Evaluate for r = -5 and s = 4."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "6-3(2+n),\\qquad n=-5"
+            "latex": "2r+3s-1"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "signed evaluation n=-5 in 6-3(2+n)"
+      "instantiation_summary": "expression 7 with r = -5, s = 4"
     },
     {
       "design_slot_id": "U1-S1.2-P1-MASTERY-08",
@@ -1306,67 +1231,67 @@
         "text": "Check whether an answer is reasonable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Check whether an answer is reasonable with independently chosen or meaningfully varied values/representation.",
-      "student_action": "judge a proposed or computed value using sign, magnitude, and operation sense",
-      "question_structure_id": "VERIFY-REASONABLENESS-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "evidence_job": "Evaluate an expression and check whether the result is reasonable.",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_mastery",
+      "security_role": "formative_practice",
+      "slot_role": "mastery",
       "item_id": "U1-S1.2-P1-MASTERY-08",
       "source_map_record_id": "U1-S1.2-P1-MASTERY-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value.",
-      "student_html": "<p>A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value.</p><div class=\"equation-card\">\\[5-2(4-n),\\qquad n=-3\\]</div>",
-      "answer": "The claim is not reasonable; the correct value is -9.",
-      "solution_text": "Substitute -3 carefully, using parentheses for the signed value. Evaluating the expression gives -9, not 9, so the claim is not reasonable.",
-      "solution_html": "<p>Substitute -3 carefully, using parentheses for the signed value. Evaluating the expression gives -9, not 9, so the claim is not reasonable.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable.",
+      "student_html": "<p>Evaluate for \\(t=7\\) and decide whether a positive answer would be reasonable.</p><div class=\"equation-card\">\\[4-2t\\]</div>",
+      "answer": "-10",
+      "solution_text": "Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.",
+      "solution_html": "<p>Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A student claims the value is 9. Decide whether that answer is reasonable. Then compute the correct value."
+            "text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "5-2(4-n),\\qquad n=-3"
+            "latex": "4-2t"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "reasonableness check with incorrect claim 9"
+      "instantiation_summary": "expression 8 with t = 7"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-01",
@@ -1381,72 +1306,93 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC01",
+        "i_can_id": "U2-MG03-IC01",
         "source_i_can_index": 1,
-        "text": "Identify the inputs and outputs in a relation."
+        "text": "Decide whether a table is a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Identify inputs and outputs in a relation before classifying it.",
-      "student_action": "read inputs and outputs from a table, mapping, or ordered-pair set",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "evidence_job": "Decide whether a table is a function.",
+      "student_action": "Check each input in a table for exactly one output.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-01",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-01",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A bike rental charges according to the number of hours used. Identify the input quantity and the output quantity.",
-      "student_html": "<p>A bike rental charges according to the number of hours used. Identify the input quantity and the output quantity.</p>",
-      "answer": "Input: hours rented. Output: total cost.",
-      "solution_text": "The input is the quantity chosen or controlled first (hours rented); the output is the quantity that depends on it (total cost).",
-      "solution_html": "<p>The input is the quantity chosen or controlled first (hours rented); the output is the quantity that depends on it (total cost).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the table is a function.",
+      "student_html": "<p>Is this relation a function? Explain briefly.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>7</td></tr><tr><td>4</td><td>7</td></tr></tbody></table>",
+      "answer": "Yes",
+      "solution_text": "Each input appears once and has exactly one output; repeated outputs are allowed.",
+      "solution_html": "<p>Each input appears once and has exactly one output; repeated outputs are allowed.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A bike rental charges according to the number of hours used. Identify the input quantity and the output quantity."
+            "text": "Is this relation a function? Explain briefly."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                4,
+                7
+              ]
+            ]
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "input/output identification: hours rented->total cost"
+      "instantiation_summary": "function table yes"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-02",
@@ -1461,87 +1407,81 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC02",
+        "i_can_id": "U2-MG03-IC02",
         "source_i_can_index": 2,
-        "text": "Decide whether each input has only one output."
+        "text": "Decide whether ordered pairs or a mapping are a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Decide whether each input has only one output.",
-      "student_action": "apply the function condition to classify a relation",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Decide whether ordered pairs or a mapping are a function.",
+      "student_action": "Check ordered pairs for repeated inputs with different outputs.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-02",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-02",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the relation is a function. Explain using the input-output rule.",
-      "student_html": "<p>Decide whether the relation is a function. Explain using the input-output rule.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>5</td><td>9</td></tr><tr><td>6</td><td>11</td></tr><tr><td>7</td><td>11</td></tr><tr><td>8</td><td>14</td></tr></tbody></table>",
-      "answer": "Yes, it is a function.",
-      "solution_text": "Each input appears once and is paired with exactly one output. Repeated outputs are allowed.",
-      "solution_html": "<p>Each input appears once and is paired with exactly one output. Repeated outputs are allowed.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the ordered pairs are a function.",
+      "student_html": "<p>Is this set of ordered pairs a function? Explain.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>1</td></tr><tr><td>2</td><td>-4</td></tr><tr><td>6</td><td>0</td></tr></tbody></table>",
+      "answer": "No",
+      "solution_text": "Input 2 has two outputs, 5 and -4.",
+      "solution_html": "<p>Input 2 has two outputs, 5 and -4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the relation is a function. Explain using the input-output rule."
+            "text": "Is this set of ordered pairs a function? Explain."
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "input",
-              "output"
+              "x",
+              "y"
             ],
             "rows": [
               [
-                "5",
-                "9"
+                2,
+                5
               ],
               [
-                "6",
-                "11"
+                3,
+                1
               ],
               [
-                "7",
-                "11"
+                2,
+                -4
               ],
               [
-                "8",
-                "14"
+                6,
+                0
               ]
             ]
           }
@@ -1550,10 +1490,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "function classification table variant 39"
+      "instantiation_summary": "function pairs no"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-03",
@@ -1568,101 +1508,108 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC03",
+        "i_can_id": "U2-MG03-IC03",
         "source_i_can_index": 3,
-        "text": "Use a table, mapping, ordered pairs, or graph as function evidence."
+        "text": "Use a graph to decide whether each input has only one output."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use representation evidence to decide whether a relation is a function.",
-      "student_action": "classify from a table, mapping, ordered pairs, or graph and cite evidence",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Use a graph to decide whether each input has only one output.",
+      "student_action": "Use plotted points to check whether an x-value has multiple y-values.",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "review_refresh",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-03",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-03",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the table as evidence to decide whether the relation is a function. State the specific evidence.",
-      "student_html": "<p>Use the table as evidence to decide whether the relation is a function. State the specific evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>4</td></tr><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>6</td></tr></tbody></table>",
-      "answer": "Yes, it is a function.",
-      "solution_text": "Every input x in the table has exactly one corresponding output y. That is the defining evidence for a function.",
-      "solution_html": "<p>Every input x in the table has exactly one corresponding output y. That is the defining evidence for a function.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the graph is a function.",
+      "student_html": "<p>Do the plotted points represent a function? Explain.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5bd598d25f939403.png\" alt=\"Graph\"></div>",
+      "answer": "Yes",
+      "solution_text": "No x-coordinate is repeated with a different y-coordinate.",
+      "solution_html": "<p>No x-coordinate is repeated with a different y-coordinate.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the table as evidence to decide whether the relation is a function. State the specific evidence."
+            "text": "Do the plotted points represent a function? Explain."
           }
         },
         {
-          "type": "table",
+          "type": "graph",
           "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
+            },
+            "points": [
               [
-                "-1",
-                "4"
+                -4,
+                2
               ],
               [
-                "0",
-                "2"
+                -1,
+                5
               ],
               [
-                "1",
-                "4"
+                3,
+                -2
               ],
               [
-                "2",
-                "6"
+                6,
+                1
               ]
-            ]
+            ],
+            "connect_points": false
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [],
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_5bd598d25f939403.png"
+        }
+      ],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_5bd598d25f939403.png"
+        ]
       },
-      "instantiation_summary": "table function evidence [[-1, 4], [0, 2], [1, 4], [2, 6]]"
+      "instantiation_summary": "function graph yes"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-04",
@@ -1677,99 +1624,62 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC04",
+        "i_can_id": "U2-MG03-IC04",
         "source_i_can_index": 4,
-        "text": "Explain why repeated outputs do not by themselves violate the function rule."
+        "text": "Explain why a relationship is or is not a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Explain why repeated outputs are allowed when inputs remain single-valued.",
-      "student_action": "distinguish repeated outputs from repeated inputs with different outputs",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "review_refresh",
+      "evidence_job": "Explain why a relationship is or is not a function.",
+      "student_action": "State the function rule using input-output language.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-04",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-04",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional.",
-      "student_html": "<p>The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>7</td></tr><tr><td>4</td><td>9</td></tr></tbody></table>",
-      "answer": "Repeated outputs are allowed because each input still has only one output.",
-      "solution_text": "A function rule restricts each input to one output. Different inputs may share the same output without violating the definition.",
-      "solution_html": "<p>A function rule restricts each input to one output. Different inputs may share the same output without violating the definition.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Explain whether it is a function.",
+      "student_html": "<p>A relation assigns the input 7 to outputs 2 and 9. Is the relation a function? Explain.</p>",
+      "answer": "No",
+      "solution_text": "A function cannot assign one input to two different outputs.",
+      "solution_html": "<p>A function cannot assign one input to two different outputs.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "1",
-                "5"
-              ],
-              [
-                "2",
-                "7"
-              ],
-              [
-                "3",
-                "7"
-              ],
-              [
-                "4",
-                "9"
-              ]
-            ]
+            "text": "A relation assigns the input 7 to outputs 2 and 9. Is the relation a function? Explain."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "repeated-output function evidence [[1, 5], [2, 7], [3, 7], [4, 9]]"
+      "instantiation_summary": "function verbal no"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-05",
@@ -1784,72 +1694,93 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC01",
+        "i_can_id": "U2-MG03-IC01",
         "source_i_can_index": 1,
-        "text": "Identify the inputs and outputs in a relation."
+        "text": "Decide whether a table is a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Identify inputs and outputs in a relation before classifying it with a new representation or context at Review demand.",
-      "student_action": "read inputs and outputs from a table, mapping, or ordered-pair set",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "evidence_job": "Decide whether a table is a function.",
+      "student_action": "Check a table with a repeated output.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-05",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-05",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "A student records distance walked after each minute. Identify the input quantity and the output quantity.",
-      "student_html": "<p>A student records distance walked after each minute. Identify the input quantity and the output quantity.</p>",
-      "answer": "Input: minutes. Output: distance.",
-      "solution_text": "The input is the quantity chosen or controlled first (minutes); the output is the quantity that depends on it (distance).",
-      "solution_html": "<p>The input is the quantity chosen or controlled first (minutes); the output is the quantity that depends on it (distance).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the table is a function.",
+      "student_html": "<p>Is the table a function? Explain.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>-2</td><td>1</td></tr><tr><td>0</td><td>3</td></tr><tr><td>4</td><td>3</td></tr><tr><td>7</td><td>8</td></tr></tbody></table>",
+      "answer": "Yes",
+      "solution_text": "Different inputs may share the same output; each input still has only one output.",
+      "solution_html": "<p>Different inputs may share the same output; each input still has only one output.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A student records distance walked after each minute. Identify the input quantity and the output quantity."
+            "text": "Is the table a function? Explain."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "input",
+              "output"
+            ],
+            "rows": [
+              [
+                -2,
+                1
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                7,
+                8
+              ]
+            ]
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "input/output identification: minutes->distance"
+      "instantiation_summary": "repeated output allowed"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-06",
@@ -1864,87 +1795,81 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC02",
+        "i_can_id": "U2-MG03-IC02",
         "source_i_can_index": 2,
-        "text": "Decide whether each input has only one output."
+        "text": "Decide whether ordered pairs or a mapping are a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Decide whether each input has only one output with a new representation or context at Review demand.",
-      "student_action": "apply the function condition to classify a relation",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Decide whether ordered pairs or a mapping are a function.",
+      "student_action": "Check ordered pairs with a repeated input.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "semantic_html_table"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-06",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-06",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Decide whether the relation is a function. Explain using the input-output rule.",
-      "student_html": "<p>Decide whether the relation is a function. Explain using the input-output rule.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>8</td></tr><tr><td>3</td><td>10</td></tr><tr><td>4</td><td>12</td></tr></tbody></table>",
-      "answer": "No, it is not a function.",
-      "solution_text": "The input 3 is paired with two different outputs, so one input does not have exactly one output.",
-      "solution_html": "<p>The input 3 is paired with two different outputs, so one input does not have exactly one output.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the relation is a function.",
+      "student_html": "<p>Is the relation a function?</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>0</td></tr><tr><td>2</td><td>5</td></tr><tr><td>5</td><td>6</td></tr><tr><td>2</td><td>5</td></tr></tbody></table>",
+      "answer": "Yes",
+      "solution_text": "The repeated input 2 is paired with the same output 5, so it still has only one output value.",
+      "solution_html": "<p>The repeated input 2 is paired with the same output 5, so it still has only one output value.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Decide whether the relation is a function. Explain using the input-output rule."
+            "text": "Is the relation a function?"
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "input",
-              "output"
+              "x",
+              "y"
             ],
             "rows": [
               [
-                "2",
-                "6"
+                -1,
+                0
               ],
               [
-                "3",
-                "8"
+                2,
+                5
               ],
               [
-                "3",
-                "10"
+                5,
+                6
               ],
               [
-                "4",
-                "12"
+                2,
+                5
               ]
             ]
           }
@@ -1953,10 +1878,10 @@
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "function classification table variant 36"
+      "instantiation_summary": "duplicate pair function"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-07",
@@ -1971,101 +1896,108 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC03",
+        "i_can_id": "U2-MG03-IC03",
         "source_i_can_index": 3,
-        "text": "Use a table, mapping, ordered pairs, or graph as function evidence."
+        "text": "Use a graph to decide whether each input has only one output."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Use representation evidence to decide whether a relation is a function with a new representation or context at Review demand.",
-      "student_action": "classify from a table, mapping, ordered pairs, or graph and cite evidence",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "evidence_job": "Use a graph to decide whether each input has only one output.",
+      "student_action": "Identify a vertical alignment that violates function behavior.",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "review_application",
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-07",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-07",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Use the table as evidence to decide whether the relation is a function. State the specific evidence.",
-      "student_html": "<p>Use the table as evidence to decide whether the relation is a function. State the specific evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>6</td></tr><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>8</td></tr></tbody></table>",
-      "answer": "Yes, it is a function.",
-      "solution_text": "Every input x in the table has exactly one corresponding output y. That is the defining evidence for a function.",
-      "solution_html": "<p>Every input x in the table has exactly one corresponding output y. That is the defining evidence for a function.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Decide whether the graph is a function.",
+      "student_html": "<p>Do the plotted points represent a function? Explain.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_0eea8d4d995a9803.png\" alt=\"Graph\"></div>",
+      "answer": "No",
+      "solution_text": "At x=1 there are two different outputs, 4 and -2.",
+      "solution_html": "<p>At x=1 there are two different outputs, 4 and -2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the table as evidence to decide whether the relation is a function. State the specific evidence."
+            "text": "Do the plotted points represent a function? Explain."
           }
         },
         {
-          "type": "table",
+          "type": "graph",
           "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
+            },
+            "points": [
               [
-                "-1",
-                "6"
+                -3,
+                1
               ],
               [
-                "0",
-                "4"
+                1,
+                4
               ],
               [
-                "1",
-                "6"
+                1,
+                -2
               ],
               [
-                "2",
-                "8"
+                5,
+                0
               ]
-            ]
+            ],
+            "connect_points": false
           }
         }
       ],
       "representation_data": {},
-      "representation_refs": [],
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_0eea8d4d995a9803.png"
+        }
+      ],
       "render_trace": {
-        "pilot_version": "0.7.1",
-        "graph_files": []
+        "pilot_version": "0.8.0",
+        "graph_files": [
+          "figures/graph_0eea8d4d995a9803.png"
+        ]
       },
-      "instantiation_summary": "table function evidence [[-1, 6], [0, 4], [1, 6], [2, 8]]"
+      "instantiation_summary": "function graph no"
     },
     {
       "design_slot_id": "U1-S1.2-P1-REVIEW-08",
@@ -2080,99 +2012,62 @@
         "text": "Use inputs and outputs to decide whether a relationship is a function."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG03-RIC04",
+        "i_can_id": "U2-MG03-IC04",
         "source_i_can_index": 4,
-        "text": "Explain why repeated outputs do not by themselves violate the function rule."
+        "text": "Explain why a relationship is or is not a function."
       },
       "supporting_i_cans": [],
-      "evidence_job": "Explain why repeated outputs are allowed when inputs remain single-valued with a new representation or context at Review demand.",
-      "student_action": "distinguish repeated outputs from repeated inputs with different outputs",
-      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "mapping_or_ordered_pairs",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "review_application",
+      "evidence_job": "Explain why a relationship is or is not a function.",
+      "student_action": "Explain a function decision from input-output behavior.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "review_retrieval",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
-      "security_role": "practice_public",
-      "slot_role": "practice_review",
+      "security_role": "formative_practice",
+      "slot_role": "review",
       "item_id": "U1-S1.2-P1-REVIEW-08",
       "source_map_record_id": "U1-S1.2-P1-REVIEW-08",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional.",
-      "student_html": "<p>The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>6</td></tr><tr><td>-1</td><td>3</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>6</td></tr></tbody></table>",
-      "answer": "Repeated outputs are allowed because each input still has only one output.",
-      "solution_text": "A function rule restricts each input to one output. Different inputs may share the same output without violating the definition.",
-      "solution_html": "<p>A function rule restricts each input to one output. Different inputs may share the same output without violating the definition.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Explain whether the relation is a function.",
+      "student_html": "<p>Every student ID in a school database is paired with exactly one graduation year. Can this relation be modeled as a function from student ID to graduation year? Explain.</p>",
+      "answer": "Yes",
+      "solution_text": "Each student ID has exactly one output, a graduation year.",
+      "solution_html": "<p>Each student ID has exactly one output, a graduation year.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table has a repeated output. Explain why that fact alone does not make the relation nonfunctional."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "-2",
-                "6"
-              ],
-              [
-                "-1",
-                "3"
-              ],
-              [
-                "1",
-                "3"
-              ],
-              [
-                "2",
-                "6"
-              ]
-            ]
+            "text": "Every student ID in a school database is paired with exactly one graduation year. Can this relation be modeled as a function from student ID to graduation year? Explain."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "repeated-output function evidence [[-2, 6], [-1, 3], [1, 3], [2, 6]]"
+      "instantiation_summary": "function context yes"
     }
   ]
 }

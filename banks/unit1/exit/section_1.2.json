@@ -27,66 +27,67 @@
         }
       ],
       "evidence_job": "Substitute a value and use order of operations correctly.",
-      "student_action": "substitute a value and evaluate using order of operations",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "new_current_mastery",
+      "family_id": "U1-S1.2-EXIT-Q1",
       "item_id": "U1-S1.2-EXIT-Q1",
       "source_map_record_id": "U1-S1.2-EXIT-Q1",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression for the given value.",
-      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[4a^{2}-3a+2,\\qquad a=-2\\]</div>",
-      "answer": "24",
-      "solution_text": "Substitute -2 using parentheses: 4(-2)^2 - 3(-2) + 2 = 16 + 6 + 2 = 24.",
-      "solution_html": "<p>Substitute -2 using parentheses: 4(-2)^2 - 3(-2) + 2 = 16 + 6 + 2 = 24.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Substitute x = 4 into the expression and evaluate.",
+      "student_html": "<p>Substitute \\(x=4\\) into the expression and evaluate.</p><div class=\"equation-card\">\\[3x+5\\]</div>",
+      "answer": "17",
+      "solution_text": "Substitute the given value(s) (x = 4) and follow order of operations to get 17.",
+      "solution_html": "<p>Substitute the given value(s) (x = 4) and follow order of operations to get 17.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression for the given value."
+            "text": "Substitute x = 4 into the expression and evaluate."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4a^{2}-3a+2,\\qquad a=-2"
+            "latex": "3x+5"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "Exit new substitution with a=-2"
+      "instantiation_summary": "expression 1 with x = 4"
     },
     {
       "design_slot_id": "U1-S1.2-EXIT-Q2",
@@ -113,66 +114,67 @@
         }
       ],
       "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
-      "student_action": "evaluate with signed values and check the result for reasonableness",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "new_current_mastery",
+      "family_id": "U1-S1.2-EXIT-Q2",
       "item_id": "U1-S1.2-EXIT-Q2",
       "source_map_record_id": "U1-S1.2-EXIT-Q2",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate using the signed value. Then state briefly why the sign of the result is reasonable.",
-      "student_html": "<p>Evaluate using the signed value. Then state briefly why the sign of the result is reasonable.</p><div class=\"equation-card\">\\[7-2(4+n),\\qquad n=-6\\]</div>",
-      "answer": "11; a positive result is reasonable.",
-      "solution_text": "4 + (-6) = -2, so 7 - 2(-2) = 11. Subtracting a negative increases the value, so a positive result is reasonable.",
-      "solution_html": "<p>4 + (-6) = -2, so 7 - 2(-2) = 11. Subtracting a negative increases the value, so a positive result is reasonable.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable.",
+      "student_html": "<p>Evaluate for \\(t=7\\) and decide whether a positive answer would be reasonable.</p><div class=\"equation-card\">\\[4-2t\\]</div>",
+      "answer": "-10",
+      "solution_text": "Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.",
+      "solution_html": "<p>Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate using the signed value. Then state briefly why the sign of the result is reasonable."
+            "text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "7-2(4+n),\\qquad n=-6"
+            "latex": "4-2t"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "Exit new signed evaluation"
+      "instantiation_summary": "expression 8 with t = 7"
     },
     {
       "design_slot_id": "U1-S1.2-EXIT-Q3",
@@ -193,68 +195,66 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Plot and read ordered pairs.",
-      "student_action": "plot/read ordered pairs on a coordinate plane",
+      "student_action": "Plot two points and compare their y-coordinates.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
-      "representation_mode": "graph",
+      "representation_mode": "student_constructed_graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": true,
-          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+          "type": "registered_graph_tool",
+          "semantic_mode": "construction_surface",
+          "student_constructed": true
         }
       ],
-      "difficulty_intent": "independent_reassessment",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "reassessment_previous_section",
+      "slot_role": "reassessment",
       "reassessment_of": "U1-S1.1-EXIT-Q1",
-      "carry_forward_from": "1.1",
+      "carry_forward_from": "U1-S1.1-EXIT-Q1",
+      "family_id": "U1-S1.1-EXIT-Q1",
       "item_id": "U1-S1.2-EXIT-Q3",
       "source_map_record_id": "U1-S1.2-EXIT-Q3",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Plot the points (-4, -3), (2, 5), and (6, -1). Then write the pair with the greatest y-coordinate.",
-      "student_html": "<p>Plot the points (-4, -3), (2, 5), and (6, -1). Then write the pair with the greatest y-coordinate.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "(2, 5)",
-      "solution_text": "The y-coordinates are -3, 5, and -1. The greatest is 5, so the point is (2, 5).",
-      "solution_html": "<p>The y-coordinates are -3, 5, and -1. The greatest is 5, so the point is (2, 5).</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Plot A(-4, -5) and B(6, 2); compare y-coordinates.",
+      "student_html": "<p>Plot A(-4, -5) and B(6, 2). Which point has the greater y-coordinate?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85b9bfa5a0dc334f.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "B",
+      "solution_text": "Point B has y = 2 and point A has y = -5; 2 is greater.",
+      "solution_html": "<p>Point B has y = 2 and point A has y = -5; 2 is greater.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Plot the points (-4, -3), (2, 5), and (6, -1). Then write the pair with the greatest y-coordinate."
+            "text": "Plot A(-4, -5) and B(6, 2). Which point has the greater y-coordinate?"
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
-            "semantic_mode": "algebra_coordinate",
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -8,
-            "y_max": 8,
-            "x_label": "x",
-            "y_label": "y"
+            "x_min": -10,
+            "x_max": 10,
+            "y_min": -10,
+            "y_max": 10,
+            "semantic_mode": "construction_surface"
           }
         }
       ],
@@ -262,16 +262,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_293f093d4bc08df4.png"
+          "file": "figures/graph_85b9bfa5a0dc334f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_293f093d4bc08df4.png"
+          "figures/graph_85b9bfa5a0dc334f.png"
         ]
       },
-      "instantiation_summary": "Exit reassessment coordinate plot [(-4, -3), (2, 5), (6, -1)]"
+      "instantiation_summary": "two-point plot and compare"
     },
     {
       "design_slot_id": "U1-S1.2-EXIT-Q4",
@@ -292,54 +292,54 @@
       },
       "supporting_i_cans": [],
       "evidence_job": "Read a graph accurately using its scale.",
-      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
+      "student_action": "Read the plotted point at the specified x-coordinate.",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "response_mode": "short_constructed_response",
       "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "independent_reassessment",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "reassessment_previous_section",
+      "slot_role": "reassessment",
       "reassessment_of": "U1-S1.1-EXIT-Q2",
-      "carry_forward_from": "1.1",
+      "carry_forward_from": "U1-S1.1-EXIT-Q2",
+      "family_id": "U1-S1.1-EXIT-Q2",
       "item_id": "U1-S1.2-EXIT-Q4",
       "source_map_record_id": "U1-S1.2-EXIT-Q4",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Read the graph. What is the y-coordinate of the point whose x-coordinate is 5?",
-      "student_html": "<p>Read the graph. What is the y-coordinate of the point whose x-coordinate is 5?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_b753cbf2a28700ed.png\" alt=\"Graph\"></div>",
-      "answer": "3",
-      "solution_text": "At x = 5, the plotted point is (5, 3), so the y-coordinate is 3.",
-      "solution_html": "<p>At x = 5, the plotted point is (5, 3), so the y-coordinate is 3.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Read the plotted point with x-coordinate -2.",
+      "student_html": "<p>What is the ordered pair of the plotted point with x-coordinate -2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_4e1e110d72d922d7.png\" alt=\"Graph\"></div>",
+      "answer": "(-2, 3)",
+      "solution_text": "At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).",
+      "solution_html": "<p>At x = -2, the plotted point is 3 units above the x-axis, so the point is (-2, 3).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Read the graph. What is the y-coordinate of the point whose x-coordinate is 5?"
+            "text": "What is the ordered pair of the plotted point with x-coordinate -2?"
           }
         },
         {
@@ -350,23 +350,23 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [
               [
-                -5,
-                1
+                -6,
+                -2
               ],
               [
-                1,
-                -4
-              ],
-              [
-                5,
+                -2,
                 3
+              ],
+              [
+                4,
+                6
               ]
             ],
             "connect_points": false
@@ -377,16 +377,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_b753cbf2a28700ed.png"
+          "file": "figures/graph_4e1e110d72d922d7.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_b753cbf2a28700ed.png"
+          "figures/graph_4e1e110d72d922d7.png"
         ]
       },
-      "instantiation_summary": "Exit reassessment graph-scale read"
+      "instantiation_summary": "point-read graph"
     }
   ]
 }

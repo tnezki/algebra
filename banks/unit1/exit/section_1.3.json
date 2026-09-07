@@ -27,85 +27,52 @@
         }
       ],
       "evidence_job": "Find the same rate from a graph and a table.",
-      "student_action": "determine and reconcile the same rate from a graph and a table",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "student_action": "Find slope from a graphed line.",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "table",
-          "answer_neutral": true,
-          "student_constructed": false
+          "type": "registered_graph_tool",
+          "semantic_mode": "algebra_coordinate"
         }
       ],
-      "difficulty_intent": "independent_mastery",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "new_current_mastery",
+      "family_id": "U1-S1.3-EXIT-Q1",
       "item_id": "U1-S1.3-EXIT-Q1",
       "source_map_record_id": "U1-S1.3-EXIT-Q1",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope.",
-      "student_html": "<p>The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>11</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_06beaf905f124898.png\" alt=\"Graph\"></div>",
-      "answer": "3",
-      "solution_text": "In the table, y increases by 3 when x increases by 1. The graph rises 3 for a run of 1, so the common slope is 3.",
-      "solution_html": "<p>In the table, y increases by 3 when x increases by 1. The graph rises 3 for a run of 1, so the common slope is 3.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find the slope from the graph.",
+      "student_html": "<p>Find the slope of the line shown.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_9345a2e50e5c173d.png\" alt=\"Graph\"></div>",
+      "answer": "2",
+      "solution_text": "The line rises 2 units for every 1 unit to the right, so slope = 2.",
+      "solution_html": "<p>The line rises 2 units for every 1 unit to the right, so slope = 2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                "0",
-                "2"
-              ],
-              [
-                "1",
-                "5"
-              ],
-              [
-                "2",
-                "8"
-              ],
-              [
-                "3",
-                "11"
-              ]
-            ]
+            "text": "Find the slope of the line shown."
           }
         },
         {
@@ -116,16 +83,16 @@
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": -2,
-              "x_max": 5,
-              "y_min": -4,
-              "y_max": 16
+              "x_min": -10,
+              "x_max": 10,
+              "y_min": -10,
+              "y_max": 10
             },
             "points": [],
             "connect_points": false,
             "line": {
-              "slope": 3,
-              "intercept": 2
+              "slope": 2,
+              "intercept": -1
             }
           }
         }
@@ -134,16 +101,16 @@
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_06beaf905f124898.png"
+          "file": "figures/graph_9345a2e50e5c173d.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": [
-          "figures/graph_06beaf905f124898.png"
+          "figures/graph_9345a2e50e5c173d.png"
         ]
       },
-      "instantiation_summary": "Exit new slope from table and graph"
+      "instantiation_summary": "graph slope"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q2",
@@ -170,71 +137,57 @@
         }
       ],
       "evidence_job": "Use an equation to find rate and interpret the rate in context.",
-      "student_action": "find rate from an equation and interpret the rate with units in context",
+      "student_action": "Compute and interpret a constant rate in context.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
-          "representation": "context",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "prose",
+      "representation_need": "none",
+      "representation_routes": [],
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_pair",
-          "graph_scale",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
       "slot_role": "new_current_mastery",
+      "family_id": "U1-S1.3-EXIT-Q2",
       "item_id": "U1-S1.3-EXIT-Q2",
       "source_map_record_id": "U1-S1.3-EXIT-Q2",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "The equation models a delivery fee. State the rate of change and explain what it means.",
-      "student_html": "<p>The equation models a delivery fee. State the rate of change and explain what it means.</p><div class=\"equation-card\">\\[C=5d+9\\]</div>",
-      "answer": "$5 per mile; the cost increases by $5 for each additional mile.",
-      "solution_text": "The coefficient of d is 5, so the rate of change is $5 per mile.",
-      "solution_html": "<p>The coefficient of d is 5, so the rate of change is $5 per mile.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Find and interpret the rate.",
+      "student_html": "<p>A tank contains 18 liters of water at 2 minutes and 42 liters at 6 minutes. Find and interpret the average rate of change over this interval.</p>",
+      "answer": "6 liters per minute",
+      "solution_text": "(42-18)/(6-2) = 24/4 = 6. The amount of water increased by 6 liters each minute over the interval.",
+      "solution_html": "<p>(42-18)/(6-2) = 24/4 = 6. The amount of water increased by 6 liters each minute over the interval.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The equation models a delivery fee. State the rate of change and explain what it means."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "C=5d+9"
+            "text": "A tank contains 18 liters of water at 2 minutes and 42 liters at 6 minutes. Find and interpret the average rate of change over this interval."
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "Exit new slope from equation context"
+      "instantiation_summary": "context rate"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q3",
@@ -253,76 +206,71 @@
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC02",
-          "source_i_can_index": 2,
-          "text": "Use order of operations correctly."
-        }
-      ],
+      "supporting_i_cans": [],
       "evidence_job": "Substitute a value and use order of operations correctly.",
-      "student_action": "substitute a value and evaluate using order of operations",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "independent_reassessment",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "reassessment_previous_section",
+      "slot_role": "reassessment",
       "reassessment_of": "U1-S1.2-EXIT-Q1",
-      "carry_forward_from": "1.2",
+      "carry_forward_from": "U1-S1.2-EXIT-Q1",
+      "family_id": "U1-S1.2-EXIT-Q1",
       "item_id": "U1-S1.3-EXIT-Q3",
       "source_map_record_id": "U1-S1.3-EXIT-Q3",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate the expression for the given value.",
-      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[2p^{2}+5p-3,\\qquad p=-4\\]</div>",
-      "answer": "9",
-      "solution_text": "2(-4)^2 + 5(-4) - 3 = 32 - 20 - 3 = 9.",
-      "solution_html": "<p>2(-4)^2 + 5(-4) - 3 = 32 - 20 - 3 = 9.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate the expression for m = -3.",
+      "student_html": "<p>Evaluate the expression for \\(m=-3\\).</p><div class=\"equation-card\">\\[-4m+7\\]</div>",
+      "answer": "19",
+      "solution_text": "Substitute the given value(s) (m = -3) and follow order of operations to get 19.",
+      "solution_html": "<p>Substitute the given value(s) (m = -3) and follow order of operations to get 19.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate the expression for the given value."
+            "text": "Evaluate the expression for m = -3."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "2p^{2}+5p-3,\\qquad p=-4"
+            "latex": "-4m+7"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "Exit reassessment substitution"
+      "instantiation_summary": "expression 3 with m = -3"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q4",
@@ -341,76 +289,71 @@
         "source_i_can_index": 3,
         "text": "Evaluate expressions with positive and negative numbers."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC04",
-          "source_i_can_index": 4,
-          "text": "Check whether an answer is reasonable."
-        }
-      ],
+      "supporting_i_cans": [],
       "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
-      "student_action": "evaluate with signed values and check the result for reasonableness",
+      "student_action": "Substitute the given value(s) and evaluate accurately.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_explanation",
-      "representation_mode": "expression",
+      "response_mode": "short_constructed_response",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation_or_expression",
-          "answer_neutral": true
+          "type": "mathjax_equation"
         }
       ],
-      "difficulty_intent": "independent_reassessment",
+      "difficulty_intent": "mastery_evidence",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
-          "representation_values",
-          "context"
+          "representation",
+          "context",
+          "signs",
+          "scale"
         ],
-        "required": [],
+        "required": [
+          "preserve evidence target and usable difficulty"
+        ],
         "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
+          "change goal identity",
+          "answer leakage",
+          "cosmetic noun-only cloning"
         ]
       },
       "security_role": "official_exit",
-      "slot_role": "reassessment_previous_section",
+      "slot_role": "reassessment",
       "reassessment_of": "U1-S1.2-EXIT-Q2",
-      "carry_forward_from": "1.2",
+      "carry_forward_from": "U1-S1.2-EXIT-Q2",
+      "family_id": "U1-S1.2-EXIT-Q2",
       "item_id": "U1-S1.3-EXIT-Q4",
       "source_map_record_id": "U1-S1.3-EXIT-Q4",
-      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
-      "student_text": "Evaluate using the signed value and state whether the result should be positive or negative.",
-      "student_html": "<p>Evaluate using the signed value and state whether the result should be positive or negative.</p><div class=\"equation-card\">\\[8-3(1-k),\\qquad k=-2\\]</div>",
-      "answer": "-1; a negative result is expected.",
-      "solution_text": "1 - (-2) = 3, so 8 - 3(3) = -1. Since 9 is subtracted from 8, a negative result is expected.",
-      "solution_html": "<p>1 - (-2) = 3, so 8 - 3(3) = -1. Since 9 is subtracted from 8, a negative result is expected.</p>",
+      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
+      "student_text": "Evaluate for r = -5 and s = 4.",
+      "student_html": "<p>Evaluate for \\(r=-5\\) and \\(s=4\\).</p><div class=\"equation-card\">\\[2r+3s-1\\]</div>",
+      "answer": "1",
+      "solution_text": "Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.",
+      "solution_html": "<p>Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate using the signed value and state whether the result should be positive or negative."
+            "text": "Evaluate for r = -5 and s = 4."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "8-3(1-k),\\qquad k=-2"
+            "latex": "2r+3s-1"
           }
         }
       ],
       "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.7.1",
+        "pilot_version": "0.8.0",
         "graph_files": []
       },
-      "instantiation_summary": "Exit reassessment signed evaluation"
+      "instantiation_summary": "expression 7 with r = -5, s = 4"
     }
   ]
 }
