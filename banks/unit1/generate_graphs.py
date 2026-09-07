@@ -2044,14 +2044,11 @@ def make_algebra_tiles(expression, filename='algebra_tiles.png'):
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-# =============================================================================
-# CURRICULUM BUILDER PILOT APPEND-ONLY GRAPH GENERATION BLOCK
-# =============================================================================
+# FULL PIPELINE APPEND-ONLY GRAPH GENERATION BLOCK
 if __name__ == "__main__":
     import json as _json
     import sys as _sys
     from pathlib import Path as _Path
-
     spec_path = _Path(_sys.argv[1])
     out_dir = _Path(_sys.argv[2])
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -2065,37 +2062,21 @@ if __name__ == "__main__":
         if isinstance(spec.get("line"), dict):
             m = float(spec["line"].get("slope", 0))
             c = float(spec["line"].get("intercept", 0))
-            functions.append({
-                "expr": lambda x, m=m, c=c: m*x + c,
-                "deriv": lambda x, m=m: np.full_like(x, m, dtype=float),
-                "color": "steelblue",
-                "label": None,
-            })
+            functions.append({"expr": lambda x, m=m, c=c: m*x+c, "deriv": lambda x, m=m: np.full_like(x, m, dtype=float), "color": "steelblue", "label": None})
         for piece in spec.get("piecewise", []) if isinstance(spec.get("piecewise"), list) else []:
             if not isinstance(piece, dict):
                 continue
-            m = float(piece.get("slope", 0))
-            c = float(piece.get("intercept", 0))
+            m = float(piece.get("slope", 0)); c = float(piece.get("intercept", 0))
             domain = piece.get("domain") if isinstance(piece.get("domain"), dict) else {}
-            lo = float(domain.get("x_min", xmin))
-            hi = float(domain.get("x_max", xmax))
+            lo = float(domain.get("x_min", xmin)); hi = float(domain.get("x_max", xmax))
             def _expr(x, m=m, c=c, lo=lo, hi=hi):
-                y = m*x + c
+                y = m*x+c
                 return np.where((x >= lo) & (x <= hi), y, np.nan)
-            functions.append({
-                "expr": _expr,
-                "deriv": lambda x, m=m: np.full_like(x, m, dtype=float),
-                "color": "steelblue",
-                "label": None,
-            })
-        make_context_graph(
-            ax,
-            functions,
-            xmin, xmax, ymin, ymax,
-            xlabel=str(spec.get("x_label") or "x"),
-            ylabel=str(spec.get("y_label") or "y"),
-            title="",
-        )
+            functions.append({"expr": _expr, "deriv": lambda x, m=m: np.full_like(x, m, dtype=float), "color": "steelblue", "label": None})
+        if spec.get("pilot_render_mode") == "standard_coordinate":
+            make_standard_graph(ax, functions, title="")
+        else:
+            make_context_graph(ax, functions, xmin, xmax, ymin, ymax, xlabel=str(spec.get("x_label") or "x"), ylabel=str(spec.get("y_label") or "y"), title="")
         points = spec.get("points") if isinstance(spec.get("points"), list) else []
         if points:
             xs = [float(p[0]) for p in points if isinstance(p, (list, tuple)) and len(p) >= 2]

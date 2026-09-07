@@ -16,21 +16,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
       "evidence_job": "Find the same rate from a graph and a table.",
-      "student_action": "extract rate from both representations and reconcile them",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "student_action": "determine and reconcile the same rate from a graph and a table",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -44,18 +42,18 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
+          "representation_pair",
           "graph_scale",
-          "representation_values",
           "context"
         ],
         "required": [],
@@ -69,18 +67,18 @@
       "slot_role": "new_current_mastery",
       "item_id": "U1-S1.3-EXIT-Q1",
       "source_map_record_id": "U1-S1.3-EXIT-Q1",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The graph and table represent the same relationship. Determine the rate of change from each representation and state the common rate.",
-      "student_html": "<p>The graph and table represent the same relationship. Determine the rate of change from each representation and state the common rate.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>10</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_279cd07b6ff47369.png\" alt=\"Graph\"></div>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope.",
+      "student_html": "<p>The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>11</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_06beaf905f124898.png\" alt=\"Graph\"></div>",
       "answer": "3",
-      "solution_text": "From the table, y increases by 3 when x increases by 1. From the graph, rise/run can be read as 3/1. Both give a rate of change of 3.",
-      "solution_html": "<p>From the table, y increases by 3 when x increases by 1. From the graph, rise/run can be read as 3/1. Both give a rate of change of 3.</p>",
+      "solution_text": "In the table, y increases by 3 when x increases by 1. The graph rises 3 for a run of 1, so the common slope is 3.",
+      "solution_html": "<p>In the table, y increases by 3 when x increases by 1. The graph rises 3 for a run of 1, so the common slope is 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The graph and table represent the same relationship. Determine the rate of change from each representation and state the common rate."
+            "text": "The table and graph represent the same relationship. Find the rate of change from each representation and state the common slope."
           }
         },
         {
@@ -92,20 +90,20 @@
             ],
             "rows": [
               [
-                0,
-                1
+                "0",
+                "2"
               ],
               [
-                1,
-                4
+                "1",
+                "5"
               ],
               [
-                2,
-                7
+                "2",
+                "8"
               ],
               [
-                3,
-                10
+                "3",
+                "11"
               ]
             ]
           }
@@ -114,85 +112,38 @@
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
+            "semantic_mode": "algebra_coordinate",
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": 0,
-              "x_max": 4,
-              "y_min": 0,
-              "y_max": 14
+              "x_min": -2,
+              "x_max": 5,
+              "y_min": -4,
+              "y_max": 16
             },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
+            "points": [],
+            "connect_points": false,
             "line": {
               "slope": 3,
-              "intercept": 1
+              "intercept": 2
             }
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 4,
-            "y_min": 0,
-            "y_max": 14
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 3,
-            "intercept": 1
-          }
-        },
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              4
-            ],
-            [
-              2,
-              7
-            ],
-            [
-              3,
-              10
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_279cd07b6ff47369.png"
+          "file": "figures/graph_06beaf905f124898.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_279cd07b6ff47369.png"
+          "figures/graph_06beaf905f124898.png"
         ]
       },
-      "instantiation_summary": "Rate reconciliation between graph and table."
+      "instantiation_summary": "Exit new slope from table and graph"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q2",
@@ -208,42 +159,41 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
       "evidence_job": "Use an equation to find rate and interpret the rate in context.",
-      "student_action": "identify rate from an equation and interpret it in the shared context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "student_action": "find rate from an equation and interpret the rate with units in context",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "sign_pattern",
+          "representation_pair",
+          "graph_scale",
           "context"
         ],
         "required": [],
@@ -257,37 +207,34 @@
       "slot_role": "new_current_mastery",
       "item_id": "U1-S1.3-EXIT-Q2",
       "source_map_record_id": "U1-S1.3-EXIT-Q2",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A bike rental cost is modeled by C = 7h + 12, where h is the number of hours and C is the cost in dollars. What is the rate of change, and what does it mean?",
-      "student_html": "<p>A bike rental cost is modeled by C = 7h + 12, where h is the number of hours and C is the cost in dollars. What is the rate of change, and what does it mean?</p><div class=\"equation-card\">\\[C=7h+12\\]</div>",
-      "answer": "$7 per hour; the cost increases by $7 for each additional hour.",
-      "solution_text": "In C = 7h + 12, the coefficient of h is 7. That coefficient is the rate of change, so each additional hour adds $7.",
-      "solution_html": "<p>In C = 7h + 12, the coefficient of h is 7. That coefficient is the rate of change, so each additional hour adds $7.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "The equation models a delivery fee. State the rate of change and explain what it means.",
+      "student_html": "<p>The equation models a delivery fee. State the rate of change and explain what it means.</p><div class=\"equation-card\">\\[C=5d+9\\]</div>",
+      "answer": "$5 per mile; the cost increases by $5 for each additional mile.",
+      "solution_text": "The coefficient of d is 5, so the rate of change is $5 per mile.",
+      "solution_html": "<p>The coefficient of d is 5, so the rate of change is $5 per mile.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A bike rental cost is modeled by C = 7h + 12, where h is the number of hours and C is the cost in dollars. What is the rate of change, and what does it mean?"
+            "text": "The equation models a delivery fee. State the rate of change and explain what it means."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "C=7h+12"
+            "latex": "C=5d+9"
           }
         }
       ],
-      "representation_data": {
-        "equation": "C=7h+12",
-        "context": "Bike rental cost"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Equation-to-context rate interpretation."
+      "instantiation_summary": "Exit new slope from equation context"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q3",
@@ -303,21 +250,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Use order of operations correctly."
         }
       ],
       "evidence_job": "Substitute a value and use order of operations correctly.",
-      "student_action": "complete a fresh parallel instance of the prior evidence job",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "student_action": "substitute a value and evaluate using order of operations",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -325,16 +270,16 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "independent_mastery_parallel",
+      "difficulty_intent": "independent_reassessment",
       "variation_axes": {
         "allowed": [
           "values",
+          "sign_pattern",
           "representation_values",
-          "graph_scale",
           "context"
         ],
         "required": [],
@@ -344,40 +289,40 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "official_exit_reassessment",
-      "slot_role": "previous_section_reassessment",
+      "security_role": "official_exit",
+      "slot_role": "reassessment_previous_section",
+      "reassessment_of": "U1-S1.2-EXIT-Q1",
+      "carry_forward_from": "1.2",
       "item_id": "U1-S1.3-EXIT-Q3",
       "source_map_record_id": "U1-S1.3-EXIT-Q3",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Evaluate 2a^2 + 3a - 4 when a = -3.",
-      "student_html": "<p>Evaluate 2a^2 + 3a - 4 when a = -3.</p><div class=\"equation-card\">\\[2a^2+3a-4,\\quad a=-3\\]</div>",
-      "answer": "5",
-      "solution_text": "2(-3)^2 + 3(-3) - 4 = 18 - 9 - 4 = 5.",
-      "solution_html": "<p>2(-3)^2 + 3(-3) - 4 = 18 - 9 - 4 = 5.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Evaluate the expression for the given value.",
+      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[2p^{2}+5p-3,\\qquad p=-4\\]</div>",
+      "answer": "9",
+      "solution_text": "2(-4)^2 + 5(-4) - 3 = 32 - 20 - 3 = 9.",
+      "solution_html": "<p>2(-4)^2 + 5(-4) - 3 = 32 - 20 - 3 = 9.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate 2a^2 + 3a - 4 when a = -3."
+            "text": "Evaluate the expression for the given value."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "2a^2+3a-4,\\quad a=-3"
+            "latex": "2p^{2}+5p-3,\\qquad p=-4"
           }
         }
       ],
-      "representation_data": {
-        "equation": "2a^2+3a-4,\\quad a=-3"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Fresh signed substitution reassessment."
+      "instantiation_summary": "Exit reassessment substitution"
     },
     {
       "design_slot_id": "U1-S1.3-EXIT-Q4",
@@ -393,38 +338,36 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Check whether an answer is reasonable."
         }
       ],
       "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
-      "student_action": "complete a fresh parallel instance of the prior evidence job",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "student_action": "evaluate with signed values and check the result for reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "expression",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "independent_mastery_parallel",
+      "difficulty_intent": "independent_reassessment",
       "variation_axes": {
         "allowed": [
           "values",
+          "sign_pattern",
           "representation_values",
-          "graph_scale",
           "context"
         ],
         "required": [],
@@ -434,40 +377,40 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "official_exit_reassessment",
-      "slot_role": "previous_section_reassessment",
+      "security_role": "official_exit",
+      "slot_role": "reassessment_previous_section",
+      "reassessment_of": "U1-S1.2-EXIT-Q2",
+      "carry_forward_from": "1.2",
       "item_id": "U1-S1.3-EXIT-Q4",
       "source_map_record_id": "U1-S1.3-EXIT-Q4",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Evaluate 6 - 3(2 + n) when n = -5. Then state whether a positive or negative answer should be expected.",
-      "student_html": "<p>Evaluate 6 - 3(2 + n) when n = -5. Then state whether a positive or negative answer should be expected.</p><div class=\"equation-card\">\\[6-3(2+n),\\quad n=-5\\]</div>",
-      "answer": "15; a positive answer should be expected.",
-      "solution_text": "2 + (-5) = -3, so 6 - 3(-3) = 6 + 9 = 15. Subtracting a negative quantity makes the result larger, so a positive answer is reasonable.",
-      "solution_html": "<p>2 + (-5) = -3, so 6 - 3(-3) = 6 + 9 = 15. Subtracting a negative quantity makes the result larger, so a positive answer is reasonable.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Evaluate using the signed value and state whether the result should be positive or negative.",
+      "student_html": "<p>Evaluate using the signed value and state whether the result should be positive or negative.</p><div class=\"equation-card\">\\[8-3(1-k),\\qquad k=-2\\]</div>",
+      "answer": "-1; a negative result is expected.",
+      "solution_text": "1 - (-2) = 3, so 8 - 3(3) = -1. Since 9 is subtracted from 8, a negative result is expected.",
+      "solution_html": "<p>1 - (-2) = 3, so 8 - 3(3) = -1. Since 9 is subtracted from 8, a negative result is expected.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate 6 - 3(2 + n) when n = -5. Then state whether a positive or negative answer should be expected."
+            "text": "Evaluate using the signed value and state whether the result should be positive or negative."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "6-3(2+n),\\quad n=-5"
+            "latex": "8-3(1-k),\\qquad k=-2"
           }
         }
       ],
-      "representation_data": {
-        "equation": "6-3(2+n),\\quad n=-5"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Fresh grouped signed-value evaluation with reasonableness."
+      "instantiation_summary": "Exit reassessment signed evaluation"
     }
   ]
 }

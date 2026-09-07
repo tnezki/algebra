@@ -8,44 +8,47 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC01",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.3-IC01",
         "source_i_can_index": 1,
         "text": "Recognize a linear pattern from constant rate."
       },
       "supporting_i_cans": [],
-      "evidence_job": "recognize a linear pattern from constant additive rate",
-      "student_action": "inspect changes and identify linear behavior with evidence",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "table",
+      "evidence_job": "Recognize a linear pattern from a constant rate.",
+      "student_action": "classify a relationship as linear using constant-rate evidence in a table or graph",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -54,22 +57,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_01",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.3-P1-INTRO-01",
       "source_map_record_id": "U1-S1.3-P1-INTRO-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The table shows x = 0,1,2,3 and y = 4,7,10,13. Which function family is most likely, and what evidence supports your choice?",
-      "student_html": "<p>The table shows x = 0,1,2,3 and y = 4,7,10,13. Which function family is most likely, and what evidence supports your choice?</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>7</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>13</td></tr></tbody></table>",
-      "answer": "Linear.",
-      "solution_text": "The first differences are all +3, so the relationship has a constant additive rate.",
-      "solution_html": "<p>The first differences are all +3, so the relationship has a constant additive rate.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Decide whether the table shows a linear pattern. Explain using the change in outputs.",
+      "student_html": "<p>Decide whether the table shows a linear pattern. Explain using the change in outputs.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr></tbody></table>",
+      "answer": "Yes. The output changes by 2 each time x increases by 1.",
+      "solution_text": "The first differences are all 2, so the rate of change is constant. A constant rate is evidence of a linear relationship.",
+      "solution_html": "<p>The first differences are all 2, so the rate of change is constant. A constant rate is evidence of a linear relationship.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table shows x = 0,1,2,3 and y = 4,7,10,13. Which function family is most likely, and what evidence supports your choice?"
+            "text": "Decide whether the table shows a linear pattern. Explain using the change in outputs."
           }
         },
         {
@@ -81,57 +84,32 @@
             ],
             "rows": [
               [
-                0,
-                4
+                "0",
+                "1"
               ],
               [
-                1,
-                7
+                "1",
+                "3"
               ],
               [
-                2,
-                10
+                "2",
+                "5"
               ],
               [
-                3,
-                13
+                "3",
+                "7"
               ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              4
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              2,
-              10
-            ],
-            [
-              3,
-              13
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 1: function-family recognition."
+      "instantiation_summary": "linear table with rate 2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-INTRO-02",
@@ -139,51 +117,47 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.3-IC02",
         "source_i_can_index": 2,
         "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Use a table, graph, equation, or context as evidence."
-        }
-      ],
-      "evidence_job": "recognize an exponential pattern from multiplicative change",
-      "student_action": "inspect values and identify exponential behavior with evidence",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "table",
+      "supporting_i_cans": [],
+      "evidence_job": "Distinguish basic linear, quadratic, exponential, and absolute-value patterns.",
+      "student_action": "classify a function family using defining pattern or feature evidence",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html_table",
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -192,22 +166,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_02",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.3-P1-INTRO-02",
       "source_map_record_id": "U1-S1.3-P1-INTRO-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The table shows x = 0,1,2,3 and y = 3,6,12,24. Which function family is most likely, and why?",
-      "student_html": "<p>The table shows x = 0,1,2,3 and y = 3,6,12,24. Which function family is most likely, and why?</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>12</td></tr><tr><td>3</td><td>24</td></tr></tbody></table>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Identify the most likely family shown by the table and give one piece of pattern evidence.",
+      "student_html": "<p>Identify the most likely family shown by the table and give one piece of pattern evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>8</td></tr><tr><td>4</td><td>16</td></tr></tbody></table>",
       "answer": "Exponential.",
-      "solution_text": "Each output is multiplied by 2, so the relationship has constant multiplicative change.",
-      "solution_html": "<p>Each output is multiplied by 2, so the relationship has constant multiplicative change.</p>",
+      "solution_text": "The outputs multiply by 2 each time x increases by 1.",
+      "solution_html": "<p>The outputs multiply by 2 each time x increases by 1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The table shows x = 0,1,2,3 and y = 3,6,12,24. Which function family is most likely, and why?"
+            "text": "Identify the most likely family shown by the table and give one piece of pattern evidence."
           }
         },
         {
@@ -219,57 +193,36 @@
             ],
             "rows": [
               [
-                0,
-                3
+                "0",
+                "1"
               ],
               [
-                1,
-                6
+                "1",
+                "2"
               ],
               [
-                2,
-                12
+                "2",
+                "4"
               ],
               [
-                3,
-                24
+                "3",
+                "8"
+              ],
+              [
+                "4",
+                "16"
               ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              3
-            ],
-            [
-              1,
-              6
-            ],
-            [
-              2,
-              12
-            ],
-            [
-              3,
-              24
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 2: function-family recognition."
+      "instantiation_summary": "recognize exponential pattern"
     },
     {
       "design_slot_id": "U1-S1.3-P1-INTRO-03",
@@ -277,36 +230,31 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 2,
-        "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
+        "i_can_id": "U1-S1.3-IC03",
+        "source_i_can_index": 3,
+        "text": "Use a table, graph, equation, or context as evidence."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Use a table, graph, equation, or context as evidence."
-        }
-      ],
-      "evidence_job": "recognize a basic quadratic pattern",
-      "student_action": "use graph/table shape or second-change evidence to identify quadratic family",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Use a table, graph, equation, or context as evidence about a function family.",
+      "student_action": "extract a relevant feature from a supplied representation and use it as evidence",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
         {
           "route_type": "registered_tool",
           "tool_key": "graph_tool",
@@ -316,20 +264,19 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -338,22 +285,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_03",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.3-P1-INTRO-03",
       "source_map_record_id": "U1-S1.3-P1-INTRO-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The values are y = 1,4,9,16 for x = 1,2,3,4. Which function family is most likely? Explain using a pattern in the values.",
-      "student_html": "<p>The values are y = 1,4,9,16 for x = 1,2,3,4. Which function family is most likely? Explain using a pattern in the values.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>9</td></tr><tr><td>4</td><td>16</td></tr></tbody></table>",
-      "answer": "Quadratic.",
-      "solution_text": "The outputs are perfect squares and the first differences 3,5,7 have constant second difference 2.",
-      "solution_html": "<p>The outputs are perfect squares and the first differences 3,5,7 have constant second difference 2.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which family is more likely for this relationship? Support the choice with evidence from the table.",
+      "student_html": "<p>Which family is more likely for this relationship? Support the choice with evidence from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>7</td></tr><tr><td>-1</td><td>4</td></tr><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>7</td></tr></tbody></table>",
+      "answer": "Quadratic is more likely than linear.",
+      "solution_text": "The outputs are symmetric and the first differences are not constant; the pattern fits a quadratic family better than a linear one.",
+      "solution_html": "<p>The outputs are symmetric and the first differences are not constant; the pattern fits a quadratic family better than a linear one.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The values are y = 1,4,9,16 for x = 1,2,3,4. Which function family is most likely? Explain using a pattern in the values."
+            "text": "Which family is more likely for this relationship? Support the choice with evidence from the table."
           }
         },
         {
@@ -365,57 +312,36 @@
             ],
             "rows": [
               [
-                1,
-                1
+                "-2",
+                "7"
               ],
               [
-                2,
-                4
+                "-1",
+                "4"
               ],
               [
-                3,
-                9
+                "0",
+                "3"
               ],
               [
-                4,
-                16
+                "1",
+                "4"
+              ],
+              [
+                "2",
+                "7"
               ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              4
-            ],
-            [
-              3,
-              9
-            ],
-            [
-              4,
-              16
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 3: function-family recognition."
+      "instantiation_summary": "family classification evidence variant 82"
     },
     {
       "design_slot_id": "U1-S1.3-P1-INTRO-04",
@@ -423,36 +349,31 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 2,
-        "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
+        "i_can_id": "U1-S1.3-IC04",
+        "source_i_can_index": 4,
+        "text": "Explain why one family is more likely than another."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Use a table, graph, equation, or context as evidence."
-        }
-      ],
-      "evidence_job": "recognize a basic absolute-value pattern",
-      "student_action": "use V-shape/symmetry evidence to identify the family",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
+      "supporting_i_cans": [],
+      "evidence_job": "Explain why one function family is more likely than another.",
+      "student_action": "compare defining evidence and justify the more plausible family",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
         {
           "route_type": "registered_tool",
           "tool_key": "graph_tool",
@@ -462,14 +383,13 @@
           "student_constructed": false
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -478,107 +398,59 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.3-P1-INTRO-04",
       "source_map_record_id": "U1-S1.3-P1-INTRO-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The graph is V-shaped with vertex at (0,2) and points (-3,5) and (3,5). Which basic function family is most likely?",
-      "student_html": "<p>The graph is V-shaped with vertex at (0,2) and points (-3,5) and (3,5). Which basic function family is most likely?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_11c6ed6daf8296b8.png\" alt=\"Graph\"></div>",
-      "answer": "Absolute value.",
-      "solution_text": "A symmetric V-shape with a vertex is characteristic of an absolute-value function.",
-      "solution_html": "<p>A symmetric V-shape with a vertex is characteristic of an absolute-value function.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which family is more likely for this relationship? Support the choice with evidence from the table.",
+      "student_html": "<p>Which family is more likely for this relationship? Support the choice with evidence from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>9</td></tr><tr><td>3</td><td>27</td></tr></tbody></table>",
+      "answer": "Exponential is more likely than linear.",
+      "solution_text": "The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.",
+      "solution_html": "<p>The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The graph is V-shaped with vertex at (0,2) and points (-3,5) and (3,5). Which basic function family is most likely?"
+            "text": "Which family is more likely for this relationship? Support the choice with evidence from the table."
           }
         },
         {
-          "type": "graph",
+          "type": "table",
           "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -5,
-              "x_max": 5,
-              "y_min": 0,
-              "y_max": 7
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "piecewise": [
-              {
-                "slope": -1,
-                "intercept": 2,
-                "domain": {
-                  "x_max": 0
-                }
-              },
-              {
-                "slope": 1,
-                "intercept": 2,
-                "domain": {
-                  "x_min": 0
-                }
-              }
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                "0",
+                "1"
+              ],
+              [
+                "1",
+                "3"
+              ],
+              [
+                "2",
+                "9"
+              ],
+              [
+                "3",
+                "27"
+              ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": -5,
-            "x_max": 5,
-            "y_min": 0,
-            "y_max": 7
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "piecewise": [
-            {
-              "slope": -1,
-              "intercept": 2,
-              "domain": {
-                "x_max": 0
-              }
-            },
-            {
-              "slope": 1,
-              "intercept": 2,
-              "domain": {
-                "x_min": 0
-              }
-            }
-          ]
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_11c6ed6daf8296b8.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_11c6ed6daf8296b8.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 4: function-family recognition."
+      "instantiation_summary": "family classification evidence variant 69"
     },
     {
       "design_slot_id": "U1-S1.3-P1-INTRO-05",
@@ -586,57 +458,47 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC01",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.3-IC01",
         "source_i_can_index": 1,
         "text": "Recognize a linear pattern from constant rate."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC02",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 2,
-          "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
-        },
-        {
-          "i_can_id": "U1.3-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Use a table, graph, equation, or context as evidence."
-        }
-      ],
-      "evidence_job": "distinguish linear from exponential change",
-      "student_action": "compare additive and multiplicative patterns and classify",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "table",
+      "supporting_i_cans": [],
+      "evidence_job": "Recognize a linear pattern from a constant rate in a second representation or slightly less-scaffolded case.",
+      "student_action": "classify a relationship as linear using constant-rate evidence in a table or graph",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "guided_intro_transfer",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -645,83 +507,59 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_05",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.3-P1-INTRO-05",
       "source_map_record_id": "U1-S1.3-P1-INTRO-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Table A has outputs 5,8,11,14. Table B has outputs 5,10,20,40 for equal x-steps. Which is linear and which is exponential?",
-      "student_html": "<p>Table A has outputs 5,8,11,14. Table B has outputs 5,10,20,40 for equal x-steps. Which is linear and which is exponential?</p>",
-      "answer": "A is linear; B is exponential.",
-      "solution_text": "A adds 3 each step. B multiplies by 2 each step.",
-      "solution_html": "<p>A adds 3 each step. B multiplies by 2 each step.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Decide whether the table shows a linear pattern. Explain using the change in outputs.",
+      "student_html": "<p>Decide whether the table shows a linear pattern. Explain using the change in outputs.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>7</td></tr></tbody></table>",
+      "answer": "Yes. The output changes by 3 each time x increases by 1.",
+      "solution_text": "The first differences are all 3, so the rate of change is constant. A constant rate is evidence of a linear relationship.",
+      "solution_html": "<p>The first differences are all 3, so the rate of change is constant. A constant rate is evidence of a linear relationship.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Table A has outputs 5,8,11,14. Table B has outputs 5,10,20,40 for equal x-steps. Which is linear and which is exponential?"
+            "text": "Decide whether the table shows a linear pattern. Explain using the change in outputs."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                "0",
+                "-2"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "2",
+                "4"
+              ],
+              [
+                "3",
+                "7"
+              ]
+            ]
           }
         }
       ],
-      "representation_data": {
-        "tables": [
-          {
-            "headers": [
-              "x",
-              "A"
-            ],
-            "rows": [
-              [
-                0,
-                5
-              ],
-              [
-                1,
-                8
-              ],
-              [
-                2,
-                11
-              ],
-              [
-                3,
-                14
-              ]
-            ]
-          },
-          {
-            "headers": [
-              "x",
-              "B"
-            ],
-            "rows": [
-              [
-                0,
-                5
-              ],
-              [
-                1,
-                10
-              ],
-              [
-                2,
-                20
-              ],
-              [
-                3,
-                40
-              ]
-            ]
-          }
-        ]
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 5: function-family recognition."
+      "instantiation_summary": "linear table with rate 3"
     },
     {
       "design_slot_id": "U1-S1.3-P1-INTRO-06",
@@ -729,220 +567,22 @@
       "unit": 1,
       "section": "1.3",
       "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.3-IC02",
         "source_i_can_index": 2,
         "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Use a table, graph, equation, or context as evidence."
-        }
-      ],
-      "evidence_job": "identify a likely function family from a simple equation",
-      "student_action": "connect equation structure to family and cite evidence",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "supported_first_learning",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_06",
-      "item_id": "U1-S1.3-P1-INTRO-06",
-      "source_map_record_id": "U1-S1.3-P1-INTRO-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The equation y = -4x + 9 belongs to which function family? Give the feature that identifies it.",
-      "student_html": "<p>The equation y = -4x + 9 belongs to which function family? Give the feature that identifies it.</p><div class=\"equation-card\">\\[y=-4x+9\\]</div>",
-      "answer": "Linear.",
-      "solution_text": "The variable x is to the first power and the equation has constant rate -4.",
-      "solution_html": "<p>The variable x is to the first power and the equation has constant rate -4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "The equation y = -4x + 9 belongs to which function family? Give the feature that identifies it."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-4x+9"
-          }
-        }
-      ],
-      "representation_data": {
-        "equation": "y=-4x+9"
-      },
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": []
-      },
-      "instantiation_summary": "Section 1.3 Intro 6: function-family recognition."
-    },
-    {
-      "design_slot_id": "U1-S1.3-P1-INTRO-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 3,
-        "text": "Use a table, graph, equation, or context as evidence."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC04",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 4,
-          "text": "Explain why one family is more likely than another."
-        }
-      ],
-      "evidence_job": "select a plausible family for a context and justify",
-      "student_action": "use how quantities change as evidence",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
-        }
-      ],
-      "difficulty_intent": "supported_first_learning",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_07",
-      "item_id": "U1-S1.3-P1-INTRO-07",
-      "source_map_record_id": "U1-S1.3-P1-INTRO-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A bacteria culture doubles every hour from a starting population of 200. Which function family is most plausible, and why?",
-      "student_html": "<p>A bacteria culture doubles every hour from a starting population of 200. Which function family is most plausible, and why?</p>",
-      "answer": "Exponential.",
-      "solution_text": "The population changes by a constant multiplicative factor of 2 each hour.",
-      "solution_html": "<p>The population changes by a constant multiplicative factor of 2 each hour.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A bacteria culture doubles every hour from a starting population of 200. Which function family is most plausible, and why?"
-          }
-        }
-      ],
-      "representation_data": {
-        "context": "Bacteria population doubles each hour from 200."
-      },
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": []
-      },
-      "instantiation_summary": "Section 1.3 Intro 7: function-family recognition."
-    },
-    {
-      "design_slot_id": "U1-S1.3-P1-INTRO-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.3-LT",
-        "text": "Notice how common function families change in different ways."
-      },
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1.3-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 3,
-        "text": "Use a table, graph, equation, or context as evidence."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.3-INTRO-IC04",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 4,
-          "text": "Explain why one family is more likely than another."
-        }
-      ],
-      "evidence_job": "compare two candidate families and explain why one fits better",
-      "student_action": "use representation evidence rather than label/appearance alone",
-      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Distinguish basic linear, quadratic, exponential, and absolute-value patterns in a second representation or slightly less-scaffolded case.",
+      "student_action": "classify a function family using defining pattern or feature evidence",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
@@ -955,20 +595,19 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "guided_intro_transfer",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -977,94 +616,287 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_08",
-      "item_id": "U1-S1.3-P1-INTRO-08",
-      "source_map_record_id": "U1-S1.3-P1-INTRO-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "One model predicts values 2,5,8,11; another predicts 2,4,8,16 at equal input steps. Which model better fits a situation that grows by the same number each step? Explain.",
-      "student_html": "<p>One model predicts values 2,5,8,11; another predicts 2,4,8,16 at equal input steps. Which model better fits a situation that grows by the same number each step? Explain.</p><table class=\"values\"><thead><tr><th>step</th><th>Model A</th><th>Model B</th></tr></thead><tbody><tr><td>0</td><td>2</td><td>2</td></tr><tr><td>1</td><td>5</td><td>4</td></tr><tr><td>2</td><td>8</td><td>8</td></tr><tr><td>3</td><td>11</td><td>16</td></tr></tbody></table>",
-      "answer": "The first model.",
-      "solution_text": "The first adds 3 each step, which matches constant additive change. The second multiplies by 2.",
-      "solution_html": "<p>The first adds 3 each step, which matches constant additive change. The second multiplies by 2.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
+      "item_id": "U1-S1.3-P1-INTRO-06",
+      "source_map_record_id": "U1-S1.3-P1-INTRO-06",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Identify the most likely family shown by the table and give one piece of pattern evidence.",
+      "student_html": "<p>Identify the most likely family shown by the table and give one piece of pattern evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>2</td></tr><tr><td>-1</td><td>1</td></tr><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr></tbody></table>",
+      "answer": "Absolute Value.",
+      "solution_text": "The outputs form a V-shaped symmetric pattern around x = 0.",
+      "solution_html": "<p>The outputs form a V-shaped symmetric pattern around x = 0.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "One model predicts values 2,5,8,11; another predicts 2,4,8,16 at equal input steps. Which model better fits a situation that grows by the same number each step? Explain."
+            "text": "Identify the most likely family shown by the table and give one piece of pattern evidence."
           }
         },
         {
           "type": "table",
           "data": {
             "headers": [
-              "step",
-              "Model A",
-              "Model B"
+              "x",
+              "y"
             ],
             "rows": [
               [
-                0,
-                2,
-                2
+                "-2",
+                "2"
               ],
               [
-                1,
-                5,
-                4
+                "-1",
+                "1"
               ],
               [
-                2,
-                8,
-                8
+                "0",
+                "0"
               ],
               [
-                3,
-                11,
-                16
+                "1",
+                "1"
+              ],
+              [
+                "2",
+                "2"
               ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "step",
-            "Model A",
-            "Model B"
-          ],
-          "rows": [
-            [
-              0,
-              2,
-              2
-            ],
-            [
-              1,
-              5,
-              4
-            ],
-            [
-              2,
-              8,
-              8
-            ],
-            [
-              3,
-              11,
-              16
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Intro 8: function-family recognition."
+      "instantiation_summary": "recognize absolute value pattern"
+    },
+    {
+      "design_slot_id": "U1-S1.3-P1-INTRO-07",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-S1.3-IC03",
+        "source_i_can_index": 3,
+        "text": "Use a table, graph, equation, or context as evidence."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use a table, graph, equation, or context as evidence about a function family in a second representation or slightly less-scaffolded case.",
+      "student_action": "extract a relevant feature from a supplied representation and use it as evidence",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "guided_intro_transfer",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
+      "item_id": "U1-S1.3-P1-INTRO-07",
+      "source_map_record_id": "U1-S1.3-P1-INTRO-07",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which family is more likely for this relationship? Support the choice with evidence from the table.",
+      "student_html": "<p>Which family is more likely for this relationship? Support the choice with evidence from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>18</td></tr><tr><td>3</td><td>54</td></tr></tbody></table>",
+      "answer": "Exponential is more likely than linear.",
+      "solution_text": "The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.",
+      "solution_html": "<p>The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Which family is more likely for this relationship? Support the choice with evidence from the table."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                "0",
+                "2"
+              ],
+              [
+                "1",
+                "6"
+              ],
+              [
+                "2",
+                "18"
+              ],
+              [
+                "3",
+                "54"
+              ]
+            ]
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": []
+      },
+      "instantiation_summary": "family classification evidence variant 31"
+    },
+    {
+      "design_slot_id": "U1-S1.3-P1-INTRO-08",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-S1.3-IC04",
+        "source_i_can_index": 4,
+        "text": "Explain why one family is more likely than another."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Explain why one function family is more likely than another in a second representation or slightly less-scaffolded case.",
+      "student_action": "compare defining evidence and justify the more plausible family",
+      "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "guided_intro_transfer",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
+      "item_id": "U1-S1.3-P1-INTRO-08",
+      "source_map_record_id": "U1-S1.3-P1-INTRO-08",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which family is more likely for this relationship? Support the choice with evidence from the table.",
+      "student_html": "<p>Which family is more likely for this relationship? Support the choice with evidence from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>9</td></tr><tr><td>2</td><td>27</td></tr><tr><td>3</td><td>81</td></tr></tbody></table>",
+      "answer": "Exponential is more likely than linear.",
+      "solution_text": "The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.",
+      "solution_html": "<p>The outputs multiply by 3 rather than add a constant amount. A constant multiplicative factor is exponential evidence.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Which family is more likely for this relationship? Support the choice with evidence from the table."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                "0",
+                "3"
+              ],
+              [
+                "1",
+                "9"
+              ],
+              [
+                "2",
+                "27"
+              ],
+              [
+                "3",
+                "81"
+              ]
+            ]
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": []
+      },
+      "instantiation_summary": "family classification evidence variant 95"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-01",
@@ -1080,14 +912,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [],
-      "evidence_job": "find slope from a graph",
-      "student_action": "read two useful points and calculate rate of change",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Find slope from a graph.",
+      "student_action": "determine slope from visible rise and run on a supplied graph",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -1105,10 +936,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1117,83 +947,60 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_01",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-01",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Use the graph through (1,3) and (5,11) to find the slope.",
-      "student_html": "<p>Use the graph through (1,3) and (5,11) to find the slope.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_0dcf0b4efa4f4530.png\" alt=\"Graph\"></div>",
-      "answer": "2",
-      "solution_text": "Slope = (11-3)/(5-1)=8/4=2.",
-      "solution_html": "<p>Slope = (11-3)/(5-1)=8/4=2.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Find the slope of the graphed line.",
+      "student_html": "<p>Find the slope of the graphed line.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_09063327cfcdd32f.png\" alt=\"Graph\"></div>",
+      "answer": "-2",
+      "solution_text": "Choose two points on the line. For a run of 1 unit, the rise is -2, so slope = -2/1 = -2.",
+      "solution_html": "<p>Choose two points on the line. For a run of 1 unit, the rise is -2, so slope = -2/1 = -2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the graph through (1,3) and (5,11) to find the slope."
+            "text": "Find the slope of the graphed line."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
+            "semantic_mode": "algebra_coordinate",
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": 0,
+              "x_min": -6,
               "x_max": 6,
-              "y_min": 0,
-              "y_max": 13
+              "y_min": -10,
+              "y_max": 10
             },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
+            "points": [],
+            "connect_points": false,
             "line": {
-              "slope": 2,
-              "intercept": 1
+              "slope": -2,
+              "intercept": 6
             }
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 6,
-            "y_min": 0,
-            "y_max": 13
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": 1
-          }
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_0dcf0b4efa4f4530.png"
+          "file": "figures/graph_09063327cfcdd32f.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_0dcf0b4efa4f4530.png"
+          "figures/graph_09063327cfcdd32f.png"
         ]
       },
-      "instantiation_summary": "Section 1.3 Mastery 1: rate/slope evidence."
+      "instantiation_summary": "slope from graph y=-2x+6"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-02",
@@ -1209,33 +1016,31 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Find slope from a table."
       },
       "supporting_i_cans": [],
-      "evidence_job": "find slope from a table",
-      "student_action": "use changes in input/output to calculate rate",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Find slope from a table.",
+      "student_action": "compute constant rate of change from paired table values",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1244,22 +1049,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_02",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-02",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Use the table (0,7),(3,1),(6,-5) to find the rate of change.",
-      "student_html": "<p>Use the table (0,7),(3,1),(6,-5) to find the rate of change.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>7</td></tr><tr><td>3</td><td>1</td></tr><tr><td>6</td><td>-5</td></tr></tbody></table>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Find the slope from the table.",
+      "student_html": "<p>Find the slope from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>2</td></tr><tr><td>4</td><td>-2</td></tr><tr><td>6</td><td>-6</td></tr></tbody></table>",
       "answer": "-2",
-      "solution_text": "Using any two rows: (1-7)/(3-0)=-6/3=-2.",
-      "solution_html": "<p>Using any two rows: (1-7)/(3-0)=-6/3=-2.</p>",
+      "solution_text": "Using two rows, Δy = -4 when Δx = 2, so slope = (-4)/2 = -2.",
+      "solution_html": "<p>Using two rows, Δy = -4 when Δx = 2, so slope = (-4)/2 = -2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the table (0,7),(3,1),(6,-5) to find the rate of change."
+            "text": "Find the slope from the table."
           }
         },
         {
@@ -1271,49 +1076,32 @@
             ],
             "rows": [
               [
-                0,
-                7
+                "0",
+                "6"
               ],
               [
-                3,
-                1
+                "2",
+                "2"
               ],
               [
-                6,
-                -5
+                "4",
+                "-2"
+              ],
+              [
+                "6",
+                "-6"
               ]
             ]
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              7
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              6,
-              -5
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 2: rate/slope evidence."
+      "instantiation_summary": "slope from table rate -2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-03",
@@ -1329,14 +1117,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "find slope from an equation",
-      "student_action": "identify the rate encoded in the equation",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Find slope from an equation.",
+      "student_action": "identify or calculate slope from an equation representation",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "equation",
       "representation_need": "required",
@@ -1344,7 +1131,7 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -1352,10 +1139,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1364,40 +1150,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_03",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-03",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Find the slope of y = -5x + 12.",
-      "student_html": "<p>Find the slope of y = -5x + 12.</p><div class=\"equation-card\">\\[y=-5x+12\\]</div>",
-      "answer": "-5",
-      "solution_text": "In slope-intercept form y = mx+b, the coefficient of x is the slope.",
-      "solution_html": "<p>In slope-intercept form y = mx+b, the coefficient of x is the slope.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "The relationship is given by the equation. State the rate of change and interpret it in the situation.",
+      "student_html": "<p>The relationship is given by the equation. State the rate of change and interpret it in the situation.</p><div class=\"equation-card\">\\[distance=-2time+6\\]</div>",
+      "answer": "-2 miles per hour.",
+      "solution_text": "The coefficient of the input variable is -2, so the output changes by -2 miles per hour for each 1-unit increase in the input.",
+      "solution_html": "<p>The coefficient of the input variable is -2, so the output changes by -2 miles per hour for each 1-unit increase in the input.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Find the slope of y = -5x + 12."
+            "text": "The relationship is given by the equation. State the rate of change and interpret it in the situation."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=-5x+12"
+            "latex": "distance=-2time+6"
           }
         }
       ],
-      "representation_data": {
-        "equation": "y=-5x+12"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 3: rate/slope evidence."
+      "instantiation_summary": "slope from equation coefficient -2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-04",
@@ -1413,32 +1197,36 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 4,
         "text": "Find and interpret rate of change from a context."
       },
       "supporting_i_cans": [],
-      "evidence_job": "find and interpret rate of change from context",
-      "student_action": "determine rate and explain its units/meaning",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "context",
+      "evidence_job": "Find and interpret rate of change from a context.",
+      "student_action": "calculate a rate and explain what its sign and units mean in context",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1447,34 +1235,32 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-04",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A tank gains 6 liters every 4 minutes. Find the rate of change and interpret it.",
-      "student_html": "<p>A tank gains 6 liters every 4 minutes. Find the rate of change and interpret it.</p>",
-      "answer": "1.5 liters per minute.",
-      "solution_text": "6/4=1.5, meaning the amount increases by 1.5 liters each minute.",
-      "solution_html": "<p>6/4=1.5, meaning the amount increases by 1.5 liters each minute.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "A hiker's remaining distance decreases by 2 miles each hour. What is the rate of change, and what does its sign mean?",
+      "student_html": "<p>A hiker&#x27;s remaining distance decreases by 2 miles each hour. What is the rate of change, and what does its sign mean?</p>",
+      "answer": "-2 miles per hour; the remaining distance is decreasing.",
+      "solution_text": "The remaining distance changes by -2 miles for each 1 hour, so the rate is -2 miles per hour.",
+      "solution_html": "<p>The remaining distance changes by -2 miles for each 1 hour, so the rate is -2 miles per hour.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A tank gains 6 liters every 4 minutes. Find the rate of change and interpret it."
+            "text": "A hiker's remaining distance decreases by 2 miles each hour. What is the rate of change, and what does its sign mean?"
           }
         }
       ],
-      "representation_data": {
-        "context": "Tank gains 6 liters every 4 minutes."
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 4: rate/slope evidence."
+      "instantiation_summary": "contextual rate -2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-05",
@@ -1490,23 +1276,15 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Find slope from a table."
-        }
-      ],
-      "evidence_job": "find the same rate from a graph and table",
-      "student_action": "calculate both and reconcile agreement",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Find slope from a graph with independently chosen or meaningfully varied values/representation.",
+      "student_action": "determine slope from visible rise and run on a supplied graph",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
       "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -1516,22 +1294,15 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1540,126 +1311,60 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_05",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-05",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A graph passes through (0,2),(2,8),(4,14). A table lists the same points. Find the rate from both and state the common value.",
-      "student_html": "<p>A graph passes through (0,2),(2,8),(4,14). A table lists the same points. Find the rate from both and state the common value.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>14</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_edbb249467005a66.png\" alt=\"Graph\"></div>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Find the slope of the graphed line.",
+      "student_html": "<p>Find the slope of the graphed line.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_b55e638290e87464.png\" alt=\"Graph\"></div>",
       "answer": "3",
-      "solution_text": "Each 2-unit increase in x adds 6 to y, so rate 6/2=3; the graph has the same rise/run.",
-      "solution_html": "<p>Each 2-unit increase in x adds 6 to y, so rate 6/2=3; the graph has the same rise/run.</p>",
+      "solution_text": "Choose two points on the line. For a run of 1 unit, the rise is 3, so slope = 3/1 = 3.",
+      "solution_html": "<p>Choose two points on the line. For a run of 1 unit, the rise is 3, so slope = 3/1 = 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A graph passes through (0,2),(2,8),(4,14). A table lists the same points. Find the rate from both and state the common value."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                0,
-                2
-              ],
-              [
-                2,
-                8
-              ],
-              [
-                4,
-                14
-              ]
-            ]
+            "text": "Find the slope of the graphed line."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
+            "semantic_mode": "algebra_coordinate",
             "x_label": "x",
             "y_label": "y",
             "bounds": {
-              "x_min": 0,
-              "x_max": 5,
-              "y_min": 0,
-              "y_max": 16
+              "x_min": -6,
+              "x_max": 6,
+              "y_min": -10,
+              "y_max": 10
             },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
+            "points": [],
+            "connect_points": false,
             "line": {
               "slope": 3,
-              "intercept": 2
+              "intercept": -2
             }
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 5,
-            "y_min": 0,
-            "y_max": 16
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 3,
-            "intercept": 2
-          }
-        },
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              2
-            ],
-            [
-              2,
-              8
-            ],
-            [
-              4,
-              14
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_edbb249467005a66.png"
+          "file": "figures/graph_b55e638290e87464.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_edbb249467005a66.png"
+          "figures/graph_b55e638290e87464.png"
         ]
       },
-      "instantiation_summary": "Section 1.3 Mastery 5: rate/slope evidence."
+      "instantiation_summary": "slope from graph y=3x-2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-06",
@@ -1674,46 +1379,32 @@
         "text": "Find slope or rate of change from a graph, table, equation, or context."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Find slope from an equation."
+        "i_can_id": "U1-MG02-IC02",
+        "source_i_can_index": 2,
+        "text": "Find slope from a table."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Find and interpret rate of change from a context."
-        }
-      ],
-      "evidence_job": "find rate from an equation and interpret it in context",
-      "student_action": "identify coefficient/rate and state meaning",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Find slope from a table with independently chosen or meaningfully varied values/representation.",
+      "student_action": "compute constant rate of change from paired table values",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "representation_mode": "table",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
+          "route_type": "semantic_html",
+          "representation": "table",
           "answer_neutral": true,
-          "representation": "context"
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1722,41 +1413,59 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_06",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-06",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The model P = 4t + 30 gives the number of pages read after t minutes. Find and interpret the rate.",
-      "student_html": "<p>The model P = 4t + 30 gives the number of pages read after t minutes. Find and interpret the rate.</p><div class=\"equation-card\">\\[P=4t+30\\]</div>",
-      "answer": "4 pages per minute.",
-      "solution_text": "The coefficient 4 is the rate; each additional minute adds 4 pages.",
-      "solution_html": "<p>The coefficient 4 is the rate; each additional minute adds 4 pages.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Find the slope from the table.",
+      "student_html": "<p>Find the slope from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>4</td><td>10</td></tr><tr><td>6</td><td>16</td></tr></tbody></table>",
+      "answer": "3",
+      "solution_text": "Using two rows, Δy = 6 when Δx = 2, so slope = (6)/2 = 3.",
+      "solution_html": "<p>Using two rows, Δy = 6 when Δx = 2, so slope = (6)/2 = 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The model P = 4t + 30 gives the number of pages read after t minutes. Find and interpret the rate."
+            "text": "Find the slope from the table."
           }
         },
         {
-          "type": "equation",
+          "type": "table",
           "data": {
-            "latex": "P=4t+30"
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                "0",
+                "-2"
+              ],
+              [
+                "2",
+                "4"
+              ],
+              [
+                "4",
+                "10"
+              ],
+              [
+                "6",
+                "16"
+              ]
+            ]
           }
         }
       ],
-      "representation_data": {
-        "equation": "P=4t+30",
-        "context": "Pages read over time."
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 6: rate/slope evidence."
+      "instantiation_summary": "slope from table rate 3"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-07",
@@ -1771,50 +1480,22 @@
         "text": "Find slope or rate of change from a graph, table, equation, or context."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Find slope from a graph."
+        "i_can_id": "U1-MG02-IC03",
+        "source_i_can_index": 3,
+        "text": "Find slope from an equation."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Find slope from a table."
-        },
-        {
-          "i_can_id": "U1-MG02-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Find slope from an equation."
-        }
-      ],
-      "evidence_job": "compare rates shown in different representations",
-      "student_action": "determine each rate and compare them",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Find slope from an equation with independently chosen or meaningfully varied values/representation.",
+      "student_action": "identify or calculate slope from an equation representation",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "representation_mode": "equation",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
-        },
-        {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -1822,10 +1503,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1834,126 +1514,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_07",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-07",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Relationship A is shown by a table with rate -3. Relationship B is graphed with slope -1. Which decreases faster, and by how much per unit?",
-      "student_html": "<p>Relationship A is shown by a table with rate -3. Relationship B is graphed with slope -1. Which decreases faster, and by how much per unit?</p><table class=\"values\"><thead><tr><th>x</th><th>A</th></tr></thead><tbody><tr><td>0</td><td>10</td></tr><tr><td>1</td><td>7</td></tr><tr><td>2</td><td>4</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_bdd9799f16f0b077.png\" alt=\"Graph\"></div>",
-      "answer": "A decreases 2 units per input faster.",
-      "solution_text": "A changes -3 per input versus -1; its magnitude is 2 greater.",
-      "solution_html": "<p>A changes -3 per input versus -1; its magnitude is 2 greater.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "The relationship is given by the equation. State the rate of change and interpret it in the situation.",
+      "student_html": "<p>The relationship is given by the equation. State the rate of change and interpret it in the situation.</p><div class=\"equation-card\">\\[distance=-3time+5\\]</div>",
+      "answer": "-3 miles per hour.",
+      "solution_text": "The coefficient of the input variable is -3, so the output changes by -3 miles per hour for each 1-unit increase in the input.",
+      "solution_html": "<p>The coefficient of the input variable is -3, so the output changes by -3 miles per hour for each 1-unit increase in the input.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A is shown by a table with rate -3. Relationship B is graphed with slope -1. Which decreases faster, and by how much per unit?"
+            "text": "The relationship is given by the equation. State the rate of change and interpret it in the situation."
           }
         },
         {
-          "type": "table",
+          "type": "equation",
           "data": {
-            "headers": [
-              "x",
-              "A"
-            ],
-            "rows": [
-              [
-                0,
-                10
-              ],
-              [
-                1,
-                7
-              ],
-              [
-                2,
-                4
-              ]
-            ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 5,
-              "y_min": 0,
-              "y_max": 10
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": -1,
-              "intercept": 8
-            }
+            "latex": "distance=-3time+5"
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "A"
-          ],
-          "rows": [
-            [
-              0,
-              10
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              2,
-              4
-            ]
-          ]
-        },
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 5,
-            "y_min": 0,
-            "y_max": 10
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": -1,
-            "intercept": 8
-          }
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_bdd9799f16f0b077.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_bdd9799f16f0b077.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 7: rate/slope evidence."
+      "instantiation_summary": "slope from equation coefficient -3"
     },
     {
       "design_slot_id": "U1-S1.3-P1-MASTERY-08",
@@ -1968,72 +1560,37 @@
         "text": "Find slope or rate of change from a graph, table, equation, or context."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Find slope from a graph."
+        "i_can_id": "U1-MG02-IC04",
+        "source_i_can_index": 4,
+        "text": "Find and interpret rate of change from a context."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Find slope from a table."
-        },
-        {
-          "i_can_id": "U1-MG02-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Find slope from an equation."
-        },
-        {
-          "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Find and interpret rate of change from a context."
-        }
-      ],
-      "evidence_job": "reconcile rate across the four Algebra views",
-      "student_action": "show that graph/table/equation/context encode a common rate or identify the mismatch",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Find and interpret rate of change from a context with independently chosen or meaningfully varied values/representation.",
+      "student_action": "calculate a rate and explain what its sign and units mean in context",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
+          "route_type": "direct_text",
+          "representation": "context",
+          "answer_neutral": true
         },
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2042,134 +1599,32 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_08",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.3-P1-MASTERY-08",
       "source_map_record_id": "U1-S1.3-P1-MASTERY-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A context says a quantity starts at 6 and increases 2 per step. A table shows (0,6),(1,8),(2,10), a graph has y-intercept 6 and slope 2, and an equation is y = 2x + 6. Explain how the rate is consistent across all four views.",
-      "student_html": "<p>A context says a quantity starts at 6 and increases 2 per step. A table shows (0,6),(1,8),(2,10), a graph has y-intercept 6 and slope 2, and an equation is y = 2x + 6. Explain how the rate is consistent across all four views.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>10</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_96c6f3985b8a9984.png\" alt=\"Graph\"></div><div class=\"equation-card\">\\[y=2x+6\\]</div>",
-      "answer": "The rate is 2 in every representation.",
-      "solution_text": "The context says +2 per step; table differences are +2; graph slope is 2; equation coefficient is 2.",
-      "solution_html": "<p>The context says +2 per step; table differences are +2; graph slope is 2; equation coefficient is 2.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "A hiker's remaining distance decreases by 3 miles each hour. What is the rate of change, and what does its sign mean?",
+      "student_html": "<p>A hiker&#x27;s remaining distance decreases by 3 miles each hour. What is the rate of change, and what does its sign mean?</p>",
+      "answer": "-3 miles per hour; the remaining distance is decreasing.",
+      "solution_text": "The remaining distance changes by -3 miles for each 1 hour, so the rate is -3 miles per hour.",
+      "solution_html": "<p>The remaining distance changes by -3 miles for each 1 hour, so the rate is -3 miles per hour.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A context says a quantity starts at 6 and increases 2 per step. A table shows (0,6),(1,8),(2,10), a graph has y-intercept 6 and slope 2, and an equation is y = 2x + 6. Explain how the rate is consistent across all four views."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                0,
-                6
-              ],
-              [
-                1,
-                8
-              ],
-              [
-                2,
-                10
-              ]
-            ]
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 4,
-              "y_min": 0,
-              "y_max": 14
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 2,
-              "intercept": 6
-            }
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+6"
+            "text": "A hiker's remaining distance decreases by 3 miles each hour. What is the rate of change, and what does its sign mean?"
           }
         }
       ],
-      "representation_data": {
-        "context": "Starts at 6 and increases 2 per step.",
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              6
-            ],
-            [
-              1,
-              8
-            ],
-            [
-              2,
-              10
-            ]
-          ]
-        },
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 4,
-            "y_min": 0,
-            "y_max": 14
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": 6
-          }
-        },
-        "equation": "y=2x+6"
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_96c6f3985b8a9984.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_96c6f3985b8a9984.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Mastery 8: rate/slope evidence."
+      "instantiation_summary": "contextual rate -3"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-01",
@@ -2184,26 +1639,24 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
+        "i_can_id": "U2-MG01-RIC01",
         "source_i_can_index": 1,
-        "text": "Compare two relationships shown in different representations."
+        "text": "Compare rates or patterns across two relationships."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use values, rates, starting values, or patterns as evidence."
-        }
-      ],
-      "evidence_job": "compare two relationships shown in graph and table",
-      "student_action": "compare relevant rates/values and state the requested relationship",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Compare rates or patterns across two relationships.",
+      "student_action": "extract comparable rate or pattern evidence from two representations",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
         {
           "route_type": "registered_tool",
           "tool_key": "graph_tool",
@@ -2211,22 +1664,15 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2235,22 +1681,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_01",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.3-P1-REVIEW-01",
       "source_map_record_id": "U1-S1.3-P1-REVIEW-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Relationship A is the line y = 2x + 1. Relationship B is shown by the table (0,4),(1,5),(2,6). Compare their starting values and rates.",
-      "student_html": "<p>Relationship A is the line y = 2x + 1. Relationship B is shown by the table (0,4),(1,5),(2,6). Compare their starting values and rates.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>6</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_8ea69d6cab6805e4.png\" alt=\"Graph\"></div>",
-      "answer": "A starts at 1 with rate 2; B starts at 4 with rate 1.",
-      "solution_text": "Read A from the equation. For B, y increases 1 per unit x and the x=0 value is 4.",
-      "solution_html": "<p>Read A from the equation. For B, y increases 1 per unit x and the x=0 value is 4.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.",
+      "student_html": "<p>Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=1x+4\\]</div>",
+      "answer": "A has rate 2; B has rate 1.",
+      "solution_text": "In A, the output changes by 2 for each 1-unit increase in x. In B, the coefficient of x is 1. A is greater.",
+      "solution_html": "<p>In A, the output changes by 2 for each 1-unit increase in x. In B, the coefficient of x is 1. A is greater.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A is the line y = 2x + 1. Relationship B is shown by the table (0,4),(1,5),(2,6). Compare their starting values and rates."
+            "text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change."
           }
         },
         {
@@ -2258,103 +1704,42 @@
           "data": {
             "headers": [
               "x",
-              "y"
+              "A(x)"
             ],
             "rows": [
               [
-                0,
-                4
+                "0",
+                "1"
               ],
               [
-                1,
-                5
+                "1",
+                "3"
               ],
               [
-                2,
-                6
+                "2",
+                "5"
+              ],
+              [
+                "3",
+                "7"
               ]
             ]
           }
         },
         {
-          "type": "graph",
+          "type": "equation",
           "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 4,
-              "y_min": 0,
-              "y_max": 10
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 2,
-              "intercept": 1
-            }
+            "latex": "B(x)=1x+4"
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 4,
-            "y_min": 0,
-            "y_max": 10
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": 1
-          }
-        },
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              4
-            ],
-            [
-              1,
-              5
-            ],
-            [
-              2,
-              6
-            ]
-          ]
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_8ea69d6cab6805e4.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_8ea69d6cab6805e4.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 1: mixed-representation comparison."
+      "instantiation_summary": "compare rates 2 and 1"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-02",
@@ -2369,46 +1754,40 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Compare two relationships shown in different representations."
+        "i_can_id": "U2-MG01-RIC02",
+        "source_i_can_index": 2,
+        "text": "Compare starting values or intercepts when they are meaningful."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use values, rates, starting values, or patterns as evidence."
-        }
-      ],
-      "evidence_job": "compare equation and context representations",
-      "student_action": "extract comparable evidence from each and decide greater/faster/starts higher",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Compare starting values or intercepts when meaningful.",
+      "student_action": "identify comparable starting features and state which is greater or different",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
         },
         {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2417,41 +1796,65 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_02",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.3-P1-REVIEW-02",
       "source_map_record_id": "U1-S1.3-P1-REVIEW-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A taxi fare is C = 2.5m + 6, where m is miles. State the starting value and rate, then explain both in context.",
-      "student_html": "<p>A taxi fare is C = 2.5m + 6, where m is miles. State the starting value and rate, then explain both in context.</p><div class=\"equation-card\">\\[C=2.5m+6\\]</div>",
-      "answer": "Starting value $6; rate $2.50 per mile.",
-      "solution_text": "The constant term is the initial charge; the coefficient of m is the per-mile rate.",
-      "solution_html": "<p>The constant term is the initial charge; the coefficient of m is the per-mile rate.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Compare the starting values of the two relationships, using x = 0 as the starting input.",
+      "student_html": "<p>Compare the starting values of the two relationships, using \\(x=0\\) as the starting input.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>9</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=-2x+6\\]</div>",
+      "answer": "A starts at 0; B starts at 6.",
+      "solution_text": "For A, the table shows A(0) = 0. For B, the constant term gives B(0) = 6.",
+      "solution_html": "<p>For A, the table shows A(0) = 0. For B, the constant term gives B(0) = 6.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A taxi fare is C = 2.5m + 6, where m is miles. State the starting value and rate, then explain both in context."
+            "text": "Compare the starting values of the two relationships, using x = 0 as the starting input."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "A(x)"
+            ],
+            "rows": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "3"
+              ],
+              [
+                "2",
+                "6"
+              ],
+              [
+                "3",
+                "9"
+              ]
+            ]
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "C=2.5m+6"
+            "latex": "B(x)=-2x+6"
           }
         }
       ],
-      "representation_data": {
-        "equation": "C=2.5m+6",
-        "context": "Taxi fare"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 2: mixed-representation comparison."
+      "instantiation_summary": "compare starting values 0 and 6"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-03",
@@ -2466,49 +1869,38 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
+        "i_can_id": "U2-MG01-RIC03",
         "source_i_can_index": 3,
-        "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
+        "text": "Compare outputs for a specified input."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Support a comparison with information from the representations."
-        }
-      ],
-      "evidence_job": "compare outputs at a specified input across different representations",
-      "student_action": "read/calculate both outputs and support the comparison",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Compare outputs for a specified input.",
+      "student_action": "evaluate or read both relationships at the same input and compare outputs",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
+          "route_type": "semantic_html",
+          "representation": "table",
           "answer_neutral": true,
           "student_constructed": false
         },
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2517,90 +1909,65 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_03",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.3-P1-REVIEW-03",
       "source_map_record_id": "U1-S1.3-P1-REVIEW-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Relationship A is y = 3x - 2. Relationship B is a graph of y = x + 4. At x = 5, which has the greater output and by how much?",
-      "student_html": "<p>Relationship A is y = 3x - 2. Relationship B is a graph of y = x + 4. At x = 5, which has the greater output and by how much?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5a317746b39f24c6.png\" alt=\"Graph\"></div><div class=\"equation-card\">\\[y=3x-2\\]</div>",
-      "answer": "A by 4.",
-      "solution_text": "A(5)=13 and B(5)=9, so A is 4 greater.",
-      "solution_html": "<p>A(5)=13 and B(5)=9, so A is 4 greater.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Compare the outputs of the two relationships when x = 5.",
+      "student_html": "<p>Compare the outputs of the two relationships when \\(x=5\\).</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>6</td></tr><tr><td>5</td><td>18</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=3x+1\\]</div>",
+      "answer": "A(5) = 18; B(5) = 16.",
+      "solution_text": "Read or compute A(5) = 18. Substitute x = 5 into B to get 16. A is larger by 2.",
+      "solution_html": "<p>Read or compute A(5) = 18. Substitute x = 5 into B to get 16. A is larger by 2.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A is y = 3x - 2. Relationship B is a graph of y = x + 4. At x = 5, which has the greater output and by how much?"
+            "text": "Compare the outputs of the two relationships when x = 5."
           }
         },
         {
-          "type": "graph",
+          "type": "table",
           "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 6,
-              "y_min": 0,
-              "y_max": 15
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 1,
-              "intercept": 4
-            }
+            "headers": [
+              "x",
+              "A(x)"
+            ],
+            "rows": [
+              [
+                "0",
+                "-2"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "6"
+              ],
+              [
+                "5",
+                "18"
+              ]
+            ]
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "y=3x-2"
+            "latex": "B(x)=3x+1"
           }
         }
       ],
-      "representation_data": {
-        "equation": "y=3x-2",
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 6,
-            "y_min": 0,
-            "y_max": 15
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 1,
-            "intercept": 4
-          }
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_5a317746b39f24c6.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_5a317746b39f24c6.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 3: mixed-representation comparison."
+      "instantiation_summary": "compare outputs at x=5: 18 vs 16"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-04",
@@ -2615,26 +1982,24 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 2,
-        "text": "Use values, rates, starting values, or patterns as evidence."
+        "i_can_id": "U2-MG01-RIC04",
+        "source_i_can_index": 4,
+        "text": "Support a comparison with evidence from each representation."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
-        }
-      ],
-      "evidence_job": "compare starting values/intercepts across representations",
-      "student_action": "identify each start and state which is higher",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Support a relationship comparison with evidence from each representation.",
+      "student_action": "make a comparison claim and cite quantitative evidence from both sources",
+      "question_structure_id": "MODEL-COMPARE-TWO-LINEAR-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
         {
           "route_type": "registered_tool",
           "tool_key": "graph_tool",
@@ -2642,22 +2007,15 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2666,22 +2024,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.3-P1-REVIEW-04",
       "source_map_record_id": "U1-S1.3-P1-REVIEW-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A graph crosses the y-axis at -3. A table begins with (0,5). Compare the starting values.",
-      "student_html": "<p>A graph crosses the y-axis at -3. A table begins with (0,5). Compare the starting values.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>7</td></tr><tr><td>2</td><td>9</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_8d7ec5a8cdfd21ea.png\" alt=\"Graph\"></div>",
-      "answer": "The table starts 8 units higher.",
-      "solution_text": "The graph's starting value is -3 and the table's is 5; 5 - (-3) = 8.",
-      "solution_html": "<p>The graph&#x27;s starting value is -3 and the table&#x27;s is 5; 5 - (-3) = 8.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.",
+      "student_html": "<p>Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>9</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=-2x+6\\]</div>",
+      "answer": "A.",
+      "solution_text": "From A's table, the change in output per 1 input is 3. In B's equation, the coefficient of x is -2. Comparing 3 and -2 supports the conclusion.",
+      "solution_html": "<p>From A&#x27;s table, the change in output per 1 input is 3. In B&#x27;s equation, the coefficient of x is -2. Comparing 3 and -2 supports the conclusion.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A graph crosses the y-axis at -3. A table begins with (0,5). Compare the starting values."
+            "text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation."
           }
         },
         {
@@ -2689,103 +2047,42 @@
           "data": {
             "headers": [
               "x",
-              "y"
+              "A(x)"
             ],
             "rows": [
               [
-                0,
-                5
+                "0",
+                "0"
               ],
               [
-                1,
-                7
+                "1",
+                "3"
               ],
               [
-                2,
-                9
+                "2",
+                "6"
+              ],
+              [
+                "3",
+                "9"
               ]
             ]
           }
         },
         {
-          "type": "graph",
+          "type": "equation",
           "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 5,
-              "y_min": -4,
-              "y_max": 10
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 2,
-              "intercept": -3
-            }
+            "latex": "B(x)=-2x+6"
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 5,
-            "y_min": -4,
-            "y_max": 10
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": -3
-          }
-        },
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              5
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              2,
-              9
-            ]
-          ]
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_8d7ec5a8cdfd21ea.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_8d7ec5a8cdfd21ea.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 4: mixed-representation comparison."
+      "instantiation_summary": "evidence-based comparison rates 3,-2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-05",
@@ -2800,47 +2097,40 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 2,
-        "text": "Use values, rates, starting values, or patterns as evidence."
+        "i_can_id": "U2-MG01-RIC01",
+        "source_i_can_index": 1,
+        "text": "Compare rates or patterns across two relationships."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
-        }
-      ],
-      "evidence_job": "compare rates across two representations",
-      "student_action": "find each rate and state which changes faster",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Compare rates or patterns across two relationships with a new representation or context at Review demand.",
+      "student_action": "extract comparable rate or pattern evidence from two representations",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         },
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2849,22 +2139,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_05",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.3-P1-REVIEW-05",
       "source_map_record_id": "U1-S1.3-P1-REVIEW-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A graph rises from (1,2) to (5,10). A table changes from (0,7) to (4,15). Compare the rates.",
-      "student_html": "<p>A graph rises from (1,2) to (5,10). A table changes from (0,7) to (4,15). Compare the rates.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>7</td></tr><tr><td>2</td><td>11</td></tr><tr><td>4</td><td>15</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_0442824eb25b5830.png\" alt=\"Graph\"></div>",
-      "answer": "Both rates are 2.",
-      "solution_text": "Graph rate = (10-2)/(5-1)=2. Table rate = (15-7)/(4-0)=2.",
-      "solution_html": "<p>Graph rate = (10-2)/(5-1)=2. Table rate = (15-7)/(4-0)=2.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.",
+      "student_html": "<p>Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>2</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=2x-1\\]</div>",
+      "answer": "A has rate -1; B has rate 2.",
+      "solution_text": "In A, the output changes by -1 for each 1-unit increase in x. In B, the coefficient of x is 2. B is greater.",
+      "solution_html": "<p>In A, the output changes by -1 for each 1-unit increase in x. In B, the coefficient of x is 2. B is greater.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A graph rises from (1,2) to (5,10). A table changes from (0,7) to (4,15). Compare the rates."
+            "text": "Relationship A is shown in the table and Relationship B is shown by the equation. Compare their rates of change."
           }
         },
         {
@@ -2872,103 +2162,42 @@
           "data": {
             "headers": [
               "x",
-              "y"
+              "A(x)"
             ],
             "rows": [
               [
-                0,
-                7
+                "0",
+                "5"
               ],
               [
-                2,
-                11
+                "1",
+                "4"
               ],
               [
-                4,
-                15
+                "2",
+                "3"
+              ],
+              [
+                "3",
+                "2"
               ]
             ]
           }
         },
         {
-          "type": "graph",
+          "type": "equation",
           "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 6,
-              "y_min": 0,
-              "y_max": 12
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 2,
-              "intercept": 0
-            }
+            "latex": "B(x)=2x-1"
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 6,
-            "y_min": 0,
-            "y_max": 12
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": 0
-          }
-        },
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              7
-            ],
-            [
-              2,
-              11
-            ],
-            [
-              4,
-              15
-            ]
-          ]
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_0442824eb25b5830.png"
-        }
-      ],
+      "representation_data": {},
+      "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_0442824eb25b5830.png"
-        ]
+        "pilot_version": "0.7.1",
+        "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 5: mixed-representation comparison."
+      "instantiation_summary": "compare rates -1 and 2"
     },
     {
       "design_slot_id": "U1-S1.3-P1-REVIEW-06",
@@ -2983,308 +2212,15 @@
         "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG01-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Support a comparison with information from the representations."
+        "i_can_id": "U2-MG01-RIC02",
+        "source_i_can_index": 2,
+        "text": "Compare starting values or intercepts when they are meaningful."
       },
       "supporting_i_cans": [],
-      "evidence_job": "critique a comparison claim that ignores graph scale",
-      "student_action": "evaluate the claim using actual scaled values",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        }
-      ],
-      "difficulty_intent": "reduced_support_review",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_06",
-      "item_id": "U1-S1.3-P1-REVIEW-06",
-      "source_map_record_id": "U1-S1.3-P1-REVIEW-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A student says a graph has rate 4 because it rises 4 grid squares while moving right 1 grid square. The y-axis is labeled by 2s. Critique the claim.",
-      "student_html": "<p>A student says a graph has rate 4 because it rises 4 grid squares while moving right 1 grid square. The y-axis is labeled by 2s. Critique the claim.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_85401ed7e04aa49f.png\" alt=\"Graph\"></div>",
-      "answer": "The rate is 8, not 4.",
-      "solution_text": "A rise of 4 grid squares equals 8 y-units because each square represents 2 units; run is 1, so rate is 8.",
-      "solution_html": "<p>A rise of 4 grid squares equals 8 y-units because each square represents 2 units; run is 1, so rate is 8.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A student says a graph has rate 4 because it rises 4 grid squares while moving right 1 grid square. The y-axis is labeled by 2s. Critique the claim."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 2,
-              "y_min": 0,
-              "y_max": 16
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 2
-            },
-            "line": {
-              "slope": 8,
-              "intercept": 0
-            }
-          }
-        }
-      ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 2,
-            "y_min": 0,
-            "y_max": 16
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 2
-          },
-          "line": {
-            "slope": 8,
-            "intercept": 0
-          }
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_85401ed7e04aa49f.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_85401ed7e04aa49f.png"
-        ]
-      },
-      "instantiation_summary": "Section 1.3 Review 6: mixed-representation comparison."
-    },
-    {
-      "design_slot_id": "U1-S1.3-P1-REVIEW-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 2,
-        "text": "Use values, rates, starting values, or patterns as evidence."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Support a comparison with information from the representations."
-        }
-      ],
-      "evidence_job": "choose relevant evidence for a requested comparison",
-      "student_action": "identify which value/rate/start information answers the question and use it",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html_table",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": null
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        }
-      ],
-      "difficulty_intent": "reduced_support_review",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_07",
-      "item_id": "U1-S1.3-P1-REVIEW-07",
-      "source_map_record_id": "U1-S1.3-P1-REVIEW-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "You want to compare which of two plans grows faster. One is given by a table and the other by an equation. Which evidence is most relevant: color of the graph, starting value only, or rate of change? Explain.",
-      "student_html": "<p>You want to compare which of two plans grows faster. One is given by a table and the other by an equation. Which evidence is most relevant: color of the graph, starting value only, or rate of change? Explain.</p><table class=\"values\"><thead><tr><th>x</th><th>Plan A</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>11</td></tr></tbody></table><div class=\"equation-card\">\\[B=2x+10\\]</div>",
-      "answer": "Rate of change.",
-      "solution_text": "Growth speed is determined by how much output changes per unit input, so rate is the relevant evidence.",
-      "solution_html": "<p>Growth speed is determined by how much output changes per unit input, so rate is the relevant evidence.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "You want to compare which of two plans grows faster. One is given by a table and the other by an equation. Which evidence is most relevant: color of the graph, starting value only, or rate of change? Explain."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "Plan A"
-            ],
-            "rows": [
-              [
-                0,
-                5
-              ],
-              [
-                1,
-                8
-              ],
-              [
-                2,
-                11
-              ]
-            ]
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "B=2x+10"
-          }
-        }
-      ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "Plan A"
-          ],
-          "rows": [
-            [
-              0,
-              5
-            ],
-            [
-              1,
-              8
-            ],
-            [
-              2,
-              11
-            ]
-          ]
-        },
-        "equation": "B=2x+10"
-      },
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": []
-      },
-      "instantiation_summary": "Section 1.3 Review 7: mixed-representation comparison."
-    },
-    {
-      "design_slot_id": "U1-S1.3-P1-REVIEW-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Compare two relationships shown in different representations."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use values, rates, starting values, or patterns as evidence."
-        },
-        {
-          "i_can_id": "U2-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
-        },
-        {
-          "i_can_id": "U2-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Support a comparison with information from the representations."
-        }
-      ],
-      "evidence_job": "make a complete mixed-representation comparison",
-      "student_action": "compare two relationships and support with evidence from both representations",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Compare starting values or intercepts when meaningful with a new representation or context at Review demand.",
+      "student_action": "identify comparable starting features and state which is greater or different",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
@@ -3299,23 +2235,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -3324,22 +2254,22 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_08",
-      "item_id": "U1-S1.3-P1-REVIEW-08",
-      "source_map_record_id": "U1-S1.3-P1-REVIEW-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Relationship A has starting value 2 and rate 3. Relationship B has starting value 8 and rate 1. At x = 4, compare the outputs and explain which evidence determines the result.",
-      "student_html": "<p>Relationship A has starting value 2 and rate 3. Relationship B has starting value 8 and rate 1. At x = 4, compare the outputs and explain which evidence determines the result.</p><table class=\"values\"><thead><tr><th>x</th><th>A</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>14</td></tr></tbody></table><div class=\"equation-card\">\\[B=x+8\\]</div>",
-      "answer": "A = 14; B = 12; A is larger by 2.",
-      "solution_text": "A: 2+3(4)=14. B: 8+1(4)=12. Both starting value and rate matter for the specific input.",
-      "solution_html": "<p>A: 2+3(4)=14. B: 8+1(4)=12. Both starting value and rate matter for the specific input.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
+      "item_id": "U1-S1.3-P1-REVIEW-06",
+      "source_map_record_id": "U1-S1.3-P1-REVIEW-06",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Compare the starting values of the two relationships, using x = 0 as the starting input.",
+      "student_html": "<p>Compare the starting values of the two relationships, using \\(x=0\\) as the starting input.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>2</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=2x-1\\]</div>",
+      "answer": "A starts at 5; B starts at -1.",
+      "solution_text": "For A, the table shows A(0) = 5. For B, the constant term gives B(0) = -1.",
+      "solution_html": "<p>For A, the table shows A(0) = 5. For B, the constant term gives B(0) = -1.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Relationship A has starting value 2 and rate 3. Relationship B has starting value 8 and rate 1. At x = 4, compare the outputs and explain which evidence determines the result."
+            "text": "Compare the starting values of the two relationships, using x = 0 as the starting input."
           }
         },
         {
@@ -3347,20 +2277,24 @@
           "data": {
             "headers": [
               "x",
-              "A"
+              "A(x)"
             ],
             "rows": [
               [
-                0,
-                2
+                "0",
+                "5"
               ],
               [
-                2,
-                8
+                "1",
+                "4"
               ],
               [
-                4,
-                14
+                "2",
+                "3"
+              ],
+              [
+                "3",
+                "2"
               ]
             ]
           }
@@ -3368,39 +2302,245 @@
         {
           "type": "equation",
           "data": {
-            "latex": "B=x+8"
+            "latex": "B(x)=2x-1"
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "A"
-          ],
-          "rows": [
-            [
-              0,
-              2
-            ],
-            [
-              2,
-              8
-            ],
-            [
-              4,
-              14
-            ]
-          ]
-        },
-        "equation": "B=x+8"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.3 Review 8: mixed-representation comparison."
+      "instantiation_summary": "compare starting values 5 and -1"
+    },
+    {
+      "design_slot_id": "U1-S1.3-P1-REVIEW-07",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Review",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U2-MG01",
+        "title": "Compare Relationships",
+        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
+      },
+      "primary_i_can": {
+        "i_can_id": "U2-MG01-RIC03",
+        "source_i_can_index": 3,
+        "text": "Compare outputs for a specified input."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Compare outputs for a specified input with a new representation or context at Review demand.",
+      "student_action": "evaluate or read both relationships at the same input and compare outputs",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "review_application",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
+      "item_id": "U1-S1.3-P1-REVIEW-07",
+      "source_map_record_id": "U1-S1.3-P1-REVIEW-07",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Compare the outputs of the two relationships when x = 2.",
+      "student_html": "<p>Compare the outputs of the two relationships when \\(x=2\\).</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>2</td><td>5</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=1x+4\\]</div>",
+      "answer": "A(2) = 5; B(2) = 6.",
+      "solution_text": "Read or compute A(2) = 5. Substitute x = 2 into B to get 6. B is larger by 1.",
+      "solution_html": "<p>Read or compute A(2) = 5. Substitute x = 2 into B to get 6. B is larger by 1.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Compare the outputs of the two relationships when x = 2."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "A(x)"
+            ],
+            "rows": [
+              [
+                "0",
+                "1"
+              ],
+              [
+                "1",
+                "3"
+              ],
+              [
+                "2",
+                "5"
+              ],
+              [
+                "2",
+                "5"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "B(x)=1x+4"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": []
+      },
+      "instantiation_summary": "compare outputs at x=2: 5 vs 6"
+    },
+    {
+      "design_slot_id": "U1-S1.3-P1-REVIEW-08",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Review",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U2-MG01",
+        "title": "Compare Relationships",
+        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
+      },
+      "primary_i_can": {
+        "i_can_id": "U2-MG01-RIC04",
+        "source_i_can_index": 4,
+        "text": "Support a comparison with evidence from each representation."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Support a relationship comparison with evidence from each representation with a new representation or context at Review demand.",
+      "student_action": "make a comparison claim and cite quantitative evidence from both sources",
+      "question_structure_id": "MODEL-COMPARE-TWO-LINEAR-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "review_application",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
+      "item_id": "U1-S1.3-P1-REVIEW-08",
+      "source_map_record_id": "U1-S1.3-P1-REVIEW-08",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.",
+      "student_html": "<p>Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation.</p><table class=\"values\"><thead><tr><th>x</th><th>A(x)</th></tr></thead><tbody><tr><td>0</td><td>-2</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>10</td></tr></tbody></table><div class=\"equation-card\">\\[B(x)=3x+1\\]</div>",
+      "answer": "A.",
+      "solution_text": "From A's table, the change in output per 1 input is 4. In B's equation, the coefficient of x is 3. Comparing 4 and 3 supports the conclusion.",
+      "solution_html": "<p>From A&#x27;s table, the change in output per 1 input is 4. In B&#x27;s equation, the coefficient of x is 3. Comparing 4 and 3 supports the conclusion.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Which relationship has the greater rate of change? Support your answer with one piece of evidence from each representation."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "A(x)"
+            ],
+            "rows": [
+              [
+                "0",
+                "-2"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "6"
+              ],
+              [
+                "3",
+                "10"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "B(x)=3x+1"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": []
+      },
+      "instantiation_summary": "evidence-based comparison rates 4,3"
     }
   ]
 }

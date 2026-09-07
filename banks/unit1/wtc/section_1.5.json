@@ -1,15 +1,15 @@
 {
   "schema": "algebra-bank-wtc/1.0",
   "section": "1.5",
-  "shared_stimulus_id": "U1-S1.5-WTC-STIM",
+  "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
   "shared_stimulus": {
-    "student_text": "A robotics club has $92 to spend after paying a fixed $20 registration fee. Each sensor kit costs the same amount, and the club wants to buy 6 sensor kits.",
-    "student_html": "<p>A robotics club has $92 to spend after paying a fixed $20 registration fee. Each sensor kit costs the same amount, and the club wants to buy 6 sensor kits.</p>",
+    "student_text": "A school club charges a fixed membership fee plus a fee for each event attended.",
+    "student_html": "<p>The club charges $8 to join and $3 for each event. A student has paid $29 total.</p>",
     "content_blocks": [
       {
         "type": "prose",
         "data": {
-          "text": "A robotics club has $92 to spend after paying a fixed $20 registration fee. Each sensor kit costs the same amount, and the club wants to buy 6 sensor kits."
+          "text": "The club charges $8 to join and $3 for each event. A student has paid $29 total."
         }
       }
     ],
@@ -21,42 +21,45 @@
       "destination": "WTC",
       "unit": 1,
       "section": "1.5",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.5-LT",
-        "text": "Write an equation from a situation and explain what its solution means."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG04",
         "title": "Equations in Context",
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1.5-INTRO-IC01",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.5-IC01",
         "source_i_can_index": 1,
         "text": "Define a variable."
       },
       "supporting_i_cans": [],
-      "evidence_job": "define the variable for the shared situation",
-      "student_action": "state what the variable represents with units/meaning",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "evidence_job": "Preview define a variable using one shared section stimulus without requiring formal mastery.",
+      "student_action": "notice and identify",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
       "response_mode": "constructed_short",
-      "representation_mode": "context",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -65,86 +68,81 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part A",
-      "shared_stimulus_id": "U1-S1.5-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_A",
+      "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
       "part_label": "Part A",
       "wtc_id": "U1-S1.5-WTC",
+      "family_id": "U1-S1.5-WTC-FAMILY",
       "item_id": "U1-S1.5-WTC-A",
       "source_map_record_id": "U1-S1.5-WTC-A",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "For the shared robotics-club situation, define a variable for the unknown quantity.",
-      "student_html": "<p>For the shared robotics-club situation, define a variable for the unknown quantity.</p>",
-      "answer": "Let k = cost of one sensor kit in dollars.",
-      "solution_text": "The unknown repeated quantity is the cost of one kit.",
-      "solution_html": "<p>The unknown repeated quantity is the cost of one kit.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Define a variable for the number of events attended.",
+      "student_html": "<p>Define a variable for the number of events attended.</p>",
+      "answer": "Let e = number of events attended.",
+      "solution_text": "The unknown quantity is the number of events, so e is a clear variable.",
+      "solution_html": "<p>The unknown quantity is the number of events, so e is a clear variable.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "For the shared robotics-club situation, define a variable for the unknown quantity."
+            "text": "Define a variable for the number of events attended."
           }
         }
       ],
-      "representation_data": {
-        "context": "$92 total budget; $20 registration fee; 6 equal-price sensor kits."
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.5 Part A defines variable."
+      "instantiation_summary": "WTC 1.5 define variable"
     },
     {
       "design_slot_id": "U1-S1.5-WTC-B",
       "destination": "WTC",
       "unit": 1,
       "section": "1.5",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.5-LT",
-        "text": "Write an equation from a situation and explain what its solution means."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG04",
         "title": "Equations in Context",
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1.5-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.5-IC02",
         "source_i_can_index": 2,
         "text": "Write an equation that matches a situation."
       },
       "supporting_i_cans": [],
-      "evidence_job": "write an equation matching the shared quantities",
-      "student_action": "translate the situation into an equation",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "evidence_job": "Preview write an equation that matches a situation using one shared section stimulus without requiring formal mastery.",
+      "student_action": "attempt a representation or calculation",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         },
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -153,88 +151,81 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part B",
-      "shared_stimulus_id": "U1-S1.5-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_B",
+      "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
       "part_label": "Part B",
       "wtc_id": "U1-S1.5-WTC",
+      "family_id": "U1-S1.5-WTC-FAMILY",
       "item_id": "U1-S1.5-WTC-B",
       "source_map_record_id": "U1-S1.5-WTC-B",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Write an equation that matches the shared robotics-club quantities.",
-      "student_html": "<p>Write an equation that matches the shared robotics-club quantities.</p><div class=\"equation-card\">\\[20+6k=92\\]</div>",
-      "answer": "20 + 6k = 92",
-      "solution_text": "The fixed fee plus six equal kit costs equals the total budget.",
-      "solution_html": "<p>The fixed fee plus six equal kit costs equals the total budget.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Write an equation that matches the total cost situation.",
+      "student_html": "<p>Write an equation that matches the total cost situation.</p>",
+      "answer": "8 + 3e = 29",
+      "solution_text": "The fixed $8 fee plus $3 per event equals the $29 total.",
+      "solution_html": "<p>The fixed $8 fee plus $3 per event equals the $29 total.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Write an equation that matches the shared robotics-club quantities."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "20+6k=92"
+            "text": "Write an equation that matches the total cost situation."
           }
         }
       ],
-      "representation_data": {
-        "context": "$92 total budget; $20 registration fee; 6 equal-price sensor kits.",
-        "equation": "20+6k=92"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.5 Part B writes equation."
+      "instantiation_summary": "WTC 1.5 write equation"
     },
     {
       "design_slot_id": "U1-S1.5-WTC-C",
       "destination": "WTC",
       "unit": 1,
       "section": "1.5",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.5-LT",
-        "text": "Write an equation from a situation and explain what its solution means."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG04",
         "title": "Equations in Context",
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1.5-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.5-IC03",
         "source_i_can_index": 3,
         "text": "Use equivalent steps to solve when needed."
       },
       "supporting_i_cans": [],
-      "evidence_job": "solve the equation using equivalent steps",
-      "student_action": "solve the shared equation",
-      "question_structure_id": "FORMULA-INVERSE-VARIABLE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
+      "evidence_job": "Preview use equivalent steps to solve when needed using one shared section stimulus without requiring formal mastery.",
+      "student_action": "compare or test a feature",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
+          "route_type": "direct_text",
+          "representation": "context",
+          "answer_neutral": true
+        },
+        {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -243,92 +234,81 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part C",
-      "shared_stimulus_id": "U1-S1.5-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_C",
+      "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
       "part_label": "Part C",
       "wtc_id": "U1-S1.5-WTC",
+      "family_id": "U1-S1.5-WTC-FAMILY",
       "item_id": "U1-S1.5-WTC-C",
       "source_map_record_id": "U1-S1.5-WTC-C",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Solve the shared equation 20 + 6k = 92 using equivalent steps.",
-      "student_html": "<p>Solve the shared equation 20 + 6k = 92 using equivalent steps.</p><div class=\"equation-card\">\\[20+6k=92\\]</div>",
-      "answer": "k = 12",
-      "solution_text": "Subtract 20 to get 6k=72, then divide by 6 to get k=12.",
-      "solution_html": "<p>Subtract 20 to get 6k=72, then divide by 6 to get k=12.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Solve the equation for the number of events.",
+      "student_html": "<p>Solve the equation for the number of events.</p>",
+      "answer": "e = 7",
+      "solution_text": "Subtract 8 to get 3e = 21, then divide by 3 to get e = 7.",
+      "solution_html": "<p>Subtract 8 to get 3e = 21, then divide by 3 to get e = 7.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve the shared equation 20 + 6k = 92 using equivalent steps."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "20+6k=92"
+            "text": "Solve the equation for the number of events."
           }
         }
       ],
-      "representation_data": {
-        "equation": "20+6k=92"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.5 Part C solves equation."
+      "instantiation_summary": "WTC 1.5 equivalent solving steps"
     },
     {
       "design_slot_id": "U1-S1.5-WTC-D",
       "destination": "WTC",
       "unit": 1,
       "section": "1.5",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.5-LT",
-        "text": "Write an equation from a situation and explain what its solution means."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG04",
         "title": "Equations in Context",
         "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
       },
       "primary_i_can": {
-        "i_can_id": "U1.5-INTRO-IC04",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.5-IC04",
         "source_i_can_index": 4,
         "text": "Check and interpret a solution in context."
       },
       "supporting_i_cans": [],
-      "evidence_job": "check and interpret the solution in context",
-      "student_action": "substitute/check and state what the solution means",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Preview check and interpret a solution in context using one shared section stimulus without requiring formal mastery.",
+      "student_action": "explain a prediction or conclusion with evidence",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         },
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -337,45 +317,36 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part D",
-      "shared_stimulus_id": "U1-S1.5-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_D",
+      "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
       "part_label": "Part D",
       "wtc_id": "U1-S1.5-WTC",
+      "family_id": "U1-S1.5-WTC-FAMILY",
       "item_id": "U1-S1.5-WTC-D",
       "source_map_record_id": "U1-S1.5-WTC-D",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Check k = 12 in the shared situation and explain what the solution means.",
-      "student_html": "<p>Check k = 12 in the shared situation and explain what the solution means.</p><div class=\"equation-card\">\\[20+6(12)=92\\]</div>",
-      "answer": "The check is 20 + 6(12) = 92; each sensor kit costs $12.",
-      "solution_text": "Substituting 12 gives the correct total budget, so the solution is valid and represents the price of one kit.",
-      "solution_html": "<p>Substituting 12 gives the correct total budget, so the solution is valid and represents the price of one kit.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Check the solution and interpret it in the situation.",
+      "student_html": "<p>Check the solution and interpret it in the situation.</p>",
+      "answer": "7 events.",
+      "solution_text": "8 + 3(7) = 29, so the solution checks. The student attended 7 events.",
+      "solution_html": "<p>8 + 3(7) = 29, so the solution checks. The student attended 7 events.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Check k = 12 in the shared situation and explain what the solution means."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "20+6(12)=92"
+            "text": "Check the solution and interpret it in the situation."
           }
         }
       ],
-      "representation_data": {
-        "context": "$92 total budget; $20 registration fee; 6 equal-price sensor kits.",
-        "equation": "20+6(12)=92"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.5 Part D checks/interprets solution."
+      "instantiation_summary": "WTC 1.5 check and interpret"
     }
   ]
 }

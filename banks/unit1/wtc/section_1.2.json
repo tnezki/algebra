@@ -1,21 +1,48 @@
 {
   "schema": "algebra-bank-wtc/1.0",
   "section": "1.2",
-  "shared_stimulus_id": "U1-S1.2-WTC-STIM",
+  "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
   "shared_stimulus": {
-    "student_text": "A tutoring app awards points using the rule p = 4s + 3, where s is the number of completed practice sets and p is the total points. The app currently records inputs s = 0, 1, 3, and 5.",
-    "student_html": "<p>A tutoring app awards points using the rule p = 4s + 3, where s is the number of completed practice sets and p is the total points. The app currently records inputs s = 0, 1, 3, and 5.</p><div class=\"equation-card\">\\[p=4s+3\\]</div>",
+    "student_text": "A function machine uses one rule to turn each input into an output.",
+    "student_html": "<p>The machine uses the rule shown. The table records some input-output pairs.</p><div class=\"equation-card\">\\[y=3x-2\\]</div><table class=\"values\"><thead><tr><th>input x</th><th>output y</th></tr></thead><tbody><tr><td>-1</td><td>-5</td></tr><tr><td>0</td><td>-2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>4</td><td>10</td></tr></tbody></table>",
     "content_blocks": [
       {
         "type": "prose",
         "data": {
-          "text": "A tutoring app awards points using the rule p = 4s + 3, where s is the number of completed practice sets and p is the total points. The app currently records inputs s = 0, 1, 3, and 5."
+          "text": "The machine uses the rule shown. The table records some input-output pairs."
         }
       },
       {
         "type": "equation",
         "data": {
-          "latex": "p=4s+3"
+          "latex": "y=3x-2"
+        }
+      },
+      {
+        "type": "table",
+        "data": {
+          "headers": [
+            "input x",
+            "output y"
+          ],
+          "rows": [
+            [
+              "-1",
+              "-5"
+            ],
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "4",
+              "10"
+            ]
+          ]
         }
       }
     ],
@@ -27,42 +54,52 @@
       "destination": "WTC",
       "unit": 1,
       "section": "1.2",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.2-LT",
-        "text": "Use input-output rules and the basic idea of a function."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.2-INTRO-IC01",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.2-IC01",
         "source_i_can_index": 1,
         "text": "Identify the input and output in a relationship."
       },
       "supporting_i_cans": [],
-      "evidence_job": "identify the input and output quantities",
-      "student_action": "name input/output roles in the shared situation",
-      "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
+      "evidence_job": "Preview identify the input and output in a relationship using one shared section stimulus without requiring formal mastery.",
+      "student_action": "notice and identify",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
       "response_mode": "constructed_short",
-      "representation_mode": "context",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "direct_text",
+          "route_type": "semantic_html",
+          "representation": "table",
           "answer_neutral": true,
-          "representation": "context"
+          "student_constructed": false
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "semantic_html",
+          "representation": "mapping_or_ordered_pairs",
+          "answer_neutral": true,
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -71,86 +108,88 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part A",
-      "shared_stimulus_id": "U1-S1.2-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_A",
+      "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
       "part_label": "Part A",
       "wtc_id": "U1-S1.2-WTC",
+      "family_id": "U1-S1.2-WTC-FAMILY",
       "item_id": "U1-S1.2-WTC-A",
       "source_map_record_id": "U1-S1.2-WTC-A",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "In the shared tutoring-app situation, identify the input quantity and the output quantity.",
-      "student_html": "<p>In the shared tutoring-app situation, identify the input quantity and the output quantity.</p>",
-      "answer": "Input: completed practice sets s. Output: total points p.",
-      "solution_text": "The rule takes the number of completed sets as the input and produces points as the output.",
-      "solution_html": "<p>The rule takes the number of completed sets as the input and produces points as the output.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "What quantity is the input, and what quantity is the output?",
+      "student_html": "<p>What quantity is the input, and what quantity is the output?</p>",
+      "answer": "x is the input and y is the output.",
+      "solution_text": "The rule takes an x-value and uses it to produce a y-value.",
+      "solution_html": "<p>The rule takes an x-value and uses it to produce a y-value.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "In the shared tutoring-app situation, identify the input quantity and the output quantity."
+            "text": "What quantity is the input, and what quantity is the output?"
           }
         }
       ],
-      "representation_data": {
-        "context": "Tutoring app points depend on completed practice sets."
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.2 Part A identifies input/output."
+      "instantiation_summary": "WTC 1.2 identify input/output"
     },
     {
       "design_slot_id": "U1-S1.2-WTC-B",
       "destination": "WTC",
       "unit": 1,
       "section": "1.2",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.2-LT",
-        "text": "Use input-output rules and the basic idea of a function."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.2-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.2-IC02",
         "source_i_can_index": 2,
         "text": "Use a rule to find outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "use the shared rule to find outputs and ordered pairs",
-      "student_action": "apply rule and record pairs",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Preview use a rule to find outputs using one shared section stimulus without requiring formal mastery.",
+      "student_action": "attempt a representation or calculation",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "direct_text",
+          "route_type": "semantic_html",
+          "representation": "mapping_or_ordered_pairs",
           "answer_neutral": true,
-          "representation": "ordered_pairs"
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -159,104 +198,88 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part B",
-      "shared_stimulus_id": "U1-S1.2-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_B",
+      "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
       "part_label": "Part B",
       "wtc_id": "U1-S1.2-WTC",
+      "family_id": "U1-S1.2-WTC-FAMILY",
       "item_id": "U1-S1.2-WTC-B",
       "source_map_record_id": "U1-S1.2-WTC-B",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Use the shared rule to find the outputs for s = 1 and s = 5, then write the corresponding ordered pairs.",
-      "student_html": "<p>Use the shared rule to find the outputs for s = 1 and s = 5, then write the corresponding ordered pairs.</p><div class=\"equation-card\">\\[p=4s+3\\]</div>",
-      "answer": "p=7 and p=23; (1,7) and (5,23).",
-      "solution_text": "Substitute each input into p=4s+3.",
-      "solution_html": "<p>Substitute each input into p=4s+3.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Use the rule to find the output when x = 5.",
+      "student_html": "<p>Use the rule to find the output when \\(x=5\\).</p>",
+      "answer": "13",
+      "solution_text": "y = 3(5)-2 = 15-2 = 13.",
+      "solution_html": "<p>y = 3(5)-2 = 15-2 = 13.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the shared rule to find the outputs for s = 1 and s = 5, then write the corresponding ordered pairs."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "p=4s+3"
+            "text": "Use the rule to find the output when x = 5."
           }
         }
       ],
-      "representation_data": {
-        "equation": "p=4s+3",
-        "ordered_pairs": [
-          [
-            1,
-            7
-          ],
-          [
-            5,
-            23
-          ]
-        ]
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.2 Part B evaluates shared rule."
+      "instantiation_summary": "WTC 1.2 use rule"
     },
     {
       "design_slot_id": "U1-S1.2-WTC-C",
       "destination": "WTC",
       "unit": 1,
       "section": "1.2",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.2-LT",
-        "text": "Use input-output rules and the basic idea of a function."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.2-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.2-IC03",
         "source_i_can_index": 3,
         "text": "Write ordered pairs from inputs and outputs."
       },
       "supporting_i_cans": [],
-      "evidence_job": "decide whether the shared relation is a function",
-      "student_action": "use one-output-per-input criterion and justify",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Preview write ordered pairs from inputs and outputs using one shared section stimulus without requiring formal mastery.",
+      "student_action": "compare or test a feature",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "semantic_html",
-          "representation": "mapping_diagram",
-          "answer_neutral": true,
-          "student_constructed": false,
-          "response_surface": null
-        },
-        {
-          "route_type": "semantic_html_table",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "semantic_html",
+          "representation": "mapping_or_ordered_pairs",
+          "answer_neutral": true,
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -265,157 +288,88 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part C",
-      "shared_stimulus_id": "U1-S1.2-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_C",
+      "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
       "part_label": "Part C",
       "wtc_id": "U1-S1.2-WTC",
+      "family_id": "U1-S1.2-WTC-FAMILY",
       "item_id": "U1-S1.2-WTC-C",
       "source_map_record_id": "U1-S1.2-WTC-C",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Represent the shared relation as a mapping or table and decide whether it is a function.",
-      "student_html": "<p>Represent the shared relation as a mapping or table and decide whether it is a function.</p><table class=\"values\"><thead><tr><th>practice sets s</th><th>points p</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>7</td></tr><tr><td>3</td><td>15</td></tr><tr><td>5</td><td>23</td></tr></tbody></table>",
-      "answer": "Yes, it is a function.",
-      "solution_text": "Each input 0,1,3,5 is paired with exactly one output.",
-      "solution_html": "<p>Each input 0,1,3,5 is paired with exactly one output.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Write the input-output pair for x = 4 as an ordered pair.",
+      "student_html": "<p>Write the input-output pair for \\(x=4\\) as an ordered pair.</p>",
+      "answer": "(4, 10)",
+      "solution_text": "The table shows output 10 for input 4, so the ordered pair is (4, 10).",
+      "solution_html": "<p>The table shows output 10 for input 4, so the ordered pair is (4, 10).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Represent the shared relation as a mapping or table and decide whether it is a function."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "practice sets s",
-              "points p"
-            ],
-            "rows": [
-              [
-                0,
-                3
-              ],
-              [
-                1,
-                7
-              ],
-              [
-                3,
-                15
-              ],
-              [
-                5,
-                23
-              ]
-            ]
+            "text": "Write the input-output pair for x = 4 as an ordered pair."
           }
         }
       ],
-      "representation_data": {
-        "mapping": {
-          "pairs": [
-            [
-              0,
-              3
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              3,
-              15
-            ],
-            [
-              5,
-              23
-            ]
-          ]
-        },
-        "table": {
-          "headers": [
-            "practice sets s",
-            "points p"
-          ],
-          "rows": [
-            [
-              0,
-              3
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              3,
-              15
-            ],
-            [
-              5,
-              23
-            ]
-          ]
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.2 Part C function status from shared values."
+      "instantiation_summary": "WTC 1.2 ordered pair"
     },
     {
       "design_slot_id": "U1-S1.2-WTC-D",
       "destination": "WTC",
       "unit": 1,
       "section": "1.2",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.2-LT",
-        "text": "Use input-output rules and the basic idea of a function."
-      },
+      "stage": null,
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG02",
         "title": "Understand Functions and Families",
         "text": "Use function notation and key features to describe functions and recognize common function families."
       },
       "primary_i_can": {
-        "i_can_id": "U1.2-INTRO-IC04",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.2-IC04",
         "source_i_can_index": 4,
         "text": "Decide whether each input has only one output."
       },
       "supporting_i_cans": [],
-      "evidence_job": "analyze a proposed modification that would make/not make it a function",
-      "student_action": "evaluate the changed input-output assignment and explain",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Preview decide whether each input has only one output using one shared section stimulus without requiring formal mastery.",
+      "student_action": "explain a prediction or conclusion with evidence",
+      "question_structure_id": "WTC-FRQ-PREVIEW-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "semantic_html",
-          "representation": "mapping_diagram",
+          "representation": "table",
           "answer_neutral": true,
-          "student_constructed": false,
-          "response_surface": null
+          "student_constructed": false
         },
         {
-          "route_type": "direct_text",
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "semantic_html",
+          "representation": "mapping_or_ordered_pairs",
           "answer_neutral": true,
-          "representation": "context"
+          "student_constructed": false
         }
       ],
-      "difficulty_intent": "instructional_decomposition",
+      "difficulty_intent": "preview_reasoning",
       "variation_axes": {
         "allowed": [
           "values",
-          "representation_values",
-          "context_evidence"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -424,62 +378,36 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_wtc",
-      "slot_role": "Part D",
-      "shared_stimulus_id": "U1-S1.2-WTC-STIM",
-      "depends_on": [],
+      "security_role": "wtc_preview",
+      "slot_role": "wtc_part_D",
+      "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
       "part_label": "Part D",
       "wtc_id": "U1-S1.2-WTC",
+      "family_id": "U1-S1.2-WTC-FAMILY",
       "item_id": "U1-S1.2-WTC-D",
       "source_map_record_id": "U1-S1.2-WTC-D",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Suppose the app is changed so that input s = 3 is assigned both 15 points and 19 points. Would the modified relation still be a function? Explain.",
-      "student_html": "<p>Suppose the app is changed so that input s = 3 is assigned both 15 points and 19 points. Would the modified relation still be a function? Explain.</p>",
-      "answer": "No.",
-      "solution_text": "One input, 3, would have two different outputs, so the modified relation would fail the function rule.",
-      "solution_html": "<p>One input, 3, would have two different outputs, so the modified relation would fail the function rule.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Does this relationship satisfy the function rule? Explain.",
+      "student_html": "<p>Does this relationship satisfy the function rule? Explain.</p>",
+      "answer": "Yes.",
+      "solution_text": "Each input is assigned exactly one output by the rule y = 3x - 2, so it is a function.",
+      "solution_html": "<p>Each input is assigned exactly one output by the rule y = 3x - 2, so it is a function.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Suppose the app is changed so that input s = 3 is assigned both 15 points and 19 points. Would the modified relation still be a function? Explain."
+            "text": "Does this relationship satisfy the function rule? Explain."
           }
         }
       ],
-      "representation_data": {
-        "mapping": {
-          "pairs": [
-            [
-              0,
-              3
-            ],
-            [
-              1,
-              7
-            ],
-            [
-              3,
-              15
-            ],
-            [
-              3,
-              19
-            ],
-            [
-              5,
-              23
-            ]
-          ]
-        },
-        "context": "Tutoring app points depend on completed practice sets."
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "WTC 1.2 Part D analyzes a function-breaking modification."
+      "instantiation_summary": "WTC 1.2 function decision"
     }
   ]
 }

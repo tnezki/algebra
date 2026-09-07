@@ -1,31 +1,15 @@
 {
-  "schema": "algebra-bank-map-summative/1.0",
+  "schema": "algebra-bank-summative-map/1.0",
   "course": "Algebra 1",
   "unit": 1,
   "status": "PASS",
-  "forms": [
-    "V1",
-    "V2",
-    "V3",
-    "V4",
-    "V5",
-    "V6"
-  ],
-  "blueprint": {
-    "current_mastery_goal_count": 4,
-    "target_opportunities_per_goal": 2,
-    "items_per_form": 8,
-    "estimated_work_minutes": 37,
-    "review_buffer_minutes": 3,
-    "estimated_total_minutes": 40,
-    "sequence": "V1 anchor; V2-V4 parallel; V5-V6 additional secure forms under same blueprint/comparable rigor."
-  },
   "records": [
     {
       "design_slot_id": "U1-SUM-V1-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -33,21 +17,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -66,65 +42,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": null,
-      "blueprint_family": "MG01-A"
+      "form_id": "V1",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -134,52 +101,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": null,
-      "blueprint_family": "MG01-B"
+      "form_id": "V1",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -187,21 +148,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -215,51 +174,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": null,
-      "blueprint_family": "MG02-A"
+      "form_id": "V1",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -267,76 +225,73 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": null,
-      "blueprint_family": "MG02-B"
+      "form_id": "V1",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q05",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
@@ -344,27 +299,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
         }
       ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -372,7 +319,7 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -380,124 +327,109 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": null,
-      "blueprint_family": "MG03-A"
+      "form_id": "V1",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q06",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [
         {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
         }
       ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "representation_mode": "expression",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": null,
-      "blueprint_family": "MG03-B"
+      "form_id": "V1",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -505,83 +437,74 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "student_constructed",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": null,
-      "blueprint_family": "MG04-A"
+      "form_id": "V1",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
     },
     {
       "design_slot_id": "U1-SUM-V1-Q08",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -589,77 +512,75 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find a missing input or output when enough information is given."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
+      "response_mode": "constructed_table",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "anchor evidence architecture; independent secure stimulus",
+      "slot_role": "anchor_form",
       "form": "V1",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": null,
-      "blueprint_family": "MG04-B"
+      "form_id": "V1",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -667,21 +588,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -700,65 +613,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": "U1-SUM-V1-Q01",
-      "blueprint_family": "MG01-A"
+      "form_id": "V2",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -768,52 +672,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": "U1-SUM-V1-Q02",
-      "blueprint_family": "MG01-B"
+      "form_id": "V2",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -821,21 +719,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -849,51 +745,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": "U1-SUM-V1-Q03",
-      "blueprint_family": "MG02-A"
+      "form_id": "V2",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -901,76 +796,73 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": "U1-SUM-V1-Q04",
-      "blueprint_family": "MG02-B"
+      "form_id": "V2",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q05",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
@@ -978,27 +870,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
         }
       ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -1006,7 +890,7 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -1014,124 +898,109 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": "U1-SUM-V1-Q05",
-      "blueprint_family": "MG03-A"
+      "form_id": "V2",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q06",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [
         {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
         }
       ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "representation_mode": "expression",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": "U1-SUM-V1-Q06",
-      "blueprint_family": "MG03-B"
+      "form_id": "V2",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -1139,83 +1008,74 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "student_constructed",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": "U1-SUM-V1-Q07",
-      "blueprint_family": "MG04-A"
+      "form_id": "V2",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
     },
     {
       "design_slot_id": "U1-SUM-V2-Q08",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -1223,77 +1083,75 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find a missing input or output when enough information is given."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
+      "response_mode": "constructed_table",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V2",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": "U1-SUM-V1-Q08",
-      "blueprint_family": "MG04-B"
+      "form_id": "V2",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -1301,21 +1159,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -1334,65 +1184,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": "U1-SUM-V1-Q01",
-      "blueprint_family": "MG01-A"
+      "form_id": "V3",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -1402,52 +1243,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": "U1-SUM-V1-Q02",
-      "blueprint_family": "MG01-B"
+      "form_id": "V3",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -1455,21 +1290,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -1483,51 +1316,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": "U1-SUM-V1-Q03",
-      "blueprint_family": "MG02-A"
+      "form_id": "V3",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -1535,76 +1367,73 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": "U1-SUM-V1-Q04",
-      "blueprint_family": "MG02-B"
+      "form_id": "V3",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q05",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
@@ -1612,27 +1441,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
         }
       ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -1640,7 +1461,7 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -1648,124 +1469,109 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": "U1-SUM-V1-Q05",
-      "blueprint_family": "MG03-A"
+      "form_id": "V3",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q06",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [
         {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
         }
       ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "representation_mode": "expression",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": "U1-SUM-V1-Q06",
-      "blueprint_family": "MG03-B"
+      "form_id": "V3",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -1773,83 +1579,74 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "student_constructed",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": "U1-SUM-V1-Q07",
-      "blueprint_family": "MG04-A"
+      "form_id": "V3",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
     },
     {
       "design_slot_id": "U1-SUM-V3-Q08",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -1857,77 +1654,75 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find a missing input or output when enough information is given."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
+      "response_mode": "constructed_table",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V3",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": "U1-SUM-V1-Q08",
-      "blueprint_family": "MG04-B"
+      "form_id": "V3",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -1935,21 +1730,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -1968,65 +1755,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": "U1-SUM-V1-Q01",
-      "blueprint_family": "MG01-A"
+      "form_id": "V4",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -2036,52 +1814,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": "U1-SUM-V1-Q02",
-      "blueprint_family": "MG01-B"
+      "form_id": "V4",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -2089,21 +1861,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -2117,51 +1887,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": "U1-SUM-V1-Q03",
-      "blueprint_family": "MG02-A"
+      "form_id": "V4",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -2169,76 +1938,73 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": "U1-SUM-V1-Q04",
-      "blueprint_family": "MG02-B"
+      "form_id": "V4",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q05",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
@@ -2246,27 +2012,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Substitute a value for a variable."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
         }
       ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -2274,7 +2032,7 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
@@ -2282,124 +2040,109 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": "U1-SUM-V1-Q05",
-      "blueprint_family": "MG03-A"
+      "form_id": "V4",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q06",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG03",
         "title": "Evaluate Expressions",
         "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
       },
       "supporting_i_cans": [
         {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
         }
       ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
-      "representation_mode": "mixed",
+      "representation_mode": "expression",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": "U1-SUM-V1-Q06",
-      "blueprint_family": "MG03-B"
+      "form_id": "V4",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -2407,83 +2150,74 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "student_constructed",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": "U1-SUM-V1-Q07",
-      "blueprint_family": "MG04-A"
+      "form_id": "V4",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
     },
     {
       "design_slot_id": "U1-SUM-V4-Q08",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -2491,77 +2225,75 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find a missing input or output when enough information is given."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "constructed_short",
+      "response_mode": "constructed_table",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "parallel to V1 with changed values/stimulus and, where valid, representation direction",
+      "slot_role": "parallel_form",
       "form": "V4",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": "U1-SUM-V1-Q08",
-      "blueprint_family": "MG04-B"
+      "form_id": "V4",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     },
     {
       "design_slot_id": "U1-SUM-V5-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -2569,21 +2301,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -2602,65 +2326,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V5",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": null,
-      "blueprint_family": "MG01-A"
+      "form_id": "V5",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V5-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -2670,52 +2385,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V5",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": null,
-      "blueprint_family": "MG01-B"
+      "form_id": "V5",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V5-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -2723,21 +2432,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -2751,51 +2458,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V5",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": null,
-      "blueprint_family": "MG02-A"
+      "form_id": "V5",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V5-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -2803,176 +2509,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V5",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": null,
-      "blueprint_family": "MG02-B"
-    },
-    {
-      "design_slot_id": "U1-SUM-V5-Q05",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
-        }
-      ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V5",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": null,
-      "blueprint_family": "MG03-A"
-    },
-    {
-      "design_slot_id": "U1-SUM-V5-Q06",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
-        }
-      ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -2980,60 +2529,191 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
+          "route_type": "direct_text",
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V5",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": null,
-      "blueprint_family": "MG03-B"
+      "form_id": "V5",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
+    },
+    {
+      "design_slot_id": "U1-SUM-V5-Q05",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG03",
+        "title": "Evaluate Expressions",
+        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG03-IC01",
+        "source_i_can_index": 1,
+        "text": "Substitute a value for a variable."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG03-IC02",
+          "source_i_can_index": 2,
+          "text": "Use order of operations correctly."
+        }
+      ],
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V5",
+      "form_id": "V5",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
+    },
+    {
+      "design_slot_id": "U1-SUM-V5-Q06",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG03",
+        "title": "Evaluate Expressions",
+        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
+        }
+      ],
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V5",
+      "form_id": "V5",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V5-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -3041,105 +2721,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V5",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": null,
-      "blueprint_family": "MG04-A"
-    },
-    {
-      "design_slot_id": "U1-SUM-V5-Q08",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
-        }
-      ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
-      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -3147,55 +2741,130 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V5",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": null,
-      "blueprint_family": "MG04-B"
+      "form_id": "V5",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
+    },
+    {
+      "design_slot_id": "U1-SUM-V5-Q08",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG04",
+        "title": "Input / Output Rules",
+        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG04-IC03",
+        "source_i_can_index": 3,
+        "text": "Find a missing input or output when enough information is given."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG04-IC04",
+          "source_i_can_index": 4,
+          "text": "Use a rule to build or extend a table."
+        }
+      ],
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
+      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "response_mode": "constructed_table",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V5",
+      "form_id": "V5",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     },
     {
       "design_slot_id": "U1-SUM-V6-Q01",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
@@ -3203,21 +2872,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "student_action": "construct/plot ordered pairs on correctly labeled/scaled axes",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs on an answer-neutral coordinate plane.",
+      "student_action": "plot and read coordinates accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -3236,65 +2897,56 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V6",
-      "form_item_number": 1,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-A",
-      "parallel_to": null,
-      "blueprint_family": "MG01-A"
+      "form_id": "V6",
+      "question_number": 1,
+      "family_id": "U1-SUM-FAM-MG01-A"
     },
     {
       "design_slot_id": "U1-SUM-V6-Q02",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG01",
         "title": "Coordinate-Plane Graphs",
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Identify and interpret intercepts when they are shown."
-        }
-      ],
-      "evidence_job": "read a scaled coordinate graph and identify/interpret an intercept",
-      "student_action": "read a scaled coordinate graph and identify/interpret an intercept",
+      "supporting_i_cans": [],
+      "evidence_job": "Read a scaled graph feature and interpret an intercept or axis-based value.",
+      "student_action": "read a graph feature directly and interpret it",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "graph",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -3304,52 +2956,46 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG01-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V6",
-      "form_item_number": 2,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG01-B",
-      "parallel_to": null,
-      "blueprint_family": "MG01-B"
+      "form_id": "V6",
+      "question_number": 2,
+      "family_id": "U1-SUM-FAM-MG01-B"
     },
     {
       "design_slot_id": "U1-SUM-V6-Q03",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -3357,21 +3003,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Find slope from a graph."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 2,
           "text": "Find slope from a table."
         }
       ],
-      "evidence_job": "determine and reconcile rate from a graph and table",
-      "student_action": "determine and reconcile rate from a graph and table",
-      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "evidence_job": "Determine the same rate of change from a graph and a table.",
+      "student_action": "calculate and reconcile rate from two representations",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -3385,51 +3029,50 @@
           "student_constructed": false
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG02-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V6",
-      "form_item_number": 3,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-A",
-      "parallel_to": null,
-      "blueprint_family": "MG02-A"
+      "form_id": "V6",
+      "question_number": 3,
+      "family_id": "U1-SUM-FAM-MG02-A"
     },
     {
       "design_slot_id": "U1-SUM-V6-Q04",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG02",
         "title": "Slope in Four Views",
@@ -3437,176 +3080,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 3,
         "text": "Find slope from an equation."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 4,
           "text": "Find and interpret rate of change from a context."
         }
       ],
-      "evidence_job": "determine rate from an equation and interpret it in context",
-      "student_action": "determine rate from an equation and interpret it in context",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG02-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V6",
-      "form_item_number": 4,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG02-B",
-      "parallel_to": null,
-      "blueprint_family": "MG02-B"
-    },
-    {
-      "design_slot_id": "U1-SUM-V6-Q05",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use order of operations correctly."
-        },
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
-        }
-      ],
-      "evidence_job": "substitute signed values and evaluate using order of operations",
-      "student_action": "substitute signed values and evaluate using order of operations",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "expression",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG03-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V6",
-      "form_item_number": 5,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG03-A",
-      "parallel_to": null,
-      "blueprint_family": "MG03-A"
-    },
-    {
-      "design_slot_id": "U1-SUM-V6-Q06",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Evaluate expressions with positive and negative numbers."
-        }
-      ],
-      "evidence_job": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "student_action": "evaluate or inspect an expression result and justify whether it is reasonable",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "evidence_job": "Find rate from an equation and interpret that rate in a context.",
+      "student_action": "identify rate in an equation and explain units/meaning",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -3614,60 +3100,191 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
+          "route_type": "direct_text",
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "misconception_contract": {
-        "type": "plausible_reasonableness_claim",
-        "required_supplied_claim": true,
-        "student_must": "evaluate claim using computation/structure evidence; correction required if false"
-      },
-      "slot_role": "MG03-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V6",
-      "form_item_number": 6,
-      "estimated_minutes": 5,
-      "blueprint_slot": "MG03-B",
-      "parallel_to": null,
-      "blueprint_family": "MG03-B"
+      "form_id": "V6",
+      "question_number": 4,
+      "family_id": "U1-SUM-FAM-MG02-B"
+    },
+    {
+      "design_slot_id": "U1-SUM-V6-Q05",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG03",
+        "title": "Evaluate Expressions",
+        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG03-IC01",
+        "source_i_can_index": 1,
+        "text": "Substitute a value for a variable."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG03-IC02",
+          "source_i_can_index": 2,
+          "text": "Use order of operations correctly."
+        }
+      ],
+      "evidence_job": "Substitute a value and evaluate an expression using order of operations.",
+      "student_action": "substitute and evaluate accurately",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V6",
+      "form_id": "V6",
+      "question_number": 5,
+      "family_id": "U1-SUM-FAM-MG03-A"
+    },
+    {
+      "design_slot_id": "U1-SUM-V6-Q06",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG03",
+        "title": "Evaluate Expressions",
+        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG03-IC03",
+        "source_i_can_index": 3,
+        "text": "Evaluate expressions with positive and negative numbers."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG03-IC04",
+          "source_i_can_index": 4,
+          "text": "Check whether an answer is reasonable."
+        }
+      ],
+      "evidence_job": "Evaluate an expression with signed values and check whether the result is reasonable.",
+      "student_action": "evaluate signed values and verify reasonableness",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V6",
+      "form_id": "V6",
+      "question_number": 6,
+      "family_id": "U1-SUM-FAM-MG03-B"
     },
     {
       "design_slot_id": "U1-SUM-V6-Q07",
       "destination": "Summative",
       "unit": 1,
-      "stage": "Mastery",
+      "section": null,
+      "stage": null,
       "mastery_goal": {
         "goal_id": "U1-MG04",
         "title": "Input / Output Rules",
@@ -3675,105 +3292,19 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG04-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use a rule to find an output from an input."
       },
       "supporting_i_cans": [
         {
           "i_can_id": "U1-MG04-IC01",
-          "i_can_id_basis": "derived_from_canonical_order",
           "source_i_can_index": 1,
           "text": "Use input/output language and ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
         }
       ],
-      "evidence_job": "apply an input-output rule, record ordered pairs, and extend a table",
-      "student_action": "apply an input-output rule, record ordered pairs, and extend a table",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
-          "representation": "table",
-          "answer_neutral": true,
-          "response_surface": "blank_or_partially_scaffolded_table"
-        }
-      ],
-      "difficulty_intent": "secure_independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "solve_direction"
-        ],
-        "required": [
-          "semantic_parallelism_preserved"
-        ],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
-      ],
-      "security_role": "secure_summative",
-      "slot_role": "MG04-A",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
-      "form": "V6",
-      "form_item_number": 7,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-A",
-      "parallel_to": null,
-      "blueprint_family": "MG04-A"
-    },
-    {
-      "design_slot_id": "U1-SUM-V6-Q08",
-      "destination": "Summative",
-      "unit": 1,
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
-        }
-      ],
-      "evidence_job": "find a missing input from an output/rule and verify it in the table",
-      "student_action": "find a missing input from an output/rule and verify it in the table",
-      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "evidence_job": "Use an input-output rule to find an output and record an ordered pair.",
+      "student_action": "apply a rule and connect input/output to an ordered pair",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "mixed",
       "representation_need": "required",
@@ -3781,49 +3312,123 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "rule",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         },
         {
-          "route_type": "semantic_html_table",
+          "route_type": "semantic_html",
           "representation": "table",
           "answer_neutral": true,
-          "response_surface": null
+          "student_constructed": false
         }
       ],
       "difficulty_intent": "secure_independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
           "representation_values",
-          "context_evidence",
-          "solve_direction"
+          "context",
+          "surface_details"
         ],
         "required": [
-          "semantic_parallelism_preserved"
+          "parallel_evidence_target"
         ],
         "forbidden": [
           "change_target",
           "change_evidence_job",
+          "reuse_practice_prompt",
           "answer_leaking_surface"
         ]
       },
       "source_basis": [
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
         "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md"
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
       ],
       "security_role": "secure_summative",
-      "slot_role": "MG04-B",
-      "design_notes": "additional secure form under same blueprint; use a distinct secure stimulus family while preserving evidence/rigor",
+      "slot_role": "additional_secure_form",
       "form": "V6",
-      "form_item_number": 8,
-      "estimated_minutes": 4,
-      "blueprint_slot": "MG04-B",
-      "parallel_to": null,
-      "blueprint_family": "MG04-B"
+      "form_id": "V6",
+      "question_number": 7,
+      "family_id": "U1-SUM-FAM-MG04-A"
+    },
+    {
+      "design_slot_id": "U1-SUM-V6-Q08",
+      "destination": "Summative",
+      "unit": 1,
+      "section": null,
+      "stage": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG04",
+        "title": "Input / Output Rules",
+        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG04-IC03",
+        "source_i_can_index": 3,
+        "text": "Find a missing input or output when enough information is given."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG04-IC04",
+          "source_i_can_index": 4,
+          "text": "Use a rule to build or extend a table."
+        }
+      ],
+      "evidence_job": "Find a missing input or output and use the rule to complete a table.",
+      "student_action": "work backward or forward through a rule and complete related values",
+      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "response_mode": "constructed_table",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "semantic_html",
+          "representation": "table",
+          "answer_neutral": true,
+          "student_constructed": true,
+          "response_surface": "answer-neutral table cells"
+        }
+      ],
+      "difficulty_intent": "secure_independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context",
+          "surface_details"
+        ],
+        "required": [
+          "parallel_evidence_target"
+        ],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "reuse_practice_prompt",
+          "answer_leaking_surface"
+        ]
+      },
+      "source_basis": [
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+        "_question_structure/QUESTION_STRUCTURE_CORE.md",
+        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+      ],
+      "security_role": "secure_summative",
+      "slot_role": "additional_secure_form",
+      "form": "V6",
+      "form_id": "V6",
+      "question_number": 8,
+      "family_id": "U1-SUM-FAM-MG04-B"
     }
   ]
 }

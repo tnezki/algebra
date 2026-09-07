@@ -1,68 +1,71 @@
 {
-  "schema": "algebra-bank-map-wtc/1.0",
+  "schema": "algebra-bank-wtc-map/1.0",
   "course": "Algebra 1",
   "unit": 1,
   "status": "PASS",
   "wtcs": [
     {
-      "wtc_id": "U1-S1.1-WTC",
       "section": "1.1",
-      "shared_stimulus_id": "U1-S1.1-WTC-STIM",
-      "shared_stimulus_design": "One coherent relationship is supplied through a natural context plus partial table/rule information; all parts refer to this same relationship.",
-      "part_labels": [
-        "Part A",
-        "Part B",
-        "Part C",
-        "Part D"
-      ],
+      "wtc_id": "U1-S1.1-WTC",
+      "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
       "parts_plan": [
         {
           "design_slot_id": "U1-S1.1-WTC-A",
           "destination": "WTC",
           "unit": 1,
           "section": "1.1",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.1-LT",
-            "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG01",
             "title": "Connect Representations",
             "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
           },
           "primary_i_can": {
-            "i_can_id": "U1.1-INTRO-IC01",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.1-IC01",
             "source_i_can_index": 1,
             "text": "Find matching values across different representations."
           },
           "supporting_i_cans": [],
-          "evidence_job": "find matching values between two supplied views",
-          "student_action": "identify corresponding input/output evidence",
-          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "evidence_job": "Preview find matching values across different representations using one shared section stimulus without requiring formal mastery.",
+          "student_action": "notice and identify",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
-            },
-            {
-              "route_type": "semantic_html_table",
+              "route_type": "semantic_html",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
+            },
+            {
+              "route_type": "registered_tool",
+              "tool_key": "graph_tool",
+              "tool_path": "Tools/~graph_tool_v12.py",
+              "representation": "graph",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -73,53 +76,47 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part A",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.1-WTC",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_A",
           "part_label": "Part A",
-          "part_order": 1,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.1-WTC",
+          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
+          "family_id": "U1-S1.1-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.1-WTC-B",
           "destination": "WTC",
           "unit": 1,
           "section": "1.1",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.1-LT",
-            "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG01",
             "title": "Connect Representations",
             "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
           },
           "primary_i_can": {
-            "i_can_id": "U1.1-INTRO-IC02",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.1-IC02",
             "source_i_can_index": 2,
             "text": "Create a table or graph from another representation."
           },
           "supporting_i_cans": [],
-          "evidence_job": "create a missing representation of the shared relationship",
-          "student_action": "construct an answer-neutral graph or table",
-          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
-          "response_mode": "constructed_graph",
+          "evidence_job": "Preview create a table or graph from another representation using one shared section stimulus without requiring formal mastery.",
+          "student_action": "attempt a representation or calculation",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "semantic_html_table",
+              "route_type": "semantic_html",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
             },
             {
               "route_type": "registered_tool",
@@ -127,16 +124,27 @@
               "tool_path": "Tools/~graph_tool_v12.py",
               "representation": "graph",
               "answer_neutral": true,
-              "student_constructed": true,
-              "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -147,67 +155,75 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part B",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.1-WTC",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_B",
           "part_label": "Part B",
-          "part_order": 2,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.1-WTC",
+          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
+          "family_id": "U1-S1.1-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.1-WTC-C",
           "destination": "WTC",
           "unit": 1,
           "section": "1.1",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.1-LT",
-            "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG01",
             "title": "Connect Representations",
             "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
           },
           "primary_i_can": {
-            "i_can_id": "U1.1-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.1-IC03",
             "source_i_can_index": 3,
             "text": "Check whether two representations describe the same relationship."
           },
           "supporting_i_cans": [],
-          "evidence_job": "check whether an additional rule/equation belongs to the shared relationship",
-          "student_action": "compare values/pattern and justify agreement or mismatch",
-          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview check whether two representations describe the same relationship using one shared section stimulus without requiring formal mastery.",
+          "student_action": "compare or test a feature",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "semantic_html_table",
+              "route_type": "semantic_html",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
+            },
+            {
+              "route_type": "registered_tool",
+              "tool_key": "graph_tool",
+              "tool_path": "Tools/~graph_tool_v12.py",
+              "representation": "graph",
+              "answer_neutral": true,
+              "student_constructed": false
             },
             {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "equation",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -218,48 +234,48 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part C",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.1-WTC",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_C",
           "part_label": "Part C",
-          "part_order": 3,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.1-WTC",
+          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
+          "family_id": "U1-S1.1-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.1-WTC-D",
           "destination": "WTC",
           "unit": 1,
           "section": "1.1",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.1-LT",
-            "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG01",
             "title": "Connect Representations",
             "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
           },
           "primary_i_can": {
-            "i_can_id": "U1.1-INTRO-IC04",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.1-IC04",
             "source_i_can_index": 4,
             "text": "Use values, rate, or pattern as evidence."
           },
           "supporting_i_cans": [],
-          "evidence_job": "use rate or pattern as evidence about the shared relationship",
-          "student_action": "extract and explain a rate/pattern feature",
-          "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview use values, rate, or pattern as evidence using one shared section stimulus without requiring formal mastery.",
+          "student_action": "explain a prediction or conclusion with evidence",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
+            {
+              "route_type": "semantic_html",
+              "representation": "table",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
             {
               "route_type": "registered_tool",
               "tool_key": "graph_tool",
@@ -269,23 +285,24 @@
               "student_constructed": false
             },
             {
-              "route_type": "semantic_html_table",
-              "representation": "table",
-              "answer_neutral": true,
-              "response_surface": null
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
             },
             {
               "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -296,75 +313,75 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part D",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.1-WTC",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_D",
           "part_label": "Part D",
-          "part_order": 4,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.1-WTC",
+          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
+          "family_id": "U1-S1.1-WTC-FAMILY"
         }
-      ],
-      "dependency_policy": "Parts are independent within one coherent shared stimulus; no artificial carry-forward dependency."
+      ]
     },
     {
-      "wtc_id": "U1-S1.2-WTC",
       "section": "1.2",
-      "shared_stimulus_id": "U1-S1.2-WTC-STIM",
-      "shared_stimulus_design": "A single input-output machine/rule with a small table/mapping and a short context is provided; all parts use the same machine.",
-      "part_labels": [
-        "Part A",
-        "Part B",
-        "Part C",
-        "Part D"
-      ],
+      "wtc_id": "U1-S1.2-WTC",
+      "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
       "parts_plan": [
         {
           "design_slot_id": "U1-S1.2-WTC-A",
           "destination": "WTC",
           "unit": 1,
           "section": "1.2",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.2-LT",
-            "text": "Use input-output rules and the basic idea of a function."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.2-INTRO-IC01",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.2-IC01",
             "source_i_can_index": 1,
             "text": "Identify the input and output in a relationship."
           },
           "supporting_i_cans": [],
-          "evidence_job": "identify the input and output quantities",
-          "student_action": "name input/output roles in the shared situation",
-          "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
+          "evidence_job": "Preview identify the input and output in a relationship using one shared section stimulus without requiring formal mastery.",
+          "student_action": "notice and identify",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
-          "representation_mode": "context",
+          "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "direct_text",
+              "route_type": "semantic_html",
+              "representation": "table",
               "answer_neutral": true,
-              "representation": "context"
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "semantic_html",
+              "representation": "mapping_or_ordered_pairs",
+              "answer_neutral": true,
+              "student_constructed": false
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -375,66 +392,68 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part A",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.2-WTC",
-          "shared_stimulus_id": "U1-S1.2-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_A",
           "part_label": "Part A",
-          "part_order": 1,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.2-WTC",
+          "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
+          "family_id": "U1-S1.2-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.2-WTC-B",
           "destination": "WTC",
           "unit": 1,
           "section": "1.2",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.2-LT",
-            "text": "Use input-output rules and the basic idea of a function."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.2-INTRO-IC02",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.2-IC02",
             "source_i_can_index": 2,
             "text": "Use a rule to find outputs."
           },
           "supporting_i_cans": [],
-          "evidence_job": "use the shared rule to find outputs and ordered pairs",
-          "student_action": "apply rule and record pairs",
-          "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+          "evidence_job": "Preview use a rule to find outputs using one shared section stimulus without requiring formal mastery.",
+          "student_action": "attempt a representation or calculation",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
+              "route_type": "semantic_html",
+              "representation": "table",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "rule",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             },
             {
-              "route_type": "direct_text",
+              "route_type": "semantic_html",
+              "representation": "mapping_or_ordered_pairs",
               "answer_neutral": true,
-              "representation": "ordered_pairs"
+              "student_constructed": false
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -445,68 +464,68 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part B",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.2-WTC",
-          "shared_stimulus_id": "U1-S1.2-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_B",
           "part_label": "Part B",
-          "part_order": 2,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.2-WTC",
+          "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
+          "family_id": "U1-S1.2-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.2-WTC-C",
           "destination": "WTC",
           "unit": 1,
           "section": "1.2",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.2-LT",
-            "text": "Use input-output rules and the basic idea of a function."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.2-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.2-IC03",
             "source_i_can_index": 3,
             "text": "Write ordered pairs from inputs and outputs."
           },
           "supporting_i_cans": [],
-          "evidence_job": "decide whether the shared relation is a function",
-          "student_action": "use one-output-per-input criterion and justify",
-          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview write ordered pairs from inputs and outputs using one shared section stimulus without requiring formal mastery.",
+          "student_action": "compare or test a feature",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
               "route_type": "semantic_html",
-              "representation": "mapping_diagram",
-              "answer_neutral": true,
-              "student_constructed": false,
-              "response_surface": null
-            },
-            {
-              "route_type": "semantic_html_table",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "semantic_html",
+              "representation": "mapping_or_ordered_pairs",
+              "answer_neutral": true,
+              "student_constructed": false
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -517,67 +536,68 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part C",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.2-WTC",
-          "shared_stimulus_id": "U1-S1.2-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_C",
           "part_label": "Part C",
-          "part_order": 3,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.2-WTC",
+          "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
+          "family_id": "U1-S1.2-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.2-WTC-D",
           "destination": "WTC",
           "unit": 1,
           "section": "1.2",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.2-LT",
-            "text": "Use input-output rules and the basic idea of a function."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.2-INTRO-IC04",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.2-IC04",
             "source_i_can_index": 4,
             "text": "Decide whether each input has only one output."
           },
           "supporting_i_cans": [],
-          "evidence_job": "analyze a proposed modification that would make/not make it a function",
-          "student_action": "evaluate the changed input-output assignment and explain",
-          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview decide whether each input has only one output using one shared section stimulus without requiring formal mastery.",
+          "student_action": "explain a prediction or conclusion with evidence",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
               "route_type": "semantic_html",
-              "representation": "mapping_diagram",
+              "representation": "table",
               "answer_neutral": true,
-              "student_constructed": false,
-              "response_surface": null
+              "student_constructed": false
             },
             {
-              "route_type": "direct_text",
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "semantic_html",
+              "representation": "mapping_or_ordered_pairs",
               "answer_neutral": true,
-              "representation": "context"
+              "student_constructed": false
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -588,69 +608,49 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part D",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.2-WTC",
-          "shared_stimulus_id": "U1-S1.2-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_D",
           "part_label": "Part D",
-          "part_order": 4,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.2-WTC",
+          "shared_stimulus_id": "U1-S1.2-WTC-STIMULUS",
+          "family_id": "U1-S1.2-WTC-FAMILY"
         }
-      ],
-      "dependency_policy": "Parts are independent within one coherent shared stimulus; no artificial carry-forward dependency."
+      ]
     },
     {
-      "wtc_id": "U1-S1.3-WTC",
       "section": "1.3",
-      "shared_stimulus_id": "U1-S1.3-WTC-STIM",
-      "shared_stimulus_design": "One growth situation is shown with a compact table and candidate graph/equation information; all parts investigate the same relationship.",
-      "part_labels": [
-        "Part A",
-        "Part B",
-        "Part C",
-        "Part D"
-      ],
+      "wtc_id": "U1-S1.3-WTC",
+      "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
       "parts_plan": [
         {
           "design_slot_id": "U1-S1.3-WTC-A",
           "destination": "WTC",
           "unit": 1,
           "section": "1.3",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.3-LT",
-            "text": "Notice how common function families change in different ways."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.3-INTRO-IC02",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
-            "source_i_can_index": 2,
-            "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
+            "i_can_id": "U1-S1.3-IC01",
+            "source_i_can_index": 1,
+            "text": "Recognize a linear pattern from constant rate."
           },
           "supporting_i_cans": [],
-          "evidence_job": "identify the most likely function family",
-          "student_action": "classify using additive/multiplicative/shape evidence",
-          "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
+          "evidence_job": "Preview recognize a linear pattern from constant rate using one shared section stimulus without requiring formal mastery.",
+          "student_action": "notice and identify",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
-            {
-              "route_type": "semantic_html_table",
-              "representation": "table",
-              "answer_neutral": true,
-              "response_surface": null
-            },
             {
               "route_type": "registered_tool",
               "tool_key": "graph_tool",
@@ -658,14 +658,32 @@
               "representation": "graph",
               "answer_neutral": true,
               "student_constructed": false
+            },
+            {
+              "route_type": "semantic_html",
+              "representation": "table",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -676,54 +694,42 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part A",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.3-WTC",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_A",
           "part_label": "Part A",
-          "part_order": 1,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.3-WTC",
+          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
+          "family_id": "U1-S1.3-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.3-WTC-B",
           "destination": "WTC",
           "unit": 1,
           "section": "1.3",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.3-LT",
-            "text": "Notice how common function families change in different ways."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.3-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
-            "source_i_can_index": 3,
-            "text": "Use a table, graph, equation, or context as evidence."
+            "i_can_id": "U1-S1.3-IC02",
+            "source_i_can_index": 2,
+            "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
           },
           "supporting_i_cans": [],
-          "evidence_job": "cite evidence from the shared table/graph for the classification",
-          "student_action": "name specific changes/features supporting the family",
-          "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
+          "evidence_job": "Preview notice basic quadratic, exponential, and absolute-value shapes or patterns using one shared section stimulus without requiring formal mastery.",
+          "student_action": "attempt a representation or calculation",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
-            {
-              "route_type": "semantic_html_table",
-              "representation": "table",
-              "answer_neutral": true,
-              "response_surface": null
-            },
             {
               "route_type": "registered_tool",
               "tool_key": "graph_tool",
@@ -731,14 +737,32 @@
               "representation": "graph",
               "answer_neutral": true,
               "student_constructed": false
+            },
+            {
+              "route_type": "semantic_html",
+              "representation": "table",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -749,67 +773,75 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part B",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.3-WTC",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_B",
           "part_label": "Part B",
-          "part_order": 2,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.3-WTC",
+          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
+          "family_id": "U1-S1.3-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.3-WTC-C",
           "destination": "WTC",
           "unit": 1,
           "section": "1.3",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.3-LT",
-            "text": "Notice how common function families change in different ways."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.3-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.3-IC03",
             "source_i_can_index": 3,
             "text": "Use a table, graph, equation, or context as evidence."
           },
           "supporting_i_cans": [],
-          "evidence_job": "compare the shared relationship with a second candidate representation",
-          "student_action": "determine whether the candidate could represent the same pattern",
-          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview use a table, graph, equation, or context as evidence using one shared section stimulus without requiring formal mastery.",
+          "student_action": "compare or test a feature",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "semantic_html_table",
+              "route_type": "registered_tool",
+              "tool_key": "graph_tool",
+              "tool_path": "Tools/~graph_tool_v12.py",
+              "representation": "graph",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
+              "route_type": "semantic_html",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
             },
             {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "equation",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "direct_text",
+              "representation": "context",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -820,66 +852,75 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part C",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.3-WTC",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_C",
           "part_label": "Part C",
-          "part_order": 3,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.3-WTC",
+          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
+          "family_id": "U1-S1.3-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.3-WTC-D",
           "destination": "WTC",
           "unit": 1,
           "section": "1.3",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.3-LT",
-            "text": "Notice how common function families change in different ways."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG02",
             "title": "Understand Functions and Families",
             "text": "Use function notation and key features to describe functions and recognize common function families."
           },
           "primary_i_can": {
-            "i_can_id": "U1.3-INTRO-IC04",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.3-IC04",
             "source_i_can_index": 4,
             "text": "Explain why one family is more likely than another."
           },
           "supporting_i_cans": [],
-          "evidence_job": "justify why a competing family is less appropriate",
-          "student_action": "use the shared evidence to reject a plausible alternative",
-          "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview explain why one family is more likely than another using one shared section stimulus without requiring formal mastery.",
+          "student_action": "explain a prediction or conclusion with evidence",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "semantic_html_table",
+              "route_type": "registered_tool",
+              "tool_key": "graph_tool",
+              "tool_path": "Tools/~graph_tool_v12.py",
+              "representation": "graph",
+              "answer_neutral": true,
+              "student_constructed": false
+            },
+            {
+              "route_type": "semantic_html",
               "representation": "table",
               "answer_neutral": true,
-              "response_surface": null
+              "student_constructed": false
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
             },
             {
               "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
+              "representation": "context",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -890,199 +931,45 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part D",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.3-WTC",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_D",
           "part_label": "Part D",
-          "part_order": 4,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.3-WTC",
+          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
+          "family_id": "U1-S1.3-WTC-FAMILY"
         }
-      ],
-      "dependency_policy": "Parts are independent within one coherent shared stimulus; no artificial carry-forward dependency."
+      ]
     },
     {
-      "wtc_id": "U1-S1.4-WTC",
       "section": "1.4",
-      "shared_stimulus_id": "U1-S1.4-WTC-STIM",
-      "shared_stimulus_design": "A single school-store or event-planning expression represents a total quantity/cost; the same expression and meaning are used across all parts.",
-      "part_labels": [
-        "Part A",
-        "Part B",
-        "Part C",
-        "Part D"
-      ],
+      "wtc_id": "U1-S1.4-WTC",
+      "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
       "parts_plan": [
         {
           "design_slot_id": "U1-S1.4-WTC-A",
           "destination": "WTC",
           "unit": 1,
           "section": "1.4",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.4-LT",
-            "text": "Read, evaluate, and rewrite expressions without changing their value."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG03",
             "title": "Equivalent Expressions",
             "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
           },
           "primary_i_can": {
-            "i_can_id": "U1.4-INTRO-IC01",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.4-IC01",
             "source_i_can_index": 1,
             "text": "Identify terms, coefficients, and factors."
           },
           "supporting_i_cans": [],
-          "evidence_job": "identify terms, coefficients, and factors in the shared expression",
-          "student_action": "label requested structural elements",
-          "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
-          "response_mode": "constructed_short",
-          "representation_mode": "mixed",
-          "representation_need": "required",
-          "representation_routes": [
-            {
-              "route_type": "math_expression",
-              "renderer": "MathJax-capable downstream shell",
-              "representation": "expression",
-              "answer_neutral": true
-            },
-            {
-              "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
-            }
-          ],
-          "difficulty_intent": "instructional_decomposition",
-          "variation_axes": {
-            "allowed": [
-              "values",
-              "representation_values",
-              "context_evidence"
-            ],
-            "required": [],
-            "forbidden": [
-              "change_target",
-              "change_evidence_job",
-              "answer_leaking_surface"
-            ]
-          },
-          "source_basis": [
-            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
-          ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part A",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.4-WTC",
-          "shared_stimulus_id": "U1-S1.4-WTC-STIM",
-          "part_label": "Part A",
-          "part_order": 1,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
-        },
-        {
-          "design_slot_id": "U1-S1.4-WTC-B",
-          "destination": "WTC",
-          "unit": 1,
-          "section": "1.4",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.4-LT",
-            "text": "Read, evaluate, and rewrite expressions without changing their value."
-          },
-          "mastery_goal": {
-            "goal_id": "U3-MG03",
-            "title": "Equivalent Expressions",
-            "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
-          },
-          "primary_i_can": {
-            "i_can_id": "U1.4-INTRO-IC02",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
-            "source_i_can_index": 2,
-            "text": "Substitute values into an expression."
-          },
-          "supporting_i_cans": [],
-          "evidence_job": "evaluate the shared expression for a given value",
-          "student_action": "substitute and use order of operations",
-          "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
-          "response_mode": "constructed_short",
-          "representation_mode": "mixed",
-          "representation_need": "required",
-          "representation_routes": [
-            {
-              "route_type": "math_expression",
-              "renderer": "MathJax-capable downstream shell",
-              "representation": "expression",
-              "answer_neutral": true
-            },
-            {
-              "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
-            }
-          ],
-          "difficulty_intent": "instructional_decomposition",
-          "variation_axes": {
-            "allowed": [
-              "values",
-              "representation_values",
-              "context_evidence"
-            ],
-            "required": [],
-            "forbidden": [
-              "change_target",
-              "change_evidence_job",
-              "answer_leaking_surface"
-            ]
-          },
-          "source_basis": [
-            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
-          ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part B",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.4-WTC",
-          "shared_stimulus_id": "U1-S1.4-WTC-STIM",
-          "part_label": "Part B",
-          "part_order": 2,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
-        },
-        {
-          "design_slot_id": "U1-S1.4-WTC-C",
-          "destination": "WTC",
-          "unit": 1,
-          "section": "1.4",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.4-LT",
-            "text": "Read, evaluate, and rewrite expressions without changing their value."
-          },
-          "mastery_goal": {
-            "goal_id": "U3-MG03",
-            "title": "Equivalent Expressions",
-            "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
-          },
-          "primary_i_can": {
-            "i_can_id": "U1.4-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
-            "source_i_can_index": 3,
-            "text": "Combine like terms."
-          },
-          "supporting_i_cans": [],
-          "evidence_job": "rewrite the shared expression in an equivalent form",
-          "student_action": "combine like terms and/or distribute correctly",
-          "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+          "evidence_job": "Preview identify terms, coefficients, and factors using one shared section stimulus without requiring formal mastery.",
+          "student_action": "notice and identify",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "expression",
           "representation_need": "required",
@@ -1090,16 +977,17 @@
             {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "expression",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1110,67 +998,56 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part C",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_A",
+          "part_label": "Part A",
           "wtc_id": "U1-S1.4-WTC",
-          "shared_stimulus_id": "U1-S1.4-WTC-STIM",
-          "part_label": "Part C",
-          "part_order": 3,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
+          "family_id": "U1-S1.4-WTC-FAMILY"
         },
         {
-          "design_slot_id": "U1-S1.4-WTC-D",
+          "design_slot_id": "U1-S1.4-WTC-B",
           "destination": "WTC",
           "unit": 1,
           "section": "1.4",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.4-LT",
-            "text": "Read, evaluate, and rewrite expressions without changing their value."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG03",
             "title": "Equivalent Expressions",
             "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
           },
           "primary_i_can": {
-            "i_can_id": "U1.4-INTRO-IC04",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
-            "source_i_can_index": 4,
-            "text": "Use the distributive property correctly."
+            "i_can_id": "U1-S1.4-IC02",
+            "source_i_can_index": 2,
+            "text": "Substitute values into an expression."
           },
           "supporting_i_cans": [],
-          "evidence_job": "diagnose a specific shown rewrite error",
-          "student_action": "identify exact error, explain misconception, and repair the expression",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "evidence_job": "Preview substitute values into an expression using one shared section stimulus without requiring formal mastery.",
+          "student_action": "attempt a representation or calculation",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
-          "representation_mode": "mixed",
+          "representation_mode": "expression",
           "representation_need": "required",
           "representation_routes": [
             {
-              "route_type": "semantic_html",
-              "representation": "worked_solution",
-              "answer_neutral": false,
-              "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
-            },
-            {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "expression",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1181,84 +1058,188 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "misconception_contract": {
-            "specific_misconception": "expression rewrite/distribution/like-term error tied to the shared expression",
-            "supplied_worked_solution_required": true,
-            "student_must": [
-              "locate specific error",
-              "explain misconception",
-              "repair expression"
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_B",
+          "part_label": "Part B",
+          "wtc_id": "U1-S1.4-WTC",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
+          "family_id": "U1-S1.4-WTC-FAMILY"
+        },
+        {
+          "design_slot_id": "U1-S1.4-WTC-C",
+          "destination": "WTC",
+          "unit": 1,
+          "section": "1.4",
+          "stage": null,
+          "mastery_goal": {
+            "goal_id": "U3-MG03",
+            "title": "Equivalent Expressions",
+            "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+          },
+          "primary_i_can": {
+            "i_can_id": "U1-S1.4-IC03",
+            "source_i_can_index": 3,
+            "text": "Combine like terms."
+          },
+          "supporting_i_cans": [],
+          "evidence_job": "Preview combine like terms using one shared section stimulus without requiring formal mastery.",
+          "student_action": "compare or test a feature",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
+          "representation_mode": "expression",
+          "representation_need": "required",
+          "representation_routes": [
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            }
+          ],
+          "difficulty_intent": "preview_reasoning",
+          "variation_axes": {
+            "allowed": [
+              "values",
+              "representation_pair",
+              "graph_scale",
+              "context"
+            ],
+            "required": [],
+            "forbidden": [
+              "change_target",
+              "change_evidence_job",
+              "answer_leaking_surface"
             ]
           },
-          "slot_role": "Part D",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
+          "source_basis": [
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+          ],
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_C",
+          "part_label": "Part C",
           "wtc_id": "U1-S1.4-WTC",
-          "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
+          "family_id": "U1-S1.4-WTC-FAMILY"
+        },
+        {
+          "design_slot_id": "U1-S1.4-WTC-D",
+          "destination": "WTC",
+          "unit": 1,
+          "section": "1.4",
+          "stage": null,
+          "mastery_goal": {
+            "goal_id": "U3-MG03",
+            "title": "Equivalent Expressions",
+            "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+          },
+          "primary_i_can": {
+            "i_can_id": "U1-S1.4-IC04",
+            "source_i_can_index": 4,
+            "text": "Use the distributive property correctly."
+          },
+          "supporting_i_cans": [],
+          "evidence_job": "Preview use the distributive property correctly using one shared section stimulus without requiring formal mastery.",
+          "student_action": "explain a prediction or conclusion with evidence",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
+          "representation_mode": "expression",
+          "representation_need": "required",
+          "representation_routes": [
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
+            }
+          ],
+          "difficulty_intent": "preview_reasoning",
+          "variation_axes": {
+            "allowed": [
+              "values",
+              "representation_pair",
+              "graph_scale",
+              "context"
+            ],
+            "required": [],
+            "forbidden": [
+              "change_target",
+              "change_evidence_job",
+              "answer_leaking_surface"
+            ]
+          },
+          "source_basis": [
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
+          ],
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_D",
           "part_label": "Part D",
-          "part_order": 4,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.4-WTC",
+          "shared_stimulus_id": "U1-S1.4-WTC-STIMULUS",
+          "family_id": "U1-S1.4-WTC-FAMILY"
         }
-      ],
-      "dependency_policy": "Parts are independent within one coherent shared stimulus; no artificial carry-forward dependency."
+      ]
     },
     {
-      "wtc_id": "U1-S1.5-WTC",
       "section": "1.5",
-      "shared_stimulus_id": "U1-S1.5-WTC-STIM",
-      "shared_stimulus_design": "A single real-world quantity situation has one unknown and a relationship that can be represented by a simple equation; all parts refer to the same situation.",
-      "part_labels": [
-        "Part A",
-        "Part B",
-        "Part C",
-        "Part D"
-      ],
+      "wtc_id": "U1-S1.5-WTC",
+      "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
       "parts_plan": [
         {
           "design_slot_id": "U1-S1.5-WTC-A",
           "destination": "WTC",
           "unit": 1,
           "section": "1.5",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.5-LT",
-            "text": "Write an equation from a situation and explain what its solution means."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG04",
             "title": "Equations in Context",
             "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
           },
           "primary_i_can": {
-            "i_can_id": "U1.5-INTRO-IC01",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.5-IC01",
             "source_i_can_index": 1,
             "text": "Define a variable."
           },
           "supporting_i_cans": [],
-          "evidence_job": "define the variable for the shared situation",
-          "student_action": "state what the variable represents with units/meaning",
-          "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+          "evidence_job": "Preview define a variable using one shared section stimulus without requiring formal mastery.",
+          "student_action": "notice and identify",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
-          "representation_mode": "context",
+          "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
               "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
+              "representation": "context",
+              "answer_neutral": true
+            },
+            {
+              "route_type": "math_expression",
+              "renderer": "MathJax-capable downstream shell",
+              "representation": "equation_or_expression",
+              "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1269,66 +1250,61 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part A",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.5-WTC",
-          "shared_stimulus_id": "U1-S1.5-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_A",
           "part_label": "Part A",
-          "part_order": 1,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.5-WTC",
+          "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
+          "family_id": "U1-S1.5-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.5-WTC-B",
           "destination": "WTC",
           "unit": 1,
           "section": "1.5",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.5-LT",
-            "text": "Write an equation from a situation and explain what its solution means."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG04",
             "title": "Equations in Context",
             "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
           },
           "primary_i_can": {
-            "i_can_id": "U1.5-INTRO-IC02",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.5-IC02",
             "source_i_can_index": 2,
             "text": "Write an equation that matches a situation."
           },
           "supporting_i_cans": [],
-          "evidence_job": "write an equation matching the shared quantities",
-          "student_action": "translate the situation into an equation",
-          "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+          "evidence_job": "Preview write an equation that matches a situation using one shared section stimulus without requiring formal mastery.",
+          "student_action": "attempt a representation or calculation",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
           "response_mode": "constructed_short",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
               "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
+              "representation": "context",
+              "answer_neutral": true
             },
             {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "equation",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1339,61 +1315,61 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part B",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.5-WTC",
-          "shared_stimulus_id": "U1-S1.5-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_B",
           "part_label": "Part B",
-          "part_order": 2,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.5-WTC",
+          "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
+          "family_id": "U1-S1.5-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.5-WTC-C",
           "destination": "WTC",
           "unit": 1,
           "section": "1.5",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.5-LT",
-            "text": "Write an equation from a situation and explain what its solution means."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG04",
             "title": "Equations in Context",
             "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
           },
           "primary_i_can": {
-            "i_can_id": "U1.5-INTRO-IC03",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.5-IC03",
             "source_i_can_index": 3,
             "text": "Use equivalent steps to solve when needed."
           },
           "supporting_i_cans": [],
-          "evidence_job": "solve the equation using equivalent steps",
-          "student_action": "solve the shared equation",
-          "question_structure_id": "FORMULA-INVERSE-VARIABLE-01",
-          "response_mode": "constructed_short",
-          "representation_mode": "equation",
+          "evidence_job": "Preview use equivalent steps to solve when needed using one shared section stimulus without requiring formal mastery.",
+          "student_action": "compare or test a feature",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
+          "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
+              "route_type": "direct_text",
+              "representation": "context",
+              "answer_neutral": true
+            },
+            {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "equation",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1404,66 +1380,61 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part C",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.5-WTC",
-          "shared_stimulus_id": "U1-S1.5-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_C",
           "part_label": "Part C",
-          "part_order": 3,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.5-WTC",
+          "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
+          "family_id": "U1-S1.5-WTC-FAMILY"
         },
         {
           "design_slot_id": "U1-S1.5-WTC-D",
           "destination": "WTC",
           "unit": 1,
           "section": "1.5",
-          "stage": "Intro",
-          "target": {
-            "id": "U1.5-LT",
-            "text": "Write an equation from a situation and explain what its solution means."
-          },
+          "stage": null,
           "mastery_goal": {
             "goal_id": "U3-MG04",
             "title": "Equations in Context",
             "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
           },
           "primary_i_can": {
-            "i_can_id": "U1.5-INTRO-IC04",
-            "i_can_id_basis": "derived_from_exact_section_plan_order",
+            "i_can_id": "U1-S1.5-IC04",
             "source_i_can_index": 4,
             "text": "Check and interpret a solution in context."
           },
           "supporting_i_cans": [],
-          "evidence_job": "check and interpret the solution in context",
-          "student_action": "substitute/check and state what the solution means",
-          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
-          "response_mode": "constructed_short",
+          "evidence_job": "Preview check and interpret a solution in context using one shared section stimulus without requiring formal mastery.",
+          "student_action": "explain a prediction or conclusion with evidence",
+          "question_structure_id": "WTC-FRQ-PREVIEW-01",
+          "response_mode": "constructed_explanation",
           "representation_mode": "mixed",
           "representation_need": "required",
           "representation_routes": [
             {
               "route_type": "direct_text",
-              "answer_neutral": true,
-              "representation": "context"
+              "representation": "context",
+              "answer_neutral": true
             },
             {
               "route_type": "math_expression",
               "renderer": "MathJax-capable downstream shell",
-              "representation": "equation",
+              "representation": "equation_or_expression",
               "answer_neutral": true
             }
           ],
-          "difficulty_intent": "instructional_decomposition",
+          "difficulty_intent": "preview_reasoning",
           "variation_axes": {
             "allowed": [
               "values",
-              "representation_values",
-              "context_evidence"
+              "representation_pair",
+              "graph_scale",
+              "context"
             ],
             "required": [],
             "forbidden": [
@@ -1474,21 +1445,19 @@
           },
           "source_basis": [
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+            "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
             "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-            "_question_structure/QUESTION_STRUCTURE_CORE.md"
+            "_question_structure/QUESTION_STRUCTURE_CORE.md",
+            "_question_structure/library/Universal_Question_Structure_Library_v2.md"
           ],
-          "security_role": "instructional_wtc",
-          "slot_role": "Part D",
-          "design_notes": "WTC part; does not count toward current Unit I Can coverage floor.",
-          "wtc_id": "U1-S1.5-WTC",
-          "shared_stimulus_id": "U1-S1.5-WTC-STIM",
+          "security_role": "wtc_preview",
+          "slot_role": "wtc_part_D",
           "part_label": "Part D",
-          "part_order": 4,
-          "depends_on": [],
-          "coverage_counts_toward_unit_i_can_floor": false
+          "wtc_id": "U1-S1.5-WTC",
+          "shared_stimulus_id": "U1-S1.5-WTC-STIMULUS",
+          "family_id": "U1-S1.5-WTC-FAMILY"
         }
-      ],
-      "dependency_policy": "Parts are independent within one coherent shared stimulus; no artificial carry-forward dependency."
+      ]
     }
   ]
 }
