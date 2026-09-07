@@ -10,6 +10,46 @@
     "course_repo": "tnezki/algebra",
     "course_commit": "c1c3d328fd48062e76fc42f904748143b0b338ca"
   },
+  "maintenance_audit": {
+    "performed_on": "2026-09-07",
+    "status": "PASS",
+    "maintenance_pm": "pms_maintenance/generic_audit_rebuild.txt",
+    "maintenance_pm_version": "1.6",
+    "build_pm": "pms_build/bank_map.txt",
+    "build_pm_version": "3.3",
+    "audit_snapshot": {
+      "system_repo": "tnezki/memories",
+      "system_commit": "e6272e035ee4345c976c24f748acfdc594f374fa",
+      "course_repo": "tnezki/algebra",
+      "course_commit": "70ed8e17f410bea476924b3cf8d27505c0f1ad98"
+    },
+    "disposition": "narrow_provenance_repair",
+    "content_rebuild_required": false,
+    "changed_files": [
+      "MAP_REPORT.txt",
+      "MAP_MANIFEST.json"
+    ],
+    "preserved_content_files": [
+      "unit1_question_design_map.json",
+      "bank_inventory_map.json",
+      "exit_map.json",
+      "summative_map.json",
+      "practice1_map.json",
+      "wtc_map.json",
+      "seed_map.json"
+    ],
+    "semantic_revalidation": {
+      "status": "PASS",
+      "slot_count": 208,
+      "construction_vs_read_only_conflicts": 0,
+      "direct_read_tasks_improperly_inflated": 0,
+      "invalid_multistep_mappings": 0,
+      "invalid_error_diagnosis_mappings": 0,
+      "incomplete_mixed_representation_routes": 0,
+      "student_construction_response_surface_conflicts": 0
+    },
+    "authority_note": "The Bank Profile declares curriculum/mastery_goal_map.json, but that file is absent at the audit System commit. No substitute path was invented; the exact Unit 1 Assessment Plan remains sufficient mastery-goal authority under Bank Map PM v3.3."
+  },
   "canonical_destinations": [
     "Exit",
     "Summative",
@@ -93,8 +133,8 @@
     },
     {
       "path": "MAP_REPORT.txt",
-      "sha256": "473418291d97572e50209b5af22e044520657d36f4ce2435b68da9b8ef0c9438",
-      "bytes": 4160
+      "sha256": "beb679e7aae28d1c951c3c2281b0653a65d0c29954bc3c925182ed8a34e289f3",
+      "bytes": 4902
     }
   ],
   "finalization": {
