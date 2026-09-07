@@ -1,51 +1,10 @@
 {
-  "schema": "notes-image-use-manifest/1.0",
-  "course": "Algebra 1",
-  "unit": 1,
   "images": [
     {
-      "path": "notes/u1_1_notes/figures/notes-1_1-relationship.png",
-      "sha256": "bb14268f64980f06d7e511d6958e771631e93b7760806d985df25afacf0eea5e",
-      "role": "Notes Math Notes representation generated with registered graph tool",
-      "answer_neutral": false,
-      "source": {
-        "type": "generated_notes_representation",
-        "render_route": "Tools/~graph_tool_v12.py / make_standard_graph",
-        "spec": "y=-x+4; standard Algebra coordinate plane"
-      }
-    },
-    {
-      "path": "notes/u1_1_notes/figures/wtc-1_1_blank.png",
-      "sha256": "a157032d69d49d0946e52864785b54dcb913f1f4b01692bff6e509abd18039d5",
-      "role": "canonical Bank WTC response surface",
-      "answer_neutral": true,
-      "source": {
-        "type": "canonical_bank_asset",
-        "bank_path": "banks/unit1/figures/wtc-1_1_blank.png",
-        "canonical_record_id": "WTC-1.1",
-        "render_route": "Tools/~graph_tool_v12.py / make_standard_graph(blank response surface)"
-      }
-    },
-    {
-      "path": "notes/u1_3_notes/figures/notes-1_3-family_grid.png",
-      "sha256": "55a7bf920b3c948772e9dc539d893ce00968ad28bc03b2b63cafac4100a926e0",
-      "role": "Notes Math Notes representation generated with registered graph tool",
-      "answer_neutral": false,
-      "source": {
-        "type": "generated_notes_representation",
-        "render_route": "Tools/~graph_tool_v12.py / make_2x2_grid",
-        "spec": "linear y=x+1; quadratic y=x^2-4; exponential y=2^x; absolute value y=|x|-2"
-      }
+      "path": "../../banks/unit1/figures/wtc-1_1_blank.png",
+      "role": "canonical WTC 1.1 blank coordinate plane",
+      "source": "tnezki/algebra banks/unit1/figures/wtc-1_1_blank.png",
+      "note": "linked by repository-relative path; not duplicated into Notes package"
     }
-  ],
-  "graph_tool": {
-    "path": "Tools/~graph_tool_v12.py",
-    "source_git_blob": "dd7eacf178262ab5608851f8a69524b216933ed0",
-    "source_sha256": "eaf5ab36936697f9f49c255c0f2dfcb64c94858c1e4769dfd2431e042e4453b5"
-  },
-  "qa": {
-    "status": "PASS",
-    "registered_graph_tool_sha256": "eaf5ab36936697f9f49c255c0f2dfcb64c94858c1e4769dfd2431e042e4453b5",
-    "all_production_graphs_registered_tool": true
-  }
+  ]
 }
