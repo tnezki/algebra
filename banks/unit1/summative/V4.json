@@ -1,813 +1,266 @@
 {
-  "schema": "algebra-bank-summative-form/1.0",
+  "schema": "algebra-bank-secure-summative-form/2.0",
+  "course": "Algebra 1",
+  "unit": 1,
   "form": "V4",
-  "secure": true,
-  "records": [
+  "security": "SECURE - DO NOT PUBLISH PROMPTS, KEYS, SOLUTIONS, OR FAMILY METADATA",
+  "time_intent": "approximately 40 minutes",
+  "questions": [
     {
-      "design_slot_id": "U1-SUM-V4-Q01",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q1",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      "part": null,
+      "primary_mastery_goal": "U1-MG01",
+      "primary_i_can": "Plot and read ordered pairs.",
+      "evidence_job": "Plot and read ordered pairs.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "graph",
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "secure_mastery",
+      "security_role": "secure_summative",
+      "question_family_id": "U1-SUM-U1-MG01-Q2",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "scale/coordinate reading",
+      "prompt": "Use the graph to determine the y-value when x = -1.",
+      "student_html": "<p>Use the graph to determine the y-value when x = -1.</p><img class=\"graph\" src=\"../figures/u1sp_20260907_summative_v4_mg01.png\" alt=\"Coordinate graph\">",
+      "answer": "8",
+      "solution": "Read the plotted line at x=-1; y=8.",
+      "asset": "u1sp_20260907_summative_v4_mg01.png",
+      "params": {
+        "m": -2,
+        "b": 6,
+        "x": -1,
+        "y": 8
       },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [],
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-SUM-V4-Q1-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-SUM-V4-Q2",
+      "section_id": null,
+      "stage": null,
+      "part": null,
+      "primary_mastery_goal": "U1-MG01",
+      "primary_i_can": "Identify and interpret intercepts when they are shown.",
       "evidence_job": "Identify and interpret intercepts when they are shown.",
-      "student_action": "Identify the y-intercept and state its coordinate meaning.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 1,
-      "family_id": "U1-SUM-FAM-Q01",
-      "item_id": "U1-SUM-V4-Q01",
-      "source_map_record_id": "U1-SUM-V4-Q01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Identify the y-intercept.",
-      "student_html": "<p>Use the graph to identify the y-intercept and explain what the coordinate means on the coordinate plane.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_926f822e3a6f7f15.png\" alt=\"Graph\"></div>",
-      "answer": "(0, -3)",
-      "solution_text": "At the y-intercept x = 0. The line crosses the y-axis at y = -3.",
-      "solution_html": "<p>At the y-intercept x = 0. The line crosses the y-axis at y = -3.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the graph to identify the y-intercept and explain what the coordinate means on the coordinate plane."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -10,
-              "y_max": 10
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": 2,
-              "intercept": -3
-            }
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_926f822e3a6f7f15.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": [
-          "figures/graph_926f822e3a6f7f15.png"
-        ]
-      },
-      "instantiation_summary": "V4 parallel family Q01: y-intercept read"
+      "question_family_id": "U1-SUM-U1-MG01-Q1",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "intercept interpretation",
+      "prompt": "State the x-intercept and y-intercept of the graphed line and explain what each says about input and output.",
+      "student_html": "<p>State the x-intercept and y-intercept of the graphed line and explain what each says about input and output.</p><img class=\"graph\" src=\"../figures/u1sp_20260907_summative_v4_mg01.png\" alt=\"Coordinate graph\">",
+      "answer": "x-intercept (3,0); y-intercept (0,6).",
+      "solution": "Set y=0 for the x-intercept and x=0 for the y-intercept.",
+      "asset": "u1sp_20260907_summative_v4_mg01.png",
+      "params": {},
+      "dok": 2,
+      "bloom": "Understand",
+      "stimulus_id": "U1-SUM-V4-Q2-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-SUM-V4-Q02",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q3",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC02",
-        "source_i_can_index": 2,
-        "text": "Use the x- and y-axes correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use the x- and y-axes correctly.",
-      "student_action": "Identify a point on an axis and name the axis.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 2,
-      "family_id": "U1-SUM-FAM-Q02",
-      "item_id": "U1-SUM-V4-Q02",
-      "source_map_record_id": "U1-SUM-V4-Q02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Identify the plotted point on an axis.",
-      "student_html": "<p>Which plotted point lies on an axis? Name the axis.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_e204b25d5c3443cf.png\" alt=\"Graph\"></div>",
-      "answer": "(-7, 0), on the x-axis",
-      "solution_text": "A point lies on the x-axis when its y-coordinate is 0.",
-      "solution_html": "<p>A point lies on the x-axis when its y-coordinate is 0.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which plotted point lies on an axis? Name the axis."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -10,
-              "y_max": 10
-            },
-            "points": [
-              [
-                -7,
-                0
-              ],
-              [
-                0,
-                5
-              ],
-              [
-                2,
-                -8
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_e204b25d5c3443cf.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": [
-          "figures/graph_e204b25d5c3443cf.png"
-        ]
-      },
-      "instantiation_summary": "V4 parallel family Q02: axis point identification"
-    },
-    {
-      "design_slot_id": "U1-SUM-V4-Q03",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
-      "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC01",
-        "source_i_can_index": 1,
-        "text": "Find slope from a graph."
-      },
-      "supporting_i_cans": [],
+      "part": null,
+      "primary_mastery_goal": "U1-MG02",
+      "primary_i_can": "Find slope from a graph.",
       "evidence_job": "Find slope from a graph.",
-      "student_action": "Find slope from two visible points on a line.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 3,
-      "family_id": "U1-SUM-FAM-Q03",
-      "item_id": "U1-SUM-V4-Q03",
-      "source_map_record_id": "U1-SUM-V4-Q03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the slope from the graph.",
-      "student_html": "<p>Find the slope of the line shown.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_fd2639eafb995c62.png\" alt=\"Graph\"></div>",
-      "answer": "-1/2",
-      "solution_text": "The line falls 1 unit for every 2 units to the right, so slope = -1/2.",
-      "solution_html": "<p>The line falls 1 unit for every 2 units to the right, so slope = -1/2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Find the slope of the line shown."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -10,
-              "y_max": 10
-            },
-            "points": [],
-            "connect_points": false,
-            "line": {
-              "slope": -0.5,
-              "intercept": 3
-            }
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_fd2639eafb995c62.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": [
-          "figures/graph_fd2639eafb995c62.png"
-        ]
-      },
-      "instantiation_summary": "V4 parallel family Q03: negative fractional graph slope"
+      "question_family_id": "U1-SUM-U1-MG02-Q2",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "slope from graph",
+      "prompt": "Find the slope of the graphed line and show a rise/run pair.",
+      "student_html": "<p>Find the slope of the graphed line and show a rise/run pair.</p><img class=\"graph\" src=\"../figures/u1sp_20260907_summative_v4_mg02.png\" alt=\"Coordinate graph\">",
+      "answer": "0.5",
+      "solution": "Slope is rise/run = 0.5.",
+      "asset": "u1sp_20260907_summative_v4_mg02.png",
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-SUM-V4-Q3-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-SUM-V4-Q04",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q4",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC03",
-        "source_i_can_index": 3,
-        "text": "Find slope from an equation."
-      },
-      "supporting_i_cans": [],
+      "part": null,
+      "primary_mastery_goal": "U1-MG02",
+      "primary_i_can": "Find slope from an equation.",
       "evidence_job": "Find slope from an equation.",
-      "student_action": "Identify slope from an equation.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 4,
-      "family_id": "U1-SUM-FAM-Q04",
-      "item_id": "U1-SUM-V4-Q04",
-      "source_map_record_id": "U1-SUM-V4-Q04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the slope.",
-      "student_html": "<p>Find the slope.</p><div class=\"equation-card\">\\[y=\frac{3}{4}x-5\\]</div>",
-      "answer": "3/4",
-      "solution_text": "The coefficient of x is 3/4.",
-      "solution_html": "<p>The coefficient of x is 3/4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Find the slope."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=\frac{3}{4}x-5"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "V4 parallel family Q04: fractional equation slope"
+      "question_family_id": "U1-SUM-U1-MG02-Q1",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "rate from equation/context",
+      "prompt": "The model for temperature is y = 0.5x + -1. State the rate of change and interpret its sign.",
+      "student_html": "<p>The model for temperature is y = 0.5x + -1. State the rate of change and interpret its sign.</p>",
+      "answer": "0.5",
+      "solution": "The quantity increases as x increases.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Understand",
+      "stimulus_id": "U1-SUM-V4-Q4-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-SUM-V4-Q05",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q5",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Use order of operations correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use substitution and order of operations correctly.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Substitute a value into an expression.",
+      "evidence_job": "Substitute a value into an expression.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "representation_route": "direct_html",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 5,
-      "family_id": "U1-SUM-FAM-Q05",
-      "item_id": "U1-SUM-V4-Q05",
-      "source_map_record_id": "U1-SUM-V4-Q05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for n = -1 using order of operations.",
-      "student_html": "<p>Evaluate for \\(n=-1\\) using order of operations.</p><div class=\"equation-card\">\\[6-2(3+n)\\]</div>",
-      "answer": "2",
-      "solution_text": "Substitute the given value(s) (n = -1) and follow order of operations to get 2.",
-      "solution_html": "<p>Substitute the given value(s) (n = -1) and follow order of operations to get 2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for n = -1 using order of operations."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "6-2(3+n)"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
+      "question_family_id": "U1-SUM-U1-MG03-Q2",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "substitution and order",
+      "prompt": "Evaluate 2x² - 3x + 4 when x = -2.",
+      "student_html": "<p>Evaluate 2x² - 3x + 4 when x = -2.</p>",
+      "answer": "18",
+      "solution": "2(-2)²-3(-2)+4=18.",
+      "asset": null,
+      "params": {
+        "x": -2,
+        "value": 18
       },
-      "instantiation_summary": "V4 parallel family Q05: expression 4 with n = -1"
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-SUM-V4-Q5-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-SUM-V4-Q06",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q6",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate expressions with positive and negative numbers.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Evaluate with positive and negative values.",
+      "evidence_job": "Evaluate with positive and negative values.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "representation_route": "direct_html",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 6,
-      "family_id": "U1-SUM-FAM-Q06",
-      "item_id": "U1-SUM-V4-Q06",
-      "source_map_record_id": "U1-SUM-V4-Q06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate the expression for m = -3.",
-      "student_html": "<p>Evaluate the expression for \\(m=-3\\).</p><div class=\"equation-card\">\\[-4m+7\\]</div>",
-      "answer": "19",
-      "solution_text": "Substitute the given value(s) (m = -3) and follow order of operations to get 19.",
-      "solution_html": "<p>Substitute the given value(s) (m = -3) and follow order of operations to get 19.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate the expression for m = -3."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "-4m+7"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "V4 parallel family Q06: expression 3 with m = -3"
+      "question_family_id": "U1-SUM-U1-MG03-Q1",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "signed evaluation and reasonableness",
+      "prompt": "Evaluate -3a + 2b - 4 when a = -2 and b = -3. Then state whether the sign of the result is reasonable.",
+      "student_html": "<p>Evaluate -3a + 2b - 4 when a = -2 and b = -3. Then state whether the sign of the result is reasonable.</p>",
+      "answer": "-4",
+      "solution": "-3(-2)+2(-3)-4=-4. Check the signs of each term.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-SUM-V4-Q6-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-SUM-V4-Q07",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
+      "id": "U1-SUM-V4-Q7",
+      "section_id": null,
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Find a missing input or output when enough information is given.",
-      "student_action": "Find a missing output from a rule and table.",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find an output from an input.",
+      "evidence_job": "Find an output from an input.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "secure_mastery",
+      "security_role": "secure_summative",
+      "question_family_id": "U1-SUM-U1-MG04-Q2",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "output and ordered pair",
+      "prompt": "For y = 3x + 1, find the output when the input is 6 and write the ordered pair.",
+      "student_html": "<p>For y = 3x + 1, find the output when the input is 6 and write the ordered pair.</p>",
+      "answer": "19; (6,19)",
+      "solution": "y=3(6)+1=19.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-SUM-V4-Q7-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-SUM-V4-Q8",
+      "section_id": null,
+      "stage": null,
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find a missing input or output.",
+      "evidence_job": "Find a missing input or output.",
       "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "secure_mastery",
       "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 7,
-      "family_id": "U1-SUM-FAM-Q07",
-      "item_id": "U1-SUM-V4-Q07",
-      "source_map_record_id": "U1-SUM-V4-Q07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the missing output.",
-      "student_html": "<p>Use the rule to fill the missing table entry.</p><div class=\"equation-card\">\\[y=x-7\\]</div><table class=\"values\"><thead><tr><th>input x</th><th>output y</th></tr></thead><tbody><tr><td>2</td><td>-5</td></tr><tr><td>8</td><td>1</td></tr><tr><td>11</td><td>?</td></tr></tbody></table>",
-      "answer": "4",
-      "solution_text": "11-7=4.",
-      "solution_html": "<p>11-7=4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to fill the missing table entry."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=x-7"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input x",
-              "output y"
-            ],
-            "rows": [
-              [
-                2,
-                -5
-              ],
-              [
-                8,
-                1
-              ],
-              [
-                11,
-                "?"
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "V4 parallel family Q07: missing output"
-    },
-    {
-      "design_slot_id": "U1-SUM-V4-Q08",
-      "destination": "Summative",
-      "unit": 1,
-      "section": null,
-      "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC04",
-        "source_i_can_index": 4,
-        "text": "Use a rule to build or extend a table."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to build or extend a table.",
-      "student_action": "Extend a table consistently with the rule.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "summative_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "secure_summative",
-      "slot_role": "parallel",
-      "form": "V4",
-      "form_id": "V4",
-      "question_number": 8,
-      "family_id": "U1-SUM-FAM-Q08",
-      "item_id": "U1-SUM-V4-Q08",
-      "source_map_record_id": "U1-SUM-V4-Q08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Extend the table.",
-      "student_html": "<p>Use the rule to extend the table by finding the outputs for \\(x=4\\) and \\(x=7\\).</p><div class=\"equation-card\">\\[y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>4</td><td>?</td></tr><tr><td>7</td><td>?</td></tr></tbody></table>",
-      "answer": "9 and 15",
-      "solution_text": "2(4)+1=9 and 2(7)+1=15.",
-      "solution_html": "<p>2(4)+1=9 and 2(7)+1=15.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to extend the table by finding the outputs for x = 4 and x = 7."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                1,
-                3
-              ],
-              [
-                2,
-                5
-              ],
-              [
-                4,
-                "?"
-              ],
-              [
-                7,
-                "?"
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "V4 parallel family Q08: extend table"
+      "question_family_id": "U1-SUM-U1-MG04-Q1",
+      "task_architecture": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "variation_description": "missing input/output and extension",
+      "prompt": "The table follows y=3x+1. Find the missing input that gives output 22, then find the missing output for input 9.",
+      "student_html": "<p>The table follows y=3x+1. Find the missing input that gives output 22, then find the missing output for input 9.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>7</td></tr><tr><td>?</td><td>22</td></tr><tr><td>9</td><td>?</td></tr></tbody></table>",
+      "answer": "input 7; output 28",
+      "solution": "Solve 22=3x+1, then evaluate the rule at x=9.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-SUM-V4-Q8-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     }
   ]
 }

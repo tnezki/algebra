@@ -1,66 +1,32 @@
 {
-  "schema": "algebra-bank-map-manifest/1.0",
+  "schema": "algebra-bank-map-manifest/2.0",
   "course": "Algebra 1",
   "unit": 1,
-  "status": "PASS",
-  "map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-  "question_design": {
-    "status": "PASS",
-    "finished_task_slot_count": 208
-  },
-  "qa": {
-    "status": "PASS",
-    "semantic_conflicts": {
-      "direct_read_inflation_conflicts": 0
-    }
-  },
-  "canonical_repository_destination": "algebra/banks/unit1/source_map/",
-  "files": [
-    {
-      "path": "unit1_question_design_map.json",
-      "sha256": "773bed6438493a6eeae8c97edba4895888dad732dca1281d225dd15f07b61f87"
-    },
-    {
-      "path": "bank_inventory_map.json",
-      "sha256": "2eacaf44269ec9f09a3aa3c5184cd53769645b2584ed0368fab23ca499a63435"
-    },
-    {
-      "path": "exit_map.json",
-      "sha256": "104e3b8673fc5e61720e0ecd9c17746eb8a2288b27c771757b55cdf314ee8a12"
-    },
-    {
-      "path": "summative_map.json",
-      "sha256": "6df9d4b68aba4fc2f2d2954aea9ecb74d65668cdab1c22c84e64df731ebf0608"
-    },
-    {
-      "path": "practice1_map.json",
-      "sha256": "5e6b324bd08b17a6b0edff125032c8984b1bbdb8612f3010ce12235abe08e099"
-    },
-    {
-      "path": "wtc_map.json",
-      "sha256": "e77f7e0eab54415d1225bc8a5b1bf97129ff6fbc35705bdc7c5518ac42142208"
-    },
-    {
-      "path": "seed_map.json",
-      "sha256": "949bcc2e38d7508c369b8b17528c922b98122a364eafd14a5db5225604db153f"
-    },
-    {
-      "path": "MAP_REPORT.txt",
-      "sha256": "072a42ad2c567ca6a5d2fb40e25096197c08eda2bc8bb0065194c6cd343817c2"
-    }
+  "status": "ACCEPTED",
+  "qa_status": "PASS",
+  "pending": [],
+  "accepted_map_fingerprint": "e9d2692862cc8ea5019634f24881365f8fcd12a1d5d0545f39c474b4620adb12",
+  "map_files": [
+    "source_map/unit1_question_design_map.json",
+    "source_map/exit_map.json",
+    "source_map/practice1_map.json",
+    "source_map/summative_map.json",
+    "source_map/wtc_map.json",
+    "source_map/seed_map.json"
   ],
-  "slices": {
-    "inventory": "bank_inventory_map.json",
-    "question_design": "unit1_question_design_map.json",
-    "Exit": "exit_map.json",
-    "Summative": "summative_map.json",
-    "Practice 1": "practice1_map.json",
-    "WTC": "wtc_map.json",
-    "Seeds": "seed_map.json"
+  "source_authority": {
+    "system_repo": "tnezki/memories",
+    "system_commit": "65d9ba21685e55e8073fa9589fb8fd75e22b0ea7",
+    "course_repo": "tnezki/algebra",
+    "course_commit": "33d602e66ee1981a1dcebce76f35ba94f9f2fbe7",
+    "pm": "pms_build/bank_map_and_build_single_pass.txt"
   },
-  "finalization": {
-    "status": "PASS",
-    "terminal_signal": "FINALIZATION_QA: PASS"
-  },
-  "map_fingerprint_method": "pilot-full-pipeline-map-content-v1"
+  "slot_counts": {
+    "exit": 20,
+    "practice": 120,
+    "summative": 48,
+    "wtc_parts": 20,
+    "seeds": 6,
+    "finished_task_slots": 208
+  }
 }

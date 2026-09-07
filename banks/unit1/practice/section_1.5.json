@@ -1,2007 +1,758 @@
 {
-  "schema": "algebra-bank-practice1/1.0",
-  "section": "1.5",
-  "records": [
+  "schema": "algebra-bank-practice-section/2.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "section_id": "1.5",
+  "title": "Equations as Models",
+  "stage_counts": {
+    "Intro": 8,
+    "Review": 8,
+    "Mastery": 8
+  },
+  "questions": [
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-01",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Define a variable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Define a variable.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Define a variable for a situation.",
+      "evidence_job": "Define a variable for a situation.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-01",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation.",
-      "student_html": "<p>A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation.</p>",
-      "answer": "Let m be movies; 6 + 4m = 30",
-      "solution_text": "The fixed fee is 6 and each movie adds 4, so total cost is 6+4m.",
-      "solution_html": "<p>The fixed fee is 6 and each movie adds 4, so total cost is 6+4m.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A movie rental costs a $6 membership fee plus $4 per movie. Your total is $30. Define a variable for the number of movies and write an equation."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 1"
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-1-PRACTICE",
+      "task_architecture": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A club charges a $7 sign-up fee plus $4 per meeting attended. Define a variable for the number of meetings.",
+      "student_html": "<p>A club charges a $7 sign-up fee plus $4 per meeting attended. Define a variable for the number of meetings.</p>",
+      "answer": "Let m be the number of meetings attended.",
+      "solution": "The variable should represent the changing count named in the situation.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Understand",
+      "stimulus_id": "U1-P-1.5-INTRO-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-02",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Write an equation that matches a situation."
-      },
-      "supporting_i_cans": [],
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Write an equation that matches a situation.",
       "evidence_job": "Write an equation that matches a situation.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-02",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation.",
-      "student_html": "<p>A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation.</p>",
-      "answer": "Let d be miles; 5 + 3d = 26",
-      "solution_text": "The starting fee is 5 and each mile adds 3.",
-      "solution_html": "<p>The starting fee is 5 and each mile adds 3.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A taxi charges a $5 starting fee plus $3 per mile. The fare is $26. Define a variable for miles and write an equation."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 2"
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-2-PRACTICE",
+      "task_architecture": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A club charges $7 plus $4 per meeting. Write an equation for a total cost of $19.",
+      "student_html": "<p>A club charges $7 plus $4 per meeting. Write an equation for a total cost of $19.</p>",
+      "answer": "7+4m=19",
+      "solution": "Starting fee + per-meeting charge × meetings = total.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-03",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Use equivalent steps to solve when needed."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use equivalent steps to solve when needed.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-03",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks.",
-      "student_html": "<p>You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks.</p>",
-      "answer": "5 notebooks",
-      "solution_text": "Let n be notebooks: 50-7n=15, so 7n=35 and n=5.",
-      "solution_html": "<p>Let n be notebooks: 50-7n=15, so 7n=35 and n=5.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "You have $50 and buy notebooks for $7 each, leaving $15. Write and solve an equation for the number of notebooks."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 3"
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Use equivalent steps to solve an equation when needed.",
+      "evidence_job": "Use equivalent steps to solve an equation when needed.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-3-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Solve 7 + 4m = 19 for m.",
+      "student_html": "<p>Solve 7 + 4m = 19 for m.</p>",
+      "answer": "3",
+      "solution": "Subtract 7, then divide by 4; m=3.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-04",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Check and interpret a solution in context."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Check and interpret a solution in context.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-04",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase.",
-      "student_html": "<p>A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase.</p>",
-      "answer": "4 members per week",
-      "solution_text": "Let w be weekly increase: 18+4w=34, so 4w=16 and w=4.",
-      "solution_html": "<p>Let w be weekly increase: 18+4w=34, so 4w=16 and w=4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A club has 18 members and adds the same number of new members each week. After 4 weeks it has 34 members. Write and solve an equation for the weekly increase."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 4"
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Interpret and check a solution in context.",
+      "evidence_job": "Interpret and check a solution in context.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-4-PRACTICE",
+      "task_architecture": "PROC-MULTISTEP-CHAIN-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Solve 7 + 4m = 19 for m.",
+      "student_html": "<p>Solve 7 + 4m = 19 for m.</p>",
+      "answer": "3",
+      "solution": "Subtract 7, then divide by 4; m=3.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-05",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Define a variable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Define a variable.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Define a variable for a situation.",
+      "evidence_job": "Define a variable for a situation.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-05",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months.",
-      "student_html": "<p>A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months.</p>",
-      "answer": "4 months",
-      "solution_text": "20+15m=80, so 15m=60 and m=4.",
-      "solution_html": "<p>20+15m=80, so 15m=60 and m=4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A gym charges a $20 signup fee and $15 per month. A member has paid $80 total. Write an equation and find the number of months."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 5"
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-1-PRACTICE",
+      "task_architecture": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A club charges a $7 sign-up fee plus $5 per meeting attended. Define a variable for the number of meetings.",
+      "student_html": "<p>A club charges a $7 sign-up fee plus $5 per meeting attended. Define a variable for the number of meetings.</p>",
+      "answer": "Let m be the number of meetings attended.",
+      "solution": "The variable should represent the changing count named in the situation.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Understand",
+      "stimulus_id": "U1-P-1.5-INTRO-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-06",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Write an equation that matches a situation."
-      },
-      "supporting_i_cans": [],
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Write an equation that matches a situation.",
       "evidence_job": "Write an equation that matches a situation.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
       "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-06",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup.",
-      "student_html": "<p>A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup.</p>",
-      "answer": "130 mL",
-      "solution_text": "750-5c=100, so 5c=650 and c=130.",
-      "solution_html": "<p>750-5c=100, so 5c=650 and c=130.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A water bottle holds 750 mL. After pouring equal amounts into 5 cups, 100 mL remains. Write and solve an equation for the amount in each cup."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 6"
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-2-PRACTICE",
+      "task_architecture": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A club charges $7 plus $5 per meeting. Write an equation for a total cost of $27.",
+      "student_html": "<p>A club charges $7 plus $5 per meeting. Write an equation for a total cost of $27.</p>",
+      "answer": "7+5m=27",
+      "solution": "Starting fee + per-meeting charge × meetings = total.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-07",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Use equivalent steps to solve when needed."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use equivalent steps to solve when needed.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-07",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve.",
-      "student_html": "<p>A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve.</p>",
-      "answer": "13 students",
-      "solution_text": "42-s=29, so s=13.",
-      "solution_html": "<p>42-s=29, so s=13.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A school bus starts with 42 students. At one stop some students leave, and 29 remain. Write an equation for the number who left and solve."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 7"
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Use equivalent steps to solve an equation when needed.",
+      "evidence_job": "Use equivalent steps to solve an equation when needed.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-3-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Solve 7 + 5m = 27 for m.",
+      "student_html": "<p>Solve 7 + 5m = 27 for m.</p>",
+      "answer": "4",
+      "solution": "Subtract 7, then divide by 5; m=4.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-INTRO-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-INTRO-08",
+      "section_id": "1.5",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG04",
-        "title": "Equations in Context",
-        "text": "Write an equation from a situation, solve when needed, and explain what the solution means."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.5-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Check and interpret a solution in context."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Check and interpret a solution in context.",
-      "student_action": "Define the needed variable, write an equation, solve when requested, and interpret the result.",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.5-P1-INTRO-08",
-      "source_map_record_id": "U1-S1.5-P1-INTRO-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed.",
-      "student_html": "<p>A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed.</p>",
-      "answer": "7 days",
-      "solution_text": "72+24d=240, so 24d=168 and d=7.",
-      "solution_html": "<p>72+24d=240, so 24d=168 and d=7.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A fundraiser goal is $240. The class already has $72 and earns $24 per day. Write and solve an equation for the number of days needed."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation context 8"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC02",
-        "source_i_can_index": 2,
-        "text": "Use a rule to find an output from an input."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to find an output from an input.",
-      "student_action": "Use a rule to compute an output.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-01",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the output for input 6.",
-      "student_html": "<p>Use the rule to find the output when the input is 6.</p><div class=\"equation-card\">\\[y=3x-2\\]</div>",
-      "answer": "16",
-      "solution_text": "3(6)-2=16.",
-      "solution_html": "<p>3(6)-2=16.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to find the output when the input is 6."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=3x-2"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "forward rule"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC01",
-        "source_i_can_index": 1,
-        "text": "Use input/output language and ordered pairs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use input/output language and ordered pairs.",
-      "student_action": "Use a rule and record the result as an ordered pair.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-02",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the ordered pair for x = -2.",
-      "student_html": "<p>For the rule shown, find the output when \\(x=-2\\) and write the result as an ordered pair.</p><div class=\"equation-card\">\\[y=2x+5\\]</div>",
-      "answer": "(-2, 1)",
-      "solution_text": "2(-2)+5=1, so the ordered pair is (-2, 1).",
-      "solution_html": "<p>2(-2)+5=1, so the ordered pair is (-2, 1).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "For the rule shown, find the output when x = -2 and write the result as an ordered pair."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+5"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "ordered pair from rule"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Find a missing input or output when enough information is given.",
-      "student_action": "Work backward from an output to find the input.",
-      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-03",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the missing input.",
-      "student_html": "<p>For the rule shown, what input gives an output of 19?</p><div class=\"equation-card\">\\[y=4x+3\\]</div>",
+      "part": null,
+      "primary_mastery_goal": "U3-MG04",
+      "primary_i_can": "Interpret and check a solution in context.",
+      "evidence_job": "Interpret and check a solution in context.",
+      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "context",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG04-4-PRACTICE",
+      "task_architecture": "PROC-MULTISTEP-CHAIN-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Solve 7 + 5m = 27 for m.",
+      "student_html": "<p>Solve 7 + 5m = 27 for m.</p>",
       "answer": "4",
-      "solution_text": "Set 4x+3=19, so 4x=16 and x=4.",
-      "solution_html": "<p>Set 4x+3=19, so 4x=16 and x=4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "For the rule shown, what input gives an output of 19?"
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=4x+3"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "inverse input"
+      "solution": "Subtract 7, then divide by 5; m=4.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-INTRO-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC04",
-        "source_i_can_index": 4,
-        "text": "Use a rule to build or extend a table."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to build or extend a table.",
-      "student_action": "Use a rule to complete a value table.",
-      "question_structure_id": "TABLE-RECONSTRUCT-MISSING-CELLS-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-04",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Complete the table.",
-      "student_html": "<p>Complete the missing outputs using the rule.</p><div class=\"equation-card\">\\[y=-2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>?</td></tr><tr><td>0</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></tbody></table>",
-      "answer": "5, 1, -5",
-      "solution_text": "Substitute each x-value into y=-2x+1: 5, 1, and -5.",
-      "solution_html": "<p>Substitute each x-value into y=-2x+1: 5, 1, and -5.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Complete the missing outputs using the rule."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-2x+1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                -2,
-                "?"
-              ],
-              [
-                0,
-                "?"
-              ],
-              [
-                3,
-                "?"
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "table extension"
+      "id": "U1-P-1.5-REVIEW-01",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Compare two relationships shown in different representations.",
+      "evidence_job": "Compare two relationships shown in different representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-1-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Relationship A is y = 3x + 1. Relationship B is shown in the table. At x = 4, which relationship has the greater output?",
+      "student_html": "<p>Relationship A is y = 3x + 1. Relationship B is shown in the table. At x = 4, which relationship has the greater output?</p><table class=\"data-table\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>4</td><td>8</td></tr></tbody></table>",
+      "answer": "A; A=13, B=8.",
+      "solution": "Evaluate A at 4 and read B at 4, then compare.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-REVIEW-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC02",
-        "source_i_can_index": 2,
-        "text": "Use a rule to find an output from an input."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to find an output from an input.",
-      "student_action": "Evaluate a rule at a negative input.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-05",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the output.",
-      "student_html": "<p>Use the rule to find the output when \\(x=-4\\).</p><div class=\"equation-card\">\\[y=-3x+2\\]</div>",
-      "answer": "14",
-      "solution_text": "-3(-4)+2=12+2=14.",
-      "solution_html": "<p>-3(-4)+2=12+2=14.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to find the output when x = -4."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=-3x+2"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "negative input"
+      "id": "U1-P-1.5-REVIEW-02",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Use values, rates, starting values, or patterns as evidence.",
+      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-2-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A is y = 3x + 1. B has starting value 4 and increases by 1 per step. Compare their starting values and rates.",
+      "student_html": "<p>A is y = 3x + 1. B has starting value 4 and increases by 1 per step. Compare their starting values and rates.</p>",
+      "answer": "A starts at 1 with rate 3; B starts at 4 with rate 1.",
+      "solution": "The y-intercept/starting value is b and the rate is m.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Find a missing input or output when enough information is given.",
-      "student_action": "Find a missing output from a rule and table.",
-      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-06",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the missing output.",
-      "student_html": "<p>Use the rule to fill the missing table entry.</p><div class=\"equation-card\">\\[y=x-7\\]</div><table class=\"values\"><thead><tr><th>input x</th><th>output y</th></tr></thead><tbody><tr><td>2</td><td>-5</td></tr><tr><td>8</td><td>1</td></tr><tr><td>11</td><td>?</td></tr></tbody></table>",
-      "answer": "4",
-      "solution_text": "11-7=4.",
-      "solution_html": "<p>11-7=4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to fill the missing table entry."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=x-7"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input x",
-              "output y"
-            ],
-            "rows": [
-              [
-                2,
-                -5
-              ],
-              [
-                8,
-                1
-              ],
-              [
-                11,
-                "?"
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "missing output"
+      "id": "U1-P-1.5-REVIEW-03",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Explain which relationship is greater, changes faster, or starts higher.",
+      "evidence_job": "Explain which relationship is greater, changes faster, or starts higher.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Two savings plans start at $10 and $40. Plan A adds $30 per week; Plan B adds $10 per week. Which starts higher? Which grows faster?",
+      "student_html": "<p>Two savings plans start at $10 and $40. Plan A adds $30 per week; Plan B adds $10 per week. Which starts higher? Which grows faster?</p>",
+      "answer": "B starts higher; A grows faster.",
+      "solution": "Compare starting amounts and weekly additions separately.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC04",
-        "source_i_can_index": 4,
-        "text": "Use a rule to build or extend a table."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to build or extend a table.",
-      "student_action": "Extend a table consistently with the rule.",
-      "question_structure_id": "TABLE-RECONSTRUCT-MISSING-CELLS-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-07",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Extend the table.",
-      "student_html": "<p>Use the rule to extend the table by finding the outputs for \\(x=4\\) and \\(x=7\\).</p><div class=\"equation-card\">\\[y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>4</td><td>?</td></tr><tr><td>7</td><td>?</td></tr></tbody></table>",
-      "answer": "9 and 15",
-      "solution_text": "2(4)+1=9 and 2(7)+1=15.",
-      "solution_html": "<p>2(4)+1=9 and 2(7)+1=15.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to extend the table by finding the outputs for x = 4 and x = 7."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                1,
-                3
-              ],
-              [
-                2,
-                5
-              ],
-              [
-                4,
-                "?"
-              ],
-              [
-                7,
-                "?"
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "extend table"
+      "id": "U1-P-1.5-REVIEW-04",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Support a comparison with information from the representations.",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-4-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A is y = 3x + 1. B uses the table below. Make a claim about which changes faster and support it with one numerical fact from each representation.",
+      "student_html": "<p>A is y = 3x + 1. B uses the table below. Make a claim about which changes faster and support it with one numerical fact from each representation.</p><table class=\"data-table\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>4</td><td>8</td></tr></tbody></table>",
+      "answer": "A rate 3; B rate 1; A changes faster.",
+      "solution": "Use the coefficient for A and Δy/Δx for B.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-MASTERY-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
+      "id": "U1-P-1.5-REVIEW-05",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Compare two relationships shown in different representations.",
+      "evidence_job": "Compare two relationships shown in different representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-1-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Relationship A is y = 2x + 1. Relationship B is shown in the table. At x = 4, which relationship has the greater output?",
+      "student_html": "<p>Relationship A is y = 2x + 1. Relationship B is shown in the table. At x = 4, which relationship has the greater output?</p><table class=\"data-table\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>12</td></tr></tbody></table>",
+      "answer": "B; A=9, B=12.",
+      "solution": "Evaluate A at 4 and read B at 4, then compare.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-REVIEW-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-REVIEW-06",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Use values, rates, starting values, or patterns as evidence.",
+      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-2-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A is y = 2x + 1. B has starting value 4 and increases by 2 per step. Compare their starting values and rates.",
+      "student_html": "<p>A is y = 2x + 1. B has starting value 4 and increases by 2 per step. Compare their starting values and rates.</p>",
+      "answer": "A starts at 1 with rate 2; B starts at 4 with rate 2.",
+      "solution": "The y-intercept/starting value is b and the rate is m.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-REVIEW-07",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Explain which relationship is greater, changes faster, or starts higher.",
+      "evidence_job": "Explain which relationship is greater, changes faster, or starts higher.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Two savings plans start at $10 and $40. Plan A adds $20 per week; Plan B adds $20 per week. Which starts higher? Which grows faster?",
+      "student_html": "<p>Two savings plans start at $10 and $40. Plan A adds $20 per week; Plan B adds $20 per week. Which starts higher? Which grows faster?</p>",
+      "answer": "B starts higher; B grows faster.",
+      "solution": "Compare starting amounts and weekly additions separately.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-REVIEW-08",
+      "section_id": "1.5",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Support a comparison with information from the representations.",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG01-4-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A is y = 2x + 1. B uses the table below. Make a claim about which changes faster and support it with one numerical fact from each representation.",
+      "student_html": "<p>A is y = 2x + 1. B uses the table below. Make a claim about which changes faster and support it with one numerical fact from each representation.</p><table class=\"data-table\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>12</td></tr></tbody></table>",
+      "answer": "A rate 2; B rate 2; B changes faster.",
+      "solution": "Use the coefficient for A and Δy/Δx for B.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.5-REVIEW-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-MASTERY-01",
+      "section_id": "1.5",
       "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC01",
-        "source_i_can_index": 1,
-        "text": "Use input/output language and ordered pairs."
-      },
-      "supporting_i_cans": [],
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Use input/output language and ordered pairs.",
       "evidence_job": "Use input/output language and ordered pairs.",
-      "student_action": "Interpret input and output values in a rule.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.5-P1-MASTERY-08",
-      "source_map_record_id": "U1-S1.5-P1-MASTERY-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the input-output pair.",
-      "student_html": "<p>For the rule shown, the input is 5. Find the output and write the input-output pair.</p><div class=\"equation-card\">\\[y=10-x\\]</div>",
-      "answer": "(5, 5)",
-      "solution_text": "10-5=5, so input 5 maps to output 5.",
-      "solution_html": "<p>10-5=5, so input 5 maps to output 5.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "For the rule shown, the input is 5. Find the output and write the input-output pair."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=10-x"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "input-output pair"
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "For the rule y = 2x + 1, name the input and output in the ordered pair when x = 2.",
+      "student_html": "<p>For the rule y = 2x + 1, name the input and output in the ordered pair when x = 2.</p>",
+      "answer": "input 2, output 5; (2, 5)",
+      "solution": "Substitute the input: y=2(2)+1=5.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC01",
-        "source_i_can_index": 1,
-        "text": "Compare two relationships shown in different representations."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Compare two relationships shown in different representations.",
-      "student_action": "Compare two relationships using their outputs at a common input.",
+      "id": "U1-P-1.5-MASTERY-02",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find an output from an input.",
+      "evidence_job": "Find an output from an input.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-01",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare the outputs at x = 4.",
-      "student_html": "<p>Relationship A is shown by the rule and Relationship B by the table. Which has the greater output when \\(x=4\\)?</p><div class=\"equation-card\">\\[A: y=2x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>B output</th></tr></thead><tbody><tr><td>0</td><td>4</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>12</td></tr></tbody></table>",
-      "answer": "Relationship B",
-      "solution_text": "A gives 9; B gives 12, so B is greater.",
-      "solution_html": "<p>A gives 9; B gives 12, so B is greater.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Relationship A is shown by the rule and Relationship B by the table. Which has the greater output when x = 4?"
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "A: y=2x+1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "B output"
-            ],
-            "rows": [
-              [
-                0,
-                4
-              ],
-              [
-                2,
-                8
-              ],
-              [
-                4,
-                12
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation vs table comparison"
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Use y = 2x + 1 to find the output when the input is 3.",
+      "student_html": "<p>Use y = 2x + 1 to find the output when the input is 3.</p>",
+      "answer": "7",
+      "solution": "y=2(3)+1=7.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC02",
-        "source_i_can_index": 2,
-        "text": "Use values, rates, starting values, or patterns as evidence."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
-      "student_action": "Compare constant rates from two tables.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "id": "U1-P-1.5-MASTERY-03",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find a missing input or output.",
+      "evidence_job": "Find a missing input or output.",
+      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-3-PRACTICE",
+      "task_architecture": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "For y = 2x + 1, what input produces the output 5?",
+      "student_html": "<p>For y = 2x + 1, what input produces the output 5?</p>",
+      "answer": "2",
+      "solution": "Solve 5=2x+1; x=2.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-MASTERY-04",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Build or extend an input-output table.",
+      "evidence_job": "Build or extend an input-output table.",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_response",
       "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-02",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare the rates.",
-      "student_html": "<p>Which relationship changes faster? Use rate as evidence.</p><table class=\"values\"><thead><tr><th>x</th><th>A</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>2</td><td>5</td></tr><tr><td>2</td><td>8</td><td>9</td></tr><tr><td>4</td><td>14</td><td>13</td></tr></tbody></table>",
-      "answer": "Relationship A",
-      "solution_text": "A changes 6 over 2, rate 3. B changes 4 over 2, rate 2.",
-      "solution_html": "<p>A changes 6 over 2, rate 3. B changes 4 over 2, rate 2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which relationship changes faster? Use rate as evidence."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A",
-              "B"
-            ],
-            "rows": [
-              [
-                0,
-                2,
-                5
-              ],
-              [
-                2,
-                8,
-                9
-              ],
-              [
-                4,
-                14,
-                13
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "two-table rate compare"
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-4-PRACTICE",
+      "task_architecture": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "The table follows y = 2x + 1. Find the missing input and then add the row for input 5.",
+      "student_html": "<p>The table follows y = 2x + 1. Find the missing input and then add the row for input 5.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>3</td><td>7</td></tr><tr><td>?</td><td>9</td></tr></tbody></table>",
+      "answer": "missing input 4; new row (5, 11)",
+      "solution": "Use the rule in both directions.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Explain which relationship is greater, faster, or starts higher when the question asks.",
-      "student_action": "Compare starting values from equations.",
+      "id": "U1-P-1.5-MASTERY-05",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Use input/output language and ordered pairs.",
+      "evidence_job": "Use input/output language and ordered pairs.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-03",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare starting values.",
-      "student_html": "<p>Which relationship starts higher when \\(x=0\\)?</p><div class=\"equation-card\">\\[A: y=4x-2\\qquad B: y=x+5\\]</div>",
-      "answer": "Relationship B",
-      "solution_text": "At x=0, A=-2 and B=5.",
-      "solution_html": "<p>At x=0, A=-2 and B=5.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which relationship starts higher when x = 0?"
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "A: y=4x-2\\qquad B: y=x+5"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation starts compare"
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "For the rule y = -3x + 2, name the input and output in the ordered pair when x = 3.",
+      "student_html": "<p>For the rule y = -3x + 2, name the input and output in the ordered pair when x = 3.</p>",
+      "answer": "input 3, output -7; (3, -7)",
+      "solution": "Substitute the input: y=-3(3)+2=-7.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Support a comparison with information from the representations."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Support a comparison with information from the representations.",
-      "student_action": "Use two pieces of evidence to compare relationships.",
+      "id": "U1-P-1.5-MASTERY-06",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find an output from an input.",
+      "evidence_job": "Find an output from an input.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "mixed_table_equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        },
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-04",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare rate and starting value.",
-      "student_html": "<p>Compare the two relationships. State which has the greater rate and which has the greater starting value.</p><div class=\"equation-card\">\\[A: y=3x+1\\]</div><table class=\"values\"><thead><tr><th>x</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>10</td></tr></tbody></table>",
-      "answer": "A has greater rate; B has greater starting value",
-      "solution_text": "A rate=3, start=1. B rate=2, start=6.",
-      "solution_html": "<p>A rate=3, start=1. B rate=2, start=6.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Compare the two relationships. State which has the greater rate and which has the greater starting value."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "A: y=3x+1"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "B"
-            ],
-            "rows": [
-              [
-                0,
-                6
-              ],
-              [
-                1,
-                8
-              ],
-              [
-                2,
-                10
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "rate and start comparison"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC01",
-        "source_i_can_index": 1,
-        "text": "Compare two relationships shown in different representations."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Compare two relationships shown in different representations.",
-      "student_action": "Compare equation and context at a specific input.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-05",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare costs at 4 hours.",
-      "student_html": "<p>Plan A costs \\(C=5\\)h + 10 dollars for h hours. Plan B costs $28 for 4 hours. Which costs less for 4 hours?</p>",
-      "answer": "Plan B",
-      "solution_text": "Plan A costs 5(4)+10=30; Plan B costs 28.",
-      "solution_html": "<p>Plan A costs 5(4)+10=30; Plan B costs 28.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Plan A costs C = 5h + 10 dollars for h hours. Plan B costs $28 for 4 hours. Which costs less for 4 hours?"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "context equation compare"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC02",
-        "source_i_can_index": 2,
-        "text": "Use values, rates, starting values, or patterns as evidence."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use values, rates, starting values, or patterns as evidence.",
-      "student_action": "Compare rates from context descriptions.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-06",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare constant rates.",
-      "student_html": "<p>Runner A travels 9 miles in 1.5 hours at a constant rate. Runner B travels 10 miles in 2 hours at a constant rate. Who is faster?</p>",
-      "answer": "Runner A",
-      "solution_text": "A rate=6 mph; B rate=5 mph.",
-      "solution_html": "<p>A rate=6 mph; B rate=5 mph.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Runner A travels 9 miles in 1.5 hours at a constant rate. Runner B travels 10 miles in 2 hours at a constant rate. Who is faster?"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "context rate compare"
-    },
-    {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Explain which relationship is greater, faster, or starts higher when the question asks."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Explain which relationship is greater, faster, or starts higher when the question asks.",
-      "student_action": "Compare outputs from two rules.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-07",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare outputs at x=-2.",
-      "student_html": "<p>At \\(x=-2\\), which relationship has the greater output?</p><div class=\"equation-card\">\\[A: y=-x+4\\qquad B: y=2x+7\\]</div>",
-      "answer": "Relationship A",
-      "solution_text": "A=6 and B=3.",
-      "solution_html": "<p>A=6 and B=3.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "At x = -2, which relationship has the greater output?"
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "A: y=-x+4\\qquad B: y=2x+7"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "equation output compare"
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Use y = -3x + 2 to find the output when the input is 4.",
+      "student_html": "<p>Use y = -3x + 2 to find the output when the input is 4.</p>",
+      "answer": "-10",
+      "solution": "y=-3(4)+2=-10.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.5-P1-REVIEW-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG01",
-        "title": "Compare Relationships",
-        "text": "Compare relationships across graphs, tables, equations, and contexts using clear evidence."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Support a comparison with information from the representations."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Support a comparison with information from the representations.",
-      "student_action": "Make and support a comparison from table data.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "id": "U1-P-1.5-MASTERY-07",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Find a missing input or output.",
+      "evidence_job": "Find a missing input or output.",
+      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-3-PRACTICE",
+      "task_architecture": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "For y = -3x + 2, what input produces the output -7?",
+      "student_html": "<p>For y = -3x + 2, what input produces the output -7?</p>",
+      "answer": "3",
+      "solution": "Solve -7=-3x+2; x=3.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.5-MASTERY-08",
+      "section_id": "1.5",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG04",
+      "primary_i_can": "Build or extend an input-output table.",
+      "evidence_job": "Build or extend an input-output table.",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_response",
       "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.5-P1-REVIEW-08",
-      "source_map_record_id": "U1-S1.5-P1-REVIEW-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Compare growth rates.",
-      "student_html": "<p>Which relationship grows faster? Cite two intervals from the table.</p><table class=\"values\"><thead><tr><th>x</th><th>A</th><th>B</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>1</td><td>5</td><td>5</td></tr><tr><td>2</td><td>9</td><td>8</td></tr><tr><td>3</td><td>13</td><td>11</td></tr></tbody></table>",
-      "answer": "Relationship A",
-      "solution_text": "A increases by 4 each step; B increases by 3 each step.",
-      "solution_html": "<p>A increases by 4 each step; B increases by 3 each step.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which relationship grows faster? Cite two intervals from the table."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "A",
-              "B"
-            ],
-            "rows": [
-              [
-                0,
-                1,
-                2
-              ],
-              [
-                1,
-                5,
-                5
-              ],
-              [
-                2,
-                9,
-                8
-              ],
-              [
-                3,
-                13,
-                11
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "table growth compare"
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG04-4-PRACTICE",
+      "task_architecture": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "The table follows y = -3x + 2. Find the missing input and then add the row for input 6.",
+      "student_html": "<p>The table follows y = -3x + 2. Find the missing input and then add the row for input 6.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>-1</td></tr><tr><td>3</td><td>-7</td></tr><tr><td>?</td><td>-13</td></tr></tbody></table>",
+      "answer": "missing input 5; new row (6, -16)",
+      "solution": "Use the rule in both directions.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.5-MASTERY-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     }
   ]
 }

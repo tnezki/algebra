@@ -1,391 +1,138 @@
 {
-  "schema": "algebra-bank-wtc/1.0",
-  "section": "1.1",
-  "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
-  "shared_stimulus": {
-    "student_text": "A bike rental relationship is shown three ways: the rule C = 5 + 3h, a table of selected hours and costs, and a graph of the same relationship.",
-    "student_html": "<p>A bike rental has a $5 starting fee and costs $3 per hour.</p><div class=\"equation-card\">\\[C=5+3h\\]</div><table class=\"values\"><thead><tr><th>hours h</th><th>cost C ($)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>8</td></tr><tr><td>3</td><td>14</td></tr><tr><td>5</td><td>20</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_81b6452d36666a5f.png\" alt=\"Graph\"></div>",
-    "content_blocks": [
-      {
-        "type": "prose",
-        "data": {
-          "text": "A bike rental has a $5 starting fee and costs $3 per hour."
-        }
-      },
-      {
-        "type": "equation",
-        "data": {
-          "latex": "C=5+3h"
-        }
-      },
-      {
-        "type": "table",
-        "data": {
-          "headers": [
-            "hours h",
-            "cost C ($)"
-          ],
-          "rows": [
-            [
-              0,
-              5
-            ],
-            [
-              1,
-              8
-            ],
-            [
-              3,
-              14
-            ],
-            [
-              5,
-              20
-            ]
-          ]
-        }
-      },
-      {
-        "type": "graph",
-        "data": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "context",
-          "x_label": "Hours",
-          "y_label": "Cost ($)",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 6,
-            "y_min": 0,
-            "y_max": 24
-          },
-          "points": [],
-          "connect_points": false,
-          "line": {
-            "slope": 3,
-            "intercept": 5
-          }
-        }
-      }
-    ],
-    "representation_refs": [
-      {
-        "type": "generated_graph",
-        "file": "figures/graph_81b6452d36666a5f.png"
-      }
-    ]
+  "schema": "algebra-bank-wtc-section/2.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "section_id": "1.1",
+  "title": "Multiple Representations of Relationships",
+  "stimulus": {
+    "title": "Community Garden Water Tank",
+    "student_html": "<p>A garden tank starts with 1 gallon and gains 2 gallons per minute from a steady hose. The relationship is y = 2x + 1.</p><table class=\"data-table\"><thead><tr><th>minutes x</th><th>gallons y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>3</td><td>7</td></tr><tr><td>5</td><td>11</td></tr></tbody></table><img class=\"graph\" src=\"../figures/u1sp_20260907_wtc_1_1_relationship.png\" alt=\"Coordinate graph\">",
+    "asset": "u1sp_20260907_wtc_1_1_relationship.png"
   },
   "parts": [
     {
-      "design_slot_id": "U1-S1.1-WTC-A",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.1",
+      "id": "U1-WTC-1.1-A",
+      "section_id": "1.1",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG01",
-        "title": "Connect Representations",
-        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.1-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Find matching values across different representations."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Find matching values across different representations.",
-      "student_action": "Respond to Part A using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_a",
-      "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
-      "part_label": "Part A",
-      "wtc_id": "U1-S1.1-WTC",
-      "item_id": "U1-S1.1-WTC-A",
-      "source_map_record_id": "U1-S1.1-WTC-A",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Choose one row of the table and explain where the same information appears in the rule.",
-      "student_html": "<p>Choose one row of the table and explain where the same information appears in the rule.</p>",
-      "answer": "Example: h=3 corresponds to C=14, and 5+3(3)=14.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Choose one row of the table and explain where the same information appears in the rule."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.1 Part A"
+      "part": "A",
+      "primary_mastery_goal": "U3-MG01",
+      "primary_i_can": "Use input/output language and ordered pairs.",
+      "evidence_job": "Use input/output language and ordered pairs.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "shared_stimulus_html",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.1-A",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Use the table to find the output at x=5 and state the ordered pair.",
+      "student_html": "<p>Use the table to find the output at x=5 and state the ordered pair.</p>",
+      "answer": "11; (5,11).",
+      "solution": "Read the row x=5.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-WTC-1.1-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.1-WTC-B",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.1",
+      "id": "U1-WTC-1.1-B",
+      "section_id": "1.1",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG01",
-        "title": "Connect Representations",
-        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.1-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Create a table or graph from another representation."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Create a table or graph from another representation.",
-      "student_action": "Respond to Part B using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_b",
-      "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
-      "part_label": "Part B",
-      "wtc_id": "U1-S1.1-WTC",
-      "item_id": "U1-S1.1-WTC-B",
-      "source_map_record_id": "U1-S1.1-WTC-B",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Without calculating every value, predict where the graph should cross the vertical axis and explain why.",
-      "student_html": "<p>Without calculating every value, predict where the graph should cross the vertical axis and explain why.</p>",
-      "answer": "It should cross at 5 because h=0 gives C=5.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Without calculating every value, predict where the graph should cross the vertical axis and explain why."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.1 Part B"
+      "part": "B",
+      "primary_mastery_goal": "U2-MG04",
+      "primary_i_can": "Make a table from a rule or equation.",
+      "evidence_job": "Make a table from a rule or equation.",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "shared_stimulus_html",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.1-B",
+      "task_architecture": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Explain how the equation, table, and graph show the same rate of change.",
+      "student_html": "<p>Explain how the equation, table, and graph show the same rate of change.</p>",
+      "answer": "Each shows a rate of 2 gallons per minute.",
+      "solution": "Coefficient 2, table Δy/Δx=2, graph rise/run=2.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-WTC-1.1-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.1-WTC-C",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.1",
+      "id": "U1-WTC-1.1-C",
+      "section_id": "1.1",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG01",
-        "title": "Connect Representations",
-        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.1-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Check whether two representations describe the same relationship."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Check whether two representations describe the same relationship.",
-      "student_action": "Respond to Part C using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_c",
-      "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
-      "part_label": "Part C",
-      "wtc_id": "U1-S1.1-WTC",
-      "item_id": "U1-S1.1-WTC-C",
-      "source_map_record_id": "U1-S1.1-WTC-C",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "What feature stays the same across the table, rule, and graph? Use evidence.",
-      "student_html": "<p>What feature stays the same across the table, rule, and graph? Use evidence.</p>",
-      "answer": "The starting value is 5 and the rate is +3 per hour.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "What feature stays the same across the table, rule, and graph? Use evidence."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.1 Part C"
+      "part": "C",
+      "primary_mastery_goal": "U1-MG01",
+      "primary_i_can": "Read a graph using its scale.",
+      "evidence_job": "Read a graph using its scale.",
+      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "graph",
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.1-C",
+      "task_architecture": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "On the supplied graph, mark and label the point for x=4. State its coordinates.",
+      "student_html": "<p>On the supplied graph, mark and label the point for x=4. State its coordinates.</p>",
+      "answer": "(4,9).",
+      "solution": "Use y=2(4)+1=9, then plot (4,9).",
+      "asset": "u1sp_20260907_wtc_1_1_relationship.png",
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-WTC-1.1-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.1-WTC-D",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.1",
+      "id": "U1-WTC-1.1-D",
+      "section_id": "1.1",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG01",
-        "title": "Connect Representations",
-        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.1-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Use values, rate, or pattern as evidence."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use values, rate, or pattern as evidence.",
-      "student_action": "Respond to Part D using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_d",
-      "shared_stimulus_id": "U1-S1.1-WTC-STIMULUS",
-      "part_label": "Part D",
-      "wtc_id": "U1-S1.1-WTC",
-      "item_id": "U1-S1.1-WTC-D",
-      "source_map_record_id": "U1-S1.1-WTC-D",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Describe one check you could use to decide whether a new representation matches this relationship.",
-      "student_html": "<p>Describe one check you could use to decide whether a new representation matches this relationship.</p>",
-      "answer": "Check matching input-output pairs and the constant rate.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Describe one check you could use to decide whether a new representation matches this relationship."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.1 Part D"
+      "part": "D",
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Support a comparison with information from the representations.",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "mixed",
+      "representation_route": "shared_stimulus_html",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.1-D",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "A second tank starts at 4 gallons and gains 1 gallon per minute. Which tank has more water at minute 5? Support the comparison with values.",
+      "student_html": "<p>A second tank starts at 4 gallons and gains 1 gallon per minute. Which tank has more water at minute 5? Support the comparison with values.</p>",
+      "answer": "First tank: 11 gallons; second: 9 gallons; first tank has more.",
+      "solution": "Compare 2(5)+1=11 with 1(5)+4=9.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-WTC-1.1-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     }
   ]
 }

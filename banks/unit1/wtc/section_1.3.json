@@ -1,363 +1,138 @@
 {
-  "schema": "algebra-bank-wtc/1.0",
-  "section": "1.3",
-  "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
-  "shared_stimulus": {
-    "student_text": "Three small tables show different ways outputs can change as x increases by 1.",
-    "student_html": "<table class=\"values\"><thead><tr><th>x</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>0</td><td>2</td><td>1</td><td>1</td></tr><tr><td>1</td><td>5</td><td>2</td><td>2</td></tr><tr><td>2</td><td>8</td><td>4</td><td>5</td></tr><tr><td>3</td><td>11</td><td>8</td><td>10</td></tr></tbody></table>",
-    "content_blocks": [
-      {
-        "type": "table",
-        "data": {
-          "headers": [
-            "x",
-            "A",
-            "B",
-            "C"
-          ],
-          "rows": [
-            [
-              0,
-              2,
-              1,
-              1
-            ],
-            [
-              1,
-              5,
-              2,
-              2
-            ],
-            [
-              2,
-              8,
-              4,
-              5
-            ],
-            [
-              3,
-              11,
-              8,
-              10
-            ]
-          ]
-        }
-      }
-    ],
-    "representation_refs": []
+  "schema": "algebra-bank-wtc-section/2.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "section_id": "1.3",
+  "title": "Function Families",
+  "stimulus": {
+    "title": "Two Plant-Growth Patterns",
+    "student_html": "<p>Two plants are measured at the end of each week.</p><table class=\"data-table\"><thead><tr><th>week</th><th>Plant A height</th><th>Plant B height</th></tr></thead><tbody><tr><td>0</td><td>2</td><td>2</td></tr><tr><td>1</td><td>5</td><td>4</td></tr><tr><td>2</td><td>8</td><td>8</td></tr><tr><td>3</td><td>11</td><td>16</td></tr></tbody></table>",
+    "asset": null
   },
   "parts": [
     {
-      "design_slot_id": "U1-S1.3-WTC-A",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.3",
+      "id": "U1-WTC-1.3-A",
+      "section_id": "1.3",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.3-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Recognize a linear pattern from constant rate."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Recognize a linear pattern from constant rate.",
-      "student_action": "Respond to Part A using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_a",
-      "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
-      "part_label": "Part A",
-      "wtc_id": "U1-S1.3-WTC",
-      "item_id": "U1-S1.3-WTC-A",
-      "source_map_record_id": "U1-S1.3-WTC-A",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Which relationship has a constant additive change? State the change.",
-      "student_html": "<p>Which relationship has a constant additive change? State the change.</p>",
-      "answer": "A; +3",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which relationship has a constant additive change? State the change."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.3 Part A"
+      "part": "A",
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use basic function notation.",
+      "evidence_job": "Use basic function notation.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.3-A",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Identify the most likely family for Plant A and Plant B.",
+      "student_html": "<p>Identify the most likely family for Plant A and Plant B.</p>",
+      "answer": "A is linear; B is exponential.",
+      "solution": "A has constant differences; B has constant factor 2.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-WTC-1.3-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.3-WTC-B",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.3",
+      "id": "U1-WTC-1.3-B",
+      "section_id": "1.3",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.3-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Notice basic quadratic, exponential, and absolute-value shapes or patterns.",
-      "student_action": "Respond to Part B using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_b",
-      "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
-      "part_label": "Part B",
-      "wtc_id": "U1-S1.3-WTC",
-      "item_id": "U1-S1.3-WTC-B",
-      "source_map_record_id": "U1-S1.3-WTC-B",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Which relationship appears to grow by a constant multiplier? State the multiplier.",
-      "student_html": "<p>Which relationship appears to grow by a constant multiplier? State the multiplier.</p>",
-      "answer": "B; multiply by 2",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Which relationship appears to grow by a constant multiplier? State the multiplier."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.3 Part B"
+      "part": "B",
+      "primary_mastery_goal": "U1-MG02",
+      "primary_i_can": "Find slope from a table.",
+      "evidence_job": "Find slope from a table.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.3-B",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Find the rate of change for Plant A.",
+      "student_html": "<p>Find the rate of change for Plant A.</p>",
+      "answer": "3 height units per week.",
+      "solution": "The first differences are +3 each week.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-WTC-1.3-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.3-WTC-C",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.3",
+      "id": "U1-WTC-1.3-C",
+      "section_id": "1.3",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.3-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Use a table, graph, equation, or context as evidence."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a table, graph, equation, or context as evidence.",
-      "student_action": "Respond to Part C using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_c",
-      "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
-      "part_label": "Part C",
-      "wtc_id": "U1-S1.3-WTC",
-      "item_id": "U1-S1.3-WTC-C",
-      "source_map_record_id": "U1-S1.3-WTC-C",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Relationship C does not match either simple pattern above. What do you notice about its changes?",
-      "student_html": "<p>Relationship C does not match either simple pattern above. What do you notice about its changes?</p>",
-      "answer": "Its differences are 1, 3, and 5.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Relationship C does not match either simple pattern above. What do you notice about its changes?"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.3 Part C"
+      "part": "C",
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "evidence_job": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.3-C",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Predict the week-4 height for each plant if each pattern continues.",
+      "student_html": "<p>Predict the week-4 height for each plant if each pattern continues.</p>",
+      "answer": "A=14; B=32.",
+      "solution": "Add 3 for A and multiply by 2 for B.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Apply",
+      "stimulus_id": "U1-WTC-1.3-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.3-WTC-D",
-      "destination": "WTC",
-      "unit": 1,
-      "section": "1.3",
+      "id": "U1-WTC-1.3-D",
+      "section_id": "1.3",
       "stage": null,
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.3-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Explain why one family is more likely than another."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Explain why one family is more likely than another.",
-      "student_action": "Respond to Part D using the shared stimulus and prior knowledge.",
-      "question_structure_id": "WTC-FRQ-PREVIEW-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "shared_stimulus",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "shared_stimulus",
-          "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS"
-        }
-      ],
-      "difficulty_intent": "preview",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "instructional_preview",
-      "slot_role": "part_d",
-      "shared_stimulus_id": "U1-S1.3-WTC-STIMULUS",
-      "part_label": "Part D",
-      "wtc_id": "U1-S1.3-WTC",
-      "item_id": "U1-S1.3-WTC-D",
-      "source_map_record_id": "U1-S1.3-WTC-D",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "What additional representation would help you decide which function family best describes C, and what would you look for?",
-      "student_html": "<p>What additional representation would help you decide which function family best describes C, and what would you look for?</p>",
-      "answer": "Example: a graph; look for shape/curvature and how the rate changes.",
-      "solution_text": "Use the shared stimulus to support the response; responses may use informal language because this is a preview.",
-      "solution_html": "<p>Use the shared stimulus to support the response; responses may use informal language because this is a preview.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "What additional representation would help you decide which function family best describes C, and what would you look for?"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "WTC 1.3 Part D"
+      "part": "D",
+      "primary_mastery_goal": "U2-MG01",
+      "primary_i_can": "Support a comparison with information from the representations.",
+      "evidence_job": "Support a comparison with information from the representations.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "decomposition_navigation",
+      "security_role": "wtc_public",
+      "question_family_id": "U1-WTC-1.3-D",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary the shared stimulus while preserving the part-level evidence job.",
+      "prompt": "Which plant is growing faster by week 3? Use at least two values or pattern facts as evidence.",
+      "student_html": "<p>Which plant is growing faster by week 3? Use at least two values or pattern facts as evidence.</p>",
+      "answer": "Plant B.",
+      "solution": "B doubles and grows from 8 to 16 while A only grows from 8 to 11; B will increasingly outpace A.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-WTC-1.3-SHARED",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     }
   ]
 }
