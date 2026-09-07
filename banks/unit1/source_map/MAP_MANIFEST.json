@@ -1,0 +1,84 @@
+{
+  "schema": "algebra-bank-map-manifest/1.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "status": "PASS",
+  "map_fingerprint": "ce3090fc16f482d68d5f198dbe2f3d808a2410e0d4879fdd41b54b256e7b6e21",
+  "question_design": {
+    "status": "PASS",
+    "finished_task_slot_count": 208
+  },
+  "qa": {
+    "status": "PASS",
+    "semantic_conflicts": {
+      "construction_vs_read_only_conflicts": 0,
+      "direct_read_inflation_conflicts": 0,
+      "invalid_multistep_mappings": 0,
+      "invalid_error_diagnosis_mappings": 0,
+      "incomplete_mixed_representation_routes": 0,
+      "student_construction_response_surface_conflicts": 0
+    }
+  },
+  "canonical_repository_destination": "algebra/banks/unit1/source_map/",
+  "files": [
+    {
+      "path": "unit1_question_design_map.json",
+      "sha256": "8e49898076896ce44d143a32bc4c1494800bd429f32eb7a0bec8a3d6b7ab5354"
+    },
+    {
+      "path": "bank_inventory_map.json",
+      "sha256": "5b8eea2509422ad63c2005c2537bab10bb4f4074fa8a0c85f1045e496639106f"
+    },
+    {
+      "path": "exit_map.json",
+      "sha256": "de4aadc1108c6256520794e883f59d9c4c87c738da8e97da47d80b8f80553d48"
+    },
+    {
+      "path": "summative_map.json",
+      "sha256": "53171747afb801b4f0b744c91264f4d1316d631b291bcc73afc7b09a729c133f"
+    },
+    {
+      "path": "practice1_map.json",
+      "sha256": "21f577a14b03cabeaa3293bfc2c1f91e42e06bb863972f4ad08fc6111c4195d8"
+    },
+    {
+      "path": "wtc_map.json",
+      "sha256": "a3104abdd0481f7d68cf5722a23904b33677c700dcb5e004fd303bcf0001e892"
+    },
+    {
+      "path": "seed_map.json",
+      "sha256": "7544fec7069c349d24662b899deb3972a01ab328ff6b4c72cc05291c5c369267"
+    },
+    {
+      "path": "MAP_REPORT.txt",
+      "sha256": "77caea4c1f9771913e7f54ff273676ef5550ac599c79658cb5cd43349e66d8bf"
+    }
+  ],
+  "slices": {
+    "inventory": "bank_inventory_map.json",
+    "question_design": "unit1_question_design_map.json",
+    "Exit": "exit_map.json",
+    "Summative": "summative_map.json",
+    "Practice 1": "practice1_map.json",
+    "WTC": "wtc_map.json",
+    "Seeds": "seed_map.json"
+  },
+  "authorities": {
+    "system_repo": "tnezki/memories",
+    "system_commit": "f3a29a0eaf07c5be2d0328468d1c9cf968991462",
+    "course_repo": "tnezki/algebra",
+    "course_commit": "6d73345cc88fa4fc146ea97a405ebdfad0ff851d",
+    "unit_assessment_plan": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
+    "assessment_plan_index": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
+    "bank_profile": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
+    "pm": "pms_build/bank_map.txt",
+    "question_structure": "_question_structure/QUESTION_STRUCTURE_CORE.md",
+    "exit_evidence_map": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/curriculum/exit_evidence_map.json",
+    "finalization_contract": "Tools/FINALIZE_OUTPUT_CONTRACT.txt"
+  },
+  "finalization": {
+    "status": "PASS",
+    "terminal_signal": "FINALIZATION_QA: PASS",
+    "scope": "JSON/TXT-only Bank Map staging tree; rendered HTML fixer has no applicable files."
+  }
+}
