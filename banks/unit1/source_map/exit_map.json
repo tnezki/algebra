@@ -1,1229 +1,350 @@
 {
-  "schema": "algebra-bank-exit-map/1.0",
+  "schema": "algebra-bank-exit-map/2.0",
   "course": "Algebra 1",
   "unit": 1,
-  "status": "PASS",
-  "records": [
-    {
-      "design_slot_id": "U1-S1.1-EXIT-Q1",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+  "rolling_contract": "Q1-Q2 new current evidence; next section Q3-Q4 fresh parallels of previous Q1-Q2; 1.1 is opening four-question readiness/mastery set.",
+  "sections": {
+    "1.1": [
+      {
+        "slot_id": "U1-EXIT-1.1-Q1",
+        "question_number": 1,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Plot and read ordered pairs.",
+        "supporting_i_cans": [],
+        "evidence_job": "Plot and read ordered pairs.",
+        "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-COORD-PAIR",
+        "role": "opening_readiness",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC01",
-        "source_i_can_index": 1,
-        "text": "Plot and read ordered pairs."
+      {
+        "slot_id": "U1-EXIT-1.1-Q2",
+        "question_number": 2,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Read a graph using its scale.",
+        "supporting_i_cans": [],
+        "evidence_job": "Read a graph accurately using its scale.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-SCALE",
+        "role": "opening_readiness",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "supporting_i_cans": [],
-      "evidence_job": "Plot and read ordered pairs.",
-      "student_action": "Plot supplied ordered pairs and identify the requested point.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "student_constructed_graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "construction_surface",
-          "student_constructed": true
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+      {
+        "slot_id": "U1-EXIT-1.1-Q3",
+        "question_number": 3,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Use the x- and y-axes correctly.",
+        "supporting_i_cans": [],
+        "evidence_job": "Use the x- and y-axes correctly.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG01-AXES",
+        "role": "opening_readiness",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      },
+      {
+        "slot_id": "U1-EXIT-1.1-Q4",
+        "question_number": 4,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Identify and interpret intercepts when they are shown.",
+        "supporting_i_cans": [],
+        "evidence_job": "Identify and interpret intercepts when they are shown.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-INTERCEPT",
+        "role": "opening_readiness",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      }
+    ],
+    "1.2": [
+      {
+        "slot_id": "U1-EXIT-1.2-Q1",
+        "question_number": 1,
+        "primary_mastery_goal": "U1-MG03",
+        "primary_i_can": "Substitute a value into an expression.",
+        "supporting_i_cans": [
+          "Use order of operations correctly."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Substitute a value and use order of operations correctly.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG03-SUBSTITUTE",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      },
+      {
+        "slot_id": "U1-EXIT-1.2-Q2",
+        "question_number": 2,
+        "primary_mastery_goal": "U1-MG03",
+        "primary_i_can": "Evaluate with positive and negative values.",
+        "supporting_i_cans": [
+          "Check whether an answer is reasonable."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+        "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG03-SIGNED",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "opening_new",
-      "family_id": "U1-S1.1-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.1-EXIT-Q2",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      {
+        "slot_id": "U1-EXIT-1.2-Q3",
+        "question_number": 3,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Plot and read ordered pairs.",
+        "supporting_i_cans": [],
+        "evidence_job": "Plot and read ordered pairs.",
+        "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-COORD-PAIR",
+        "role": "reassessment",
+        "source_slot": "1.1-Q1",
+        "fresh_stimulus_required": true
       },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Read a graph accurately using its scale.",
-      "student_action": "Read the plotted point at the specified x-coordinate.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+      {
+        "slot_id": "U1-EXIT-1.2-Q4",
+        "question_number": 4,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Read a graph using its scale.",
+        "supporting_i_cans": [],
+        "evidence_job": "Read a graph accurately using its scale.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-SCALE",
+        "role": "reassessment",
+        "source_slot": "1.1-Q2",
+        "fresh_stimulus_required": true
+      }
+    ],
+    "1.3": [
+      {
+        "slot_id": "U1-EXIT-1.3-Q1",
+        "question_number": 1,
+        "primary_mastery_goal": "U1-MG02",
+        "primary_i_can": "Find slope from a graph.",
+        "supporting_i_cans": [
+          "Find slope from a table."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Find the same rate from a graph and a table.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "mixed",
+        "parallel_family": "U1-EXIT-MG02-GRAPH-TABLE",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      },
+      {
+        "slot_id": "U1-EXIT-1.3-Q2",
+        "question_number": 2,
+        "primary_mastery_goal": "U1-MG02",
+        "primary_i_can": "Find slope from an equation.",
+        "supporting_i_cans": [
+          "Interpret rate of change in context."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+        "evidence_job": "Use an equation to find rate and interpret the rate in context.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "mixed",
+        "parallel_family": "U1-EXIT-MG02-EQ-CONTEXT",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "opening_new",
-      "family_id": "U1-S1.1-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.1-EXIT-Q3",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC02",
-        "source_i_can_index": 2,
-        "text": "Use the x- and y-axes correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use the x- and y-axes correctly.",
-      "student_action": "Read x and y coordinates and connect each to horizontal/vertical position.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+      {
+        "slot_id": "U1-EXIT-1.3-Q3",
+        "question_number": 3,
+        "primary_mastery_goal": "U1-MG03",
+        "primary_i_can": "Substitute a value into an expression.",
+        "supporting_i_cans": [
+          "Use order of operations correctly."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Substitute a value and use order of operations correctly.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG03-SUBSTITUTE",
+        "role": "reassessment",
+        "source_slot": "1.2-Q1",
+        "fresh_stimulus_required": true
+      },
+      {
+        "slot_id": "U1-EXIT-1.3-Q4",
+        "question_number": 4,
+        "primary_mastery_goal": "U1-MG03",
+        "primary_i_can": "Evaluate with positive and negative values.",
+        "supporting_i_cans": [
+          "Check whether an answer is reasonable."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "opening_new",
-      "family_id": "U1-S1.1-EXIT-Q3"
-    },
-    {
-      "design_slot_id": "U1-S1.1-EXIT-Q4",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.1",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Identify and interpret intercepts when they are shown.",
-      "student_action": "Identify the x- and y-intercepts from a coordinate graph.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+        "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG03-SIGNED",
+        "role": "reassessment",
+        "source_slot": "1.2-Q2",
+        "fresh_stimulus_required": true
+      }
+    ],
+    "1.4": [
+      {
+        "slot_id": "U1-EXIT-1.4-Q1",
+        "question_number": 1,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Read a graph using its scale.",
+        "supporting_i_cans": [
+          "Plot and read ordered pairs.",
+          "Use the x- and y-axes correctly."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Read a scaled coordinate graph accurately.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-SCALE",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      },
+      {
+        "slot_id": "U1-EXIT-1.4-Q2",
+        "question_number": 2,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Identify and interpret intercepts when they are shown.",
+        "supporting_i_cans": [
+          "Plot and read ordered pairs.",
+          "Use the x- and y-axes correctly."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+        "evidence_job": "Identify and interpret intercepts from a coordinate graph.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-INTERCEPT",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "opening_new",
-      "family_id": "U1-S1.1-EXIT-Q4"
-    },
-    {
-      "design_slot_id": "U1-S1.2-EXIT-Q1",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC02",
-          "source_i_can_index": 2,
-          "text": "Use order of operations correctly."
-        }
-      ],
-      "evidence_job": "Substitute a value and use order of operations correctly.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+      {
+        "slot_id": "U1-EXIT-1.4-Q3",
+        "question_number": 3,
+        "primary_mastery_goal": "U1-MG02",
+        "primary_i_can": "Find slope from a graph.",
+        "supporting_i_cans": [
+          "Find slope from a table."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Find the same rate from a graph and a table.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "mixed",
+        "parallel_family": "U1-EXIT-MG02-GRAPH-TABLE",
+        "role": "reassessment",
+        "source_slot": "1.3-Q1",
+        "fresh_stimulus_required": true
+      },
+      {
+        "slot_id": "U1-EXIT-1.4-Q4",
+        "question_number": 4,
+        "primary_mastery_goal": "U1-MG02",
+        "primary_i_can": "Find slope from an equation.",
+        "supporting_i_cans": [
+          "Interpret rate of change in context."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.2-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.2-EXIT-Q2",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG03-IC04",
-          "source_i_can_index": 4,
-          "text": "Check whether an answer is reasonable."
-        }
-      ],
-      "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+        "evidence_job": "Use an equation to find rate and interpret the rate in context.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "mixed",
+        "parallel_family": "U1-EXIT-MG02-EQ-CONTEXT",
+        "role": "reassessment",
+        "source_slot": "1.3-Q2",
+        "fresh_stimulus_required": true
+      }
+    ],
+    "1.5": [
+      {
+        "slot_id": "U1-EXIT-1.5-Q1",
+        "question_number": 1,
+        "primary_mastery_goal": "U1-MG04",
+        "primary_i_can": "Find an output from an input.",
+        "supporting_i_cans": [
+          "Use input/output language and ordered pairs."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Use an input-output rule to find an output and record the ordered pair.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "equation",
+        "parallel_family": "U1-EXIT-MG04-OUTPUT-PAIR",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
+      },
+      {
+        "slot_id": "U1-EXIT-1.5-Q2",
+        "question_number": 2,
+        "primary_mastery_goal": "U1-MG04",
+        "primary_i_can": "Find a missing input or output.",
+        "supporting_i_cans": [
+          "Build or extend an input-output table."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+        "evidence_job": "Find a missing input/output and extend the rule in a table.",
+        "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "table",
+        "parallel_family": "U1-EXIT-MG04-MISSING-TABLE",
+        "role": "new_current",
+        "source_slot": null,
+        "fresh_stimulus_required": false
       },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.2-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.2-EXIT-Q3",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC01",
-        "source_i_can_index": 1,
-        "text": "Plot and read ordered pairs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Plot and read ordered pairs.",
-      "student_action": "Plot two points and compare their y-coordinates.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "student_constructed_graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "construction_surface",
-          "student_constructed": true
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
+      {
+        "slot_id": "U1-EXIT-1.5-Q3",
+        "question_number": 3,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Read a graph using its scale.",
+        "supporting_i_cans": [
+          "Plot and read ordered pairs.",
+          "Use the x- and y-axes correctly."
         ],
-        "required": [
-          "preserve evidence target and usable difficulty"
+        "evidence_job": "Read a scaled coordinate graph accurately.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-SCALE",
+        "role": "reassessment",
+        "source_slot": "1.4-Q1",
+        "fresh_stimulus_required": true
+      },
+      {
+        "slot_id": "U1-EXIT-1.5-Q4",
+        "question_number": 4,
+        "primary_mastery_goal": "U1-MG01",
+        "primary_i_can": "Identify and interpret intercepts when they are shown.",
+        "supporting_i_cans": [
+          "Plot and read ordered pairs.",
+          "Use the x- and y-axes correctly."
         ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.1-EXIT-Q1",
-      "carry_forward_from": "U1-S1.1-EXIT-Q1",
-      "family_id": "U1-S1.1-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.2-EXIT-Q4",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Read a graph accurately using its scale.",
-      "student_action": "Read the plotted point at the specified x-coordinate.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.1-EXIT-Q2",
-      "carry_forward_from": "U1-S1.1-EXIT-Q2",
-      "family_id": "U1-S1.1-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.3-EXIT-Q1",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC01",
-        "source_i_can_index": 1,
-        "text": "Find slope from a graph."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC02",
-          "source_i_can_index": 2,
-          "text": "Find slope from a table."
-        }
-      ],
-      "evidence_job": "Find the same rate from a graph and a table.",
-      "student_action": "Find slope from a graphed line.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.3-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.3-EXIT-Q2",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC03",
-        "source_i_can_index": 3,
-        "text": "Find slope from an equation."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG02-IC04",
-          "source_i_can_index": 4,
-          "text": "Find and interpret rate of change from a context."
-        }
-      ],
-      "evidence_job": "Use an equation to find rate and interpret the rate in context.",
-      "student_action": "Compute and interpret a constant rate in context.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.3-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.3-EXIT-Q3",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Substitute a value and use order of operations correctly.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.2-EXIT-Q1",
-      "carry_forward_from": "U1-S1.2-EXIT-Q1",
-      "family_id": "U1-S1.2-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.3-EXIT-Q4",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.3",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate with positive/negative values and check reasonableness.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.2-EXIT-Q2",
-      "carry_forward_from": "U1-S1.2-EXIT-Q2",
-      "family_id": "U1-S1.2-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.4-EXIT-Q1",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC01",
-          "source_i_can_index": 1,
-          "text": "Plot and read ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "Read a scaled coordinate graph accurately.",
-      "student_action": "Read a plotted coordinate accurately from the graph scale.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.4-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.4-EXIT-Q2",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC01",
-          "source_i_can_index": 1,
-          "text": "Plot and read ordered pairs."
-        },
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "Identify and interpret intercepts from a coordinate graph.",
-      "student_action": "Identify the x- and y-intercepts from a coordinate graph.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.4-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.4-EXIT-Q3",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC01",
-        "source_i_can_index": 1,
-        "text": "Find slope from a graph."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Find the same rate from a graph and a table.",
-      "student_action": "Find slope from two visible points on a line.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.3-EXIT-Q1",
-      "carry_forward_from": "U1-S1.3-EXIT-Q1",
-      "family_id": "U1-S1.3-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.4-EXIT-Q4",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG02",
-        "title": "Slope in Four Views",
-        "text": "Find slope or rate of change from a graph, table, equation, or context."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG02-IC03",
-        "source_i_can_index": 3,
-        "text": "Find slope from an equation."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use an equation to find rate and interpret the rate in context.",
-      "student_action": "Compute and interpret a decreasing rate.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.3-EXIT-Q2",
-      "carry_forward_from": "U1-S1.3-EXIT-Q2",
-      "family_id": "U1-S1.3-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.5-EXIT-Q1",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC02",
-        "source_i_can_index": 2,
-        "text": "Use a rule to find an output from an input."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG04-IC01",
-          "source_i_can_index": 1,
-          "text": "Use input/output language and ordered pairs."
-        }
-      ],
-      "evidence_job": "Use an input-output rule to find an output and record the ordered pair.",
-      "student_action": "Use a rule and record the result as an ordered pair.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.5-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.5-EXIT-Q2",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG04",
-        "title": "Input / Output Rules",
-        "text": "Use an input-output rule to find values, ordered pairs, and patterns."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG04-IC03",
-        "source_i_can_index": 3,
-        "text": "Find a missing input or output when enough information is given."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG04-IC04",
-          "source_i_can_index": 4,
-          "text": "Use a rule to build or extend a table."
-        }
-      ],
-      "evidence_job": "Find a missing input/output and extend the rule in a table.",
-      "student_action": "Work backward from an output to find the input.",
-      "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "new_current_mastery",
-      "family_id": "U1-S1.5-EXIT-Q2"
-    },
-    {
-      "design_slot_id": "U1-S1.5-EXIT-Q3",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC03",
-        "source_i_can_index": 3,
-        "text": "Read a graph using its scale."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Read a scaled coordinate graph accurately.",
-      "student_action": "Plot two points and compare their y-coordinates.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "constructed_graph",
-      "representation_mode": "student_constructed_graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "construction_surface",
-          "student_constructed": true
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.4-EXIT-Q1",
-      "carry_forward_from": "U1-S1.4-EXIT-Q1",
-      "family_id": "U1-S1.4-EXIT-Q1"
-    },
-    {
-      "design_slot_id": "U1-S1.5-EXIT-Q4",
-      "destination": "Exit",
-      "unit": 1,
-      "section": "1.5",
-      "stage": "Mastery",
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Identify and interpret intercepts from a coordinate graph.",
-      "student_action": "Read the plotted point at the specified x-coordinate.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "mastery_evidence",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "source_basis": [
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/original/unit1_assessment_plan/unit1_assessment_plan.html",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/assessment_plans/indexes/assessment_plan_index.json",
-        "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/profiles/bank_course_profile.json",
-        "_question_structure/QUESTION_STRUCTURE_CORE.md",
-        "_question_structure/library/Universal_Question_Structure_Library_v2.md"
-      ],
-      "security_role": "official_exit",
-      "slot_role": "reassessment",
-      "reassessment_of": "U1-S1.4-EXIT-Q2",
-      "carry_forward_from": "U1-S1.4-EXIT-Q2",
-      "family_id": "U1-S1.4-EXIT-Q2"
-    }
-  ]
+        "evidence_job": "Identify and interpret intercepts from a coordinate graph.",
+        "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+        "response_mode": "constructed_response",
+        "representation_mode": "graph",
+        "parallel_family": "U1-EXIT-MG01-INTERCEPT",
+        "role": "reassessment",
+        "source_slot": "1.4-Q2",
+        "fresh_stimulus_required": true
+      }
+    ]
+  }
 }

@@ -1,2073 +1,778 @@
 {
-  "schema": "algebra-bank-practice1/1.0",
-  "section": "1.2",
-  "records": [
+  "schema": "algebra-bank-practice-section/2.0",
+  "course": "Algebra 1",
+  "unit": 1,
+  "section_id": "1.2",
+  "title": "Inputs, Outputs, and Functions",
+  "stage_counts": {
+    "Intro": 8,
+    "Review": 8,
+    "Mastery": 8
+  },
+  "questions": [
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-01",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Identify the input and output in a relationship."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Identify the input and output in a relationship.",
-      "student_action": "Identify input and output values.",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use basic function notation.",
+      "evidence_job": "Use basic function notation.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "If f(x)=2x+3, find f(2) and write the corresponding ordered pair.",
+      "student_html": "<p>If f(x)=2x+3, find f(2) and write the corresponding ordered pair.</p>",
+      "answer": "7; (2,7)",
+      "solution": "f(2) is the output for input 2.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-INTRO-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-INTRO-02",
+      "section_id": "1.2",
+      "stage": "Intro",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use the one-output-per-input idea of a function.",
+      "evidence_job": "Use the one-output-per-input idea of a function.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-01",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Identify the input and output.",
-      "student_html": "<p>In the table, what is the input and what is the corresponding output in the row containing input 4?</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>4</td><td>9</td></tr><tr><td>6</td><td>13</td></tr></tbody></table>",
-      "answer": "input 4; output 9",
-      "solution_text": "The row pairs input 4 with output 9.",
-      "solution_html": "<p>The row pairs input 4 with output 9.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "In the table, what is the input and what is the corresponding output in the row containing input 4?"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                1,
-                3
-              ],
-              [
-                4,
-                9
-              ],
-              [
-                6,
-                13
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "input-output identification"
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does this input-output table define a function? Explain.",
+      "student_html": "<p>Does this input-output table define a function? Explain.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>6</td></tr><tr><td>4</td><td>8</td></tr></tbody></table>",
+      "answer": "Yes; each input has exactly one output.",
+      "solution": "Yes; each input has exactly one output.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-03",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Use a rule to find outputs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to find outputs.",
-      "student_action": "Use an input-output rule to compute an output.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-02",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the output.",
-      "student_html": "<p>Use the rule to find the output when the input is 5.</p><div class=\"equation-card\">\\[y=2x+1\\]</div>",
-      "answer": "11",
-      "solution_text": "2(5)+1=11.",
-      "solution_html": "<p>2(5)+1=11.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Use the rule to find the output when the input is 5."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "y=2x+1"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "rule output"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-INTRO-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Write ordered pairs from inputs and outputs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Write ordered pairs from inputs and outputs.",
-      "student_action": "Write table rows as ordered pairs.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "evidence_job": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-03",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Write the ordered pairs.",
-      "student_html": "<p>Write the three rows as ordered pairs.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>-2</td><td>5</td></tr><tr><td>0</td><td>1</td></tr><tr><td>3</td><td>7</td></tr></tbody></table>",
-      "answer": "(-2,5), (0,1), (3,7)",
-      "solution_text": "Each input-output row becomes (input, output).",
-      "solution_html": "<p>Each input-output row becomes (input, output).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Write the three rows as ordered pairs."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                -2,
-                5
-              ],
-              [
-                0,
-                1
-              ],
-              [
-                3,
-                7
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "ordered pairs"
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Which basic family best matches the table: linear, quadratic, exponential, or absolute value?",
+      "student_html": "<p>Which basic family best matches the table: linear, quadratic, exponential, or absolute value?</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>9</td></tr></tbody></table>",
+      "answer": "quadratic",
+      "solution": "The outputs follow squared inputs.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-04",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Decide whether each input has only one output."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether each input has only one output.",
-      "student_action": "Check the function condition.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use a representation as evidence for a function-family claim.",
+      "evidence_job": "Use a representation as evidence for a function-family claim.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-04",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether it is a function.",
-      "student_html": "<p>Is the relation a function? Explain.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>1</td><td>9</td></tr></tbody></table>",
-      "answer": "No",
-      "solution_text": "Input 1 is paired with two different outputs, 4 and 9.",
-      "solution_html": "<p>Input 1 is paired with two different outputs, 4 and 9.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Is the relation a function? Explain."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                1,
-                4
-              ],
-              [
-                2,
-                6
-              ],
-              [
-                1,
-                9
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "function condition"
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-4-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Name the most likely function family and cite a pattern in the table as evidence.",
+      "student_html": "<p>Name the most likely function family and cite a pattern in the table as evidence.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-2</td><td>5</td></tr><tr><td>-1</td><td>3</td></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr></tbody></table>",
+      "answer": "absolute value; equal outputs at opposite inputs and constant distance-based growth.",
+      "solution": "absolute value; equal outputs at opposite inputs and constant distance-based growth.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-05",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC01",
-        "source_i_can_index": 1,
-        "text": "Identify the input and output in a relationship."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Identify the input and output in a relationship.",
-      "student_action": "Identify input/output roles in a context.",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use basic function notation.",
+      "evidence_job": "Use basic function notation.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-05",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Identify input and output.",
-      "student_html": "<p>A rule takes a number of tickets purchased as input and total cost as output. If 3 tickets cost $24, name the input and output for this example.</p>",
-      "answer": "input 3 tickets; output $24",
-      "solution_text": "Tickets purchased is the input quantity; total cost is the output quantity.",
-      "solution_html": "<p>Tickets purchased is the input quantity; total cost is the output quantity.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A rule takes a number of tickets purchased as input and total cost as output. If 3 tickets cost $24, name the input and output for this example."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "context input-output"
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "If f(x)=3x+3, find f(3) and write the corresponding ordered pair.",
+      "student_html": "<p>If f(x)=3x+3, find f(3) and write the corresponding ordered pair.</p>",
+      "answer": "12; (3,12)",
+      "solution": "f(3) is the output for input 3.",
+      "asset": null,
+      "params": {},
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-INTRO-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-06",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC02",
-        "source_i_can_index": 2,
-        "text": "Use a rule to find outputs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a rule to find outputs.",
-      "student_action": "Evaluate a simple rule.",
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use the one-output-per-input idea of a function.",
+      "evidence_job": "Use the one-output-per-input idea of a function.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-06",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Find the output.",
-      "student_html": "<p>A machine follows the rule output = input - 6. Find the output for input -2.</p>",
-      "answer": "-8",
-      "solution_text": "-2-6=-8.",
-      "solution_html": "<p>-2-6=-8.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A machine follows the rule output = input - 6. Find the output for input -2."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "verbal rule output"
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does this input-output table define a function? Explain.",
+      "student_html": "<p>Does this input-output table define a function? Explain.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>6</td></tr><tr><td>3</td><td>7</td></tr></tbody></table>",
+      "answer": "No; input 3 has two outputs.",
+      "solution": "No; input 3 has two outputs.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-07",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC03",
-        "source_i_can_index": 3,
-        "text": "Write ordered pairs from inputs and outputs."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Write ordered pairs from inputs and outputs.",
-      "student_action": "Write an input-output pair.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-07",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Write the ordered pair.",
-      "student_html": "<p>Input 7 produces output -1. Write the ordered pair.</p>",
-      "answer": "(7, -1)",
-      "solution_text": "Ordered pairs are written (input, output).",
-      "solution_html": "<p>Ordered pairs are written (input, output).</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Input 7 produces output -1. Write the ordered pair."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "single ordered pair"
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "evidence_job": "Recognize linear, quadratic, exponential, and absolute-value patterns.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Which basic family best matches the table: linear, quadratic, exponential, or absolute value?",
+      "student_html": "<p>Which basic family best matches the table: linear, quadratic, exponential, or absolute value?</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>8</td></tr></tbody></table>",
+      "answer": "exponential",
+      "solution": "The outputs multiply by 2 for each +1 in x.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-INTRO-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-INTRO-08",
+      "section_id": "1.2",
       "stage": "Intro",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U3-MG02",
-        "title": "Understand Functions and Families",
-        "text": "Use function notation and key features to describe functions and recognize common function families."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-S1.2-INTRO-IC04",
-        "source_i_can_index": 4,
-        "text": "Decide whether each input has only one output."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether each input has only one output.",
-      "student_action": "Explain repeated-output behavior.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "supported_intro",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "intro",
-      "item_id": "U1-S1.2-P1-INTRO-08",
-      "source_map_record_id": "U1-S1.2-P1-INTRO-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether it is a function.",
-      "student_html": "<p>Inputs 2 and 5 both produce output 8, and every input has exactly one output. Is the relation a function? Explain.</p>",
-      "answer": "Yes",
-      "solution_text": "Repeated outputs are allowed; each input still has exactly one output.",
-      "solution_html": "<p>Repeated outputs are allowed; each input still has exactly one output.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Inputs 2 and 5 both produce output 8, and every input has exactly one output. Is the relation a function? Explain."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "repeated output function"
+      "part": null,
+      "primary_mastery_goal": "U3-MG02",
+      "primary_i_can": "Use a representation as evidence for a function-family claim.",
+      "evidence_job": "Use a representation as evidence for a function-family claim.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "intro",
+      "security_role": "practice_public",
+      "question_family_id": "U3-MG02-4-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Name the most likely function family and cite a pattern in the table as evidence.",
+      "student_html": "<p>Name the most likely function family and cite a pattern in the table as evidence.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>6</td></tr><tr><td>2</td><td>12</td></tr><tr><td>3</td><td>24</td></tr></tbody></table>",
+      "answer": "exponential; outputs multiply by 2.",
+      "solution": "exponential; outputs multiply by 2.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-INTRO-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Substitute a value for a variable and evaluate.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-01",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Decide whether a table represents a function.",
+      "evidence_job": "Decide whether a table represents a function.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-01",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Substitute x = 4 into the expression and evaluate.",
-      "student_html": "<p>Substitute \\(x=4\\) into the expression and evaluate.</p><div class=\"equation-card\">\\[3x+5\\]</div>",
-      "answer": "17",
-      "solution_text": "Substitute the given value(s) (x = 4) and follow order of operations to get 17.",
-      "solution_html": "<p>Substitute the given value(s) (x = 4) and follow order of operations to get 17.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Substitute x = 4 into the expression and evaluate."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "3x+5"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 1 with x = 4"
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does the table represent a function? Explain using inputs and outputs.",
+      "student_html": "<p>Does the table represent a function? Explain using inputs and outputs.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr><tr><td>4</td><td>9</td></tr></tbody></table>",
+      "answer": "Yes; every input has exactly one output.",
+      "solution": "Yes; every input has exactly one output.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate expressions with positive and negative numbers.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-02",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Decide whether ordered pairs or a mapping represent a function.",
+      "evidence_job": "Decide whether ordered pairs or a mapping represent a function.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-02",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Substitute a = -2 and b = 5, then evaluate.",
-      "student_html": "<p>Substitute \\(a=-2\\) and \\(b=5\\), then evaluate.</p><div class=\"equation-card\">\\[2a-3b\\]</div>",
-      "answer": "-19",
-      "solution_text": "Substitute the given value(s) (a = -2, b = 5) and follow order of operations to get -19.",
-      "solution_html": "<p>Substitute the given value(s) (a = -2, b = 5) and follow order of operations to get -19.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Substitute a = -2 and b = 5, then evaluate."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "2a-3b"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 2 with a = -2, b = 5"
+      "response_mode": "constructed_response",
+      "representation_mode": "ordered_pairs",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Do the ordered pairs (1,4), (2,5), (3,6) represent a function? Explain.",
+      "student_html": "<p>Do the ordered pairs (1,4), (2,5), (3,6) represent a function? Explain.</p>",
+      "answer": "Yes; no input is paired with more than one output.",
+      "solution": "Yes; no input is paired with more than one output.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate expressions with positive and negative numbers.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-03",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate the expression for m = -3.",
-      "student_html": "<p>Evaluate the expression for \\(m=-3\\).</p><div class=\"equation-card\">\\[-4m+7\\]</div>",
-      "answer": "19",
-      "solution_text": "Substitute the given value(s) (m = -3) and follow order of operations to get 19.",
-      "solution_html": "<p>Substitute the given value(s) (m = -3) and follow order of operations to get 19.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate the expression for m = -3."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "-4m+7"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 3 with m = -3"
+      "id": "U1-P-1.2-REVIEW-03",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Use a graph to decide whether a relationship is a function.",
+      "evidence_job": "Use a graph to decide whether a relationship is a function.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "graph",
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does the graphed relationship represent a function? Explain using the one-output-per-input idea.",
+      "student_html": "<p>Does the graphed relationship represent a function? Explain using the one-output-per-input idea.</p><img class=\"graph\" src=\"../figures/u1sp_20260907_practice_coord_a.png\" alt=\"Coordinate graph\">",
+      "answer": "Yes.",
+      "solution": "Every vertical input position meets the line at only one output, so each input has one output.",
+      "asset": "u1sp_20260907_practice_coord_a.png",
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Use order of operations correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use substitution and order of operations correctly.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-04",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Explain why each input must have only one output.",
+      "evidence_job": "Explain why each input must have only one output.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-04",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for n = -1 using order of operations.",
-      "student_html": "<p>Evaluate for \\(n=-1\\) using order of operations.</p><div class=\"equation-card\">\\[6-2(3+n)\\]</div>",
-      "answer": "2",
-      "solution_text": "Substitute the given value(s) (n = -1) and follow order of operations to get 2.",
-      "solution_html": "<p>Substitute the given value(s) (n = -1) and follow order of operations to get 2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for n = -1 using order of operations."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "6-2(3+n)"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 4 with n = -1"
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-4-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Explain whether the relationship is a function. Focus on whether repeating an input is a problem by itself or only when it has different outputs.",
+      "student_html": "<p>Explain whether the relationship is a function. Focus on whether repeating an input is a problem by itself or only when it has different outputs.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>2</td><td>6</td></tr></tbody></table>",
+      "answer": "It is a function.",
+      "solution": "Repeated identical pairs do not create two outputs.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Substitute a value for a variable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Substitute a value for a variable and evaluate.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-05",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Decide whether a table represents a function.",
+      "evidence_job": "Decide whether a table represents a function.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-05",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for p = -4.",
-      "student_html": "<p>Evaluate for \\(p=-4\\).</p><div class=\"equation-card\">\\[5p-2p+9\\]</div>",
-      "answer": "-3",
-      "solution_text": "Substitute the given value(s) (p = -4) and follow order of operations to get -3.",
-      "solution_html": "<p>Substitute the given value(s) (p = -4) and follow order of operations to get -3.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for p = -4."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "5p-2p+9"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 5 with p = -4"
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does the table represent a function? Explain using inputs and outputs.",
+      "student_html": "<p>Does the table represent a function? Explain using inputs and outputs.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>7</td></tr><tr><td>3</td><td>8</td></tr></tbody></table>",
+      "answer": "No; input 3 has two outputs.",
+      "solution": "No; input 3 has two outputs.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Use order of operations correctly."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use substitution and order of operations correctly.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-06",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Decide whether ordered pairs or a mapping represent a function.",
+      "evidence_job": "Decide whether ordered pairs or a mapping represent a function.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-06",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for q = 5.",
-      "student_html": "<p>Evaluate for \\(q=5\\).</p><div class=\"equation-card\">\\[-3(q-2)+4\\]</div>",
-      "answer": "-5",
-      "solution_text": "Substitute the given value(s) (q = 5) and follow order of operations to get -5.",
-      "solution_html": "<p>Substitute the given value(s) (q = 5) and follow order of operations to get -5.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for q = 5."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "-3(q-2)+4"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 6 with q = 5"
+      "response_mode": "constructed_response",
+      "representation_mode": "ordered_pairs",
+      "representation_route": "direct_html",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Do the ordered pairs (1,4), (2,5), (1,6) represent a function? Explain.",
+      "student_html": "<p>Do the ordered pairs (1,4), (2,5), (1,6) represent a function? Explain.</p>",
+      "answer": "No; input 1 has two outputs.",
+      "solution": "No; input 1 has two outputs.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Evaluate expressions with positive and negative numbers."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate expressions with positive and negative numbers.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "id": "U1-P-1.2-REVIEW-07",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Use a graph to decide whether a relationship is a function.",
+      "evidence_job": "Use a graph to decide whether a relationship is a function.",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "graph",
+      "representation_route": "Tools/~graph_tool_v12.py",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-3-PRACTICE",
+      "task_architecture": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Does the graphed relationship represent a function? Explain using the one-output-per-input idea.",
+      "student_html": "<p>Does the graphed relationship represent a function? Explain using the one-output-per-input idea.</p><img class=\"graph\" src=\"../figures/u1sp_20260907_practice_coord_b.png\" alt=\"Coordinate graph\">",
+      "answer": "Yes.",
+      "solution": "Every vertical input position meets the line at only one output, so each input has one output.",
+      "asset": "u1sp_20260907_practice_coord_b.png",
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-REVIEW-08",
+      "section_id": "1.2",
+      "stage": "Review",
+      "part": null,
+      "primary_mastery_goal": "U2-MG03",
+      "primary_i_can": "Explain why each input must have only one output.",
+      "evidence_job": "Explain why each input must have only one output.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
+      "representation_mode": "table",
+      "representation_route": "semantic_html_table",
+      "difficulty_intent": "review",
+      "security_role": "practice_public",
+      "question_family_id": "U2-MG03-4-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Explain whether the relationship is a function. Focus on whether repeating an input is a problem by itself or only when it has different outputs.",
+      "student_html": "<p>Explain whether the relationship is a function. Focus on whether repeating an input is a problem by itself or only when it has different outputs.</p><table class=\"data-table\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>6</td></tr><tr><td>2</td><td>7</td></tr></tbody></table>",
+      "answer": "It is not a function.",
+      "solution": "Input 2 is paired with outputs 6 and 7.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-REVIEW-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-MASTERY-01",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Substitute a value into an expression.",
+      "evidence_job": "Substitute a value into an expression.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate 2x + 7 when x = -2.",
+      "student_html": "<p>Evaluate 2x + 7 when x = -2.</p>",
+      "answer": "3",
+      "solution": "Substitute x=-2: 2(-2)+7=3.",
+      "asset": null,
+      "params": {
+        "x": -2,
+        "value": 3
       },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-07",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for r = -5 and s = 4.",
-      "student_html": "<p>Evaluate for \\(r=-5\\) and \\(s=4\\).</p><div class=\"equation-card\">\\[2r+3s-1\\]</div>",
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-01-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-MASTERY-02",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Use order of operations correctly.",
+      "evidence_job": "Use order of operations correctly.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate 3(x + 1)² - 4 when x = 2.",
+      "student_html": "<p>Evaluate 3(x + 1)² - 4 when x = 2.</p>",
+      "answer": "23",
+      "solution": "Parentheses first, then exponent, multiplication, subtraction: 23.",
+      "asset": null,
+      "params": {
+        "x": 2,
+        "value": 23
+      },
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-02-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-MASTERY-03",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Evaluate with positive and negative values.",
+      "evidence_job": "Evaluate with positive and negative values.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-3-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate -2a + 3b when a = -3 and b = -2.",
+      "student_html": "<p>Evaluate -2a + 3b when a = -3 and b = -2.</p>",
+      "answer": "0",
+      "solution": "-2(-3)+3(-2)=0.",
+      "asset": null,
+      "params": {
+        "a": -3,
+        "b": -2,
+        "value": 0
+      },
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-03-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-MASTERY-04",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Check whether an answer is reasonable.",
+      "evidence_job": "Check whether an answer is reasonable.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-4-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A student evaluates x² - 3x at x = -2 and gets -2. Find the correct value and explain the likely sign error.",
+      "student_html": "<p>A student evaluates x² - 3x at x = -2 and gets -2. Find the correct value and explain the likely sign error.</p>",
+      "answer": "10",
+      "solution": "x²-3x = (-2)²-3(-2)=10. The product -3(-2) is positive, not negative.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-MASTERY-04-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
+    },
+    {
+      "id": "U1-P-1.2-MASTERY-05",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Substitute a value into an expression.",
+      "evidence_job": "Substitute a value into an expression.",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-1-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate 2x + 7 when x = -3.",
+      "student_html": "<p>Evaluate 2x + 7 when x = -3.</p>",
       "answer": "1",
-      "solution_text": "Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.",
-      "solution_html": "<p>Substitute the given value(s) (r = -5, s = 4) and follow order of operations to get 1.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for r = -5 and s = 4."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "2r+3s-1"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
+      "solution": "Substitute x=-3: 2(-3)+7=1.",
+      "asset": null,
+      "params": {
+        "x": -3,
+        "value": 1
       },
-      "instantiation_summary": "expression 7 with r = -5, s = 4"
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-05-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-MASTERY-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
+      "id": "U1-P-1.2-MASTERY-06",
+      "section_id": "1.2",
       "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG03",
-        "title": "Evaluate Expressions",
-        "text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG03-IC04",
-        "source_i_can_index": 4,
-        "text": "Check whether an answer is reasonable."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Evaluate an expression and check whether the result is reasonable.",
-      "student_action": "Substitute the given value(s) and evaluate accurately.",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Use order of operations correctly.",
+      "evidence_job": "Use order of operations correctly.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
+      "response_mode": "constructed_response",
       "representation_mode": "equation",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "mathjax_equation"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-2-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate 3(x + 1)² - 4 when x = 3.",
+      "student_html": "<p>Evaluate 3(x + 1)² - 4 when x = 3.</p>",
+      "answer": "44",
+      "solution": "Parentheses first, then exponent, multiplication, subtraction: 44.",
+      "asset": null,
+      "params": {
+        "x": 3,
+        "value": 44
       },
-      "security_role": "formative_practice",
-      "slot_role": "mastery",
-      "item_id": "U1-S1.2-P1-MASTERY-08",
-      "source_map_record_id": "U1-S1.2-P1-MASTERY-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable.",
-      "student_html": "<p>Evaluate for \\(t=7\\) and decide whether a positive answer would be reasonable.</p><div class=\"equation-card\">\\[4-2t\\]</div>",
-      "answer": "-10",
-      "solution_text": "Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.",
-      "solution_html": "<p>Substitute t = 7: 4 - 2(7) = 4 - 14 = -10. A positive result is not reasonable because 14 is being subtracted from 4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Evaluate for t = 7 and decide whether a positive answer would be reasonable."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "4-2t"
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "expression 8 with t = 7"
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-06-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-01",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Decide whether a table is a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether a table is a function.",
-      "student_action": "Check each input in a table for exactly one output.",
+      "id": "U1-P-1.2-MASTERY-07",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Evaluate with positive and negative values.",
+      "evidence_job": "Evaluate with positive and negative values.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-3-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "Evaluate -2a + 3b when a = -4 and b = -1.",
+      "student_html": "<p>Evaluate -2a + 3b when a = -4 and b = -1.</p>",
+      "answer": "5",
+      "solution": "-2(-4)+3(-1)=5.",
+      "asset": null,
+      "params": {
+        "a": -4,
+        "b": -1,
+        "value": 5
       },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-01",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-01",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the table is a function.",
-      "student_html": "<p>Is this relation a function? Explain briefly.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>7</td></tr><tr><td>4</td><td>7</td></tr></tbody></table>",
-      "answer": "Yes",
-      "solution_text": "Each input appears once and has exactly one output; repeated outputs are allowed.",
-      "solution_html": "<p>Each input appears once and has exactly one output; repeated outputs are allowed.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Is this relation a function? Explain briefly."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                1,
-                4
-              ],
-              [
-                2,
-                4
-              ],
-              [
-                3,
-                7
-              ],
-              [
-                4,
-                7
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "function table yes"
+      "dok": 1,
+      "bloom": "Apply",
+      "stimulus_id": "U1-P-1.2-MASTERY-07-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     },
     {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Decide whether ordered pairs or a mapping are a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether ordered pairs or a mapping are a function.",
-      "student_action": "Check ordered pairs for repeated inputs with different outputs.",
+      "id": "U1-P-1.2-MASTERY-08",
+      "section_id": "1.2",
+      "stage": "Mastery",
+      "part": null,
+      "primary_mastery_goal": "U1-MG03",
+      "primary_i_can": "Check whether an answer is reasonable.",
+      "evidence_job": "Check whether an answer is reasonable.",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-02",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-02",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the ordered pairs are a function.",
-      "student_html": "<p>Is this set of ordered pairs a function? Explain.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>1</td></tr><tr><td>2</td><td>-4</td></tr><tr><td>6</td><td>0</td></tr></tbody></table>",
-      "answer": "No",
-      "solution_text": "Input 2 has two outputs, 5 and -4.",
-      "solution_html": "<p>Input 2 has two outputs, 5 and -4.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Is this set of ordered pairs a function? Explain."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                2,
-                5
-              ],
-              [
-                3,
-                1
-              ],
-              [
-                2,
-                -4
-              ],
-              [
-                6,
-                0
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "function pairs no"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-03",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Use a graph to decide whether each input has only one output."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a graph to decide whether each input has only one output.",
-      "student_action": "Use plotted points to check whether an x-value has multiple y-values.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-03",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-03",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the graph is a function.",
-      "student_html": "<p>Do the plotted points represent a function? Explain.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5bd598d25f939403.png\" alt=\"Graph\"></div>",
-      "answer": "Yes",
-      "solution_text": "No x-coordinate is repeated with a different y-coordinate.",
-      "solution_html": "<p>No x-coordinate is repeated with a different y-coordinate.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Do the plotted points represent a function? Explain."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -10,
-              "y_max": 10
-            },
-            "points": [
-              [
-                -4,
-                2
-              ],
-              [
-                -1,
-                5
-              ],
-              [
-                3,
-                -2
-              ],
-              [
-                6,
-                1
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_5bd598d25f939403.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": [
-          "figures/graph_5bd598d25f939403.png"
-        ]
-      },
-      "instantiation_summary": "function graph yes"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-04",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC04",
-        "source_i_can_index": 4,
-        "text": "Explain why a relationship is or is not a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Explain why a relationship is or is not a function.",
-      "student_action": "State the function rule using input-output language.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-04",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-04",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Explain whether it is a function.",
-      "student_html": "<p>A relation assigns the input 7 to outputs 2 and 9. Is the relation a function? Explain.</p>",
-      "answer": "No",
-      "solution_text": "A function cannot assign one input to two different outputs.",
-      "solution_html": "<p>A function cannot assign one input to two different outputs.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A relation assigns the input 7 to outputs 2 and 9. Is the relation a function? Explain."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "function verbal no"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-05",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC01",
-        "source_i_can_index": 1,
-        "text": "Decide whether a table is a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether a table is a function.",
-      "student_action": "Check a table with a repeated output.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-05",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-05",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the table is a function.",
-      "student_html": "<p>Is the table a function? Explain.</p><table class=\"values\"><thead><tr><th>input</th><th>output</th></tr></thead><tbody><tr><td>-2</td><td>1</td></tr><tr><td>0</td><td>3</td></tr><tr><td>4</td><td>3</td></tr><tr><td>7</td><td>8</td></tr></tbody></table>",
-      "answer": "Yes",
-      "solution_text": "Different inputs may share the same output; each input still has only one output.",
-      "solution_html": "<p>Different inputs may share the same output; each input still has only one output.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Is the table a function? Explain."
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "input",
-              "output"
-            ],
-            "rows": [
-              [
-                -2,
-                1
-              ],
-              [
-                0,
-                3
-              ],
-              [
-                4,
-                3
-              ],
-              [
-                7,
-                8
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "repeated output allowed"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC02",
-        "source_i_can_index": 2,
-        "text": "Decide whether ordered pairs or a mapping are a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Decide whether ordered pairs or a mapping are a function.",
-      "student_action": "Check ordered pairs with a repeated input.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "table",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "semantic_html_table"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-06",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-06",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the relation is a function.",
-      "student_html": "<p>Is the relation a function?</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-1</td><td>0</td></tr><tr><td>2</td><td>5</td></tr><tr><td>5</td><td>6</td></tr><tr><td>2</td><td>5</td></tr></tbody></table>",
-      "answer": "Yes",
-      "solution_text": "The repeated input 2 is paired with the same output 5, so it still has only one output value.",
-      "solution_html": "<p>The repeated input 2 is paired with the same output 5, so it still has only one output value.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Is the relation a function?"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                -1,
-                0
-              ],
-              [
-                2,
-                5
-              ],
-              [
-                5,
-                6
-              ],
-              [
-                2,
-                5
-              ]
-            ]
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "duplicate pair function"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC03",
-        "source_i_can_index": 3,
-        "text": "Use a graph to decide whether each input has only one output."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Use a graph to decide whether each input has only one output.",
-      "student_action": "Identify a vertical alignment that violates function behavior.",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "type": "registered_graph_tool",
-          "semantic_mode": "algebra_coordinate"
-        }
-      ],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-07",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-07",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Decide whether the graph is a function.",
-      "student_html": "<p>Do the plotted points represent a function? Explain.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_0eea8d4d995a9803.png\" alt=\"Graph\"></div>",
-      "answer": "No",
-      "solution_text": "At x=1 there are two different outputs, 4 and -2.",
-      "solution_html": "<p>At x=1 there are two different outputs, 4 and -2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Do the plotted points represent a function? Explain."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "algebra_coordinate",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -10,
-              "y_max": 10
-            },
-            "points": [
-              [
-                -3,
-                1
-              ],
-              [
-                1,
-                4
-              ],
-              [
-                1,
-                -2
-              ],
-              [
-                5,
-                0
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_0eea8d4d995a9803.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": [
-          "figures/graph_0eea8d4d995a9803.png"
-        ]
-      },
-      "instantiation_summary": "function graph no"
-    },
-    {
-      "design_slot_id": "U1-S1.2-P1-REVIEW-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.2",
-      "stage": "Review",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U2-MG03",
-        "title": "Function or Not a Function",
-        "text": "Use inputs and outputs to decide whether a relationship is a function."
-      },
-      "primary_i_can": {
-        "i_can_id": "U2-MG03-IC04",
-        "source_i_can_index": 4,
-        "text": "Explain why a relationship is or is not a function."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "Explain why a relationship is or is not a function.",
-      "student_action": "Explain a function decision from input-output behavior.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short_constructed_response",
-      "representation_mode": "prose",
-      "representation_need": "none",
-      "representation_routes": [],
-      "difficulty_intent": "review_retrieval",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "representation",
-          "context",
-          "signs",
-          "scale"
-        ],
-        "required": [
-          "preserve evidence target and usable difficulty"
-        ],
-        "forbidden": [
-          "change goal identity",
-          "answer leakage",
-          "cosmetic noun-only cloning"
-        ]
-      },
-      "security_role": "formative_practice",
-      "slot_role": "review",
-      "item_id": "U1-S1.2-P1-REVIEW-08",
-      "source_map_record_id": "U1-S1.2-P1-REVIEW-08",
-      "accepted_map_fingerprint": "596b64ceac90f8b60de430fe3838464b83237cf141c39aa1b35a929abc2d93cb",
-      "student_text": "Explain whether the relation is a function.",
-      "student_html": "<p>Every student ID in a school database is paired with exactly one graduation year. Can this relation be modeled as a function from student ID to graduation year? Explain.</p>",
-      "answer": "Yes",
-      "solution_text": "Each student ID has exactly one output, a graduation year.",
-      "solution_html": "<p>Each student ID has exactly one output, a graduation year.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "Every student ID in a school database is paired with exactly one graduation year. Can this relation be modeled as a function from student ID to graduation year? Explain."
-          }
-        }
-      ],
-      "representation_data": {},
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.8.0",
-        "graph_files": []
-      },
-      "instantiation_summary": "function context yes"
+      "response_mode": "constructed_response",
+      "representation_mode": "equation",
+      "representation_route": "direct_html",
+      "difficulty_intent": "mastery",
+      "security_role": "practice_public",
+      "question_family_id": "U1-MG03-4-PRACTICE",
+      "task_architecture": "PROC-DIRECT-EXECUTE-01",
+      "variation_description": "Vary values, representation details, or context while preserving the same evidence job.",
+      "prompt": "A student evaluates x² - 3x at x = -3 and gets 0. Find the correct value and explain the likely sign error.",
+      "student_html": "<p>A student evaluates x² - 3x at x = -3 and gets 0. Find the correct value and explain the likely sign error.</p>",
+      "answer": "18",
+      "solution": "x²-3x = (-3)²-3(-3)=18. The product -3(-3) is positive, not negative.",
+      "asset": null,
+      "params": {},
+      "dok": 2,
+      "bloom": "Analyze",
+      "stimulus_id": "U1-P-1.2-MASTERY-08-STIM",
+      "verification": {
+        "status": "PASS",
+        "method": "deterministic independent recomputation or direct representation check"
+      }
     }
   ]
 }
