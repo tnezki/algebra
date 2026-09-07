@@ -1,0 +1,60 @@
+{
+  "schema": "algebra-bank-inventory-map/3a.1",
+  "course": "Algebra 1",
+  "unit": 1,
+  "status": "PASS",
+  "canonical_destinations": [
+    {
+      "destination": "Exit",
+      "status": "canonical",
+      "mapped_units": "5 official tickets",
+      "mapped_finished_question_slots": 20,
+      "slice": "exit_map.json"
+    },
+    {
+      "destination": "Summative",
+      "status": "canonical_secure",
+      "mapped_units": "6 forms",
+      "mapped_finished_question_slots": 48,
+      "slice": "summative_map.json"
+    },
+    {
+      "destination": "Practice 1",
+      "status": "canonical",
+      "mapped_units": "5 section sets × 24",
+      "mapped_finished_question_slots": 120,
+      "slice": "practice1_map.json"
+    },
+    {
+      "destination": "WTC",
+      "status": "canonical",
+      "mapped_units": "5 shared-stimulus routines × 4 parts",
+      "mapped_finished_question_slots": 20,
+      "slice": "wtc_map.json"
+    },
+    {
+      "destination": "Seeds",
+      "status": "canonical_when_useful",
+      "mapped_units": "6 approved durable seeds",
+      "mapped_seed_records": 6,
+      "slice": "seed_map.json"
+    }
+  ],
+  "finished_question_design_slot_total": 208,
+  "seed_record_total": 6,
+  "explicitly_not_bank_inventory": [
+    "Extra Practice",
+    "CYU",
+    "Practice Set 2",
+    "Practice Set 3",
+    "fixed Notes Example/YTI pairs",
+    "finished Warm-Up questions",
+    "legacy 139-per-section inventory"
+  ],
+  "downstream_generation_notes": {
+    "Extra Practice": "Practice build",
+    "CYU": "Practice build",
+    "Notes Examples/YTIs": "Notes build",
+    "Warm-Up questions": "Warm-Up build from Framework progression map"
+  }
+}
