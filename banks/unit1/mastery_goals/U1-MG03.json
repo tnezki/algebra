@@ -1,0 +1,641 @@
+{
+  "schema_version": "family-bank/1.0",
+  "unit": 1,
+  "mastery_goal": {
+    "goal_id": "U1-MG03",
+    "title": "Evaluate Expressions",
+    "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+  },
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG03-IC01",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Substitute a value for a variable.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC01-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Direct Single-Variable Substitution",
+          "family_purpose": "Directly substitute a given value and evaluate.",
+          "evidence_job": "substitute a value for a variable",
+          "student_action": "Replace the variable with the given number and evaluate.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given expression + value -> produced numeric value"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "vary operation mix",
+            "vary positive/negative inputs",
+            "include coefficients of ±1 or fractions when appropriate"
+          ],
+          "forbidden_variations": [
+            "turning the task into solving for x",
+            "changing variable letter only"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core substitution evidence.",
+          "avoid_uses": "Avoid unnecessary context for a simple direct target.",
+          "fresh_instance_rule": "Create a new instance that preserves the Direct Single-Variable Substitution evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(4x-7\\) when \\(x=6\\).</p><div class=\"response-surface\">Value: ______</div>",
+            "answer": "17",
+            "solution": "Substitute 6: 4(6)-7=24-7=17.",
+            "scoring_guidance": "1 point: 17."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC01-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Substitute into a Context Formula",
+          "family_purpose": "Apply substitution to a formula with stated quantity meaning.",
+          "evidence_job": "use substitution in a formula",
+          "student_action": "Insert a given contextual value into a formula and report the result with units.",
+          "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context formula",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given formula + context value -> produced quantity"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "vary familiar formulas",
+            "vary decimal or negative values only when context permits",
+            "ask students to show substitution line"
+          ],
+          "forbidden_variations": [
+            "formulas requiring content knowledge beyond the stated rule",
+            "contexts that obscure substitution"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Notes Example"
+          ],
+          "best_use": "Natural application of substitution.",
+          "avoid_uses": "Avoid formulas whose units or meaning create a second major target.",
+          "fresh_instance_rule": "Create a new instance that preserves the Substitute into a Context Formula evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>The perimeter of a square is \\(P=4s\\). Find the perimeter when \\(s=7.5\\) cm.</p><div class=\"response-surface\">Perimeter: ______</div>",
+            "answer": "30 cm",
+            "solution": "Substitute s=7.5: P=4(7.5)=30 cm.",
+            "scoring_guidance": "2 points: 30 and correct units."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC01-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Diagnose Missing Parentheses with a Negative",
+          "family_purpose": "Expose the need to substitute the entire negative value.",
+          "evidence_job": "diagnose a substitution-notation error",
+          "student_action": "Correct a worked substitution where a negative value was not grouped.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked solution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given expression + negative value + incorrect work -> produced diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "vary negative substitutions into powers/products",
+            "vary whether the error changes sign or operation",
+            "include multiple variables sparingly"
+          ],
+          "forbidden_variations": [
+            "errors that are only arithmetic slips",
+            "using a positive input where parentheses issue disappears"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Strong check on faithful substitution of signed values.",
+          "avoid_uses": "Avoid if exponent rules have not been introduced sufficiently.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose Missing Parentheses with a Negative evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(x^2+3\\) when \\(x=-4\\). A student writes \\(-4^2+3=-16+3=-13\\).</p><p>Explain the error and give the correct value.</p><div class=\"response-surface\">Diagnosis:</div>",
+            "answer": "19",
+            "solution": "Substitute with parentheses: (-4)^2+3=16+3=19. The negative value is the whole base.",
+            "scoring_guidance": "2 points: parentheses/base explanation; 19."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC02",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Use order of operations correctly.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC02-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Evaluate a Mixed-Operation Expression",
+          "family_purpose": "Directly execute order of operations.",
+          "evidence_job": "use order of operations correctly",
+          "student_action": "Evaluate an expression containing multiple operation levels.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given numerical expression -> produced value"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "vary grouping, exponents, multiplication/division, addition/subtraction",
+            "vary signed numbers",
+            "keep arithmetic reasonable"
+          ],
+          "forbidden_variations": [
+            "expressions where operation order does not affect the result",
+            "fake multistep complexity"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core procedural evidence.",
+          "avoid_uses": "Avoid context when the target is purely order of operations.",
+          "fresh_instance_rule": "Create a new instance that preserves the Evaluate a Mixed-Operation Expression evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(18-3(4)+2^3\\).</p><div class=\"response-surface\">Value: ______</div>",
+            "answer": "14",
+            "solution": "Exponent: 2^3=8; multiplication: 3(4)=12; then 18-12+8=14.",
+            "scoring_guidance": "1 point: 14; work may be used to verify process."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC02-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Evaluate a Grouped Fraction Expression",
+          "family_purpose": "Use grouping in numerator and denominator so operation hierarchy matters in a different structure.",
+          "evidence_job": "apply order of operations inside grouped parts",
+          "student_action": "Evaluate grouped numerator and denominator before division.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "constructed response",
+          "representation_mode": "symbolic fraction",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given grouped fraction -> produced value"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "vary nested grouping",
+            "vary denominator structure while nonzero",
+            "vary exact integer outcomes"
+          ],
+          "forbidden_variations": [
+            "denominators equal to zero",
+            "fraction notation used only cosmetically"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Alternate structure makes grouping evidence visible.",
+          "avoid_uses": "Avoid arithmetic that overwhelms the operation-order target.",
+          "fresh_instance_rule": "Create a new instance that preserves the Evaluate a Grouped Fraction Expression evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(\\frac{3(5-1)+6}{2^2+2}\\).</p><div class=\"response-surface\">Show the numerator and denominator values.</div>",
+            "answer": "3",
+            "solution": "Numerator: 3(4)+6=18. Denominator: 4+2=6. Then 18/6=3.",
+            "scoring_guidance": "3 points: numerator 18, denominator 6, quotient 3."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC02-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Diagnose Add-Before-Multiply Error",
+          "family_purpose": "Target a specific order-of-operations misconception in worked solution form.",
+          "evidence_job": "diagnose incorrect operation order",
+          "student_action": "Locate the first invalid operation and correct the result.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked solution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given worked solution -> produced first-error diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "vary which operation is done out of order",
+            "use exponent-before-multiplication misconceptions",
+            "require first error not just final correction"
+          ],
+          "forbidden_variations": [
+            "work with multiple unrelated arithmetic errors",
+            "vague “student is wrong” prompts"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Useful diagnostic on operation hierarchy.",
+          "avoid_uses": "Avoid if the shown error is ambiguous.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose Add-Before-Multiply Error evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(7+3(5-2)\\) as follows:</p><p>\\(7+3(3)=10(3)=30\\)</p><p>Identify the first error and give the correct value.</p><div class=\"response-surface\">First error + correction:</div>",
+            "answer": "The first error is adding 7+3 before multiplying; the correct value is 16.",
+            "solution": "After parentheses, multiply 3·3=9 before adding: 7+9=16.",
+            "scoring_guidance": "2 points: first-error identification; 16."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC03",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Evaluate expressions with positive and negative numbers.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC03-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Evaluate with Signed Numbers",
+          "family_purpose": "Directly evaluate an expression containing positive and negative values.",
+          "evidence_job": "evaluate expressions with signed numbers",
+          "student_action": "Apply sign rules and operations to reach a numeric value.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given signed-number expression -> produced value"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "vary addition/subtraction/products of negatives",
+            "include parentheses strategically",
+            "vary integer magnitude"
+          ],
+          "forbidden_variations": [
+            "making sign work incidental with all positive results",
+            "requiring advanced fraction operations"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core signed-number evaluation evidence.",
+          "avoid_uses": "Avoid contexts that make negative values unnatural.",
+          "fresh_instance_rule": "Create a new instance that preserves the Evaluate with Signed Numbers evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(-6+4(-3)-(-5)\\).</p><div class=\"response-surface\">Value: ______</div>",
+            "answer": "-13",
+            "solution": "4(-3)=-12, so -6-12+5=-13.",
+            "scoring_guidance": "1 point: -13."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC03-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Evaluate Two Variables with Negative Inputs",
+          "family_purpose": "Combine substitution and signed arithmetic without changing the mastery target.",
+          "evidence_job": "evaluate an algebraic expression with signed inputs",
+          "student_action": "Substitute two signed values and evaluate accurately.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "constructed response",
+          "representation_mode": "symbolic substitution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given two-variable expression + values -> produced value"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "vary which inputs are negative",
+            "vary coefficients and operations",
+            "include both variables negative sometimes"
+          ],
+          "forbidden_variations": [
+            "turning into equation solving",
+            "too many variables for the target"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Alternate application with signed substitution.",
+          "avoid_uses": "Avoid if simultaneous substitution is not yet accessible.",
+          "fresh_instance_rule": "Create a new instance that preserves the Evaluate Two Variables with Negative Inputs evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(2a-3b\\) when \\(a=-4\\) and \\(b=5\\).</p><div class=\"response-surface\">Substitution + value:</div>",
+            "answer": "-23",
+            "solution": "2(-4)-3(5)=-8-15=-23.",
+            "scoring_guidance": "2 points: correct substitution; -23."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC03-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Distinguish -a² from (-a)²",
+          "family_purpose": "Use reasoning about exponent scope to diagnose a sign misconception.",
+          "evidence_job": "distinguish exponent scope with negative values",
+          "student_action": "Compare two expressions and explain why their signs differ.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "symbolic comparison",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given paired expressions -> produced values + explanation"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "vary base magnitude",
+            "compare odd/even powers when appropriate",
+            "use a worked claim to diagnose"
+          ],
+          "forbidden_variations": [
+            "treating the two expressions as typographically interchangeable",
+            "requiring exponent rules beyond the course stage"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Strong transfer item for signed-number structure.",
+          "avoid_uses": "Avoid before students have encountered exponent notation.",
+          "fresh_instance_rule": "Create a new instance that preserves the Distinguish -a² from (-a)² evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Evaluate both \\(-3^2\\) and \\((-3)^2\\). Explain why the answers are different.</p><div class=\"response-surface\">Values + explanation:</div>",
+            "answer": "-9 and 9",
+            "solution": "In -3^2 the exponent applies to 3 before the leading negative, giving -(9). In (-3)^2 the negative is part of the squared base.",
+            "scoring_guidance": "3 points: -9, 9, correct exponent-scope explanation."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC04",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Check whether an answer is reasonable.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC04-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Estimate Before Accepting an Exact Value",
+          "family_purpose": "Use a quick estimate to judge whether a computed expression value is plausible.",
+          "evidence_job": "check reasonableness with estimation",
+          "student_action": "Estimate magnitude/sign, compare to a proposed exact answer, and judge.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "numeric reasoning",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given expression + proposed result -> produced reasonableness judgment"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "vary rounding choices",
+            "include clearly too-large/too-small proposed answers",
+            "include sign checks"
+          ],
+          "forbidden_variations": [
+            "requiring exact recomputation as the only method",
+            "estimates too coarse to support a decision"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core reasonableness habit without duplicating exact evaluation.",
+          "avoid_uses": "Avoid when estimation skill itself has not been taught.",
+          "fresh_instance_rule": "Create a new instance that preserves the Estimate Before Accepting an Exact Value evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Without redoing every step exactly, decide whether 358 is a reasonable value for \\(19.8(14.9)+62\\). Support your decision with an estimate.</p><div class=\"response-surface\">Estimate + judgment:</div>",
+            "answer": "Yes; about 20·15+60=360, so 358 is reasonable.",
+            "solution": "Round to convenient values: 19.8≈20, 14.9≈15, 62≈60. The estimate is about 360, close to 358.",
+            "scoring_guidance": "2 points: sensible estimate near 360; reasonable judgment."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC04-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Use Context Bounds to Check an Answer",
+          "family_purpose": "Apply a real-world constraint instead of numerical rounding alone.",
+          "evidence_job": "check reasonableness using context constraints",
+          "student_action": "Use sign, range, or unit logic to reject or accept a result.",
+          "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context reasoning",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given context + computed result -> produced plausibility judgment"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "vary magnitude and unit checks",
+            "use negative results that conflict with context",
+            "use upper/lower bounds"
+          ],
+          "forbidden_variations": [
+            "contexts with hidden taxes/fees that make bounds ambiguous",
+            "asking only “yes/no”"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Good alternate reasonableness evidence grounded in meaning.",
+          "avoid_uses": "Avoid ambiguous real-world assumptions.",
+          "fresh_instance_rule": "Create a new instance that preserves the Use Context Bounds to Check an Answer evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A student calculates that 8 notebooks costing $2.75 each will cost $220. Is that reasonable? Give a quick check, not a full written multiplication algorithm.</p><div class=\"response-surface\">Check:</div>",
+            "answer": "No; 8 notebooks at about $3 each should cost about $24, not $220.",
+            "solution": "A nearby benchmark gives 8×3≈24, so $220 is far too large.",
+            "scoring_guidance": "2 points: no; benchmark/scale explanation."
+          }
+        },
+        {
+          "family_id": "U1-MG03-IC04-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Diagnose a Plausible-Looking Wrong Answer",
+          "family_purpose": "Require students to use a check to find that a neat answer is still unreasonable.",
+          "evidence_job": "diagnose a result using an independent reasonableness check",
+          "student_action": "Explain why a proposed value cannot be right and indicate the likely scale/sign.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked result + estimate",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given proposed result -> produced independent check"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "vary decimal multipliers near benchmarks",
+            "use sign or order-of-magnitude errors",
+            "vary whether proposed answer is too high or low"
+          ],
+          "forbidden_variations": [
+            "requiring the exact product to earn credit",
+            "proposed answers that are obviously wrong for trivial reasons only"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Strong reasoning/transfer check of independent verification.",
+          "avoid_uses": "Avoid if decimal benchmark sense is not available to students.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose a Plausible-Looking Wrong Answer evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A student reports \\(48.2(0.51)=2458.2\\). Without doing the exact multiplication first, explain why the result cannot be correct. Then state a reasonable approximate result.</p><div class=\"response-surface\">Reasoning:</div>",
+            "answer": "It should be about 24, because multiplying by about 0.5 should halve 48.2.",
+            "solution": "Since 0.51 is close to one-half, the product should be a little more than 24, not thousands.",
+            "scoring_guidance": "2 points: half-size reasoning; approximate value about 24–25."
+          }
+        }
+      ]
+    }
+  ]
+}

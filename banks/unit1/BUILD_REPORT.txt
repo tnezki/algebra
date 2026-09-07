@@ -1,12 +1,21 @@
-Algebra 1 Unit 1 Bank - Single-Pass Build
-===========================================
-STATUS: PASS
-Accepted map fingerprint: e9d2692862cc8ea5019634f24881365f8fcd12a1d5d0545f39c474b4620adb12
-Finished task slots: 208
-Exit: 20
-Practice 1: 120 (8 Intro + 8 Review + 8 Mastery per section)
-Secure Summative: 48 (V1-V6, 8 each)
-WTC: 5 sets / 20 parts
-Seeds: 6
-Lightweight QA: inventory PASS; Exit freshness PASS; prompt completeness PASS; representation PASS; math/key PASS; security PASS.
-Finalization: FINALIZATION_QA: PASS.
+Algebra 1 · Unit 1 Family Bank Build Report
+STATUS: COMPLETE
+
+Counts
+- Mastery Goals: 4
+- I Cans: 16
+- Families per I Can: 3
+- Families: 48
+- Complete exemplars: 48
+
+Light QA
+1. Exact identity/count: PASS
+2. Families A/B/C materially distinct within every I Can: PASS
+3. Every family has a complete exemplar; no TODO/TBD: PASS
+4. Math/representation correctness and registered graph-tool routing: PASS
+5. Universal finalization: PASS
+
+Architecture
+- Reusable family architecture only; no permanent Exit/Practice/Summative/WTC inventory.
+- delivery_map.json is routing guidance for fresh downstream instances.
+- Existing canonical Bank was inspected only for replacement cleanup, not as question authority.

@@ -1,0 +1,664 @@
+{
+  "schema_version": "family-bank/1.0",
+  "unit": 1,
+  "mastery_goal": {
+    "goal_id": "U1-MG02",
+    "title": "Slope in Four Views",
+    "exact_text": "Find slope or rate of change from a graph, table, equation, or context."
+  },
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG02-IC01",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Find slope from a graph.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC01-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Compute Slope from Two Graph Points",
+          "family_purpose": "Directly use rise over run on a graphed line.",
+          "evidence_job": "find slope from a graph",
+          "student_action": "Choose two clear points and compute rise/run.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given graph -> produced slope"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "vary positive, negative, zero slopes",
+            "vary point spacing",
+            "vary intercept while preserving readable lattice points"
+          ],
+          "forbidden_variations": [
+            "requiring slope formula without a graph reading",
+            "changing only line color or labels"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core graph-to-slope evidence.",
+          "avoid_uses": "Avoid lines with no readable points in the graph window.",
+          "fresh_instance_rule": "Create a new instance that preserves the Compute Slope from Two Graph Points evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope of the line. Show a rise/run calculation using two points from the graph.</p><img class=\"graph\" src=\"figures/u1_mg02_slope_a.png\" alt=\"Line with slope 2\"><div class=\"response-surface\">Rise/run:</div>",
+            "answer": "2",
+            "solution": "For example, from (0,-3) to (2,1), rise=4 and run=2, so slope=4/2=2.",
+            "scoring_guidance": "2 points: valid rise/run; slope 2.",
+            "representation_data": [
+              {
+                "asset": "figures/u1_mg02_slope_a.png",
+                "generator": "Tools/~graph_tool_v13.py with Tools/~graph_tool_v12.py behavior base"
+              }
+            ]
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Find Negative Slope from a Descending Graph",
+          "family_purpose": "Use direction and fraction reduction to handle a negative rate from a graph.",
+          "evidence_job": "find and sign a negative slope from a graph",
+          "student_action": "Compute slope from a descending line and explain the negative sign.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph -> numeric + verbal",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given descending graph -> produced slope + sign meaning"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "vary negative rational slopes",
+            "use runs greater than 1",
+            "vary points chosen"
+          ],
+          "forbidden_variations": [
+            "turning it into a context-rate item",
+            "making the sign obvious without any graph reading"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Useful alternate graph family emphasizing signed rate.",
+          "avoid_uses": "Avoid if fraction simplification is beyond the intended evidence level.",
+          "fresh_instance_rule": "Create a new instance that preserves the Find Negative Slope from a Descending Graph evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope of the line, then explain what the negative sign tells you about the graph.</p><img class=\"graph\" src=\"figures/u1_mg02_slope_b.png\" alt=\"Descending line with slope negative one half\"><div class=\"response-surface\">Slope + explanation:</div>",
+            "answer": "-1/2; y decreases 1 for every 2-unit increase in x.",
+            "solution": "Using points (0,4) and (4,2), rise=-2 and run=4, so slope=-2/4=-1/2.",
+            "scoring_guidance": "3 points: rise/run, -1/2, correct decreasing interpretation.",
+            "representation_data": [
+              {
+                "asset": "figures/u1_mg02_slope_b.png",
+                "generator": "Tools/~graph_tool_v13.py with Tools/~graph_tool_v12.py behavior base"
+              }
+            ]
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Diagnose Inconsistent Rise and Run",
+          "family_purpose": "Target the error of mixing point order between numerator and denominator.",
+          "evidence_job": "diagnose an incorrect graph-slope calculation",
+          "student_action": "Identify why a rise/run calculation has the wrong sign.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + worked solution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given graph + worked slope -> produced diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "vary which difference has reversed order",
+            "use positive or negative target slopes",
+            "vary chosen point pairs"
+          ],
+          "forbidden_variations": [
+            "generic arithmetic mistakes unrelated to slope structure",
+            "asking only to recompute with no diagnosis"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Strong misconception evidence for rise/run consistency.",
+          "avoid_uses": "Avoid before students know the slope formula or rise/run idea.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose Inconsistent Rise and Run evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Using the line, a student writes \\(m=\\frac{1-(-3)}{0-2}=\\frac{4}{-2}=-2\\).</p><img class=\"graph\" src=\"figures/u1_mg02_slope_a.png\" alt=\"Line with slope 2\"><p>Explain the error and give the correct slope.</p><div class=\"response-surface\">Diagnosis:</div>",
+            "answer": "The point order was reversed in only one difference; the correct slope is 2.",
+            "solution": "Use the same point order in both differences: (1-(-3))/(2-0)=4/2=2, or reverse both differences.",
+            "scoring_guidance": "2 points: identifies inconsistent point order; gives slope 2.",
+            "representation_data": [
+              {
+                "asset": "figures/u1_mg02_slope_a.png",
+                "generator": "Tools/~graph_tool_v13.py with Tools/~graph_tool_v12.py behavior base"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC02",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Find slope from a table.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC02-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Constant-Step Table Slope",
+          "family_purpose": "Directly compute slope from a table with equal x increments.",
+          "evidence_job": "find slope from a table",
+          "student_action": "Use consecutive rows to compute change in y over change in x.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given table -> produced slope"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "vary table starting values",
+            "vary positive/negative/zero rates",
+            "vary common x step"
+          ],
+          "forbidden_variations": [
+            "tables that do not represent a constant rate when asking for one slope",
+            "changing only row count"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core table-to-slope evidence.",
+          "avoid_uses": "Avoid when students are actually being tested on writing equations.",
+          "fresh_instance_rule": "Create a new instance that preserves the Constant-Step Table Slope evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope represented by the table.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-1</td><td>5</td></tr><tr><td>1</td><td>9</td></tr><tr><td>3</td><td>13</td></tr></table><div class=\"response-surface\">Slope: ______</div>",
+            "answer": "2",
+            "solution": "From x=-1 to 1, Δx=2 and Δy=4, so slope=4/2=2.",
+            "scoring_guidance": "1 point: slope 2."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Uneven-Step Table Slope",
+          "family_purpose": "Prevent “change in y only” shortcuts by using unequal x increments.",
+          "evidence_job": "find slope from a table with non-unit x changes",
+          "student_action": "Compute Δy/Δx using nonconsecutive or uneven rows.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "constructed response",
+          "representation_mode": "table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given uneven-step table -> produced rate quotient"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "vary uneven x gaps",
+            "include negative rate",
+            "ask for verification with a second pair"
+          ],
+          "forbidden_variations": [
+            "unit-step tables where Δy alone equals slope",
+            "nonlinear tables unless the task asks about local change"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Better evidence against the Δy-only shortcut.",
+          "avoid_uses": "Avoid if uneven increments create unnecessary arithmetic burden.",
+          "fresh_instance_rule": "Create a new instance that preserves the Uneven-Step Table Slope evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope represented by the table.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>11</td></tr><tr><td>5</td><td>20</td></tr><tr><td>9</td><td>32</td></tr></table><div class=\"response-surface\">Show Δy and Δx.</div>",
+            "answer": "3",
+            "solution": "Using the first two rows, Δy=9 and Δx=3, so slope=3. The next pair also gives 12/4=3.",
+            "scoring_guidance": "2 points: valid changes; slope 3."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Diagnose Δy-Only Reasoning",
+          "family_purpose": "Expose whether the student understands slope as a ratio of two changes.",
+          "evidence_job": "diagnose a table-slope misconception",
+          "student_action": "Correct a slope claim that uses only change in y.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "table + worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given table + incorrect claim -> produced diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "vary Δx greater than 1",
+            "use negative changes",
+            "use a correct claim students must defend occasionally"
+          ],
+          "forbidden_variations": [
+            "tables with Δx=1 where the misconception is invisible",
+            "vague “wrong answer” prompts"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "best_use": "High-value misconception check.",
+          "avoid_uses": "Avoid when the table does not show enough rows to establish intended rate.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose Δy-Only Reasoning evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A student uses the table and says, “The slope is 9 because y goes from 11 to 20.”</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>11</td></tr><tr><td>5</td><td>20</td></tr></table><p>Explain the error and give the correct slope.</p><div class=\"response-surface\">Diagnosis:</div>",
+            "answer": "Slope is 3, not 9, because Δx=3 and Δy=9, so 9/3=3.",
+            "solution": "Slope compares change in y to change in x; the y-change alone is not the rate unless Δx=1.",
+            "scoring_guidance": "2 points: ratio explanation; slope 3."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC03",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Find slope from an equation.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC03-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Read Slope from Slope-Intercept Form",
+          "family_purpose": "Directly identify the coefficient of x as slope in y=mx+b.",
+          "evidence_job": "find slope from an equation",
+          "student_action": "Identify m from slope-intercept form.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "equation",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given slope-intercept equation -> produced slope"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "vary integer, fractional, zero slopes",
+            "vary intercept",
+            "write coefficient 1 or -1 implicitly"
+          ],
+          "forbidden_variations": [
+            "making intercept identification the main target",
+            "changing only variable names"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core equation-to-slope evidence.",
+          "avoid_uses": "Avoid equations not yet in a form students have learned to interpret.",
+          "fresh_instance_rule": "Create a new instance that preserves the Read Slope from Slope-Intercept Form evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope of \\(y=-3x+8\\).</p><div class=\"response-surface\">Slope: ______</div>",
+            "answer": "-3",
+            "solution": "In y=mx+b, m is the coefficient of x. Here m=-3.",
+            "scoring_guidance": "1 point: -3."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Recognize Slope in Rearranged Linear Form",
+          "family_purpose": "Require structural reading when the equation is written in an equivalent but less standard order.",
+          "evidence_job": "find slope after interpreting equivalent equation syntax",
+          "student_action": "Rearrange or mentally rewrite an equation to identify slope.",
+          "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equation transformation",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given equivalent linear equation -> produced slope"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "vary term order",
+            "use implied ±1 coefficient",
+            "use simple equations requiring one rearrangement when allowed by course stage"
+          ],
+          "forbidden_variations": [
+            "requiring multi-step algebra beyond the I Can",
+            "surface changes with no structural difference"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Alternate equation syntax prevents pattern matching to position alone.",
+          "avoid_uses": "Avoid forms requiring solving systems or advanced algebra.",
+          "fresh_instance_rule": "Create a new instance that preserves the Recognize Slope in Rearranged Linear Form evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>Find the slope of \\(y=7-\\frac{3}{2}x\\). Explain how you know.</p><div class=\"response-surface\">Slope + explanation:</div>",
+            "answer": "-3/2",
+            "solution": "Rewrite mentally as y=(-3/2)x+7; the coefficient of x is -3/2.",
+            "scoring_guidance": "2 points: -3/2 and identifies coefficient-of-x reasoning."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Diagnose Slope vs. Intercept Confusion",
+          "family_purpose": "Target confusing m with b in slope-intercept form.",
+          "evidence_job": "diagnose incorrect equation-slope identification",
+          "student_action": "Explain why the constant is not the slope and identify the correct slope.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given equation + incorrect coefficient claim -> produced diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "vary signs of m and b",
+            "use b=0 or m=±1 occasionally",
+            "ask students to label both m and b to support diagnosis"
+          ],
+          "forbidden_variations": [
+            "errors unrelated to equation structure",
+            "asking only for the answer with no explanation"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "best_use": "Good diagnostic for m/b role confusion.",
+          "avoid_uses": "Avoid before slope-intercept form has been established.",
+          "fresh_instance_rule": "Create a new instance that preserves the Diagnose Slope vs. Intercept Confusion evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A student says the slope of \\(y=4x-9\\) is \\(-9\\) because “that is the number at the end.” Correct the student and explain.</p><div class=\"response-surface\">Correction:</div>",
+            "answer": "Slope is 4; -9 is the y-intercept.",
+            "solution": "In y=mx+b, m multiplies x and gives slope; b is the constant y-intercept.",
+            "scoring_guidance": "2 points: slope 4; correct role of -9."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC04",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Find and interpret rate of change from a context.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC04-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Compute and Interpret Context Rate",
+          "family_purpose": "Calculate a rate from two contextual measurements and include units.",
+          "evidence_job": "find and interpret rate of change from context",
+          "student_action": "Compute change in output per unit change in input and state its meaning.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given two context data points -> produced rate + units"
+            }
+          ],
+          "difficulty_intent": "core/direct evidence",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "vary context and units",
+            "use increasing or decreasing quantities",
+            "vary time/input interval"
+          ],
+          "forbidden_variations": [
+            "context with nonconstant rate unless average rate is explicitly intended",
+            "unitless answers accepted as complete"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "best_use": "Core contextual rate evidence.",
+          "avoid_uses": "Avoid extra story details that do not affect the rate.",
+          "fresh_instance_rule": "Create a new instance that preserves the Compute and Interpret Context Rate evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A tank contains 42 L of water after 2 minutes and 78 L after 5 minutes. Find the rate of change and interpret it.</p><div class=\"response-surface\">Rate + meaning:</div>",
+            "answer": "12 L/min; the amount of water increases by 12 liters each minute.",
+            "solution": "(78-42)/(5-2)=36/3=12 L/min.",
+            "scoring_guidance": "3 points: correct quotient, units, interpretation."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Read Rate from a Context Graph",
+          "family_purpose": "Use a real-world graph as the representation and connect slope to units.",
+          "evidence_job": "find contextual rate from a graph",
+          "student_action": "Read two graph points and calculate a contextual rate.",
+          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given context graph -> produced rate + interpretation"
+            }
+          ],
+          "difficulty_intent": "alternate representation/application",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "vary contextual axes and scale",
+            "vary positive or negative rate",
+            "use two readable points not necessarily intercepts"
+          ],
+          "forbidden_variations": [
+            "asking only for starting value",
+            "graphs where rate cannot be read accurately"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "best_use": "Bridges graph slope and context-rate language.",
+          "avoid_uses": "Avoid if the graph scale dominates more than the rate target.",
+          "fresh_instance_rule": "Create a new instance that preserves the Read Rate from a Context Graph evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>The graph shows total cost versus hours. Find the rate of change and explain what it means.</p><img class=\"graph\" src=\"figures/u1_mg02_context_rate.png\" alt=\"Cost versus hours graph with a 20 dollar starting fee and slope 12\"><div class=\"response-surface\">Rate + meaning:</div>",
+            "answer": "$12 per hour; cost increases by $12 for each additional hour.",
+            "solution": "For example, cost rises from $20 at 0 h to $80 at 5 h: 60/5=12 dollars per hour.",
+            "scoring_guidance": "3 points: graph readings/calculation, $12 per hour, interpretation.",
+            "representation_data": [
+              {
+                "asset": "figures/u1_mg02_context_rate.png",
+                "generator": "Tools/~graph_tool_v13.py with Tools/~graph_tool_v12.py behavior base"
+              }
+            ]
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Distinguish Rate from Initial Value",
+          "family_purpose": "Diagnose confusing the starting amount with the per-unit change.",
+          "evidence_job": "diagnose contextual rate vs initial-value confusion",
+          "student_action": "Identify which number is rate and justify using units/change language.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context + worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "given context rule + incorrect interpretation -> produced diagnosis"
+            }
+          ],
+          "difficulty_intent": "reasoning/misconception/transfer",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "vary which quantity is initial vs rate",
+            "use negative context rate when sensible",
+            "provide table, equation, or prose sources"
+          ],
+          "forbidden_variations": [
+            "contexts where units do not distinguish roles",
+            "generic coefficient-identification without interpretation"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Recovery/Reteach"
+          ],
+          "best_use": "High-value transfer between equation roles and context meaning.",
+          "avoid_uses": "Avoid if students have not yet connected linear equations to contexts.",
+          "fresh_instance_rule": "Create a new instance that preserves the Distinguish Rate from Initial Value evidence architecture, changes at least two meaningful parameters/representation features when possible, and remains equivalent in mastery demand without copying the exemplar surface.",
+          "exemplar": {
+            "student_html": "<p>A gym charges according to \\(C=18h+25\\), where \\(h\\) is hours of court use and \\(C\\) is cost in dollars. A student says, “The rate is $25 per hour.” Explain the error and state the actual rate.</p><div class=\"response-surface\">Diagnosis:</div>",
+            "answer": "The rate is $18 per hour; $25 is the starting fee.",
+            "solution": "The coefficient of h tells how cost changes per hour. The constant is the cost when h=0.",
+            "scoring_guidance": "2 points: $18/hour and correct distinction from $25 initial value."
+          }
+        }
+      ]
+    }
+  ]
+}
