@@ -8,25 +8,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC01",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.4-IC01",
         "source_i_can_index": 1,
         "text": "Identify terms, coefficients, and factors."
       },
       "supporting_i_cans": [],
-      "evidence_job": "identify terms, coefficients, and factors in an expression",
-      "student_action": "label requested structural parts",
-      "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
+      "evidence_job": "Identify terms, coefficients, and factors in an expression.",
+      "student_action": "identify named structural parts of an expression",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -34,18 +30,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -54,40 +49,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_01",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-01",
       "source_map_record_id": "U1-S1.4-P1-INTRO-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "In the expression 6x^2 - 4x + 9, identify the terms, the coefficient of x^2, and the constant term.",
-      "student_html": "<p>In the expression 6x^2 - 4x + 9, identify the terms, the coefficient of x^2, and the constant term.</p><div class=\"equation-card\">\\[6x^2-4x+9\\]</div>",
-      "answer": "Terms: 6x^2, -4x, 9; coefficient of x^2: 6; constant: 9.",
-      "solution_text": "Terms are separated by addition/subtraction. The numerical factor of x^2 is 6, and the term without a variable is 9.",
-      "solution_html": "<p>Terms are separated by addition/subtraction. The numerical factor of x^2 is 6, and the term without a variable is 9.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "List the terms and identify the coefficients of the variable terms.",
+      "student_html": "<p>List the terms and identify the coefficients of the variable terms.</p><div class=\"equation-card\">\\[7x-4+3y\\]</div>",
+      "answer": "Terms: 7x, -4, 3y. Coefficients: 7 and 3.",
+      "solution_text": "7 is the coefficient of x; 3 is the coefficient of y.",
+      "solution_html": "<p>7 is the coefficient of x; 3 is the coefficient of y.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "In the expression 6x^2 - 4x + 9, identify the terms, the coefficient of x^2, and the constant term."
+            "text": "List the terms and identify the coefficients of the variable terms."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "6x^2-4x+9"
+            "latex": "7x-4+3y"
           }
         }
       ],
-      "representation_data": {
-        "equation": "6x^2-4x+9"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 1: expression structure."
+      "instantiation_summary": "identify terms and coefficients in 7x-4+3y"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-02",
@@ -95,25 +88,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.4-IC02",
         "source_i_can_index": 2,
         "text": "Substitute values into an expression."
       },
       "supporting_i_cans": [],
-      "evidence_job": "substitute values into an expression",
-      "student_action": "replace variables and evaluate",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Substitute values into an expression.",
+      "student_action": "substitute a given value into an expression without changing structure",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -121,18 +110,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -141,40 +129,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_02",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-02",
       "source_map_record_id": "U1-S1.4-P1-INTRO-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Evaluate 3a + 2b when a = -2 and b = 5.",
-      "student_html": "<p>Evaluate 3a + 2b when a = -2 and b = 5.</p><div class=\"equation-card\">\\[3a+2b,\\ a=-2,\\ b=5\\]</div>",
-      "answer": "4",
-      "solution_text": "3(-2)+2(5)=-6+10=4.",
-      "solution_html": "<p>3(-2)+2(5)=-6+10=4.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Evaluate the expression when a = -3.",
+      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[2a^{2}+3a-4,\\qquad a=-3\\]</div>",
+      "answer": "5",
+      "solution_text": "2(-3)^2+3(-3)-4=18-9-4=5",
+      "solution_html": "<p>2(-3)^2+3(-3)-4=18-9-4=5</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate 3a + 2b when a = -2 and b = 5."
+            "text": "Evaluate the expression for the given value."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "3a+2b,\\ a=-2,\\ b=5"
+            "latex": "2a^{2}+3a-4,\\qquad a=-3"
           }
         }
       ],
-      "representation_data": {
-        "equation": "3a+2b,\\ a=-2,\\ b=5"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 2: expression structure."
+      "instantiation_summary": "substitution a=-3 into 2a^2+3a-4"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-03",
@@ -182,25 +168,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.4-IC03",
         "source_i_can_index": 3,
         "text": "Combine like terms."
       },
       "supporting_i_cans": [],
-      "evidence_job": "combine like terms",
-      "student_action": "identify compatible terms and rewrite an equivalent expression",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Combine like terms to make an equivalent expression.",
+      "student_action": "identify like terms and combine them correctly",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -208,18 +190,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -228,40 +209,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_03",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-03",
       "source_map_record_id": "U1-S1.4-P1-INTRO-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Combine like terms: 5x + 3 - 2x + 7.",
-      "student_html": "<p>Combine like terms: 5x + 3 - 2x + 7.</p><div class=\"equation-card\">\\[5x+3-2x+7\\]</div>",
-      "answer": "3x + 10",
-      "solution_text": "Combine x-terms to get 3x and constants to get 10.",
-      "solution_html": "<p>Combine x-terms to get 3x and constants to get 10.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Simplify by combining like terms.",
+      "student_html": "<p>Simplify by combining like terms.</p><div class=\"equation-card\">\\[4x+7+3x-2\\]</div>",
+      "answer": "7x+5",
+      "solution_text": "Combine 4x and 3x to get 7x; combine 7 and -2 to get 5.",
+      "solution_html": "<p>Combine 4x and 3x to get 7x; combine 7 and -2 to get 5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Combine like terms: 5x + 3 - 2x + 7."
+            "text": "Simplify by combining like terms."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "5x+3-2x+7"
+            "latex": "4x+7+3x-2"
           }
         }
       ],
-      "representation_data": {
-        "equation": "5x+3-2x+7"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 3: expression structure."
+      "instantiation_summary": "combine like terms in 4x+7+3x-2"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-04",
@@ -269,25 +248,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC04",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.4-IC04",
         "source_i_can_index": 4,
         "text": "Use the distributive property correctly."
       },
       "supporting_i_cans": [],
-      "evidence_job": "use the distributive property correctly",
-      "student_action": "distribute to every term and simplify",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Use the distributive property correctly.",
+      "student_action": "distribute a factor across every term and simplify when appropriate",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -295,18 +270,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "supported_intro",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -315,40 +289,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-04",
       "source_map_record_id": "U1-S1.4-P1-INTRO-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Use the distributive property to rewrite 4(2x - 3).",
-      "student_html": "<p>Use the distributive property to rewrite 4(2x - 3).</p><div class=\"equation-card\">\\[4(2x-3)\\]</div>",
-      "answer": "8x - 12",
-      "solution_text": "Multiply 4 by each term inside the parentheses.",
-      "solution_html": "<p>Multiply 4 by each term inside the parentheses.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Use the distributive property and simplify.",
+      "student_html": "<p>Use the distributive property and simplify.</p><div class=\"equation-card\">\\[4(y-3)-2y\\]</div>",
+      "answer": "2y-12",
+      "solution_text": "Distribute 4: 4y-12-2y. Combine to get 2y-12.",
+      "solution_html": "<p>Distribute 4: 4y-12-2y. Combine to get 2y-12.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Use the distributive property to rewrite 4(2x - 3)."
+            "text": "Use the distributive property and simplify."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4(2x-3)"
+            "latex": "4(y-3)-2y"
           }
         }
       ],
-      "representation_data": {
-        "equation": "4(2x-3)"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 4: expression structure."
+      "instantiation_summary": "distributive property in 4(y-3)-2y"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-05",
@@ -356,32 +328,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC03",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 3,
-        "text": "Combine like terms."
+        "i_can_id": "U1-S1.4-IC01",
+        "source_i_can_index": 1,
+        "text": "Identify terms, coefficients, and factors."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.4-INTRO-IC04",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 4,
-          "text": "Use the distributive property correctly."
-        }
-      ],
-      "evidence_job": "rewrite an expression in an equivalent simplified form",
-      "student_action": "combine distribution and like-term reasoning",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Identify terms, coefficients, and factors in an expression in a second representation or slightly less-scaffolded case.",
+      "student_action": "identify named structural parts of an expression",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -389,18 +350,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "guided_intro_transfer",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -409,40 +369,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_05",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-05",
       "source_map_record_id": "U1-S1.4-P1-INTRO-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Rewrite 3x + 2(x - 5) + 4 in simplest equivalent form.",
-      "student_html": "<p>Rewrite 3x + 2(x - 5) + 4 in simplest equivalent form.</p><div class=\"equation-card\">\\[3x+2(x-5)+4\\]</div>",
-      "answer": "5x - 6",
-      "solution_text": "Distribute 2 to get 3x+2x-10+4, then combine like terms.",
-      "solution_html": "<p>Distribute 2 to get 3x+2x-10+4, then combine like terms.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "List the terms and identify the coefficients of the variable terms.",
+      "student_html": "<p>List the terms and identify the coefficients of the variable terms.</p><div class=\"equation-card\">\\[-5a+2b+9\\]</div>",
+      "answer": "Terms: -5a, 2b, 9. Coefficients: -5 and 2.",
+      "solution_text": "-5 multiplies a and 2 multiplies b.",
+      "solution_html": "<p>-5 multiplies a and 2 multiplies b.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Rewrite 3x + 2(x - 5) + 4 in simplest equivalent form."
+            "text": "List the terms and identify the coefficients of the variable terms."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "3x+2(x-5)+4"
+            "latex": "-5a+2b+9"
           }
         }
       ],
-      "representation_data": {
-        "equation": "3x+2(x-5)+4"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 5: expression structure."
+      "instantiation_summary": "identify terms and coefficients in -5a+2b+9"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-06",
@@ -450,32 +408,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "i_can_id": "U1-S1.4-IC02",
         "source_i_can_index": 2,
         "text": "Substitute values into an expression."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1.4-INTRO-IC03",
-          "i_can_id_basis": "derived_from_exact_section_plan_order",
-          "source_i_can_index": 3,
-          "text": "Combine like terms."
-        }
-      ],
-      "evidence_job": "check whether two expressions are equivalent using substitution",
-      "student_action": "evaluate both at a chosen/given value and compare",
-      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Substitute values into an expression in a second representation or slightly less-scaffolded case.",
+      "student_action": "substitute a given value into an expression without changing structure",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -483,18 +430,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "guided_intro_transfer",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -503,40 +449,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_06",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
       "item_id": "U1-S1.4-P1-INTRO-06",
       "source_map_record_id": "U1-S1.4-P1-INTRO-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Are 2(x + 3) + x and 3x + 6 equivalent? Verify by simplifying or substituting.",
-      "student_html": "<p>Are 2(x + 3) + x and 3x + 6 equivalent? Verify by simplifying or substituting.</p><div class=\"equation-card\">\\[2(x+3)+x \\quad\text{and}\\quad 3x+6\\]</div>",
-      "answer": "Yes.",
-      "solution_text": "2(x+3)+x = 2x+6+x = 3x+6.",
-      "solution_html": "<p>2(x+3)+x = 2x+6+x = 3x+6.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Evaluate the expression when n = -2.",
+      "student_html": "<p>Evaluate the expression for the given value.</p><div class=\"equation-card\">\\[5n-2n^{2},\\qquad n=-2\\]</div>",
+      "answer": "-18",
+      "solution_text": "5(-2)-2(-2)^2=-10-8=-18",
+      "solution_html": "<p>5(-2)-2(-2)^2=-10-8=-18</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Are 2(x + 3) + x and 3x + 6 equivalent? Verify by simplifying or substituting."
+            "text": "Evaluate the expression for the given value."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "2(x+3)+x \\quad\text{and}\\quad 3x+6"
+            "latex": "5n-2n^{2},\\qquad n=-2"
           }
         }
       ],
-      "representation_data": {
-        "equation": "2(x+3)+x \\quad\text{and}\\quad 3x+6"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 6: expression structure."
+      "instantiation_summary": "substitution n=-2 into 5n-2n^2"
     },
     {
       "design_slot_id": "U1-S1.4-P1-INTRO-07",
@@ -544,119 +488,21 @@
       "unit": 1,
       "section": "1.4",
       "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
+      "target": null,
       "mastery_goal": {
         "goal_id": "U3-MG03",
         "title": "Equivalent Expressions",
         "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
       },
       "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC04",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 4,
-        "text": "Use the distributive property correctly."
+        "i_can_id": "U1-S1.4-IC03",
+        "source_i_can_index": 3,
+        "text": "Combine like terms."
       },
       "supporting_i_cans": [],
-      "evidence_job": "diagnose distributing to only one term",
-      "student_action": "identify exact error, explain misconception, and repair the expression",
-      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
-          "answer_neutral": true
-        }
-      ],
-      "difficulty_intent": "supported_first_learning",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_07",
-      "item_id": "U1-S1.4-P1-INTRO-07",
-      "source_map_record_id": "U1-S1.4-P1-INTRO-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A student rewrites -3(2x - 5) as -6x - 5. Identify the error and give the correct expression.",
-      "student_html": "<p>A student rewrites -3(2x - 5) as -6x - 5. Identify the error and give the correct expression.</p><div class=\"equation-card\">\\[-3(2x-5)\\]</div>",
-      "answer": "The -3 must multiply both terms; correct: -6x + 15.",
-      "solution_text": "-3(2x)=-6x and -3(-5)=+15.",
-      "solution_html": "<p>-3(2x)=-6x and -3(-5)=+15.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A student rewrites -3(2x - 5) as -6x - 5. Identify the error and give the correct expression."
-          }
-        },
-        {
-          "type": "equation",
-          "data": {
-            "latex": "-3(2x-5)"
-          }
-        }
-      ],
-      "representation_data": {
-        "equation": "-3(2x-5)",
-        "shown_work": "-6x-5"
-      },
-      "representation_refs": [],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": []
-      },
-      "instantiation_summary": "Section 1.4 Intro 7: expression structure."
-    },
-    {
-      "design_slot_id": "U1-S1.4-P1-INTRO-08",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Intro",
-      "target": {
-        "id": "U1.4-LT",
-        "text": "Read, evaluate, and rewrite expressions without changing their value."
-      },
-      "mastery_goal": {
-        "goal_id": "U3-MG03",
-        "title": "Equivalent Expressions",
-        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1.4-INTRO-IC02",
-        "i_can_id_basis": "derived_from_exact_section_plan_order",
-        "source_i_can_index": 2,
-        "text": "Substitute values into an expression."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "substitute a negative value while preserving parentheses/signs",
-      "student_action": "evaluate accurately and explain sign handling if needed",
-      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "evidence_job": "Combine like terms to make an equivalent expression in a second representation or slightly less-scaffolded case.",
+      "student_action": "identify like terms and combine them correctly",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
       "representation_mode": "expression",
       "representation_need": "required",
@@ -664,18 +510,17 @@
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "expression",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "supported_first_learning",
+      "difficulty_intent": "guided_intro_transfer",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -684,40 +529,118 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Intro_08",
-      "item_id": "U1-S1.4-P1-INTRO-08",
-      "source_map_record_id": "U1-S1.4-P1-INTRO-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Evaluate 2 - 5(n + 1) when n = -3. Use parentheses around the substituted value.",
-      "student_html": "<p>Evaluate 2 - 5(n + 1) when n = -3. Use parentheses around the substituted value.</p><div class=\"equation-card\">\\[2-5(n+1),\\ n=-3\\]</div>",
-      "answer": "12",
-      "solution_text": "2-5((-3)+1)=2-5(-2)=12.",
-      "solution_html": "<p>2-5((-3)+1)=2-5(-2)=12.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
+      "item_id": "U1-S1.4-P1-INTRO-07",
+      "source_map_record_id": "U1-S1.4-P1-INTRO-07",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Simplify by combining like terms.",
+      "student_html": "<p>Simplify by combining like terms.</p><div class=\"equation-card\">\\[6a-2+5-3a\\]</div>",
+      "answer": "3a+3",
+      "solution_text": "Combine 6a and -3a to get 3a; combine -2 and 5 to get 3.",
+      "solution_html": "<p>Combine 6a and -3a to get 3a; combine -2 and 5 to get 3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Evaluate 2 - 5(n + 1) when n = -3. Use parentheses around the substituted value."
+            "text": "Simplify by combining like terms."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "2-5(n+1),\\ n=-3"
+            "latex": "6a-2+5-3a"
           }
         }
       ],
-      "representation_data": {
-        "equation": "2-5(n+1),\\ n=-3"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Intro 8: expression structure."
+      "instantiation_summary": "combine like terms in 6a-2+5-3a"
+    },
+    {
+      "design_slot_id": "U1-S1.4-P1-INTRO-08",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Intro",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U3-MG03",
+        "title": "Equivalent Expressions",
+        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-S1.4-IC04",
+        "source_i_can_index": 4,
+        "text": "Use the distributive property correctly."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use the distributive property correctly in a second representation or slightly less-scaffolded case.",
+      "student_action": "distribute a factor across every term and simplify when appropriate",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "guided_intro_transfer",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "sign_pattern",
+          "representation_values",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_intro",
+      "item_id": "U1-S1.4-P1-INTRO-08",
+      "source_map_record_id": "U1-S1.4-P1-INTRO-08",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Use the distributive property and simplify.",
+      "student_html": "<p>Use the distributive property and simplify.</p><div class=\"equation-card\">\\[-2(3a+4)+5a\\]</div>",
+      "answer": "-a-8",
+      "solution_text": "Distribute -2: -6a-8+5a. Combine variable terms to get -a-8.",
+      "solution_html": "<p>Distribute -2: -6a-8+5a. Combine variable terms to get -a-8.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Use the distributive property and simplify."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "-2(3a+4)+5a"
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": []
+      },
+      "instantiation_summary": "distributive property in -2(3a+4)+5a"
     },
     {
       "design_slot_id": "U1-S1.4-P1-MASTERY-01",
@@ -733,179 +656,13 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Read a graph using its scale."
-        }
-      ],
-      "evidence_job": "read a coordinate from a scaled graph",
-      "student_action": "use tick scale to extract an ordered pair",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_01",
-      "item_id": "U1-S1.4-P1-MASTERY-01",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A scaled graph shows points (-8,6), (4,-2), and (8,4), with both axes marked by 2s. What is the coordinate of the point with x = 4?",
-      "student_html": "<p>A scaled graph shows points (-8,6), (4,-2), and (8,4), with both axes marked by 2s. What is the coordinate of the point with x = 4?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_563909c367577a55.png\" alt=\"Graph\"></div>",
-      "answer": "(4,-2)",
-      "solution_text": "Read the x-axis to 4, then the y-coordinate at that plotted point is -2.",
-      "solution_html": "<p>Read the x-axis to 4, then the y-coordinate at that plotted point is -2.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A scaled graph shows points (-8,6), (4,-2), and (8,4), with both axes marked by 2s. What is the coordinate of the point with x = 4?"
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "discrete",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -10,
-              "x_max": 10,
-              "y_min": -8,
-              "y_max": 8
-            },
-            "scale": {
-              "x_step": 2,
-              "y_step": 2
-            },
-            "points": [
-              [
-                -8,
-                6
-              ],
-              [
-                4,
-                -2
-              ],
-              [
-                8,
-                4
-              ]
-            ],
-            "connect_points": false
-          }
-        }
-      ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "discrete",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": -10,
-            "x_max": 10,
-            "y_min": -8,
-            "y_max": 8
-          },
-          "scale": {
-            "x_step": 2,
-            "y_step": 2
-          },
-          "points": [
-            [
-              -8,
-              6
-            ],
-            [
-              4,
-              -2
-            ],
-            [
-              8,
-              4
-            ]
-          ],
-          "connect_points": false
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_563909c367577a55.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_563909c367577a55.png"
-        ]
-      },
-      "instantiation_summary": "Section 1.4 Mastery 1: graph-reading carry-forward."
-    },
-    {
-      "design_slot_id": "U1-S1.4-P1-MASTERY-02",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Plot and read ordered pairs."
-      },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        }
-      ],
-      "evidence_job": "plot a point with negative coordinates on correct axes",
-      "student_action": "construct point placement on blank coordinate grid",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs.",
+      "student_action": "plot/read ordered pairs on a coordinate plane",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -924,10 +681,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -936,104 +692,55 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_02",
-      "item_id": "U1-S1.4-P1-MASTERY-02",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Plot the point (-6,-4) on the coordinate plane.",
-      "student_html": "<p>Plot the point (-6,-4) on the coordinate plane.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_b62403dd9d828be2.png\" alt=\"Graph\"></div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "A point at (-6,-4).",
-      "solution_text": "Move 6 units left from the origin and 4 units down.",
-      "solution_html": "<p>Move 6 units left from the origin and 4 units down.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-01",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-01",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Plot the points (-3, 5), (5, 2), (2, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.",
+      "student_html": "<p>Plot the points (-3, 5), (5, 2), (2, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "(2, -4)",
+      "solution_text": "Plot each point using x first and y second. The point with positive x and negative y is (2, -4), so it lies in Quadrant IV.",
+      "solution_html": "<p>Plot each point using x first and y second. The point with positive x and negative y is (2, -4), so it lies in Quadrant IV.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Plot the point (-6,-4) on the coordinate plane."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "discrete",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -8,
-              "y_max": 8
-            },
-            "scale": {
-              "x_step": 2,
-              "y_step": 2
-            },
-            "points": [],
-            "connect_points": false
+            "text": "Plot the points (-3, 5), (5, 2), (2, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV."
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
+            "semantic_mode": "algebra_coordinate",
             "x_min": -8,
             "x_max": 8,
             "y_min": -8,
-            "y_max": 8
+            "y_max": 8,
+            "x_label": "x",
+            "y_label": "y"
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "discrete",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -8,
-            "y_max": 8
-          },
-          "scale": {
-            "x_step": 2,
-            "y_step": 2
-          },
-          "points": [],
-          "connect_points": false
-        },
-        "response_surface": {
-          "kind": "blank_coordinate_grid",
-          "x_min": -8,
-          "x_max": 8,
-          "y_min": -8,
-          "y_max": 8
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_b62403dd9d828be2.png"
-        },
         {
           "type": "generated_graph",
           "file": "figures/graph_293f093d4bc08df4.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_b62403dd9d828be2.png",
           "figures/graph_293f093d4bc08df4.png"
         ]
       },
-      "instantiation_summary": "Section 1.4 Mastery 2: graph-reading carry-forward."
+      "instantiation_summary": "coordinate plotting with points [(-3, 5), (5, 2), (2, -4)]"
     },
     {
-      "design_slot_id": "U1-S1.4-P1-MASTERY-03",
+      "design_slot_id": "U1-S1.4-P1-MASTERY-02",
       "destination": "Practice 1",
       "unit": 1,
       "section": "1.4",
@@ -1046,20 +753,12 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 2,
         "text": "Use the x- and y-axes correctly."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Read a graph using its scale."
-        }
-      ],
-      "evidence_job": "use axis labels and scale correctly when reading a graph",
-      "student_action": "extract requested coordinate/value without swapping axes",
+      "supporting_i_cans": [],
+      "evidence_job": "Use the x- and y-axes correctly.",
+      "student_action": "use axis roles correctly while locating or recording a coordinate",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
       "response_mode": "constructed_short",
       "representation_mode": "graph",
@@ -1078,10 +777,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1090,89 +788,174 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_03",
-      "item_id": "U1-S1.4-P1-MASTERY-03",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "On a graph, the horizontal axis is time in 5-second increments and the vertical axis is distance in 10-meter increments. A point is located at the third tick right and fourth tick up. What values does the point represent?",
-      "student_html": "<p>On a graph, the horizontal axis is time in 5-second increments and the vertical axis is distance in 10-meter increments. A point is located at the third tick right and fourth tick up. What values does the point represent?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_d34396330ded7581.png\" alt=\"Graph\"></div>",
-      "answer": "15 seconds and 40 meters; point (15,40).",
-      "solution_text": "Three horizontal ticks at 5 each give 15; four vertical ticks at 10 each give 40.",
-      "solution_html": "<p>Three horizontal ticks at 5 each give 15; four vertical ticks at 10 each give 40.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-02",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-02",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.",
+      "student_html": "<p>Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_3f53adb815a8e068.png\" alt=\"Graph\"></div>",
+      "answer": "The x-coordinate 4 gives the horizontal position; the y-coordinate 6 gives the vertical position.",
+      "solution_text": "The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (4, 6).",
+      "solution_html": "<p>The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (4, 6).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "On a graph, the horizontal axis is time in 5-second increments and the vertical axis is distance in 10-meter increments. A point is located at the third tick right and fourth tick up. What values does the point represent?"
+            "text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "discrete",
-            "x_label": "time (s)",
-            "y_label": "distance (m)",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
             "bounds": {
-              "x_min": 0,
-              "x_max": 25,
-              "y_min": 0,
-              "y_max": 60
-            },
-            "scale": {
-              "x_step": 5,
-              "y_step": 10
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
             },
             "points": [
               [
-                15,
-                40
+                4,
+                6
               ]
             ],
             "connect_points": false
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "discrete",
-          "x_label": "time (s)",
-          "y_label": "distance (m)",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 25,
-            "y_min": 0,
-            "y_max": 60
-          },
-          "scale": {
-            "x_step": 5,
-            "y_step": 10
-          },
-          "points": [
-            [
-              15,
-              40
-            ]
-          ],
-          "connect_points": false
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_d34396330ded7581.png"
+          "file": "figures/graph_3f53adb815a8e068.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_d34396330ded7581.png"
+          "figures/graph_3f53adb815a8e068.png"
         ]
       },
-      "instantiation_summary": "Section 1.4 Mastery 3: graph-reading carry-forward."
+      "instantiation_summary": "axis roles at point (4, 6)"
+    },
+    {
+      "design_slot_id": "U1-S1.4-P1-MASTERY-03",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC03",
+        "source_i_can_index": 3,
+        "text": "Read a graph using its scale."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Read a graph accurately using its scale.",
+      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-03",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-03",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 5?",
+      "student_html": "<p>Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 5?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_d9b66ebec1c26602.png\" alt=\"Graph\"></div>",
+      "answer": "(5, -5)",
+      "solution_text": "Locate x = 5 on the horizontal axis and read the corresponding vertical coordinate. The point is (5, -5).",
+      "solution_html": "<p>Locate x = 5 on the horizontal axis and read the corresponding vertical coordinate. The point is (5, -5).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate 5?"
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
+            },
+            "points": [
+              [
+                -7,
+                -1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                5,
+                -5
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_d9b66ebec1c26602.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": [
+          "figures/graph_d9b66ebec1c26602.png"
+        ]
+      },
+      "instantiation_summary": "scaled coordinate read with target (5, -5)"
     },
     {
       "design_slot_id": "U1-S1.4-P1-MASTERY-04",
@@ -1188,16 +971,15 @@
       },
       "primary_i_can": {
         "i_can_id": "U1-MG01-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 4,
         "text": "Identify and interpret intercepts when they are shown."
       },
       "supporting_i_cans": [],
-      "evidence_job": "identify an x-intercept from a coordinate graph",
-      "student_action": "read the x-axis crossing as an ordered pair",
+      "evidence_job": "Identify and interpret intercepts when they are shown.",
+      "student_action": "identify an intercept and state its mathematical or contextual meaning",
       "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
         {
@@ -1207,16 +989,20 @@
           "representation": "graph",
           "answer_neutral": true,
           "student_constructed": false
+        },
+        {
+          "route_type": "direct_text",
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1225,83 +1011,60 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.4-P1-MASTERY-04",
       "source_map_record_id": "U1-S1.4-P1-MASTERY-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The line crosses the x-axis at x = 6. Identify the x-intercept.",
-      "student_html": "<p>The line crosses the x-axis at x = 6. Identify the x-intercept.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_346102b9f6240768.png\" alt=\"Graph\"></div>",
-      "answer": "(6,0)",
-      "solution_text": "At an x-intercept, y=0.",
-      "solution_html": "<p>At an x-intercept, y=0.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "The graph models distance remaining. Identify the y-intercept and explain what it means when the input is 0.",
+      "student_html": "<p>The graph models distance remaining. Identify the y-intercept and explain what it means when the input is 0.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_b9d340cf4e506a9d.png\" alt=\"Graph\"></div>",
+      "answer": "(0, -3); the starting value is -3.",
+      "solution_text": "The y-intercept occurs where x = 0. Substituting x = 0 gives y = -3, so the graph crosses at (0, -3). In context, -3 is the starting value.",
+      "solution_html": "<p>The y-intercept occurs where x = 0. Substituting x = 0 gives y = -3, so the graph crosses at (0, -3). In context, -3 is the starting value.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "The line crosses the x-axis at x = 6. Identify the x-intercept."
+            "text": "The graph models distance remaining. Identify the y-intercept and explain what it means when the input is 0."
           }
         },
         {
           "type": "graph",
           "data": {
             "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
+            "semantic_mode": "context",
+            "x_label": "time (h)",
+            "y_label": "distance (mi)",
             "bounds": {
-              "x_min": 0,
-              "x_max": 8,
-              "y_min": -2,
-              "y_max": 8
+              "x_min": -2,
+              "x_max": 6,
+              "y_min": -8,
+              "y_max": 12
             },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
+            "points": [],
+            "connect_points": false,
             "line": {
               "slope": -1,
-              "intercept": 6
+              "intercept": -3
             }
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 8,
-            "y_min": -2,
-            "y_max": 8
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": -1,
-            "intercept": 6
-          }
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_346102b9f6240768.png"
+          "file": "figures/graph_b9d340cf4e506a9d.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_346102b9f6240768.png"
+          "figures/graph_b9d340cf4e506a9d.png"
         ]
       },
-      "instantiation_summary": "Section 1.4 Mastery 4: graph-reading carry-forward."
+      "instantiation_summary": "line y=-1x-3 intercept interpretation"
     },
     {
       "design_slot_id": "U1-S1.4-P1-MASTERY-05",
@@ -1316,292 +1079,14 @@
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "identify a y-intercept from a coordinate graph",
-      "student_action": "read the y-axis crossing as an ordered pair",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "graph",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_05",
-      "item_id": "U1-S1.4-P1-MASTERY-05",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "The line crosses the y-axis at y = -5. Identify the y-intercept.",
-      "student_html": "<p>The line crosses the y-axis at y = -5. Identify the y-intercept.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_a36adf6382cbd212.png\" alt=\"Graph\"></div>",
-      "answer": "(0,-5)",
-      "solution_text": "At a y-intercept, x=0.",
-      "solution_html": "<p>At a y-intercept, x=0.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "The line crosses the y-axis at y = -5. Identify the y-intercept."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -2,
-              "x_max": 6,
-              "y_min": -6,
-              "y_max": 10
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 1
-            },
-            "line": {
-              "slope": 2,
-              "intercept": -5
-            }
-          }
-        }
-      ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": -2,
-            "x_max": 6,
-            "y_min": -6,
-            "y_max": 10
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 1
-          },
-          "line": {
-            "slope": 2,
-            "intercept": -5
-          }
-        }
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_a36adf6382cbd212.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_a36adf6382cbd212.png"
-        ]
-      },
-      "instantiation_summary": "Section 1.4 Mastery 5: graph-reading carry-forward."
-    },
-    {
-      "design_slot_id": "U1-S1.4-P1-MASTERY-06",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
-        "i_can_id": "U1-MG01-IC04",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 4,
-        "text": "Identify and interpret intercepts when they are shown."
-      },
-      "supporting_i_cans": [],
-      "evidence_job": "interpret an intercept in a natural context",
-      "student_action": "state what the intercept coordinates mean for the quantities",
-      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
-      "representation_need": "required",
-      "representation_routes": [
-        {
-          "route_type": "registered_tool",
-          "tool_key": "graph_tool",
-          "tool_path": "Tools/~graph_tool_v12.py",
-          "representation": "graph",
-          "answer_neutral": true,
-          "student_constructed": false
-        },
-        {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        }
-      ],
-      "difficulty_intent": "independent_mastery",
-      "variation_axes": {
-        "allowed": [
-          "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
-        ],
-        "required": [],
-        "forbidden": [
-          "change_target",
-          "change_evidence_job",
-          "answer_leaking_surface"
-        ]
-      },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_06",
-      "item_id": "U1-S1.4-P1-MASTERY-06",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A savings graph has a y-intercept of $35. Explain what the intercept means in context.",
-      "student_html": "<p>A savings graph has a y-intercept of $35. Explain what the intercept means in context.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_5e0d63252aec0820.png\" alt=\"Graph\"></div>",
-      "answer": "The account started with $35 when time was 0.",
-      "solution_text": "A y-intercept gives the output when the input is zero, so it is the initial savings amount.",
-      "solution_html": "<p>A y-intercept gives the output when the input is zero, so it is the initial savings amount.</p>",
-      "choices": [],
-      "prompt_blocks": [
-        {
-          "type": "prose",
-          "data": {
-            "text": "A savings graph has a y-intercept of $35. Explain what the intercept means in context."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "continuous",
-            "x_label": "weeks",
-            "y_label": "savings ($)",
-            "bounds": {
-              "x_min": 0,
-              "x_max": 8,
-              "y_min": 0,
-              "y_max": 110
-            },
-            "scale": {
-              "x_step": 1,
-              "y_step": 10
-            },
-            "line": {
-              "slope": 8,
-              "intercept": 35
-            }
-          }
-        }
-      ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "continuous",
-          "x_label": "weeks",
-          "y_label": "savings ($)",
-          "bounds": {
-            "x_min": 0,
-            "x_max": 8,
-            "y_min": 0,
-            "y_max": 110
-          },
-          "scale": {
-            "x_step": 1,
-            "y_step": 10
-          },
-          "line": {
-            "slope": 8,
-            "intercept": 35
-          }
-        },
-        "context": "Savings over time"
-      },
-      "representation_refs": [
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_5e0d63252aec0820.png"
-        }
-      ],
-      "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": [
-          "figures/graph_5e0d63252aec0820.png"
-        ]
-      },
-      "instantiation_summary": "Section 1.4 Mastery 6: graph-reading carry-forward."
-    },
-    {
-      "design_slot_id": "U1-S1.4-P1-MASTERY-07",
-      "destination": "Practice 1",
-      "unit": 1,
-      "section": "1.4",
-      "stage": "Mastery",
-      "target": null,
-      "mastery_goal": {
-        "goal_id": "U1-MG01",
-        "title": "Coordinate-Plane Graphs",
-        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
-      },
-      "primary_i_can": {
         "i_can_id": "U1-MG01-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
         "source_i_can_index": 1,
         "text": "Plot and read ordered pairs."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Use the x- and y-axes correctly."
-        },
-        {
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Read a graph using its scale."
-        }
-      ],
-      "evidence_job": "construct a graph from supplied ordered pairs using a suitable scale",
-      "student_action": "label axes/scale and plot points on answer-neutral grid",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Plot and read ordered pairs with independently chosen or meaningfully varied values/representation.",
+      "student_action": "plot/read ordered pairs on a coordinate plane",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_graph",
       "representation_mode": "graph",
       "representation_need": "required",
@@ -1620,10 +1105,9 @@
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1632,101 +1116,270 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_07",
-      "item_id": "U1-S1.4-P1-MASTERY-07",
-      "source_map_record_id": "U1-S1.4-P1-MASTERY-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Graph the ordered pairs (-6,-3), (-2,1), (2,5), and (6,9) using a scale that fits the data.",
-      "student_html": "<p>Graph the ordered pairs (-6,-3), (-2,1), (2,5), and (6,9) using a scale that fits the data.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_61bc749f0172cd10.png\" alt=\"Graph\"></div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_8200c5d7f7790d4e.png\" alt=\"Response graphing surface\"></div>",
-      "answer": "A correct graph of the four points with a suitable scale.",
-      "solution_text": "Choose bounds including x from -6 to 6 and y from -3 to 9, then plot each pair.",
-      "solution_html": "<p>Choose bounds including x from -6 to 6 and y from -3 to 9, then plot each pair.</p>",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-05",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-05",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Plot the points (-7, 2), (2, 5), (5, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.",
+      "student_html": "<p>Plot the points (-7, 2), (2, 5), (5, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_293f093d4bc08df4.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "(5, -4)",
+      "solution_text": "Plot each point using x first and y second. The point with positive x and negative y is (5, -4), so it lies in Quadrant IV.",
+      "solution_html": "<p>Plot each point using x first and y second. The point with positive x and negative y is (5, -4), so it lies in Quadrant IV.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Graph the ordered pairs (-6,-3), (-2,1), (2,5), and (6,9) using a scale that fits the data."
-          }
-        },
-        {
-          "type": "graph",
-          "data": {
-            "kind": "coordinate_graph",
-            "semantic_mode": "discrete",
-            "x_label": "x",
-            "y_label": "y",
-            "bounds": {
-              "x_min": -8,
-              "x_max": 8,
-              "y_min": -4,
-              "y_max": 10
-            },
-            "scale": {
-              "x_step": 2,
-              "y_step": 2
-            },
-            "points": [],
-            "connect_points": false
+            "text": "Plot the points (-7, 2), (2, 5), (5, -4) on the coordinate plane. Then write the ordered pair that lies in Quadrant IV."
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_coordinate_grid",
+            "semantic_mode": "algebra_coordinate",
             "x_min": -8,
             "x_max": 8,
-            "y_min": -4,
-            "y_max": 10
+            "y_min": -8,
+            "y_max": 8,
+            "x_label": "x",
+            "y_label": "y"
           }
         }
       ],
-      "representation_data": {
-        "graph": {
-          "kind": "coordinate_graph",
-          "semantic_mode": "discrete",
-          "x_label": "x",
-          "y_label": "y",
-          "bounds": {
-            "x_min": -8,
-            "x_max": 8,
-            "y_min": -4,
-            "y_max": 10
-          },
-          "scale": {
-            "x_step": 2,
-            "y_step": 2
-          },
-          "points": [],
-          "connect_points": false
-        },
-        "response_surface": {
-          "kind": "blank_coordinate_grid",
-          "x_min": -8,
-          "x_max": 8,
-          "y_min": -4,
-          "y_max": 10
-        }
-      },
+      "representation_data": {},
       "representation_refs": [
         {
           "type": "generated_graph",
-          "file": "figures/graph_61bc749f0172cd10.png"
-        },
-        {
-          "type": "generated_graph",
-          "file": "figures/graph_8200c5d7f7790d4e.png"
+          "file": "figures/graph_293f093d4bc08df4.png"
         }
       ],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": [
-          "figures/graph_61bc749f0172cd10.png",
-          "figures/graph_8200c5d7f7790d4e.png"
+          "figures/graph_293f093d4bc08df4.png"
         ]
       },
-      "instantiation_summary": "Section 1.4 Mastery 7: graph-reading carry-forward."
+      "instantiation_summary": "coordinate plotting with points [(-7, 2), (2, 5), (5, -4)]"
+    },
+    {
+      "design_slot_id": "U1-S1.4-P1-MASTERY-06",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC02",
+        "source_i_can_index": 2,
+        "text": "Use the x- and y-axes correctly."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Use the x- and y-axes correctly with independently chosen or meaningfully varied values/representation.",
+      "student_action": "use axis roles correctly while locating or recording a coordinate",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-06",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-06",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.",
+      "student_html": "<p>Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_e46f4c3d253c3f21.png\" alt=\"Graph\"></div>",
+      "answer": "The x-coordinate -4 gives the horizontal position; the y-coordinate -5 gives the vertical position.",
+      "solution_text": "The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (-4, -5).",
+      "solution_html": "<p>The first coordinate is x and is read along the horizontal axis. The second coordinate is y and is read along the vertical axis, so P = (-4, -5).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Point P is shown on the coordinate plane. State which coordinate gives its horizontal position and which coordinate gives its vertical position."
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
+            },
+            "points": [
+              [
+                -4,
+                -5
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_e46f4c3d253c3f21.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": [
+          "figures/graph_e46f4c3d253c3f21.png"
+        ]
+      },
+      "instantiation_summary": "axis roles at point (-4, -5)"
+    },
+    {
+      "design_slot_id": "U1-S1.4-P1-MASTERY-07",
+      "destination": "Practice 1",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC03",
+        "source_i_can_index": 3,
+        "text": "Read a graph using its scale."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "Read a graph accurately using its scale with independently chosen or meaningfully varied values/representation.",
+      "student_action": "read a numeric coordinate or value from a supplied scaled graph",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_pair",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
+      "item_id": "U1-S1.4-P1-MASTERY-07",
+      "source_map_record_id": "U1-S1.4-P1-MASTERY-07",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate -2?",
+      "student_html": "<p>Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate -2?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_764d1ef4edba85b3.png\" alt=\"Graph\"></div>",
+      "answer": "(-2, 6)",
+      "solution_text": "Locate x = -2 on the horizontal axis and read the corresponding vertical coordinate. The point is (-2, 6).",
+      "solution_html": "<p>Locate x = -2 on the horizontal axis and read the corresponding vertical coordinate. The point is (-2, 6).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Read the graph carefully. What is the ordered pair of the plotted point with x-coordinate -2?"
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
+            },
+            "points": [
+              [
+                -2,
+                6
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                6,
+                -4
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_764d1ef4edba85b3.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.7.1",
+        "graph_files": [
+          "figures/graph_764d1ef4edba85b3.png"
+        ]
+      },
+      "instantiation_summary": "scaled coordinate read with target (-2, 6)"
     },
     {
       "design_slot_id": "U1-S1.4-P1-MASTERY-08",
@@ -1741,23 +1394,15 @@
         "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
       },
       "primary_i_can": {
-        "i_can_id": "U1-MG01-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 2,
-        "text": "Use the x- and y-axes correctly."
+        "i_can_id": "U1-MG01-IC04",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Read a graph using its scale."
-        }
-      ],
-      "evidence_job": "critique a graph that misuses axis scale",
-      "student_action": "identify the specific scale/axis defect and describe the correction",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
-      "response_mode": "constructed_short",
+      "supporting_i_cans": [],
+      "evidence_job": "Identify and interpret intercepts when they are shown with independently chosen or meaningfully varied values/representation.",
+      "student_action": "identify an intercept and state its mathematical or contextual meaning",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_explanation",
       "representation_mode": "mixed",
       "representation_need": "required",
       "representation_routes": [
@@ -1771,18 +1416,17 @@
         },
         {
           "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
+          "representation": "context",
+          "answer_neutral": true
         }
       ],
       "difficulty_intent": "independent_mastery",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
-          "representation_values",
-          "context_evidence",
-          "direction"
+          "representation_pair",
+          "graph_scale",
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1791,85 +1435,60 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Mastery_08",
+      "security_role": "practice_public",
+      "slot_role": "practice_mastery",
       "item_id": "U1-S1.4-P1-MASTERY-08",
       "source_map_record_id": "U1-S1.4-P1-MASTERY-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A student graphs points (0,2), (2,6), (4,10) but labels the y-axis 0, 1, 2, 3 while placing the points as if each grid square were 2 units. Critique the graph and state the correction.",
-      "student_html": "<p>A student graphs points (0,2), (2,6), (4,10) but labels the y-axis 0, 1, 2, 3 while placing the points as if each grid square were 2 units. Critique the graph and state the correction.</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2</td></tr><tr><td>2</td><td>6</td></tr><tr><td>4</td><td>10</td></tr></tbody></table><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "The y-axis scale is inconsistent; label ticks by 2s or reposition the points to match a 1-unit scale.",
-      "solution_text": "Graph labels and point locations must use the same scale.",
-      "solution_html": "<p>Graph labels and point locations must use the same scale.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when x = 0.",
+      "student_html": "<p>Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when \\(x=0\\).</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_7e967f0b0bca3764.png\" alt=\"Graph\"></div>",
+      "answer": "(0, 5); when x = 0, y = 5.",
+      "solution_text": "The y-intercept is where the graph crosses the y-axis. That occurs at y = 5, so the intercept is (0, 5).",
+      "solution_html": "<p>The y-intercept is where the graph crosses the y-axis. That occurs at y = 5, so the intercept is (0, 5).</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A student graphs points (0,2), (2,6), (4,10) but labels the y-axis 0, 1, 2, 3 while placing the points as if each grid square were 2 units. Critique the graph and state the correction."
+            "text": "Identify the y-intercept of the graphed line and explain what that intercept tells you about the value of y when x = 0."
           }
         },
         {
-          "type": "table",
+          "type": "graph",
           "data": {
-            "headers": [
-              "x",
-              "y"
-            ],
-            "rows": [
-              [
-                0,
-                2
-              ],
-              [
-                2,
-                6
-              ],
-              [
-                4,
-                10
-              ]
-            ]
-          }
-        },
-        {
-          "type": "response_surface",
-          "data": {
-            "kind": "graph_critique_area"
+            "kind": "coordinate_graph",
+            "semantic_mode": "algebra_coordinate",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
+            },
+            "points": [],
+            "connect_points": false,
+            "line": {
+              "slope": 1,
+              "intercept": 5
+            }
           }
         }
       ],
-      "representation_data": {
-        "table": {
-          "headers": [
-            "x",
-            "y"
-          ],
-          "rows": [
-            [
-              0,
-              2
-            ],
-            [
-              2,
-              6
-            ],
-            [
-              4,
-              10
-            ]
-          ]
-        },
-        "response_surface": {
-          "kind": "graph_critique_area"
+      "representation_data": {},
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_7e967f0b0bca3764.png"
         }
-      },
-      "representation_refs": [],
+      ],
       "render_trace": {
-        "pilot_version": "0.6.4",
-        "graph_files": []
+        "pilot_version": "0.7.1",
+        "graph_files": [
+          "figures/graph_7e967f0b0bca3764.png"
+        ]
       },
-      "instantiation_summary": "Section 1.4 Mastery 8: graph-reading carry-forward."
+      "instantiation_summary": "line y=1x+5 intercept interpretation"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-01",
@@ -1884,34 +1503,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
+        "i_can_id": "U2-MG02-RIC01",
         "source_i_can_index": 1,
         "text": "Solve a one-step inequality."
       },
       "supporting_i_cans": [],
-      "evidence_job": "solve a one-step addition/subtraction inequality",
-      "student_action": "use inverse operation to isolate variable",
-      "question_structure_id": "FORMULA-INVERSE-VARIABLE-01",
+      "evidence_job": "Solve a one-step inequality.",
+      "student_action": "use one inverse operation to isolate the variable",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "equation",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -1920,40 +1537,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_01",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-01",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-01",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Solve x + 7 > 12.",
-      "student_html": "<p>Solve x + 7 &gt; 12.</p><div class=\"equation-card\">\\[x+7&gt;12\\]</div>",
-      "answer": "x > 5",
-      "solution_text": "Subtract 7 from both sides.",
-      "solution_html": "<p>Subtract 7 from both sides.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Solve the inequality.",
+      "student_html": "<p>Solve the inequality.</p><div class=\"equation-card\">\\[y-3\\le 8\\]</div>",
+      "answer": "y\\le 11",
+      "solution_text": "Add 3 to both sides: y ≤ 11.",
+      "solution_html": "<p>Add 3 to both sides: y ≤ 11.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve x + 7 > 12."
+            "text": "Solve the inequality."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "x+7>12"
+            "latex": "y-3\\le 8"
           }
         }
       ],
-      "representation_data": {
-        "equation": "x+7>12"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 1: one-step inequalities."
+      "instantiation_summary": "one-step inequality y-3\\le 8"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-02",
@@ -1968,34 +1583,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Solve a one-step inequality."
+        "i_can_id": "U2-MG02-RIC02",
+        "source_i_can_index": 2,
+        "text": "Use inverse operations correctly in an inequality."
       },
       "supporting_i_cans": [],
-      "evidence_job": "solve a one-step multiplication/division inequality with positive coefficient",
-      "student_action": "isolate variable and preserve inequality direction",
-      "question_structure_id": "FORMULA-INVERSE-VARIABLE-01",
+      "evidence_job": "Use inverse operations correctly, including sign direction when needed.",
+      "student_action": "apply a valid inverse operation and preserve the correct inequality direction",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "equation",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2004,40 +1617,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_02",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-02",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-02",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Solve 4x ≤ 20.",
-      "student_html": "<p>Solve 4x ≤ 20.</p><div class=\"equation-card\">\\[4x\\le20\\]</div>",
-      "answer": "x ≤ 5",
-      "solution_text": "Divide both sides by positive 4; the inequality direction stays the same.",
-      "solution_html": "<p>Divide both sides by positive 4; the inequality direction stays the same.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Solve the inequality using inverse operations. Be careful with the inequality direction.",
+      "student_html": "<p>Solve the inequality using inverse operations. Be careful with the inequality direction.</p><div class=\"equation-card\">\\[3y-7&gt;8\\]</div>",
+      "answer": "y>5",
+      "solution_text": "Add 7, then divide by 3: 3y > 15, so y > 5.",
+      "solution_html": "<p>Add 7, then divide by 3: 3y &gt; 15, so y &gt; 5.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve 4x ≤ 20."
+            "text": "Solve the inequality using inverse operations. Be careful with the inequality direction."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "4x\\le20"
+            "latex": "3y-7>8"
           }
         }
       ],
-      "representation_data": {
-        "equation": "4x\\le20"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 2: one-step inequalities."
+      "instantiation_summary": "inverse operations inequality 3y-7>8"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-03",
@@ -2052,41 +1663,33 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Solve a one-step inequality."
+        "i_can_id": "U2-MG02-RIC03",
+        "source_i_can_index": 3,
+        "text": "Represent an inequality solution on a number line."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG02-IC02",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 2,
-          "text": "Reverse the inequality sign when multiplying or dividing by a negative number."
-        }
-      ],
-      "evidence_job": "solve a one-step inequality requiring division/multiplication by a negative",
-      "student_action": "isolate variable and reverse inequality direction",
-      "question_structure_id": "FORMULA-INVERSE-VARIABLE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "equation",
+      "supporting_i_cans": [],
+      "evidence_job": "Represent an inequality solution on a number line.",
+      "student_action": "graph the solution set on an answer-neutral number line",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_graph",
+      "representation_mode": "number_line",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
+          "route_type": "semantic_html",
+          "representation": "number_line",
+          "answer_neutral": true,
+          "student_constructed": true,
+          "response_surface": "blank number line"
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2095,40 +1698,47 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_03",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-03",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-03",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Solve -3x > 12.",
-      "student_html": "<p>Solve -3x &gt; 12.</p><div class=\"equation-card\">\\[-3x&gt;12\\]</div>",
-      "answer": "x < -4",
-      "solution_text": "Divide by -3 and reverse the inequality sign.",
-      "solution_html": "<p>Divide by -3 and reverse the inequality sign.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Graph the solution on the number line.",
+      "student_html": "<p>Graph the solution on the number line.</p><div class=\"equation-card\">\\[x\\ge 5\\]</div><div class=\"response-surface\" aria-label=\"Response area\"></div>",
+      "answer": "closed circle at 5, shade right",
+      "solution_text": "Use closed circle at 5, shade right. The open/closed endpoint matches whether equality is excluded/included.",
+      "solution_html": "<p>Use closed circle at 5, shade right. The open/closed endpoint matches whether equality is excluded/included.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve -3x > 12."
+            "text": "Graph the solution on the number line."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "-3x>12"
+            "latex": "x\\ge 5"
+          }
+        },
+        {
+          "type": "response_surface",
+          "data": {
+            "kind": "blank_number_line",
+            "semantic_mode": "number_line",
+            "x_min": -10,
+            "x_max": 10
           }
         }
       ],
-      "representation_data": {
-        "equation": "-3x>12"
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 3: one-step inequalities."
+      "instantiation_summary": "number-line graph of x\\ge 5"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-04",
@@ -2143,34 +1753,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Use an open or closed circle correctly."
+        "i_can_id": "U2-MG02-RIC04",
+        "source_i_can_index": 4,
+        "text": "Check whether a value belongs to the solution set."
       },
       "supporting_i_cans": [],
-      "evidence_job": "represent a strict inequality with an open circle",
-      "student_action": "construct the solution on a blank number line",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "number_line",
+      "evidence_job": "Check whether a value belongs to an inequality solution set.",
+      "student_action": "substitute a candidate value and decide whether it satisfies the inequality",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "student_constructed",
-          "representation": "number_line",
-          "answer_neutral": true,
-          "response_surface": "blank number line with scale only; no solution marked"
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_refresh",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2179,49 +1787,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_04",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-04",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-04",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Graph x < 3 on a number line.",
-      "student_html": "<p>Graph x &lt; 3 on a number line.</p><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "Open circle at 3; shade left.",
-      "solution_text": "Strict inequalities use an open circle; values less than 3 lie to the left.",
-      "solution_html": "<p>Strict inequalities use an open circle; values less than 3 lie to the left.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Does 3 belong to the solution set? Substitute and explain.",
+      "student_html": "<p>Does 3 belong to the solution set? Substitute and explain.</p><div class=\"equation-card\">\\[2x+1&lt;9\\]</div>",
+      "answer": "Yes.",
+      "solution_text": "Substituting 3 makes the inequality true, so 3 belongs to the solution set.",
+      "solution_html": "<p>Substituting 3 makes the inequality true, so 3 belongs to the solution set.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Graph x < 3 on a number line."
+            "text": "Does 3 belong to the solution set? Substitute and explain."
           }
         },
         {
-          "type": "response_surface",
+          "type": "equation",
           "data": {
-            "kind": "blank_number_line",
-            "min": -5,
-            "max": 8
+            "latex": "2x+1<9"
           }
         }
       ],
-      "representation_data": {
-        "response_surface": {
-          "kind": "blank_number_line",
-          "min": -5,
-          "max": 8
-        },
-        "number_line": {
-          "target": "x<3"
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 4: one-step inequalities."
+      "instantiation_summary": "solution-set check value 3 for 2x+1<9"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-05",
@@ -2236,34 +1833,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC03",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 3,
-        "text": "Use an open or closed circle correctly."
+        "i_can_id": "U2-MG02-RIC01",
+        "source_i_can_index": 1,
+        "text": "Solve a one-step inequality."
       },
       "supporting_i_cans": [],
-      "evidence_job": "represent an inclusive inequality with a closed circle",
-      "student_action": "construct the solution on a blank number line",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "evidence_job": "Solve a one-step inequality with a new representation or context at Review demand.",
+      "student_action": "use one inverse operation to isolate the variable",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "number_line",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "student_constructed",
-          "representation": "number_line",
-          "answer_neutral": true,
-          "response_surface": "blank number line with scale only; no solution marked"
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation_or_expression",
+          "answer_neutral": true
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2272,49 +1867,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_05",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-05",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-05",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Graph x ≥ -2 on a number line.",
-      "student_html": "<p>Graph x ≥ -2 on a number line.</p><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "Closed circle at -2; shade right.",
-      "solution_text": "Inclusive inequalities use a closed circle; values greater than or equal to -2 lie to the right.",
-      "solution_html": "<p>Inclusive inequalities use a closed circle; values greater than or equal to -2 lie to the right.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Solve the inequality.",
+      "student_html": "<p>Solve the inequality.</p><div class=\"equation-card\">\\[x+5&gt;12\\]</div>",
+      "answer": "x>7",
+      "solution_text": "Subtract 5 from both sides: x > 7.",
+      "solution_html": "<p>Subtract 5 from both sides: x &gt; 7.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Graph x ≥ -2 on a number line."
+            "text": "Solve the inequality."
           }
         },
         {
-          "type": "response_surface",
+          "type": "equation",
           "data": {
-            "kind": "blank_number_line",
-            "min": -8,
-            "max": 5
+            "latex": "x+5>12"
           }
         }
       ],
-      "representation_data": {
-        "response_surface": {
-          "kind": "blank_number_line",
-          "min": -8,
-          "max": 5
-        },
-        "number_line": {
-          "target": "x>=-2"
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 5: one-step inequalities."
+      "instantiation_summary": "one-step inequality x+5>12"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-06",
@@ -2329,53 +1913,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Solve a one-step inequality."
+        "i_can_id": "U2-MG02-RIC02",
+        "source_i_can_index": 2,
+        "text": "Use inverse operations correctly in an inequality."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG02-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Use an open or closed circle correctly."
-        },
-        {
-          "i_can_id": "U2-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Shade the correct direction on a number line."
-        }
-      ],
-      "evidence_job": "solve a one-step inequality and graph the solution",
-      "student_action": "solve then construct correct open/closed circle and shading",
-      "question_structure_id": "REPRESENTATION-CONSTRUCT-OR-CRITIQUE-01",
+      "supporting_i_cans": [],
+      "evidence_job": "Use inverse operations correctly, including sign direction when needed with a new representation or context at Review demand.",
+      "student_action": "apply a valid inverse operation and preserve the correct inequality direction",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
-          "representation": "number_line",
-          "answer_neutral": true,
-          "response_surface": "blank number line with scale only; no solution marked"
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2384,53 +1947,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_06",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-06",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-06",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "Solve 5 - x ≤ 9 and graph the solution.",
-      "student_html": "<p>Solve 5 - x ≤ 9 and graph the solution.</p><div class=\"equation-card\">\\[5-x\\le9\\]</div><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "x ≥ -4; closed circle at -4, shade right.",
-      "solution_text": "Subtract 5: -x≤4. Divide by -1 and reverse the sign: x≥-4.",
-      "solution_html": "<p>Subtract 5: -x≤4. Divide by -1 and reverse the sign: x≥-4.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Solve the inequality using inverse operations. Be careful with the inequality direction.",
+      "student_html": "<p>Solve the inequality using inverse operations. Be careful with the inequality direction.</p><div class=\"equation-card\">\\[-4x+5\\ge 17\\]</div>",
+      "answer": "x\\le -3",
+      "solution_text": "Subtract 5 to get -4x ≥ 12. Divide by -4 and reverse the inequality: x ≤ -3.",
+      "solution_html": "<p>Subtract 5 to get -4x ≥ 12. Divide by -4 and reverse the inequality: x ≤ -3.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "Solve 5 - x ≤ 9 and graph the solution."
+            "text": "Solve the inequality using inverse operations. Be careful with the inequality direction."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "5-x\\le9"
-          }
-        },
-        {
-          "type": "response_surface",
-          "data": {
-            "kind": "blank_number_line",
-            "min": -8,
-            "max": 4
+            "latex": "-4x+5\\ge 17"
           }
         }
       ],
-      "representation_data": {
-        "equation": "5-x\\le9",
-        "response_surface": {
-          "kind": "blank_number_line",
-          "min": -8,
-          "max": 4
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 6: one-step inequalities."
+      "instantiation_summary": "inverse operations inequality -4x+5\\ge 17"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-07",
@@ -2445,59 +1993,33 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC02",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 2,
-        "text": "Reverse the inequality sign when multiplying or dividing by a negative number."
+        "i_can_id": "U2-MG02-RIC03",
+        "source_i_can_index": 3,
+        "text": "Represent an inequality solution on a number line."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG02-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Use an open or closed circle correctly."
-        },
-        {
-          "i_can_id": "U2-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Shade the correct direction on a number line."
-        }
-      ],
-      "evidence_job": "diagnose a sign-reversal/number-line error in shown inequality work",
-      "student_action": "identify exact error, explain misconception, repair inequality and graph",
-      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "supporting_i_cans": [],
+      "evidence_job": "Represent an inequality solution on a number line with a new representation or context at Review demand.",
+      "student_action": "graph the solution set on an answer-neutral number line",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_graph",
+      "representation_mode": "number_line",
       "representation_need": "required",
       "representation_routes": [
         {
           "route_type": "semantic_html",
-          "representation": "worked_solution",
-          "answer_neutral": false,
-          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
-        },
-        {
-          "route_type": "math_expression",
-          "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
-          "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
           "representation": "number_line",
           "answer_neutral": true,
-          "response_surface": "blank number line with scale only; no solution marked"
+          "student_constructed": true,
+          "response_surface": "blank number line"
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2506,54 +2028,47 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_07",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-07",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-07",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A student solves -2x < 10 and writes x < -5, then shades left. Identify the error and correct the solution and graph.",
-      "student_html": "<p>A student solves -2x &lt; 10 and writes x &lt; -5, then shades left. Identify the error and correct the solution and graph.</p><div class=\"equation-card\">\\[-2x&lt;10\\]</div><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "The sign must reverse: x > -5; open circle at -5, shade right.",
-      "solution_text": "Dividing both sides by -2 reverses < to >.",
-      "solution_html": "<p>Dividing both sides by -2 reverses &lt; to &gt;.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Graph the solution on the number line.",
+      "student_html": "<p>Graph the solution on the number line.</p><div class=\"equation-card\">\\[x\\le -2\\]</div><div class=\"response-surface\" aria-label=\"Response area\"></div>",
+      "answer": "closed circle at -2, shade left",
+      "solution_text": "Use closed circle at -2, shade left. The open/closed endpoint matches whether equality is excluded/included.",
+      "solution_html": "<p>Use closed circle at -2, shade left. The open/closed endpoint matches whether equality is excluded/included.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A student solves -2x < 10 and writes x < -5, then shades left. Identify the error and correct the solution and graph."
+            "text": "Graph the solution on the number line."
           }
         },
         {
           "type": "equation",
           "data": {
-            "latex": "-2x<10"
+            "latex": "x\\le -2"
           }
         },
         {
           "type": "response_surface",
           "data": {
             "kind": "blank_number_line",
-            "min": -10,
-            "max": 5
+            "semantic_mode": "number_line",
+            "x_min": -10,
+            "x_max": 10
           }
         }
       ],
-      "representation_data": {
-        "equation": "-2x<10",
-        "shown_work": "x<-5",
-        "response_surface": {
-          "kind": "blank_number_line",
-          "min": -10,
-          "max": 5
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 7: one-step inequalities."
+      "instantiation_summary": "number-line graph of x\\le -2"
     },
     {
       "design_slot_id": "U1-S1.4-P1-REVIEW-08",
@@ -2568,58 +2083,32 @@
         "text": "Solve one-step inequalities and show the solution on a number line."
       },
       "primary_i_can": {
-        "i_can_id": "U2-MG02-IC01",
-        "i_can_id_basis": "derived_from_canonical_order",
-        "source_i_can_index": 1,
-        "text": "Solve a one-step inequality."
+        "i_can_id": "U2-MG02-RIC04",
+        "source_i_can_index": 4,
+        "text": "Check whether a value belongs to the solution set."
       },
-      "supporting_i_cans": [
-        {
-          "i_can_id": "U2-MG02-IC03",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 3,
-          "text": "Use an open or closed circle correctly."
-        },
-        {
-          "i_can_id": "U2-MG02-IC04",
-          "i_can_id_basis": "derived_from_canonical_order",
-          "source_i_can_index": 4,
-          "text": "Shade the correct direction on a number line."
-        }
-      ],
-      "evidence_job": "solve a simple contextual inequality and represent allowable values",
-      "student_action": "translate/solve and graph the solution set",
-      "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
-      "response_mode": "constructed_short",
-      "representation_mode": "mixed",
+      "supporting_i_cans": [],
+      "evidence_job": "Check whether a value belongs to an inequality solution set with a new representation or context at Review demand.",
+      "student_action": "substitute a candidate value and decide whether it satisfies the inequality",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+      "response_mode": "constructed_explanation",
+      "representation_mode": "inequality",
       "representation_need": "required",
       "representation_routes": [
         {
-          "route_type": "direct_text",
-          "answer_neutral": true,
-          "representation": "context"
-        },
-        {
           "route_type": "math_expression",
           "renderer": "MathJax-capable downstream shell",
-          "representation": "equation",
+          "representation": "equation_or_expression",
           "answer_neutral": true
-        },
-        {
-          "route_type": "student_constructed",
-          "representation": "number_line",
-          "answer_neutral": true,
-          "response_surface": "blank number line with scale only; no solution marked"
         }
       ],
-      "difficulty_intent": "reduced_support_review",
+      "difficulty_intent": "review_application",
       "variation_axes": {
         "allowed": [
           "values",
-          "givens_evidence_set",
+          "sign_pattern",
           "representation_values",
-          "context_evidence",
-          "direction"
+          "context"
         ],
         "required": [],
         "forbidden": [
@@ -2628,47 +2117,38 @@
           "answer_leaking_surface"
         ]
       },
-      "security_role": "instructional_practice",
-      "slot_role": "Review_08",
+      "security_role": "practice_public",
+      "slot_role": "practice_review",
       "item_id": "U1-S1.4-P1-REVIEW-08",
       "source_map_record_id": "U1-S1.4-P1-REVIEW-08",
-      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
-      "student_text": "A ride requires riders to be at least 48 inches tall. Write and solve an inequality for height h, then describe the number-line graph.",
-      "student_html": "<p>A ride requires riders to be at least 48 inches tall. Write and solve an inequality for height h, then describe the number-line graph.</p><div class=\"response-surface\" aria-label=\"Response area\"></div>",
-      "answer": "h ≥ 48; closed circle at 48 and shade right.",
-      "solution_text": "At least means greater than or equal to, so h≥48.",
-      "solution_html": "<p>At least means greater than or equal to, so h≥48.</p>",
+      "accepted_map_fingerprint": "16f0a4ee4c3e8af80322ee957b9638142a3bfa57a71313e8d12b8e6f54610663",
+      "student_text": "Does -1 belong to the solution set? Substitute and explain.",
+      "student_html": "<p>Does -1 belong to the solution set? Substitute and explain.</p><div class=\"equation-card\">\\[5-x&gt;8\\]</div>",
+      "answer": "No.",
+      "solution_text": "Substituting -1 makes the inequality false, so -1 does not belong to the solution set.",
+      "solution_html": "<p>Substituting -1 makes the inequality false, so -1 does not belong to the solution set.</p>",
       "choices": [],
       "prompt_blocks": [
         {
           "type": "prose",
           "data": {
-            "text": "A ride requires riders to be at least 48 inches tall. Write and solve an inequality for height h, then describe the number-line graph."
+            "text": "Does -1 belong to the solution set? Substitute and explain."
           }
         },
         {
-          "type": "response_surface",
+          "type": "equation",
           "data": {
-            "kind": "blank_number_line",
-            "min": 40,
-            "max": 60
+            "latex": "5-x>8"
           }
         }
       ],
-      "representation_data": {
-        "context": "Riders must be at least 48 inches tall.",
-        "response_surface": {
-          "kind": "blank_number_line",
-          "min": 40,
-          "max": 60
-        }
-      },
+      "representation_data": {},
       "representation_refs": [],
       "render_trace": {
-        "pilot_version": "0.6.4",
+        "pilot_version": "0.7.1",
         "graph_files": []
       },
-      "instantiation_summary": "Section 1.4 Review 8: one-step inequalities."
+      "instantiation_summary": "solution-set check value -1 for 5-x>8"
     }
   ]
 }
