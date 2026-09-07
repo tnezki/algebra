@@ -1,0 +1,604 @@
+{
+  "schema": "algebra-bank-exit/1.0",
+  "section": "1.4",
+  "records": [
+    {
+      "design_slot_id": "U1-S1.4-EXIT-Q1",
+      "destination": "Exit",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC03",
+        "i_can_id_basis": "derived_from_canonical_order",
+        "source_i_can_index": 3,
+        "text": "Read a graph using its scale."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 1,
+          "text": "Plot and read ordered pairs."
+        },
+        {
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 2,
+          "text": "Use the x- and y-axes correctly."
+        }
+      ],
+      "evidence_job": "Read a scaled coordinate graph accurately.",
+      "student_action": "read coordinates/features accurately from a non-unit-scale graph",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "graph",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "graph_scale",
+          "representation_values",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "official_exit",
+      "slot_role": "new_current_mastery",
+      "item_id": "U1-S1.4-EXIT-Q1",
+      "source_map_record_id": "U1-S1.4-EXIT-Q1",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "A point on the graph has x-coordinate -6. What is its ordered pair?",
+      "student_html": "<p>A point on the graph has x-coordinate -6. What is its ordered pair?</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_9ea35f9b37642877.png\" alt=\"Graph\"></div>",
+      "answer": "(-6, 4)",
+      "solution_text": "Using the scale, locate x = -6 and read the corresponding y-value, 4. The point is (-6, 4).",
+      "solution_html": "<p>Using the scale, locate x = -6 and read the corresponding y-value, 4. The point is (-6, 4).</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "A point on the graph has x-coordinate -6. What is its ordered pair?"
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "discrete",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": -8,
+              "x_max": 8,
+              "y_min": -8,
+              "y_max": 8
+            },
+            "scale": {
+              "x_step": 2,
+              "y_step": 2
+            },
+            "points": [
+              [
+                -6,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                6,
+                0
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "discrete",
+          "x_label": "x",
+          "y_label": "y",
+          "bounds": {
+            "x_min": -8,
+            "x_max": 8,
+            "y_min": -8,
+            "y_max": 8
+          },
+          "scale": {
+            "x_step": 2,
+            "y_step": 2
+          },
+          "points": [
+            [
+              -6,
+              4
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "connect_points": false
+        }
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_9ea35f9b37642877.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_9ea35f9b37642877.png"
+        ]
+      },
+      "instantiation_summary": "Scaled coordinate read with increments of 2."
+    },
+    {
+      "design_slot_id": "U1-S1.4-EXIT-Q2",
+      "destination": "Exit",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG01",
+        "title": "Coordinate-Plane Graphs",
+        "text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG01-IC04",
+        "i_can_id_basis": "derived_from_canonical_order",
+        "source_i_can_index": 4,
+        "text": "Identify and interpret intercepts when they are shown."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 1,
+          "text": "Plot and read ordered pairs."
+        },
+        {
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 2,
+          "text": "Use the x- and y-axes correctly."
+        }
+      ],
+      "evidence_job": "Identify and interpret intercepts from a coordinate graph.",
+      "student_action": "identify intercept(s) from a graph and interpret their meaning when contextualized",
+      "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "independent_mastery",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "graph_scale",
+          "representation_values",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "official_exit",
+      "slot_role": "new_current_mastery",
+      "item_id": "U1-S1.4-EXIT-Q2",
+      "source_map_record_id": "U1-S1.4-EXIT-Q2",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "The graph shows temperature change over time. Identify the y-intercept and explain what it means at time 0.",
+      "student_html": "<p>The graph shows temperature change over time. Identify the y-intercept and explain what it means at time 0.</p><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_be8e64e191552bb3.png\" alt=\"Graph\"></div>",
+      "answer": "(0, -3); the temperature change was -3°C at time 0.",
+      "solution_text": "The graph crosses the y-axis at -3, so the y-intercept is (0, -3). That is the starting temperature change.",
+      "solution_html": "<p>The graph crosses the y-axis at -3, so the y-intercept is (0, -3). That is the starting temperature change.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "The graph shows temperature change over time. Identify the y-intercept and explain what it means at time 0."
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "continuous",
+            "x_label": "time (h)",
+            "y_label": "temperature change (°C)",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 10,
+              "y_min": -4,
+              "y_max": 3
+            },
+            "scale": {
+              "x_step": 2,
+              "y_step": 1
+            },
+            "line": {
+              "slope": 0.5,
+              "intercept": -3
+            }
+          }
+        }
+      ],
+      "representation_data": {
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "continuous",
+          "x_label": "time (h)",
+          "y_label": "temperature change (°C)",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 10,
+            "y_min": -4,
+            "y_max": 3
+          },
+          "scale": {
+            "x_step": 2,
+            "y_step": 1
+          },
+          "line": {
+            "slope": 0.5,
+            "intercept": -3
+          }
+        },
+        "context": "Temperature change over time"
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_be8e64e191552bb3.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_be8e64e191552bb3.png"
+        ]
+      },
+      "instantiation_summary": "Contextual intercept read from a scaled graph."
+    },
+    {
+      "design_slot_id": "U1-S1.4-EXIT-Q3",
+      "destination": "Exit",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG02",
+        "title": "Slope in Four Views",
+        "text": "Find slope or rate of change from a graph, table, equation, or context."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG02-IC01",
+        "i_can_id_basis": "derived_from_canonical_order",
+        "source_i_can_index": 1,
+        "text": "Find slope from a graph."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 2,
+          "text": "Find slope from a table."
+        }
+      ],
+      "evidence_job": "Find the same rate from a graph and a table.",
+      "student_action": "complete a fresh parallel instance of the prior evidence job",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        }
+      ],
+      "difficulty_intent": "independent_mastery_parallel",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "official_exit_reassessment",
+      "slot_role": "previous_section_reassessment",
+      "item_id": "U1-S1.4-EXIT-Q3",
+      "source_map_record_id": "U1-S1.4-EXIT-Q3",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Find the rate of change from the graph and from the table. Do they agree?",
+      "student_html": "<p>Find the rate of change from the graph and from the table. Do they agree?</p><table class=\"values\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>10</td></tr><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>6</td></tr><tr><td>3</td><td>4</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_36000ecce41f4193.png\" alt=\"Graph\"></div>",
+      "answer": "-2; yes, both representations have rate -2.",
+      "solution_text": "In the table, y changes by -2 for each increase of 1 in x. The graph falls 2 units for every 1 unit to the right, so its slope is -2.",
+      "solution_html": "<p>In the table, y changes by -2 for each increase of 1 in x. The graph falls 2 units for every 1 unit to the right, so its slope is -2.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Find the rate of change from the graph and from the table. Do they agree?"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "x",
+              "y"
+            ],
+            "rows": [
+              [
+                0,
+                10
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "continuous",
+            "x_label": "x",
+            "y_label": "y",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 5,
+              "y_min": 0,
+              "y_max": 12
+            },
+            "scale": {
+              "x_step": 1,
+              "y_step": 1
+            },
+            "line": {
+              "slope": -2,
+              "intercept": 10
+            }
+          }
+        }
+      ],
+      "representation_data": {
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "continuous",
+          "x_label": "x",
+          "y_label": "y",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 5,
+            "y_min": 0,
+            "y_max": 12
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 1
+          },
+          "line": {
+            "slope": -2,
+            "intercept": 10
+          }
+        },
+        "table": {
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        }
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_36000ecce41f4193.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_36000ecce41f4193.png"
+        ]
+      },
+      "instantiation_summary": "Fresh graph-table rate reassessment with negative rate."
+    },
+    {
+      "design_slot_id": "U1-S1.4-EXIT-Q4",
+      "destination": "Exit",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Mastery",
+      "target": null,
+      "mastery_goal": {
+        "goal_id": "U1-MG02",
+        "title": "Slope in Four Views",
+        "text": "Find slope or rate of change from a graph, table, equation, or context."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1-MG02-IC03",
+        "i_can_id_basis": "derived_from_canonical_order",
+        "source_i_can_index": 3,
+        "text": "Find slope from an equation."
+      },
+      "supporting_i_cans": [
+        {
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_basis": "derived_from_canonical_order",
+          "source_i_can_index": 4,
+          "text": "Find and interpret rate of change from a context."
+        }
+      ],
+      "evidence_job": "Use an equation to find rate and interpret the rate in context.",
+      "student_action": "complete a fresh parallel instance of the prior evidence job",
+      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "independent_mastery_parallel",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "graph_scale",
+          "context"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "official_exit_reassessment",
+      "slot_role": "previous_section_reassessment",
+      "item_id": "U1-S1.4-EXIT-Q4",
+      "source_map_record_id": "U1-S1.4-EXIT-Q4",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "The distance remaining on a trail is modeled by d = 18 - 3t, where t is time in hours and d is miles remaining. What is the rate of change, and what does it mean?",
+      "student_html": "<p>The distance remaining on a trail is modeled by d = 18 - 3t, where t is time in hours and d is miles remaining. What is the rate of change, and what does it mean?</p><div class=\"equation-card\">\\[d=18-3t\\]</div>",
+      "answer": "-3 miles per hour; the remaining distance decreases by 3 miles each hour.",
+      "solution_text": "The coefficient of t is -3, so the rate of change is -3 miles per hour. The negative sign means the distance remaining decreases.",
+      "solution_html": "<p>The coefficient of t is -3, so the rate of change is -3 miles per hour. The negative sign means the distance remaining decreases.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "The distance remaining on a trail is modeled by d = 18 - 3t, where t is time in hours and d is miles remaining. What is the rate of change, and what does it mean?"
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "d=18-3t"
+          }
+        }
+      ],
+      "representation_data": {
+        "equation": "d=18-3t",
+        "context": "Distance remaining on a trail"
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "Negative rate interpreted from an equation."
+    }
+  ]
+}

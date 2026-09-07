@@ -1,0 +1,703 @@
+{
+  "schema": "algebra-bank-wtc/1.0",
+  "section": "1.1",
+  "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+  "shared_stimulus": {
+    "student_text": "A community garden charges a $6 membership fee plus $2 for each seed packet. Let x be the number of seed packets and y be the total cost in dollars. A partial table shows x = 0, 2, 5 with y = 6, 10, 16.",
+    "student_html": "<p>A community garden charges a $6 membership fee plus $2 for each seed packet. Let x be the number of seed packets and y be the total cost in dollars. A partial table shows x = 0, 2, 5 with y = 6, 10, 16.</p><table class=\"values\"><thead><tr><th>seed packets x</th><th>total cost y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></tbody></table>",
+    "content_blocks": [
+      {
+        "type": "prose",
+        "data": {
+          "text": "A community garden charges a $6 membership fee plus $2 for each seed packet. Let x be the number of seed packets and y be the total cost in dollars. A partial table shows x = 0, 2, 5 with y = 6, 10, 16."
+        }
+      },
+      {
+        "type": "table",
+        "data": {
+          "headers": [
+            "seed packets x",
+            "total cost y"
+          ],
+          "rows": [
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        }
+      }
+    ],
+    "representation_refs": []
+  },
+  "parts": [
+    {
+      "design_slot_id": "U1-S1.1-WTC-A",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.1-LT",
+        "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG01",
+        "title": "Connect Representations",
+        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.1-INTRO-IC01",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 1,
+        "text": "Find matching values across different representations."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "find matching values between two supplied views",
+      "student_action": "identify corresponding input/output evidence",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        },
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part A",
+      "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part A",
+      "wtc_id": "U1-S1.1-WTC",
+      "item_id": "U1-S1.1-WTC-A",
+      "source_map_record_id": "U1-S1.1-WTC-A",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Using the shared garden situation, identify one input-output pair that appears in both the context/table relationship and explain what the two numbers mean.",
+      "student_html": "<p>Using the shared garden situation, identify one input-output pair that appears in both the context/table relationship and explain what the two numbers mean.</p><table class=\"values\"><thead><tr><th>seed packets x</th><th>total cost y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></tbody></table>",
+      "answer": "Example: (2,10): 2 seed packets cost $10 total.",
+      "solution_text": "The table directly pairs input 2 with output 10, and the context identifies x as packets and y as total cost.",
+      "solution_html": "<p>The table directly pairs input 2 with output 10, and the context identifies x as packets and y as total cost.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Using the shared garden situation, identify one input-output pair that appears in both the context/table relationship and explain what the two numbers mean."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "seed packets x",
+              "total cost y"
+            ],
+            "rows": [
+              [
+                0,
+                6
+              ],
+              [
+                2,
+                10
+              ],
+              [
+                5,
+                16
+              ]
+            ]
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "seed packets x",
+            "total cost y"
+          ],
+          "rows": [
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        },
+        "context": "Garden cost: $6 membership plus $2 per seed packet."
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.1 Part A uses the shared stimulus."
+    },
+    {
+      "design_slot_id": "U1-S1.1-WTC-B",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.1-LT",
+        "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG01",
+        "title": "Connect Representations",
+        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.1-INTRO-IC02",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 2,
+        "text": "Create a table or graph from another representation."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "create a missing representation of the shared relationship",
+      "student_action": "construct an answer-neutral graph or table",
+      "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+      "response_mode": "constructed_graph",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": true,
+          "response_surface": "registered blank coordinate grid / graphing surface; no answer data plotted"
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part B",
+      "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part B",
+      "wtc_id": "U1-S1.1-WTC",
+      "item_id": "U1-S1.1-WTC-B",
+      "source_map_record_id": "U1-S1.1-WTC-B",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Create a graph of the shared garden relationship using the table values. Label both axes and use a scale that shows all points.",
+      "student_html": "<p>Create a graph of the shared garden relationship using the table values. Label both axes and use a scale that shows all points.</p><table class=\"values\"><thead><tr><th>seed packets x</th><th>total cost y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_cd503b34ffc035d7.png\" alt=\"Graph\"></div><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_768bcb4309a14cfe.png\" alt=\"Response graphing surface\"></div>",
+      "answer": "A graph through (0,6), (2,10), and (5,16), consistent with rate 2 and start 6.",
+      "solution_text": "Plot the table pairs as ordered pairs. The points lie on the linear relationship y = 2x + 6.",
+      "solution_html": "<p>Plot the table pairs as ordered pairs. The points lie on the linear relationship y = 2x + 6.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Create a graph of the shared garden relationship using the table values. Label both axes and use a scale that shows all points."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "seed packets x",
+              "total cost y"
+            ],
+            "rows": [
+              [
+                0,
+                6
+              ],
+              [
+                2,
+                10
+              ],
+              [
+                5,
+                16
+              ]
+            ]
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "discrete",
+            "x_label": "seed packets",
+            "y_label": "cost ($)",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 6,
+              "y_min": 0,
+              "y_max": 20
+            },
+            "scale": {
+              "x_step": 1,
+              "y_step": 1
+            },
+            "points": [],
+            "connect_points": false
+          }
+        },
+        {
+          "type": "response_surface",
+          "data": {
+            "kind": "blank_coordinate_grid",
+            "x_min": 0,
+            "x_max": 6,
+            "y_min": 0,
+            "y_max": 20
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "seed packets x",
+            "total cost y"
+          ],
+          "rows": [
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        },
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "discrete",
+          "x_label": "seed packets",
+          "y_label": "cost ($)",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 6,
+            "y_min": 0,
+            "y_max": 20
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 1
+          },
+          "points": [],
+          "connect_points": false
+        },
+        "response_surface": {
+          "kind": "blank_coordinate_grid",
+          "x_min": 0,
+          "x_max": 6,
+          "y_min": 0,
+          "y_max": 20
+        }
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_cd503b34ffc035d7.png"
+        },
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_768bcb4309a14cfe.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_cd503b34ffc035d7.png",
+          "figures/graph_768bcb4309a14cfe.png"
+        ]
+      },
+      "instantiation_summary": "WTC 1.1 Part B creates a missing graph."
+    },
+    {
+      "design_slot_id": "U1-S1.1-WTC-C",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.1-LT",
+        "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG01",
+        "title": "Connect Representations",
+        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.1-INTRO-IC03",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 3,
+        "text": "Check whether two representations describe the same relationship."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "check whether an additional rule/equation belongs to the shared relationship",
+      "student_action": "compare values/pattern and justify agreement or mismatch",
+      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part C",
+      "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part C",
+      "wtc_id": "U1-S1.1-WTC",
+      "item_id": "U1-S1.1-WTC-C",
+      "source_map_record_id": "U1-S1.1-WTC-C",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "A student proposes y = 3x + 6 as another equation for the shared garden relationship. Does that equation belong to the same relationship? Use a table value to justify.",
+      "student_html": "<p>A student proposes y = 3x + 6 as another equation for the shared garden relationship. Does that equation belong to the same relationship? Use a table value to justify.</p><table class=\"values\"><thead><tr><th>seed packets x</th><th>total cost y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></tbody></table><div class=\"equation-card\">\\[y=3x+6\\]</div>",
+      "answer": "No.",
+      "solution_text": "For x = 2, the proposed equation gives 12, but the shared table gives 10. The rate should be 2, not 3.",
+      "solution_html": "<p>For x = 2, the proposed equation gives 12, but the shared table gives 10. The rate should be 2, not 3.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "A student proposes y = 3x + 6 as another equation for the shared garden relationship. Does that equation belong to the same relationship? Use a table value to justify."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "seed packets x",
+              "total cost y"
+            ],
+            "rows": [
+              [
+                0,
+                6
+              ],
+              [
+                2,
+                10
+              ],
+              [
+                5,
+                16
+              ]
+            ]
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=3x+6"
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "seed packets x",
+            "total cost y"
+          ],
+          "rows": [
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        },
+        "equation": "y=3x+6"
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.1 Part C critiques a candidate equation."
+    },
+    {
+      "design_slot_id": "U1-S1.1-WTC-D",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.1",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.1-LT",
+        "text": "Connect tables, graphs, equations or rules, and contexts that represent the same relationship."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG01",
+        "title": "Connect Representations",
+        "text": "Connect tables, graphs, equations/rules, function notation, and contexts for the same relationship."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.1-INTRO-IC04",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 4,
+        "text": "Use values, rate, or pattern as evidence."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "use rate or pattern as evidence about the shared relationship",
+      "student_action": "extract and explain a rate/pattern feature",
+      "question_structure_id": "REPRESENTATION-READ-THEN-CALCULATE-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        },
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part D",
+      "shared_stimulus_id": "U1-S1.1-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part D",
+      "wtc_id": "U1-S1.1-WTC",
+      "item_id": "U1-S1.1-WTC-D",
+      "source_map_record_id": "U1-S1.1-WTC-D",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Use the shared garden representations to state the rate of change and explain what it means in context.",
+      "student_html": "<p>Use the shared garden representations to state the rate of change and explain what it means in context.</p><table class=\"values\"><thead><tr><th>seed packets x</th><th>total cost y</th></tr></thead><tbody><tr><td>0</td><td>6</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_b4c8b60230141dfc.png\" alt=\"Graph\"></div>",
+      "answer": "2 dollars per seed packet.",
+      "solution_text": "The total increases from 6 to 10 when packets increase from 0 to 2, giving rate 4/2 = 2. Each additional seed packet adds $2.",
+      "solution_html": "<p>The total increases from 6 to 10 when packets increase from 0 to 2, giving rate 4/2 = 2. Each additional seed packet adds $2.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Use the shared garden representations to state the rate of change and explain what it means in context."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "seed packets x",
+              "total cost y"
+            ],
+            "rows": [
+              [
+                0,
+                6
+              ],
+              [
+                2,
+                10
+              ],
+              [
+                5,
+                16
+              ]
+            ]
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "continuous",
+            "x_label": "seed packets",
+            "y_label": "cost ($)",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 6,
+              "y_min": 0,
+              "y_max": 20
+            },
+            "scale": {
+              "x_step": 1,
+              "y_step": 1
+            },
+            "line": {
+              "slope": 2,
+              "intercept": 6
+            }
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "seed packets x",
+            "total cost y"
+          ],
+          "rows": [
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              16
+            ]
+          ]
+        },
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "continuous",
+          "x_label": "seed packets",
+          "y_label": "cost ($)",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 6,
+            "y_min": 0,
+            "y_max": 20
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 1
+          },
+          "line": {
+            "slope": 2,
+            "intercept": 6
+          }
+        },
+        "context": "Garden cost: $6 membership plus $2 per seed packet."
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_b4c8b60230141dfc.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_b4c8b60230141dfc.png"
+        ]
+      },
+      "instantiation_summary": "WTC 1.1 Part D uses rate evidence."
+    }
+  ]
+}
