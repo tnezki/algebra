@@ -1,0 +1,817 @@
+{
+  "schema": "algebra-bank-wtc/1.0",
+  "section": "1.3",
+  "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+  "shared_stimulus": {
+    "student_text": "A plant population is recorded once per week. The table shows 50, 75, 112.5, and 168.75 plants for weeks 0, 1, 2, and 3. A graph of the same data curves upward as the weekly increases grow.",
+    "student_html": "<p>A plant population is recorded once per week. The table shows 50, 75, 112.5, and 168.75 plants for weeks 0, 1, 2, and 3. A graph of the same data curves upward as the weekly increases grow.</p><table class=\"values\"><thead><tr><th>week</th><th>population</th></tr></thead><tbody><tr><td>0</td><td>50</td></tr><tr><td>1</td><td>75</td></tr><tr><td>2</td><td>112.5</td></tr><tr><td>3</td><td>168.75</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_05ec9e3dd6ed880d.png\" alt=\"Graph\"></div>",
+    "content_blocks": [
+      {
+        "type": "prose",
+        "data": {
+          "text": "A plant population is recorded once per week. The table shows 50, 75, 112.5, and 168.75 plants for weeks 0, 1, 2, and 3. A graph of the same data curves upward as the weekly increases grow."
+        }
+      },
+      {
+        "type": "table",
+        "data": {
+          "headers": [
+            "week",
+            "population"
+          ],
+          "rows": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ]
+        }
+      },
+      {
+        "type": "graph",
+        "data": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "discrete",
+          "x_label": "week",
+          "y_label": "population",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 4,
+            "y_min": 0,
+            "y_max": 200
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 25
+          },
+          "points": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ],
+          "connect_points": false
+        }
+      }
+    ],
+    "representation_refs": [
+      {
+        "type": "generated_graph",
+        "file": "figures/graph_05ec9e3dd6ed880d.png"
+      }
+    ]
+  },
+  "parts": [
+    {
+      "design_slot_id": "U1-S1.3-WTC-A",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.3-LT",
+        "text": "Notice how common function families change in different ways."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.3-INTRO-IC02",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 2,
+        "text": "Notice basic quadratic, exponential, and absolute-value shapes or patterns."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "identify the most likely function family",
+      "student_action": "classify using additive/multiplicative/shape evidence",
+      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part A",
+      "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part A",
+      "wtc_id": "U1-S1.3-WTC",
+      "item_id": "U1-S1.3-WTC-A",
+      "source_map_record_id": "U1-S1.3-WTC-A",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Which function family is most likely for the shared plant-population data: linear, quadratic, exponential, or absolute value?",
+      "student_html": "<p>Which function family is most likely for the shared plant-population data: linear, quadratic, exponential, or absolute value?</p><table class=\"values\"><thead><tr><th>week</th><th>population</th></tr></thead><tbody><tr><td>0</td><td>50</td></tr><tr><td>1</td><td>75</td></tr><tr><td>2</td><td>112.5</td></tr><tr><td>3</td><td>168.75</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_05ec9e3dd6ed880d.png\" alt=\"Graph\"></div>",
+      "answer": "Exponential.",
+      "solution_text": "The outputs are multiplied by 1.5 each week, which is constant multiplicative change.",
+      "solution_html": "<p>The outputs are multiplied by 1.5 each week, which is constant multiplicative change.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Which function family is most likely for the shared plant-population data: linear, quadratic, exponential, or absolute value?"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "week",
+              "population"
+            ],
+            "rows": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ]
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "discrete",
+            "x_label": "week",
+            "y_label": "population",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 4,
+              "y_min": 0,
+              "y_max": 200
+            },
+            "scale": {
+              "x_step": 1,
+              "y_step": 25
+            },
+            "points": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "week",
+            "population"
+          ],
+          "rows": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ]
+        },
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "discrete",
+          "x_label": "week",
+          "y_label": "population",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 4,
+            "y_min": 0,
+            "y_max": 200
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 25
+          },
+          "points": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ],
+          "connect_points": false
+        }
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_05ec9e3dd6ed880d.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_05ec9e3dd6ed880d.png"
+        ]
+      },
+      "instantiation_summary": "WTC 1.3 Part A family identification."
+    },
+    {
+      "design_slot_id": "U1-S1.3-WTC-B",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.3-LT",
+        "text": "Notice how common function families change in different ways."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.3-INTRO-IC03",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 3,
+        "text": "Use a table, graph, equation, or context as evidence."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "cite evidence from the shared table/graph for the classification",
+      "student_action": "name specific changes/features supporting the family",
+      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "registered_tool",
+          "tool_key": "graph_tool",
+          "tool_path": "Tools/~graph_tool_v12.py",
+          "representation": "graph",
+          "answer_neutral": true,
+          "student_constructed": false
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part B",
+      "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part B",
+      "wtc_id": "U1-S1.3-WTC",
+      "item_id": "U1-S1.3-WTC-B",
+      "source_map_record_id": "U1-S1.3-WTC-B",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Cite two pieces of evidence from the shared table or graph that support your classification.",
+      "student_html": "<p>Cite two pieces of evidence from the shared table or graph that support your classification.</p><table class=\"values\"><thead><tr><th>week</th><th>population</th></tr></thead><tbody><tr><td>0</td><td>50</td></tr><tr><td>1</td><td>75</td></tr><tr><td>2</td><td>112.5</td></tr><tr><td>3</td><td>168.75</td></tr></tbody></table><div class=\"representation\"><img class=\"graph-img\" src=\"figures/graph_05ec9e3dd6ed880d.png\" alt=\"Graph\"></div>",
+      "answer": "Example: each population is 1.5 times the previous value, and the graph curves upward with increasing additive changes.",
+      "solution_text": "Constant multiplicative change supports exponential growth; the curved graph is consistent with that pattern.",
+      "solution_html": "<p>Constant multiplicative change supports exponential growth; the curved graph is consistent with that pattern.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Cite two pieces of evidence from the shared table or graph that support your classification."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "week",
+              "population"
+            ],
+            "rows": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ]
+          }
+        },
+        {
+          "type": "graph",
+          "data": {
+            "kind": "coordinate_graph",
+            "semantic_mode": "discrete",
+            "x_label": "week",
+            "y_label": "population",
+            "bounds": {
+              "x_min": 0,
+              "x_max": 4,
+              "y_min": 0,
+              "y_max": 200
+            },
+            "scale": {
+              "x_step": 1,
+              "y_step": 25
+            },
+            "points": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ],
+            "connect_points": false
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "week",
+            "population"
+          ],
+          "rows": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ]
+        },
+        "graph": {
+          "kind": "coordinate_graph",
+          "semantic_mode": "discrete",
+          "x_label": "week",
+          "y_label": "population",
+          "bounds": {
+            "x_min": 0,
+            "x_max": 4,
+            "y_min": 0,
+            "y_max": 200
+          },
+          "scale": {
+            "x_step": 1,
+            "y_step": 25
+          },
+          "points": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ],
+          "connect_points": false
+        }
+      },
+      "representation_refs": [
+        {
+          "type": "generated_graph",
+          "file": "figures/graph_05ec9e3dd6ed880d.png"
+        }
+      ],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": [
+          "figures/graph_05ec9e3dd6ed880d.png"
+        ]
+      },
+      "instantiation_summary": "WTC 1.3 Part B evidence citation."
+    },
+    {
+      "design_slot_id": "U1-S1.3-WTC-C",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.3-LT",
+        "text": "Notice how common function families change in different ways."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.3-INTRO-IC03",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 3,
+        "text": "Use a table, graph, equation, or context as evidence."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "compare the shared relationship with a second candidate representation",
+      "student_action": "determine whether the candidate could represent the same pattern",
+      "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "equation",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part C",
+      "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part C",
+      "wtc_id": "U1-S1.3-WTC",
+      "item_id": "U1-S1.3-WTC-C",
+      "source_map_record_id": "U1-S1.3-WTC-C",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "A second candidate model is y = 50 + 25x. Compare it with the shared data. Does it represent the same relationship?",
+      "student_html": "<p>A second candidate model is y = 50 + 25x. Compare it with the shared data. Does it represent the same relationship?</p><table class=\"values\"><thead><tr><th>week</th><th>population</th></tr></thead><tbody><tr><td>0</td><td>50</td></tr><tr><td>1</td><td>75</td></tr><tr><td>2</td><td>112.5</td></tr><tr><td>3</td><td>168.75</td></tr></tbody></table><div class=\"equation-card\">\\[y=50+25x\\]</div>",
+      "answer": "No.",
+      "solution_text": "The linear candidate gives 100 at x=2, while the shared table gives 112.5. It also adds 25 each step instead of multiplying by 1.5.",
+      "solution_html": "<p>The linear candidate gives 100 at x=2, while the shared table gives 112.5. It also adds 25 each step instead of multiplying by 1.5.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "A second candidate model is y = 50 + 25x. Compare it with the shared data. Does it represent the same relationship?"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "week",
+              "population"
+            ],
+            "rows": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ]
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "y=50+25x"
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "week",
+            "population"
+          ],
+          "rows": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ]
+        },
+        "equation": "y=50+25x"
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.3 Part C compares a candidate representation."
+    },
+    {
+      "design_slot_id": "U1-S1.3-WTC-D",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.3",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.3-LT",
+        "text": "Notice how common function families change in different ways."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG02",
+        "title": "Understand Functions and Families",
+        "text": "Use function notation and key features to describe functions and recognize common function families."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.3-INTRO-IC04",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 4,
+        "text": "Explain why one family is more likely than another."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "justify why a competing family is less appropriate",
+      "student_action": "use the shared evidence to reject a plausible alternative",
+      "question_structure_id": "MODEL-SELECT-BEST-FIT-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html_table",
+          "representation": "table",
+          "answer_neutral": true,
+          "response_surface": null
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part D",
+      "shared_stimulus_id": "U1-S1.3-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part D",
+      "wtc_id": "U1-S1.3-WTC",
+      "item_id": "U1-S1.3-WTC-D",
+      "source_map_record_id": "U1-S1.3-WTC-D",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Explain why a linear family is less appropriate than an exponential family for the shared data.",
+      "student_html": "<p>Explain why a linear family is less appropriate than an exponential family for the shared data.</p><table class=\"values\"><thead><tr><th>week</th><th>population</th></tr></thead><tbody><tr><td>0</td><td>50</td></tr><tr><td>1</td><td>75</td></tr><tr><td>2</td><td>112.5</td></tr><tr><td>3</td><td>168.75</td></tr></tbody></table>",
+      "answer": "The changes are multiplicative rather than additive.",
+      "solution_text": "A linear model would have constant first differences. Here the differences grow, while the ratio between consecutive outputs stays 1.5.",
+      "solution_html": "<p>A linear model would have constant first differences. Here the differences grow, while the ratio between consecutive outputs stays 1.5.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Explain why a linear family is less appropriate than an exponential family for the shared data."
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "headers": [
+              "week",
+              "population"
+            ],
+            "rows": [
+              [
+                0,
+                50
+              ],
+              [
+                1,
+                75
+              ],
+              [
+                2,
+                112.5
+              ],
+              [
+                3,
+                168.75
+              ]
+            ]
+          }
+        }
+      ],
+      "representation_data": {
+        "table": {
+          "headers": [
+            "week",
+            "population"
+          ],
+          "rows": [
+            [
+              0,
+              50
+            ],
+            [
+              1,
+              75
+            ],
+            [
+              2,
+              112.5
+            ],
+            [
+              3,
+              168.75
+            ]
+          ]
+        },
+        "context": "Plant population recorded weekly."
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.3 Part D rejects competing family."
+    }
+  ]
+}

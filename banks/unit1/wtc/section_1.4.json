@@ -1,0 +1,401 @@
+{
+  "schema": "algebra-bank-wtc/1.0",
+  "section": "1.4",
+  "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+  "shared_stimulus": {
+    "student_text": "A school store models a discount expression as 3(2x - 5) + 4x + 7, where x represents the number of item groups.",
+    "student_html": "<p>A school store models a discount expression as 3(2x - 5) + 4x + 7, where x represents the number of item groups.</p><div class=\"equation-card\">\\[3(2x-5)+4x+7\\]</div>",
+    "content_blocks": [
+      {
+        "type": "prose",
+        "data": {
+          "text": "A school store models a discount expression as 3(2x - 5) + 4x + 7, where x represents the number of item groups."
+        }
+      },
+      {
+        "type": "equation",
+        "data": {
+          "latex": "3(2x-5)+4x+7"
+        }
+      }
+    ],
+    "representation_refs": []
+  },
+  "parts": [
+    {
+      "design_slot_id": "U1-S1.4-WTC-A",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.4-LT",
+        "text": "Read, evaluate, and rewrite expressions without changing their value."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG03",
+        "title": "Equivalent Expressions",
+        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.4-INTRO-IC01",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 1,
+        "text": "Identify terms, coefficients, and factors."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "identify terms, coefficients, and factors in the shared expression",
+      "student_action": "label requested structural elements",
+      "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part A",
+      "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part A",
+      "wtc_id": "U1-S1.4-WTC",
+      "item_id": "U1-S1.4-WTC-A",
+      "source_map_record_id": "U1-S1.4-WTC-A",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "In the shared expression 3(2x - 5) + 4x + 7, identify the coefficient of x inside the parentheses, the outside factor, and the constant term outside the parentheses.",
+      "student_html": "<p>In the shared expression 3(2x - 5) + 4x + 7, identify the coefficient of x inside the parentheses, the outside factor, and the constant term outside the parentheses.</p><div class=\"equation-card\">\\[3(2x-5)+4x+7\\]</div>",
+      "answer": "Coefficient 2; outside factor 3; outside constant 7.",
+      "solution_text": "Read each factor/term directly from the expression structure.",
+      "solution_html": "<p>Read each factor/term directly from the expression structure.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "In the shared expression 3(2x - 5) + 4x + 7, identify the coefficient of x inside the parentheses, the outside factor, and the constant term outside the parentheses."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "3(2x-5)+4x+7"
+          }
+        }
+      ],
+      "representation_data": {
+        "equation": "3(2x-5)+4x+7",
+        "context": "School-store discount expression."
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.4 Part A expression vocabulary."
+    },
+    {
+      "design_slot_id": "U1-S1.4-WTC-B",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.4-LT",
+        "text": "Read, evaluate, and rewrite expressions without changing their value."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG03",
+        "title": "Equivalent Expressions",
+        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.4-INTRO-IC02",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 2,
+        "text": "Substitute values into an expression."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "evaluate the shared expression for a given value",
+      "student_action": "substitute and use order of operations",
+      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "expression",
+          "answer_neutral": true
+        },
+        {
+          "route_type": "direct_text",
+          "answer_neutral": true,
+          "representation": "context"
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part B",
+      "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part B",
+      "wtc_id": "U1-S1.4-WTC",
+      "item_id": "U1-S1.4-WTC-B",
+      "source_map_record_id": "U1-S1.4-WTC-B",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Evaluate the shared expression when x = 4.",
+      "student_html": "<p>Evaluate the shared expression when x = 4.</p><div class=\"equation-card\">\\[3(2(4)-5)+4(4)+7\\]</div>",
+      "answer": "32",
+      "solution_text": "3(8-5)+16+7 = 9+16+7 = 32.",
+      "solution_html": "<p>3(8-5)+16+7 = 9+16+7 = 32.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Evaluate the shared expression when x = 4."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "3(2(4)-5)+4(4)+7"
+          }
+        }
+      ],
+      "representation_data": {
+        "equation": "3(2(4)-5)+4(4)+7",
+        "context": "School-store discount expression."
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.4 Part B substitution."
+    },
+    {
+      "design_slot_id": "U1-S1.4-WTC-C",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.4-LT",
+        "text": "Read, evaluate, and rewrite expressions without changing their value."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG03",
+        "title": "Equivalent Expressions",
+        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.4-INTRO-IC03",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 3,
+        "text": "Combine like terms."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "rewrite the shared expression in an equivalent form",
+      "student_action": "combine like terms and/or distribute correctly",
+      "question_structure_id": "FORMULA-DIRECT-RELATIONSHIP-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "expression",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part C",
+      "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part C",
+      "wtc_id": "U1-S1.4-WTC",
+      "item_id": "U1-S1.4-WTC-C",
+      "source_map_record_id": "U1-S1.4-WTC-C",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "Rewrite the shared expression in simplest equivalent form.",
+      "student_html": "<p>Rewrite the shared expression in simplest equivalent form.</p><div class=\"equation-card\">\\[3(2x-5)+4x+7\\]</div>",
+      "answer": "10x - 8",
+      "solution_text": "Distribute: 6x-15+4x+7. Combine like terms to get 10x-8.",
+      "solution_html": "<p>Distribute: 6x-15+4x+7. Combine like terms to get 10x-8.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "Rewrite the shared expression in simplest equivalent form."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "3(2x-5)+4x+7"
+          }
+        }
+      ],
+      "representation_data": {
+        "equation": "3(2x-5)+4x+7"
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.4 Part C combines like terms."
+    },
+    {
+      "design_slot_id": "U1-S1.4-WTC-D",
+      "destination": "WTC",
+      "unit": 1,
+      "section": "1.4",
+      "stage": "Intro",
+      "target": {
+        "id": "U1.4-LT",
+        "text": "Read, evaluate, and rewrite expressions without changing their value."
+      },
+      "mastery_goal": {
+        "goal_id": "U3-MG03",
+        "title": "Equivalent Expressions",
+        "text": "Use structure, like terms, the distributive property, and substitution to make equivalent expressions."
+      },
+      "primary_i_can": {
+        "i_can_id": "U1.4-INTRO-IC04",
+        "i_can_id_basis": "derived_from_exact_section_plan_order",
+        "source_i_can_index": 4,
+        "text": "Use the distributive property correctly."
+      },
+      "supporting_i_cans": [],
+      "evidence_job": "diagnose a specific shown rewrite error",
+      "student_action": "identify exact error, explain misconception, and repair the expression",
+      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+      "response_mode": "constructed_short",
+      "representation_mode": "mixed",
+      "representation_need": "required",
+      "representation_routes": [
+        {
+          "route_type": "semantic_html",
+          "representation": "worked_solution",
+          "answer_neutral": false,
+          "note": "Given work intentionally contains the specified misconception; not an answer to the requested diagnosis/repair."
+        },
+        {
+          "route_type": "math_expression",
+          "renderer": "MathJax-capable downstream shell",
+          "representation": "expression",
+          "answer_neutral": true
+        }
+      ],
+      "difficulty_intent": "instructional_decomposition",
+      "variation_axes": {
+        "allowed": [
+          "values",
+          "representation_values",
+          "context_evidence"
+        ],
+        "required": [],
+        "forbidden": [
+          "change_target",
+          "change_evidence_job",
+          "answer_leaking_surface"
+        ]
+      },
+      "security_role": "instructional_wtc",
+      "slot_role": "Part D",
+      "shared_stimulus_id": "U1-S1.4-WTC-STIM",
+      "depends_on": [],
+      "part_label": "Part D",
+      "wtc_id": "U1-S1.4-WTC",
+      "item_id": "U1-S1.4-WTC-D",
+      "source_map_record_id": "U1-S1.4-WTC-D",
+      "accepted_map_fingerprint": "ec5060a445fc76b03ea2c68da30bc1ef7ebf19cb99335a17d5ff9e03e5a58278",
+      "student_text": "A student rewrites 3(2x - 5) + 4x + 7 as 6x - 5 + 4x + 7. Identify the error and give the corrected simplified expression.",
+      "student_html": "<p>A student rewrites 3(2x - 5) + 4x + 7 as 6x - 5 + 4x + 7. Identify the error and give the corrected simplified expression.</p><div class=\"equation-card\">\\[3(2x-5)+4x+7\\]</div>",
+      "answer": "The student failed to multiply -5 by 3; correct simplified expression is 10x - 8.",
+      "solution_text": "Distribute 3 to both terms: 3(2x)=6x and 3(-5)=-15. Then combine to 10x-8.",
+      "solution_html": "<p>Distribute 3 to both terms: 3(2x)=6x and 3(-5)=-15. Then combine to 10x-8.</p>",
+      "choices": [],
+      "prompt_blocks": [
+        {
+          "type": "prose",
+          "data": {
+            "text": "A student rewrites 3(2x - 5) + 4x + 7 as 6x - 5 + 4x + 7. Identify the error and give the corrected simplified expression."
+          }
+        },
+        {
+          "type": "equation",
+          "data": {
+            "latex": "3(2x-5)+4x+7"
+          }
+        }
+      ],
+      "representation_data": {
+        "equation": "3(2x-5)+4x+7",
+        "shown_work": "6x-5+4x+7"
+      },
+      "representation_refs": [],
+      "render_trace": {
+        "pilot_version": "0.6.4",
+        "graph_files": []
+      },
+      "instantiation_summary": "WTC 1.4 Part D diagnoses distribution error."
+    }
+  ]
+}
