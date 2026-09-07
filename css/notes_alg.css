@@ -5,7 +5,7 @@
 
    Ownership:
    - CSS owns visual styling only.
-   - templates/notes/notes_alg_section_template.html owns recurring shell/order.
+   - Tools/templates/algebra/notes/notes_alg_section_template.html owns recurring shell/order.
    - pms_build/notes.txt owns generation, source use, security, and QA.
 
    No page-level or inline layout/color CSS in production Notes.
@@ -38,7 +38,7 @@ body{
   font-size:16px;
   line-height:1.5;
 }
-.page{
+.notes-page{
   max-width:1320px;
   margin:22px auto;
   background:#fff;
@@ -429,8 +429,10 @@ svg{width:100%;height:auto;display:block}
 }
 .worked ol{margin:5px 0 0 20px}
 .workspace{
+  height:auto;
   min-height:155px;
   margin-top:10px;
+  border:0;
   border-top:1px solid #cfd5da;
   background:repeating-linear-gradient(to bottom,#fff 0,#fff 35px,var(--workspace) 36px,var(--workspace) 37px);
 }
@@ -550,7 +552,7 @@ svg{width:100%;height:auto;display:block}
 }
 
 @media(max-width:760px){
-  .page{margin:0;padding:18px 14px 34px}
+  .notes-page{margin:0;padding:18px 14px 34px}
     .quote{margin-left:0}.top-intro-grid{grid-template-columns:1fr}.learning-sidebar,.section-intro{min-height:0}
   .wtc-layout,.translate,.match-grid,.evidence-grid{grid-template-columns:1fr}
   .wtc-parts{grid-template-columns:1fr}
