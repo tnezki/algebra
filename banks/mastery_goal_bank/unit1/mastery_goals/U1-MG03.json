@@ -1,0 +1,738 @@
+{
+  "schema": "algebra-mastery-goal-family-bank/1.0",
+  "unit": 1,
+  "mastery_goal": {
+    "goal_id": "U1-MG03",
+    "title": "Evaluate Expressions",
+    "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+  },
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG03-IC01",
+      "exact_text": "Substitute a value for a variable.",
+      "id_status": "derived_stable_locator_from_goal_and_authoritative_order",
+      "families": [
+        {
+          "family_name": "Direct Substitution",
+          "family_purpose": "Core direct evidence: replace a variable with a given value and evaluate.",
+          "evidence_job": "Substitute a value for a variable.",
+          "student_action": "Replace x with the supplied value using parentheses when needed and evaluate.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "equation_expression",
+          "representation_need": "algebraic expression and value required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The given value must be substituted everywhere the variable appears before evaluation.",
+          "variation_axes": [
+            "expression structure",
+            "substitution value",
+            "signs/exponents"
+          ],
+          "forbidden_variations": [
+            "changing to solving for x",
+            "using a value that removes the need to substitute"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Reassessment",
+            "Recovery"
+          ],
+          "best_use": "Exit",
+          "avoid_uses": [],
+          "secure": true,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(3x^2-2x+5\\) when \\(x=-2\\).</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "21",
+            "solution": "3(-2)^2-2(-2)+5 = 12+4+5 = 21.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC01-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC01",
+            "exact_text": "Substitute a value for a variable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Equation to Table Value",
+          "family_purpose": "Alternate representation: use substitution to complete a table row.",
+          "evidence_job": "Substitute an input into a rule to produce a table output.",
+          "student_action": "Translate an equation/input pair into a tabular output.",
+          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "equation_to_table",
+          "representation_need": "equation plus semantic table",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "semantic_html_table",
+              "embedded": true
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The table output must be produced by substituting the displayed input into the rule.",
+          "variation_axes": [
+            "rule",
+            "input",
+            "table placement"
+          ],
+          "forbidden_variations": [
+            "giving the output elsewhere",
+            "changing the task to solving for a missing input"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Notes"
+          ],
+          "best_use": "Practice",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>The rule is \\(y=2x+9\\). Complete the missing output in the table.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-3</td><td>_____</td></tr></tbody></table><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "3",
+            "solution": "Substitute x=-3: y=2(-3)+9=-6+9=3.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC01-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC01",
+            "exact_text": "Substitute a value for a variable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Negative-Substitution Error Diagnosis",
+          "family_purpose": "Reasoning/diagnosis: correct a lost-parentheses exponent error after substitution.",
+          "evidence_job": "Diagnose an incorrect substitution with a negative value.",
+          "student_action": "Identify the sign/exponent error and recompute correctly.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "worked_solution",
+          "representation_need": "specific flawed substitution required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The worked error must arise after a correct substitution of a negative value and require explicit correction.",
+          "variation_axes": [
+            "expression",
+            "negative input",
+            "exponent"
+          ],
+          "forbidden_variations": [
+            "using a different misconception unrelated to substitution",
+            "asking only for final value"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Recovery"
+          ],
+          "best_use": "Recovery",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(2x^2+3\\) at \\(x=-4\\) and writes \\(2(-4)^2+3=2(-16)+3=-29\\). Identify the error and give the correct value.</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "The student squared -4 incorrectly. (-4)^2=16, so the correct value is 2(16)+3=35.",
+            "solution": "The substituted negative value is grouped as (-4); squaring it produces a positive 16.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC01-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC01",
+            "exact_text": "Substitute a value for a variable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC02",
+      "exact_text": "Use order of operations correctly.",
+      "id_status": "derived_stable_locator_from_goal_and_authoritative_order",
+      "families": [
+        {
+          "family_name": "Order of Operations Direct",
+          "family_purpose": "Core direct evidence: evaluate a numerical expression using correct precedence.",
+          "evidence_job": "Use order of operations correctly.",
+          "student_action": "Execute exponent, multiplication, and addition/subtraction in correct order.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "numeric_expression",
+          "representation_need": "numeric expression required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The expression must require more than one precedence level and be unambiguous.",
+          "variation_axes": [
+            "operations present",
+            "grouping",
+            "integer values"
+          ],
+          "forbidden_variations": [
+            "using ambiguous implicit division notation",
+            "making arithmetic complexity the only challenge"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Reassessment",
+            "Recovery"
+          ],
+          "best_use": "Practice",
+          "avoid_uses": [],
+          "secure": true,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(18-3(4)+2^3\\).</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "14",
+            "solution": "Exponent first: 2^3=8. Multiplication: 3(4)=12. Then 18-12+8=14.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC02-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC02",
+            "exact_text": "Use order of operations correctly.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Dependent Evaluation Chain",
+          "family_purpose": "Alternate architecture: compute a needed intermediate value, then use it in a second expression.",
+          "evidence_job": "Use order of operations across a genuine dependency.",
+          "student_action": "Evaluate an intermediate expression and carry that result into a second evaluation.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "linked_expressions",
+          "representation_need": "two linked expressions required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The first result must be necessary for the second evaluation; the stages cannot be independent.",
+          "variation_axes": [
+            "intermediate expression",
+            "outer expression",
+            "sign/exponent complexity"
+          ],
+          "forbidden_variations": [
+            "two unrelated parts",
+            "providing a directly substituted outer value"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Summative",
+            "Recovery"
+          ],
+          "best_use": "Practice",
+          "avoid_uses": [],
+          "secure": true,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>First find \\(a=5-2\\). Then use that value to evaluate \\(4a^2-1\\).</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "35",
+            "solution": "a=3, then 4(3)^2-1=4(9)-1=35.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC02-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC02",
+            "exact_text": "Use order of operations correctly.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Precedence Error Diagnosis",
+          "family_purpose": "Reasoning/diagnosis: locate a specific violation of operation order.",
+          "evidence_job": "Diagnose an incorrect order-of-operations solution.",
+          "student_action": "Identify the first invalid step and correct the evaluation.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "worked_solution",
+          "representation_need": "specific worked error required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The worked solution must violate a specific precedence relationship that the student must name or explain.",
+          "variation_axes": [
+            "operations",
+            "grouping",
+            "wrong first step"
+          ],
+          "forbidden_variations": [
+            "using only an arithmetic slip",
+            "making the original expression ambiguous"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Recovery"
+          ],
+          "best_use": "Recovery",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(6+2(5-1)^2\\) by writing \\((6+2)(4)^2=8(16)=128\\). Identify the first error and find the correct value.</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "The student added 6+2 before completing multiplication. Correct value: 6+2(4)^2=6+32=38.",
+            "solution": "After parentheses and exponent, multiplication 2×16 must occur before addition 6+32.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC02-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC02",
+            "exact_text": "Use order of operations correctly.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC03",
+      "exact_text": "Evaluate expressions with positive and negative numbers.",
+      "id_status": "derived_stable_locator_from_goal_and_authoritative_order",
+      "families": [
+        {
+          "family_name": "Evaluate with Negative Input",
+          "family_purpose": "Core direct evidence: evaluate an expression containing negative values correctly.",
+          "evidence_job": "Evaluate an expression with positive and negative numbers.",
+          "student_action": "Substitute a negative value and manage signs/exponents accurately.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "equation_expression",
+          "representation_need": "expression and negative input required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The task must require meaningful sign handling, not just positive arithmetic.",
+          "variation_axes": [
+            "negative input",
+            "negative coefficients",
+            "exponents"
+          ],
+          "forbidden_variations": [
+            "eliminating all sign interactions",
+            "changing to equation solving"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Reassessment",
+            "Recovery"
+          ],
+          "best_use": "Exit",
+          "avoid_uses": [],
+          "secure": true,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(-3x^2+2x-4\\) when \\(x=-2\\).</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "-20",
+            "solution": "-3(-2)^2+2(-2)-4 = -3(4)-4-4 = -20.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC03-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC03",
+            "exact_text": "Evaluate expressions with positive and negative numbers.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Negative Values in a Rule Table",
+          "family_purpose": "Alternate representation: evaluate a rule for several signed inputs to complete a table.",
+          "evidence_job": "Evaluate expressions with signed values in a table representation.",
+          "student_action": "Substitute negative and positive table inputs into one rule.",
+          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "equation_to_table",
+          "representation_need": "equation plus semantic table of signed inputs",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "semantic_html_table",
+              "embedded": true
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The table must include both negative and positive substitution cases so sign reasoning is visible.",
+          "variation_axes": [
+            "rule",
+            "signed inputs",
+            "number of rows"
+          ],
+          "forbidden_variations": [
+            "using only positive inputs",
+            "turning it into a missing-input inverse task"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Notes"
+          ],
+          "best_use": "Practice",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>Use \\(y=-2x-5\\) to complete the table.</p><table class=\"data-table\"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>-4</td><td>_____</td></tr><tr><td>-1</td><td>_____</td></tr><tr><td>3</td><td>_____</td></tr></tbody></table><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "3, -3, -11",
+            "solution": "For x=-4, y=8-5=3; for x=-1, y=2-5=-3; for x=3, y=-6-5=-11.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC03-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC03",
+            "exact_text": "Evaluate expressions with positive and negative numbers.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Leading-Negative Exponent Diagnosis",
+          "family_purpose": "Reasoning/diagnosis: distinguish \\(-x^2\\) from \\((-x)^2\\).",
+          "evidence_job": "Diagnose a sign/exponent error with a negative input.",
+          "student_action": "Evaluate a claim about exponent precedence and correct the value.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "short_constructed_response",
+          "representation_mode": "worked_solution",
+          "representation_need": "specific sign/exponent misconception required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The misconception must concern the position of a leading negative relative to an exponent.",
+          "variation_axes": [
+            "input",
+            "exponent",
+            "constant term"
+          ],
+          "forbidden_variations": [
+            "rewriting the original expression as (-x)^2",
+            "using a generic sign slip"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Recovery"
+          ],
+          "best_use": "Recovery",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>For \\(x=-3\\), a student evaluates \\(-x^2+4\\) as 13, saying, “The negative x becomes positive when it is squared.” Diagnose the error and give the correct value.</p><div class=\"response-surface\">Show work and answer here.</div>",
+            "answer": "The exponent applies to x before the leading negative: -( (-3)^2 )+4=-9+4=-5.",
+            "solution": "Substituting gives -(-3)^2+4. The square is 9, then the leading negative makes it -9.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC03-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC03",
+            "exact_text": "Evaluate expressions with positive and negative numbers.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC04",
+      "exact_text": "Check whether an answer is reasonable.",
+      "id_status": "derived_stable_locator_from_goal_and_authoritative_order",
+      "families": [
+        {
+          "family_name": "Estimate Then Check",
+          "family_purpose": "Core number-sense evidence: estimate before computing and compare the exact result.",
+          "evidence_job": "Check whether a computed answer is reasonable.",
+          "student_action": "Make a justified estimate, compute exactly, and compare magnitudes.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "extended_constructed_response",
+          "representation_mode": "context_numeric_expression",
+          "representation_need": "context supplies a meaningful numeric expression",
+          "representation_routes": [
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            },
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The estimate must be made from the same quantities and provide a meaningful magnitude check on the exact result.",
+          "variation_axes": [
+            "context",
+            "numbers",
+            "rounding strategy"
+          ],
+          "forbidden_variations": [
+            "a context with no intuitive magnitude",
+            "an estimate made after revealing the exact answer"
+          ],
+          "allowed_destinations": [
+            "Notes"
+          ],
+          "best_use": "Notes",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": false,
+          "exemplar": {
+            "student_html": "<p>A school orders 19 packs of 48 pencils. Before multiplying exactly, give a reasonable estimate for the total number of pencils. Then compute the exact total and explain why the exact answer is reasonable.</p><div class=\"response-surface\">Write your explanation here.</div>",
+            "answer": "A reasonable estimate is about 1,000 pencils; exact total 912 pencils.",
+            "solution": "Round 19≈20 and 48≈50, giving about 1000. Exact: 19×48=912, which is close to 1000 and therefore reasonable.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC04-A",
+          "family_label": "A",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC04",
+            "exact_text": "Check whether an answer is reasonable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Judge a Proposed Result",
+          "family_purpose": "Alternate evaluation: decide whether a contextual numerical result is plausible, then correct it.",
+          "evidence_job": "Check whether an answer is reasonable using magnitude and recomputation.",
+          "student_action": "Evaluate a proposed result against context, explain the mismatch, and find the correct value.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "extended_constructed_response",
+          "representation_mode": "context_plus_proposed_answer",
+          "representation_need": "context and proposed result required",
+          "representation_routes": [
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "The proposed result must be plausibly traceable to a common magnitude error and the context must support a clear reasonableness check.",
+          "variation_axes": [
+            "context",
+            "values",
+            "type of unreasonable result"
+          ],
+          "forbidden_variations": [
+            "pure abstract algebra with no intuitive check",
+            "always making the proposed result wrong in a reusable set"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit",
+            "Recovery"
+          ],
+          "best_use": "Exit",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": true,
+          "exemplar": {
+            "student_html": "<p>A fundraiser sold 27 tickets at $8 each. A student reports that the ticket sales totaled $2,160. Is that result reasonable? Explain briefly, then give the correct total.</p><div class=\"response-surface\">Write your explanation here.</div>",
+            "answer": "No. 27×8 is a little more than 25×8=200, so $2,160 is far too large. The correct total is $216.",
+            "solution": "A quick magnitude check near $200 exposes the extra zero; exact multiplication gives $216.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC04-B",
+          "family_label": "B",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC04",
+            "exact_text": "Check whether an answer is reasonable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        },
+        {
+          "family_name": "Reasonableness as Error Detector",
+          "family_purpose": "Reasoning/diagnosis: use an implausible sign/magnitude to locate a likely evaluation error.",
+          "evidence_job": "Use reasonableness to detect and correct an expression-evaluation error.",
+          "student_action": "Judge a reported result, identify the likely sign/exponent issue, and recompute.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "extended_constructed_response",
+          "representation_mode": "reported_answer_plus_expression",
+          "representation_need": "expression and suspicious reported result required",
+          "representation_routes": [
+            {
+              "type": "inline_math",
+              "renderer": "MathJax"
+            },
+            {
+              "type": "student_prose_response",
+              "surface": "html_response_surface"
+            }
+          ],
+          "difficulty_intent": "independent Algebra 1 mastery evidence with natural values",
+          "invariant": "Reasonableness must be used as evidence before correction, not merely appended after recomputation.",
+          "variation_axes": [
+            "expression",
+            "reported error",
+            "reasonableness cue"
+          ],
+          "forbidden_variations": [
+            "an expression where a negative result could naturally be valid",
+            "asking only to fix the arithmetic"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery"
+          ],
+          "best_use": "Recovery",
+          "avoid_uses": [],
+          "secure": false,
+          "reassess": false,
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(4(-3)^2+2\\) and reports \\(-34\\). Without starting over immediately, explain why the sign of that result should make you suspicious. Then identify the likely error and give the correct value.</p><div class=\"response-surface\">Write your explanation here.</div>",
+            "answer": "Every term is nonnegative here, so -34 is unreasonable. The likely error is treating (-3)^2 as -9. Correct value: 4(9)+2=38.",
+            "solution": "The square of -3 is positive 9, and adding 2 keeps the result positive.",
+            "structured_representation_data": {}
+          },
+          "family_id": "U1-MG03-IC04-C",
+          "family_label": "C",
+          "unit": 1,
+          "mastery_goal": {
+            "goal_id": "U1-MG03",
+            "title": "Evaluate Expressions",
+            "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+          },
+          "i_can": {
+            "i_can_id": "U1-MG03-IC04",
+            "exact_text": "Check whether an answer is reasonable.",
+            "id_status": "derived_stable_locator_from_goal_and_authoritative_order"
+          },
+          "fresh_instance_rule": "Preserve the family invariant and exact I Can while changing at least one meaningful variation axis; for assessment reuse, do not reuse the exemplar values, worked error, graph, or context verbatim."
+        }
+      ]
+    }
+  ],
+  "family_count": 12
+}
