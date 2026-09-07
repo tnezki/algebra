@@ -1,23 +1,34 @@
-ALGEBRA 1 UNIT 1 NOTES BUILD REPORT
-=================================
-Source policy: CLOSED PROJECT SOURCE / NO PUBLIC WEB.
-System pin: tnezki/memories@1608683a2bde003768778d5860e9e4aa256f9f6a
-Course pin: tnezki/algebra@457cd61182488f50fd0acc0bc854c32017647c8d
-Bank: COMPLETE / ready_for_downstream=true
-Accepted map fingerprint: 38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753
-Template: Tools/templates/algebra/notes/notes_alg_section_template.html blob 0a06487a325b3975ccd3367784fac1588b0cf0df
-Stylesheets: ../../css/base.css then ../../css/notes_alg.css
-Sections: 5
-Exact I Can compartments: 20
-Example tasks: 20
-You Try It tasks: 20
-Stop & Discuss blocks: 20
-WTC: 5 canonical routines retained; no WTC answer leakage in student copies.
-Focused EX/YTI Exit firewall: manually authored with distinct values/stimuli/contexts and checked against the fetched Unit Exit records; no intentional prompt/stimulus copies.
-WTC/Exit conflict: no material conflict identified in fetched current Unit Exit evidence.
-Render QA: structural/static checks completed; browser/PDF render unavailable in this runtime.
-SECURITY: secure Summative was not read or used.
+ALGEBRA 1 · UNIT 1 · NOTES BUILD REPORT
 
-FINAL STATUS: FAIL
-Failure code: NOTES_SOURCE_MAP_COPY_BLOCKED
-Reason: the canonical source_map was readable only through the GitHub connector, while this runtime exposes no connector-to-container byte materialization path. The PM requires the accepted source_map to be copied unchanged into the ZIP. A canonical identity/pointer file is included instead, but that does not satisfy the hard packaging contract.
+STATUS: PASS_WITH_WARNINGS
+SYSTEM: tnezki/memories@08a2ccffec76d194e6b6f6451e5679984dc6447a
+COURSE: tnezki/algebra@6ab252388a3201211a7689ba3e057725e965e0dc
+BANK: COMPLETE · ready_for_downstream=true · fingerprint=38968f43b8b5ee65c20da0bfb6d66df19ba02925a61acaa4a3ba44de3eb84753
+
+OUTPUT
+- 5 student Notes files
+- 5 teacher Notes files
+- 1 canonical WTC blank-coordinate response surface
+- provenance handoff, report, and image manifest
+
+CONTRACT QA
+- Exact Unit 1 Learning Targets: PASS
+- Exact Framework I Can wording/order: PASS
+- Canonical WTC once per section: PASS
+- Student WTC answers withheld: PASS
+- Teacher support derived from student copy: PASS
+- Example/YTI pairs: 40 generated tasks across 20 I Cans
+- Focused generated-task vs Exit duplicate check: PASS
+- Secure Exit exact-literal scan: PASS
+- No page-level/inline layout/color CSS in production Notes: PASS
+- Common Mistakes final visible major section: PASS
+- Offline full-unit render pass: PASS
+
+ISSUES
+- issue_code: WTC_EXIT_CONFLICT
+  section_id: 1.1
+  severity: WARNING
+  owner: BANK_WTC_REPAIR
+  description: Canonical WTC-1.1 uses y=2x+1, which also appears in secure Section 1.5 Exit evidence. WTC was preserved unchanged; teacher copy includes a warning immediately above it.
+  action: Keep canonical WTC in Notes; repair upstream Bank/WTC allocation if the secure overlap should be removed.
+  followup: Review WTC-1.1 against EXIT-1.5-Q1-NEW and EXIT-1.5-Q2-NEW in a future Bank repair.
