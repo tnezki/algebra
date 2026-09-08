@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Algebra 1 — Unit 1 Warm-Up Viewer</title>
+<link rel="stylesheet" href="../../css/base.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f6f8;color:#1f2933;font-family:Arial,Helvetica,sans-serif}
+.viewer{padding:18px}
+.viewer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.viewer-kicker{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#5f6b76}
+h1{margin:2px 0 0;color:#17365d;font-size:26px}
+.viewer-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.viewer-controls label{display:inline-flex;gap:6px;align-items:center;font-size:13px;font-weight:700}
+button{font:inherit;border:1px solid #b8c2cc;background:#fff;color:#17365d;border-radius:9px;padding:8px 11px;font-weight:800;cursor:pointer}
+button:hover{background:#eef4fb}
+button.secondary{font-weight:700;color:#46515c}
+.viewer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.lane-card{display:flex;flex-direction:column;background:#fff;border:1px solid #d8e0e8;border-top:5px solid #17365d;border-radius:12px;min-height:380px;box-shadow:0 2px 8px rgba(20,40,70,.08)}
+.lane-head{padding:12px 13px 10px;border-bottom:1px solid #e2e7ec}
+.lane-number{display:inline-block;background:#eaf2fb;color:#17365d;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:900;margin-bottom:7px}
+.lane-head h2{font-size:17px;line-height:1.15;margin:0;color:#17365d}
+.meta{font-size:11px;color:#65727e;margin-top:5px}
+.question{font-size:18px;line-height:1.45;font-weight:700;padding:18px 14px;flex:1}
+.source{font-size:11px;line-height:1.35;color:#56616b;background:#f7f9fb;border-top:1px solid #e2e7ec;padding:10px 12px;min-height:56px}
+.lane-actions{display:flex;justify-content:flex-end;padding:9px 11px;border-top:1px solid #e2e7ec}
+.hidden{display:none!important}
+.status{font-size:12px;color:#5f6b76;margin-top:10px}
+@media(width < 1001px){.viewer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(width < 621px){.viewer-grid{grid-template-columns:1fr}.lane-card{min-height:260px}}
+</style>
+<script src="questions.js"></script>
+</head>
+<body>
+<main class="viewer">
+  <header class="viewer-head">
+    <div><div class="viewer-kicker">Algebra 1 · Unit 1</div><h1>Warm-Up Viewer</h1></div>
+    <div class="viewer-controls">
+      <label><input id="showQuestion" type="checkbox" checked> Question text</label>
+      <label><input id="showSource" type="checkbox" checked> Source</label>
+      <button id="refreshAll" class="secondary" type="button">Refresh all</button>
+    </div>
+  </header>
+  <section class="viewer-grid" id="grid" aria-live="polite"></section>
+  <div class="status" id="status"></div>
+</main>
+<script>
+(() => {
+  const rows = window.WARMUP_QUESTIONS || [];
+  const laneKeys = ['q1','q2','q3','q4'];
+  let picks = {q1:null,q2:null,q3:null,q4:null};
+  const grid = document.getElementById('grid');
+  const status = document.getElementById('status');
+  const showQuestion = document.getElementById('showQuestion');
+  const showSource = document.getElementById('showSource');
+
+  function one(list){ return list[Math.floor(Math.random()*list.length)]; }
+  function pickPair(){
+    const row = one(rows);
+    picks.q1 = row;
+    picks.q2 = row;
+  }
+  function pickLane(k){ picks[k] = one(rows); }
+  function refreshAll(){
+    pickPair();
+    pickLane('q3');
+    pickLane('q4');
+    render();
+  }
+  function safe(s){
+    return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  }
+  function render(){
+    grid.innerHTML = laneKeys.map((k,i) => {
+      const row=picks[k], lane=row.lanes[k];
+      const pairAction = (k==='q1'||k==='q2');
+      return `<article class="lane-card" data-lane="${k}">
+        <div class="lane-head"><span class="lane-number">Q${i+1}</span><h2>${safe(lane.title)}</h2><div class="meta">Section ${safe(row.sectionLabel)} · Day ${row.day}</div></div>
+        <div class="question${showQuestion.checked?'':' hidden'}">${safe(lane.prompt)}</div>
+        <div class="source${showSource.checked?'':' hidden'}">${safe(lane.source)}</div>
+        <div class="lane-actions"><button type="button" data-refresh="${k}">${pairAction?'Refresh Q1/Q2 pair':'Refresh'}</button></div>
+      </article>`;
+    }).join('');
+    status.textContent = `Q1/Q2 aligned to Day ${picks.q1.day}; Q3 sampled from Day ${picks.q3.day}; Q4 sampled from Day ${picks.q4.day}.`;
+    grid.querySelectorAll('[data-refresh]').forEach(btn => btn.addEventListener('click', () => {
+      const k=btn.dataset.refresh;
+      if(k==='q1'||k==='q2') pickPair(); else pickLane(k);
+      render();
+    }));
+  }
+  showQuestion.addEventListener('change', render);
+  showSource.addEventListener('change', render);
+  document.getElementById('refreshAll').addEventListener('click', refreshAll);
+  if(!rows.length){ grid.innerHTML='<p>No warm-up rows found.</p>'; return; }
+  refreshAll();
+})();
+</script>
+</body>
+</html>
