@@ -1,1 +1,284 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Algebra 1 1.1 Investigation</title><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"]],processEscapes:true}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><link rel="stylesheet" href="../../css/investigation.css"></head><body><section class="student-page"><header class="investigation-header"><div class="eyebrow">Algebra 1 · Section 1.1 Investigation</div><h1>Four-View Relationship Detective</h1><p class="subtitle">Multiple Representations of Relationships</p></header><div class="meta-line"><span><strong>Grouping:</strong> groups of 3</span><span><strong>Materials:</strong> four-view cards, ruler, graph grid, pencil</span></div><div class="target">Today you will connect tables, graphs, equations, and contexts that represent the same relationship.</div><div class="directions"><strong>Your working set</strong><br>Use the information/materials below as directed. Do not treat a visual match as proof when numerical or structural evidence is available.</div><table class="data-table"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>3</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>7</td></tr><tr><td>4</td><td>11</td></tr></tbody></table><div class="card-grid"><div class="cut-card"><div class="cut-card-title">Equation</div>$y=2x+3$</div><div class="cut-card"><div class="cut-card-title">Context</div>A taxi ride costs \$3 before any miles are traveled and \$2 for each mile.</div></div><div class="figure"><img src="figures/blank_grid.png" alt="blank coordinate grid"></div><div class="phase"><div class="phase-label">Inspect</div><div class="task"><div class="task-title"><span class="task-num">Step 1</span><h3>Inspect</h3></div><p>Inspect a context, table, equation, and several graph candidates without matching by appearance alone.</p></div></div><div class="phase"><div class="phase-label">Connect</div><div class="task"><div class="task-title"><span class="task-num">Step 2</span><h3>Connect</h3></div><p>Use two ordered pairs and the rate/start value to match the first three views.</p></div></div><div class="phase"><div class="phase-label">Construct</div><div class="task"><div class="task-title"><span class="task-num">Step 3</span><h3>Construct</h3></div><p>Construct the missing graph on the supplied grid.</p></div></div><div class="footer-note"><span>Section 1.1</span><span>Four-View Relationship Detective</span></div></section><section class="student-page"><header class="investigation-header"><div class="eyebrow">Continue the investigation</div><h1>Four-View Relationship Detective</h1></header><div class="phase"><div class="phase-label">Challenge</div><div class="task"><div class="task-title"><span class="task-num">Step 4</span><h3>Challenge</h3></div><p>Trade sets with another group and challenge one match using numerical evidence.</p></div></div><div class="phase"><div class="phase-label">Generalize</div><div class="task"><div class="task-title"><span class="task-num">Step 5</span><h3>Generalize</h3></div><p>Write a two-sentence rule for proving two representations describe the same relationship.</p><div class="workspace" style="--ws:.55in"></div></div></div><div class="synthesis"><h3>Synthesis</h3><p class="prompt">Write a short rule for proving that two different representations describe the same relationship.</p><div class="workspace" style="--ws:1.05in"></div></div><div class="checkpoint"><strong>Before you finish:</strong> Point to at least one representation, measurement, calculation, or structural feature that supports your conclusion.</div><div class="footer-note"><span>Section 1.1</span><span>Synthesis</span></div></section></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Algebra 1 1.1 Investigation — How Fast Can You Write?</title>
+<style>
+:root{
+  --ink:#17202a;
+  --muted:#5d6773;
+  --line:#cfd6dd;
+  --soft:#f5f7f9;
+  --accent:#174a7e;
+  --accent-soft:#eaf2f8;
+  --paper:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#eef1f4;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+a{color:inherit}
+.toolbar{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:.65rem 1rem;background:#17202a;color:#fff;box-shadow:0 2px 10px #0002}
+.toolbar strong{margin-right:.35rem}
+.toolbar a,.toolbar button{border:1px solid #ffffff55;background:#fff;color:#17202a;border-radius:999px;padding:.45rem .8rem;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+.toolbar a.secondary,.toolbar button.secondary{background:transparent;color:#fff}
+.shell{max-width:9in;margin:1rem auto 2.5rem}
+.worksheet-page,.record-page{background:var(--paper);box-shadow:0 2px 16px #0002;margin:0 auto 1rem;padding:.55in .62in;width:8.5in;min-height:11in}
+.header{border-bottom:3px solid var(--accent);padding-bottom:.18in;margin-bottom:.22in}
+.eyebrow{text-transform:uppercase;letter-spacing:.07em;font-weight:800;font-size:.72rem;color:var(--accent)}
+h1{font-size:1.9rem;line-height:1.05;margin:.06in 0 .05in}
+.subtitle{font-size:1rem;color:var(--muted);margin:0}
+.name-row{display:grid;grid-template-columns:1fr 1fr;gap:.35in;margin:.18in 0 .24in}
+.line-fill{border-bottom:1px solid #444;min-height:.32in;padding:.03in 0;font-size:.92rem}
+.section{margin:.22in 0}
+.section-title{display:flex;align-items:center;gap:.12in;margin:0 0 .1in}
+.step{display:inline-grid;place-items:center;min-width:.34in;height:.34in;border-radius:50%;background:var(--accent);color:#fff;font-weight:800}
+h2{font-size:1.14rem;margin:0}
+h3{font-size:1rem;margin:.08in 0}
+p{margin:.06in 0 .1in}
+.question-box,.note-box{border:1px solid var(--line);border-left:5px solid var(--accent);background:var(--accent-soft);padding:.12in .16in;border-radius:6px;margin:.12in 0}
+.question-box strong{display:block;margin-bottom:.03in}
+.simple-list{margin:.06in 0 .08in;padding-left:.24in}
+.simple-list li{margin:.035in 0}
+.data-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.26in;margin-top:.12in}
+.data-card{border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.data-card h3{margin:0;padding:.1in .14in;background:var(--soft);border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid var(--line);padding:.11in .12in;text-align:center;height:.42in}
+th{font-size:.88rem;background:#fbfcfd}
+tr:last-child td{border-bottom:0}
+.graph-card{border:1px solid var(--line);border-radius:7px;padding:.12in;margin-top:.12in}
+.graph-title{display:flex;justify-content:space-between;gap:.2in;font-size:.88rem;color:var(--muted);margin-bottom:.06in}
+.graph{display:block;width:100%;max-width:6.35in;height:auto;margin:0 auto;background:#fff}
+.answer-line{display:inline-block;min-width:2in;border-bottom:1px solid #444;height:.22in;vertical-align:bottom}
+.answer-line.short{min-width:1in}.answer-line.long{min-width:3.6in}
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:.12in .25in;margin:.12in 0}
+.model-box{border:1px solid var(--line);border-radius:7px;padding:.12in .14in;min-height:.68in}
+.prompt-list{margin:.08in 0;padding-left:.24in}
+.prompt-list li{margin:.09in 0}
+.response-lines{display:block;border-bottom:1px solid #aaa;height:.22in;margin:.02in 0}
+.small{font-size:.87rem;color:var(--muted)}
+.footer{margin-top:.22in;padding-top:.08in;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted)}
+.page-break{break-before:page}
+.record-page{padding:.42in .5in}
+.record-header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--accent);padding-bottom:.1in;margin-bottom:.12in}
+.record-header h1{font-size:1.55rem;margin:0}
+.record-rules{font-size:.84rem;margin:.08in 0 .12in}
+.trial{margin:.09in 0 .13in;break-inside:avoid}
+.trial-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:.04in}
+.total-box{font-weight:400}.total-line{display:inline-block;width:.8in;border-bottom:1px solid #333;height:.18in;vertical-align:bottom}
+.letter-grid{width:7.5in;border:1px solid #777;background-image:linear-gradient(to right,#aeb5bc 1px,transparent 1px),linear-gradient(to bottom,#aeb5bc 1px,transparent 1px);background-size:.25in .25in;background-position:-1px -1px}
+.grid-15{height:1.25in}.grid-30{height:1.5in}.grid-45{height:1.75in}.grid-60{height:2in}
+.record-note{font-size:.76rem;color:var(--muted);margin-top:.05in}
+@media(max-width:900px){
+  .shell{margin:.5rem}.worksheet-page,.record-page{width:100%;min-height:0;padding:1rem;box-shadow:none}.data-wrap,.model-grid{grid-template-columns:1fr}.letter-grid{width:100%}
+}
+@media print{
+  @page{size:letter portrait;margin:.35in .45in}
+  body{background:#fff}
+  .toolbar{display:none!important}
+  .shell{max-width:none;margin:0}
+  .worksheet-page,.record-page{box-shadow:none;margin:0;width:auto;min-height:auto;padding:0;break-after:page}
+  .worksheet-page:last-child,.record-page:last-child{break-after:auto}
+  body.print-worksheet .record-page{display:none!important}
+  body.print-records .worksheet-page{display:none!important}
+  .letter-grid{width:7.5in;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .step,.question-box,.note-box,.data-card h3{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<nav class="toolbar" aria-label="Investigation tools">
+  <strong>1.1 Investigation</strong>
+  <button type="button" onclick="printMode('worksheet')">Print Worksheet</button>
+  <button type="button" onclick="printMode('records')">Print Record Sheets</button>
+  <button type="button" class="secondary" onclick="printMode('all')">Print All</button>
+  <a class="secondary" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Open Desmos</a>
+  <a class="secondary" href="u1_1_investigation_teacher_guide.html">Teacher Guide</a>
+</nav>
+
+<main class="shell">
+  <section class="worksheet-page">
+    <header class="header">
+      <div class="eyebrow">Algebra 1 · Section 1.1 Investigation</div>
+      <h1>How Fast Can You Write?</h1>
+      <p class="subtitle">Collect data. Make a table. Make a graph. Build a model.</p>
+    </header>
+
+    <div class="name-row">
+      <div class="line-fill"><strong>Name:</strong></div>
+      <div class="line-fill"><strong>Date:</strong></div>
+    </div>
+
+    <div class="question-box">
+      <strong>Question</strong>
+      How does time affect the number of letters you can write?
+    </div>
+
+    <section class="section">
+      <div class="section-title"><span class="step">1</span><h2>Collect your data</h2></div>
+      <ol class="simple-list">
+        <li>Write one letter in each box.</li>
+        <li>Write A to Z. Then start again at A.</li>
+        <li>Stop when the teacher says stop.</li>
+        <li>Count the letters you wrote.</li>
+      </ol>
+      <p class="small">Use the record sheets for the timed trials.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span class="step">2</span><h2>Put your data in tables</h2></div>
+      <div class="data-wrap">
+        <div class="data-card">
+          <h3>Dominant Hand</h3>
+          <table aria-label="Dominant hand data table">
+            <thead><tr><th>Time (sec)</th><th>Letters</th></tr></thead>
+            <tbody>
+              <tr><td>15</td><td></td></tr>
+              <tr><td>30</td><td></td></tr>
+              <tr><td>45</td><td></td></tr>
+              <tr><td>60</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="data-card">
+          <h3>Non-Dominant Hand</h3>
+          <table aria-label="Non-dominant hand data table">
+            <thead><tr><th>Time (sec)</th><th>Letters</th></tr></thead>
+            <tbody>
+              <tr><td>15</td><td></td></tr>
+              <tr><td>30</td><td></td></tr>
+              <tr><td>45</td><td></td></tr>
+              <tr><td>60</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p><strong>x</strong> = time in seconds &nbsp;&nbsp;&nbsp; <strong>y</strong> = number of letters</p>
+    </section>
+
+    <div class="footer"><span>Section 1.1</span><span>Data Collection + Tables</span></div>
+  </section>
+
+  <section class="worksheet-page page-break">
+    <header class="header">
+      <div class="eyebrow">Continue the investigation</div>
+      <h1>How Fast Can You Write?</h1>
+    </header>
+
+    <section class="section">
+      <div class="section-title"><span class="step">3</span><h2>Graph your data</h2></div>
+      <p>Plot both tables on the same graph. Use a different mark for each hand.</p>
+      <div class="graph-card">
+        <div class="graph-title"><span>○ Dominant hand</span><span>× Non-dominant hand</span></div>
+        <svg class="graph" viewBox="0 0 720 430" role="img" aria-label="Blank graph with time from 0 to 60 seconds and letters from 0 to 200">
+          <rect x="70" y="20" width="620" height="350" fill="white" stroke="#4d5965" stroke-width="2"/>
+          <g stroke="#d9dee3" stroke-width="1">
+            <line x1="70" y1="282.5" x2="690" y2="282.5"/><line x1="70" y1="195" x2="690" y2="195"/><line x1="70" y1="107.5" x2="690" y2="107.5"/>
+            <line x1="225" y1="20" x2="225" y2="370"/><line x1="380" y1="20" x2="380" y2="370"/><line x1="535" y1="20" x2="535" y2="370"/>
+          </g>
+          <g stroke="#aeb6be" stroke-width="1">
+            <line x1="70" y1="326.25" x2="690" y2="326.25"/><line x1="70" y1="238.75" x2="690" y2="238.75"/><line x1="70" y1="151.25" x2="690" y2="151.25"/><line x1="70" y1="63.75" x2="690" y2="63.75"/>
+          </g>
+          <g stroke="#1f2933" stroke-width="2">
+            <line x1="70" y1="370" x2="690" y2="370"/><line x1="70" y1="20" x2="70" y2="370"/>
+          </g>
+          <g fill="#29323b" font-size="15" font-family="Arial, Helvetica, sans-serif">
+            <text x="64" y="389">0</text><text x="216" y="389">15</text><text x="371" y="389">30</text><text x="526" y="389">45</text><text x="681" y="389">60</text>
+            <text x="42" y="375">0</text><text x="34" y="288">50</text><text x="25" y="200">100</text><text x="25" y="113">150</text><text x="25" y="26">200</text>
+            <text x="330" y="418" font-weight="700">Time (seconds)</text>
+            <text transform="translate(15 245) rotate(-90)" font-weight="700">Letters written</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span class="step">4</span><h2>Use Desmos</h2></div>
+      <ol class="simple-list">
+        <li>Enter your dominant-hand table.</li>
+        <li>Enter your non-dominant-hand table.</li>
+        <li>Use the <strong>Regression</strong> menu. Choose <strong>Linear</strong> for each table.</li>
+        <li>Record the two models below.</li>
+        <li>Use the model Desmos gives you. Do not force it through (0, 0).</li>
+      </ol>
+      <div class="model-grid">
+        <div class="model-box"><strong>Dominant hand model</strong><br><span class="answer-line long"></span></div>
+        <div class="model-box"><strong>Non-dominant hand model</strong><br><span class="answer-line long"></span></div>
+        <div class="model-box"><strong>Dominant rate</strong><br><span class="answer-line short"></span> letters/sec</div>
+        <div class="model-box"><strong>Non-dominant rate</strong><br><span class="answer-line short"></span> letters/sec</div>
+      </div>
+    </section>
+
+    <div class="footer"><span>Section 1.1</span><span>Graph + Desmos</span></div>
+  </section>
+
+  <section class="worksheet-page page-break">
+    <header class="header">
+      <div class="eyebrow">Finish the investigation</div>
+      <h1>How Fast Can You Write?</h1>
+    </header>
+
+    <section class="section">
+      <div class="section-title"><span class="step">5</span><h2>Use your models</h2></div>
+      <ol class="prompt-list">
+        <li>Predict the number of letters you could write in <strong>90 seconds</strong> with your dominant hand. <span class="answer-line short"></span></li>
+        <li>Predict the number of letters you could write in <strong>90 seconds</strong> with your non-dominant hand. <span class="answer-line short"></span></li>
+        <li>Which hand has the greater writing rate? <span class="answer-line short"></span></li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span class="step">6</span><h2>Discuss</h2></div>
+      <ol class="prompt-list">
+        <li>Which hand was faster? How do you know?<span class="response-lines"></span><span class="response-lines"></span></li>
+        <li>What does the rate mean in this activity?<span class="response-lines"></span><span class="response-lines"></span></li>
+        <li>Why are the two rates different?<span class="response-lines"></span><span class="response-lines"></span></li>
+        <li>Did your points make a perfect line? Why or why not?<span class="response-lines"></span><span class="response-lines"></span></li>
+        <li>Would your model work well for 5 minutes? Explain.<span class="response-lines"></span><span class="response-lines"></span></li>
+        <li>What does the graph show that is harder to see in the table?<span class="response-lines"></span><span class="response-lines"></span></li>
+      </ol>
+    </section>
+
+    <div class="footer"><span>Section 1.1</span><span>Model + Discussion</span></div>
+  </section>
+
+  <section class="record-page page-break">
+    <header class="record-header">
+      <div><div class="eyebrow">Algebra 1 · Section 1.1</div><h1>Dominant Hand Record Sheet</h1></div>
+      <div class="line-fill" style="width:2.2in"><strong>Name:</strong></div>
+    </header>
+    <p class="record-rules"><strong>One letter in each box.</strong> Write A to Z, then start again at A. Stop when the teacher says stop.</p>
+
+    <div class="trial"><div class="trial-head"><span>15 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-15"></div></div>
+    <div class="trial"><div class="trial-head"><span>30 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-30"></div></div>
+    <div class="trial"><div class="trial-head"><span>45 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-45"></div></div>
+    <div class="trial"><div class="trial-head"><span>60 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-60"></div></div>
+    <p class="record-note">Each square is 1/4 inch by 1/4 inch when printed at 100% scale.</p>
+  </section>
+
+  <section class="record-page page-break">
+    <header class="record-header">
+      <div><div class="eyebrow">Algebra 1 · Section 1.1</div><h1>Non-Dominant Hand Record Sheet</h1></div>
+      <div class="line-fill" style="width:2.2in"><strong>Name:</strong></div>
+    </header>
+    <p class="record-rules"><strong>One letter in each box.</strong> Write A to Z, then start again at A. Stop when the teacher says stop.</p>
+
+    <div class="trial"><div class="trial-head"><span>15 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-15"></div></div>
+    <div class="trial"><div class="trial-head"><span>30 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-30"></div></div>
+    <div class="trial"><div class="trial-head"><span>45 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-45"></div></div>
+    <div class="trial"><div class="trial-head"><span>60 seconds</span><span class="total-box">Letters: <span class="total-line"></span></span></div><div class="letter-grid grid-60"></div></div>
+    <p class="record-note">Each square is 1/4 inch by 1/4 inch when printed at 100% scale.</p>
+  </section>
+</main>
+<script>
+function printMode(mode){
+  document.body.classList.remove('print-worksheet','print-records');
+  if(mode==='worksheet') document.body.classList.add('print-worksheet');
+  if(mode==='records') document.body.classList.add('print-records');
+  window.print();
+}
+window.addEventListener('afterprint',()=>document.body.classList.remove('print-worksheet','print-records'));
+</script>
+</body>
+</html>
