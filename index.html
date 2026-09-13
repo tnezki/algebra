@@ -38,7 +38,7 @@ function sectionResources(u,s){const stem=`u${u}_${s}`;return{title:unitDefs[u-1
 {label:'C.Y.U.',cls:'',icon:'ti-checkbox',href:`practice_sets/practice_sets_${u}_${s}/cyu_${u}_${s}.html`}]}}
 const units=unitDefs.map(d=>({id:String(d.n),label:`Unit ${d.n}`,name:d.name,meta:[
 {label:'Student Bank',href:`banks/unit${d.n}/student.html`},
-{label:'Practice Builder',inactive:true},
+d.n===1?{label:'Practice Builder',href:'practice_builder___p7r4x/student_practice_builder.html?unit=1'}:{label:'Practice Builder',inactive:true},
 {label:'Warm Ups',href:`warmups/unit_${d.n}_warmups/unit_${d.n}_warmups.html`},
 {label:'Review',href:`reviews/review${d.n}/review_${d.n}.html`}],sections:d.sections.map((_,i)=>sectionResources(d.n,i+1))}));
 function buildUnit(u){const metaHTML=u.meta.map(m=>m.inactive?`<span class="unit-meta-chip inactive" title="Practice Builder coming next">${m.label}</span>`:`<a href="${m.href}" class="unit-meta-chip" target="_blank">${m.label}</a>`).join(' ');const sectionsHTML=u.sections.map((sec,i)=>buildSection(u.id,i+1,sec)).join('');const block=document.createElement('div');block.className='unit-block';block.innerHTML=`<div class="unit-header" onclick="toggleUnit(this)"><span class="unit-label">${u.label}</span><span class="unit-name">${u.name}</span><i class="ti ti-chevron-down unit-chevron"></i></div><div class="unit-collapsible"><div class="unit-meta">${metaHTML}</div><div class="unit-body">${sectionsHTML}</div></div>`;return block}
