@@ -21,6 +21,7 @@
 <a href="https://docs.google.com/document/d/18imPwnYQjblasMS8x97DjKeNDjWNKTnOa3iBoTwCYVA/edit?usp=sharing" class="res-chip" target="_blank">Activity Structures</a>
 <a href="https://tnezki.github.io/memories/pms_build/portfolio_pm_teacher_directions.html" class="res-chip" target="_blank">Portfolio</a>
 <a href="checkpoints___trmn78/checkpoint_builder.html" class="res-chip" target="_blank">Checkpoint</a>
+<a href="practice_builder___p7r4x/teacher_practice_builder.html" class="res-chip" target="_blank">Practice Builder</a>
 <a href="misc/welcomes/welcome.html" class="res-chip" target="_blank">Welcomes</a>
 <a href="https://docs.google.com/document/d/1pooMLzaO0D9wKbjEwmE7E_9OpiI-qSssz9Vnv9PqQPU/edit?usp=drive_link" class="res-chip" target="_blank">Reflection</a>
 <a href="misc/first_4_days/index.html" class="res-chip" target="_blank">First 4 Days</a>
@@ -51,7 +52,7 @@ function sectionResources(u,s){const stem=`u${u}_${s}`;return{title:unitDefs[u-1
 {label:'Practice Set 3',icon:'ti-pencil',href:`practice_sets/practice_sets_${u}_${s}/practice_set_${u}_${s}_3.html`}]}}
 const units=unitDefs.map(d=>({id:String(d.n),label:`Unit ${d.n}`,name:d.name,meta:[
 {label:'Student Bank',teacher:false,href:`banks/unit${d.n}/student.html`},
-{label:'Practice Builder',teacher:false,inactive:true},
+d.n===1?{label:'Practice Builder',teacher:false,href:'practice_builder___p7r4x/student_practice_builder.html?unit=1'}:{label:'Practice Builder',teacher:false,inactive:true},
 {label:'Warm Ups',teacher:false,href:`warmups/unit_${d.n}_warmups/unit_${d.n}_warmups.html`},
 {label:'Review',teacher:false,href:`reviews/review${d.n}/review_${d.n}.html`},
 {label:'Quick Check',teacher:true,href:`quick_check____htq5855/quick${d.n}/quick_${d.n}.html`},
