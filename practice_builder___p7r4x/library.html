@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Algebra 1 Saved Teacher Practices</title>
+<style>
+:root{--bg:#eef2f6;--card:#fff;--ink:#182230;--muted:#667085;--line:#d5dce5;--accent:#245b87;--good:#137a4b;--pale:#f7f9fc;--shadow:0 8px 24px rgba(25,43,64,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#173d60,#28658f);color:#fff;padding:22px 26px}header h1{margin:0;font-size:27px}header p{margin:6px 0 0;max-width:900px;line-height:1.4}
+main{max-width:1100px;margin:18px auto 46px;padding:0 16px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{display:inline-block;text-decoration:none;border:1px solid #b9c7d5;background:#fff;color:#173f6a;border-radius:999px;padding:8px 13px;font-weight:800;font-size:13px}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:14px}.card h2{margin:0;color:#173f6a}.meta{font-size:12px;color:var(--muted);margin-top:4px}.unit{margin-bottom:20px}.unit h2{font-size:20px;color:#173f6a;border-bottom:2px solid #d5e1ec;padding-bottom:7px;margin:0 0 10px}.practice{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 14px;margin:9px 0}.practice h3{font-size:16px;margin:0;color:#17243a}.skills{font-size:12px;color:#4c5d72;margin:7px 0;line-height:1.45}.links{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.links a{font-size:12px;font-weight:800;text-decoration:none;border:1px solid #aebdcd;color:#173f6a;background:#f8fafc;padding:6px 9px;border-radius:8px}.links a.key{border-color:#b8d8b8;color:#2d6a2d;background:#eef7ee}.links a.map{color:#5e6670}.empty{padding:13px;border:1px dashed #b8c4d1;border-radius:10px;color:var(--muted);font-size:13px}.status{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><h1>Algebra 1 · Saved Teacher Practices</h1><p>Permanent reusable practice packets generated from the Teacher Practice Builder. These are practice resources, not secure assessments.</p></header>
+<main>
+<nav class="tabs"><a class="tab" href="teacher_practice_builder.html">Build New Practice</a><a class="tab active" href="library.html">Saved Practices</a></nav>
+<section class="card"><div id="status" class="status">Loading saved practices...</div><div id="library"></div></section>
+</main>
+<script>
+const host=document.getElementById('library'),status=document.getElementById('status');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function loadUnit(n){try{const r=await fetch(`generated/unit${n}/index.json`,{cache:'no-store'});if(!r.ok)return null;return await r.json()}catch(e){return null}}
+function renderPractice(p,n){const f=p.files||{};const base=`generated/unit${n}/`;const skillText=(p.selected_i_can_text||p.selected_i_cans||[]).join(' · ');return `<article class="practice"><h3>${esc(p.title||p.id)}</h3><div class="meta">${esc(p.created||'')} · ${esc(p.question_count||'')} questions · ${esc(p.id)}</div><div class="skills">${esc(skillText)}</div><div class="links">${f.student_pdf?`<a href="${base+f.student_pdf}" target="_blank">Student PDF</a>`:''}${f.student_html?`<a href="${base+f.student_html}" target="_blank">Student HTML</a>`:''}${f.teacher_pdf?`<a class="key" href="${base+f.teacher_pdf}" target="_blank">Teacher Key PDF</a>`:''}${f.teacher_html?`<a class="key" href="${base+f.teacher_html}" target="_blank">Teacher Key HTML</a>`:''}${f.source_map?`<a class="map" href="${base+f.source_map}" target="_blank">Source Map</a>`:''}</div></article>`}
+async function main(){const indexes=(await Promise.all(Array.from({length:8},(_,i)=>loadUnit(i+1))));let total=0,html='';for(let i=0;i<indexes.length;i++){const idx=indexes[i];if(!idx||!(idx.practices||[]).length)continue;const n=i+1;total+=idx.practices.length;html+=`<section class="unit"><h2>Unit ${n}</h2>${idx.practices.map(p=>renderPractice(p,n)).join('')}</section>`}if(!total)html='<div class="empty">No saved teacher practices yet.</div>';host.innerHTML=html;status.textContent=total?`${total} saved practice${total===1?'':'s'}`:'Library ready.'}
+main();
+</script>
+</body></html>
