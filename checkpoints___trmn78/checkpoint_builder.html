@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Algebra 1 Checkpoint Builder</title>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<style>
+:root{--bg:#eef2f6;--card:#fff;--ink:#182230;--muted:#667085;--line:#d5dce5;--accent:#245b87;--accent2:#eaf2f9;--good:#137a4b;--warn:#9a6200;--bad:#b42318;--shadow:0 8px 24px rgba(25,43,64,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#173d60,#28658f);color:#fff;padding:22px 26px}header h1{margin:0;font-size:27px}header p{margin:6px 0 0;opacity:.92;max-width:980px;line-height:1.4}
+main{max-width:1050px;margin:18px auto 46px;padding:0 16px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:14px}
+h2,h3{color:#173f6a;margin-top:0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+label.field{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}select,input[type=text],textarea{width:100%;padding:10px 11px;border:1px solid #bec9d5;border-radius:8px;background:#fff;font:inherit}textarea{min-height:88px;resize:vertical}
+.radio-row{display:flex;gap:10px;flex-wrap:wrap}.pill{display:flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:7px 11px;background:#fff}.pill input{margin:0}
+.status{padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:#f7f9fc;font-size:12px;line-height:1.4}.status.good{background:#eefbf4;border-color:#b8e4ca;color:#125f3e}.status.warn{background:#fff8e8;border-color:#efdaa6;color:#7c4900}.status.bad{background:#fff1f0;border-color:#f4c1bd;color:#912018}
+.rule{padding:10px 12px;border:1px solid #b9d0e5;background:#f1f7fc;border-radius:10px;font-size:13px;line-height:1.4}.small{font-size:12px;color:var(--muted)}.hidden{display:none!important}
+.preview{border-left:4px solid var(--accent);background:#f7f9fc;padding:12px 14px;border-radius:8px;font-size:13px;line-height:1.5}.preview b{color:#173f6a}.preview ul{margin:7px 0 0 20px;padding:0}
+.actions{display:flex;justify-content:flex-end;gap:10px;align-items:center;margin-top:14px}.primary{border:0;background:var(--accent);color:#fff;border-radius:9px;padding:11px 16px;font:inherit;font-weight:800;cursor:pointer}.primary:disabled{opacity:.45;cursor:not-allowed}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:4px 7px;border-radius:999px;background:var(--accent2);color:#244f75;margin-left:6px}.fixed{padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#f8fafc;font-weight:700}.fine{font-size:11px;color:var(--muted);line-height:1.45}
+</style>
+</head>
+<body>
+<header>
+  <h1>Algebra 1 · Personalized Checkpoint Builder</h1>
+  <p>Choose one Unit and who should be checked. Current roster, Portfolio status, intervention groups, and evidence are resolved from the private Portfolio Drive when the downloaded request runs. This public page stores no roster or Portfolio data.</p>
+</header>
+<main>
+<section class="card">
+  <div class="grid2">
+    <div><label class="field" for="unit">Unit</label><select id="unit"></select></div>
+    <div><label class="field">Checkpoint size</label><div class="fixed">6 questions per student <span class="badge">current Algebra rule</span></div></div>
+  </div>
+  <div id="bankStatus" class="status warn" style="margin-top:12px">Checking selected Unit Bank...</div>
+</section>
+
+<section class="card">
+  <h2>Who gets this Checkpoint?</h2>
+  <div class="grid2">
+    <div>
+      <label class="field" for="period">Period scope</label>
+      <select id="period"><option value="3rd">3rd Hour</option><option value="6th">6th Hour</option><option value="both" selected>3rd + 6th Hours</option></select>
+    </div>
+    <div>
+      <label class="field" for="mode">Selection method</label>
+      <select id="mode">
+        <option value="individual">Individual student</option>
+        <option value="manual">Selected students</option>
+        <option value="class">Whole selected class(es)</option>
+        <option value="all">All active Algebra 1 students</option>
+        <option value="intervention">Portfolio intervention group</option>
+        <option value="ican">Students needing evidence for a specific I Can</option>
+        <option value="another_demo">Students needing another independent demonstration for an I Can</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="manualBox" style="margin-top:8px">
+    <label class="field" id="manualLabel" for="names">Student name</label>
+    <textarea id="names" placeholder="Type the student name exactly enough to match the current roster."></textarea>
+    <div class="fine">Names are placed only in your downloaded request ZIP. They are not saved in GitHub.</div>
+  </div>
+
+  <div id="interventionBox" class="hidden" style="margin-top:8px">
+    <label class="field" for="intervention">Current Portfolio group</label>
+    <select id="intervention">
+      <option value="RETEACH_TARGETED_PRACTICE">Reteach / targeted practice</option>
+      <option value="BRIEF_GUIDED_PRACTICE">Brief guided practice</option>
+      <option value="READY_ANOTHER_INDEPENDENT_DEMONSTRATION">Ready for another independent demonstration</option>
+      <option value="NO_EVIDENCE_ABSENT">No evidence / absent</option>
+      <option value="REVIEW_FLAGS">Review flags</option>
+    </select>
+    <label class="field" for="interventionIcan">Optional I Can filter</label>
+    <select id="interventionIcan"><option value="">Any I Can in this Unit</option></select>
+  </div>
+
+  <div id="icanBox" class="hidden" style="margin-top:8px">
+    <label class="field" for="ican">Target I Can</label>
+    <select id="ican"></select>
+    <div id="icanHelp" class="fine"></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>How the six questions are chosen</h2>
+  <div class="rule"><b>Portfolio decides what needs evidence; the approved Unit Bank supplies the question architecture.</b> The run uses the current body of evidence at generation time, chooses Bank families that fit each student's next evidence need, and writes fresh question instances. It does not invent a new question structure when an appropriate approved Bank family exists.</div>
+  <label class="field" for="note">Optional teacher note <span class="small">(fine-tune this run only)</span></label>
+  <textarea id="note" placeholder="Example: keep this short enough for intervention, emphasize graph reading, or avoid calculator-heavy values."></textarea>
+</section>
+
+<section class="card">
+  <h2>Selection preview</h2>
+  <div id="preview" class="preview"></div>
+  <div class="fine" style="margin-top:9px">The actual student list and personalized I Can/family plan are resolved from the current private Drive data during the run and should appear in the generated HTML's screen-only teacher summary before printing.</div>
+  <div class="actions"><button id="download" class="primary" disabled>Download Checkpoint Request ZIP</button></div>
+  <div id="requestStatus" class="status" style="margin-top:10px">Choose a ready Unit Bank and a valid student scope.</div>
+</section>
+</main>
+<script>
+const SYSTEM_REPO='tnezki/memories';
+const COURSE_REPO='tnezki/algebra';
+const DRIVE_ROOT_ID='1xFGmkwiHXxJIwsJEx36nSy4C6OLr3Y3o';
+const unit=document.getElementById('unit'),period=document.getElementById('period'),mode=document.getElementById('mode');
+const names=document.getElementById('names'),manualBox=document.getElementById('manualBox'),manualLabel=document.getElementById('manualLabel');
+const interventionBox=document.getElementById('interventionBox'),icanBox=document.getElementById('icanBox');
+const intervention=document.getElementById('intervention'),interventionIcan=document.getElementById('interventionIcan'),ican=document.getElementById('ican');
+const bankStatus=document.getElementById('bankStatus'),preview=document.getElementById('preview'),download=document.getElementById('download'),requestStatus=document.getElementById('requestStatus');
+let bankReady=false, iCanRows=[];
+for(let i=1;i<=8;i++){const o=document.createElement('option');o.value=String(i);o.textContent=`Unit ${i}`;unit.appendChild(o)}
+
+async function loadBank(){
+  bankReady=false;iCanRows=[];download.disabled=true;
+  bankStatus.className='status warn';bankStatus.textContent=`Checking Unit ${unit.value} Bank...`;
+  ican.innerHTML='';interventionIcan.innerHTML='<option value="">Any I Can in this Unit</option>';
+  try{
+    const base=`../banks/unit${unit.value}`;
+    const mr=await fetch(`${base}/BANK_MANIFEST.json`,{cache:'no-store'});if(!mr.ok)throw new Error('Bank manifest not found');
+    const manifest=await mr.json();
+    if(manifest.status!=='COMPLETE'||manifest.ready_for_downstream!==true||manifest.qa!=='PASS')throw new Error('Bank is not COMPLETE / ready_for_downstream / QA PASS');
+    const fr=await fetch(`${base}/FAMILY_INDEX.json`,{cache:'no-store'});if(!fr.ok)throw new Error('Family index not found');
+    const fam=await fr.json(),seen=new Set();
+    for(const f of fam.families||[]){if(seen.has(f.i_can_id))continue;seen.add(f.i_can_id);iCanRows.push({id:f.i_can_id,text:f.i_can_exact_text,mg:f.mastery_goal_id,title:f.mastery_goal_title})}
+    iCanRows.sort((a,b)=>a.id.localeCompare(b.id,undefined,{numeric:true}));
+    for(const r of iCanRows){for(const s of [ican,interventionIcan]){const o=document.createElement('option');o.value=r.id;o.textContent=`${r.id} · ${r.text}`;s.appendChild(o)}}
+    bankReady=true;bankStatus.className='status good';bankStatus.textContent=`Unit ${unit.value} Bank ready · ${manifest.i_can_count||iCanRows.length} I Cans · ${manifest.family_count||''} approved families.`;
+  }catch(e){bankStatus.className='status bad';bankStatus.textContent=`Unit ${unit.value} is not ready for Checkpoints: ${e.message}. Finish the Unit Bank first.`}
+  update();
+}
+function selectedIcanText(id){const r=iCanRows.find(x=>x.id===id);return r?`${r.id} · ${r.text}`:''}
+function updateVisibility(){
+  const m=mode.value;
+  manualBox.classList.toggle('hidden',!['individual','manual'].includes(m));
+  interventionBox.classList.toggle('hidden',m!=='intervention');
+  icanBox.classList.toggle('hidden',!['ican','another_demo'].includes(m));
+  if(m==='individual'){manualLabel.textContent='Student name';names.placeholder='One student name';}
+  if(m==='manual'){manualLabel.textContent='Student names';names.placeholder='One student per line';}
+  if(m==='all')period.value='both';
+}
+function selection(){
+  const m=mode.value,p=period.value,lines=names.value.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+  const base={mode:m,period_scope:p};
+  if(m==='individual')base.student_names=lines.slice(0,1);
+  if(m==='manual')base.student_names=lines;
+  if(m==='intervention'){base.intervention_group=intervention.value;base.i_can_filter=interventionIcan.value||null;}
+  if(m==='ican')base.i_can_id=ican.value||null;
+  if(m==='another_demo'){base.i_can_id=ican.value||null;base.required_action_code='NEEDS_ANOTHER_DEMONSTRATION';}
+  return base;
+}
+function valid(){const s=selection();if(!bankReady)return false;if(s.mode==='individual'&&s.student_names.length!==1)return false;if(s.mode==='manual'&&s.student_names.length<1)return false;if(['ican','another_demo'].includes(s.mode)&&!s.i_can_id)return false;return true}
+function update(){
+  updateVisibility();const s=selection();let title='',why='';
+  const p=s.period_scope==='both'?'3rd + 6th Hours':s.period_scope+' Hour';
+  if(s.mode==='individual'){title=s.student_names[0]||'Individual student';why='Match the typed name to the current active roster, then personalize six questions from that student’s current Unit evidence needs.'}
+  if(s.mode==='manual'){title=s.student_names.length?`${s.student_names.length} manually selected student(s)`:'Selected students';why='Match each typed name to the current active roster and personalize each student independently.'}
+  if(s.mode==='class'){title=`Whole selected class(es): ${p}`;why='Use every active rostered student in the selected period scope.'}
+  if(s.mode==='all'){title='All active Algebra 1 students';why='Use the active Algebra 1 registry across both periods.'}
+  if(s.mode==='intervention'){title=`Portfolio group: ${intervention.options[intervention.selectedIndex].text}`;why=`Resolve current membership from intervention_groups.csv${s.i_can_filter?' and filter to '+selectedIcanText(s.i_can_filter):''}.`}
+  if(s.mode==='ican'){title=`Specific I Can group: ${selectedIcanText(s.i_can_id)}`;why='Use current Portfolio state to select students who still need useful evidence on this exact I Can, then make that target a meaningful part of each selected student’s six-question checkpoint.'}
+  if(s.mode==='another_demo'){title=`Needs another independent demonstration: ${selectedIcanText(s.i_can_id)}`;why='Select students whose current action code for this I Can is NEEDS_ANOTHER_DEMONSTRATION. This is the explicit second-evidence pathway and can be removed later if it is not useful.'}
+  preview.innerHTML=`<b>Unit ${unit.value} · ${title}</b><ul><li>Period scope: ${p}</li><li>${why}</li><li>Live student membership and question targeting are resolved only when the request runs against private Portfolio Drive data.</li><li>Print order: 3rd Hour alphabetically, then 6th Hour alphabetically.</li></ul>`;
+  download.disabled=!valid();requestStatus.className='status '+(valid()?'good':'warn');requestStatus.textContent=valid()?'Ready to create a pinned Checkpoint request.':'Choose a ready Unit Bank and complete the required selection fields.';
+}
+async function resolveCommit(repo){const r=await fetch(`https://api.github.com/repos/${repo}/commits/main`,{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw new Error(`Could not pin ${repo}: ${r.status}`);return (await r.json()).sha}
+function requestReadme(req){return `# Algebra 1 Personalized Checkpoint Request\n\nBuild this Checkpoint now. Do not redesign the selection workflow.\n\n- Unit: ${req.unit}\n- Selection mode: ${req.selection.mode}\n- Period scope: ${req.selection.period_scope}\n- Questions per selected student: 6\n\n## Hard runtime rules\n1. Read the pinned SYSTEM_MANIFEST and pms_build/checkpoint.txt.\n2. Use the exact canonical private Portfolio Drive root ID in CHECKPOINT_REQUEST.json. Do not ask for exported Portfolio CSVs when Drive is accessible.\n3. Resolve the current Unit's 02 Portfolio Data at run time. Student membership and evidence must come from that live state.\n4. Use the pinned Unit Bank as the question-architecture source. Do not invent a new structure when an approved family fits.\n5. Save the run under 06 Checkpoints in a unique dated/run folder; preserve older runs.\n6. Return the printable HTML and PDF individually. Do not put student data in GitHub and do not wrap actual Checkpoint outputs in a GitHub Transfer ZIP.\n7. If the requested scope resolves to zero students, or a typed name is ambiguous, fail closed and say exactly what needs teacher review.\n`}
+function buildContract(){return `ALGEBRA CHECKPOINT REQUEST CONTRACT\n===================================\nThis request is a just-in-time private assessment run.\n- One Unit only.\n- Six questions per selected student.\n- Current Portfolio decides what needs evidence.\n- Approved Bank families supply question architecture.\n- Same Checkpoint source does not create multiple independent opportunities for one I Can merely because that I Can appears more than once.\n- Output print order: 3rd Hour alphabetically, then 6th Hour alphabetically.\n- Save HTML, PDF, private source map JSON, and run manifest under 06 Checkpoints/<dated run>/.\n- Return HTML + PDF to teacher.\n- No student data to GitHub.\n`}
+async function makeRequest(){
+  if(!valid())return;
+  try{
+    download.disabled=true;requestStatus.className='status warn';requestStatus.textContent='Pinning current project commits...';
+    const [systemCommit,courseCommit]=await Promise.all([resolveCommit(SYSTEM_REPO),resolveCommit(COURSE_REPO)]);
+    const req={
+      schema:'algebra-checkpoint-build-request/1.0',course:'Algebra 1',unit:Number(unit.value),default_question_count:6,
+      pm_entrypoint:'pms_build/checkpoint.txt',checkpoint_policy:'frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/contracts/checkpoint_policy.json',
+      template_contract:'Tools/templates/algebra/checkpoint/CHECKPOINT_PILOT_TEMPLATE_CONTRACT.json',
+      teacher_note:document.getElementById('note').value.trim(),selection:selection(),
+      private_drive:{root_title:'____Portfolio_Data',root_id:DRIVE_ROOT_ID,course_folder:'Algebra 1',unit_folder:`unit ${unit.value}`,portfolio_data_folder:'02 Portfolio Data',checkpoint_folder:'06 Checkpoints'},
+      pinned:{system_repo:SYSTEM_REPO,system_commit:systemCommit,course_repo:COURSE_REPO,course_commit:courseCommit},
+      output:{delivery:'checkpoint_drive_and_individual_artifacts',return:['printable HTML','student PDF'],private_persistence:['source map JSON','run manifest JSON','HTML','PDF'],print_order:['3rd Hour alphabetical','6th Hour alphabetical']}
+    };
+    const zip=new JSZip();zip.file('CHECKPOINT_REQUEST.json',JSON.stringify(req,null,2));zip.file('README.md',requestReadme(req));zip.file('CHECKPOINT_BUILD_CONTRACT.txt',buildContract());
+    const blob=await zip.generateAsync({type:'blob'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`algebra_u${unit.value}_checkpoint_REQUEST.zip`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),5000);
+    requestStatus.className='status good';requestStatus.textContent='Request ZIP downloaded. Start a fresh Checkpoint run with that ZIP.';
+  }catch(e){requestStatus.className='status bad';requestStatus.textContent='Request not created: '+e.message}finally{download.disabled=!valid()}
+}
+[unit,period,mode,names,intervention,interventionIcan,ican,document.getElementById('note')].forEach(el=>el.addEventListener(el===unit?'change':'input',el===unit?loadBank:update));
+period.addEventListener('change',update);mode.addEventListener('change',update);intervention.addEventListener('change',update);interventionIcan.addEventListener('change',update);ican.addEventListener('change',update);download.addEventListener('click',makeRequest);
+loadBank();
+</script>
+</body>
+</html>
