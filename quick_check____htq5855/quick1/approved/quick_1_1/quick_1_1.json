@@ -5,608 +5,474 @@
   "section": "1.1",
   "section_title": "Multiple Representations of Relationships",
   "quick_check_id": "U1-S1-QC01",
-  "system_commit": "c3dd1272e1f9c90a94407b467e290ba5858df4fb",
-  "course_commit": "0948a941f4e84d3d5d816d32b64d0dff4e542f13",
-  "default_print_layout": {
-    "problems_on_page_1": 2,
-    "student_pages_per_version": 2,
+  "artifact": "quick_1_1",
+  "pinned_sources": {
+    "system_repo": "tnezki/memories",
+    "system_commit": "340b4a0ea7c0cf03c9e1f7f4a7bc353bee4d71f9",
+    "course_repo": "tnezki/algebra",
+    "course_commit": "4758158eb69946e02823c30ec37a59d166cdf861"
+  },
+  "pm_entrypoint": "pms_build/exit.txt",
+  "template_contract": "Tools/templates/algebra/quick_check/QUICK_CHECK_TEMPLATE_CONTRACT.json",
+  "teacher_note": "keep the wording down use like 5th grade level",
+  "version_policy": {
+    "versions": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "pages_per_version": 2,
     "total_student_pages": 8,
-    "source_problem_heights_in": {
-      "1": 4.25,
-      "2": 4.35,
-      "3": 4.45,
-      "4": 4.35
+    "changes_used": [
+      "simple number/value swaps",
+      "deterministic question-order scramble"
+    ],
+    "answer_choice_scramble": "not applicable; all four items are constructed response"
+  },
+  "default_layout": {
+    "problems_on_page_1": 2,
+    "source_problem_height_in": {
+      "1": 4.0,
+      "2": 4.0,
+      "3": 4.1,
+      "4": 4.1
     }
   },
-  "html_adjustable_layout_note": "Teacher may change page split and source-problem heights in the HTML; lineage by version and printed order remains source-slot based.",
-  "version_policy": {
-    "allowed_changes": [
-      "simple number/value swaps",
-      "deterministic question-order scramble",
-      "answer-choice scramble when applicable"
-    ],
-    "answer_choice_scramble_used": false
-  },
-  "version_orders": {
-    "A": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "B": [
-      3,
-      1,
-      4,
-      2
-    ],
-    "C": [
-      2,
-      4,
-      1,
-      3
-    ],
-    "D": [
-      4,
-      3,
-      2,
-      1
-    ]
-  },
-  "source_architectures": [
+  "source_questions": [
     {
       "source_slot": 1,
       "i_can_id": "U1-MG01-IC01",
       "i_can_text": "Plot and read ordered pairs.",
-      "family_label": "A",
       "family_id": "U1-MG01-IC01-A",
+      "family_label": "A",
       "family_name": "Plot a Given Ordered Pair",
       "evidence_job": "direct coordinate plotting",
-      "bank_evidence_job": "plot a point from an ordered pair",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "title": "Plot a given ordered pair."
+      "response_mode": "constructed response",
+      "representation_mode": "graph",
+      "architecture_preserved": true
     },
     {
       "source_slot": 2,
       "i_can_id": "U1-MG01-IC02",
       "i_can_text": "Use the x- and y-axes correctly.",
-      "family_label": "A",
       "family_id": "U1-MG01-IC02-A",
+      "family_label": "A",
       "family_name": "Axis-First Coordinate Move",
       "evidence_job": "use x first and y second correctly",
-      "bank_evidence_job": "use x first and y second correctly",
       "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "title": "Use x first, then y."
+      "response_mode": "constructed response",
+      "representation_mode": "graph",
+      "architecture_preserved": true
     },
     {
       "source_slot": 3,
       "i_can_id": "U1-MG01-IC03",
       "i_can_text": "Read a graph using its scale.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC03-B",
-      "family_name": "Compare Values on an Unequal Scale",
-      "evidence_job": "use unequal graph scales correctly",
-      "bank_evidence_job": "use graph scale to compare two represented values",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "title": "Read two values and compare."
+      "family_id": "U1-MG01-IC03-C",
+      "family_label": "C",
+      "family_name": "Diagnose “Each Gridline Is 1”",
+      "evidence_job": "diagnose scale-reading misconception",
+      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+      "response_mode": "constructed response",
+      "representation_mode": "graph + worked claim",
+      "architecture_preserved": true
     },
     {
       "source_slot": 4,
       "i_can_id": "U1-MG01-IC04",
       "i_can_text": "Identify and interpret intercepts when they are shown.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC04-B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "title": "Interpret intercepts in context."
+      "family_id": "U1-MG01-IC04-C",
+      "family_label": "C",
+      "family_name": "Distinguish x- from y-Intercept",
+      "evidence_job": "distinguish x- and y-intercepts",
+      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+      "response_mode": "constructed response",
+      "representation_mode": "graph + worked claim",
+      "architecture_preserved": true
     }
   ],
-  "lineage": [
-    {
-      "version": "A",
-      "printed_position": 1,
-      "default_page": 1,
-      "source_slot": 1,
-      "i_can_code": "U1-MG01-IC01",
-      "i_can_exact_text": "Plot and read ordered pairs.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC01-A",
-      "family_name": "Plot a Given Ordered Pair",
-      "evidence_job": "direct coordinate plotting",
-      "bank_evidence_job": "plot a point from an ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "P",
-        "ordered_pair": [
-          -5,
-          4
-        ]
-      },
-      "answer": {
-        "ordered_pair": [
-          -5,
-          4
-        ],
-        "expected_plot": "P at (-5, 4)"
-      },
-      "aggregation_or_multi_target_behavior": null
+  "versions": {
+    "A": {
+      "order": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "items": [
+        {
+          "printed_position": 1,
+          "source_slot": 1,
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_id": "U1-MG01-IC01-A",
+          "family_label": "A",
+          "family_name": "Plot a Given Ordered Pair",
+          "evidence_job": "direct coordinate plotting",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "P",
+            "x": -3,
+            "y": 4
+          },
+          "answer": "P is plotted at (-3, 4).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 2,
+          "source_slot": 2,
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_id": "U1-MG01-IC02-A",
+          "family_label": "A",
+          "family_name": "Axis-First Coordinate Move",
+          "evidence_job": "use x first and y second correctly",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "Q",
+            "x": 5,
+            "y": -2
+          },
+          "answer": "x-axis controls the first move: 5 right; y-axis controls the second move: 2 down; plot (5, -2).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 3,
+          "source_slot": 3,
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_id": "U1-MG01-IC03-C",
+          "family_label": "C",
+          "family_name": "Diagnose “Each Gridline Is 1”",
+          "evidence_job": "diagnose scale-reading misconception",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "point_x": 2,
+            "point_y": 30,
+            "y_grid_step": 10,
+            "incorrect_reading": 3
+          },
+          "answer": "The axis labels set the scale. Each y-grid space is 10, so the correct y-value is 30.",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 4,
+          "source_slot": 4,
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_id": "U1-MG01-IC04-C",
+          "family_label": "C",
+          "family_name": "Distinguish x- from y-Intercept",
+          "evidence_job": "distinguish x- and y-intercepts",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "slope": -2,
+            "y_intercept": [
+              0,
+              8
+            ],
+            "x_intercept": [
+              4,
+              0
+            ],
+            "incorrect_label": "x-intercept for y-intercept"
+          },
+          "answer": "(0, 8) is the y-intercept because x=0. The x-intercept is (4, 0).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        }
+      ]
     },
-    {
-      "version": "A",
-      "printed_position": 2,
-      "default_page": 1,
-      "source_slot": 2,
-      "i_can_code": "U1-MG01-IC02",
-      "i_can_exact_text": "Use the x- and y-axes correctly.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC02-A",
-      "family_name": "Axis-First Coordinate Move",
-      "evidence_job": "use x first and y second correctly",
-      "bank_evidence_job": "use x first and y second correctly",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "Q",
-        "ordered_pair": [
-          3,
-          -5
-        ]
-      },
-      "answer": {
-        "x_axis_move": "3 units right",
-        "y_axis_move": "5 units down",
-        "ordered_pair": [
-          3,
-          -5
-        ]
-      },
-      "aggregation_or_multi_target_behavior": null
+    "B": {
+      "order": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "items": [
+        {
+          "printed_position": 1,
+          "source_slot": 3,
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_id": "U1-MG01-IC03-C",
+          "family_label": "C",
+          "family_name": "Diagnose “Each Gridline Is 1”",
+          "evidence_job": "diagnose scale-reading misconception",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "point_x": 4,
+            "point_y": 20,
+            "y_grid_step": 5,
+            "incorrect_reading": 4
+          },
+          "answer": "The axis labels set the scale. Each y-grid space is 5, so the correct y-value is 20.",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 2,
+          "source_slot": 1,
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_id": "U1-MG01-IC01-A",
+          "family_label": "A",
+          "family_name": "Plot a Given Ordered Pair",
+          "evidence_job": "direct coordinate plotting",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "P",
+            "x": 4,
+            "y": -3
+          },
+          "answer": "P is plotted at (4, -3).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 3,
+          "source_slot": 4,
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_id": "U1-MG01-IC04-C",
+          "family_label": "C",
+          "family_name": "Distinguish x- from y-Intercept",
+          "evidence_job": "distinguish x- and y-intercepts",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "slope": 2,
+            "y_intercept": [
+              0,
+              -6
+            ],
+            "x_intercept": [
+              3,
+              0
+            ],
+            "incorrect_label": "x-intercept for y-intercept"
+          },
+          "answer": "(0, -6) is the y-intercept because x=0. The x-intercept is (3, 0).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 4,
+          "source_slot": 2,
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_id": "U1-MG01-IC02-A",
+          "family_label": "A",
+          "family_name": "Axis-First Coordinate Move",
+          "evidence_job": "use x first and y second correctly",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "Q",
+            "x": -4,
+            "y": 3
+          },
+          "answer": "x-axis controls the first move: 4 left; y-axis controls the second move: 3 up; plot (-4, 3).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        }
+      ]
     },
-    {
-      "version": "A",
-      "printed_position": 3,
-      "default_page": 2,
-      "source_slot": 3,
-      "i_can_code": "U1-MG01-IC03",
-      "i_can_exact_text": "Read a graph using its scale.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC03-B",
-      "family_name": "Compare Values on an Unequal Scale",
-      "evidence_job": "use unequal graph scales correctly",
-      "bank_evidence_job": "use graph scale to compare two represented values",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 40,
-        "first_point": [
-          4,
-          120
-        ],
-        "second_point": [
-          10,
-          280
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Distance (meters)"
-      },
-      "answer": {
-        "first_reading_m": 120,
-        "second_reading_m": 280,
-        "difference_m": 160
-      },
-      "aggregation_or_multi_target_behavior": "The two graph readings are dependent intermediate results used to compute one final comparison; one source-level IC03 judgment."
+    "C": {
+      "order": [
+        2,
+        4,
+        1,
+        3
+      ],
+      "items": [
+        {
+          "printed_position": 1,
+          "source_slot": 2,
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_id": "U1-MG01-IC02-A",
+          "family_label": "A",
+          "family_name": "Axis-First Coordinate Move",
+          "evidence_job": "use x first and y second correctly",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "Q",
+            "x": 2,
+            "y": -5
+          },
+          "answer": "x-axis controls the first move: 2 right; y-axis controls the second move: 5 down; plot (2, -5).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 2,
+          "source_slot": 4,
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_id": "U1-MG01-IC04-C",
+          "family_label": "C",
+          "family_name": "Distinguish x- from y-Intercept",
+          "evidence_job": "distinguish x- and y-intercepts",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "slope": 2,
+            "y_intercept": [
+              0,
+              6
+            ],
+            "x_intercept": [
+              -3,
+              0
+            ],
+            "incorrect_label": "x-intercept for y-intercept"
+          },
+          "answer": "(0, 6) is the y-intercept because x=0. The x-intercept is (-3, 0).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 3,
+          "source_slot": 1,
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_id": "U1-MG01-IC01-A",
+          "family_label": "A",
+          "family_name": "Plot a Given Ordered Pair",
+          "evidence_job": "direct coordinate plotting",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "P",
+            "x": -5,
+            "y": -2
+          },
+          "answer": "P is plotted at (-5, -2).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 4,
+          "source_slot": 3,
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_id": "U1-MG01-IC03-C",
+          "family_label": "C",
+          "family_name": "Diagnose “Each Gridline Is 1”",
+          "evidence_job": "diagnose scale-reading misconception",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "point_x": 3,
+            "point_y": 40,
+            "y_grid_step": 10,
+            "incorrect_reading": 4
+          },
+          "answer": "The axis labels set the scale. Each y-grid space is 10, so the correct y-value is 40.",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        }
+      ]
     },
-    {
-      "version": "A",
-      "printed_position": 4,
-      "default_page": 2,
-      "source_slot": 4,
-      "i_can_code": "U1-MG01-IC04",
-      "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC04-B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 40,
-        "y_intercept": [
-          0,
-          240
-        ],
-        "x_intercept": [
-          12,
-          0
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Water remaining (liters)"
-      },
-      "answer": {
-        "y_intercept_meaning": "At 0 minutes, the tank contains 240 liters of water.",
-        "x_intercept_meaning": "After 12 minutes, 0 liters remain; the tank is empty."
-      },
-      "aggregation_or_multi_target_behavior": "The y-intercept and x-intercept interpretations combine into one source-level IC04 judgment."
-    },
-    {
-      "version": "B",
-      "printed_position": 1,
-      "default_page": 1,
-      "source_slot": 3,
-      "i_can_code": "U1-MG01-IC03",
-      "i_can_exact_text": "Read a graph using its scale.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC03-B",
-      "family_name": "Compare Values on an Unequal Scale",
-      "evidence_job": "use unequal graph scales correctly",
-      "bank_evidence_job": "use graph scale to compare two represented values",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 25,
-        "first_point": [
-          2,
-          75
-        ],
-        "second_point": [
-          8,
-          200
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Distance (meters)"
-      },
-      "answer": {
-        "first_reading_m": 75,
-        "second_reading_m": 200,
-        "difference_m": 125
-      },
-      "aggregation_or_multi_target_behavior": "The two graph readings are dependent intermediate results used to compute one final comparison; one source-level IC03 judgment."
-    },
-    {
-      "version": "B",
-      "printed_position": 2,
-      "default_page": 1,
-      "source_slot": 1,
-      "i_can_code": "U1-MG01-IC01",
-      "i_can_exact_text": "Plot and read ordered pairs.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC01-A",
-      "family_name": "Plot a Given Ordered Pair",
-      "evidence_job": "direct coordinate plotting",
-      "bank_evidence_job": "plot a point from an ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "P",
-        "ordered_pair": [
-          4,
-          -3
-        ]
-      },
-      "answer": {
-        "ordered_pair": [
-          4,
-          -3
-        ],
-        "expected_plot": "P at (4, -3)"
-      },
-      "aggregation_or_multi_target_behavior": null
-    },
-    {
-      "version": "B",
-      "printed_position": 3,
-      "default_page": 2,
-      "source_slot": 4,
-      "i_can_code": "U1-MG01-IC04",
-      "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC04-B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "values": {
-        "x_step": 3,
-        "y_step": 50,
-        "y_intercept": [
-          0,
-          300
-        ],
-        "x_intercept": [
-          15,
-          0
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Water remaining (liters)"
-      },
-      "answer": {
-        "y_intercept_meaning": "At 0 minutes, the tank contains 300 liters of water.",
-        "x_intercept_meaning": "After 15 minutes, 0 liters remain; the tank is empty."
-      },
-      "aggregation_or_multi_target_behavior": "The y-intercept and x-intercept interpretations combine into one source-level IC04 judgment."
-    },
-    {
-      "version": "B",
-      "printed_position": 4,
-      "default_page": 2,
-      "source_slot": 2,
-      "i_can_code": "U1-MG01-IC02",
-      "i_can_exact_text": "Use the x- and y-axes correctly.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC02-A",
-      "family_name": "Axis-First Coordinate Move",
-      "evidence_job": "use x first and y second correctly",
-      "bank_evidence_job": "use x first and y second correctly",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "Q",
-        "ordered_pair": [
-          -4,
-          2
-        ]
-      },
-      "answer": {
-        "x_axis_move": "4 units left",
-        "y_axis_move": "2 units up",
-        "ordered_pair": [
-          -4,
-          2
-        ]
-      },
-      "aggregation_or_multi_target_behavior": null
-    },
-    {
-      "version": "C",
-      "printed_position": 1,
-      "default_page": 1,
-      "source_slot": 2,
-      "i_can_code": "U1-MG01-IC02",
-      "i_can_exact_text": "Use the x- and y-axes correctly.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC02-A",
-      "family_name": "Axis-First Coordinate Move",
-      "evidence_job": "use x first and y second correctly",
-      "bank_evidence_job": "use x first and y second correctly",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "Q",
-        "ordered_pair": [
-          5,
-          3
-        ]
-      },
-      "answer": {
-        "x_axis_move": "5 units right",
-        "y_axis_move": "3 units up",
-        "ordered_pair": [
-          5,
-          3
-        ]
-      },
-      "aggregation_or_multi_target_behavior": null
-    },
-    {
-      "version": "C",
-      "printed_position": 2,
-      "default_page": 1,
-      "source_slot": 4,
-      "i_can_code": "U1-MG01-IC04",
-      "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC04-B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "values": {
-        "x_step": 3,
-        "y_step": 30,
-        "y_intercept": [
-          0,
-          180
-        ],
-        "x_intercept": [
-          9,
-          0
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Water remaining (liters)"
-      },
-      "answer": {
-        "y_intercept_meaning": "At 0 minutes, the tank contains 180 liters of water.",
-        "x_intercept_meaning": "After 9 minutes, 0 liters remain; the tank is empty."
-      },
-      "aggregation_or_multi_target_behavior": "The y-intercept and x-intercept interpretations combine into one source-level IC04 judgment."
-    },
-    {
-      "version": "C",
-      "printed_position": 3,
-      "default_page": 2,
-      "source_slot": 1,
-      "i_can_code": "U1-MG01-IC01",
-      "i_can_exact_text": "Plot and read ordered pairs.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC01-A",
-      "family_name": "Plot a Given Ordered Pair",
-      "evidence_job": "direct coordinate plotting",
-      "bank_evidence_job": "plot a point from an ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "P",
-        "ordered_pair": [
-          -3,
-          -4
-        ]
-      },
-      "answer": {
-        "ordered_pair": [
-          -3,
-          -4
-        ],
-        "expected_plot": "P at (-3, -4)"
-      },
-      "aggregation_or_multi_target_behavior": null
-    },
-    {
-      "version": "C",
-      "printed_position": 4,
-      "default_page": 2,
-      "source_slot": 3,
-      "i_can_code": "U1-MG01-IC03",
-      "i_can_exact_text": "Read a graph using its scale.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC03-B",
-      "family_name": "Compare Values on an Unequal Scale",
-      "evidence_job": "use unequal graph scales correctly",
-      "bank_evidence_job": "use graph scale to compare two represented values",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 50,
-        "first_point": [
-          6,
-          150
-        ],
-        "second_point": [
-          12,
-          350
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Distance (meters)"
-      },
-      "answer": {
-        "first_reading_m": 150,
-        "second_reading_m": 350,
-        "difference_m": 200
-      },
-      "aggregation_or_multi_target_behavior": "The two graph readings are dependent intermediate results used to compute one final comparison; one source-level IC03 judgment."
-    },
-    {
-      "version": "D",
-      "printed_position": 1,
-      "default_page": 1,
-      "source_slot": 4,
-      "i_can_code": "U1-MG01-IC04",
-      "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC04-B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 30,
-        "y_intercept": [
-          0,
-          210
-        ],
-        "x_intercept": [
-          14,
-          0
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Water remaining (liters)"
-      },
-      "answer": {
-        "y_intercept_meaning": "At 0 minutes, the tank contains 210 liters of water.",
-        "x_intercept_meaning": "After 14 minutes, 0 liters remain; the tank is empty."
-      },
-      "aggregation_or_multi_target_behavior": "The y-intercept and x-intercept interpretations combine into one source-level IC04 judgment."
-    },
-    {
-      "version": "D",
-      "printed_position": 2,
-      "default_page": 1,
-      "source_slot": 3,
-      "i_can_code": "U1-MG01-IC03",
-      "i_can_exact_text": "Read a graph using its scale.",
-      "family_label": "B",
-      "family_id": "U1-MG01-IC03-B",
-      "family_name": "Compare Values on an Unequal Scale",
-      "evidence_job": "use unequal graph scales correctly",
-      "bank_evidence_job": "use graph scale to compare two represented values",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "values": {
-        "x_step": 2,
-        "y_step": 30,
-        "first_point": [
-          4,
-          90
-        ],
-        "second_point": [
-          12,
-          240
-        ],
-        "x_axis": "Time (minutes)",
-        "y_axis": "Distance (meters)"
-      },
-      "answer": {
-        "first_reading_m": 90,
-        "second_reading_m": 240,
-        "difference_m": 150
-      },
-      "aggregation_or_multi_target_behavior": "The two graph readings are dependent intermediate results used to compute one final comparison; one source-level IC03 judgment."
-    },
-    {
-      "version": "D",
-      "printed_position": 3,
-      "default_page": 2,
-      "source_slot": 2,
-      "i_can_code": "U1-MG01-IC02",
-      "i_can_exact_text": "Use the x- and y-axes correctly.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC02-A",
-      "family_name": "Axis-First Coordinate Move",
-      "evidence_job": "use x first and y second correctly",
-      "bank_evidence_job": "use x first and y second correctly",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "Q",
-        "ordered_pair": [
-          -2,
-          -4
-        ]
-      },
-      "answer": {
-        "x_axis_move": "2 units left",
-        "y_axis_move": "4 units down",
-        "ordered_pair": [
-          -2,
-          -4
-        ]
-      },
-      "aggregation_or_multi_target_behavior": null
-    },
-    {
-      "version": "D",
-      "printed_position": 4,
-      "default_page": 2,
-      "source_slot": 1,
-      "i_can_code": "U1-MG01-IC01",
-      "i_can_exact_text": "Plot and read ordered pairs.",
-      "family_label": "A",
-      "family_id": "U1-MG01-IC01-A",
-      "family_name": "Plot a Given Ordered Pair",
-      "evidence_job": "direct coordinate plotting",
-      "bank_evidence_job": "plot a point from an ordered pair",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "values": {
-        "point_label": "P",
-        "ordered_pair": [
-          5,
-          2
-        ]
-      },
-      "answer": {
-        "ordered_pair": [
-          5,
-          2
-        ],
-        "expected_plot": "P at (5, 2)"
-      },
-      "aggregation_or_multi_target_behavior": null
+    "D": {
+      "order": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "items": [
+        {
+          "printed_position": 1,
+          "source_slot": 4,
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_id": "U1-MG01-IC04-C",
+          "family_label": "C",
+          "family_name": "Distinguish x- from y-Intercept",
+          "evidence_job": "distinguish x- and y-intercepts",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "slope": -1,
+            "y_intercept": [
+              0,
+              -4
+            ],
+            "x_intercept": [
+              -4,
+              0
+            ],
+            "incorrect_label": "x-intercept for y-intercept"
+          },
+          "answer": "(0, -4) is the y-intercept because x=0. The x-intercept is (-4, 0).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 2,
+          "source_slot": 3,
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_id": "U1-MG01-IC03-C",
+          "family_label": "C",
+          "family_name": "Diagnose “Each Gridline Is 1”",
+          "evidence_job": "diagnose scale-reading misconception",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "values": {
+            "point_x": 1,
+            "point_y": 25,
+            "y_grid_step": 5,
+            "incorrect_reading": 5
+          },
+          "answer": "The axis labels set the scale. Each y-grid space is 5, so the correct y-value is 25.",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 3,
+          "source_slot": 2,
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_id": "U1-MG01-IC02-A",
+          "family_label": "A",
+          "family_name": "Axis-First Coordinate Move",
+          "evidence_job": "use x first and y second correctly",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "Q",
+            "x": -3,
+            "y": -4
+          },
+          "answer": "x-axis controls the first move: 3 left; y-axis controls the second move: 4 down; plot (-3, -4).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        },
+        {
+          "printed_position": 4,
+          "source_slot": 1,
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_id": "U1-MG01-IC01-A",
+          "family_label": "A",
+          "family_name": "Plot a Given Ordered Pair",
+          "evidence_job": "direct coordinate plotting",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "values": {
+            "point_name": "P",
+            "x": 2,
+            "y": 5
+          },
+          "answer": "P is plotted at (2, 5).",
+          "deliberate_aggregation": false,
+          "multi_target": false
+        }
+      ]
     }
-  ]
+  },
+  "aggregation_or_multi_target": {
+    "used": false,
+    "note": "Each printed problem maps to its one teacher-selected I Can/evidence job; no deliberate aggregation or multi-target override is used."
+  }
 }
