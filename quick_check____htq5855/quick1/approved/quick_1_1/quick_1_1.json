@@ -1,19 +1,29 @@
 {
-  "schema": "algebra-approved-quick-check-source-map/1.0",
+  "schema": "algebra-approved-quick-check-source-map/1.1",
   "course": "Algebra 1",
   "unit": 1,
   "section": "1.1",
   "section_title": "Multiple Representations of Relationships",
   "quick_check_id": "U1-S1-QC01",
   "artifact": "quick_1_1",
+  "revision": {
+    "date": "2026-09-18",
+    "reason": "Teacher-directed graph repair and intercept prompt simplification.",
+    "changes": [
+      "Rebuilt all graph representations to the Algebra graph-tool visual standard instead of hand-authored inline SVG.",
+      "Changed source slot 4 from misconception diagnosis to Family A: Identify Both Intercepts.",
+      "Regenerated the 8-page approved student PDF from the repaired HTML."
+    ]
+  },
   "pinned_sources": {
     "system_repo": "tnezki/memories",
-    "system_commit": "340b4a0ea7c0cf03c9e1f7f4a7bc353bee4d71f9",
+    "system_commit": "b86d75f4a12cc5d3f1f6247f7d7270d415267408",
     "course_repo": "tnezki/algebra",
-    "course_commit": "4758158eb69946e02823c30ec37a59d166cdf861"
+    "course_commit": "093077b2a463df742b776f00df2c91168ef17fb9"
   },
   "pm_entrypoint": "pms_build/exit.txt",
   "template_contract": "Tools/templates/algebra/quick_check/QUICK_CHECK_TEMPLATE_CONTRACT.json",
+  "graph_tool_manifest": "frameworks/2_Framework_Algebra_1/Algebra1_Spiral_Framework/tools/graph_tool_manifest.json",
   "teacher_note": "keep the wording down use like 5th grade level",
   "version_policy": {
     "versions": [
@@ -37,6 +47,18 @@
       "2": 4.0,
       "3": 4.1,
       "4": 4.1
+    },
+    "source_graph_width_percent": {
+      "1": 40,
+      "2": 35,
+      "3": 48,
+      "4": 40
+    },
+    "source_workspace_height_in": {
+      "1": 0.15,
+      "2": 0.3,
+      "3": 0.45,
+      "4": 0.55
     }
   },
   "source_questions": [
@@ -83,13 +105,13 @@
       "source_slot": 4,
       "i_can_id": "U1-MG01-IC04",
       "i_can_text": "Identify and interpret intercepts when they are shown.",
-      "family_id": "U1-MG01-IC04-C",
-      "family_label": "C",
-      "family_name": "Distinguish x- from y-Intercept",
-      "evidence_job": "distinguish x- and y-intercepts",
-      "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+      "family_id": "U1-MG01-IC04-A",
+      "family_label": "A",
+      "family_name": "Identify Both Intercepts",
+      "evidence_job": "identify both intercepts",
+      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
       "response_mode": "constructed response",
-      "representation_mode": "graph + worked claim",
+      "representation_mode": "graph",
       "architecture_preserved": true
     }
   ],
@@ -165,11 +187,11 @@
           "source_slot": 4,
           "i_can_id": "U1-MG01-IC04",
           "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-C",
-          "family_label": "C",
-          "family_name": "Distinguish x- from y-Intercept",
-          "evidence_job": "distinguish x- and y-intercepts",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "family_id": "U1-MG01-IC04-A",
+          "family_label": "A",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "values": {
             "slope": -2,
             "y_intercept": [
@@ -179,10 +201,9 @@
             "x_intercept": [
               4,
               0
-            ],
-            "incorrect_label": "x-intercept for y-intercept"
+            ]
           },
-          "answer": "(0, 8) is the y-intercept because x=0. The x-intercept is (4, 0).",
+          "answer": "x-intercept: (4, 0); y-intercept: (0, 8).",
           "deliberate_aggregation": false,
           "multi_target": false
         }
@@ -240,11 +261,11 @@
           "source_slot": 4,
           "i_can_id": "U1-MG01-IC04",
           "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-C",
-          "family_label": "C",
-          "family_name": "Distinguish x- from y-Intercept",
-          "evidence_job": "distinguish x- and y-intercepts",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "family_id": "U1-MG01-IC04-A",
+          "family_label": "A",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "values": {
             "slope": 2,
             "y_intercept": [
@@ -254,10 +275,9 @@
             "x_intercept": [
               3,
               0
-            ],
-            "incorrect_label": "x-intercept for y-intercept"
+            ]
           },
-          "answer": "(0, -6) is the y-intercept because x=0. The x-intercept is (3, 0).",
+          "answer": "x-intercept: (3, 0); y-intercept: (0, -6).",
           "deliberate_aggregation": false,
           "multi_target": false
         },
@@ -314,11 +334,11 @@
           "source_slot": 4,
           "i_can_id": "U1-MG01-IC04",
           "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-C",
-          "family_label": "C",
-          "family_name": "Distinguish x- from y-Intercept",
-          "evidence_job": "distinguish x- and y-intercepts",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "family_id": "U1-MG01-IC04-A",
+          "family_label": "A",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "values": {
             "slope": 2,
             "y_intercept": [
@@ -328,10 +348,9 @@
             "x_intercept": [
               -3,
               0
-            ],
-            "incorrect_label": "x-intercept for y-intercept"
+            ]
           },
-          "answer": "(0, 6) is the y-intercept because x=0. The x-intercept is (-3, 0).",
+          "answer": "x-intercept: (-3, 0); y-intercept: (0, 6).",
           "deliberate_aggregation": false,
           "multi_target": false
         },
@@ -389,11 +408,11 @@
           "source_slot": 4,
           "i_can_id": "U1-MG01-IC04",
           "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-C",
-          "family_label": "C",
-          "family_name": "Distinguish x- from y-Intercept",
-          "evidence_job": "distinguish x- and y-intercepts",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "family_id": "U1-MG01-IC04-A",
+          "family_label": "A",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "values": {
             "slope": -1,
             "y_intercept": [
@@ -403,10 +422,9 @@
             "x_intercept": [
               -4,
               0
-            ],
-            "incorrect_label": "x-intercept for y-intercept"
+            ]
           },
-          "answer": "(0, -4) is the y-intercept because x=0. The x-intercept is (-4, 0).",
+          "answer": "x-intercept: (-4, 0); y-intercept: (0, -4).",
           "deliberate_aggregation": false,
           "multi_target": false
         },
@@ -473,6 +491,6 @@
   },
   "aggregation_or_multi_target": {
     "used": false,
-    "note": "Each printed problem maps to its one teacher-selected I Can/evidence job; no deliberate aggregation or multi-target override is used."
+    "note": "Each printed problem maps to its one approved I Can/evidence job; no deliberate aggregation or multi-target override is used."
   }
 }
