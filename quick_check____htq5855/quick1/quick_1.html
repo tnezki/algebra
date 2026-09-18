@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#eef2f6;--card:#fff;--ink:#182230;--muted:#667085;--line:#d5dce5;--accent:#245b87;--accent2:#eaf2f9;--good:#137a4b;--warn:#9a6200;--bad:#b42318;--shadow:0 8px 24px rgba(25,43,64,.08)}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:linear-gradient(135deg,#173d60,#28658f);color:#fff;padding:22px 26px}header h1{margin:0;font-size:27px}header p{margin:6px 0 0;opacity:.9;max-width:900px;line-height:1.35}
+header{background:linear-gradient(135deg,#173d60,#28658f);color:#fff;padding:22px 26px}header h1{margin:0;font-size:27px}header p{margin:6px 0 0;opacity:.9;max-width:980px;line-height:1.35}
 main{max-width:1240px;margin:18px auto 46px;padding:0 16px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
 .top-card{padding:16px 18px}.tab-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.section-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.section-tab{border:1px solid #bdc8d4;background:#f8fafc;color:#304154;padding:9px 12px;border-radius:9px;font-weight:800;cursor:pointer}.section-tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .section-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:10px}.section-head h2{margin:0;color:#173f6a}.section-head .meta{text-align:right;color:var(--muted);font-size:12px;line-height:1.35}.small{font-size:12px;color:var(--muted)}
@@ -18,13 +18,14 @@ main{max-width:1240px;margin:18px auto 46px;padding:0 16px}.card{background:#fff
 label.field{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}select{width:100%;padding:9px 10px;border:1px solid #bec9d5;border-radius:8px;background:#fff;font:inherit}
 .ican-box{margin:8px 0 9px;padding:8px 10px;background:#f7f9fc;border-radius:8px;border-left:4px solid var(--accent);font-size:12px;line-height:1.35}.ican-box b{color:#173f6a}
 .options{display:grid;gap:8px}.option{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:9px 10px;border:1px solid var(--line);border-radius:9px;cursor:pointer;background:#fff}.option:hover{border-color:#8eacc7;background:#fbfdff}.option.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset;background:#f6fafe}.option input{width:16px;height:16px;margin-top:3px}.family-line{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}.family-label{font-size:10px;font-weight:900;border-radius:5px;background:#eaf1f8;color:#174872;padding:2px 5px}.family-name{font-weight:800;font-size:13px}.sample{font-size:12px;line-height:1.35;margin-top:4px;color:#344054}.evidence{font-size:10.5px;color:var(--muted);margin-top:4px}
-.summary{margin-top:15px;padding:15px 17px}.summary h3{margin:0 0 8px;color:#173f6a}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}@media(max-width:900px){.summary-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.summary-grid{grid-template-columns:1fr}}.summary-item{border:1px solid var(--line);border-radius:8px;padding:8px;font-size:11px;line-height:1.3}.summary-item b{display:block;color:#173f6a;margin-bottom:2px}.missing{color:var(--bad);font-weight:800}
+.option.custom-option{border-style:dashed}.option.custom-option.selected{border-style:solid}.custom-wrap{display:none;margin-top:8px}.option.custom-option.selected .custom-wrap{display:block}.custom-text{width:100%;min-height:82px;resize:vertical;border:1px solid #aebdcb;border-radius:8px;padding:9px 10px;font:inherit;font-size:12px;line-height:1.35;background:#fff}.custom-hint{font-size:10.5px;color:var(--muted);line-height:1.3;margin-top:5px}.custom-error{font-size:10.5px;color:var(--bad);font-weight:800;margin-top:5px}
+.summary{margin-top:15px;padding:15px 17px}.summary h3{margin:0 0 8px;color:#173f6a}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}@media(max-width:900px){.summary-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.summary-grid{grid-template-columns:1fr}}.summary-item{border:1px solid var(--line);border-radius:8px;padding:8px;font-size:11px;line-height:1.3}.summary-item b{display:block;color:#173f6a;margin-bottom:2px}.missing{color:var(--bad);font-weight:800}.summary-custom{color:#6f4d00}
 .actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid #e5e9ef}.status{font-size:12px;line-height:1.35}.status.good{color:var(--good);font-weight:800}.status.bad{color:var(--bad);font-weight:800}button.primary{border:0;background:var(--accent);color:#fff;border-radius:9px;padding:11px 16px;font:inherit;font-weight:800;cursor:pointer}button.primary:disabled{opacity:.45;cursor:not-allowed}
 .note{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.35}.approved-nav{display:grid;gap:5px;margin-top:10px}.approved-nav-row{display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap}.approved-nav-row>span{font-size:10px;font-weight:900;color:var(--muted);min-width:34px;text-align:right}.approved-nav-row a{display:inline-block;border:1px solid #98b4cc;border-radius:7px;padding:5px 8px;color:var(--accent);background:#fff;font-size:11px;font-weight:800;text-decoration:none}.approved-nav-row a:hover{background:#eef6fc}.approved-nav-row.pdf-row a{border-color:#c5d0db;color:#52677a;background:#fbfcfd}.request-note{width:100%;min-height:66px;resize:vertical;border:1px solid #bec9d5;border-radius:8px;padding:9px 10px;font:inherit;background:#fff}.request-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:end;margin-top:12px}@media(max-width:700px){.request-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><h1>Algebra 1 · Unit 1 Quick Check Builder</h1><p>Choose one evidence architecture for each of the four questions. The downloaded request tells a fresh chat to build four simple parallel versions (A–D) and return the approved Quick Check as an 8-page print PDF plus source files.</p></header>
+<header><h1>Algebra 1 - Unit 1 Quick Check Builder</h1><p>Choose one evidence architecture for each of the four questions. Use one of the three Bank families, or choose Custom and describe the question type you want. The selected I Can remains the target.</p></header>
 <main>
 <section class="card top-card">
   <div class="section-head"><div><div class="small">ONE QUICK CHECK PER SECTION</div><h2 id="sectionTitle"></h2></div><div class="meta" id="sectionMeta"></div></div>
@@ -36,7 +37,7 @@ label.field{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}selec
   <h3>Selected Quick Check</h3>
   <div class="summary-grid" id="summaryGrid"></div>
   <div class="request-row"><div><label class="field" for="teacherNote">Optional build note <span class="small">(fine-tune this run only)</span></label><textarea class="request-note" id="teacherNote" placeholder="Example: make the graph larger, keep Q2 compact, or use friendlier values. Leave blank when no special adjustment is needed."></textarea></div><button class="primary" id="downloadBtn" disabled>Download Build Request ZIP</button></div><div class="actions"><div class="status" id="status">Choose one option for each question.</div></div>
-  <div class="note">The request ZIP pins the current <b>tnezki/memories</b> and <b>tnezki/algebra</b> commits at download time. The fresh chat should return a normal repository transfer ZIP. Approved files belong under <code>quick_check____htq5855/quick1/approved/quick_1_X/</code>.</div>
+  <div class="note">Custom choices are teacher-approved question architectures, but they remain bound to the selected I Can. The request ZIP pins the current <b>tnezki/memories</b> and <b>tnezki/algebra</b> commits at download time.</div>
 </section>
 </main>
 <script>
@@ -44,7 +45,7 @@ const SYSTEM_REPO='tnezki/memories', COURSE_REPO='tnezki/algebra';
 const familyData={
 'U1-MG01-IC01':{text:'Plot and read ordered pairs.',families:[
  {l:'A',name:'Plot a Given Ordered Pair',sample:'Plot P(-4, 3) on a coordinate plane and label the point.',job:'direct coordinate plotting'},
- {l:'B',name:'Translate Movement to an Ordered Pair',sample:'Start at the origin. Move 6 right and 2 down. Write the ending ordered pair.',job:'verbal movement → ordered pair'},
+ {l:'B',name:'Translate Movement to an Ordered Pair',sample:'Start at the origin. Move 6 right and 2 down. Write the ending ordered pair.',job:'verbal movement to ordered pair'},
  {l:'C',name:'Diagnose a Coordinate Sign Error',sample:'A student says 3 left and 5 up ends at (3, 5). Explain the error and correct the ordered pair.',job:'diagnose coordinate-sign reasoning'}]},
 'U1-MG01-IC02':{text:'Use the x- and y-axes correctly.',families:[
  {l:'A',name:'Axis-First Coordinate Move',sample:'For Q(2, -6), state which axis controls each move, then plot Q.',job:'use x first and y second correctly'},
@@ -53,7 +54,7 @@ const familyData={
 'U1-MG01-IC03':{text:'Read a graph using its scale.',families:[
  {l:'A',name:'Read a Scaled Coordinate',sample:'A graph is labeled by 5s on the y-axis. Read the coordinates of the marked point.',job:'read coordinate using graph scale'},
  {l:'B',name:'Compare Values on an Unequal Scale',sample:'Read two marked graph values when the axes use different scales, then compare the values.',job:'use unequal graph scales correctly'},
- {l:'C',name:'Diagnose “Each Gridline Is 1”',sample:'A student treats every gridline as 1 even though the axis labels increase by 5. Explain and correct the reading.',job:'diagnose scale-reading misconception'}]},
+ {l:'C',name:'Diagnose Each Gridline Is 1',sample:'A student treats every gridline as 1 even though the axis labels increase by 5. Explain and correct the reading.',job:'diagnose scale-reading misconception'}]},
 'U1-MG01-IC04':{text:'Identify and interpret intercepts when they are shown.',families:[
  {l:'A',name:'Identify Both Intercepts',sample:'From a graph, identify the x-intercept and y-intercept as ordered pairs.',job:'identify both intercepts'},
  {l:'B',name:'Interpret an Intercept in Context',sample:'A tank graph shows water remaining over time. Interpret the x- and y-intercepts in context.',job:'interpret intercepts in context'},
@@ -65,46 +66,46 @@ const familyData={
 'U1-MG02-IC02':{text:'Find slope from a table.',families:[
  {l:'A',name:'Constant-Step Table Slope',sample:'Use a table with constant x-steps to find the slope.',job:'slope from constant-step table'},
  {l:'B',name:'Uneven-Step Table Slope',sample:'Use a table with uneven x-steps to find the constant rate of change.',job:'slope from uneven-step table'},
- {l:'C',name:'Diagnose Δy-Only Reasoning',sample:'A student says the slope is just the change in y. Explain the error using the table and find the slope.',job:'diagnose Δy-only reasoning'}]},
+ {l:'C',name:'Diagnose Change-in-y-Only Reasoning',sample:'A student says the slope is just the change in y. Explain the error using the table and find the slope.',job:'diagnose change-in-y-only reasoning'}]},
 'U1-MG02-IC03':{text:'Find slope from an equation.',families:[
  {l:'A',name:'Read Slope from Slope-Intercept Form',sample:'Find the slope of y = -3x + 7.',job:'read slope from y=mx+b'},
  {l:'B',name:'Recognize Slope in Rearranged Linear Form',sample:'Find the slope of 2y = 6x - 8 by rewriting or reasoning.',job:'find slope from rearranged equation'},
  {l:'C',name:'Diagnose Slope vs. Intercept Confusion',sample:'A student says the slope of y = 2x + 7 is 7. Explain the error and identify the slope.',job:'diagnose slope/intercept confusion'}]},
 'U1-MG02-IC04':{text:'Find and interpret rate of change from a context.',families:[
  {l:'A',name:'Compute and Interpret Context Rate',sample:'A quantity changes from 18 to 42 while time changes from 2 to 6. Find and interpret the rate.',job:'compute and interpret context rate'},
- {l:'B',name:'Read Rate from a Context Graph',sample:'Use two points on a distance-time graph to find and interpret the rate of change.',job:'context graph → rate'},
+ {l:'B',name:'Read Rate from a Context Graph',sample:'Use two points on a distance-time graph to find and interpret the rate of change.',job:'context graph to rate'},
  {l:'C',name:'Distinguish Rate from Initial Value',sample:'A student identifies the starting value as the rate. Explain the difference and give the actual rate.',job:'distinguish rate from initial value'}]},
 'U1-MG03-IC01':{text:'Substitute a value for a variable.',families:[
  {l:'A',name:'Direct Single-Variable Substitution',sample:'Evaluate 3x - 5 when x = -2.',job:'direct substitution'},
  {l:'B',name:'Substitute into a Context Formula',sample:'Use C = 2.5h + 8 to find C when h = 4.',job:'substitute into context formula'},
- {l:'C',name:'Diagnose Missing Parentheses with a Negative',sample:'A student substitutes x = -3 into x² + 2 as -3² + 2. Explain what must be grouped and evaluate correctly.',job:'diagnose negative substitution error'}]},
+ {l:'C',name:'Diagnose Missing Parentheses with a Negative',sample:'A student substitutes x = -3 into x^2 + 2 as -3^2 + 2. Explain what must be grouped and evaluate correctly.',job:'diagnose negative substitution error'}]},
 'U1-MG03-IC02':{text:'Use order of operations correctly.',families:[
- {l:'A',name:'Evaluate a Mixed-Operation Expression',sample:'Evaluate 18 - 3(4) + 2².',job:'mixed-operation evaluation'},
+ {l:'A',name:'Evaluate a Mixed-Operation Expression',sample:'Evaluate 18 - 3(4) + 2^2.',job:'mixed-operation evaluation'},
  {l:'B',name:'Evaluate a Grouped Fraction Expression',sample:'Evaluate an expression containing grouping, a fraction bar, multiplication, and addition.',job:'grouped multistep order of operations'},
  {l:'C',name:'Diagnose Add-Before-Multiply Error',sample:'A student adds before multiplying in 7 + 3(5). Explain the error and evaluate correctly.',job:'diagnose order-of-operations error'}]},
 'U1-MG03-IC03':{text:'Evaluate expressions with positive and negative numbers.',families:[
- {l:'A',name:'Evaluate with Signed Numbers',sample:'Evaluate -4 + 3(-2)².',job:'evaluate with signed numbers'},
+ {l:'A',name:'Evaluate with Signed Numbers',sample:'Evaluate -4 + 3(-2)^2.',job:'evaluate with signed numbers'},
  {l:'B',name:'Evaluate Two Variables with Negative Inputs',sample:'Evaluate 2x - 3y for x = -3 and y = 2.',job:'two-variable signed substitution'},
- {l:'C',name:'Distinguish -a² from (-a)²',sample:'For a = 4, compare -a² and (-a)² and explain why the values differ.',job:'reason about negative signs and exponents'}]},
+ {l:'C',name:'Distinguish -a^2 from (-a)^2',sample:'For a = 4, compare -a^2 and (-a)^2 and explain why the values differ.',job:'reason about negative signs and exponents'}]},
 'U1-MG03-IC04':{text:'Check whether an answer is reasonable.',families:[
- {l:'A',name:'Estimate Before Accepting an Exact Value',sample:'Estimate 19.8 × 4.9, then decide whether an exact answer of 970.2 is reasonable.',job:'estimate to check reasonableness'},
+ {l:'A',name:'Estimate Before Accepting an Exact Value',sample:'Estimate 19.8 x 4.9, then decide whether an exact answer of 970.2 is reasonable.',job:'estimate to check reasonableness'},
  {l:'B',name:'Use Context Bounds to Check an Answer',sample:'A context has clear minimum/maximum bounds. Decide whether a proposed value can be reasonable and explain.',job:'use context bounds to check result'},
  {l:'C',name:'Diagnose a Plausible-Looking Wrong Answer',sample:'A student gets a plausible-looking value after evaluating an expression. Use estimation or structure to show why it is wrong.',job:'diagnose plausible wrong result'}]},
 'U1-MG04-IC01':{text:'Use input/output language and ordered pairs.',families:[
- {l:'A',name:'Table Row to Ordered Pair',sample:'A table row has input 3 and output 11. Write the ordered pair.',job:'table row → ordered pair'},
- {l:'B',name:'Context Pair as Input and Output',sample:'A situation pairs 4 hours with $26. Identify the input and output and write the ordered pair.',job:'context pair → input/output'},
+ {l:'A',name:'Table Row to Ordered Pair',sample:'A table row has input 3 and output 11. Write the ordered pair.',job:'table row to ordered pair'},
+ {l:'B',name:'Context Pair as Input and Output',sample:'A situation pairs 4 hours with $26. Identify the input and output and write the ordered pair.',job:'context pair to input/output'},
  {l:'C',name:'Diagnose a Reversed Ordered Pair',sample:'A student writes an output-input pair instead of input-output. Explain and correct the ordered pair.',job:'diagnose reversed ordered pair'}]},
 'U1-MG04-IC02':{text:'Use a rule to find an output from an input.',families:[
  {l:'A',name:'Evaluate an Input-Output Rule',sample:'For y = 4x - 3, find the output when x = 5.',job:'evaluate input-output rule'},
- {l:'B',name:'Translate a Verbal Rule then Evaluate',sample:'The rule is “double the input, then add 7.” Find the output for an input of 6.',job:'verbal rule → output'},
- {l:'C',name:'Diagnose Reversed Operation Order',sample:'A student adds 7 before doubling for “double, then add 7.” Explain the error and find the correct output.',job:'diagnose operation-order error in rule'}]},
+ {l:'B',name:'Translate a Verbal Rule then Evaluate',sample:'The rule is double the input, then add 7. Find the output for an input of 6.',job:'verbal rule to output'},
+ {l:'C',name:'Diagnose Reversed Operation Order',sample:'A student adds 7 before doubling for double, then add 7. Explain the error and find the correct output.',job:'diagnose operation-order error in rule'}]},
 'U1-MG04-IC03':{text:'Find a missing input or output when enough information is given.',families:[
  {l:'A',name:'Find a Missing Output',sample:'For y = 3x + 2 and x = 4, find the missing output.',job:'find missing output'},
  {l:'B',name:'Work Backward for a Missing Input',sample:'For y = 4x + 4, find the input that gives an output of 20.',job:'work backward for input'},
  {l:'C',name:'Infer Enough Information for a Missing Value',sample:'Use a partially completed rule/table to determine whether a missing input or output can be found, then find it when possible.',job:'reason about sufficient information'}]},
 'U1-MG04-IC04':{text:'Use a rule to build or extend a table.',families:[
  {l:'A',name:'Build a Table from a Rule',sample:'Use y = 2x - 1 to complete outputs for x = -1, 0, and 2.',job:'build table from rule'},
- {l:'B',name:'Build a Context Table',sample:'A context follows a stated rule. Complete a table for several input values.',job:'context rule → table'},
+ {l:'B',name:'Build a Context Table',sample:'A context follows a stated rule. Complete a table for several input values.',job:'context rule to table'},
  {l:'C',name:'Repair and Extend a Rule Table',sample:'One row in a rule table is wrong. Identify the error, repair it, and extend the table one more row.',job:'diagnose and extend rule table'}]}
 };
 const mgTitles={'U1-MG01':'Coordinate-Plane Graphs','U1-MG02':'Slope in Four Views','U1-MG03':'Evaluate Expressions','U1-MG04':'Input / Output Rules'};
@@ -117,76 +118,60 @@ const sections=[
 ];
 let currentSection=0;
 const state={};
-for(const s of sections) state[s.id]=Array.from({length:4},()=>({ican:null,family:null}));
+for(const s of sections) state[s.id]=Array.from({length:4},()=>({ican:null,family:null,custom:''}));
 function idsForMGs(mgs){return Object.keys(familyData).filter(id=>mgs.some(m=>id.startsWith(m+'-')))}
-function qRole(s,i){if(s.special)return {label:'Current evidence',kind:'current'}; return i<2?{label:'Current evidence',kind:'current'}:{label:'Current-unit reassessment',kind:'reassess'}}
-function eligibleIds(s,i){if(s.special){return [`U1-MG01-IC0${i+1}`]} const r=qRole(s,i); return idsForMGs(r.kind==='current'?s.current:s.prior)}
-function optionLabel(id){const mg=id.slice(0,7);return `${id} · ${mgTitles[mg]} · ${familyData[id].text}`}
-function sectionDefaults(s){const st=state[s.id]; for(let i=0;i<4;i++){if(!st[i].ican){const ids=eligibleIds(s,i);st[i].ican=ids[i%ids.length]||ids[0];}}}
+function qRole(s,i){if(s.special)return {label:'Current evidence',kind:'current'};return i<2?{label:'Current evidence',kind:'current'}:{label:'Current-unit reassessment',kind:'reassess'}}
+function eligibleIds(s,i){if(s.special)return [`U1-MG01-IC0${i+1}`];const r=qRole(s,i);return idsForMGs(r.kind==='current'?s.current:s.prior)}
+function optionLabel(id){const mg=id.slice(0,7);return `${id} - ${mgTitles[mg]} - ${familyData[id].text}`}
+function sectionDefaults(s){const st=state[s.id];for(let i=0;i<4;i++){if(!st[i].ican){const ids=eligibleIds(s,i);st[i].ican=ids[i%ids.length]||ids[0]}}}
+function escapeHtml(v){return String(v||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
 function renderTabs(){const el=document.getElementById('sectionTabs');el.innerHTML='';sections.forEach((s,i)=>{const b=document.createElement('button');b.className='section-tab'+(i===currentSection?' active':'');b.textContent=`Section ${s.id}`;b.onclick=()=>{currentSection=i;render()};el.appendChild(b)})}
-function render(){const s=sections[currentSection];sectionDefaults(s);renderTabs();document.getElementById('sectionTitle').textContent=`Section ${s.id} · ${s.title}`;document.getElementById('sectionMeta').innerHTML=s.special?`Opening Quick Check<br><b>4 current-evidence slots</b>`:`2 current-evidence slots<br><b>2 current-unit reassessment slots</b>`;renderSlots(s);renderSummary(s)}
-function renderSlots(s){const root=document.getElementById('slots');root.innerHTML='';for(let i=0;i<4;i++){const role=qRole(s,i),ids=eligibleIds(s,i),st=state[s.id][i];if(!ids.includes(st.ican)){st.ican=ids[0];st.family=null}const d=familyData[st.ican];const sec=document.createElement('section');sec.className='card slot';sec.innerHTML=`<div class="slot-head"><h3>Question ${i+1}</h3><span class="badge ${role.kind==='reassess'?'reassess':''}">${role.label}</span></div><label class="field">Target I Can</label><select data-q="${i}">${ids.map(id=>`<option value="${id}" ${id===st.ican?'selected':''}>${optionLabel(id)}</option>`).join('')}</select><div class="ican-box"><b>${st.ican}</b><br>${d.text}</div><div class="options">${d.families.map(f=>`<label class="option ${st.family===f.l?'selected':''}"><input type="checkbox" data-fq="${i}" data-family="${f.l}" ${st.family===f.l?'checked':''}><div><div class="family-line"><span class="family-label">Family ${f.l}</span><span class="family-name">${f.name}</span></div><div class="sample">${f.sample}</div><div class="evidence">Evidence job: ${f.job}</div></div></label>`).join('')}</div>`;root.appendChild(sec);sec.querySelector('select').onchange=e=>{st.ican=e.target.value;st.family=null;renderSlots(s);renderSummary(s)};sec.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=e=>{st.family=e.target.checked?e.target.dataset.family:null;renderSlots(s);renderSummary(s)})}}
-function renderSummary(s){const root=document.getElementById('summaryGrid');root.innerHTML='';let ok=true;state[s.id].forEach((st,i)=>{const d=familyData[st.ican],f=d?.families.find(x=>x.l===st.family);if(!f)ok=false;const div=document.createElement('div');div.className='summary-item';div.innerHTML=f?`<b>Q${i+1} · ${st.ican} · Family ${f.l}</b>${f.name}`:`<b>Q${i+1}</b><span class="missing">Choose a question possibility</span>`;root.appendChild(div)});const status=document.getElementById('status'),btn=document.getElementById('downloadBtn');btn.disabled=!ok;if(ok){status.className='status good';status.textContent='Ready: four question architectures selected.'}else{status.className='status';status.textContent='Choose one option for each question.'}}
+function render(){const s=sections[currentSection];sectionDefaults(s);renderTabs();document.getElementById('sectionTitle').textContent=`Section ${s.id} - ${s.title}`;document.getElementById('sectionMeta').innerHTML=s.special?`Opening Quick Check<br><b>4 current-evidence slots</b>`:`2 current-evidence slots<br><b>2 current-unit reassessment slots</b>`;renderSlots(s);renderSummary(s)}
+function renderSlots(s){
+ const root=document.getElementById('slots');root.innerHTML='';
+ for(let i=0;i<4;i++){
+  const role=qRole(s,i),ids=eligibleIds(s,i),st=state[s.id][i];
+  if(!ids.includes(st.ican)){st.ican=ids[0];st.family=null;st.custom=''}
+  const d=familyData[st.ican];const sec=document.createElement('section');sec.className='card slot';
+  const bankOptions=d.families.map(f=>`<label class="option ${st.family===f.l?'selected':''}"><input type="checkbox" data-fq="${i}" data-family="${f.l}" ${st.family===f.l?'checked':''}><div><div class="family-line"><span class="family-label">Family ${f.l}</span><span class="family-name">${escapeHtml(f.name)}</span></div><div class="sample">${escapeHtml(f.sample)}</div><div class="evidence">Evidence job: ${escapeHtml(f.job)}</div></div></label>`).join('');
+  const customSelected=st.family==='CUSTOM';
+  sec.innerHTML=`<div class="slot-head"><h3>Question ${i+1}</h3><span class="badge ${role.kind==='reassess'?'reassess':''}">${role.label}</span></div><label class="field">Target I Can</label><select data-q="${i}">${ids.map(id=>`<option value="${id}" ${id===st.ican?'selected':''}>${escapeHtml(optionLabel(id))}</option>`).join('')}</select><div class="ican-box"><b>${st.ican}</b><br>${escapeHtml(d.text)}</div><div class="options">${bankOptions}<label class="option custom-option ${customSelected?'selected':''}"><input type="checkbox" data-fq="${i}" data-family="CUSTOM" ${customSelected?'checked':''}><div><div class="family-line"><span class="family-label">Custom</span><span class="family-name">Describe my own question type</span></div><div class="sample">Use this when the three Bank families are not the question structure you want.</div><div class="evidence">The selected I Can stays fixed; your description becomes the teacher-approved architecture.</div><div class="custom-wrap"><textarea class="custom-text" data-custom-q="${i}" placeholder="Describe the question type you want. Example: Show a line on a graph and ask students only to write the x- and y-intercepts as ordered pairs.">${escapeHtml(st.custom)}</textarea><div class="custom-hint">Be as brief or specific as you want. Values can still vary across Versions A-D, but the custom question structure stays the same.</div>${customSelected&&!st.custom.trim()?'<div class="custom-error">Add a description before downloading the request.</div>':''}</div></div></label></div>`;
+  root.appendChild(sec);
+  sec.querySelector('select').onchange=e=>{st.ican=e.target.value;st.family=null;st.custom='';renderSlots(s);renderSummary(s)};
+  sec.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=e=>{st.family=e.target.checked?e.target.dataset.family:null;if(st.family!=='CUSTOM')st.custom='';renderSlots(s);renderSummary(s)});
+  const ta=sec.querySelector('[data-custom-q]');if(ta){ta.addEventListener('click',e=>e.stopPropagation());ta.addEventListener('input',e=>{st.custom=e.target.value;renderSummary(s)})}
+ }
+}
+function renderSummary(s){
+ const root=document.getElementById('summaryGrid');root.innerHTML='';let ok=true;
+ state[s.id].forEach((st,i)=>{
+  const d=familyData[st.ican],f=d?.families.find(x=>x.l===st.family),isCustom=st.family==='CUSTOM',customReady=isCustom&&st.custom.trim().length>0;
+  if(!f&&!customReady)ok=false;
+  const div=document.createElement('div');div.className='summary-item';
+  if(f)div.innerHTML=`<b>Q${i+1} - ${st.ican} - Family ${f.l}</b>${escapeHtml(f.name)}`;
+  else if(customReady)div.innerHTML=`<b>Q${i+1} - ${st.ican} - <span class="summary-custom">Custom</span></b>${escapeHtml(st.custom.trim())}`;
+  else div.innerHTML=`<b>Q${i+1}</b><span class="missing">${isCustom?'Describe the custom question type':'Choose a question possibility'}</span>`;
+  root.appendChild(div)
+ });
+ const status=document.getElementById('status'),btn=document.getElementById('downloadBtn');btn.disabled=!ok;
+ if(ok){status.className='status good';status.textContent='Ready: four teacher-approved question architectures selected.'}else{status.className='status';status.textContent='Choose one option for each question and describe any Custom choice.'}
+}
 async function resolveCommit(repo){const r=await fetch(`https://api.github.com/repos/${repo}/commits/main`,{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw new Error(`Could not pin ${repo}: ${r.status}`);return (await r.json()).sha}
-function buildRequest(s,systemCommit,courseCommit){const selections=state[s.id].map((st,i)=>{const f=familyData[st.ican].families.find(x=>x.l===st.family);return {question_slot:i+1,slot_role:qRole(s,i).kind==='reassess'?'current_unit_reassessment':'current_evidence',i_can_id:st.ican,i_can_exact_text:familyData[st.ican].text,family_label:f.l,family_name:f.name,sample_prompt:f.sample,evidence_job:f.job}});return {schema:'algebra-quick-check-build-request/1.1',course:'Algebra 1',unit:1,section:s.id,section_title:s.title,quick_check_id:`U1-S${s.id.split('.')[1]}-QC01`,one_quick_check_per_section:true,pm_entrypoint:'pms_build/exit.txt',template_contract:'Tools/templates/algebra/quick_check/QUICK_CHECK_TEMPLATE_CONTRACT.json',local_transfer_contract:'Tools/LOCAL_REPO_TRANSFER_CONTRACT.txt',teacher_note:document.getElementById('teacherNote').value.trim(),pinned:{system_repo:SYSTEM_REPO,system_commit:systemCommit,course_repo:COURSE_REPO,course_commit:courseCommit},teacher_approved_question_architectures:selections,version_policy:{versions:['A','B','C','D'],student_print_pages_per_version:2,total_student_print_pages:8,allowed_surface_changes:['simple number/value swaps','deterministic question-order scramble','answer-choice scramble when applicable'],forbidden:['new question architecture','different I Can between versions','difficulty drift','changing the evidence job','inventing materially different parallel questions merely for anti-copying']},gold_standard_layout:{mathjax:true,visible_i_can_code_and_statement:true,name_at_top_page1:true,page2_header:false,shaded_problem_cards:false,ruled_workspace_lines:false,plain_white_workspace:true,screen_controls:['problems on page 1: 1-3','per-source-problem height slider + numeric inches','reset','A1-D2 free/overflow indicators','Print A-D (8 pages)'],graph_print_contrast:'dark grid/axes; template may override graph-tool defaults'},output:{repo_folder:'algebra',approved_folder:`quick_check____htq5855/quick1/approved/quick_${s.slug}`,html:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.html`,pdf:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.pdf`,source_map:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.json`,delivery:'github_transfer_v2'}}}
-function requestMarkdown(req){return `# Algebra 1 Quick Check Build
-
-Build the ONE approved Quick Check for **Section ${req.section} · ${req.section_title}**.
-
-## Authority / read order
-Use only the exact pinned repositories in quick_check_request.json plus these request files. Read SYSTEM_MANIFEST.json first, then **${req.pm_entrypoint}**, the current Algebra Framework authority/policy, **${req.template_contract}**, and **${req.local_transfer_contract}**. Preserve the four teacher-selected question architectures exactly.
-
-${req.teacher_note?`## Teacher fine-tuning note\n${req.teacher_note}\n\n`:''}## Required result
-Create four versions **A, B, C, D** from the same four approved source questions. Each version is exactly **2 student-print pages**, for one **8-page student PDF** total.
-
-Allowed version changes only: simple number/value swaps, deterministic question-order scramble, and answer-choice scramble when applicable. Do not invent materially different parallel questions merely to make versions different.
-
-## Gold-standard HTML / print behavior - HARD
-Follow ${req.template_contract} literally. The approved HTML must contain all four versions and screen-only controls that let the teacher:
-- choose 1, 2, or 3 problems on page 1 (remaining problems on page 2);
-- adjust each SOURCE problem/evidence architecture height with both a slider and exact numeric inch box; the height follows that source problem across scrambled versions;
-- see free-space/overflow for A1, A2, B1, B2, C1, C2, D1, D2;
-- Reset;
-- Print A-D (8 pages).
-
-Student print rules: exact I Can code + exact statement visible for every problem; MathJax for math; Name is the first field at the top of page 1; page 2 has NO repeated header/name; no shaded problem cards; no ruled workspace lines; use plain white workspace; simple divider rules; dark photocopy-safe graph grid/axes even if CSS overrides graph-tool line weights. Default geometry must fit all eight pages with tolerance and avoid large dead space.
-
-## Files to create
-Exactly these three approved files:
-1. ${req.output.html} - canonical adjustable/reprint source.
-2. ${req.output.pdf} - one 8-page STUDENT PDF generated from a fit default layout.
-3. ${req.output.source_map} - exact lineage/source map recording each version, printed position, source slot, I Can code + exact text, family, evidence job, values, answer, and any deliberate aggregation/multi-target behavior.
-
-No teacher-key pages may appear inside the 8-page student PDF.
-
-## Delivery - HARD
-Return ONE local repository transfer ZIP following ${req.local_transfer_contract} EXACTLY. The ZIP root must be:
-
-TRANSFER_MANIFEST.json
-payload/
-  algebra/
-    quick_check____htq5855/...
-
-TRANSFER_MANIFEST.json must contain schema_version: 2, package_type: "github_transfer", a package_id, and files[]. Use CREATE for missing approved files or REPLACE for existing ones. Do NOT emit github_transfer/1, manifest.json, github_transfer_manifest.json, or repo_files/. Do not push GitHub and do not modify the selector page.
-
-Stop after the valid v2 transfer ZIP is produced.
-`}
-function buildContract(){return `QUICK CHECK BUILD CONTRACT
-==========================
-- One Quick Check per section.
-- Four teacher-approved question architectures.
-- Four versions A-D in one adjustable HTML.
-- Two student pages per version; one 8-page student PDF total.
-- Same I Can + family evidence job across versions.
-- Allowed version differences: simple values/numbers, deterministic question order, answer-choice order.
-- Exact I Can code + statement prints with every problem.
-- MathJax; plain white workspace; no shaded cards; no ruled workspace; no page-2 header.
-- Screen-only controls: page split, per-source-problem height slider + numeric input, eight-page fit indicators, reset, Print A-D.
-- Graphs must be photocopy-safe; CSS may darken grid/axis line weights.
-- Approved folder contains exactly HTML + 8-page PDF + JSON source map.
-- Return a github_transfer / 2 ZIP with TRANSFER_MANIFEST.json + payload/algebra/. No v1 fallback.
-`}
-async function downloadRequest(){const s=sections[currentSection];if(document.getElementById('downloadBtn').disabled)return;const status=document.getElementById('status');status.className='status';status.textContent='Pinning current repositories and packaging request…';try{const [sys,course]=await Promise.all([resolveCommit(SYSTEM_REPO),resolveCommit(COURSE_REPO)]);const req=buildRequest(s,sys,course);const zip=new JSZip();zip.file('REQUEST.md',requestMarkdown(req));zip.file('quick_check_request.json',JSON.stringify(req,null,2));zip.file('BUILD_CONTRACT.txt',buildContract());const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`algebra_u1_quick_${s.slug}_REQUEST.zip`;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1200);status.className='status good';status.textContent=`Request packaged for Section ${s.id}. Feed the ZIP to a fresh chat.`}catch(err){status.className='status bad';status.textContent='Could not package request: '+err.message}}
+function selectionRecord(s,st,i){
+ const d=familyData[st.ican],f=d.families.find(x=>x.l===st.family),role=qRole(s,i).kind==='reassess'?'current_unit_reassessment':'current_evidence';
+ if(st.family==='CUSTOM')return {question_slot:i+1,slot_role:role,i_can_id:st.ican,i_can_exact_text:d.text,selection_mode:'custom',family_label:'CUSTOM',family_name:'Teacher Custom Question Type',sample_prompt:st.custom.trim(),evidence_job:'teacher-defined custom question type bound to the selected I Can',custom_question_description:st.custom.trim()};
+ return {question_slot:i+1,slot_role:role,i_can_id:st.ican,i_can_exact_text:d.text,selection_mode:'bank_family',family_label:f.l,family_name:f.name,sample_prompt:f.sample,evidence_job:f.job,custom_question_description:null};
+}
+function buildRequest(s,systemCommit,courseCommit){
+ const selections=state[s.id].map((st,i)=>selectionRecord(s,st,i));
+ return {schema:'algebra-quick-check-build-request/1.2',course:'Algebra 1',unit:1,section:s.id,section_title:s.title,quick_check_id:`U1-S${s.id.split('.')[1]}-QC01`,one_quick_check_per_section:true,pm_entrypoint:'pms_build/exit.txt',template_contract:'Tools/templates/algebra/quick_check/QUICK_CHECK_TEMPLATE_CONTRACT.json',local_transfer_contract:'Tools/LOCAL_REPO_TRANSFER_CONTRACT.txt',teacher_note:document.getElementById('teacherNote').value.trim(),pinned:{system_repo:SYSTEM_REPO,system_commit:systemCommit,course_repo:COURSE_REPO,course_commit:courseCommit},teacher_approved_question_architectures:selections,version_policy:{versions:['A','B','C','D'],student_print_pages_per_version:2,total_student_print_pages:8,allowed_surface_changes:['simple number/value swaps','deterministic question-order scramble','answer-choice scramble when applicable'],forbidden:['new question architecture','different I Can between versions','difficulty drift','changing the evidence job','inventing materially different parallel questions merely for anti-copying']},gold_standard_layout:{mathjax:true,visible_i_can_code_and_statement:true,name_at_top_page1:true,page2_header:false,shaded_problem_cards:false,ruled_workspace_lines:false,plain_white_workspace:true,screen_controls:['problems on page 1: 1-3','per-source-problem height slider + numeric inches','per-source graph size','per-source workspace height','reset','A1-D2 free/overflow indicators','Print A-D (8 pages)'],graph_print_standard:'0.6 pt grid #aaaaaa; 1.8 pt axes/arrows #222222; 2.0 pt plotted relation; 1.2 pt major ticks'},output:{repo_folder:'algebra',approved_folder:`quick_check____htq5855/quick1/approved/quick_${s.slug}`,html:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.html`,pdf:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.pdf`,source_map:`quick_check____htq5855/quick1/approved/quick_${s.slug}/quick_${s.slug}.json`,delivery:'github_transfer_v2'}}
+}
+function requestMarkdown(req){
+ const custom=req.teacher_approved_question_architectures.filter(x=>x.selection_mode==='custom');
+ return `# Algebra 1 Quick Check Build\n\nBuild the ONE approved Quick Check for **Section ${req.section} - ${req.section_title}**.\n\n## Authority / read order\nUse only the exact pinned repositories in quick_check_request.json plus these request files. Read SYSTEM_MANIFEST.json first, then **${req.pm_entrypoint}**, the current Algebra Framework authority/policy, **${req.template_contract}**, and **${req.local_transfer_contract}**. Preserve the four teacher-selected question architectures exactly. A selection_mode of **custom** is a teacher-approved architecture: use its custom_question_description as the question-type authority while keeping its selected I Can fixed.\n\n${custom.length?`## Custom teacher architectures\n${custom.map(x=>`- Q${x.question_slot} (${x.i_can_id}): ${x.custom_question_description}`).join('\n')}\n\n`:''}${req.teacher_note?`## Teacher fine-tuning note\n${req.teacher_note}\n\n`:''}## Required result\nCreate four versions **A, B, C, D** from the same four approved source questions. Each version is exactly **2 student-print pages**, for one **8-page student PDF** total.\n\nAllowed version changes only: simple number/value swaps, deterministic question-order scramble, and answer-choice scramble when applicable. Do not redesign either Bank-family or Custom architectures between versions.\n\n## Gold-standard HTML / print behavior - HARD\nFollow ${req.template_contract} literally. Preserve the approved graph print standard and all layout controls.\n\n## Files to create\nExactly the approved HTML, 8-page student PDF, and sibling JSON source map under ${req.output.approved_folder}. The source map must record selection_mode and custom_question_description whenever Custom was used.\n\n## Delivery - HARD\nReturn ONE local repository transfer ZIP following ${req.local_transfer_contract} EXACTLY with TRANSFER_MANIFEST.json and payload/algebra/. Do not push GitHub and do not modify the selector page.\n\nStop after the valid v2 transfer ZIP is produced.\n`;
+}
+function buildContract(){return `QUICK CHECK BUILD CONTRACT\n==========================\n- One Quick Check per section.\n- Four teacher-approved question architectures.\n- Each slot may use Bank Family A, B, C, or Custom.\n- Custom requires a teacher description and remains bound to the selected I Can.\n- Four versions A-D in one adjustable HTML.\n- Two student pages per version; one 8-page student PDF total.\n- Same approved architecture and I Can across versions.\n- Exact I Can code + statement prints with every problem.\n- Approved Quick Check graph print weights apply.\n- Approved folder contains exactly HTML + 8-page PDF + JSON source map.\n- Return a github_transfer / 2 ZIP with TRANSFER_MANIFEST.json + payload/algebra/. No v1 fallback.\n`}
+async function downloadRequest(){const s=sections[currentSection];if(document.getElementById('downloadBtn').disabled)return;const status=document.getElementById('status');status.className='status';status.textContent='Pinning current repositories and packaging request...';try{const [sys,course]=await Promise.all([resolveCommit(SYSTEM_REPO),resolveCommit(COURSE_REPO)]);const req=buildRequest(s,sys,course);const zip=new JSZip();zip.file('REQUEST.md',requestMarkdown(req));zip.file('quick_check_request.json',JSON.stringify(req,null,2));zip.file('BUILD_CONTRACT.txt',buildContract());const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`algebra_u1_quick_${s.slug}_REQUEST.zip`;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1200);status.className='status good';status.textContent=`Request packaged for Section ${s.id}. Feed the ZIP to a fresh chat.`}catch(err){status.className='status bad';status.textContent='Could not package request: '+err.message}}
 document.getElementById('downloadBtn').onclick=downloadRequest;render();
 </script>
 </body>
