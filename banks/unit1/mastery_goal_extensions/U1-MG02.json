@@ -1,0 +1,2184 @@
+{
+  "schema_version": "family-bank-extension/1.0",
+  "status": "APPROVED",
+  "course": "Algebra 1",
+  "unit": 1,
+  "mastery_goal_id": "U1-MG02",
+  "base_mastery_goal_file": "mastery_goals/U1-MG02.json",
+  "merge_rule": "append families by i_can_id; family_id must be unique; base A-C remain unchanged",
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG02-IC01",
+      "exact_text": "Find slope from a graph.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC01-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Choose the Correct Rise and Run",
+          "family_purpose": "Use a selected-response misconception check on slope triangles.",
+          "evidence_job": "identify a rise/run pair consistent with the graph",
+          "student_action": "Select the change pair that matches two points on the graph.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use a selected-response misconception check on slope triangles.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q077",
+          "teacher_question_id": "Q077",
+          "template_contract": {
+            "prompt_template": "Using points {p1} and {p2}, which rise/run matches the line?",
+            "parameters": {
+              "p1,p2": "approved lattice points"
+            },
+            "constraints": [
+              "distractors include reciprocal and sign errors"
+            ],
+            "answer_rule": "rise=delta y; run=delta x using same point order",
+            "rendering_rule": "Tools/graph_tool.py or approved graph asset",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Using points \\((0,-3)\\) and \\((2,1)\\), which rise/run matches the line?</p><img class=\"graph\" src=\"figures/u1_mg02_slope_a.png\" alt=\"Line with slope 2\"><ol class=\"choices\"><li>rise 4, run 2</li><li>rise 2, run 4</li><li>rise -4, run 2</li><li>rise 4, run -2</li></ol>",
+            "answer": "rise 4, run 2",
+            "solution": "From (0,-3) to (2,1), y increases 4 and x increases 2.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Estimate Slope Sign and Steepness First",
+          "family_purpose": "Ask for qualitative prediction before exact calculation.",
+          "evidence_job": "predict slope sign/magnitude then compute",
+          "student_action": "Predict sign/relative steepness, then calculate slope.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Ask for qualitative prediction before exact calculation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q078",
+          "teacher_question_id": "Q078",
+          "template_contract": {
+            "prompt_template": "Before calculating, classify slope sign and whether |m| is less than, equal to, or greater than 1. Then calculate.",
+            "parameters": {
+              "graph": "approved line with readable lattice points"
+            },
+            "constraints": [
+              "visual steepness classification unambiguous"
+            ],
+            "answer_rule": "qualitative prediction must agree with exact rise/run",
+            "rendering_rule": "Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Before calculating, is the slope positive or negative, and is its magnitude less than 1 or greater than 1? Then find the exact slope.</p><img class=\"graph\" src=\"figures/u1_mg02_slope_b.png\" alt=\"Descending line with slope negative one half\"><div class=\"response-surface\">Prediction + exact slope:</div>",
+            "answer": "Negative, magnitude less than 1; slope -1/2.",
+            "solution": "The line falls gently left-to-right; using (0,4) and (4,2) gives -2/4=-1/2.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Compare Two Valid Slope Triangles",
+          "family_purpose": "Show that different point pairs can produce the same slope.",
+          "evidence_job": "compare two slope calculations from the same line",
+          "student_action": "Verify that two rise/run triangles are equivalent.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + calculations",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + calculations -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Show that different point pairs can produce the same slope.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q079",
+          "teacher_question_id": "Q079",
+          "template_contract": {
+            "prompt_template": "Student A uses rise/run {r1}/{d1}; Student B uses {r2}/{d2}. Are both valid for the same line? Explain.",
+            "parameters": {
+              "ratios": "equivalent or one deliberately non-equivalent pair"
+            },
+            "constraints": [
+              "integers small enough for graph window"
+            ],
+            "answer_rule": "compare simplified ratios",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>On a line with slope 2, one student uses rise/run \\(4/2\\) and another uses \\(6/3\\). Are both valid? Explain.</p><div class=\"response-surface\">Comparison:</div>",
+            "answer": "Yes; both simplify to 2.",
+            "solution": "Different-sized slope triangles on the same line have the same rise/run ratio.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Identify Slope Sign from Graph Behavior",
+          "family_purpose": "Use feature identification before arithmetic.",
+          "evidence_job": "identify positive/negative/zero slope from graph behavior",
+          "student_action": "Classify slope sign from the direction of a line.",
+          "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "intro",
+          "difficulty_band": "Intro",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use feature identification before arithmetic.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q080",
+          "teacher_question_id": "Q080",
+          "template_contract": {
+            "prompt_template": "The line {behavior}. Is its slope positive, negative, or zero?",
+            "parameters": {
+              "behavior": [
+                "increases left to right",
+                "decreases left to right",
+                "is horizontal"
+              ]
+            },
+            "constraints": [
+              "behavior directly implies sign"
+            ],
+            "answer_rule": "increasing positive; decreasing negative; horizontal zero",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>The line decreases from left to right. Is its slope positive, negative, or zero?</p><div class=\"response-surface\">Slope sign: ___</div>",
+            "answer": "Negative",
+            "solution": "A line that decreases as x increases has negative slope.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Critique a Reciprocal Slope Claim",
+          "family_purpose": "Target run/rise and sign mistakes with claim critique.",
+          "evidence_job": "critique an incorrect slope calculation from graph",
+          "student_action": "Identify the exact error in a slope claim and correct it.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + claim -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Target run/rise and sign mistakes with claim critique.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q081",
+          "teacher_question_id": "Q081",
+          "template_contract": {
+            "prompt_template": "A student measures rise {rise} and run {run} but reports slope {claim}. Critique the claim.",
+            "parameters": {
+              "rise": "nonzero integer",
+              "run": "nonzero integer"
+            },
+            "constraints": [
+              "claim reflects reciprocal or sign error"
+            ],
+            "answer_rule": "m=rise/run",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student uses rise 4 and run 2 but says the slope is \\(2/4=1/2\\). Critique the claim.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "The ratio is reversed; slope is rise/run=4/2=2.",
+            "solution": "Slope is change in y divided by change in x.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Choose a Useful Point Pair",
+          "family_purpose": "Use strategy selection on a graph with several visible points.",
+          "evidence_job": "select efficient graph points for slope",
+          "student_action": "Choose two points that make slope calculation clear and explain why.",
+          "question_structure_id": "PROC-SELECT-STRATEGY-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use strategy selection on a graph with several visible points.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q082",
+          "teacher_question_id": "Q082",
+          "template_contract": {
+            "prompt_template": "Choose two visible lattice points from the graph that make slope calculation efficient.",
+            "parameters": {
+              "graph": "approved line with multiple lattice points"
+            },
+            "constraints": [
+              "at least two clear points"
+            ],
+            "answer_rule": "selected points must lie on line and support correct slope",
+            "rendering_rule": "Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>On the graphed line, choose two lattice points you would use to find slope and explain why they are useful.</p><img class=\"graph\" src=\"figures/u1_mg02_slope_a.png\" alt=\"Line with slope 2\"><div class=\"response-surface\">Points + reason:</div>",
+            "answer": "For example, (0,-3) and (2,1).",
+            "solution": "Both points lie clearly on lattice intersections, making rise and run exact.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC01-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a graph.",
+          "family_name": "Verify a Graph-Slope Claim",
+          "family_purpose": "Use post-calculation reasonableness to catch sign or magnitude errors.",
+          "evidence_job": "verify a stated slope against graph behavior and points",
+          "student_action": "Check whether a proposed slope matches the graph and justify.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + claim -> evidence for Find slope from a graph."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a graph.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use post-calculation reasonableness to catch sign or magnitude errors.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a graph.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q083",
+          "teacher_question_id": "Q083",
+          "template_contract": {
+            "prompt_template": "Claim: “The slope of this line is {claim}.” Verify the claim.",
+            "parameters": {
+              "claim": "correct or one-error slope value"
+            },
+            "constraints": [
+              "graph provides sign and exact lattice evidence"
+            ],
+            "answer_rule": "check sign qualitatively then rise/run exactly",
+            "rendering_rule": "Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “The slope of this descending line is \\(1/2\\).” Verify the claim.</p><img class=\"graph\" src=\"figures/u1_mg02_slope_b.png\" alt=\"Descending line with slope negative one half\"><div class=\"response-surface\">Verification:</div>",
+            "answer": "False; the slope is -1/2.",
+            "solution": "The line decreases left-to-right, so the slope must be negative; rise/run confirms -1/2.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC02",
+      "exact_text": "Find slope from a table.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC02-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Choose an Efficient Row Pair",
+          "family_purpose": "Use strategy selection when several table rows are available.",
+          "evidence_job": "select a useful pair of rows for slope",
+          "student_action": "Choose two rows and compute slope with them.",
+          "question_structure_id": "PROC-SELECT-STRATEGY-01",
+          "response_mode": "constructed response",
+          "representation_mode": "table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use strategy selection when several table rows are available.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q084",
+          "teacher_question_id": "Q084",
+          "template_contract": {
+            "prompt_template": "Choose any two rows from the table that make slope easy to compute, then find slope.",
+            "parameters": {
+              "table": "3..5 rows from one linear rule"
+            },
+            "constraints": [
+              "all pairs yield same slope",
+              "values remain integer-friendly when possible"
+            ],
+            "answer_rule": "delta y / delta x from chosen rows",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use the table. Choose any two rows that make the slope easy to compute, then find the slope.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>11</td></tr><tr><td>5</td><td>20</td></tr><tr><td>9</td><td>32</td></tr></table><div class=\"response-surface\">Rows + slope:</div>",
+            "answer": "Slope 3.",
+            "solution": "Any row pair gives the same ratio; for 2 to 5, 9/3=3.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Reconstruct a Missing Table Value",
+          "family_purpose": "Use the table reconstruction structure to make slope operational.",
+          "evidence_job": "use constant slope to recover a missing value",
+          "student_action": "Find a missing y-value so the table keeps the stated slope.",
+          "question_structure_id": "TABLE-RECONSTRUCT-MISSING-CELLS-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use the table reconstruction structure to make slope operational.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q085",
+          "teacher_question_id": "Q085",
+          "template_contract": {
+            "prompt_template": "The table has slope {m}. Find the missing {variable}-value.",
+            "parameters": {
+              "m": "integer or simple fraction",
+              "table": "linear rows with one missing cell"
+            },
+            "constraints": [
+              "unique missing value",
+              "arithmetic appropriate to course"
+            ],
+            "answer_rule": "use m=delta y/delta x",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>The table has slope 3. Find the missing y-value.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>11</td></tr><tr><td>5</td><td>20</td></tr><tr><td>7</td><td>?</td></tr></table><div class=\"response-surface\">Missing y: ___</div>",
+            "answer": "26",
+            "solution": "From x=5 to 7, delta x=2, so delta y=3(2)=6; 20+6=26.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Choose the Correct Table Slope",
+          "family_purpose": "Use selected response with delta-x/delta-y misconception distractors.",
+          "evidence_job": "identify slope from table",
+          "student_action": "Select the correct slope from a table.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use selected response with delta-x/delta-y misconception distractors.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q086",
+          "teacher_question_id": "Q086",
+          "template_contract": {
+            "prompt_template": "What slope is represented by the table?",
+            "parameters": {
+              "table": "two or more rows from a linear rule"
+            },
+            "constraints": [
+              "distractors include delta y only, reciprocal, sign error"
+            ],
+            "answer_rule": "delta y/delta x",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>What slope is represented?</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-1</td><td>5</td></tr><tr><td>1</td><td>9</td></tr></table><ol class=\"choices\"><li>2</li><li>4</li><li>1/2</li><li>-2</li></ol>",
+            "answer": "2",
+            "solution": "delta y=4 and delta x=2, so slope=2.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Compare Two Tables with the Same Slope",
+          "family_purpose": "Use comparison to separate rate from starting value.",
+          "evidence_job": "compare rates represented by two tables",
+          "student_action": "Decide whether two tables have the same slope and justify.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "two tables",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "two tables -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use comparison to separate rate from starting value.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q087",
+          "teacher_question_id": "Q087",
+          "template_contract": {
+            "prompt_template": "Compare Table A and Table B. Do they have the same slope? Explain.",
+            "parameters": {
+              "tables": "linear tables with controlled same/different slopes"
+            },
+            "constraints": [
+              "starting values may differ",
+              "rate comparison is the target"
+            ],
+            "answer_rule": "compute/compare delta y over delta x",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Table A contains (0,1),(2,5). Table B contains (0,7),(2,11). Do the tables have the same slope? Explain.</p><div class=\"response-surface\">Comparison:</div>",
+            "answer": "Yes; both slopes are 2.",
+            "solution": "Each table changes y by 4 when x changes by 2; different starting values do not change slope.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Critique a Run-over-Rise Table Claim",
+          "family_purpose": "Target reciprocal errors in table form.",
+          "evidence_job": "critique an inverted slope ratio from table",
+          "student_action": "Identify why a table-based slope ratio is reversed and correct it.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "table + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table + claim -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Target reciprocal errors in table form.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q088",
+          "teacher_question_id": "Q088",
+          "template_contract": {
+            "prompt_template": "A student computes slope as {dx}/{dy} from the table. Critique the claim.",
+            "parameters": {
+              "dx": "nonzero change in x",
+              "dy": "nonzero change in y"
+            },
+            "constraints": [
+              "reciprocal error only"
+            ],
+            "answer_rule": "m=dy/dx",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>From x=2 to x=5, y changes from 11 to 20. A student says slope is \\(3/9=1/3\\). Critique the claim.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "The ratio is reversed; slope is 9/3=3.",
+            "solution": "Slope is change in y over change in x.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Classify Constant and Nonconstant Rate Tables",
+          "family_purpose": "Use case classification to determine when one slope is meaningful.",
+          "evidence_job": "classify tables by constant rate",
+          "student_action": "Decide which table(s) have a constant slope.",
+          "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "multiple tables",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "multiple tables -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use case classification to determine when one slope is meaningful.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q089",
+          "teacher_question_id": "Q089",
+          "template_contract": {
+            "prompt_template": "Compare {n} small tables and classify which have constant slope.",
+            "parameters": {
+              "n": "2..3",
+              "tables": "linear and non-linear-looking discrete samples"
+            },
+            "constraints": [
+              "at least one constant and one nonconstant case"
+            ],
+            "answer_rule": "compare rates across intervals",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Table A: (0,2),(1,5),(2,8). Table B: (0,2),(1,5),(2,9). Which table has a constant slope? Explain.</p><div class=\"response-surface\">Classification:</div>",
+            "answer": "Table A only.",
+            "solution": "A changes by +3 each step; B changes by +3 then +4.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC02-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from a table.",
+          "family_name": "Verify a Table-Slope Claim",
+          "family_purpose": "Use reasonableness checking across more than one row pair.",
+          "evidence_job": "verify a stated slope from table",
+          "student_action": "Check a slope claim using two intervals when available.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "table + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table + claim -> evidence for Find slope from a table."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from a table.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use reasonableness checking across more than one row pair.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from a table.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q090",
+          "teacher_question_id": "Q090",
+          "template_contract": {
+            "prompt_template": "Claim: “The table has slope {m}.” Verify using at least two intervals when possible.",
+            "parameters": {
+              "m": "correct or one-error value",
+              "table": "3+ row table"
+            },
+            "constraints": [
+              "enough rows for consistency check"
+            ],
+            "answer_rule": "compute slope on multiple intervals",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “The table has slope 3.” Verify using both intervals.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>11</td></tr><tr><td>5</td><td>20</td></tr><tr><td>9</td><td>32</td></tr></table><div class=\"response-surface\">Verification:</div>",
+            "answer": "True.",
+            "solution": "9/3=3 and 12/4=3, so the rate is consistently 3.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC03",
+      "exact_text": "Find slope from an equation.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC03-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Rearrange Then Identify Slope",
+          "family_purpose": "Use a genuine dependency chain: rewrite first, then read slope.",
+          "evidence_job": "find slope from a linear equation not initially in slope-intercept form",
+          "student_action": "Rearrange the equation into y=mx+b, then identify m.",
+          "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equation -> equation",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equation -> equation -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use a genuine dependency chain: rewrite first, then read slope.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q091",
+          "teacher_question_id": "Q091",
+          "template_contract": {
+            "prompt_template": "Find the slope of {equation}. Show the rewrite that makes slope visible.",
+            "parameters": {
+              "equation": "linear equation requiring one algebraic rearrangement"
+            },
+            "constraints": [
+              "rearrangement within learned skills",
+              "slope simple rational"
+            ],
+            "answer_rule": "solve for y then identify x coefficient",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Find the slope of \\(2y=6x-10\\). Show the rewrite that makes the slope visible.</p><div class=\"response-surface\">Rewrite + slope:</div>",
+            "answer": "y=3x-5; slope 3.",
+            "solution": "Divide every term by 2, then read the coefficient of x.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Choose an Equation with a Given Slope",
+          "family_purpose": "Reverse the usual direction using selected response.",
+          "evidence_job": "match target slope to an equation",
+          "student_action": "Select the equation whose x-coefficient represents the target slope.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Reverse the usual direction using selected response.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q092",
+          "teacher_question_id": "Q092",
+          "template_contract": {
+            "prompt_template": "Which equation has slope {m}?",
+            "parameters": {
+              "m": "integer or simple fraction",
+              "b": "integer -12..12"
+            },
+            "constraints": [
+              "distractors swap m and b or sign"
+            ],
+            "answer_rule": "match x coefficient to target m",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which equation has slope \\(-2\\)?</p><ol class=\"choices\"><li>\\(y=-2x+7\\)</li><li>\\(y=7x-2\\)</li><li>\\(y=2x-7\\)</li><li>\\(y=-7x+2\\)</li></ol>",
+            "answer": "y=-2x+7",
+            "solution": "In y=mx+b, m is the coefficient of x.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Compare Equations by Slope",
+          "family_purpose": "Use comparison to separate slope from intercept.",
+          "evidence_job": "compare slopes of multiple linear equations",
+          "student_action": "Order or classify equations by slope while ignoring different intercepts.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equations",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equations -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use comparison to separate slope from intercept.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q093",
+          "teacher_question_id": "Q093",
+          "template_contract": {
+            "prompt_template": "Compare the slopes of {equation1} and {equation2}. Explain without graphing.",
+            "parameters": {
+              "m1": "integer/fraction",
+              "m2": "different integer/fraction",
+              "b1,b2": "integers"
+            },
+            "constraints": [
+              "slope values not equal unless equality case intended"
+            ],
+            "answer_rule": "identify and compare x coefficients",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which has the greater slope: \\(y=2x+9\\) or \\(y=-3x+1\\)? Explain without graphing.</p><div class=\"response-surface\">Comparison:</div>",
+            "answer": "y=2x+9",
+            "solution": "The slopes are 2 and -3; 2 is greater.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Critique a Sign Error after Rearranging",
+          "family_purpose": "Use claim critique on equation manipulation.",
+          "evidence_job": "critique a slope sign error caused by rearranging",
+          "student_action": "Identify the algebra/sign step that changes the slope incorrectly.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equation + worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equation + worked claim -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use claim critique on equation manipulation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q094",
+          "teacher_question_id": "Q094",
+          "template_contract": {
+            "prompt_template": "A student rewrites {original} as {incorrect_rewrite} and states slope {claim}. Critique the work.",
+            "parameters": {
+              "original": "simple linear equation",
+              "incorrect_rewrite": "one controlled sign/coefficient error"
+            },
+            "constraints": [
+              "one principal error"
+            ],
+            "answer_rule": "correct rewrite then identify slope",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student rewrites \\(y+4=3x\\) as \\(y=-3x-4\\) and says slope is -3. Critique the work.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "The 3x term should stay positive; y=3x-4, so slope is 3.",
+            "solution": "Subtract 4 from both sides; do not change the sign of 3x.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Find a Parameter for a Target Slope",
+          "family_purpose": "Use controlled parameter variation in an equation family.",
+          "evidence_job": "choose parameter value that produces a target slope",
+          "student_action": "Solve for a coefficient parameter from a desired slope.",
+          "question_structure_id": "PARAM-VARY-CONJECTURE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "parameterized equation",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "parameterized equation -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use controlled parameter variation in an equation family.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q095",
+          "teacher_question_id": "Q095",
+          "template_contract": {
+            "prompt_template": "In y={parameter}x+{b}, what value of {parameter} makes the slope {target_m}?",
+            "parameters": {
+              "b": "integer -10..10",
+              "target_m": "integer or simple fraction"
+            },
+            "constraints": [
+              "parameter is exactly the x coefficient"
+            ],
+            "answer_rule": "parameter = target slope",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>In \\(y=kx+5\\), what value of \\(k\\) makes the slope \\(-4\\)?</p><div class=\"response-surface\">k = ___</div>",
+            "answer": "k=-4",
+            "solution": "The coefficient of x is the slope.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Classify Equations with the Same Slope",
+          "family_purpose": "Use case classification across several equations.",
+          "evidence_job": "classify equations by equal slope",
+          "student_action": "Group equations that represent the same slope.",
+          "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equations",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equations -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use case classification across several equations.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q096",
+          "teacher_question_id": "Q096",
+          "template_contract": {
+            "prompt_template": "Which equations have slope {m}? {equations}",
+            "parameters": {
+              "m": "integer/fraction",
+              "equations": "4 equations with 2 matches"
+            },
+            "constraints": [
+              "include reordered slope-intercept form and common distractors"
+            ],
+            "answer_rule": "identify x coefficient after mental reordering",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which equations have slope 2? \\(y=2x+1\\), \\(y=-2x+1\\), \\(y=5+2x\\), \\(y=x+2\\).</p><div class=\"response-surface\">Equations:</div>",
+            "answer": "y=2x+1 and y=5+2x",
+            "solution": "Both have x-coefficient 2.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC03-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find slope from an equation.",
+          "family_name": "Verify an Equation-Slope Claim",
+          "family_purpose": "Check a slope claim after optional rearranging.",
+          "evidence_job": "verify a claimed slope from equation",
+          "student_action": "Determine whether a proposed slope matches the equation and correct it if needed.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "equation + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equation + claim -> evidence for Find slope from an equation."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find slope from an equation.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Check a slope claim after optional rearranging.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find slope from an equation.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q097",
+          "teacher_question_id": "Q097",
+          "template_contract": {
+            "prompt_template": "Claim: “The slope of {equation} is {claim}.” Verify the claim.",
+            "parameters": {
+              "equation": "slope-intercept or one-step rearranged linear equation",
+              "claim": "correct or common intercept/coefficient misconception"
+            },
+            "constraints": [
+              "single clear target slope"
+            ],
+            "answer_rule": "identify x coefficient after needed rewrite",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “The slope of \\(y=7-\\frac{3}{2}x\\) is \\(7\\).” Verify the claim.</p><div class=\"response-surface\">Verification:</div>",
+            "answer": "False; the slope is -3/2.",
+            "solution": "Rewrite mentally as y=(-3/2)x+7; 7 is the y-intercept.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG02-IC04",
+      "exact_text": "Find and interpret rate of change from a context.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG02-IC04-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Find Context Rate from a Table",
+          "family_purpose": "Translate a context table into a unit rate with meaning.",
+          "evidence_job": "find rate of change from contextual table",
+          "student_action": "Compute delta output/delta input and state units.",
+          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context table -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Translate a context table into a unit rate with meaning.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q098",
+          "teacher_question_id": "Q098",
+          "template_contract": {
+            "prompt_template": "A context table gives ({x1},{y1}) and ({x2},{y2}). Find and interpret the rate of change.",
+            "parameters": {
+              "x1,x2": "context input values",
+              "y1,y2": "outputs from constant-rate rule",
+              "units": "compatible input/output units"
+            },
+            "constraints": [
+              "nonzero delta x",
+              "rate simple enough for target course"
+            ],
+            "answer_rule": "(y2-y1)/(x2-x1) with output/input units and interpretation",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A delivery service records total cost.</p><table class=\"data-table\"><tr><th>Miles</th><th>Cost ($)</th></tr><tr><td>2</td><td>14</td></tr><tr><td>5</td><td>26</td></tr></table><p>Find and interpret the rate of change.</p><div class=\"response-surface\">Rate + meaning:</div>",
+            "answer": "$4 per mile; cost increases $4 for each additional mile.",
+            "solution": "(26-14)/(5-2)=12/3=4 dollars per mile.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Compare Two Context Rates",
+          "family_purpose": "Use the district compare-efficiency structure with units.",
+          "evidence_job": "compare rates in two contexts",
+          "student_action": "Compute/compare two rates and justify which is greater or more efficient.",
+          "question_structure_id": "COMPARE-EFFICIENCY-CONTEXT-01",
+          "response_mode": "constructed response",
+          "representation_mode": "two contexts",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "two contexts -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use the district compare-efficiency structure with units.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q099",
+          "teacher_question_id": "Q099",
+          "template_contract": {
+            "prompt_template": "Option A has {amountA} for {inputA}; Option B has {amountB} for {inputB}. Compare the unit rates.",
+            "parameters": {
+              "amounts": "positive money/quantity",
+              "inputs": "positive durations/units"
+            },
+            "constraints": [
+              "rates distinct unless tie case intended",
+              "units identical after conversion"
+            ],
+            "answer_rule": "compute each unit rate then compare",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Plan A charges $18 for 3 hours. Plan B charges $28 for 4 hours. Which plan has the lower hourly rate?</p><div class=\"response-surface\">Rates + choice:</div>",
+            "answer": "Plan A: $6/h; Plan B: $7/h; Plan A is lower.",
+            "solution": "Compute each amount per hour before comparing.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Choose the Correct Rate Interpretation",
+          "family_purpose": "Use selected response to pair a numeric rate with correct units/meaning.",
+          "evidence_job": "identify correct interpretation of a context rate",
+          "student_action": "Select the statement that matches a computed rate and units.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "context",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use selected response to pair a numeric rate with correct units/meaning.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q100",
+          "teacher_question_id": "Q100",
+          "template_contract": {
+            "prompt_template": "Given two context measurements, which interpretation of the rate is correct?",
+            "parameters": {
+              "measurements": "two points from a constant-rate context"
+            },
+            "constraints": [
+              "distractors include reciprocal units, raw change, raw input change"
+            ],
+            "answer_rule": "delta output/delta input with units",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A tank increases from 42 L at 2 min to 78 L at 5 min. Which interpretation is correct?</p><ol class=\"choices\"><li>12 L/min added each minute</li><li>12 min/L added each liter</li><li>36 L/min added each minute</li><li>3 L/min added each minute</li></ol>",
+            "answer": "12 L/min added each minute",
+            "solution": "The rate is 36 L / 3 min = 12 L/min.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Critique Incorrect Rate Units",
+          "family_purpose": "Use claim critique to make units part of the evidence.",
+          "evidence_job": "critique a numerically correct rate with wrong units",
+          "student_action": "Explain why the units are reversed or incomplete and correct them.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context + claim -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use claim critique to make units part of the evidence.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q101",
+          "teacher_question_id": "Q101",
+          "template_contract": {
+            "prompt_template": "A context has {output_change} {output_units} over {input_change} {input_units}. A student states {reversed_units}. Critique.",
+            "parameters": {
+              "values": "positive numbers with simple quotient",
+              "units": "meaningful input/output pair"
+            },
+            "constraints": [
+              "numeric value may be correct while units wrong"
+            ],
+            "answer_rule": "output units per input units",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A car travels 180 miles in 3 hours. A student writes the rate as 60 hours per mile. Critique the units.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "The value is 60 miles per hour, not hours per mile.",
+            "solution": "Output miles divided by input hours gives miles/hour.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Identify the Information Needed for a Rate",
+          "family_purpose": "Use missing-information reasoning before calculation.",
+          "evidence_job": "identify data needed to determine a rate of change",
+          "student_action": "State what second measurement or interval is needed to compute rate.",
+          "question_structure_id": "MISSING-INFO-IDENTIFY-NEEDED-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "context",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use missing-information reasoning before calculation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q102",
+          "teacher_question_id": "Q102",
+          "template_contract": {
+            "prompt_template": "Only one context measurement ({x1},{y1}) is given. Can the rate be determined? What additional information is needed?",
+            "parameters": {
+              "context": "constant-rate plausible setting"
+            },
+            "constraints": [
+              "no hidden rate information supplied"
+            ],
+            "answer_rule": "need second point or explicit change ratio",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>You know a tank contains 42 L after 2 minutes, but no other measurement is given. Can you determine its rate of change? What additional information is needed?</p><div class=\"response-surface\">Needed information:</div>",
+            "answer": "No; another time-volume measurement (or equivalent change information) is needed.",
+            "solution": "A rate requires change in output over a nonzero change in input.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Predict Using a Context Rate",
+          "family_purpose": "Extend a known constant rate to a new input while keeping interpretation visible.",
+          "evidence_job": "use a known context rate to predict a future value",
+          "student_action": "Apply a constant rate to predict change over an additional interval.",
+          "question_structure_id": "PREDICT-EXTRAPOLATE-MODEL-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Extend a known constant rate to a new input while keeping interpretation visible.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q103",
+          "teacher_question_id": "Q103",
+          "template_contract": {
+            "prompt_template": "A quantity changes at {rate} {out_units}/{in_units}. It is {value} at {input}. Predict the value at {new_input}.",
+            "parameters": {
+              "rate": "integer/simple fraction",
+              "interval": "positive change"
+            },
+            "constraints": [
+              "constant-rate assumption stated",
+              "arithmetic course-appropriate"
+            ],
+            "answer_rule": "new value = current value + rate*input change",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A tank is filling at 12 L/min. It has 78 L at 5 minutes. If the rate stays constant, how much water will it have at 8 minutes?</p><div class=\"response-surface\">Prediction:</div>",
+            "answer": "114 L",
+            "solution": "Three more minutes add 36 L; 78+36=114.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG02-IC04-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG02",
+          "mastery_goal_title": "Slope in Four Views",
+          "mastery_goal_exact_text": "Find slope or rate of change from a graph, table, equation, or context.",
+          "i_can_id": "U1-MG02-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find and interpret rate of change from a context.",
+          "family_name": "Verify a Context-Rate Claim",
+          "family_purpose": "Use reasonableness checking on value, units, and direction.",
+          "evidence_job": "verify a claimed rate in context",
+          "student_action": "Check whether a rate claim matches the two measurements and context direction.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context + claim -> evidence for Find and interpret rate of change from a context."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Find and interpret rate of change from a context.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use reasonableness checking on value, units, and direction.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find and interpret rate of change from a context.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q104",
+          "teacher_question_id": "Q104",
+          "template_contract": {
+            "prompt_template": "Given two context measurements, claim: “The rate is {claim}.” Verify the claim.",
+            "parameters": {
+              "claim": "correct rate or raw-change/reciprocal misconception"
+            },
+            "constraints": [
+              "direction and units unambiguous"
+            ],
+            "answer_rule": "delta output/delta input with units",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>From 2 to 5 minutes, water rises from 42 L to 78 L. Claim: “The rate is 36 L/min.” Verify the claim.</p><div class=\"response-surface\">Verification:</div>",
+            "answer": "False; the rate is 12 L/min.",
+            "solution": "36 L is the total change over 3 minutes; divide by 3 to get the rate.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    }
+  ]
+}
