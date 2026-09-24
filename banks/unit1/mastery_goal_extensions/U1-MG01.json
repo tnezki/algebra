@@ -1,0 +1,2223 @@
+{
+  "schema_version": "family-bank-extension/1.0",
+  "status": "APPROVED",
+  "course": "Algebra 1",
+  "unit": 1,
+  "mastery_goal_id": "U1-MG01",
+  "base_mastery_goal_file": "mastery_goals/U1-MG01.json",
+  "merge_rule": "append families by i_can_id; family_id must be unique; base A-C remain unchanged",
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG01-IC01",
+      "exact_text": "Plot and read ordered pairs.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG01-IC01-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Choose the Matching Ordered Pair",
+          "family_purpose": "Detect coordinate sign/order misconceptions with a concise selected-response item.",
+          "evidence_job": "choose the ordered pair matching horizontal and vertical movement",
+          "student_action": "Select the ordered pair that matches stated x/y movement.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "verbal -> symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal -> symbolic -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Detect coordinate sign/order misconceptions with a concise selected-response item.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q049",
+          "teacher_question_id": "Q049",
+          "template_contract": {
+            "prompt_template": "A point is {h} units {h_dir} and {v} units {v_dir} from the origin. Which ordered pair locates the point?",
+            "parameters": {
+              "h": "integer 1..9",
+              "v": "integer 1..9",
+              "h_dir": [
+                "left",
+                "right"
+              ],
+              "v_dir": [
+                "up",
+                "down"
+              ]
+            },
+            "constraints": [
+              "correct option unique",
+              "distractors use sign swap, coordinate swap, and one-sign error"
+            ],
+            "answer_rule": "x sign from horizontal direction; y sign from vertical direction",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A point is 4 units right and 7 units down from the origin. Which ordered pair locates the point?</p><ol class=\"choices\"><li>\\((4,7)\\)</li><li>\\((4,-7)\\)</li><li>\\((-4,7)\\)</li><li>\\((-7,4)\\)</li></ol>",
+            "answer": "(4,-7)",
+            "solution": "Right makes x positive; down makes y negative.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Plot Two Points from Coordinate Constraints",
+          "family_purpose": "Use a blank plane to make coordinate meaning visible through construction.",
+          "evidence_job": "plot points from exact coordinate constraints",
+          "student_action": "Plot and label two points that satisfy given coordinate statements.",
+          "question_structure_id": "GRAPH-CONSTRUCT-FROM-CONSTRAINTS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "constraints -> graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "constraints -> graph -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure",
+            "Notes Example"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use a blank plane to make coordinate meaning visible through construction.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q050",
+          "teacher_question_id": "Q050",
+          "template_contract": {
+            "prompt_template": "Plot and label A({x1},{y1}) and B({x2},{y2}).",
+            "parameters": {
+              "x1": "integer -8..8",
+              "y1": "integer -8..8",
+              "x2": "integer -8..8",
+              "y2": "integer -8..8"
+            },
+            "constraints": [
+              "A and B distinct",
+              "at least one point off both axes",
+              "optional one-axis point"
+            ],
+            "answer_rule": "ordered pairs determine exact plotted locations",
+            "rendering_rule": "Tools/graph_tool.py blank Cartesian window",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Plot and label A\\((-5,2)\\) and B\\((0,-4)\\).</p><img class=\"graph\" src=\"figures/u1_mg01_blank_plane.png\" alt=\"Blank coordinate plane from -10 to 10\"><div class=\"response-surface\">Plot both points.</div>",
+            "answer": "A=(-5,2); B=(0,-4)",
+            "solution": "Use x first and y second; B lies on the y-axis because x=0.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Compare Two Coordinate Descriptions",
+          "family_purpose": "Require students to reconcile two descriptions rather than only compute.",
+          "evidence_job": "compare two coordinate descriptions for equivalence",
+          "student_action": "Decide whether two movement descriptions land at the same point and justify.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "verbal + symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal + symbolic -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Require students to reconcile two descriptions rather than only compute.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q051",
+          "teacher_question_id": "Q051",
+          "template_contract": {
+            "prompt_template": "{student1} says “{h} {h_dir}, {v} {v_dir}” ends at {pair1}. {student2} says it ends at {pair2}. Who is correct? Explain.",
+            "parameters": {
+              "h": "integer 1..9",
+              "v": "integer 1..9",
+              "directions": "one horizontal + one vertical"
+            },
+            "constraints": [
+              "one claim correct",
+              "wrong claim must reflect a common sign/order error"
+            ],
+            "answer_rule": "compare both coordinates to movement directions",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Jordan says “3 left, 5 up” ends at \\((-3,5)\\). Sam says it ends at \\((3,-5)\\). Who is correct? Explain.</p><div class=\"response-surface\">Decision + reason:</div>",
+            "answer": "Jordan is correct.",
+            "solution": "Left gives negative x and up gives positive y.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Quadrant Odd One Out",
+          "family_purpose": "Use classification to test coordinate signs without repeating a plotting prompt.",
+          "evidence_job": "classify ordered pairs by quadrant/sign pattern",
+          "student_action": "Identify the ordered pair that does not belong and justify by quadrant/signs.",
+          "question_structure_id": "DISCRIMINATE-ODD-ONE-OUT-01",
+          "response_mode": "constructed response",
+          "representation_mode": "symbolic list",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic list -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use classification to test coordinate signs without repeating a plotting prompt.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q052",
+          "teacher_question_id": "Q052",
+          "template_contract": {
+            "prompt_template": "Three points are in {quadrant} and one is not: {pairs}. Which is the odd one out? Explain.",
+            "parameters": {
+              "quadrant": [
+                "I",
+                "II",
+                "III",
+                "IV"
+              ],
+              "coordinates": "nonzero integers -9..9"
+            },
+            "constraints": [
+              "exactly three share target quadrant",
+              "odd point uses a plausible sign variation"
+            ],
+            "answer_rule": "quadrant determined by signs of x and y",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Three points are in Quadrant II and one is not: \\((-4,2)\\), \\((-1,7)\\), \\((3,5)\\), \\((-6,1)\\). Which is the odd one out? Explain.</p><div class=\"response-surface\">Odd one out + reason:</div>",
+            "answer": "(3,5)",
+            "solution": "Quadrant II has x<0 and y>0; (3,5) is in Quadrant I.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Identify the Missing Coordinate Information",
+          "family_purpose": "Make students state what is and is not determined by partial coordinate information.",
+          "evidence_job": "identify information needed to specify an ordered pair",
+          "student_action": "State the missing coordinate information needed to locate a point uniquely.",
+          "question_structure_id": "MISSING-INFO-IDENTIFY-NEEDED-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "verbal -> symbolic requirement",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal -> symbolic requirement -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Make students state what is and is not determined by partial coordinate information.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q053",
+          "teacher_question_id": "Q053",
+          "template_contract": {
+            "prompt_template": "A point has {known_axis}-coordinate {known_value}. Is its location determined? If not, what additional information is needed?",
+            "parameters": {
+              "known_axis": [
+                "x",
+                "y"
+              ],
+              "known_value": "integer -9..9"
+            },
+            "constraints": [
+              "known value alone must not determine unique point"
+            ],
+            "answer_rule": "name the other coordinate",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A point has y-coordinate -3. Is its location determined? If not, what additional information is needed?</p><div class=\"response-surface\">Needed information:</div>",
+            "answer": "No; the x-coordinate is still needed.",
+            "solution": "An ordered pair needs both x and y to locate a unique point.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Critique an Ordered-Pair Claim",
+          "family_purpose": "Use the newer critique structure to separate correctness from reasoning.",
+          "evidence_job": "critique a claim about coordinate location",
+          "student_action": "State whether a coordinate claim is correct and support the judgment.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "claim -> critique",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "claim -> critique -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use the newer critique structure to separate correctness from reasoning.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q054",
+          "teacher_question_id": "Q054",
+          "template_contract": {
+            "prompt_template": "Claim: “The point ({x},{y}) is {h} units {h_dir} and {v} units {v_dir} from the origin.” Is the claim correct? Explain.",
+            "parameters": {
+              "x": "integer -9..9",
+              "y": "integer -9..9"
+            },
+            "constraints": [
+              "claim either fully correct or contains exactly one direction/sign error"
+            ],
+            "answer_rule": "compare signs to direction words",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “The point \\((-6,2)\\) is 6 units right and 2 units up from the origin.” Is the claim correct? Explain.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "No.",
+            "solution": "A negative x-coordinate means 6 units left, not right; y=2 means 2 up.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC01-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Plot and read ordered pairs.",
+          "family_name": "Verify a Coordinate Placement",
+          "family_purpose": "Use reasonableness checking after a proposed placement.",
+          "evidence_job": "verify a proposed coordinate placement",
+          "student_action": "Check whether a described placement matches the ordered pair and correct it if needed.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "symbolic + verbal",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic + verbal -> evidence for Plot and read ordered pairs."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Plot and read ordered pairs.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use reasonableness checking after a proposed placement.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Plot and read ordered pairs.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q055",
+          "teacher_question_id": "Q055",
+          "template_contract": {
+            "prompt_template": "A student places T({x},{y}) by moving {h} {h_dir} and {v} {v_dir}. Verify the placement.",
+            "parameters": {
+              "x": "integer -9..9",
+              "y": "integer -9..9"
+            },
+            "constraints": [
+              "generate correct or one-error cases in controlled ratio"
+            ],
+            "answer_rule": "compare movement to coordinate signs and magnitudes",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student places \\(T(-2,-5)\\) by moving 2 left and 5 down. Verify the placement.</p><div class=\"response-surface\">Verification:</div>",
+            "answer": "The placement is correct.",
+            "solution": "Negative x means left and negative y means down.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG01-IC02",
+      "exact_text": "Use the x- and y-axes correctly.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG01-IC02-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Choose the Correct Axis Role",
+          "family_purpose": "Use a targeted misconception check for x/horizontal versus y/vertical.",
+          "evidence_job": "identify which axis controls each movement",
+          "student_action": "Select the statement that correctly matches x/y axes to movement.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "symbolic + verbal",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic + verbal -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use a targeted misconception check for x/horizontal versus y/vertical.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q056",
+          "teacher_question_id": "Q056",
+          "template_contract": {
+            "prompt_template": "Which statement is correct for ({x},{y})?",
+            "parameters": {
+              "x": "nonzero integer -9..9",
+              "y": "nonzero integer -9..9"
+            },
+            "constraints": [
+              "one correct option",
+              "distractors swap axes, signs, or magnitudes"
+            ],
+            "answer_rule": "first coordinate -> x; second -> y",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which statement is correct for \\((5,-2)\\)?</p><ol class=\"choices\"><li>x: 5 right; y: 2 down</li><li>x: 2 down; y: 5 right</li><li>x: 5 left; y: 2 up</li><li>x: 2 right; y: 5 down</li></ol>",
+            "answer": "x: 5 right; y: 2 down",
+            "solution": "The first coordinate belongs to x/horizontal; the second belongs to y/vertical.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Critique an Axis Assignment",
+          "family_purpose": "Use claim critique to test whether students understand input/output axis conventions.",
+          "evidence_job": "critique a proposed x/y axis assignment",
+          "student_action": "Judge a proposed axis assignment and explain using input/output roles.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context -> critique",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context -> critique -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use claim critique to test whether students understand input/output axis conventions.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q057",
+          "teacher_question_id": "Q057",
+          "template_contract": {
+            "prompt_template": "A graph shows {output} as {input} changes. A student puts {output} on x and {input} on y. Critique the choice.",
+            "parameters": {
+              "input": "common independent quantity",
+              "output": "dependent quantity"
+            },
+            "constraints": [
+              "context has clear input/output direction"
+            ],
+            "answer_rule": "input on x; output on y",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>A graph shows distance traveled as time passes. A student puts distance on the x-axis and time on the y-axis. Critique the choice.</p><div class=\"response-surface\">Critique:</div>",
+            "answer": "Reverse the axes: time on x, distance on y.",
+            "solution": "Time is the input/independent quantity; distance depends on time.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Compare Two Axis Assignments",
+          "family_purpose": "Make students compare two complete graph setups rather than label axes in isolation.",
+          "evidence_job": "compare competing axis assignments",
+          "student_action": "Choose the more sensible x/y assignment and justify.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context + axis labels",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context + axis labels -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Make students compare two complete graph setups rather than label axes in isolation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q058",
+          "teacher_question_id": "Q058",
+          "template_contract": {
+            "prompt_template": "For “{output} recorded each {input_unit},” compare Setup A x={input}, y={output} with Setup B reversed. Which is more useful? Explain.",
+            "parameters": {
+              "input": "time-like input",
+              "output": "measured output"
+            },
+            "constraints": [
+              "input/output relation unambiguous"
+            ],
+            "answer_rule": "prefer input on x, output on y",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>For “temperature recorded each hour,” Setup A uses x=hour, y=temperature. Setup B uses x=temperature, y=hour. Which setup is more useful for showing change over time? Explain.</p><div class=\"response-surface\">Choice + reason:</div>",
+            "answer": "Setup A.",
+            "solution": "Time is the progressing input, so it belongs on x; temperature is measured at each time.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "State What an Unlabeled Axis Needs",
+          "family_purpose": "Use missing-information reasoning on graph setup.",
+          "evidence_job": "identify missing axis information",
+          "student_action": "State what labels/units are needed before a graph can be interpreted correctly.",
+          "question_structure_id": "MISSING-INFO-IDENTIFY-NEEDED-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "graph setup",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph setup -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use missing-information reasoning on graph setup.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q059",
+          "teacher_question_id": "Q059",
+          "template_contract": {
+            "prompt_template": "A graph has numbers but no axis labels. It is supposed to show {input} and {output}. What information must be added?",
+            "parameters": {
+              "input": "input quantity + units",
+              "output": "output quantity + units"
+            },
+            "constraints": [
+              "quantities distinct"
+            ],
+            "answer_rule": "name x label/unit and y label/unit",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>A coordinate graph has numbers but no axis labels. It is supposed to show minutes and meters. What information must be added so a reader knows which quantity is on each axis?</p><div class=\"response-surface\">Needed information:</div>",
+            "answer": "Label x as minutes and y as meters (with units).",
+            "solution": "Axis labels and units connect the numbers to the intended quantities.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Describe Axes So Another Student Can Reproduce Them",
+          "family_purpose": "Turn axis conventions into a communication task.",
+          "evidence_job": "communicate x/y setup precisely",
+          "student_action": "Describe how to label axes so another student can reproduce the graph setup.",
+          "question_structure_id": "DESCRIBE-TO-REPRODUCE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "verbal -> graph setup",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal -> graph setup -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Turn axis conventions into a communication task.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q060",
+          "teacher_question_id": "Q060",
+          "template_contract": {
+            "prompt_template": "Write directions so another student can graph {output} over {input}.",
+            "parameters": {
+              "input": "independent quantity",
+              "output": "dependent quantity"
+            },
+            "constraints": [
+              "include x/horizontal and y/vertical language"
+            ],
+            "answer_rule": "complete axis assignment with units when given",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>You want another student to graph height over time. Write directions that tell them exactly what belongs on each axis.</p><div class=\"response-surface\">Directions:</div>",
+            "answer": "Put time on the horizontal x-axis and height on the vertical y-axis; include units.",
+            "solution": "The directions must identify both axis names, orientations, quantities, and units.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Classify Points on the Coordinate Axes",
+          "family_purpose": "Use case classification to reinforce what x=0 and y=0 mean.",
+          "evidence_job": "classify points by axis membership",
+          "student_action": "Classify each point as on x-axis, y-axis, origin, or neither.",
+          "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "ordered pairs -> axis class",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "ordered pairs -> axis class -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use case classification to reinforce what x=0 and y=0 mean.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q061",
+          "teacher_question_id": "Q061",
+          "template_contract": {
+            "prompt_template": "Classify each point: {pairs}.",
+            "parameters": {
+              "pairs": "one x-axis, one y-axis, one origin, one neither"
+            },
+            "constraints": [
+              "unique examples"
+            ],
+            "answer_rule": "zero-coordinate conditions determine axis membership",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Classify each point: A\\((0,6)\\), B\\((-4,0)\\), C\\((0,0)\\), D\\((2,3)\\).</p><div class=\"response-surface\">A: ___ B: ___ C: ___ D: ___</div>",
+            "answer": "A y-axis; B x-axis; C origin; D neither.",
+            "solution": "x=0 means y-axis; y=0 means x-axis; both zero is the origin.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC02-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use the x- and y-axes correctly.",
+          "family_name": "Verify an Axis-Based Plotting Procedure",
+          "family_purpose": "Check an entire x-then-y procedure for reasonableness.",
+          "evidence_job": "verify correct use of x/y axes in a plotting procedure",
+          "student_action": "Decide whether a plotting procedure uses the axes correctly.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "procedure -> verification",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "procedure -> verification -> evidence for Use the x- and y-axes correctly."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Use the x- and y-axes correctly.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Check an entire x-then-y procedure for reasonableness.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use the x- and y-axes correctly.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q062",
+          "teacher_question_id": "Q062",
+          "template_contract": {
+            "prompt_template": "To plot ({x},{y}), a student moves {h_move}, then {v_move}. Verify the procedure.",
+            "parameters": {
+              "x": "integer -9..9",
+              "y": "integer -9..9"
+            },
+            "constraints": [
+              "correct or exactly one axis-role error"
+            ],
+            "answer_rule": "compare each movement to corresponding coordinate",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>To plot \\((-3,4)\\), Lee moves 3 left along the x-axis, then 4 up parallel to the y-axis. Verify the procedure.</p><div class=\"response-surface\">Verification:</div>",
+            "answer": "The procedure is correct.",
+            "solution": "The x-coordinate controls horizontal movement first; the y-coordinate controls vertical movement.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG01-IC03",
+      "exact_text": "Read a graph using its scale.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG01-IC03-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Choose the Correct Scaled Reading",
+          "family_purpose": "Use selected response to isolate scale-reading misconceptions.",
+          "evidence_job": "read a graph value from labeled scale",
+          "student_action": "Select the correct value from a scaled graph.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use selected response to isolate scale-reading misconceptions.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q063",
+          "teacher_question_id": "Q063",
+          "template_contract": {
+            "prompt_template": "Use the graph. At {x_value}, which {y_quantity} is shown?",
+            "parameters": {
+              "graph_asset": "approved scaled graph",
+              "x_value": "approved lookup point"
+            },
+            "constraints": [
+              "distractors include grid-count and place-value errors"
+            ],
+            "answer_rule": "read axis scale at specified coordinate",
+            "rendering_rule": "approved graph asset or Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use the graph. At \\(t=4\\) minutes, which distance is shown?</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><ol class=\"choices\"><li>4 m</li><li>7 m</li><li>40 m</li><li>70 m</li></ol>",
+            "answer": "70 m",
+            "solution": "Read the y-axis labels and scale; the plotted value is 70 m.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Estimate Then Read the Scale",
+          "family_purpose": "Require a quick magnitude estimate before an exact graph reading.",
+          "evidence_job": "estimate magnitude then read exact scaled value",
+          "student_action": "Estimate the range, then report the exact graph value.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Require a quick magnitude estimate before an exact graph reading.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q064",
+          "teacher_question_id": "Q064",
+          "template_contract": {
+            "prompt_template": "Before reading exactly, is the value at {x_value} closer to {low_anchor} or {high_anchor}? Then give the exact value.",
+            "parameters": {
+              "anchors": "values bracketing approved graph value"
+            },
+            "constraints": [
+              "estimate choice obvious enough to serve as reasonableness check"
+            ],
+            "answer_rule": "estimate magnitude, then read exact scale",
+            "rendering_rule": "approved graph asset or Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use the graph. Before reading exactly, is the distance at 4 minutes closer to 10 m or 100 m? Then give the exact value.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Estimate + exact value:</div>",
+            "answer": "Closer to 100 m; exact value 70 m.",
+            "solution": "The scale places the value well above 10 and at 70.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Determine the Tick Value",
+          "family_purpose": "Make the scale itself the object of evidence.",
+          "evidence_job": "infer interval size from labeled axis values",
+          "student_action": "Determine what each tick/grid interval represents.",
+          "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "axis labels",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "axis labels -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "intro",
+          "difficulty_band": "Intro",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Make the scale itself the object of evidence.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q065",
+          "teacher_question_id": "Q065",
+          "template_contract": {
+            "prompt_template": "An axis is labeled {labels} at equally spaced major ticks. What value does each major tick represent?",
+            "parameters": {
+              "start": "multiple of interval",
+              "interval": [
+                2,
+                5,
+                10,
+                20,
+                25,
+                50
+              ],
+              "count": "3..5 labeled ticks"
+            },
+            "constraints": [
+              "equal spacing",
+              "constant interval"
+            ],
+            "answer_rule": "difference between adjacent labels",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>An axis is labeled 0, 20, 40, 60 at equally spaced major ticks. What value does each major tick represent?</p><div class=\"response-surface\">Tick value: ___</div>",
+            "answer": "20 units",
+            "solution": "Adjacent labeled ticks increase by 20.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Compare Two Scale-Reading Methods",
+          "family_purpose": "Contrast grid-counting with label-based reading.",
+          "evidence_job": "compare two graph-reading methods",
+          "student_action": "Choose the valid method and explain why the other fails.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + methods",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + methods -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Contrast grid-counting with label-based reading.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q066",
+          "teacher_question_id": "Q066",
+          "template_contract": {
+            "prompt_template": "Student A counts grid spaces and reports {wrong}. Student B reads axis labels and reports {correct}. Which method is valid?",
+            "parameters": {
+              "wrong": "grid-count value",
+              "correct": "approved graph reading"
+            },
+            "constraints": [
+              "wrong answer traceable to assuming unit scale"
+            ],
+            "answer_rule": "axis labels/scale govern values",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>At 4 minutes, Maya counts 7 grid steps and says 7 m. Jordan reads the y-axis labels and says 70 m. Which method is valid?</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Method + reason:</div>",
+            "answer": "Jordan’s method; the axis scale determines each grid interval.",
+            "solution": "Counting gridlines without the scale ignores the units represented by each interval.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Identify What Scale Information Is Missing",
+          "family_purpose": "Use missing-information reasoning when a graph cannot be read uniquely.",
+          "evidence_job": "identify missing scale information",
+          "student_action": "State why an unlabeled or partially labeled axis cannot support a unique reading.",
+          "question_structure_id": "MISSING-INFO-IDENTIFY-NEEDED-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "graph setup",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph setup -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use missing-information reasoning when a graph cannot be read uniquely.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q067",
+          "teacher_question_id": "Q067",
+          "template_contract": {
+            "prompt_template": "A graph has {grid_description} but the {axis} axis has no numerical labels. Can the exact value be determined? What is needed?",
+            "parameters": {
+              "axis": [
+                "x",
+                "y"
+              ]
+            },
+            "constraints": [
+              "insufficient numerical scale information"
+            ],
+            "answer_rule": "identify need for numerical labels/interval",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>A graph shows five evenly spaced horizontal gridlines, but the y-axis has no numbers. Can you determine the exact y-value of a point on the third gridline? What information is needed?</p><div class=\"response-surface\">Needed information:</div>",
+            "answer": "No; at least one labeled value and the scale/interval are needed.",
+            "solution": "Grid position alone does not tell the numerical value.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Classify Valid and Invalid Graph Readings",
+          "family_purpose": "Use case classification across several scale interpretations.",
+          "evidence_job": "classify readings by whether they honor the scale",
+          "student_action": "Sort proposed readings into valid or invalid and justify one.",
+          "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "scale statements",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "scale statements -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use case classification across several scale interpretations.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q068",
+          "teacher_question_id": "Q068",
+          "template_contract": {
+            "prompt_template": "An axis increases by {interval} each major tick. Classify each proposed reading: {claims}.",
+            "parameters": {
+              "interval": [
+                2,
+                5,
+                10,
+                20,
+                25,
+                50
+              ],
+              "claims": "2 valid + 1 misconception claim"
+            },
+            "constraints": [
+              "claims unambiguous"
+            ],
+            "answer_rule": "reading equals interval count times scale increment",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>An axis increases by 25 each major tick. Classify each reading as valid or invalid: “2 ticks = 50,” “3 ticks = 75,” “4 ticks = 4.”</p><div class=\"response-surface\">Valid/invalid:</div>",
+            "answer": "50 valid; 75 valid; 4 invalid.",
+            "solution": "Multiply the number of intervals by 25 rather than treating ticks as ones.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC03-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "family_name": "Verify a Scaled Graph Claim",
+          "family_purpose": "Use post-answer verification to catch order-of-magnitude mistakes.",
+          "evidence_job": "verify a claimed graph reading against scale",
+          "student_action": "Decide whether a stated graph value is reasonable and correct it if needed.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + claim -> evidence for Read a graph using its scale."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Read a graph using its scale.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use post-answer verification to catch order-of-magnitude mistakes.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Read a graph using its scale.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q069",
+          "teacher_question_id": "Q069",
+          "template_contract": {
+            "prompt_template": "Claim: “At {x_value} the graph shows {claimed_value}.” Verify the claim.",
+            "parameters": {
+              "claimed_value": "correct value or common scale misconception"
+            },
+            "constraints": [
+              "graph has readable approved scale"
+            ],
+            "answer_rule": "read scale and compare to claim",
+            "rendering_rule": "approved graph asset or Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “At 4 minutes the graph shows 7 meters.” Verify the claim.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Verification:</div>",
+            "answer": "The claim is false; the graph shows 70 m.",
+            "solution": "The y-axis scale is in tens, not ones.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG01-IC04",
+      "exact_text": "Identify and interpret intercepts when they are shown.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG01-IC04-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Choose the Correct Intercept Pair",
+          "family_purpose": "Use selected response to distinguish x- and y-intercepts.",
+          "evidence_job": "identify both intercepts from graph",
+          "student_action": "Select the pair that correctly names the x- and y-intercepts.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Use selected response to distinguish x- and y-intercepts.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q070",
+          "teacher_question_id": "Q070",
+          "template_contract": {
+            "prompt_template": "Use the graph. Which choice correctly gives the x-intercept and y-intercept?",
+            "parameters": {
+              "graph_asset": "approved intercept graph"
+            },
+            "constraints": [
+              "distractors swap intercept names, coordinates, or magnitudes"
+            ],
+            "answer_rule": "x-intercept y=0; y-intercept x=0",
+            "rendering_rule": "Tools/graph_tool.py or approved asset",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use the graph. Which choice correctly gives the x-intercept and y-intercept?</p><img class=\"graph\" src=\"figures/u1_mg01_intercepts.png\" alt=\"Line crossing y-axis at 6 and x-axis at 3\"><ol class=\"choices\"><li>x=(3,0), y=(0,6)</li><li>x=(0,6), y=(3,0)</li><li>x=3, y=6 with coordinates reversed</li><li>x=(6,0), y=(0,3)</li></ol>",
+            "answer": "x-intercept (3,0); y-intercept (0,6).",
+            "solution": "The x-intercept has y=0; the y-intercept has x=0.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Identify One Intercept by Its Zero Coordinate",
+          "family_purpose": "Focus on the defining feature of each intercept.",
+          "evidence_job": "identify an intercept using zero-coordinate condition",
+          "student_action": "Name the intercept type of a shown coordinate and explain.",
+          "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "coordinate + graph feature",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "coordinate + graph feature -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "intro",
+          "difficulty_band": "Intro",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach",
+            "Notes Example"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Focus on the defining feature of each intercept.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q071",
+          "teacher_question_id": "Q071",
+          "template_contract": {
+            "prompt_template": "The graph shows the intercept ({x},{y}). Is it an x-intercept or y-intercept? How do you know?",
+            "parameters": {
+              "x": "0 or nonzero",
+              "y": "0 or nonzero"
+            },
+            "constraints": [
+              "exactly one coordinate zero unless origin case explicitly selected"
+            ],
+            "answer_rule": "zero coordinate determines intercept type",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>The line crosses an axis at \\((0,6)\\). Is this an x-intercept or y-intercept? How do you know?</p><div class=\"response-surface\">Type + reason:</div>",
+            "answer": "y-intercept",
+            "solution": "x=0, so the point lies on the y-axis.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Critique an Intercept Interpretation",
+          "family_purpose": "Use critique structure with context meaning.",
+          "evidence_job": "critique a stated interpretation of an intercept",
+          "student_action": "Judge whether an intercept interpretation matches the graph/context.",
+          "question_structure_id": "ERROR-CRITIQUE-CLAIM-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + context claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + context claim -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use critique structure with context meaning.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q072",
+          "teacher_question_id": "Q072",
+          "template_contract": {
+            "prompt_template": "A context graph has y-intercept {b}. Claim: “{incorrect_interpretation}.” Critique the claim.",
+            "parameters": {
+              "b": "context initial value"
+            },
+            "constraints": [
+              "incorrect claim confuses intercept with rate or final value"
+            ],
+            "answer_rule": "interpret y-intercept at input zero",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>A service-cost graph begins at \\$20 when time is 0. Claim: “The y-intercept means the service costs \\$20 per hour.” Critique the claim.</p><img class=\"graph\" src=\"figures/u1_mg02_context_rate.png\" alt=\"Cost versus hours graph beginning at 20 dollars\"><div class=\"response-surface\">Critique:</div>",
+            "answer": "The claim is false; $20 is the starting fee, not the hourly rate.",
+            "solution": "The y-intercept is the output when x=0.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Compare Starting Values from Two Graphs",
+          "family_purpose": "Use intercepts as a comparison feature across representations.",
+          "evidence_job": "compare y-intercepts/start values",
+          "student_action": "Compare the starting values of two displayed relationships.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "two graphs",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "two graphs -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use intercepts as a comparison feature across representations.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q073",
+          "teacher_question_id": "Q073",
+          "template_contract": {
+            "prompt_template": "Graph A has y-intercept {b1}. Graph B has y-intercept {b2}. Which has the greater starting value, and by how much?",
+            "parameters": {
+              "b1": "integer -20..20",
+              "b2": "integer -20..20"
+            },
+            "constraints": [
+              "b1 != b2"
+            ],
+            "answer_rule": "compare y-intercepts and subtract",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Graph A has y-intercept 6. Graph B begins at 20. Which relationship has the greater starting value, and by how much?</p><div class=\"response-surface\">Comparison:</div>",
+            "answer": "Graph B by 14.",
+            "solution": "Starting value is the y-intercept: 20-6=14.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "State When an Intercept Cannot Be Read",
+          "family_purpose": "Make visibility of the intercept part of the reasoning.",
+          "evidence_job": "identify missing visual information needed for an intercept",
+          "student_action": "Explain why an intercept cannot be identified from a cropped graph and what is needed.",
+          "question_structure_id": "MISSING-INFO-IDENTIFY-NEEDED-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "graph window",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph window -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "review",
+          "difficulty_band": "Review",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Recovery/Reteach"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Make visibility of the intercept part of the reasoning.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q074",
+          "teacher_question_id": "Q074",
+          "template_contract": {
+            "prompt_template": "A graph window does not show the line crossing {axis_description}. Can the intercept be identified from the picture alone? What is needed?",
+            "parameters": {
+              "axis_description": "x-axis, y-axis, or either axis"
+            },
+            "constraints": [
+              "intercept genuinely outside visible window"
+            ],
+            "answer_rule": "need visible crossing or equivalent exact data",
+            "wording_locked": true,
+            "number_swap_only": false
+          },
+          "exemplar": {
+            "student_html": "<p>A line is shown only in Quadrant I and the graph window stops before the line reaches either axis. Can you identify either intercept from the picture alone? What would you need?</p><div class=\"response-surface\">Needed information:</div>",
+            "answer": "No; the graph must show where the line crosses an axis, or equivalent information must be provided.",
+            "solution": "Intercepts are defined by axis crossings.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Construct a Line from Two Intercepts",
+          "family_purpose": "Use graph construction to demonstrate intercept meaning directly.",
+          "evidence_job": "construct a line from x- and y-intercept constraints",
+          "student_action": "Plot both intercepts and draw the line through them.",
+          "question_structure_id": "GRAPH-CONSTRUCT-FROM-CONSTRAINTS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "constraints -> graph",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "constraints -> graph -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use graph construction to demonstrate intercept meaning directly.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q075",
+          "teacher_question_id": "Q075",
+          "template_contract": {
+            "prompt_template": "Graph a line with x-intercept ({a},0) and y-intercept (0,{b}).",
+            "parameters": {
+              "a": "nonzero integer -8..8",
+              "b": "nonzero integer -8..8"
+            },
+            "constraints": [
+              "intercepts visible in graph window",
+              "a and b not both extreme"
+            ],
+            "answer_rule": "line through two intercept points",
+            "rendering_rule": "Tools/graph_tool.py blank Cartesian window",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Graph a line with x-intercept \\((4,0)\\) and y-intercept \\((0,-2)\\).</p><img class=\"graph\" src=\"figures/u1_mg01_blank_plane.png\" alt=\"Blank coordinate plane from -10 to 10\"><div class=\"response-surface\">Plot both intercepts and draw the line.</div>",
+            "answer": "Line through (4,0) and (0,-2).",
+            "solution": "Plot the two axis-crossing points, then draw the unique line through them.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        },
+        {
+          "family_id": "U1-MG01-IC04-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG01",
+          "mastery_goal_title": "Coordinate-Plane Graphs",
+          "mastery_goal_exact_text": "Use ordered pairs, axes, scales, and intercepts to read and create graphs.",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "family_name": "Verify an Intercept Claim",
+          "family_purpose": "Use reasonableness checking on a named intercept.",
+          "evidence_job": "verify a proposed intercept using zero-coordinate logic",
+          "student_action": "Check a stated intercept and correct it if needed.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "graph + claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "graph + claim -> evidence for Identify and interpret intercepts when they are shown."
+            }
+          ],
+          "difficulty_intent": "mastery",
+          "difficulty_band": "Mastery",
+          "invariant": "Student evidence must directly demonstrate: Identify and interpret intercepts when they are shown.",
+          "variation_axes": [
+            "change approved numeric/context parameters within the locked template",
+            "change at least two meaningful parameters when possible",
+            "preserve the same evidence job and representation route"
+          ],
+          "forbidden_variations": [
+            "rewriting the prompt into a different question structure",
+            "changing context in a way that changes the mathematics",
+            "creating a new family by number swap alone"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Exit Ticket",
+            "Summative Secure"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review",
+            "Summative"
+          ],
+          "best_use": "Use reasonableness checking on a named intercept.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Identify and interpret intercepts when they are shown.",
+          "fresh_instance_rule": "Instantiate only the locked template contract below. Controlled values/labels may change; prose structure and evidence architecture may not be rewritten at runtime.",
+          "approval_status": "APPROVED",
+          "family_revision": 1,
+          "superseded_by": null,
+          "bank_item_id": "ALG1-U1-Q076",
+          "teacher_question_id": "Q076",
+          "template_contract": {
+            "prompt_template": "Claim: “{point} is the {intercept_type} of the line.” Verify the claim.",
+            "parameters": {
+              "point": "visible intercept coordinate",
+              "intercept_type": [
+                "x-intercept",
+                "y-intercept"
+              ]
+            },
+            "constraints": [
+              "correct and incorrect cases supported"
+            ],
+            "answer_rule": "use zero-coordinate definition",
+            "rendering_rule": "approved graph asset or Tools/graph_tool.py",
+            "wording_locked": true,
+            "number_swap_only": true
+          },
+          "exemplar": {
+            "student_html": "<p>Claim: “\\((0,6)\\) is the x-intercept of the line.” Verify the claim.</p><img class=\"graph\" src=\"figures/u1_mg01_intercepts.png\" alt=\"Line crossing y-axis at 6 and x-axis at 3\"><div class=\"response-surface\">Verification:</div>",
+            "answer": "False; (0,6) is the y-intercept. The x-intercept is (3,0).",
+            "solution": "The x-intercept must have y=0.",
+            "scoring_guidance": "Score only the target evidence described by this family; do not award/withhold credit for unrelated polish."
+          }
+        }
+      ]
+    }
+  ]
+}

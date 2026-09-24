@@ -1,0 +1,36 @@
+{
+  "schema_version": "family-bank-resolution/1.0",
+  "status": "CURRENT",
+  "course": "Algebra 1",
+  "unit": 1,
+  "base_family_index": "FAMILY_INDEX.json",
+  "extension_family_index": "FAMILY_INDEX_EXTENDED.json",
+  "question_id_map": "QUESTION_ID_MAP.json",
+  "base_mastery_goal_files": {
+    "U1-MG01": "mastery_goals/U1-MG01.json",
+    "U1-MG02": "mastery_goals/U1-MG02.json",
+    "U1-MG03": "mastery_goals/U1-MG03.json",
+    "U1-MG04": "mastery_goals/U1-MG04.json"
+  },
+  "extension_mastery_goal_files": {
+    "U1-MG01": "mastery_goal_extensions/U1-MG01.json",
+    "U1-MG02": "mastery_goal_extensions/U1-MG02.json"
+  },
+  "merge_order": [
+    "base",
+    "extension"
+  ],
+  "eligibility_rule": "Only approval_status=APPROVED and superseded_by=null are current for new products. Base A-C families are grandfathered APPROVED revision 1 by QUESTION_ID_MAP.json.",
+  "runtime_authoring_rule": "Question structure and wording are fixed by family template. Runtime may only instantiate declared parameters/number swaps and approved representation rendering. It may not invent or paraphrase a new question.",
+  "question_structure_authority": [
+    "memories/_question_structure/QUESTION_STRUCTURE_CORE.md",
+    "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md"
+  ],
+  "graph_rule": "Cartesian graphs use the approved graph tool / graph rendering contract; do not invent decorative graphs.",
+  "viewer_pages": {
+    "U1-MG01": "mg01.html",
+    "U1-MG02": "mg02.html",
+    "U1-MG03": "mg03.html",
+    "U1-MG04": "mg04.html"
+  }
+}

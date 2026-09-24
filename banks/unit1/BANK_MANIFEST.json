@@ -1,30 +1,67 @@
 {
-  "schema_version": "family-bank/1.1",
+  "schema_version": "family-bank/1.2",
   "status": "COMPLETE",
   "course": "Algebra 1",
   "unit": 1,
-  "architecture": "Mastery Goal -> exact I Can -> exactly three materially different reusable families (A/B/C) -> one complete exemplar each",
+  "architecture": "Mastery Goal -> exact I Can -> approved reusable question families -> locked parameterized template -> reproducible instance",
   "ready_for_downstream": true,
+  "downstream_resolution_required": "BANK_RESOLUTION.json",
   "qa": "PASS",
   "mastery_goal_count": 4,
   "i_can_count": 16,
-  "families_per_i_can": 3,
-  "family_count": 48,
-  "exemplar_count": 48,
+  "family_count": 104,
+  "exemplar_count": 104,
+  "family_counts_by_mastery_goal": {
+    "U1-MG01": 40,
+    "U1-MG02": 40,
+    "U1-MG03": 12,
+    "U1-MG04": 12
+  },
+  "families_per_i_can": {
+    "U1-MG01": 10,
+    "U1-MG02": 10,
+    "U1-MG03": 3,
+    "U1-MG04": 3
+  },
   "viewer": "unit1.html",
+  "mastery_goal_viewers": {
+    "U1-MG01": "mg01.html",
+    "U1-MG02": "mg02.html",
+    "U1-MG03": "mg03.html",
+    "U1-MG04": "mg04.html"
+  },
   "student_viewer": "student.html",
   "fragment_anchors": {
     "mastery_goal": "canonical goal_id",
     "i_can": "canonical i_can_id",
-    "family": "canonical family_id"
+    "family": "canonical family_id",
+    "question": "teacher_question_id from QUESTION_ID_MAP.json"
   },
   "family_index": "FAMILY_INDEX.json",
+  "family_index_sources": [
+    "FAMILY_INDEX.json",
+    "FAMILY_INDEX_EXTENDED.json"
+  ],
+  "question_id_map": "QUESTION_ID_MAP.json",
+  "resolver_contract": "BANK_RESOLUTION.json",
   "delivery_map": "delivery_map.json",
+  "delivery_map_sources": [
+    "delivery_map.json",
+    "delivery_map_extensions.json"
+  ],
   "mastery_goal_files": [
     "mastery_goals/U1-MG01.json",
     "mastery_goals/U1-MG02.json",
     "mastery_goals/U1-MG03.json",
     "mastery_goals/U1-MG04.json"
+  ],
+  "mastery_goal_extension_files": [
+    "mastery_goal_extensions/U1-MG01.json",
+    "mastery_goal_extensions/U1-MG02.json"
+  ],
+  "question_structure_authority": [
+    "memories/_question_structure/QUESTION_STRUCTURE_CORE.md",
+    "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md"
   ],
   "source_policy": "CLOSED_PROJECT_SOURCES_ONLY",
   "web_search_used": false,
