@@ -1,0 +1,834 @@
+{
+  "schema_version": "family-revision-overlay/1.0",
+  "status": "CURRENT",
+  "course": "Algebra 1",
+  "unit": 1,
+  "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
+  "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
+  "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
+  "revision_count": 25,
+  "revisions": [
+    {
+      "family_id": "U1-MG01-IC01-C",
+      "teacher_question_id": "Q003",
+      "revision": 2,
+      "reason": "Reduce wording and make the misconception target explicit with a fast selected-response check",
+      "override": {
+        "family_name": "Identify a Coordinate Sign Error",
+        "family_purpose": "Quickly identify the specific sign misconception in an ordered pair.",
+        "evidence_job": "identify the sign error in a coordinate claim",
+        "student_action": "Choose the statement that correctly identifies the coordinate error.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "verbal -> symbolic",
+        "difficulty_intent": "review/diagnostic",
+        "template_contract": {
+          "prompt_template": "A student moves {h} units {h_dir} and {v} units {v_dir}, but writes {wrong_pair}. What is the error?",
+          "parameters": {
+            "h": "positive integer",
+            "h_dir": [
+              "left",
+              "right"
+            ],
+            "v": "positive integer",
+            "v_dir": [
+              "up",
+              "down"
+            ],
+            "wrong_pair": "one common sign-error coordinate pair"
+          },
+          "constraints": [
+            "exactly one option identifies the targeted sign misconception",
+            "four options total"
+          ],
+          "answer_rule": "Correct option identifies the coordinate whose sign conflicts with the stated movement.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A student moves 3 units left and 5 units up, but writes \\((3,5)\\). What is the error?</p><ol class=\"choices\"><li>The x-coordinate should be -3.</li><li>The y-coordinate should be -5.</li><li>The coordinates should be switched.</li><li>There is no error.</li></ol>",
+          "answer": "A. The x-coordinate should be -3, so the point is (-3,5).",
+          "solution": "Moving left makes the x-coordinate negative.",
+          "scoring_guidance": "1 point: selects A."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-A",
+      "teacher_question_id": "Q004",
+      "revision": 2,
+      "reason": "Shorten the prompt to a direct fill-in movement check",
+      "override": {
+        "student_action": "Use the first coordinate for horizontal movement and the second for vertical movement.",
+        "response_mode": "short constructed response",
+        "template_contract": {
+          "prompt_template": "For ({x},{y}), move _____ units {h_dir}, then _____ units {v_dir}.",
+          "parameters": {
+            "x": "nonzero integer",
+            "y": "nonzero integer",
+            "h_dir": "derived from sign of x",
+            "v_dir": "derived from sign of y"
+          },
+          "constraints": [
+            "blank values are absolute values of x and y",
+            "direction words are supplied"
+          ],
+          "answer_rule": "First blank = |x|; second blank = |y|.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For \\(Q(2,-6)\\), move _____ units right, then _____ units down.</p>",
+          "answer": "2; 6",
+          "solution": "The first coordinate gives the horizontal move; the second gives the vertical move.",
+          "scoring_guidance": "2 points: 1 for each blank."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-B",
+      "teacher_question_id": "Q005",
+      "revision": 2,
+      "reason": "Remove the graph that visibly supplied the answer and make the axis assignment concise",
+      "override": {
+        "response_mode": "short constructed response",
+        "representation_mode": "context -> axis labels",
+        "template_contract": {
+          "prompt_template": "A graph shows {output} as {input} changes. Complete: x-axis = _____; y-axis = _____.",
+          "parameters": {
+            "input": "independent/input quantity",
+            "output": "dependent/output quantity"
+          },
+          "constraints": [
+            "context must imply a clear input/output relationship"
+          ],
+          "answer_rule": "x-axis = input; y-axis = output.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A graph shows distance traveled as time passes.</p><div class=\"response-surface\">x-axis: ______ &nbsp;&nbsp; y-axis: ______</div>",
+          "answer": "x-axis: time; y-axis: distance",
+          "solution": "Time is the input; distance is measured for each time.",
+          "scoring_guidance": "2 points: 1 for each axis."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-C",
+      "teacher_question_id": "Q006",
+      "revision": 2,
+      "reason": "Reduce wording and narrow the task to one identifiable axis-order misconception",
+      "override": {
+        "family_name": "Identify an Axis Swap",
+        "family_purpose": "Quickly detect reversal of the first and second coordinates.",
+        "evidence_job": "identify an x/y coordinate-order error",
+        "student_action": "Choose the error that explains the incorrect movement.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "verbal procedure",
+        "difficulty_intent": "review/diagnostic",
+        "template_contract": {
+          "prompt_template": "To plot ({x},{y}), a student moves {wrong_h} horizontally and {wrong_v} vertically. What did the student do wrong?",
+          "parameters": {
+            "x": "nonzero integer",
+            "y": "nonzero integer",
+            "wrong_h": "movement derived from y",
+            "wrong_v": "movement derived from x"
+          },
+          "constraints": [
+            "exactly one targeted coordinate-order error",
+            "four options total"
+          ],
+          "answer_rule": "Correct option identifies that the coordinates were switched.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>To plot \\(R(-2,7)\\), Maya moves 7 units left and 2 units up. What did she do wrong?</p><ol class=\"choices\"><li>She switched the coordinates.</li><li>She used the wrong signs.</li><li>She started on the wrong axis.</li><li>She made no error.</li></ol>",
+          "answer": "A. She switched the coordinates.",
+          "solution": "The -2 controls horizontal movement; 7 controls vertical movement.",
+          "scoring_guidance": "1 point: selects A."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-D",
+      "teacher_question_id": "Q049",
+      "revision": 2,
+      "reason": "Shorter selected-response stem; option lettering is handled by Bank CSS",
+      "override": {
+        "template_contract": {
+          "prompt_template": "Which ordered pair is {h} units {h_dir} and {v} units {v_dir} from the origin?",
+          "parameters": {
+            "h": "positive integer",
+            "h_dir": [
+              "left",
+              "right"
+            ],
+            "v": "positive integer",
+            "v_dir": [
+              "up",
+              "down"
+            ]
+          },
+          "constraints": [
+            "four answer choices",
+            "one distractor targets sign error",
+            "one distractor targets coordinate reversal"
+          ],
+          "answer_rule": "Convert horizontal movement to x and vertical movement to y.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Which ordered pair is 4 units right and 7 units down from the origin?</p><ol class=\"choices\"><li>\\((4,7)\\)</li><li>\\((4,-7)\\)</li><li>\\((-4,7)\\)</li><li>\\((-7,4)\\)</li></ol>",
+          "answer": "B. (4,-7)",
+          "solution": "Right gives positive x; down gives negative y."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-F",
+      "teacher_question_id": "Q051",
+      "revision": 2,
+      "reason": "Shorten the comparison wording while preserving the comparison family",
+      "override": {
+        "template_contract": {
+          "prompt_template": "{student1}: “{h} {h_dir}, {v} {v_dir} -> {pair1}.” {student2}: “{h} {h_dir}, {v} {v_dir} -> {pair2}.” Who is correct? Why?",
+          "parameters": {
+            "student1": "student name",
+            "student2": "student name",
+            "h": "positive integer",
+            "h_dir": [
+              "left",
+              "right"
+            ],
+            "v": "positive integer",
+            "v_dir": [
+              "up",
+              "down"
+            ],
+            "pair1": "candidate pair",
+            "pair2": "candidate pair"
+          },
+          "constraints": [
+            "exactly one candidate matches the movement"
+          ],
+          "answer_rule": "Choose the candidate whose x/y signs and order match the movement.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Jordan: “3 left, 5 up → \\((-3,5)\\).” Sam: “3 left, 5 up → \\((3,-5)\\).” Who is correct? Why?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "Jordan.",
+          "solution": "Left makes x negative and up makes y positive."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-G",
+      "teacher_question_id": "Q052",
+      "revision": 2,
+      "reason": "Teacher requested a direct single-answer quadrant check with no explanation requirement",
+      "override": {
+        "family_name": "Choose the Point Outside a Quadrant",
+        "family_purpose": "Quickly check quadrant sign recognition.",
+        "evidence_job": "identify the one point not in a named quadrant",
+        "student_action": "Select the point that does not belong in the named quadrant.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "difficulty_intent": "review",
+        "template_contract": {
+          "prompt_template": "Which point is not in {quadrant}?",
+          "parameters": {
+            "quadrant": "I, II, III, or IV",
+            "pairs": "four ordered pairs, exactly one outside the named quadrant"
+          },
+          "constraints": [
+            "four options",
+            "exactly one correct answer"
+          ],
+          "answer_rule": "Choose the point whose sign pattern does not match the named quadrant.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Which point is not in Quadrant II?</p><ol class=\"choices\"><li>\\((-4,2)\\)</li><li>\\((-1,7)\\)</li><li>\\((3,5)\\)</li><li>\\((-6,1)\\)</li></ol>",
+          "answer": "C. (3,5)",
+          "solution": "Quadrant II has x<0 and y>0; (3,5) is in Quadrant I."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-H",
+      "teacher_question_id": "Q053",
+      "revision": 2,
+      "reason": "Shorten the missing-information prompt",
+      "override": {
+        "template_contract": {
+          "prompt_template": "A point has {known_axis}={known_value}. What other coordinate is needed to locate it?",
+          "parameters": {
+            "known_axis": [
+              "x",
+              "y"
+            ],
+            "known_value": "integer"
+          },
+          "constraints": [
+            "ask for the missing coordinate name, not a guessed value"
+          ],
+          "answer_rule": "If x is known, y is needed; if y is known, x is needed.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A point has \\(y=-3\\). What other coordinate is needed to locate it?</p><div class=\"response-surface\">Needed coordinate: ______</div>",
+          "answer": "The x-coordinate.",
+          "solution": "Both coordinates are needed to locate a point."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-I",
+      "teacher_question_id": "Q054",
+      "revision": 2,
+      "reason": "Shorten the claim critique",
+      "override": {
+        "template_contract": {
+          "prompt_template": "Claim: ({x},{y}) means {h} units {h_dir} and {v} units {v_dir}. Correct or incorrect? Fix it if needed.",
+          "parameters": {
+            "x": "integer",
+            "y": "integer",
+            "h": "absolute x value",
+            "h_dir": "candidate horizontal direction",
+            "v": "absolute y value",
+            "v_dir": "candidate vertical direction"
+          },
+          "constraints": [
+            "claim must contain one meaningful sign/direction issue or be correct"
+          ],
+          "answer_rule": "Check each coordinate sign against its movement direction.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Claim: \\((-6,2)\\) means 6 units right and 2 units up. Correct or incorrect? Fix it if needed.</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "Incorrect; it is 6 units left and 2 units up.",
+          "solution": "A negative x-coordinate means left."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC01-J",
+      "teacher_question_id": "Q055",
+      "revision": 2,
+      "reason": "Teacher requested a direct fill-in movement format",
+      "override": {
+        "family_name": "Complete the Coordinate Move",
+        "family_purpose": "Translate an ordered pair into horizontal and vertical movement.",
+        "evidence_job": "convert coordinate values into movement distances",
+        "student_action": "Fill in the horizontal and vertical movement distances.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "symbolic -> verbal movement",
+        "difficulty_intent": "review",
+        "template_contract": {
+          "prompt_template": "For ({x},{y}), move _____ units {h_dir}, then _____ units {v_dir}.",
+          "parameters": {
+            "x": "nonzero integer",
+            "y": "nonzero integer",
+            "h_dir": "derived from x sign",
+            "v_dir": "derived from y sign"
+          },
+          "constraints": [
+            "directions are supplied; students fill distances"
+          ],
+          "answer_rule": "First blank = |x|; second blank = |y|.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For \\(T(-2,-5)\\), move _____ units left, then _____ units down.</p>",
+          "answer": "2; 5",
+          "solution": "Use the absolute values for distances and the coordinate signs for directions."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-E",
+      "teacher_question_id": "Q057",
+      "revision": 2,
+      "reason": "Shorten the axis-correction wording",
+      "override": {
+        "template_contract": {
+          "prompt_template": "{output} is graphed against {input}. A student puts {output} on x and {input} on y. Correct the axes.",
+          "parameters": {
+            "input": "input quantity",
+            "output": "output quantity"
+          },
+          "constraints": [
+            "context has a clear input/output relationship"
+          ],
+          "answer_rule": "Put input on x and output on y.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Distance is graphed against time. A student puts distance on x and time on y. Correct the axes.</p><div class=\"response-surface\">x: _____ &nbsp;&nbsp; y: _____</div>",
+          "answer": "x = time; y = distance",
+          "solution": "Time is the input and distance is the output."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-F",
+      "teacher_question_id": "Q058",
+      "revision": 2,
+      "reason": "Shorten the axis-comparison wording",
+      "override": {
+        "template_contract": {
+          "prompt_template": "{output} is recorded each {input_unit}. Which setup better shows change over time: A) x={input}, y={output}; B) x={output}, y={input}?",
+          "parameters": {
+            "input": "input quantity",
+            "output": "output quantity",
+            "input_unit": "time unit"
+          },
+          "constraints": [
+            "Setup A is the conventional input/output assignment"
+          ],
+          "answer_rule": "Choose A when the input belongs on x.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Temperature is recorded each hour. Which setup better shows change over time?</p><p><b>A.</b> x = hour, y = temperature<br><b>B.</b> x = temperature, y = hour</p><div class=\"response-surface\">Choice: _____</div>",
+          "answer": "A",
+          "solution": "Hour is the input, so it belongs on x."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-G",
+      "teacher_question_id": "Q059",
+      "revision": 2,
+      "reason": "Replace the vague unlabeled-axis question with a clean axis rule",
+      "override": {
+        "family_name": "Complete the y-Axis Coordinate Rule",
+        "family_purpose": "Check the coordinate condition for points on the y-axis.",
+        "evidence_job": "state which coordinate is zero on the y-axis",
+        "student_action": "Complete the coordinate rule for the y-axis.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "symbolic",
+        "difficulty_intent": "intro/review",
+        "template_contract": {
+          "prompt_template": "For any point on the y-axis, x = _____.",
+          "parameters": {},
+          "constraints": [
+            "single numeric blank"
+          ],
+          "answer_rule": "0",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For any point on the y-axis, \\(x=\\) _____.</p>",
+          "answer": "0",
+          "solution": "Every point on the y-axis has x-coordinate 0."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-I",
+      "teacher_question_id": "Q061",
+      "revision": 2,
+      "reason": "Clarify the task with a single selected-response axis-identification item",
+      "override": {
+        "family_name": "Choose a Point on the y-Axis",
+        "family_purpose": "Apply the y-axis coordinate rule to a concrete point.",
+        "evidence_job": "identify a point with x-coordinate zero",
+        "student_action": "Select the point that lies on the y-axis.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "symbolic",
+        "difficulty_intent": "review",
+        "template_contract": {
+          "prompt_template": "Which point lies on the y-axis?",
+          "parameters": {
+            "choices": "four ordered pairs; exactly one has x=0"
+          },
+          "constraints": [
+            "four options",
+            "exactly one correct answer"
+          ],
+          "answer_rule": "Choose the point whose x-coordinate is 0.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Which point lies on the y-axis?</p><ol class=\"choices\"><li>\\((0,6)\\)</li><li>\\((-4,0)\\)</li><li>\\((2,3)\\)</li><li>\\((5,-1)\\)</li></ol>",
+          "answer": "A. (0,6)",
+          "solution": "A point is on the y-axis when x=0."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC02-J",
+      "teacher_question_id": "Q062",
+      "revision": 2,
+      "reason": "Teacher requested the same concise fill-in movement format used for Q055",
+      "override": {
+        "family_name": "Complete an Axis-Based Move",
+        "family_purpose": "Use x then y to complete a plotting movement.",
+        "evidence_job": "translate a coordinate into axis-aligned movement distances",
+        "student_action": "Fill in the horizontal and vertical distances.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "symbolic -> verbal movement",
+        "difficulty_intent": "review",
+        "template_contract": {
+          "prompt_template": "For ({x},{y}), move _____ units {h_dir}, then _____ units {v_dir}.",
+          "parameters": {
+            "x": "nonzero integer",
+            "y": "nonzero integer",
+            "h_dir": "derived from x sign",
+            "v_dir": "derived from y sign"
+          },
+          "constraints": [
+            "directions are supplied; students fill distances"
+          ],
+          "answer_rule": "First blank = |x|; second blank = |y|.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For \\(R(-3,4)\\), move _____ units left, then _____ units up.</p>",
+          "answer": "3; 4",
+          "solution": "Use x for the horizontal move and y for the vertical move."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-E",
+      "teacher_question_id": "Q064",
+      "revision": 2,
+      "reason": "Shorten the estimate-then-read prompt",
+      "override": {
+        "template_contract": {
+          "prompt_template": "At {x_value}, is the value closer to {low_anchor} or {high_anchor}? Then give the exact value.",
+          "parameters": {
+            "x_value": "displayed x-value",
+            "low_anchor": "lower benchmark",
+            "high_anchor": "upper benchmark"
+          },
+          "constraints": [
+            "benchmarks bracket or meaningfully compare to the graphed value"
+          ],
+          "answer_rule": "Choose the closer benchmark, then read the exact scaled value.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>At 4 minutes, is the distance closer to 10 m or 100 m? Then give the exact value.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Estimate + exact:</div>",
+          "answer": "Closer to 100 m; 70 m.",
+          "solution": "Read the y-axis scale at 4 minutes."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-G",
+      "teacher_question_id": "Q066",
+      "revision": 2,
+      "reason": "Shorten the competing-methods wording",
+      "override": {
+        "template_contract": {
+          "prompt_template": "At {x_value}, {student1} says {wrong}. {student2} says {correct}. Who read the scale correctly?",
+          "parameters": {
+            "student1": "student name",
+            "student2": "student name",
+            "x_value": "displayed x-value",
+            "wrong": "grid-count error",
+            "correct": "scaled value"
+          },
+          "constraints": [
+            "one response ignores the axis scale; one uses it"
+          ],
+          "answer_rule": "Choose the student using the labeled axis scale.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>At 4 minutes, Maya says 7 m. Jordan says 70 m. Who read the scale correctly?</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Student: _____</div>",
+          "answer": "Jordan.",
+          "solution": "The axis scale, not the number of grid spaces, gives 70 m."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-H",
+      "teacher_question_id": "Q067",
+      "revision": 2,
+      "reason": "Shorten the missing-scale-information wording",
+      "override": {
+        "template_contract": {
+          "prompt_template": "The {axis} axis has gridlines but no numbers. Can you read an exact value? What is missing?",
+          "parameters": {
+            "axis": [
+              "x",
+              "y"
+            ]
+          },
+          "constraints": [
+            "no numerical scale is visible"
+          ],
+          "answer_rule": "No; numerical labels or an interval/scale are needed.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>The y-axis has gridlines but no numbers. Can you read an exact y-value? What is missing?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "No; the numerical scale is missing.",
+          "solution": "Grid spacing alone does not tell the value of each interval."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC04-H",
+      "teacher_question_id": "Q074",
+      "revision": 2,
+      "reason": "Shorten the intercept visibility prompt",
+      "override": {
+        "template_contract": {
+          "prompt_template": "The line does not reach {axis_description} in the graph window. Can you read that intercept from the picture?",
+          "parameters": {
+            "axis_description": "the x-axis, the y-axis, or either axis"
+          },
+          "constraints": [
+            "the requested crossing is outside the visible window"
+          ],
+          "answer_rule": "No; the crossing must be shown or equivalent information supplied.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>The line does not reach either axis in the graph window. Can you read an intercept from the picture?</p><div class=\"response-surface\">Yes / No: _____</div>",
+          "answer": "No.",
+          "solution": "An intercept cannot be read from a picture that does not show the axis crossing."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC01-E",
+      "teacher_question_id": "Q078",
+      "revision": 2,
+      "reason": "Shorten the slope-estimate directions",
+      "override": {
+        "template_contract": {
+          "prompt_template": "Before calculating: is the slope positive, negative, or zero? Is |m| < 1, = 1, or > 1? Then find m.",
+          "parameters": {},
+          "constraints": [
+            "graph must make sign and steepness visually discernible"
+          ],
+          "answer_rule": "Classify sign and magnitude, then calculate rise/run.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Before calculating: is the slope positive, negative, or zero? Is \\(|m|<1\\), \\(|m|=1\\), or \\(|m|>1\\)? Then find \\(m\\).</p><img class=\"graph\" src=\"figures/u1_mg02_slope_b.png\" alt=\"Descending line with slope negative one half\"><div class=\"response-surface\">Prediction + m:</div>",
+          "answer": "Negative; |m|<1; m=-1/2.",
+          "solution": "The line falls gently; rise/run gives -2/4=-1/2."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC01-F",
+      "teacher_question_id": "Q079",
+      "revision": 2,
+      "reason": "Shorten the slope-triangle comparison wording",
+      "override": {
+        "template_contract": {
+          "prompt_template": "One student uses rise/run {r1}/{d1}; another uses {r2}/{d2}. Can both describe the same line? Why?",
+          "parameters": {
+            "r1": "rise 1",
+            "d1": "run 1",
+            "r2": "rise 2",
+            "d2": "run 2"
+          },
+          "constraints": [
+            "ratios are equivalent for a valid yes instance"
+          ],
+          "answer_rule": "Compare the simplified rise/run ratios.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>One student uses rise/run \\(4/2\\); another uses \\(6/3\\). Can both describe the same line? Why?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "Yes; both equal 2.",
+          "solution": "Equivalent slope triangles have the same rise/run ratio."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-G",
+      "teacher_question_id": "Q094",
+      "revision": 2,
+      "reason": "Shorten the sign-error critique",
+      "override": {
+        "template_contract": {
+          "prompt_template": "A student rewrites {original} as {incorrect_rewrite}. What is the error?",
+          "parameters": {
+            "original": "linear equation",
+            "incorrect_rewrite": "one-sign-error rewrite"
+          },
+          "constraints": [
+            "exactly one algebraic sign error"
+          ],
+          "answer_rule": "Identify the incorrect sign change and state the correct slope.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A student rewrites \\(y+4=3x\\) as \\(y=-3x-4\\). What is the error?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "The 3x term should stay positive; slope = 3.",
+          "solution": "Subtracting 4 gives y=3x-4."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC04-G",
+      "teacher_question_id": "Q101",
+      "revision": 2,
+      "reason": "Shorten the rate-units critique",
+      "override": {
+        "template_contract": {
+          "prompt_template": "{output_change} {output_units} in {input_change} {input_units}. A student writes the rate in {reversed_units}. Are the units correct?",
+          "parameters": {
+            "output_change": "numeric change",
+            "output_units": "output units",
+            "input_change": "numeric change",
+            "input_units": "input units",
+            "reversed_units": "input units per output unit"
+          },
+          "constraints": [
+            "rate value and units must correspond to output/input"
+          ],
+          "answer_rule": "No when units are reversed; use output_units per input_units.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A car travels 180 miles in 3 hours. A student writes 60 hours per mile. Are the units correct?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "No; 60 miles per hour.",
+          "solution": "Rate is output miles divided by input hours."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC04-H",
+      "teacher_question_id": "Q102",
+      "revision": 2,
+      "reason": "Shorten the missing-information rate prompt",
+      "override": {
+        "template_contract": {
+          "prompt_template": "One point ({x1},{y1}) is given. Is that enough to find a rate? What else is needed?",
+          "parameters": {
+            "x1": "input value",
+            "y1": "output value"
+          },
+          "constraints": [
+            "no initial value/rate rule supplied"
+          ],
+          "answer_rule": "No; another input-output point or equivalent change information is needed.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A tank has 42 L at 2 minutes. Is that enough to find its rate? What else is needed?</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "No; another time-volume measurement is needed.",
+          "solution": "A rate requires change in output over a nonzero change in input."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC04-I",
+      "teacher_question_id": "Q103",
+      "revision": 2,
+      "reason": "Shorten the prediction prompt",
+      "override": {
+        "template_contract": {
+          "prompt_template": "Rate = {rate} {out_units}/{in_units}. Value = {value} at {input}. Find the value at {new_input}.",
+          "parameters": {
+            "rate": "constant rate",
+            "out_units": "output units",
+            "in_units": "input units",
+            "value": "known output value",
+            "input": "known input",
+            "new_input": "new input"
+          },
+          "constraints": [
+            "constant rate stated or implied"
+          ],
+          "answer_rule": "new value = known value + rate*(new_input-input).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Rate = 12 L/min. The tank has 78 L at 5 min. How much at 8 min?</p><div class=\"response-surface\">Value: _____ L</div>",
+          "answer": "114 L",
+          "solution": "Three more minutes add 36 L; 78+36=114."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    }
+  ]
+}
