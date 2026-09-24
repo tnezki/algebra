@@ -1,21 +1,22 @@
 {
-  "schema": "algebra-quick-check-source-map/1.0",
+  "schema": "algebra-quick-check-source-map/1.1",
   "quick_check_id": "U1-S2-QC01",
   "course": "Algebra 1",
   "unit": 1,
   "section": "1.2",
   "section_title": "Inputs, Outputs, and Functions",
   "approved_output_root": "quick_check____htq5855/quick1/approved/quick_1_2",
+  "layout_version": "QC-layout-1.4-connected-2026-09-24",
   "pinned_authority": {
     "system_repo": "tnezki/memories",
-    "system_commit": "c3dd1272e1f9c90a94407b467e290ba5858df4fb",
+    "system_commit": "67c283d30f84594c43910cf851aeb7cec1352202",
     "course_repo": "tnezki/algebra",
-    "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0",
+    "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80",
     "pm_entrypoint": "pms_build/exit.txt",
     "template_contract": "Tools/templates/algebra/quick_check/QUICK_CHECK_TEMPLATE_CONTRACT.json",
     "local_transfer_contract": "Tools/LOCAL_REPO_TRANSFER_CONTRACT.txt"
   },
-  "teacher_note": "make sure to not copy questions word for word",
+  "teacher_note": "",
   "request_contract": {
     "versions": [
       "A",
@@ -37,16 +38,27 @@
   },
   "default_layout": {
     "source_problem_heights_inches": {
-      "1": 4.15,
-      "2": 4.15,
-      "3": 4.55,
-      "4": 4.5
+      "1": 4.35,
+      "2": 4.35,
+      "3": 4.94,
+      "4": 4.94
+    },
+    "source_graph_width_percent": {
+      "3": 96,
+      "4": 96
+    },
+    "source_workspace_heights_inches": {
+      "1": 0.95,
+      "2": 0.95,
+      "3": 0.02,
+      "4": 0.02
     },
     "page_split": 2,
     "page2_header": false,
     "plain_white_workspace": true,
     "ruled_workspace_lines": false,
-    "shaded_problem_cards": false
+    "shaded_problem_cards": false,
+    "graph_design_note": "Graph questions default to page 2 and use nearly full problem width so each graph occupies approximately half a printed/projected page."
   },
   "teacher_approved_question_architectures": [
     {
@@ -54,40 +66,44 @@
       "slot_role": "current_evidence",
       "i_can_id": "U1-MG03-IC01",
       "i_can_exact_text": "Substitute a value for a variable.",
-      "family_id": "U1-MG03-IC01-A",
+      "selection_mode": "bank_family",
       "family_label": "A",
       "family_name": "Direct Single-Variable Substitution",
-      "evidence_job": "direct substitution"
+      "evidence_job": "direct substitution",
+      "custom_question_description": null
     },
     {
       "question_slot": 2,
       "slot_role": "current_evidence",
-      "i_can_id": "U1-MG03-IC02",
-      "i_can_exact_text": "Use order of operations correctly.",
-      "family_id": "U1-MG03-IC02-B",
+      "i_can_id": "U1-MG03-IC01",
+      "i_can_exact_text": "Substitute a value for a variable.",
+      "selection_mode": "bank_family",
       "family_label": "B",
-      "family_name": "Evaluate a Grouped Fraction Expression",
-      "evidence_job": "grouped multistep order of operations"
+      "family_name": "Substitute into a Context Formula",
+      "evidence_job": "substitute into context formula",
+      "custom_question_description": null
     },
     {
       "question_slot": 3,
       "slot_role": "current_unit_reassessment",
       "i_can_id": "U1-MG01-IC03",
       "i_can_exact_text": "Read a graph using its scale.",
-      "family_id": "U1-MG01-IC03-A",
-      "family_label": "A",
-      "family_name": "Read a Scaled Coordinate",
-      "evidence_job": "read coordinate using graph scale"
+      "selection_mode": "bank_family",
+      "family_label": "B",
+      "family_name": "Compare Values on an Unequal Scale",
+      "evidence_job": "use unequal graph scales correctly",
+      "custom_question_description": null
     },
     {
       "question_slot": 4,
       "slot_role": "current_unit_reassessment",
       "i_can_id": "U1-MG01-IC04",
       "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_id": "U1-MG01-IC04-B",
-      "family_label": "B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context"
+      "selection_mode": "bank_family",
+      "family_label": "A",
+      "family_name": "Identify Both Intercepts",
+      "evidence_job": "identify both intercepts",
+      "custom_question_description": null
     }
   ],
   "source_questions": [
@@ -96,43 +112,33 @@
       "slot_role": "current_evidence",
       "i_can_id": "U1-MG03-IC01",
       "i_can_exact_text": "Substitute a value for a variable.",
-      "family_id": "U1-MG03-IC01-A",
+      "selection_mode": "bank_family",
       "family_label": "A",
       "family_name": "Direct Single-Variable Substitution",
       "evidence_job": "direct substitution",
-      "bank_evidence_job": "substitute a value for a variable",
-      "student_action": "Replace the variable with the given number and evaluate.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short constructed response",
-      "representation_mode": "symbolic",
+      "custom_question_description": null,
       "fresh_instance_rule_applied": true,
       "lineage": {
         "repo": "tnezki/algebra",
-        "commit": "517cddb56b6913e9449cfeb3ba109578846edec0",
-        "path": "banks/unit1/mastery_goals/U1-MG03.json",
-        "family_id": "U1-MG03-IC01-A"
+        "commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80",
+        "path": "banks/unit1/mastery_goals/U1-MG03.json"
       }
     },
     {
       "question_slot": 2,
       "slot_role": "current_evidence",
-      "i_can_id": "U1-MG03-IC02",
-      "i_can_exact_text": "Use order of operations correctly.",
-      "family_id": "U1-MG03-IC02-B",
+      "i_can_id": "U1-MG03-IC01",
+      "i_can_exact_text": "Substitute a value for a variable.",
+      "selection_mode": "bank_family",
       "family_label": "B",
-      "family_name": "Evaluate a Grouped Fraction Expression",
-      "evidence_job": "grouped multistep order of operations",
-      "bank_evidence_job": "apply order of operations inside grouped parts",
-      "student_action": "Evaluate grouped numerator and denominator before division.",
-      "question_structure_id": "PROC-MULTISTEP-CHAIN-01",
-      "response_mode": "constructed response",
-      "representation_mode": "symbolic fraction",
+      "family_name": "Substitute into a Context Formula",
+      "evidence_job": "substitute into context formula",
+      "custom_question_description": null,
       "fresh_instance_rule_applied": true,
       "lineage": {
         "repo": "tnezki/algebra",
-        "commit": "517cddb56b6913e9449cfeb3ba109578846edec0",
-        "path": "banks/unit1/mastery_goals/U1-MG03.json",
-        "family_id": "U1-MG03-IC02-B"
+        "commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80",
+        "path": "banks/unit1/mastery_goals/U1-MG03.json"
       }
     },
     {
@@ -140,21 +146,16 @@
       "slot_role": "current_unit_reassessment",
       "i_can_id": "U1-MG01-IC03",
       "i_can_exact_text": "Read a graph using its scale.",
-      "family_id": "U1-MG01-IC03-A",
-      "family_label": "A",
-      "family_name": "Read a Scaled Coordinate",
-      "evidence_job": "read coordinate using graph scale",
-      "bank_evidence_job": "read a graph value using its displayed scale",
-      "student_action": "Read the coordinates of a marked point while using the displayed axis scale.",
-      "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-      "response_mode": "short constructed response",
-      "representation_mode": "graph",
+      "selection_mode": "bank_family",
+      "family_label": "B",
+      "family_name": "Compare Values on an Unequal Scale",
+      "evidence_job": "use unequal graph scales correctly",
+      "custom_question_description": null,
       "fresh_instance_rule_applied": true,
       "lineage": {
         "repo": "tnezki/algebra",
-        "commit": "517cddb56b6913e9449cfeb3ba109578846edec0",
-        "path": "banks/unit1/mastery_goals/U1-MG01.json",
-        "family_id": "U1-MG01-IC03-A"
+        "commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80",
+        "path": "banks/unit1/mastery_goals/U1-MG01.json"
       }
     },
     {
@@ -162,21 +163,16 @@
       "slot_role": "current_unit_reassessment",
       "i_can_id": "U1-MG01-IC04",
       "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-      "family_id": "U1-MG01-IC04-B",
-      "family_label": "B",
-      "family_name": "Interpret an Intercept in Context",
-      "evidence_job": "interpret intercepts in context",
-      "bank_evidence_job": "interpret what an intercept means for two related quantities",
-      "student_action": "State the meaning and units of displayed x- and y-intercepts in context.",
-      "question_structure_id": "REPTRANS-MULTIPLE-SIMULTANEOUS-01",
-      "response_mode": "constructed response",
-      "representation_mode": "graph -> context language",
+      "selection_mode": "bank_family",
+      "family_label": "A",
+      "family_name": "Identify Both Intercepts",
+      "evidence_job": "identify both intercepts",
+      "custom_question_description": null,
       "fresh_instance_rule_applied": true,
       "lineage": {
         "repo": "tnezki/algebra",
-        "commit": "517cddb56b6913e9449cfeb3ba109578846edec0",
-        "path": "banks/unit1/mastery_goals/U1-MG01.json",
-        "family_id": "U1-MG01-IC04-B"
+        "commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80",
+        "path": "banks/unit1/mastery_goals/U1-MG01.json"
       }
     }
   ],
@@ -189,8 +185,8 @@
       ],
       "default_print_order": [
         1,
-        3,
         2,
+        3,
         4
       ],
       "questions": [
@@ -201,99 +197,75 @@
           "slot_role": "current_evidence",
           "i_can_id": "U1-MG03-IC01",
           "i_can_exact_text": "Substitute a value for a variable.",
-          "family_id": "U1-MG03-IC01-A",
+          "selection_mode": "bank_family",
           "family_label": "A",
           "family_name": "Direct Single-Variable Substitution",
           "evidence_job": "direct substitution",
-          "bank_evidence_job": "substitute a value for a variable",
+          "custom_question_description": null,
           "values": {
-            "coefficient": 3,
-            "constant": 8,
+            "expression": "6x + 5",
             "variable": "x",
-            "substitution_value": -4,
-            "expression": "3x + 8"
+            "substitution_value": -4
           },
-          "answer": "-4",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "-19",
           "lineage": {
             "source_slot": 1,
-            "bank_family_id": "U1-MG03-IC01-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 2,
           "default_page": 1,
-          "question_slot": 3,
-          "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_exact_text": "Read a graph using its scale.",
-          "family_id": "U1-MG01-IC03-A",
-          "family_label": "A",
-          "family_name": "Read a Scaled Coordinate",
-          "evidence_job": "read coordinate using graph scale",
-          "bank_evidence_job": "read a graph value using its displayed scale",
+          "question_slot": 2,
+          "slot_role": "current_evidence",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
+          "family_label": "B",
+          "family_name": "Substitute into a Context Formula",
+          "evidence_job": "substitute into context formula",
+          "custom_question_description": null,
           "values": {
-            "point_label": "P",
-            "point": [
-              -4,
-              15
-            ],
-            "x_scale": 1,
-            "y_scale": 5,
-            "x_window": [
-              -5,
-              5
-            ],
-            "y_window": [
-              -25,
-              25
-            ]
+            "formula": "C = 3.5h + 6",
+            "input_value": 4,
+            "context": "parking garage"
           },
-          "answer": "(-4, 15)",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "$20",
           "lineage": {
-            "source_slot": 3,
-            "bank_family_id": "U1-MG01-IC03-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 2,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 3,
           "default_page": 2,
-          "question_slot": 2,
-          "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_exact_text": "Use order of operations correctly.",
-          "family_id": "U1-MG03-IC02-B",
+          "question_slot": 3,
+          "slot_role": "current_unit_reassessment",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "selection_mode": "bank_family",
           "family_label": "B",
-          "family_name": "Evaluate a Grouped Fraction Expression",
-          "evidence_job": "grouped multistep order of operations",
-          "bank_evidence_job": "apply order of operations inside grouped parts",
+          "family_name": "Compare Values on an Unequal Scale",
+          "evidence_job": "use unequal graph scales correctly",
+          "custom_question_description": null,
           "values": {
-            "numerator_multiplier": 2,
-            "numerator_group": [
-              9,
-              1
+            "points": [
+              [
+                2,
+                30
+              ],
+              [
+                7,
+                80
+              ]
             ],
-            "numerator_addend": 8,
-            "denominator_addends": [
-              2,
-              4
-            ],
-            "numerator_value": 24,
-            "denominator_value": 6,
-            "expression_tex": "\\frac{2(9-1)+8}{2+4}"
+            "x_scale": 1,
+            "y_scale": 10
           },
-          "answer": "4",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "50",
           "lineage": {
-            "source_slot": 2,
-            "bank_family_id": "U1-MG03-IC02-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 3,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
@@ -303,31 +275,25 @@
           "slot_role": "current_unit_reassessment",
           "i_can_id": "U1-MG01-IC04",
           "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-B",
-          "family_label": "B",
-          "family_name": "Interpret an Intercept in Context",
-          "evidence_job": "interpret intercepts in context",
-          "bank_evidence_job": "interpret what an intercept means for two related quantities",
+          "selection_mode": "bank_family",
+          "family_label": "A",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "custom_question_description": null,
           "values": {
-            "context": "storage tank draining",
-            "initial_water_gallons": 120,
-            "empty_time_minutes": 24,
+            "x_intercept": [
+              4,
+              0
+            ],
             "y_intercept": [
               0,
-              120
-            ],
-            "x_intercept": [
-              24,
-              0
+              6
             ]
           },
-          "answer": "y-intercept (0, 120): at 0 minutes the tank contains 120 gallons; x-intercept (24, 0): after 24 minutes the tank is empty.",
-          "deliberate_aggregation": "Interpret the x- and y-intercepts together as one source-level U1-MG01-IC04 judgment.",
-          "multi_target_behavior": "none",
+          "answer": "x-intercept (4, 0); y-intercept (0, 6)",
           "lineage": {
             "source_slot": 4,
-            "bank_family_id": "U1-MG01-IC04-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         }
       ]
@@ -339,44 +305,33 @@
         2
       ],
       "default_print_order": [
-        4,
+        2,
         1,
-        3,
-        2
+        4,
+        3
       ],
       "questions": [
         {
           "printed_position": 1,
           "default_page": 1,
-          "question_slot": 4,
-          "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-B",
+          "question_slot": 2,
+          "slot_role": "current_evidence",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
           "family_label": "B",
-          "family_name": "Interpret an Intercept in Context",
-          "evidence_job": "interpret intercepts in context",
-          "bank_evidence_job": "interpret what an intercept means for two related quantities",
+          "family_name": "Substitute into a Context Formula",
+          "evidence_job": "substitute into context formula",
+          "custom_question_description": null,
           "values": {
-            "context": "storage tank draining",
-            "initial_water_gallons": 150,
-            "empty_time_minutes": 30,
-            "y_intercept": [
-              0,
-              150
-            ],
-            "x_intercept": [
-              30,
-              0
-            ]
+            "formula": "C = 4h + 9",
+            "input_value": 3,
+            "context": "bike rental"
           },
-          "answer": "y-intercept (0, 150): at 0 minutes the tank contains 150 gallons; x-intercept (30, 0): after 30 minutes the tank is empty.",
-          "deliberate_aggregation": "Interpret the x- and y-intercepts together as one source-level U1-MG01-IC04 judgment.",
-          "multi_target_behavior": "none",
+          "answer": "$21",
           "lineage": {
-            "source_slot": 4,
-            "bank_family_id": "U1-MG01-IC04-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 2,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
@@ -386,99 +341,80 @@
           "slot_role": "current_evidence",
           "i_can_id": "U1-MG03-IC01",
           "i_can_exact_text": "Substitute a value for a variable.",
-          "family_id": "U1-MG03-IC01-A",
+          "selection_mode": "bank_family",
           "family_label": "A",
           "family_name": "Direct Single-Variable Substitution",
           "evidence_job": "direct substitution",
-          "bank_evidence_job": "substitute a value for a variable",
+          "custom_question_description": null,
           "values": {
-            "coefficient": 5,
-            "constant": -6,
-            "variable": "x",
-            "substitution_value": -3,
-            "expression": "5x - 6"
+            "expression": "5a - 7",
+            "variable": "a",
+            "substitution_value": -3
           },
-          "answer": "-21",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "-22",
           "lineage": {
             "source_slot": 1,
-            "bank_family_id": "U1-MG03-IC01-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 3,
           "default_page": 2,
-          "question_slot": 3,
+          "question_slot": 4,
           "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_exact_text": "Read a graph using its scale.",
-          "family_id": "U1-MG01-IC03-A",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "selection_mode": "bank_family",
           "family_label": "A",
-          "family_name": "Read a Scaled Coordinate",
-          "evidence_job": "read coordinate using graph scale",
-          "bank_evidence_job": "read a graph value using its displayed scale",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "custom_question_description": null,
           "values": {
-            "point_label": "P",
-            "point": [
-              3,
-              -20
+            "x_intercept": [
+              -3,
+              0
             ],
-            "x_scale": 1,
-            "y_scale": 5,
-            "x_window": [
-              -5,
-              5
-            ],
-            "y_window": [
-              -25,
-              25
+            "y_intercept": [
+              0,
+              4
             ]
           },
-          "answer": "(3, -20)",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "x-intercept (-3, 0); y-intercept (0, 4)",
           "lineage": {
-            "source_slot": 3,
-            "bank_family_id": "U1-MG01-IC03-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 4,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 4,
           "default_page": 2,
-          "question_slot": 2,
-          "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_exact_text": "Use order of operations correctly.",
-          "family_id": "U1-MG03-IC02-B",
+          "question_slot": 3,
+          "slot_role": "current_unit_reassessment",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "selection_mode": "bank_family",
           "family_label": "B",
-          "family_name": "Evaluate a Grouped Fraction Expression",
-          "evidence_job": "grouped multistep order of operations",
-          "bank_evidence_job": "apply order of operations inside grouped parts",
+          "family_name": "Compare Values on an Unequal Scale",
+          "evidence_job": "use unequal graph scales correctly",
+          "custom_question_description": null,
           "values": {
-            "numerator_multiplier": 4,
-            "numerator_group": [
-              8,
-              1
+            "points": [
+              [
+                1,
+                30
+              ],
+              [
+                5,
+                90
+              ]
             ],
-            "numerator_addend": 7,
-            "denominator_addends": [
-              3,
-              4
-            ],
-            "numerator_value": 35,
-            "denominator_value": 7,
-            "expression_tex": "\\frac{4(8-1)+7}{3+4}"
+            "x_scale": 1,
+            "y_scale": 15
           },
-          "answer": "5",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "60",
           "lineage": {
-            "source_slot": 2,
-            "bank_family_id": "U1-MG03-IC02-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 3,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         }
       ]
@@ -490,108 +426,84 @@
         2
       ],
       "default_print_order": [
+        1,
         2,
         4,
-        1,
         3
       ],
       "questions": [
         {
           "printed_position": 1,
           "default_page": 1,
-          "question_slot": 2,
+          "question_slot": 1,
           "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_exact_text": "Use order of operations correctly.",
-          "family_id": "U1-MG03-IC02-B",
-          "family_label": "B",
-          "family_name": "Evaluate a Grouped Fraction Expression",
-          "evidence_job": "grouped multistep order of operations",
-          "bank_evidence_job": "apply order of operations inside grouped parts",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
+          "family_label": "A",
+          "family_name": "Direct Single-Variable Substitution",
+          "evidence_job": "direct substitution",
+          "custom_question_description": null,
           "values": {
-            "numerator_multiplier": 3,
-            "numerator_group": [
-              7,
-              1
-            ],
-            "numerator_addend": 6,
-            "denominator_addends": [
-              5,
-              3
-            ],
-            "numerator_value": 24,
-            "denominator_value": 8,
-            "expression_tex": "\\frac{3(7-1)+6}{5+3}"
+            "expression": "4m + 9",
+            "variable": "m",
+            "substitution_value": -5
           },
-          "answer": "3",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "-11",
           "lineage": {
-            "source_slot": 2,
-            "bank_family_id": "U1-MG03-IC02-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 1,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 2,
           "default_page": 1,
-          "question_slot": 4,
-          "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-B",
+          "question_slot": 2,
+          "slot_role": "current_evidence",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
           "family_label": "B",
-          "family_name": "Interpret an Intercept in Context",
-          "evidence_job": "interpret intercepts in context",
-          "bank_evidence_job": "interpret what an intercept means for two related quantities",
+          "family_name": "Substitute into a Context Formula",
+          "evidence_job": "substitute into context formula",
+          "custom_question_description": null,
           "values": {
-            "context": "storage tank draining",
-            "initial_water_gallons": 90,
-            "empty_time_minutes": 18,
-            "y_intercept": [
-              0,
-              90
-            ],
-            "x_intercept": [
-              18,
-              0
-            ]
+            "formula": "T = 2.5n + 12",
+            "input_value": 8,
+            "context": "group tickets"
           },
-          "answer": "y-intercept (0, 90): at 0 minutes the tank contains 90 gallons; x-intercept (18, 0): after 18 minutes the tank is empty.",
-          "deliberate_aggregation": "Interpret the x- and y-intercepts together as one source-level U1-MG01-IC04 judgment.",
-          "multi_target_behavior": "none",
+          "answer": "$32",
           "lineage": {
-            "source_slot": 4,
-            "bank_family_id": "U1-MG01-IC04-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 2,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 3,
           "default_page": 2,
-          "question_slot": 1,
-          "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC01",
-          "i_can_exact_text": "Substitute a value for a variable.",
-          "family_id": "U1-MG03-IC01-A",
+          "question_slot": 4,
+          "slot_role": "current_unit_reassessment",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "selection_mode": "bank_family",
           "family_label": "A",
-          "family_name": "Direct Single-Variable Substitution",
-          "evidence_job": "direct substitution",
-          "bank_evidence_job": "substitute a value for a variable",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "custom_question_description": null,
           "values": {
-            "coefficient": -2,
-            "constant": 7,
-            "variable": "x",
-            "substitution_value": 5,
-            "expression": "-2x + 7"
+            "x_intercept": [
+              5,
+              0
+            ],
+            "y_intercept": [
+              0,
+              -5
+            ]
           },
-          "answer": "-3",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "x-intercept (5, 0); y-intercept (0, -5)",
           "lineage": {
-            "source_slot": 1,
-            "bank_family_id": "U1-MG03-IC01-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 4,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
@@ -601,35 +513,29 @@
           "slot_role": "current_unit_reassessment",
           "i_can_id": "U1-MG01-IC03",
           "i_can_exact_text": "Read a graph using its scale.",
-          "family_id": "U1-MG01-IC03-A",
-          "family_label": "A",
-          "family_name": "Read a Scaled Coordinate",
-          "evidence_job": "read coordinate using graph scale",
-          "bank_evidence_job": "read a graph value using its displayed scale",
+          "selection_mode": "bank_family",
+          "family_label": "B",
+          "family_name": "Compare Values on an Unequal Scale",
+          "evidence_job": "use unequal graph scales correctly",
+          "custom_question_description": null,
           "values": {
-            "point_label": "P",
-            "point": [
-              -2,
-              -10
+            "points": [
+              [
+                3,
+                40
+              ],
+              [
+                8,
+                140
+              ]
             ],
             "x_scale": 1,
-            "y_scale": 5,
-            "x_window": [
-              -5,
-              5
-            ],
-            "y_window": [
-              -25,
-              25
-            ]
+            "y_scale": 20
           },
-          "answer": "(-2, -10)",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "100",
           "lineage": {
             "source_slot": 3,
-            "bank_family_id": "U1-MG01-IC03-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         }
       ]
@@ -641,146 +547,116 @@
         2
       ],
       "default_print_order": [
-        3,
         2,
-        4,
-        1
+        1,
+        3,
+        4
       ],
       "questions": [
         {
           "printed_position": 1,
           "default_page": 1,
-          "question_slot": 3,
-          "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC03",
-          "i_can_exact_text": "Read a graph using its scale.",
-          "family_id": "U1-MG01-IC03-A",
-          "family_label": "A",
-          "family_name": "Read a Scaled Coordinate",
-          "evidence_job": "read coordinate using graph scale",
-          "bank_evidence_job": "read a graph value using its displayed scale",
+          "question_slot": 2,
+          "slot_role": "current_evidence",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
+          "family_label": "B",
+          "family_name": "Substitute into a Context Formula",
+          "evidence_job": "substitute into context formula",
+          "custom_question_description": null,
           "values": {
-            "point_label": "P",
-            "point": [
-              4,
-              25
-            ],
-            "x_scale": 1,
-            "y_scale": 5,
-            "x_window": [
-              -5,
-              5
-            ],
-            "y_window": [
-              -25,
-              25
-            ]
+            "formula": "P = 1.5n + 7",
+            "input_value": 10,
+            "context": "printing order"
           },
-          "answer": "(4, 25)",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "$22",
           "lineage": {
-            "source_slot": 3,
-            "bank_family_id": "U1-MG01-IC03-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 2,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 2,
           "default_page": 1,
-          "question_slot": 2,
+          "question_slot": 1,
           "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC02",
-          "i_can_exact_text": "Use order of operations correctly.",
-          "family_id": "U1-MG03-IC02-B",
-          "family_label": "B",
-          "family_name": "Evaluate a Grouped Fraction Expression",
-          "evidence_job": "grouped multistep order of operations",
-          "bank_evidence_job": "apply order of operations inside grouped parts",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "selection_mode": "bank_family",
+          "family_label": "A",
+          "family_name": "Direct Single-Variable Substitution",
+          "evidence_job": "direct substitution",
+          "custom_question_description": null,
           "values": {
-            "numerator_multiplier": 5,
-            "numerator_group": [
-              9,
-              2
-            ],
-            "numerator_addend": 7,
-            "denominator_addends": [
-              2,
-              5
-            ],
-            "numerator_value": 42,
-            "denominator_value": 7,
-            "expression_tex": "\\frac{5(9-2)+7}{2+5}"
+            "expression": "7p - 2",
+            "variable": "p",
+            "substitution_value": -2
           },
-          "answer": "6",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "-16",
           "lineage": {
-            "source_slot": 2,
-            "bank_family_id": "U1-MG03-IC02-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 1,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 3,
           "default_page": 2,
-          "question_slot": 4,
+          "question_slot": 3,
           "slot_role": "current_unit_reassessment",
-          "i_can_id": "U1-MG01-IC04",
-          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
-          "family_id": "U1-MG01-IC04-B",
+          "i_can_id": "U1-MG01-IC03",
+          "i_can_exact_text": "Read a graph using its scale.",
+          "selection_mode": "bank_family",
           "family_label": "B",
-          "family_name": "Interpret an Intercept in Context",
-          "evidence_job": "interpret intercepts in context",
-          "bank_evidence_job": "interpret what an intercept means for two related quantities",
+          "family_name": "Compare Values on an Unequal Scale",
+          "evidence_job": "use unequal graph scales correctly",
+          "custom_question_description": null,
           "values": {
-            "context": "storage tank draining",
-            "initial_water_gallons": 180,
-            "empty_time_minutes": 36,
-            "y_intercept": [
-              0,
-              180
+            "points": [
+              [
+                2,
+                50
+              ],
+              [
+                6,
+                150
+              ]
             ],
-            "x_intercept": [
-              36,
-              0
-            ]
+            "x_scale": 1,
+            "y_scale": 25
           },
-          "answer": "y-intercept (0, 180): at 0 minutes the tank contains 180 gallons; x-intercept (36, 0): after 36 minutes the tank is empty.",
-          "deliberate_aggregation": "Interpret the x- and y-intercepts together as one source-level U1-MG01-IC04 judgment.",
-          "multi_target_behavior": "none",
+          "answer": "100",
           "lineage": {
-            "source_slot": 4,
-            "bank_family_id": "U1-MG01-IC04-B",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 3,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         },
         {
           "printed_position": 4,
           "default_page": 2,
-          "question_slot": 1,
-          "slot_role": "current_evidence",
-          "i_can_id": "U1-MG03-IC01",
-          "i_can_exact_text": "Substitute a value for a variable.",
-          "family_id": "U1-MG03-IC01-A",
+          "question_slot": 4,
+          "slot_role": "current_unit_reassessment",
+          "i_can_id": "U1-MG01-IC04",
+          "i_can_exact_text": "Identify and interpret intercepts when they are shown.",
+          "selection_mode": "bank_family",
           "family_label": "A",
-          "family_name": "Direct Single-Variable Substitution",
-          "evidence_job": "direct substitution",
-          "bank_evidence_job": "substitute a value for a variable",
+          "family_name": "Identify Both Intercepts",
+          "evidence_job": "identify both intercepts",
+          "custom_question_description": null,
           "values": {
-            "coefficient": 4,
-            "constant": 1,
-            "variable": "x",
-            "substitution_value": -6,
-            "expression": "4x + 1"
+            "x_intercept": [
+              -4,
+              0
+            ],
+            "y_intercept": [
+              0,
+              -6
+            ]
           },
-          "answer": "-23",
-          "deliberate_aggregation": null,
-          "multi_target_behavior": "none",
+          "answer": "x-intercept (-4, 0); y-intercept (0, -6)",
           "lineage": {
-            "source_slot": 1,
-            "bank_family_id": "U1-MG03-IC01-A",
-            "course_commit": "517cddb56b6913e9449cfeb3ba109578846edec0"
+            "source_slot": 4,
+            "course_commit": "95601f886fefe94c2ad7e2f8d7263a2d365d8a80"
           }
         }
       ]
