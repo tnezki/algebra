@@ -6,7 +6,7 @@
   "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
   "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
   "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-  "revision_count": 25,
+  "revision_count": 26,
   "revisions": [
     {
       "family_id": "U1-MG01-IC01-C",
@@ -92,30 +92,37 @@
     {
       "family_id": "U1-MG01-IC02-B",
       "teacher_question_id": "Q005",
-      "revision": 2,
-      "reason": "Remove the graph that visibly supplied the answer and make the axis assignment concise",
+      "revision": 3,
+      "reason": "Replace the axis-assignment prompt with a concrete selected-response x-axis classification task so it no longer duplicates Q058.",
       "override": {
-        "response_mode": "short constructed response",
-        "representation_mode": "context -> axis labels",
+        "family_name": "Choose a Point on the x-Axis",
+        "family_purpose": "Check whether students know that points on the x-axis have y-coordinate 0.",
+        "evidence_job": "identify a point that lies on the x-axis",
+        "student_action": "Choose the ordered pair that lies on the x-axis.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "symbolic ordered pairs",
+        "difficulty_intent": "review/diagnostic",
         "template_contract": {
-          "prompt_template": "A graph shows {output} as {input} changes. Complete: x-axis = _____; y-axis = _____.",
+          "prompt_template": "Which point lies on the x-axis?",
           "parameters": {
-            "input": "independent/input quantity",
-            "output": "dependent/output quantity"
+            "choices": "four ordered pairs; exactly one has y=0"
           },
           "constraints": [
-            "context must imply a clear input/output relationship"
+            "four answer choices",
+            "exactly one point has y-coordinate 0",
+            "include one distractor with x=0 to catch x/y-axis confusion"
           ],
-          "answer_rule": "x-axis = input; y-axis = output.",
+          "answer_rule": "Choose the ordered pair whose y-coordinate is 0.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>A graph shows distance traveled as time passes.</p><div class=\"response-surface\">x-axis: ______ &nbsp;&nbsp; y-axis: ______</div>",
-          "answer": "x-axis: time; y-axis: distance",
-          "solution": "Time is the input; distance is measured for each time.",
-          "scoring_guidance": "2 points: 1 for each axis."
+          "student_html": "<p>Which point lies on the x-axis?</p><ol class=\"choices\"><li>\\((-4,0)\\)</li><li>\\((0,4)\\)</li><li>\\((-4,2)\\)</li><li>\\((4,-2)\\)</li></ol>",
+          "answer": "A. (-4,0)",
+          "solution": "A point is on the x-axis when its y-coordinate is 0.",
+          "scoring_guidance": "1 point: selects A."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -340,37 +347,41 @@
     {
       "family_id": "U1-MG01-IC01-J",
       "teacher_question_id": "Q055",
-      "revision": 2,
-      "reason": "Teacher requested a direct fill-in movement format",
+      "revision": 3,
+      "reason": "Replace the repeated movement-distance fill-in with a missing-coordinate fill-in tied to distance from an axis.",
       "override": {
-        "family_name": "Complete the Coordinate Move",
-        "family_purpose": "Translate an ordered pair into horizontal and vertical movement.",
-        "evidence_job": "convert coordinate values into movement distances",
-        "student_action": "Fill in the horizontal and vertical movement distances.",
+        "family_name": "Fill a Missing Coordinate from Axis Distance",
+        "family_purpose": "Use distance and direction from an axis to determine one missing coordinate.",
+        "evidence_job": "determine a missing coordinate from horizontal or vertical position information",
+        "student_action": "Fill in the missing coordinate using the stated distance and direction from an axis.",
         "question_structure_id": "PROC-DIRECT-EXECUTE-01",
         "response_mode": "short constructed response",
-        "representation_mode": "symbolic -> verbal movement",
+        "representation_mode": "verbal position -> symbolic ordered pair",
         "difficulty_intent": "review",
         "template_contract": {
-          "prompt_template": "For ({x},{y}), move _____ units {h_dir}, then _____ units {v_dir}.",
+          "prompt_template": "T(_____, {y}) is {d} units {h_dir} of the y-axis. Fill in the missing x-coordinate.",
           "parameters": {
-            "x": "nonzero integer",
-            "y": "nonzero integer",
-            "h_dir": "derived from x sign",
-            "v_dir": "derived from y sign"
+            "y": "integer -9..9",
+            "d": "positive integer 1..9",
+            "h_dir": [
+              "left",
+              "right"
+            ]
           },
           "constraints": [
-            "directions are supplied; students fill distances"
+            "missing coordinate is x",
+            "left gives a negative x-coordinate and right gives a positive x-coordinate"
           ],
-          "answer_rule": "First blank = |x|; second blank = |y|.",
+          "answer_rule": "x = -d for left; x = d for right.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>For \\(T(-2,-5)\\), move _____ units left, then _____ units down.</p>",
-          "answer": "2; 5",
-          "solution": "Use the absolute values for distances and the coordinate signs for directions."
+          "student_html": "<p>\\(T(____,-5)\\) is 2 units left of the y-axis. Fill in the missing x-coordinate.</p><div class=\"response-surface\">x = _____</div>",
+          "answer": "-2",
+          "solution": "Two units left of the y-axis means x=-2.",
+          "scoring_guidance": "1 point: -2."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -378,27 +389,40 @@
     {
       "family_id": "U1-MG01-IC02-E",
       "teacher_question_id": "Q057",
-      "revision": 2,
-      "reason": "Shorten the axis-correction wording",
+      "revision": 3,
+      "reason": "Increase the demand by requiring students to interpret an ordered pair using already-labeled axis roles rather than merely reversing an obvious axis swap.",
       "override": {
+        "family_name": "Interpret a Point from Axis Labels",
+        "family_purpose": "Connect axis labels to the meaning of an ordered pair in context.",
+        "evidence_job": "interpret x- and y-values using stated axis quantities",
+        "student_action": "Choose the contextual meaning of a point from the graph axis labels.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "axis labels + ordered pair -> context meaning",
+        "difficulty_intent": "review/application",
         "template_contract": {
-          "prompt_template": "{output} is graphed against {input}. A student puts {output} on x and {input} on y. Correct the axes.",
+          "prompt_template": "A graph uses x = {input} and y = {output}. What does the point ({x},{y}) mean?",
           "parameters": {
-            "input": "input quantity",
-            "output": "output quantity"
+            "input": "input quantity with units",
+            "output": "output quantity with units",
+            "x": "positive value",
+            "y": "positive value"
           },
           "constraints": [
-            "context has a clear input/output relationship"
+            "four answer choices",
+            "one distractor reverses x and y meanings",
+            "one distractor reverses units or quantities"
           ],
-          "answer_rule": "Put input on x and output on y.",
+          "answer_rule": "Interpret the first coordinate with the x-axis quantity and the second with the y-axis quantity.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>Distance is graphed against time. A student puts distance on x and time on y. Correct the axes.</p><div class=\"response-surface\">x: _____ &nbsp;&nbsp; y: _____</div>",
-          "answer": "x = time; y = distance",
-          "solution": "Time is the input and distance is the output."
+          "student_html": "<p>A graph uses x = time (min) and y = distance (m). What does the point \\( (4,30) \\) mean?</p><ol class=\"choices\"><li>After 4 min, the distance is 30 m.</li><li>After 30 min, the distance is 4 m.</li><li>The speed is 30 m/min.</li><li>The starting distance is 4 m.</li></ol>",
+          "answer": "A. After 4 min, the distance is 30 m.",
+          "solution": "The x-coordinate is time and the y-coordinate is distance.",
+          "scoring_guidance": "1 point: selects A."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -466,6 +490,41 @@
       }
     },
     {
+      "family_id": "U1-MG01-IC02-H",
+      "teacher_question_id": "Q060",
+      "revision": 2,
+      "reason": "Turn the open-ended directions prompt into a concise fill-in rule that explains how to choose graph axes.",
+      "override": {
+        "family_name": "Complete the Axis-Choice Rule",
+        "family_purpose": "State the general rule for choosing which quantity belongs on each axis.",
+        "evidence_job": "connect input/output roles to x/y axes",
+        "student_action": "Complete the rule for choosing x- and y-axis quantities.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "verbal rule",
+        "difficulty_intent": "intro/review",
+        "template_contract": {
+          "prompt_template": "Complete the rule: Put the _____ quantity on the x-axis and the _____ quantity on the y-axis.",
+          "parameters": {},
+          "constraints": [
+            "accept input/independent for the first blank",
+            "accept output/dependent for the second blank"
+          ],
+          "answer_rule": "x-axis = input/independent quantity; y-axis = output/dependent quantity.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Complete the rule:</p><p>Put the <b>_____</b> quantity on the x-axis and the <b>_____</b> quantity on the y-axis.</p>",
+          "answer": "input (independent); output (dependent)",
+          "solution": "The input/independent quantity goes on x; the output/dependent quantity goes on y.",
+          "scoring_guidance": "2 points: 1 for each blank; accept equivalent vocabulary."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
       "family_id": "U1-MG01-IC02-I",
       "teacher_question_id": "Q061",
       "revision": 2,
@@ -504,37 +563,39 @@
     {
       "family_id": "U1-MG01-IC02-J",
       "teacher_question_id": "Q062",
-      "revision": 2,
-      "reason": "Teacher requested the same concise fill-in movement format used for Q055",
+      "revision": 3,
+      "reason": "Replace the repeated plotting-movement fill-in with a coordinate-change fill-in that distinguishes horizontal and vertical motion.",
       "override": {
-        "family_name": "Complete an Axis-Based Move",
-        "family_purpose": "Use x then y to complete a plotting movement.",
-        "evidence_job": "translate a coordinate into axis-aligned movement distances",
-        "student_action": "Fill in the horizontal and vertical distances.",
+        "family_name": "Identify Which Coordinate Changes",
+        "family_purpose": "Connect horizontal movement to x-change and vertical movement to y-change.",
+        "evidence_job": "identify which coordinate changes during horizontal versus vertical movement",
+        "student_action": "Fill in x or y for each movement between two points.",
         "question_structure_id": "PROC-DIRECT-EXECUTE-01",
         "response_mode": "short constructed response",
-        "representation_mode": "symbolic -> verbal movement",
+        "representation_mode": "ordered-pair comparison",
         "difficulty_intent": "review",
         "template_contract": {
-          "prompt_template": "For ({x},{y}), move _____ units {h_dir}, then _____ units {v_dir}.",
+          "prompt_template": "From ({x1},{y1}) to ({x2},{y1}), only the _____-coordinate changes. From ({x2},{y1}) to ({x2},{y2}), only the _____-coordinate changes.",
           "parameters": {
-            "x": "nonzero integer",
-            "y": "nonzero integer",
-            "h_dir": "derived from x sign",
-            "v_dir": "derived from y sign"
+            "x1": "integer",
+            "x2": "different integer",
+            "y1": "integer",
+            "y2": "different integer"
           },
           "constraints": [
-            "directions are supplied; students fill distances"
+            "first move is horizontal only",
+            "second move is vertical only"
           ],
-          "answer_rule": "First blank = |x|; second blank = |y|.",
+          "answer_rule": "First blank = x; second blank = y.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>For \\(R(-3,4)\\), move _____ units left, then _____ units up.</p>",
-          "answer": "3; 4",
-          "solution": "Use x for the horizontal move and y for the vertical move."
+          "student_html": "<p>From \\( (2,-1) \\) to \\( (7,-1) \\), only the _____-coordinate changes.<br>From \\( (7,-1) \\) to \\( (7,4) \\), only the _____-coordinate changes.</p>",
+          "answer": "x; y",
+          "solution": "Horizontal motion changes x; vertical motion changes y.",
+          "scoring_guidance": "2 points: 1 for each blank."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
