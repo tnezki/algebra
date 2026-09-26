@@ -299,27 +299,29 @@
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
           "family_name": "Choose Input and Output Variables from an Equation",
-          "family_purpose": "Recognize input/output roles in a rule equation.",
-          "evidence_job": "identify input and output variables from an equation",
-          "student_action": "Choose the statement that correctly names the input and output variables.",
+          "family_purpose": "Recognize input/output variable roles in a contextual rule without relying on throwaway answer choices.",
+          "evidence_job": "identify input and output variables from a contextual equation",
+          "student_action": "Choose the statement that correctly identifies the input and output variables.",
           "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
           "response_mode": "selected response",
-          "representation_mode": "equation -> role choices",
+          "representation_mode": "context + equation -> variable-role choices",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
-              "type": "ordered pair -> evidence for Use input/output language and ordered pairs."
+              "type": "contextual equation -> input/output variable roles"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
           "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
           "variation_axes": [
-            "change values while preserving the same evidence job",
-            "vary signs/ordering when mathematically useful"
+            "vary the equation variables and context",
+            "vary coefficient and constant",
+            "vary answer-choice order"
           ],
           "forbidden_variations": [
+            "using both-variables-are-input/output throwaway distractors",
             "changing the evidence job",
-            "cosmetic name/number changes that alter no meaningful parameter"
+            "using coefficients/constants as the only obvious nonsense choices"
           ],
           "allowed_destinations": [
             "Practice"
@@ -329,30 +331,36 @@
             "Practice Builder",
             "Review"
           ],
-          "best_use": "Focus on the first-coordinate role in an ordered pair.",
+          "best_use": "Selected-response check of input/output variable roles with plausible misconception distractors.",
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
-          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "fresh_instance_rule": "Use a contextual equation with one input variable and one output variable. Include four plausible choices: correct roles, reversed roles, and two coefficient/constant-versus-variable misconceptions.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 2,
+          "family_revision": 3,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "The equation {equation} gives {output_quantity} from {input_quantity}. Which statement correctly identifies the input and output variables?",
+            "prompt_template": "The equation {equation} models {output_quantity} from {input_quantity}. Which statement correctly identifies the input and output?",
             "parameters": {
-              "equation": "linear rule",
-              "input_quantity": "meaning of input variable",
-              "output_quantity": "meaning of output variable"
+              "equation": "linear rule with named input and output variables",
+              "input_quantity": "context meaning of the input variable",
+              "output_quantity": "context meaning of the output variable",
+              "input_variable": "input variable",
+              "output_variable": "output variable",
+              "coefficient": "visible coefficient",
+              "constant": "visible constant"
             },
             "constraints": [
               "four choices",
-              "exactly one correct input/output assignment"
+              "exactly one correct variable-role assignment",
+              "one distractor reverses the variables",
+              "remaining distractors use coefficient/constant confusion rather than throwaway both-input/both-output claims"
             ],
-            "answer_rule": "Select input = independent variable and output = isolated variable.",
+            "answer_rule": "Input = independent/context-input variable; output = dependent/isolated variable.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>The equation \\(d=12h+3\\) gives distance \\(d\\) from hours \\(h\\). Which statement is correct?</p><ol class=\"choices\"><li>Input: \\(h\\); output: \\(d\\)</li><li>Input: \\(d\\); output: \\(h\\)</li><li>Both variables are inputs.</li><li>Both variables are outputs.</li></ol>",
-            "answer": "A. Input h; output d.",
-            "solution": "Distance d is determined from hours h.",
+            "student_html": "<p>The equation \\(C=5t+7\\) models cost \\(C\\) from time \\(t\\). Which statement is correct?</p><ol class=\"choices\"><li>Input: \\(t\\); output: \\(C\\)</li><li>Input: \\(C\\); output: \\(t\\)</li><li>Input: \\(5\\); output: \\(7\\)</li><li>Input: \\(7\\); output: \\(5\\)</li></ol>",
+            "answer": "A. Input t; output C.",
+            "solution": "Time t is supplied to the rule, and the rule produces cost C.",
             "scoring_guidance": "1 point: selects A."
           },
           "bank_item_id": "ALG1-U1-Q137",
@@ -368,29 +376,31 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Identify Input and Output Axes on a Graph",
-          "family_purpose": "Connect input/output language to the coordinate axes on an input-output graph.",
-          "evidence_job": "identify which graph axis represents input and output",
-          "student_action": "Use the graph labels to state the input axis and output axis.",
+          "family_name": "Identify Input and Output Quantities on a Context Graph",
+          "family_purpose": "Connect contextual graph axes to input/output roles without labeling the axes with the answer words.",
+          "evidence_job": "identify the input and output quantities represented on a context graph",
+          "student_action": "Use the contextual axis labels to name the input quantity and output quantity.",
           "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
           "response_mode": "short constructed response",
-          "representation_mode": "graph -> input/output axes",
+          "representation_mode": "context graph -> input/output quantities",
           "representation_need": "required; graph axes carry the evidence",
           "representation_routes": [
             {
-              "type": "input-output graph -> axis roles",
-              "asset": "figures/u1_mg01_ic03_direct_reverse.png"
+              "type": "context graph -> input/output quantities",
+              "asset": "figures/u1_mg04_ic01_students_buses.png",
+              "tool": "memories/Tools/graph_tool.py"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
           "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
           "variation_axes": [
-            "change values while preserving the same evidence job",
-            "vary signs/ordering when mathematically useful"
+            "vary the contextual quantities and units",
+            "vary the numerical scale while preserving horizontal-input/vertical-output structure"
           ],
           "forbidden_variations": [
-            "changing the evidence job",
-            "cosmetic name/number changes that alter no meaningful parameter"
+            "labeling an axis Input or Output",
+            "asking students to repeat an answer word printed on the graph",
+            "changing the evidence job"
           ],
           "allowed_destinations": [
             "Practice"
@@ -400,29 +410,30 @@
             "Practice Builder",
             "Review"
           ],
-          "best_use": "Create more than one pair from a compact input/output table.",
+          "best_use": "Connect real graph quantities to input/output language.",
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
-          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "fresh_instance_rule": "Use a graph whose axes are labeled with contextual quantities, never the literal words Input or Output. Ask students to identify which quantity is input and which is output.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 2,
+          "family_revision": 3,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use the graph. Which axis shows the input and which axis shows the output?",
+            "prompt_template": "Use the graph. What is the input quantity? What is the output quantity?",
             "parameters": {
-              "graph": "input-output graph with readable axis labels"
+              "graph": "context graph with meaningful horizontal and vertical quantity labels"
             },
             "constraints": [
-              "input is on the horizontal axis",
-              "output is on the vertical axis"
+              "horizontal axis is a contextual input quantity",
+              "vertical axis is a contextual output quantity",
+              "axis labels may not be Input or Output"
             ],
-            "answer_rule": "Input = x/horizontal axis; output = y/vertical axis.",
+            "answer_rule": "Input = horizontal-axis quantity; output = vertical-axis quantity.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use the graph. Which axis shows the input and which axis shows the output?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_direct_reverse.png\" alt=\"Input-output line graph\"><div class=\"response-surface\">Input axis: _____ &nbsp; Output axis: _____</div>",
-            "answer": "Input = x-axis; output = y-axis.",
-            "solution": "Input is read horizontally; output is read vertically.",
-            "scoring_guidance": "2 points: both axes identified."
+            "student_html": "<p>Use the graph. What is the input quantity? What is the output quantity?</p><img class=\"graph\" src=\"figures/u1_mg04_ic01_students_buses.png\" alt=\"Graph with Students on the horizontal axis and Number of Buses on the vertical axis\"><div class=\"response-surface\">Input quantity: _____ &nbsp; Output quantity: _____</div>",
+            "answer": "Input = students; output = number of buses.",
+            "solution": "Students are shown on the horizontal axis, so students are the input. Number of buses is on the vertical axis, so it is the output.",
+            "scoring_guidance": "2 points: 1 for students as input; 1 for number of buses as output."
           },
           "bank_item_id": "ALG1-U1-Q138",
           "teacher_question_id": "Q138"
@@ -437,29 +448,31 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Write a Graph Input-Output Pair",
-          "family_purpose": "Connect a graph reading to ordered-pair input/output notation.",
-          "evidence_job": "write a graph reading as an input-output ordered pair",
-          "student_action": "Read a stated graph input/output relationship and write the ordered pair.",
+          "family_name": "Read an Input-Output Pair from a Context Graph",
+          "family_purpose": "Read a contextual graph and record the relationship as an ordered pair.",
+          "evidence_job": "read a graph output for a given contextual input and write the input-output ordered pair",
+          "student_action": "Use the graph to find the output and write the ordered pair with input first.",
           "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
           "response_mode": "short constructed response",
-          "representation_mode": "graph -> ordered pair",
+          "representation_mode": "context graph -> ordered pair",
           "representation_need": "required; graph carries the input/output relationship",
           "representation_routes": [
             {
-              "type": "graph reading -> ordered pair",
-              "asset": "figures/u1_mg01_scale_a.png"
+              "type": "context graph reading -> ordered pair",
+              "asset": "figures/u1_mg04_ic01_students_buses.png",
+              "tool": "memories/Tools/graph_tool.py"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
           "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
           "variation_axes": [
-            "change values while preserving the same evidence job",
-            "vary signs/ordering when mathematically useful"
+            "vary the requested visible input",
+            "vary the contextual graph and scale"
           ],
           "forbidden_variations": [
-            "changing the evidence job",
-            "cosmetic name/number changes that alter no meaningful parameter"
+            "stating both the input and output in the prompt",
+            "using a graph that is decorative rather than necessary",
+            "changing the evidence job"
           ],
           "allowed_destinations": [
             "Practice"
@@ -469,29 +482,33 @@
             "Practice Builder",
             "Review"
           ],
-          "best_use": "Diagnose an interpretation that swaps the meaning of the coordinates.",
+          "best_use": "Require students to actually read a context graph before writing an input-output ordered pair.",
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
-          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "fresh_instance_rule": "Give one contextual input that appears on a readable graph. Do not state the output in the prompt; the student must read it from the graph and write (input, output).",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 2,
+          "family_revision": 3,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use the graph. When the input is {input}, the output is {output}. Write this as an ordered pair and identify which number is the input.",
+            "prompt_template": "Use the graph. Write the ordered pair that represents {input_value} {input_units}.",
             "parameters": {
-              "input": "visible graph input",
-              "output": "corresponding graph output"
+              "input_value": "visible horizontal-axis value",
+              "input_units": "context units/name",
+              "output_value": "corresponding graph output"
             },
             "constraints": [
-              "graph values must be readable"
+              "prompt states the input only",
+              "graph determines the output",
+              "contextual axis labels are visible",
+              "ordered pair uses input first"
             ],
-            "answer_rule": "Ordered pair = (input, output); first coordinate is input.",
+            "answer_rule": "Read the output at the stated input and write (input, output).",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use the graph. When the input is 4, the output is 70. Write this as an ordered pair and identify which number is the input.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Scaled input-output graph\"><div class=\"response-surface\">Ordered pair + input:</div>",
-            "answer": "(4,70); the input is 4.",
-            "solution": "Input comes first in an input-output ordered pair.",
-            "scoring_guidance": "2 points: correct pair and identifies 4 as input."
+            "student_html": "<p>Use the graph. Write the ordered pair that represents 60 students.</p><img class=\"graph\" src=\"figures/u1_mg04_ic01_students_buses.png\" alt=\"Graph with Students on the horizontal axis and Number of Buses on the vertical axis\"><div class=\"response-surface\">Ordered pair: _____</div>",
+            "answer": "(60, 3)",
+            "solution": "At 60 students, the graph shows 3 buses. Input comes first, so the ordered pair is (60,3).",
+            "scoring_guidance": "1 point: (60,3)."
           },
           "bank_item_id": "ALG1-U1-Q139",
           "teacher_question_id": "Q139"
@@ -1965,29 +1982,31 @@
           "i_can_id": "U1-MG04-IC04",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use a rule to build or extend a table.",
-          "family_name": "Add a Third Consecutive Row",
-          "family_purpose": "Extend a two-row table to a third row while keeping inputs one unit apart.",
-          "evidence_job": "extend a rule table with one consecutive row",
-          "student_action": "Use the rule and two consecutive rows to add the next row.",
+          "family_name": "Fill a Missing Interior Table Row",
+          "family_purpose": "Use a rule to insert the one missing input-output row inside an existing table.",
+          "evidence_job": "fill an interior row missing between two displayed input values",
+          "student_action": "Identify the missing input between two displayed inputs and use the rule to find its output.",
           "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "response_mode": "constructed response",
-          "representation_mode": "rule + consecutive-row table",
+          "representation_mode": "rule + table with an interior gap",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
-              "type": "rule + two consecutive rows -> third consecutive row"
+              "type": "rule + table with one missing interior integer input -> missing row"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
           "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
           "variation_axes": [
-            "vary linear rule",
-            "vary starting consecutive inputs",
-            "include increasing or decreasing outputs"
+            "vary the linear rule",
+            "vary where the one-unit interior gap occurs",
+            "include increasing or decreasing outputs",
+            "include nonconsecutive rows elsewhere in the table"
           ],
           "forbidden_variations": [
-            "nonconsecutive starting inputs",
-            "adding more than one requested row",
+            "only continuing the table at the end",
+            "showing the missing output in advance",
+            "having more than one integer input between the bounding rows",
             "changing the evidence job"
           ],
           "allowed_destinations": [
@@ -2001,30 +2020,34 @@
             "Checkpoint",
             "Review"
           ],
-          "best_use": "Bridge rule evaluation and a three-row table with Δx=1, supporting later rate-of-change work.",
-          "avoid_uses": "Avoid if inputs do not increase by exactly 1.",
-          "fresh_instance_rule": "Give a linear rule and two consecutive input-output rows; ask for the third row so the three inputs differ by 1.",
+          "best_use": "Practice inserting a missing row inside a rule table; this also prepares students to notice changes across adjacent inputs later.",
+          "avoid_uses": "Avoid a simple next-row continuation; the target row must sit between two displayed inputs.",
+          "fresh_instance_rule": "Give a linear rule and a table with at least four known rows. Include two displayed rows whose inputs differ by 2, leaving exactly one interior integer input unlisted. Ask for the missing row between them.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use {rule}. Add the next row so the table has three consecutive inputs.",
+            "prompt_template": "Use {rule}. Add the missing row between inputs {left_input} and {right_input}.",
             "parameters": {
               "rule": "simple linear rule",
-              "table": "two correct rows whose inputs differ by 1"
+              "left_input": "displayed integer input",
+              "right_input": "displayed integer input exactly 2 greater than left_input",
+              "table": "at least four correct known rows with the interior row omitted"
             },
             "constraints": [
-              "the third input continues by +1",
-              "table ends with exactly three rows"
+              "right_input - left_input = 2",
+              "exactly one integer input is missing between the bounding inputs",
+              "at least four known rows are shown",
+              "target row is inside the table rather than after the final row"
             ],
-            "answer_rule": "Evaluate the rule at the next consecutive input.",
+            "answer_rule": "Missing input = left_input + 1; evaluate the rule at that input to obtain the missing output.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use \\(y=3x-1\\). Add the next row so the table has three consecutive inputs.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>8</td></tr></table><div class=\"response-surface\">Next row:</div>",
-            "answer": "(4,11)",
-            "solution": "The next input is 4, and 3(4)-1=11.",
-            "scoring_guidance": "1 point: (4,11)."
+            "student_html": "<p>Use \\(y=4x+5\\). Add the missing row between inputs 2 and 4.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-2</td><td>-3</td></tr><tr><td>1</td><td>9</td></tr><tr><td>2</td><td>13</td></tr><tr><td>4</td><td>21</td></tr></table><div class=\"response-surface\">Missing row: _____</div>",
+            "answer": "(3, 17)",
+            "solution": "The missing input between 2 and 4 is 3. Then y=4(3)+5=17, so the missing row is (3,17).",
+            "scoring_guidance": "2 points: 1 for input 3; 1 for output 17."
           },
           "bank_item_id": "ALG1-U1-Q161",
           "teacher_question_id": "Q161"
