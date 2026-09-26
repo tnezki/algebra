@@ -6,7 +6,7 @@
   "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
   "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
   "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-  "revision_count": 48,
+  "revision_count": 52,
   "revisions": [
     {
       "family_id": "U1-MG01-IC01-C",
@@ -2051,6 +2051,147 @@
           "answer": "12 L/min",
           "solution": "(78-42)/(5-2)=36/3=12 L/min.",
           "scoring_guidance": "1 point: 12 L/min."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC01-A",
+      "teacher_question_id": "Q037",
+      "revision": 2,
+      "reason": "Teacher requested a larger table and inclusion of a negative output value.",
+      "override": {
+        "family_name": "Table Row to Ordered Pair",
+        "family_purpose": "Directly connect a larger input/output table to ordered-pair notation.",
+        "evidence_job": "use input/output language and ordered pairs",
+        "student_action": "Find a specified input in a multirow table and write its row as (input, output).",
+        "template_contract": {
+          "prompt_template": "Use the table. Write the ordered pair for the row with input {input}.",
+          "parameters": {
+            "table": "4-row input/output table including at least one negative output",
+            "input": "one displayed input"
+          },
+          "constraints": [
+            "at least four data rows",
+            "include at least one negative output",
+            "target row is unambiguous"
+          ],
+          "answer_rule": "Write the target row as (input, output).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the table. Write the ordered pair for the row with input \\(2\\).</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>-4</td><td>-2</td></tr><tr><td>-1</td><td>4</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></table><div class=\"response-surface\">Ordered pair: ______</div>",
+          "answer": "(2, 10)",
+          "solution": "The row with input 2 has output 10, so the ordered pair is (2,10).",
+          "scoring_guidance": "1 point: (2,10)."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC03-A",
+      "teacher_question_id": "Q043",
+      "revision": 2,
+      "reason": "Teacher requested a quadratic rule so this family is less like the linear forward-evaluation work in IC02.",
+      "override": {
+        "family_name": "Find an Output from a Quadratic Rule",
+        "family_purpose": "Find a corresponding output from a stated nonlinear input-output rule.",
+        "evidence_job": "find a corresponding output from a quadratic rule",
+        "student_action": "Substitute the displayed input into a quadratic rule and find the output.",
+        "representation_mode": "table + quadratic rule",
+        "template_contract": {
+          "prompt_template": "Use the rule {rule} to find the corresponding output for x={input}.",
+          "parameters": {
+            "rule": "simple quadratic rule such as y=x^2+b",
+            "input": "small integer"
+          },
+          "constraints": [
+            "quadratic rule, not linear",
+            "arithmetic remains reasonable"
+          ],
+          "answer_rule": "Substitute the input into the quadratic rule.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the rule \\(y=x^2-3\\) to complete the table.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-2</td><td>?</td></tr><tr><td>3</td><td>6</td></tr></table><div class=\"response-surface\">Corresponding output: ______</div>",
+          "answer": "1",
+          "solution": "For x=-2, y=(-2)^2-3=4-3=1.",
+          "scoring_guidance": "1 point: 1."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC03-C",
+      "teacher_question_id": "Q045",
+      "revision": 2,
+      "reason": "Teacher requested a given linear equation with students solving for the input instead of inferring a rule from a table.",
+      "override": {
+        "family_name": "Find an Input from a Linear Rule",
+        "family_purpose": "Work backward from a stated output using a given linear rule.",
+        "evidence_job": "find a corresponding input from a linear equation",
+        "student_action": "Use the given linear equation and output to determine the input.",
+        "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "linear equation -> input",
+        "template_contract": {
+          "prompt_template": "Use {rule}. What input produces an output of {output}?",
+          "parameters": {
+            "rule": "simple linear rule",
+            "output": "value that gives an integer input"
+          },
+          "constraints": [
+            "rule is supplied",
+            "solution input is reasonable integer"
+          ],
+          "answer_rule": "Solve the linear rule for the input that produces the stated output.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use \\(y=3x+4\\). What input produces an output of \\(19\\)?</p><div class=\"response-surface\">Input: ______</div>",
+          "answer": "5",
+          "solution": "Set 19=3x+4. Then 15=3x, so x=5.",
+          "scoring_guidance": "1 point: 5."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC04-C",
+      "teacher_question_id": "Q048",
+      "revision": 2,
+      "reason": "Teacher requested correction of the incorrect row only; remove the extra extension-to-input-5 task.",
+      "override": {
+        "family_name": "Repair a Rule Table",
+        "family_purpose": "Check table values against a rule and correct one incorrect row.",
+        "evidence_job": "verify and correct a rule table",
+        "student_action": "Find the one row that does not follow the rule and correct its output.",
+        "template_contract": {
+          "prompt_template": "The rule is {rule}. One row is wrong. Correct it.",
+          "parameters": {
+            "rule": "simple input-output rule",
+            "table": "3 or more rows with exactly one incorrect output"
+          },
+          "constraints": [
+            "exactly one incorrect row",
+            "do not append an additional row"
+          ],
+          "answer_rule": "Evaluate the rule at each displayed input and replace the incorrect output.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>The rule is \\(y=3x+2\\).</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>0</td><td>2</td></tr><tr><td>2</td><td>8</td></tr><tr><td>4</td><td>13</td></tr></table><p>One row is wrong. Correct it.</p><div class=\"response-surface\">Correction:</div>",
+          "answer": "For x=4, y=14.",
+          "solution": "3(4)+2=14, so the row (4,13) should be (4,14).",
+          "scoring_guidance": "1 point: corrects the row to (4,14)."
         },
         "family_revision": 2,
         "approval_status": "APPROVED",
