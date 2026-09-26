@@ -6,7 +6,7 @@
   "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
   "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
   "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-  "revision_count": 26,
+  "revision_count": 34,
   "revisions": [
     {
       "family_id": "U1-MG01-IC01-C",
@@ -284,30 +284,62 @@
     {
       "family_id": "U1-MG01-IC01-H",
       "teacher_question_id": "Q053",
-      "revision": 2,
-      "reason": "Shorten the missing-information prompt",
+      "revision": 3,
+      "reason": "Teacher requested a plotted point with students reading and naming its ordered pair.",
       "override": {
+        "family_name": "Read a Point from a Graph",
+        "family_purpose": "Read the ordered pair of a labeled point shown on a coordinate plane.",
+        "evidence_job": "read an ordered pair from a plotted point",
+        "student_action": "Write the coordinates of a labeled point as an ordered pair.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph -> symbolic ordered pair",
+        "representation_need": "required; the plotted point is the evidence source",
+        "representation_routes": [
+          {
+            "type": "plotted coordinate point -> ordered pair",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "core/direct evidence",
+        "variation_axes": [
+          "move the point across all four quadrants",
+          "include points on an axis when appropriate",
+          "vary the point label"
+        ],
+        "forbidden_variations": [
+          "showing the coordinate in the prompt",
+          "replacing the graph with a verbal movement description"
+        ],
+        "fresh_instance_rule": "Show a newly plotted labeled point on the approved coordinate plane and ask for its ordered pair; vary the coordinates while preserving graph-reading demand.",
         "template_contract": {
-          "prompt_template": "A point has {known_axis}={known_value}. What other coordinate is needed to locate it?",
+          "prompt_template": "Use the graph. What are the coordinates of point {label}? Write your answer as an ordered pair.",
           "parameters": {
-            "known_axis": [
-              "x",
-              "y"
-            ],
-            "known_value": "integer"
+            "label": "single capital letter",
+            "x": "integer from -9 to 9",
+            "y": "integer from -9 to 9"
           },
           "constraints": [
-            "ask for the missing coordinate name, not a guessed value"
+            "graph plots exactly the labeled target point",
+            "coordinate values are not printed beside the point",
+            "axes and scale remain readable"
           ],
-          "answer_rule": "If x is known, y is needed; if y is known, x is needed.",
+          "answer_rule": "Answer = (x,y) for the plotted point.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>A point has \\(y=-3\\). What other coordinate is needed to locate it?</p><div class=\"response-surface\">Needed coordinate: ______</div>",
-          "answer": "The x-coordinate.",
-          "solution": "Both coordinates are needed to locate a point."
+          "student_html": "<p>Use the graph. What are the coordinates of point P? Write your answer as an ordered pair.</p><img class=\"graph\" src=\"figures/u1_mg01_ic01_h_read_point.png\" alt=\"Coordinate plane with point P plotted in Quadrant II\"><div class=\"response-surface\">Ordered pair: __________</div>",
+          "answer": "(-3, 4)",
+          "solution": "Read x first and y second: the point is 3 units left and 4 units up, so P=(-3,4).",
+          "scoring_guidance": "1 point: (-3,4).",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic01_h_read_point.png",
+              "generator": "memories/Tools/graph_tool.py"
+            }
+          ]
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -347,19 +379,11 @@
     {
       "family_id": "U1-MG01-IC01-J",
       "teacher_question_id": "Q055",
-      "revision": 3,
-      "reason": "Replace the repeated movement-distance fill-in with a missing-coordinate fill-in tied to distance from an axis.",
+      "revision": 4,
+      "reason": "Repair the MathJax blank inside the ordered pair without changing the family task.",
       "override": {
-        "family_name": "Fill a Missing Coordinate from Axis Distance",
-        "family_purpose": "Use distance and direction from an axis to determine one missing coordinate.",
-        "evidence_job": "determine a missing coordinate from horizontal or vertical position information",
-        "student_action": "Fill in the missing coordinate using the stated distance and direction from an axis.",
-        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-        "response_mode": "short constructed response",
-        "representation_mode": "verbal position -> symbolic ordered pair",
-        "difficulty_intent": "review",
         "template_contract": {
-          "prompt_template": "T(_____, {y}) is {d} units {h_dir} of the y-axis. Fill in the missing x-coordinate.",
+          "prompt_template": "T(\\square, {y}) is {d} units {h_dir} of the y-axis. Fill in the missing x-coordinate.",
           "parameters": {
             "y": "integer -9..9",
             "d": "positive integer 1..9",
@@ -370,18 +394,19 @@
           },
           "constraints": [
             "missing coordinate is x",
-            "left gives a negative x-coordinate and right gives a positive x-coordinate"
+            "left gives a negative x-coordinate and right gives a positive x-coordinate",
+            "use a MathJax square rather than underscore characters inside math"
           ],
           "answer_rule": "x = -d for left; x = d for right.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>\\(T(____,-5)\\) is 2 units left of the y-axis. Fill in the missing x-coordinate.</p><div class=\"response-surface\">x = _____</div>",
+          "student_html": "<p>\\(T(\\square,-5)\\) is 2 units left of the y-axis. Fill in the missing x-coordinate.</p><div class=\"response-surface\">x = _____</div>",
           "answer": "-2",
           "solution": "Two units left of the y-axis means x=-2.",
           "scoring_guidance": "1 point: -2."
         },
-        "family_revision": 3,
+        "family_revision": 4,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -492,34 +517,44 @@
     {
       "family_id": "U1-MG01-IC02-H",
       "teacher_question_id": "Q060",
-      "revision": 2,
-      "reason": "Turn the open-ended directions prompt into a concise fill-in rule that explains how to choose graph axes.",
+      "revision": 3,
+      "reason": "Teacher requested a word bank for the axis-choice rule.",
       "override": {
-        "family_name": "Complete the Axis-Choice Rule",
-        "family_purpose": "State the general rule for choosing which quantity belongs on each axis.",
+        "family_name": "Complete the Axis-Choice Rule with a Word Bank",
+        "family_purpose": "Use supported vocabulary to state which quantity belongs on each axis.",
         "evidence_job": "connect input/output roles to x/y axes",
-        "student_action": "Complete the rule for choosing x- and y-axis quantities.",
-        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "student_action": "Choose words from a word bank to complete the x/y axis rule.",
         "response_mode": "short constructed response",
-        "representation_mode": "verbal rule",
+        "representation_mode": "word bank -> verbal rule",
         "difficulty_intent": "intro/review",
+        "variation_axes": [
+          "vary the order of word-bank terms",
+          "use input/output or independent/dependent vocabulary when explicitly provided"
+        ],
+        "forbidden_variations": [
+          "removing the word bank",
+          "turning the task into a context-specific axis-assignment problem"
+        ],
+        "fresh_instance_rule": "Keep a small visible word bank and two blanks that map input to x and output to y.",
         "template_contract": {
-          "prompt_template": "Complete the rule: Put the _____ quantity on the x-axis and the _____ quantity on the y-axis.",
-          "parameters": {},
+          "prompt_template": "Use the word bank to complete the rule: Put the _____ quantity on the x-axis and the _____ quantity on the y-axis. Word bank: {word_bank}.",
+          "parameters": {
+            "word_bank": "includes input, output, x-axis, y-axis in varied order"
+          },
           "constraints": [
-            "accept input/independent for the first blank",
-            "accept output/dependent for the second blank"
+            "word bank is visible",
+            "two blanks only"
           ],
-          "answer_rule": "x-axis = input/independent quantity; y-axis = output/dependent quantity.",
+          "answer_rule": "First blank = input; second blank = output.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>Complete the rule:</p><p>Put the <b>_____</b> quantity on the x-axis and the <b>_____</b> quantity on the y-axis.</p>",
-          "answer": "input (independent); output (dependent)",
-          "solution": "The input/independent quantity goes on x; the output/dependent quantity goes on y.",
-          "scoring_guidance": "2 points: 1 for each blank; accept equivalent vocabulary."
+          "student_html": "<p><b>Word bank:</b> output, x-axis, input, y-axis</p><p>Put the <b>_____</b> quantity on the x-axis and the <b>_____</b> quantity on the y-axis.</p>",
+          "answer": "input; output",
+          "solution": "The input quantity goes on the x-axis and the output quantity goes on the y-axis.",
+          "scoring_guidance": "2 points: 1 for each blank."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -527,35 +562,47 @@
     {
       "family_id": "U1-MG01-IC02-I",
       "teacher_question_id": "Q061",
-      "revision": 2,
-      "reason": "Clarify the task with a single selected-response axis-identification item",
+      "revision": 3,
+      "reason": "Replace the duplicate y-axis classification family with an application of coordinate meaning.",
       "override": {
-        "family_name": "Choose a Point on the y-Axis",
-        "family_purpose": "Apply the y-axis coordinate rule to a concrete point.",
-        "evidence_job": "identify a point with x-coordinate zero",
-        "student_action": "Select the point that lies on the y-axis.",
-        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
-        "response_mode": "selected response",
-        "representation_mode": "symbolic",
-        "difficulty_intent": "review",
+        "family_name": "Interpret the x-Coordinate",
+        "family_purpose": "Connect the first coordinate to horizontal position on the coordinate plane.",
+        "evidence_job": "interpret the x-coordinate as horizontal position",
+        "student_action": "Identify the number that gives horizontal position and explain its meaning.",
+        "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "symbolic ordered pair -> verbal axis meaning",
+        "difficulty_intent": "review/application",
+        "variation_axes": [
+          "vary the ordered pair across positive and negative x-values",
+          "vary the y-value independently",
+          "ask for left/right meaning from the x-coordinate"
+        ],
+        "forbidden_variations": [
+          "asking only which point lies on an axis",
+          "duplicating the x-axis/y-axis classification families"
+        ],
+        "fresh_instance_rule": "Give a fresh ordered pair and ask which number controls left/right position and what that number means.",
         "template_contract": {
-          "prompt_template": "Which point lies on the y-axis?",
+          "prompt_template": "A point has coordinates ({x},{y}). Which number tells how far left or right the point is located? Explain what that number tells you.",
           "parameters": {
-            "choices": "four ordered pairs; exactly one has x=0"
+            "x": "nonzero integer",
+            "y": "integer"
           },
           "constraints": [
-            "four options",
-            "exactly one correct answer"
+            "x and y are different values",
+            "response must identify x and interpret its sign/distance"
           ],
-          "answer_rule": "Choose the point whose x-coordinate is 0.",
+          "answer_rule": "The x-coordinate gives horizontal position; positive means right and negative means left, with distance |x| from the y-axis.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>Which point lies on the y-axis?</p><ol class=\"choices\"><li>\\((0,6)\\)</li><li>\\((-4,0)\\)</li><li>\\((2,3)\\)</li><li>\\((5,-1)\\)</li></ol>",
-          "answer": "A. (0,6)",
-          "solution": "A point is on the y-axis when x=0."
+          "student_html": "<p>A point has coordinates \\( (6,-2) \\). Which number tells how far left or right the point is located? Explain what that number tells you.</p><div class=\"response-surface\">Answer:</div>",
+          "answer": "6; it is the x-coordinate and means the point is 6 units to the right of the y-axis.",
+          "solution": "The first coordinate controls horizontal position.",
+          "scoring_guidance": "2 points: 1 for identifying 6/x-coordinate; 1 for the correct horizontal interpretation."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -603,28 +650,62 @@
     {
       "family_id": "U1-MG01-IC03-E",
       "teacher_question_id": "Q064",
-      "revision": 2,
-      "reason": "Shorten the estimate-then-read prompt",
+      "revision": 3,
+      "reason": "Teacher requested estimation at an input between gridlines with a reasonable accepted range.",
       "override": {
+        "family_name": "Estimate a Graph Value Between Gridlines",
+        "family_purpose": "Estimate an output that falls between labeled grid values rather than reading a perfect grid intersection.",
+        "evidence_job": "estimate an output from a scaled graph",
+        "student_action": "Read between gridlines and give a reasonable numerical estimate.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph",
+        "representation_need": "required; the plotted line and scale determine the estimate",
+        "representation_routes": [
+          {
+            "type": "scaled line graph -> estimated output",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "application/estimation",
+        "variation_axes": [
+          "vary the input between major labels",
+          "vary line slope/intercept",
+          "vary the accepted tolerance while keeping it reasonable for the display"
+        ],
+        "forbidden_variations": [
+          "placing the target exactly on a labeled horizontal gridline",
+          "requiring an exact algebraic calculation instead of graph estimation"
+        ],
+        "fresh_instance_rule": "Choose a visible input whose plotted output lies between y-gridlines and declare a narrow accepted estimate interval consistent with the graph resolution.",
         "template_contract": {
-          "prompt_template": "At {x_value}, is the value closer to {low_anchor} or {high_anchor}? Then give the exact value.",
+          "prompt_template": "Estimate the output when the input is {x_value}.",
           "parameters": {
-            "x_value": "displayed x-value",
-            "low_anchor": "lower benchmark",
-            "high_anchor": "upper benchmark"
+            "x_value": "displayed input value between or on visible x-gridlines",
+            "accepted_low": "lower accepted estimate",
+            "accepted_high": "upper accepted estimate"
           },
           "constraints": [
-            "benchmarks bracket or meaningfully compare to the graphed value"
+            "true plotted output lies between adjacent y-gridlines",
+            "accepted range reflects reasonable visual precision"
           ],
-          "answer_rule": "Choose the closer benchmark, then read the exact scaled value.",
+          "answer_rule": "Accept any numerical response from accepted_low through accepted_high inclusive.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>At 4 minutes, is the distance closer to 10 m or 100 m? Then give the exact value.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><div class=\"response-surface\">Estimate + exact:</div>",
-          "answer": "Closer to 100 m; 70 m.",
-          "solution": "Read the y-axis scale at 4 minutes."
+          "student_html": "<p>Estimate the output when the input is 4.5.</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_estimate.png\" alt=\"Input-output line graph where the output at 4.5 is between 70 and 80, closer to 80\"><div class=\"response-surface\">Estimated output: _____</div>",
+          "answer": "Accept 77-79.",
+          "solution": "At input 4.5, the line is about 77.5, so an estimate from 77 through 79 is reasonable.",
+          "scoring_guidance": "1 point: any value from 77 through 79 inclusive.",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic03_estimate.png",
+              "generator": "memories/Tools/graph_tool.py",
+              "model": "y=15x+10"
+            }
+          ]
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -663,29 +744,60 @@
     {
       "family_id": "U1-MG01-IC03-H",
       "teacher_question_id": "Q067",
-      "revision": 2,
-      "reason": "Shorten the missing-scale-information wording",
+      "revision": 3,
+      "reason": "Replace the weak missing-scale family with a repeatable reverse graph-reading family.",
       "override": {
+        "family_name": "Read an Input from an Output",
+        "family_purpose": "Read a graph in reverse by starting with an output and finding the matching input.",
+        "evidence_job": "find an input from a given output on a graph",
+        "student_action": "Locate a stated output and read the corresponding input.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "given output -> graph -> input",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "review/application",
+        "variation_axes": [
+          "vary the target output",
+          "vary graph scale and relationship",
+          "use integer or simple decimal inputs when visually readable"
+        ],
+        "forbidden_variations": [
+          "asking whether information is missing",
+          "using an output with multiple visible inputs unless multiple answers are intended"
+        ],
+        "fresh_instance_rule": "Use a fresh readable graph, supply one output, and ask for the corresponding input.",
         "template_contract": {
-          "prompt_template": "The {axis} axis has gridlines but no numbers. Can you read an exact value? What is missing?",
+          "prompt_template": "Use the graph. The output is {output}. What input produces this output?",
           "parameters": {
-            "axis": [
-              "x",
-              "y"
-            ]
+            "output": "visible y-value",
+            "input": "corresponding x-value"
           },
           "constraints": [
-            "no numerical scale is visible"
+            "the visible graph gives one unambiguous input for the stated output"
           ],
-          "answer_rule": "No; numerical labels or an interval/scale are needed.",
+          "answer_rule": "Read the x/input value at the stated y/output value.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>The y-axis has gridlines but no numbers. Can you read an exact y-value? What is missing?</p><div class=\"response-surface\">Answer:</div>",
-          "answer": "No; the numerical scale is missing.",
-          "solution": "Grid spacing alone does not tell the value of each interval."
+          "student_html": "<p>Use the graph. The output is 60. What input produces this output?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_direct_reverse.png\" alt=\"Input-output line graph\"><div class=\"response-surface\">Input: _____</div>",
+          "answer": "4",
+          "solution": "Trace from output 60 to the line, then down to the input axis: 4.",
+          "scoring_guidance": "1 point: 4.",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic03_direct_reverse.png",
+              "generator": "memories/Tools/graph_tool.py",
+              "model": "y=15x"
+            }
+          ]
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -693,26 +805,41 @@
     {
       "family_id": "U1-MG01-IC04-H",
       "teacher_question_id": "Q074",
-      "revision": 2,
-      "reason": "Shorten the intercept visibility prompt",
+      "revision": 3,
+      "reason": "Teacher requested a direct explanation of what x-intercept means.",
       "override": {
+        "family_name": "Explain the x-Intercept",
+        "family_purpose": "State the meaning of an x-intercept in a graph.",
+        "evidence_job": "explain the x-intercept definition",
+        "student_action": "Explain where the x-intercept occurs on a graph.",
+        "question_structure_id": "CONCEPT-EXPLAIN-RELATIONSHIP-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "verbal concept",
+        "difficulty_intent": "intro/review",
+        "variation_axes": [
+          "accept equivalent wording such as crossing the x-axis or y=0"
+        ],
+        "forbidden_variations": [
+          "asking whether an intercept is visible",
+          "turning the task into an intercept calculation"
+        ],
+        "fresh_instance_rule": "Ask directly for the meaning of x-intercept and accept mathematically equivalent student wording.",
         "template_contract": {
-          "prompt_template": "The line does not reach {axis_description} in the graph window. Can you read that intercept from the picture?",
-          "parameters": {
-            "axis_description": "the x-axis, the y-axis, or either axis"
-          },
+          "prompt_template": "What does the x-intercept of a graph mean?",
+          "parameters": {},
           "constraints": [
-            "the requested crossing is outside the visible window"
+            "accept equivalent wording that identifies the x-axis crossing or y=0"
           ],
-          "answer_rule": "No; the crossing must be shown or equivalent information supplied.",
+          "answer_rule": "The x-intercept is where the graph crosses the x-axis; its y-coordinate is 0.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>The line does not reach either axis in the graph window. Can you read an intercept from the picture?</p><div class=\"response-surface\">Yes / No: _____</div>",
-          "answer": "No.",
-          "solution": "An intercept cannot be read from a picture that does not show the axis crossing."
+          "student_html": "<p>What does the x-intercept of a graph mean?</p><div class=\"response-surface\">Explain:</div>",
+          "answer": "It is the point where the graph crosses the x-axis.",
+          "solution": "Every point on the x-axis has y=0, so an x-intercept has y-coordinate 0.",
+          "scoring_guidance": "1 point: equivalent correct explanation."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -885,6 +1012,429 @@
           "student_html": "<p>Rate = 12 L/min. The tank has 78 L at 5 min. How much at 8 min?</p><div class=\"response-surface\">Value: _____ L</div>",
           "answer": "114 L",
           "solution": "Three more minutes add 36 L; 78+36=114."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-C",
+      "teacher_question_id": "Q009",
+      "revision": 2,
+      "reason": "Teacher requested a concise axis-scale question rather than a wordy error-analysis prompt.",
+      "override": {
+        "family_name": "Name the Axis Scale",
+        "family_purpose": "Read the interval represented by consecutive gridlines on one axis.",
+        "evidence_job": "identify the scale of a graph axis",
+        "student_action": "State the value represented by one grid interval on the named axis.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph",
+        "representation_need": "required; axis labels/gridlines carry the evidence",
+        "representation_routes": [
+          {
+            "type": "scaled graph axis -> interval value",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "core/direct evidence",
+        "variation_axes": [
+          "ask for the x-axis or y-axis",
+          "vary axis interval and range"
+        ],
+        "forbidden_variations": [
+          "adding an unnecessary explanation requirement",
+          "asking students to count unlabeled gridlines without a visible numerical scale"
+        ],
+        "fresh_instance_rule": "Show a readable scaled graph and ask for the scale of exactly one named axis.",
+        "template_contract": {
+          "prompt_template": "Use the graph. What is the scale of the {axis}-axis?",
+          "parameters": {
+            "axis": [
+              "x",
+              "y"
+            ],
+            "scale": "difference between consecutive gridlines on the named axis"
+          },
+          "constraints": [
+            "numeric labels make the interval inferable",
+            "one axis only per instance"
+          ],
+          "answer_rule": "Scale = difference between consecutive gridline values on the named axis.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the graph. What is the scale of the y-axis?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_direct_reverse.png\" alt=\"Input-output graph with the y-axis increasing by 10 per gridline\"><div class=\"response-surface\">Scale: _____</div>",
+          "answer": "10",
+          "solution": "Consecutive horizontal gridlines represent 10 output units.",
+          "scoring_guidance": "1 point: 10.",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic03_direct_reverse.png",
+              "generator": "memories/Tools/graph_tool.py"
+            }
+          ]
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-F",
+      "teacher_question_id": "Q065",
+      "revision": 2,
+      "reason": "Replace the unclear tick-value family with direct graph reading.",
+      "override": {
+        "family_name": "Read an Output from a Graph",
+        "family_purpose": "Read an output from a scaled graph for a given input.",
+        "evidence_job": "read an output value from a graph",
+        "student_action": "Locate a given input and read the corresponding output.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "given input -> graph -> output",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "core/direct evidence",
+        "variation_axes": [
+          "vary the given input",
+          "vary graph scale and line",
+          "include values on labeled or intermediate gridlines"
+        ],
+        "forbidden_variations": [
+          "asking about axis scale instead of the graph value",
+          "requiring algebra when the graph alone provides the evidence"
+        ],
+        "fresh_instance_rule": "Use a fresh scaled graph and ask for the output at one visible input.",
+        "template_contract": {
+          "prompt_template": "Use the graph. When the input is {input}, what is the output?",
+          "parameters": {
+            "input": "visible input value",
+            "output": "corresponding graphed output"
+          },
+          "constraints": [
+            "graph alone determines the answer",
+            "axis scale is readable"
+          ],
+          "answer_rule": "Read the y-value at the stated x/input value.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the graph. When the input is 6, what is the output?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_direct_reverse.png\" alt=\"Input-output line graph\"><div class=\"response-surface\">Output: _____</div>",
+          "answer": "90",
+          "solution": "At input 6, the line is at output 90.",
+          "scoring_guidance": "1 point: 90.",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic03_direct_reverse.png",
+              "generator": "memories/Tools/graph_tool.py",
+              "model": "y=15x"
+            }
+          ]
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-I",
+      "teacher_question_id": "Q068",
+      "revision": 2,
+      "reason": "Replace the weak valid-invalid classification family with a best-estimate graph-reading check.",
+      "override": {
+        "family_name": "Choose a Reasonable Graph Estimate",
+        "family_purpose": "Select the estimate that best matches a value between gridlines on a scaled graph.",
+        "evidence_job": "judge a reasonable numerical estimate from a graph",
+        "student_action": "Choose the answer closest to the graphed output for a given input.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "graph + numerical choices",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "scaled graph -> best numerical estimate",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "review/estimation",
+        "variation_axes": [
+          "vary the target input",
+          "vary the line and scale",
+          "vary distractors to include grid-count and over/under-estimate errors"
+        ],
+        "forbidden_variations": [
+          "making more than one option equally reasonable",
+          "using only exact grid-intersection targets"
+        ],
+        "fresh_instance_rule": "Use a scaled graph with a between-gridline target and four choices with exactly one clearly best visual estimate.",
+        "template_contract": {
+          "prompt_template": "At input {input}, which is the best estimate of the output?",
+          "parameters": {
+            "input": "visible input value",
+            "choices": "four numerical estimates with exactly one closest to the graphed value"
+          },
+          "constraints": [
+            "four choices",
+            "one clearly best estimate",
+            "target output is not exactly on a labeled y-gridline"
+          ],
+          "answer_rule": "Choose the option closest to the graphed output.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>At input 3.5, which is the best estimate of the output?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_estimate.png\" alt=\"Input-output line graph\"><ol class=\"choices\"><li>45</li><li>55</li><li>63</li><li>80</li></ol>",
+          "answer": "C. 63",
+          "solution": "At input 3.5, the line is about 62.5, so 63 is the closest estimate.",
+          "scoring_guidance": "1 point: selects C.",
+          "representation_data": [
+            {
+              "asset": "figures/u1_mg01_ic03_estimate.png",
+              "generator": "memories/Tools/graph_tool.py",
+              "model": "y=15x+10"
+            }
+          ]
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC03-J",
+      "teacher_question_id": "Q069",
+      "revision": 2,
+      "reason": "Teacher requested an explain-the-error scale-reading family.",
+      "override": {
+        "family_name": "Explain a Scale-Reading Error",
+        "family_purpose": "Explain why counting grid spaces as ones gives an incorrect graph value and correct the reading.",
+        "evidence_job": "diagnose a graph-scale reading error",
+        "student_action": "Explain the scale mistake and give the correct graph value.",
+        "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+        "response_mode": "constructed response",
+        "representation_mode": "graph + worked claim",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "scaled graph + incorrect claim -> diagnosis + correction",
+            "tool": "memories/Tools/graph_tool.py"
+          }
+        ],
+        "difficulty_intent": "reasoning/misconception",
+        "variation_axes": [
+          "vary the input and wrong grid-count claim",
+          "vary axis interval",
+          "vary student name"
+        ],
+        "forbidden_variations": [
+          "asking only true/false without explanation",
+          "using a graph whose scale is 1 per gridline"
+        ],
+        "fresh_instance_rule": "Give a specific wrong reading caused by ignoring the labeled scale; require both the error explanation and corrected value.",
+        "template_contract": {
+          "prompt_template": "{student} says the output when the input is {input} is {wrong}. Explain the mistake and give the correct output.",
+          "parameters": {
+            "student": "student name",
+            "input": "visible input value",
+            "wrong": "grid-count reading",
+            "correct": "scaled graph value"
+          },
+          "constraints": [
+            "wrong value comes from treating grid spaces as 1",
+            "graph shows a non-unit scale"
+          ],
+          "answer_rule": "Explain that the axis scale was ignored and state the correct scaled value.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Jordan says the output when the input is 4 is 7.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Distance versus time graph with non-unit scale\"><p>Explain Jordan's mistake and give the correct output.</p><div class=\"response-surface\">Explain:</div>",
+          "answer": "Jordan treated each gridline as 1 instead of reading the y-axis scale. The correct output is 70.",
+          "solution": "The y-axis scale represents tens, so the graph value is 70, not 7.",
+          "scoring_guidance": "2 points: 1 for identifying the scale error; 1 for 70."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC04-C",
+      "teacher_question_id": "Q012",
+      "revision": 2,
+      "reason": "Teacher requested a concise misconception prompt using (6,0) mislabeled as a y-intercept.",
+      "override": {
+        "family_name": "Explain an Intercept Label Error",
+        "family_purpose": "Distinguish x- from y-intercepts using the zero coordinate.",
+        "evidence_job": "diagnose an x-intercept/y-intercept labeling error",
+        "student_action": "Explain why the named intercept is wrong and relabel it correctly.",
+        "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+        "response_mode": "constructed response",
+        "representation_mode": "worked claim -> correction",
+        "difficulty_intent": "reasoning/misconception",
+        "variation_axes": [
+          "vary the nonzero coordinate",
+          "reverse the misconception to a point of the form (0,b)",
+          "vary student name"
+        ],
+        "forbidden_variations": [
+          "generic find-the-mistake wording without a specific intercept claim",
+          "requiring a full graph when the zero coordinate is the evidence"
+        ],
+        "fresh_instance_rule": "Give one concrete intercept-label claim and require the student to name the mistake and correct the intercept type.",
+        "template_contract": {
+          "prompt_template": "{student} says ({a},0) is the y-intercept. Describe the mistake and write it correctly.",
+          "parameters": {
+            "student": "student name",
+            "a": "nonzero number"
+          },
+          "constraints": [
+            "point is of the form (a,0)",
+            "response must identify x-intercept"
+          ],
+          "answer_rule": "Because y=0, (a,0) is an x-intercept, not a y-intercept.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Susie says \\( (6,0) \\) is the y-intercept. Describe her mistake and write it correctly.</p><div class=\"response-surface\">Explain and correct:</div>",
+          "answer": "(6,0) is the x-intercept, not the y-intercept, because its y-coordinate is 0.",
+          "solution": "x-intercepts lie on the x-axis, so their y-coordinate is 0.",
+          "scoring_guidance": "2 points: 1 for identifying the mistake; 1 for x-intercept."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC04-F",
+      "teacher_question_id": "Q072",
+      "revision": 2,
+      "reason": "Teacher requested a direct explanation of what y-intercept means.",
+      "override": {
+        "family_name": "Explain the y-Intercept",
+        "family_purpose": "State the meaning of a y-intercept in a graph.",
+        "evidence_job": "explain the y-intercept definition",
+        "student_action": "Explain where the y-intercept occurs on a graph.",
+        "question_structure_id": "CONCEPT-EXPLAIN-RELATIONSHIP-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "verbal concept",
+        "difficulty_intent": "intro/review",
+        "variation_axes": [
+          "ask for equivalent wording such as crossing the y-axis or x=0"
+        ],
+        "forbidden_variations": [
+          "requiring contextual rate interpretation",
+          "turning the task into an intercept calculation"
+        ],
+        "fresh_instance_rule": "Ask directly for the meaning of y-intercept and accept mathematically equivalent student wording.",
+        "template_contract": {
+          "prompt_template": "What does the y-intercept of a graph mean?",
+          "parameters": {},
+          "constraints": [
+            "accept equivalent wording that identifies the y-axis crossing or x=0"
+          ],
+          "answer_rule": "The y-intercept is where the graph crosses the y-axis; its x-coordinate is 0.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>What does the y-intercept of a graph mean?</p><div class=\"response-surface\">Explain:</div>",
+          "answer": "It is the point where the graph crosses the y-axis.",
+          "solution": "Every point on the y-axis has x=0, so a y-intercept has x-coordinate 0.",
+          "scoring_guidance": "1 point: equivalent correct explanation."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC04-G",
+      "teacher_question_id": "Q073",
+      "revision": 2,
+      "reason": "Teacher requested a multiple-choice version of the y-intercept meaning family.",
+      "override": {
+        "family_name": "Choose the Meaning of y-Intercept",
+        "family_purpose": "Recognize the definition of a y-intercept from plausible alternatives.",
+        "evidence_job": "identify the correct meaning of y-intercept",
+        "student_action": "Select the statement that correctly describes a y-intercept.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "verbal choices",
+        "difficulty_intent": "review",
+        "variation_axes": [
+          "vary distractor order",
+          "vary distractors among common axis/intercept misconceptions"
+        ],
+        "forbidden_variations": [
+          "more than one correct description",
+          "asking for a numerical intercept value"
+        ],
+        "fresh_instance_rule": "Use four concise choices with exactly one describing the y-axis crossing.",
+        "template_contract": {
+          "prompt_template": "What does the y-intercept of a graph represent?",
+          "parameters": {
+            "choices": "four definition statements"
+          },
+          "constraints": [
+            "four choices",
+            "exactly one says the graph crosses the y-axis"
+          ],
+          "answer_rule": "Choose the statement that the graph crosses the y-axis.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>What does the y-intercept of a graph represent?</p><ol class=\"choices\"><li>Where the graph crosses the x-axis</li><li>Where the graph crosses the y-axis</li><li>The greatest point on the graph</li><li>The point where x=y</li></ol>",
+          "answer": "B. Where the graph crosses the y-axis",
+          "solution": "A y-intercept is a crossing of the y-axis.",
+          "scoring_guidance": "1 point: selects B."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG01-IC04-J",
+      "teacher_question_id": "Q076",
+      "revision": 2,
+      "reason": "Teacher requested a fill-in-the-blank x-intercept definition.",
+      "override": {
+        "family_name": "Complete the x-Intercept Definition",
+        "family_purpose": "Recall the axis associated with an x-intercept.",
+        "evidence_job": "complete the definition of x-intercept",
+        "student_action": "Fill in the axis name that completes the x-intercept definition.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "verbal fill-in",
+        "difficulty_intent": "review",
+        "variation_axes": [
+          "vary sentence framing while keeping one axis-name blank"
+        ],
+        "forbidden_variations": [
+          "asking for a numerical intercept",
+          "turning the task into selected response"
+        ],
+        "fresh_instance_rule": "Use one concise blank whose answer is x-axis.",
+        "template_contract": {
+          "prompt_template": "The x-intercept is the point where a graph crosses the _____.",
+          "parameters": {},
+          "constraints": [
+            "single vocabulary blank"
+          ],
+          "answer_rule": "x-axis",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>The x-intercept is the point where a graph crosses the <b>_____</b>.</p>",
+          "answer": "x-axis",
+          "solution": "By definition, the x-intercept is where the graph crosses the x-axis.",
+          "scoring_guidance": "1 point: x-axis."
         },
         "family_revision": 2,
         "approval_status": "APPROVED",
