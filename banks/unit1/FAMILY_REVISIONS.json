@@ -6,7 +6,7 @@
   "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
   "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
   "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-  "revision_count": 52,
+  "revision_count": 54,
   "revisions": [
     {
       "family_id": "U1-MG01-IC01-C",
@@ -2060,34 +2060,36 @@
     {
       "family_id": "U1-MG04-IC01-A",
       "teacher_question_id": "Q037",
-      "revision": 2,
-      "reason": "Teacher requested a larger table and inclusion of a negative output value.",
+      "revision": 3,
+      "reason": "Prevent visual number-matching shortcuts: the requested input also appears as an output in a different row, while preserving a larger table and a negative output.",
       "override": {
         "family_name": "Table Row to Ordered Pair",
-        "family_purpose": "Directly connect a larger input/output table to ordered-pair notation.",
+        "family_purpose": "Directly connect a larger input/output table to ordered-pair notation without allowing a unique-number lookup shortcut.",
         "evidence_job": "use input/output language and ordered pairs",
-        "student_action": "Find a specified input in a multirow table and write its row as (input, output).",
+        "student_action": "Find a specified input in a multirow table and write its row as (input, output), even when that input value also appears elsewhere as an output.",
         "template_contract": {
           "prompt_template": "Use the table. Write the ordered pair for the row with input {input}.",
           "parameters": {
-            "table": "4-row input/output table including at least one negative output",
-            "input": "one displayed input"
+            "table": "at least 5-row input/output table including at least one negative output",
+            "input": "one displayed input that also appears as an output in a different row"
           },
           "constraints": [
-            "at least four data rows",
+            "at least five data rows",
             "include at least one negative output",
-            "target row is unambiguous"
+            "the requested input value must also appear in the output column of a different row",
+            "target input appears exactly once in the input column",
+            "target row is unambiguous only by using the Input column, not by scanning for the number"
           ],
           "answer_rule": "Write the target row as (input, output).",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>Use the table. Write the ordered pair for the row with input \\(2\\).</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>-4</td><td>-2</td></tr><tr><td>-1</td><td>4</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>16</td></tr></table><div class=\"response-surface\">Ordered pair: ______</div>",
+          "student_html": "<p>Use the table. Write the ordered pair for the row with input \\(2\\).</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>-4</td><td>-2</td></tr><tr><td>-1</td><td>4</td></tr><tr><td>2</td><td>10</td></tr><tr><td>5</td><td>2</td></tr><tr><td>8</td><td>16</td></tr></table><div class=\"response-surface\">Ordered pair: ______</div>",
           "answer": "(2, 10)",
-          "solution": "The row with input 2 has output 10, so the ordered pair is (2,10).",
+          "solution": "The value 2 appears in both columns, so use the Input column. The row with input 2 has output 10, giving (2,10).",
           "scoring_guidance": "1 point: (2,10)."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -2195,6 +2197,79 @@
         },
         "family_revision": 2,
         "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC01-D",
+      "teacher_question_id": "Q133",
+      "revision": 3,
+      "reason": "Prevent visual number-matching shortcuts in the selected-response table lookup: the requested input must also appear as an output in another row.",
+      "override": {
+        "family_name": "Choose the Ordered Pair from a Larger Table",
+        "family_purpose": "Recognize (input, output) order from a larger table without relying on a uniquely occurring target number.",
+        "evidence_job": "identify the ordered pair for a specified input row",
+        "student_action": "Use the Input column to locate the target row, then choose the matching ordered pair.",
+        "template_contract": {
+          "prompt_template": "Use the table. Which ordered pair matches input {input}?",
+          "parameters": {
+            "table": "at least 5-row input/output table",
+            "input": "one displayed input that also appears as an output in a different row"
+          },
+          "constraints": [
+            "at least five data rows",
+            "four answer choices",
+            "one correct pair",
+            "the requested input value must also appear in the output column of a different row",
+            "target input appears exactly once in the input column",
+            "include a reversed-coordinate distractor"
+          ],
+          "answer_rule": "Locate the target in the Input column and write/select (input, output).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the table. Which ordered pair matches input 3?</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>-2</td><td>8</td></tr><tr><td>0</td><td>3</td></tr><tr><td>3</td><td>-2</td></tr><tr><td>5</td><td>-6</td></tr><tr><td>7</td><td>4</td></tr></table><ol class=\"choices\"><li>\\((3,-2)\\)</li><li>\\((-2,3)\\)</li><li>\\((3,2)\\)</li><li>\\((0,3)\\)</li></ol>",
+          "answer": "A. (3,-2)",
+          "solution": "The value 3 appears in both columns. Use the Input column: input 3 is paired with output -2.",
+          "scoring_guidance": "1 point: selects A."
+        },
+        "family_revision": 3,
+        "approval_status": "DRAFT_REVIEW",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG04-IC01-F",
+      "teacher_question_id": "Q135",
+      "revision": 3,
+      "reason": "Honor the teacher-directed reversal of givens so students must translate output-first language into (input, output) order rather than copy the sentence order.",
+      "override": {
+        "family_name": "Write an Ordered Pair from an Output-First Sentence",
+        "family_purpose": "Translate a complete input/output sentence into ordered-pair notation when the output is stated before the input.",
+        "evidence_job": "write an ordered pair from output-first input/output language",
+        "student_action": "Reorder the stated values into (input, output) notation.",
+        "template_contract": {
+          "prompt_template": "An output of {output} is produced when {input} is used as the input. Write this information as an ordered pair.",
+          "parameters": {
+            "output": "numeric output stated first",
+            "input": "numeric input stated second"
+          },
+          "constraints": [
+            "state the output before the input",
+            "do not present the two givens in ordered-pair order",
+            "single ordered-pair response"
+          ],
+          "answer_rule": "Ordered pair = (input, output).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>An output of 5 is produced when 3 is used as the input. Write this information as an ordered pair.</p><div class=\"response-surface\">Ordered pair: ______</div>",
+          "answer": "(3,5)",
+          "solution": "Ordered pairs list the input first and the output second, even though the sentence gives the output first.",
+          "scoring_guidance": "1 point: (3,5)."
+        },
+        "family_revision": 3,
+        "approval_status": "DRAFT_REVIEW",
         "superseded_by": null
       }
     }
