@@ -3,37 +3,33 @@ ALGEBRA 1 UNIT 1 BANK EXPANSION / REVISION REPORT
 
 Scope
 -----
-- Revised the teacher-selected U1-MG02 families in IC01-IC04.
-- Removed misleading Intro / Review / Mastery badges from the shared Mastery-Goal Bank viewer.
-- Expanded U1-MG03 and U1-MG04 from 3 to 10 families per I Can (A-J).
-- New MG03/MG04 D-J families are DRAFT_REVIEW so the teacher can inspect them before downstream use.
-- Existing stable Q001-Q104 identifiers remain fixed; new review families append as Q105-Q160.
-- Unit 1 now exposes 160 total family records: 104 prior families + 56 teacher-review expansion families.
+- Preserves the current teacher-approved MG01/MG02 revisions and removal of family-level Intro / Review / Mastery viewer badges.
+- Preserves the MG03 D-J teacher-review expansion.
+- Applies the teacher's second review pass to U1-MG04.
+- Expands U1-MG04-IC04 to Family K, so Unit 1 now exposes 161 total family records.
+- Q001-Q160 remain stable; the new IC04-K family appends as Q161.
 
-MG02 revision highlights
-------------------------
-- Graph slope: simpler sign-error reasoning, visual slope estimation, and marked-point slope reading.
-- Table slope: simpler two-row work, direct two-point slope, direct rate calculation, and actual constant-rate tables.
-- Equation slope: intercept-first forms and a rise/run progression from fraction -> multiple choice -> equation -> fill-in -> integer slopes.
-- Context rate: meaningful rate choices, rate cue words (per/each/every), and direct rate finding.
-
-Stage-label cleanup
--------------------
-The Bank viewer no longer displays Intro / Review / Mastery badges on individual families. Those labels belong to the Algebra curriculum spiral, not to individual Bank-family difficulty. Family cards retain the Family label, evidence role, response mode, representation, routing, and approval status.
+MG04 teacher revisions
+----------------------
+- IC01: larger tables with negative outputs; clearer sentence-based input/output notation; equation-based input/output identification; two graph connections.
+- IC02: retained as reviewed.
+- IC03: quadratic forward evaluation, supplied-equation inverse work, cleaner corresponding-output wording, ordered-pair inverse form, and a simple linear story output.
+- IC04: repair-only table correction, two-row extension, rule-matching ordered pair, decreasing-rule constraint y=b-mx, and a new consecutive-row family K.
 
 Teacher-review gate
 -------------------
-MG03/MG04 D-J families have approval_status=DRAFT_REVIEW. BANK_RESOLUTION.json permits runtime use only for APPROVED, non-superseded families, so these additions are visible in the Bank pages but cannot be selected by downstream builders until explicitly approved.
+MG03 D-J and MG04 D-K remain approval_status=DRAFT_REVIEW. They are visible in the Bank pages but remain unavailable to downstream runtime builders until the teacher explicitly approves them. Existing base A-C families remain APPROVED; teacher-directed revisions to those base families resolve through FAMILY_REVISIONS.json.
 
 Stable IDs
 ----------
-- Q001-Q104 remain stable.
+- Q001-Q104: existing stable families.
 - Q105-Q132: U1-MG03 D-J expansion.
 - Q133-Q160: U1-MG04 D-J expansion.
+- Q161: U1-MG04-IC04-K.
 
 Source / QA
 -----------
 - Closed project sources only.
 - Pinned memories commit: 67c283d30f84594c43910cf851aeb7cec1352202
-- Pinned algebra commit: 76cab3018673cd416e01df6923e537f5b040ce35
+- Pinned algebra commit: 860fe5d0d50b51e8d6d8aa6f6eb48cc38ab00297
 - Question Structure authority: current canonical Core + Universal Question Structure Library v2.

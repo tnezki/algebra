@@ -7,7 +7,7 @@
     "exact_text": "Use an input-output rule to find values, ordered pairs, and patterns."
   },
   "status": "DRAFT_REVIEW",
-  "review_note": "Families D-J are newly expanded for teacher review and are not eligible for downstream runtime use until approved.",
+  "review_note": "Families D-K are expanded for teacher review. Teacher-requested MG04 revisions are applied; they remain DRAFT_REVIEW until final teacher approval for downstream use.",
   "i_cans": [
     {
       "i_can_id": "U1-MG04-IC01",
@@ -25,10 +25,10 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Choose the Ordered Pair from a Table Row",
-          "family_purpose": "Recognize (input, output) order from a visible table row.",
-          "evidence_job": "identify the ordered pair for a table row",
-          "student_action": "Select the pair that lists input first and output second.",
+          "family_name": "Choose the Ordered Pair from a Larger Table",
+          "family_purpose": "Recognize (input, output) order from a larger visible table.",
+          "evidence_job": "identify the ordered pair for a specified row",
+          "student_action": "Select the pair that matches a target input and its output.",
           "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
           "response_mode": "selected response",
           "representation_mode": "table -> ordered-pair choices",
@@ -60,25 +60,27 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
             "prompt_template": "Use the table. Which ordered pair matches input {input}?",
             "parameters": {
-              "table": "input/output table",
+              "table": "4-row input/output table including a negative output",
               "input": "one displayed input"
             },
             "constraints": [
+              "at least four data rows",
+              "include at least one negative output",
               "four choices",
               "one correct pair"
             ],
-            "answer_rule": "Write (input, output).",
+            "answer_rule": "Write (input, output) for the specified row.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use the table. Which ordered pair matches input 3?</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>3</td><td>11</td></tr><tr><td>5</td><td>17</td></tr></table><ol class=\"choices\"><li>\\((3,11)\\)</li><li>\\((11,3)\\)</li><li>\\((3,5)\\)</li><li>\\((5,17)\\)</li></ol>",
-            "answer": "A. (3,11)",
-            "solution": "Ordered pairs use (input, output).",
+            "student_html": "<p>Use the table. Which ordered pair matches input 3?</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>-2</td><td>8</td></tr><tr><td>0</td><td>4</td></tr><tr><td>3</td><td>-2</td></tr><tr><td>5</td><td>-6</td></tr></table><ol class=\"choices\"><li>\\((3,-2)\\)</li><li>\\((-2,3)\\)</li><li>\\((3,2)\\)</li><li>\\((5,-6)\\)</li></ol>",
+            "answer": "A. (3,-2)",
+            "solution": "The row with input 3 has output -2, and ordered pairs are written (input, output).",
             "scoring_guidance": "1 point: selects A."
           },
           "bank_item_id": "ALG1-U1-Q133",
@@ -161,10 +163,10 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Complete an Input-Output Ordered Pair",
-          "family_purpose": "Translate stated input/output values directly into ordered-pair notation.",
-          "evidence_job": "write an ordered pair from named input and output",
-          "student_action": "Fill the two coordinates in the correct order.",
+          "family_name": "Write an Ordered Pair from an Input-Output Sentence",
+          "family_purpose": "Translate a complete input/output sentence into ordered-pair notation.",
+          "evidence_job": "write an ordered pair from stated input and output",
+          "student_action": "Read the sentence and write (input, output).",
           "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "response_mode": "fill in blank",
           "representation_mode": "verbal values -> ordered pair",
@@ -196,25 +198,25 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Input = {input}; output = {output}. Ordered pair = (_____, _____).",
+            "prompt_template": "A rule takes {input} as the input and produces {output} as the output. Write this information as an ordered pair.",
             "parameters": {
               "input": "number",
               "output": "number"
             },
             "constraints": [
-              "two blanks"
+              "state both roles in a complete sentence"
             ],
-            "answer_rule": "first blank input, second blank output.",
+            "answer_rule": "Write (input, output).",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Input = -2; output = 7.</p><p>Ordered pair = ( <b>_____</b> , <b>_____</b> )</p>",
-            "answer": "(-2,7)",
-            "solution": "Input is first; output is second.",
-            "scoring_guidance": "2 points: -2 then 7."
+            "student_html": "<p>A rule takes 3 as the input and produces 5 as the output. Write this information as an ordered pair.</p><div class=\"response-surface\">Ordered pair: ______</div>",
+            "answer": "(3,5)",
+            "solution": "Input is written first and output second.",
+            "scoring_guidance": "1 point: correct response."
           },
           "bank_item_id": "ALG1-U1-Q135",
           "teacher_question_id": "Q135"
@@ -229,13 +231,13 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Choose the Pair that Matches Input and Output",
-          "family_purpose": "Discriminate coordinate order from common reversals/distractors.",
-          "evidence_job": "match stated input/output to an ordered pair",
-          "student_action": "Select the pair with the stated first and second coordinates.",
-          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
-          "response_mode": "selected response",
-          "representation_mode": "verbal values + ordered-pair choices",
+          "family_name": "Identify Input and Output Variables from an Equation",
+          "family_purpose": "Connect equation variables to input/output roles.",
+          "evidence_job": "identify input and output variables in a rule equation",
+          "student_action": "Name the input variable and output variable from a stated relationship.",
+          "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "equation -> input/output roles",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
@@ -264,26 +266,24 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "The input is {input} and the output is {output}. Which ordered pair is correct?",
+            "prompt_template": "In {equation}, identify the input variable and the output variable.",
             "parameters": {
-              "input": "number",
-              "output": "number"
+              "equation": "linear rule written output = expression(input)"
             },
             "constraints": [
-              "one reversal distractor",
-              "four choices"
+              "equation states one output variable in terms of one input variable"
             ],
-            "answer_rule": "(input, output).",
+            "answer_rule": "Input is the variable used to determine the output; output is the isolated dependent variable.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>The input is -3 and the output is 8. Which ordered pair is correct?</p><ol class=\"choices\"><li>\\((-3,8)\\)</li><li>\\((8,-3)\\)</li><li>\\((3,8)\\)</li><li>\\((-8,3)\\)</li></ol>",
-            "answer": "A. (-3,8)",
-            "solution": "Input comes first.",
-            "scoring_guidance": "1 point: selects A."
+            "student_html": "<p>In \\(C=5t+7\\), identify the input variable and the output variable.</p><div class=\"response-surface\">Input: _____ &nbsp; Output: _____</div>",
+            "answer": "Input = t; output = C.",
+            "solution": "C is calculated from t, so t is the input and C is the output.",
+            "scoring_guidance": "2 points: identifies both variables."
           },
           "bank_item_id": "ALG1-U1-Q136",
           "teacher_question_id": "Q136"
@@ -298,13 +298,13 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Identify the Input Coordinate",
-          "family_purpose": "Focus on the first-coordinate role in an ordered pair.",
-          "evidence_job": "identify input from an ordered pair",
-          "student_action": "Select or state the first coordinate.",
-          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-          "response_mode": "short constructed response",
-          "representation_mode": "ordered pair",
+          "family_name": "Choose Input and Output Variables from an Equation",
+          "family_purpose": "Recognize input/output roles in a rule equation.",
+          "evidence_job": "identify input and output variables from an equation",
+          "student_action": "Choose the statement that correctly names the input and output variables.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "equation -> role choices",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
@@ -333,24 +333,27 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "In {pair}, what is the input?",
+            "prompt_template": "The equation {equation} gives {output_quantity} from {input_quantity}. Which statement correctly identifies the input and output variables?",
             "parameters": {
-              "pair": "ordered pair"
+              "equation": "linear rule",
+              "input_quantity": "meaning of input variable",
+              "output_quantity": "meaning of output variable"
             },
             "constraints": [
-              "single numeric answer"
+              "four choices",
+              "exactly one correct input/output assignment"
             ],
-            "answer_rule": "input = first coordinate.",
+            "answer_rule": "Select input = independent variable and output = isolated variable.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>In \\((-6,4)\\), what is the input?</p><div class=\"response-surface\">Input: _____</div>",
-            "answer": "-6",
-            "solution": "The first coordinate is the input.",
-            "scoring_guidance": "1 point: -6."
+            "student_html": "<p>The equation \\(d=12h+3\\) gives distance \\(d\\) from hours \\(h\\). Which statement is correct?</p><ol class=\"choices\"><li>Input: \\(h\\); output: \\(d\\)</li><li>Input: \\(d\\); output: \\(h\\)</li><li>Both variables are inputs.</li><li>Both variables are outputs.</li></ol>",
+            "answer": "A. Input h; output d.",
+            "solution": "Distance d is determined from hours h.",
+            "scoring_guidance": "1 point: selects A."
           },
           "bank_item_id": "ALG1-U1-Q137",
           "teacher_question_id": "Q137"
@@ -365,17 +368,18 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Write Two Ordered Pairs from a Table",
-          "family_purpose": "Create more than one pair from a compact input/output table.",
-          "evidence_job": "translate table rows to ordered pairs",
-          "student_action": "Write an ordered pair for each displayed row.",
-          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "family_name": "Identify Input and Output Axes on a Graph",
+          "family_purpose": "Connect input/output language to the coordinate axes on an input-output graph.",
+          "evidence_job": "identify which graph axis represents input and output",
+          "student_action": "Use the graph labels to state the input axis and output axis.",
+          "question_structure_id": "FEATURE-IDENTIFY-FROM-REPRESENTATION-01",
           "response_mode": "short constructed response",
-          "representation_mode": "table -> ordered pairs",
-          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_mode": "graph -> input/output axes",
+          "representation_need": "required; graph axes carry the evidence",
           "representation_routes": [
             {
-              "type": "table -> ordered pairs -> evidence for Use input/output language and ordered pairs."
+              "type": "input-output graph -> axis roles",
+              "asset": "figures/u1_mg01_ic03_direct_reverse.png"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
@@ -400,24 +404,25 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Write the ordered pair for each row of the table.",
+            "prompt_template": "Use the graph. Which axis shows the input and which axis shows the output?",
             "parameters": {
-              "table": "two-row input/output table"
+              "graph": "input-output graph with readable axis labels"
             },
             "constraints": [
-              "exactly two rows"
+              "input is on the horizontal axis",
+              "output is on the vertical axis"
             ],
-            "answer_rule": "Each row becomes (input, output).",
+            "answer_rule": "Input = x/horizontal axis; output = y/vertical axis.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Write the ordered pair for each row.</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>0</td><td>5</td></tr><tr><td>4</td><td>-1</td></tr></table><div class=\"response-surface\">Pairs: __________</div>",
-            "answer": "(0,5) and (4,-1)",
-            "solution": "Read each row as input first, output second.",
-            "scoring_guidance": "2 points: one per pair."
+            "student_html": "<p>Use the graph. Which axis shows the input and which axis shows the output?</p><img class=\"graph\" src=\"figures/u1_mg01_ic03_direct_reverse.png\" alt=\"Input-output line graph\"><div class=\"response-surface\">Input axis: _____ &nbsp; Output axis: _____</div>",
+            "answer": "Input = x-axis; output = y-axis.",
+            "solution": "Input is read horizontally; output is read vertically.",
+            "scoring_guidance": "2 points: both axes identified."
           },
           "bank_item_id": "ALG1-U1-Q138",
           "teacher_question_id": "Q138"
@@ -432,17 +437,18 @@
           "i_can_id": "U1-MG04-IC01",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use input/output language and ordered pairs.",
-          "family_name": "Explain a Reversed Pair Interpretation",
-          "family_purpose": "Diagnose an interpretation that swaps the meaning of the coordinates.",
-          "evidence_job": "diagnose reversed input/output interpretation",
-          "student_action": "Explain which coordinate is input/output and correct the statement.",
-          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
-          "response_mode": "constructed response",
-          "representation_mode": "ordered pair + verbal claim",
-          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "family_name": "Write a Graph Input-Output Pair",
+          "family_purpose": "Connect a graph reading to ordered-pair input/output notation.",
+          "evidence_job": "write a graph reading as an input-output ordered pair",
+          "student_action": "Read a stated graph input/output relationship and write the ordered pair.",
+          "question_structure_id": "REPTRANS-GRAPH-TABLE-EQUATION-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "graph -> ordered pair",
+          "representation_need": "required; graph carries the input/output relationship",
           "representation_routes": [
             {
-              "type": "ordered pair + verbal claim -> evidence for Use input/output language and ordered pairs."
+              "type": "graph reading -> ordered pair",
+              "asset": "figures/u1_mg01_scale_a.png"
             }
           ],
           "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
@@ -467,26 +473,25 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "A student says {pair} means input {second} and output {first}. Explain the error.",
+            "prompt_template": "Use the graph. When the input is {input}, the output is {output}. Write this as an ordered pair and identify which number is the input.",
             "parameters": {
-              "pair": "ordered pair",
-              "first": "first coordinate",
-              "second": "second coordinate"
+              "input": "visible graph input",
+              "output": "corresponding graph output"
             },
             "constraints": [
-              "claim reverses meanings"
+              "graph values must be readable"
             ],
-            "answer_rule": "First coordinate is input; second is output.",
+            "answer_rule": "Ordered pair = (input, output); first coordinate is input.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>A student says \\((7,2)\\) means input 2 and output 7. Explain the error.</p><div class=\"response-surface\">Explain:</div>",
-            "answer": "The coordinates were reversed. The input is 7 and the output is 2.",
-            "solution": "Ordered pairs are (input, output).",
-            "scoring_guidance": "2 points: identifies reversal and corrects both roles."
+            "student_html": "<p>Use the graph. When the input is 4, the output is 70. Write this as an ordered pair and identify which number is the input.</p><img class=\"graph\" src=\"figures/u1_mg01_scale_a.png\" alt=\"Scaled input-output graph\"><div class=\"response-surface\">Ordered pair + input:</div>",
+            "answer": "(4,70); the input is 4.",
+            "solution": "Input comes first in an input-output ordered pair.",
+            "scoring_guidance": "2 points: correct pair and identifies 4 as input."
           },
           "bank_item_id": "ALG1-U1-Q139",
           "teacher_question_id": "Q139"
@@ -992,10 +997,10 @@
           "i_can_id": "U1-MG04-IC03",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Find a missing input or output when enough information is given.",
-          "family_name": "Choose a Missing Output",
-          "family_purpose": "Find a missing output in selected response.",
-          "evidence_job": "find output from rule",
-          "student_action": "Use the rule and input to select the missing output.",
+          "family_name": "Choose the Corresponding Output",
+          "family_purpose": "Find the output that corresponds to a given input.",
+          "evidence_job": "find corresponding output from a rule",
+          "student_action": "Use the rule and choose the output for the stated input.",
           "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
           "response_mode": "selected response",
           "representation_mode": "rule + missing table value",
@@ -1027,22 +1032,23 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use {rule}. If x={input}, what is the missing output?",
+            "prompt_template": "Use {rule}. Find the corresponding output when x={input}.",
             "parameters": {
               "rule": "simple rule",
               "input": "integer"
             },
             "constraints": [
-              "four choices"
+              "four choices",
+              "one correct output"
             ],
-            "answer_rule": "Evaluate the rule.",
+            "answer_rule": "Evaluate the rule at the stated input.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use \\(y=2x+3\\). If \\(x=5\\), what is the missing output?</p><ol class=\"choices\"><li>13</li><li>10</li><li>8</li><li>16</li></ol>",
+            "student_html": "<p>Use \\(y=2x+3\\). Find the corresponding output when \\(x=5\\).</p><ol class=\"choices\"><li>13</li><li>10</li><li>8</li><li>16</li></ol>",
             "answer": "A. 13",
             "solution": "2(5)+3=13.",
             "scoring_guidance": "1 point: selects A."
@@ -1128,13 +1134,13 @@
           "i_can_id": "U1-MG04-IC03",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Find a missing input or output when enough information is given.",
-          "family_name": "Fill a Missing Input in a Table",
-          "family_purpose": "Use a rule and known output to complete an x-value.",
-          "evidence_job": "find missing table input",
-          "student_action": "Work backward from table output using the rule.",
+          "family_name": "Complete an Ordered Pair by Finding the Input",
+          "family_purpose": "Work backward from an output while preserving ordered-pair notation.",
+          "evidence_job": "find input from an output in an ordered pair",
+          "student_action": "Use the rule to complete the first coordinate of an ordered pair.",
           "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
-          "response_mode": "short constructed response",
-          "representation_mode": "rule + table",
+          "response_mode": "fill in blank",
+          "representation_mode": "equation + ordered pair",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
@@ -1163,24 +1169,24 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use {rule} to find the missing x-value in the table.",
+            "prompt_template": "Use {rule} to complete the ordered pair (_____, {output}).",
             "parameters": {
-              "rule": "linear rule",
-              "output": "table y-value"
+              "rule": "simple linear rule",
+              "output": "value giving integer input"
             },
             "constraints": [
-              "one missing input"
+              "missing coordinate is the input/first coordinate"
             ],
-            "answer_rule": "Solve y=rule(x) for x.",
+            "answer_rule": "Solve for x, then write it as the first coordinate.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use \\(y=4x+2\\) to find the missing x-value.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>?</td><td>18</td></tr></table><div class=\"response-surface\">x = _____</div>",
+            "student_html": "<p>Use \\(y=4x+2\\) to complete the ordered pair \\((\\square,18)\\).</p><div class=\"response-surface\">Input: _____</div>",
             "answer": "4",
-            "solution": "4x+2=18 -> 4x=16 -> x=4.",
+            "solution": "18=4x+2 gives 16=4x, so x=4.",
             "scoring_guidance": "1 point: 4."
           },
           "bank_item_id": "ALG1-U1-Q149",
@@ -1196,13 +1202,13 @@
           "i_can_id": "U1-MG04-IC03",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Find a missing input or output when enough information is given.",
-          "family_name": "Fill a Missing Output in a Table",
-          "family_purpose": "Use a rule and known input to complete a y-value.",
-          "evidence_job": "find missing table output",
-          "student_action": "Evaluate the rule for the table input.",
+          "family_name": "Find an Output in a Linear Story",
+          "family_purpose": "Use a simple linear context rule to find the output for a given input.",
+          "evidence_job": "find output from a linear contextual rule",
+          "student_action": "Substitute the given input into the stated context equation and report the output.",
           "question_structure_id": "PROC-DIRECT-EXECUTE-01",
           "response_mode": "short constructed response",
-          "representation_mode": "rule + table",
+          "representation_mode": "context + linear equation",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
             {
@@ -1231,25 +1237,27 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use {rule} to find the missing y-value in the table.",
+            "prompt_template": "{context} The rule is {rule}. Find the output when {input_statement}.",
             "parameters": {
-              "rule": "linear rule",
-              "input": "table x-value"
+              "context": "short linear story",
+              "rule": "linear equation with defined variables",
+              "input_statement": "specific input value"
             },
             "constraints": [
-              "one missing output"
+              "context is concise",
+              "equation is supplied"
             ],
-            "answer_rule": "Evaluate y=rule(input).",
+            "answer_rule": "Evaluate the linear rule at the stated input and include units when relevant.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use \\(y=-2x+5\\) to find the missing y-value.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-3</td><td>?</td></tr></table><div class=\"response-surface\">y = _____</div>",
-            "answer": "11",
-            "solution": "-2(-3)+5=6+5=11.",
-            "scoring_guidance": "1 point: 11."
+            "student_html": "<p>A bike rental costs \\(C=4h+6\\), where \\(h\\) is the number of hours and \\(C\\) is the cost in dollars. Find the cost for 3 hours.</p><div class=\"response-surface\">Cost: $_____</div>",
+            "answer": "$18",
+            "solution": "C=4(3)+6=18.",
+            "scoring_guidance": "1 point: $18."
           },
           "bank_item_id": "ALG1-U1-Q150",
           "teacher_question_id": "Q150"
@@ -1477,12 +1485,12 @@
           "i_can_id": "U1-MG04-IC04",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use a rule to build or extend a table.",
-          "family_name": "Complete One Table Row from a Rule",
-          "family_purpose": "Use a rule to fill one missing table output.",
-          "evidence_job": "complete a table row from a rule",
-          "student_action": "Evaluate the rule for the given table input.",
+          "family_name": "Add Two Rows to a Rule Table",
+          "family_purpose": "Extend a short table by two rows using a stated rule.",
+          "evidence_job": "extend a table with two correct input-output rows",
+          "student_action": "Use the rule and existing table to add the next two consecutive rows.",
           "question_structure_id": "PROC-DIRECT-EXECUTE-01",
-          "response_mode": "short constructed response",
+          "response_mode": "constructed response",
           "representation_mode": "rule -> table",
           "representation_need": "required when it carries evidence; otherwise no decorative representation",
           "representation_routes": [
@@ -1512,25 +1520,26 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "Use {rule} to complete the row for x={input}.",
+            "prompt_template": "Use {rule}. Add the next two rows to the table.",
             "parameters": {
-              "rule": "input-output rule",
-              "input": "integer"
+              "rule": "simple input-output rule",
+              "table": "at least two starting rows with consecutive integer inputs"
             },
             "constraints": [
-              "one row"
+              "new inputs continue the displayed pattern",
+              "student adds exactly two rows"
             ],
-            "answer_rule": "output = rule(input).",
+            "answer_rule": "Evaluate the rule for the next two inputs.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>Use \\(y=2x+4\\) to complete the row for \\(x=3\\).</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>3</td><td>?</td></tr></table>",
-            "answer": "10",
-            "solution": "2(3)+4=10.",
-            "scoring_guidance": "1 point: 10."
+            "student_html": "<p>Use \\(y=2x+4\\). Add the next two rows to the table.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>6</td></tr></table><div class=\"response-surface\">Add two rows:</div>",
+            "answer": "(2,8) and (3,10)",
+            "solution": "Continue with x=2 and x=3; substitute each into y=2x+4.",
+            "scoring_guidance": "2 points: one for each correct row."
           },
           "bank_item_id": "ALG1-U1-Q154",
           "teacher_question_id": "Q154"
@@ -1613,10 +1622,10 @@
           "i_can_id": "U1-MG04-IC04",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use a rule to build or extend a table.",
-          "family_name": "Choose the Next Table Row",
-          "family_purpose": "Recognize the next correct input-output pair for a rule.",
-          "evidence_job": "select a correct table extension",
-          "student_action": "Evaluate the next input and select the matching row.",
+          "family_name": "Choose an Ordered Pair that Matches a Rule",
+          "family_purpose": "Recognize one input-output row that satisfies a stated rule.",
+          "evidence_job": "identify an ordered pair satisfying a rule",
+          "student_action": "Test the answer choices and choose the ordered pair that follows the rule.",
           "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
           "response_mode": "selected response",
           "representation_mode": "rule + ordered-pair choices",
@@ -1648,24 +1657,25 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
-            "prompt_template": "The table follows {rule}. Which row should come next for x={input}?",
+            "prompt_template": "Which ordered pair matches the rule {rule}?",
             "parameters": {
-              "rule": "simple linear rule",
-              "input": "next integer"
+              "rule": "simple input-output rule",
+              "choices": "four ordered pairs"
             },
             "constraints": [
-              "four row choices"
+              "four choices",
+              "exactly one pair satisfies the rule"
             ],
-            "answer_rule": "Choose (input, rule(input)).",
+            "answer_rule": "Substitute each x/input and select the pair whose y/output matches the rule.",
             "wording_locked": true
           },
           "exemplar": {
-            "student_html": "<p>The table follows \\(y=2x-3\\). Which row should come next for \\(x=4\\)?</p><ol class=\"choices\"><li>\\((4,5)\\)</li><li>\\((4,8)\\)</li><li>\\((5,4)\\)</li><li>\\((4,-5)\\)</li></ol>",
+            "student_html": "<p>Which ordered pair matches the rule \\(y=2x-3\\)?</p><ol class=\"choices\"><li>\\((4,5)\\)</li><li>\\((4,8)\\)</li><li>\\((5,4)\\)</li><li>\\((4,-5)\\)</li></ol>",
             "answer": "A. (4,5)",
-            "solution": "2(4)-3=5.",
+            "solution": "For x=4, y=2(4)-3=5.",
             "scoring_guidance": "1 point: selects A."
           },
           "bank_item_id": "ALG1-U1-Q156",
@@ -1681,10 +1691,10 @@
           "i_can_id": "U1-MG04-IC04",
           "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
           "i_can_exact_text": "Use a rule to build or extend a table.",
-          "family_name": "Fill Two Outputs in a Rule Table",
-          "family_purpose": "Use one rule to complete two table cells.",
-          "evidence_job": "compute multiple table outputs from a rule",
-          "student_action": "Evaluate the rule for two supplied inputs.",
+          "family_name": "Fill Two Outputs from a Decreasing Linear Rule",
+          "family_purpose": "Build table rows from a linear rule with a negative x coefficient.",
+          "evidence_job": "find two outputs from a rule of the form y=b-mx",
+          "student_action": "Evaluate a decreasing linear rule for two displayed inputs.",
           "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
           "response_mode": "fill in blank",
           "representation_mode": "rule -> two-cell table",
@@ -1716,25 +1726,26 @@
           "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
           "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
           "approval_status": "DRAFT_REVIEW",
-          "family_revision": 1,
+          "family_revision": 2,
           "superseded_by": null,
           "template_contract": {
             "prompt_template": "Use {rule} to fill both missing outputs.",
             "parameters": {
-              "rule": "simple rule",
-              "inputs": "two integers"
+              "rule": "rule of the form y=b-mx with positive integer m",
+              "table": "two displayed inputs"
             },
             "constraints": [
-              "two output blanks"
+              "x coefficient is negative",
+              "both outputs are determined by direct substitution"
             ],
-            "answer_rule": "Evaluate rule at each input.",
+            "answer_rule": "Evaluate the rule for each input.",
             "wording_locked": true
           },
           "exemplar": {
             "student_html": "<p>Use \\(y=4-x\\) to fill both outputs.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-1</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></table>",
             "answer": "5; 1",
-            "solution": "4-(-1)=5 and 4-3=1.",
-            "scoring_guidance": "2 points: 5 and 1."
+            "solution": "For x=-1, y=5. For x=3, y=1.",
+            "scoring_guidance": "2 points: both outputs."
           },
           "bank_item_id": "ALG1-U1-Q157",
           "teacher_question_id": "Q157"
@@ -1943,6 +1954,80 @@
           },
           "bank_item_id": "ALG1-U1-Q160",
           "teacher_question_id": "Q160"
+        },
+        {
+          "family_id": "U1-MG04-IC04-K",
+          "family_label": "K",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Add a Third Consecutive Row",
+          "family_purpose": "Extend a two-row table to a third row while keeping inputs one unit apart.",
+          "evidence_job": "extend a rule table with one consecutive row",
+          "student_action": "Use the rule and two consecutive rows to add the next row.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "constructed response",
+          "representation_mode": "rule + consecutive-row table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + two consecutive rows -> third consecutive row"
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "vary linear rule",
+            "vary starting consecutive inputs",
+            "include increasing or decreasing outputs"
+          ],
+          "forbidden_variations": [
+            "nonconsecutive starting inputs",
+            "adding more than one requested row",
+            "changing the evidence job"
+          ],
+          "allowed_destinations": [
+            "Practice",
+            "Checkpoint"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Quick Check",
+            "Checkpoint",
+            "Review"
+          ],
+          "best_use": "Bridge rule evaluation and a three-row table with Δx=1, supporting later rate-of-change work.",
+          "avoid_uses": "Avoid if inputs do not increase by exactly 1.",
+          "fresh_instance_rule": "Give a linear rule and two consecutive input-output rows; ask for the third row so the three inputs differ by 1.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. Add the next row so the table has three consecutive inputs.",
+            "parameters": {
+              "rule": "simple linear rule",
+              "table": "two correct rows whose inputs differ by 1"
+            },
+            "constraints": [
+              "the third input continues by +1",
+              "table ends with exactly three rows"
+            ],
+            "answer_rule": "Evaluate the rule at the next consecutive input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=3x-1\\). Add the next row so the table has three consecutive inputs.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>8</td></tr></table><div class=\"response-surface\">Next row:</div>",
+            "answer": "(4,11)",
+            "solution": "The next input is 4, and 3(4)-1=11.",
+            "scoring_guidance": "1 point: (4,11)."
+          },
+          "bank_item_id": "ALG1-U1-Q161",
+          "teacher_question_id": "Q161"
         }
       ]
     }
