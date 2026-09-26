@@ -1,0 +1,1944 @@
+{
+  "schema_version": "family-bank-extension/1.0",
+  "unit": 1,
+  "mastery_goal": {
+    "goal_id": "U1-MG03",
+    "title": "Evaluate Expressions",
+    "exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations."
+  },
+  "status": "DRAFT_REVIEW",
+  "review_note": "Families D-J are newly expanded for teacher review and are not eligible for downstream runtime use until approved.",
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG03-IC01",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Substitute a value for a variable.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC01-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Choose the Correct Substitution Setup",
+          "family_purpose": "Recognize a correct substitution before evaluating.",
+          "evidence_job": "identify a correct substitution setup",
+          "student_action": "Select the expression that replaces the variable with the entire given value.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "expression choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "expression choices -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Recognize a correct substitution before evaluating.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {expression} when {variable}={value}, which substitution is correct?",
+            "parameters": {
+              "expression": "single-variable expression",
+              "value": "integer, including negative"
+            },
+            "constraints": [
+              "four choices",
+              "exactly one substitutes the entire value correctly"
+            ],
+            "answer_rule": "Replace every occurrence of the variable with the given value; group negative values when needed.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(3x-5\\) when \\(x=-4\\), which substitution is correct?</p><ol class=\"choices\"><li>\\(3(-4)-5\\)</li><li>\\(3(4)-5\\)</li><li>\\(3-4-5\\)</li><li>\\(3(-4-5)\\)</li></ol>",
+            "answer": "A. 3(-4)-5",
+            "solution": "Replace x with the entire value -4.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q105",
+          "teacher_question_id": "Q105"
+        },
+        {
+          "family_id": "U1-MG03-IC01-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Evaluate with Two Substituted Values",
+          "family_purpose": "Substitute two given values into one expression.",
+          "evidence_job": "substitute two values and evaluate",
+          "student_action": "Replace both variables with their given values and compute.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "symbolic substitution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic substitution -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Substitute two given values into one expression.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression} when {a}={aval} and {b}={bval}.",
+            "parameters": {
+              "expression": "two-variable linear expression",
+              "aval": "integer",
+              "bval": "integer"
+            },
+            "constraints": [
+              "arithmetic remains reasonable"
+            ],
+            "answer_rule": "Substitute both values before evaluating.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(2a+3b\\) when \\(a=-2\\) and \\(b=5\\).</p><div class=\"response-surface\">Value: _____</div>",
+            "answer": "11",
+            "solution": "2(-2)+3(5)=-4+15=11.",
+            "scoring_guidance": "1 point: 11."
+          },
+          "bank_item_id": "ALG1-U1-Q106",
+          "teacher_question_id": "Q106"
+        },
+        {
+          "family_id": "U1-MG03-IC01-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Complete a Substitution Line",
+          "family_purpose": "Focus on placing the given value into the expression correctly.",
+          "evidence_job": "complete a substitution step",
+          "student_action": "Fill the missing value in a substitution line.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "worked substitution line",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked substitution line -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Focus on placing the given value into the expression correctly.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Complete the substitution: {expression}, {variable}={value} -> {worked_line}.",
+            "parameters": {
+              "worked_line": "expression with one value blank"
+            },
+            "constraints": [
+              "single blank is the substituted value"
+            ],
+            "answer_rule": "Blank equals the supplied variable value.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>When \\(x=-3\\), complete the substitution for \\(5x+2\\):</p><p>\\(5(\\square)+2\\)</p><div class=\"response-surface\">Blank: _____</div>",
+            "answer": "-3",
+            "solution": "The value replacing x is -3.",
+            "scoring_guidance": "1 point: -3."
+          },
+          "bank_item_id": "ALG1-U1-Q107",
+          "teacher_question_id": "Q107"
+        },
+        {
+          "family_id": "U1-MG03-IC01-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Choose the Value after Negative Substitution",
+          "family_purpose": "Practice grouping a negative input when it is raised to a power.",
+          "evidence_job": "evaluate an expression after negative substitution",
+          "student_action": "Choose the correct value after substituting a negative number.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "symbolic",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Practice grouping a negative input when it is raised to a power.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression} when {variable}={value}.",
+            "parameters": {
+              "expression": "expression with a square",
+              "value": "negative integer"
+            },
+            "constraints": [
+              "choices include common sign/parentheses errors"
+            ],
+            "answer_rule": "Substitute the negative value in parentheses before applying the exponent.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(x^2-1\\) when \\(x=-5\\).</p><ol class=\"choices\"><li>24</li><li>-26</li><li>26</li><li>-24</li></ol>",
+            "answer": "A. 24",
+            "solution": "(-5)^2-1=25-1=24.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q108",
+          "teacher_question_id": "Q108"
+        },
+        {
+          "family_id": "U1-MG03-IC01-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Identify the Substituted Value",
+          "family_purpose": "Read a worked substitution backward to identify the input used.",
+          "evidence_job": "identify the value substituted into an expression",
+          "student_action": "Read the numerical replacement in a worked line and name the variable value.",
+          "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "worked substitution line",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked substitution line -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Read a worked substitution backward to identify the input used.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student evaluates {expression} by writing {worked}. What value was substituted for {variable}?",
+            "parameters": {
+              "worked": "same expression with the variable replaced"
+            },
+            "constraints": [
+              "replacement is unambiguous"
+            ],
+            "answer_rule": "Read the value that replaced the variable.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(4x+1\\) by writing \\(4(-3)+1\\). What value was substituted for \\(x\\)?</p><div class=\"response-surface\">x = _____</div>",
+            "answer": "-3",
+            "solution": "The -3 replaced x.",
+            "scoring_guidance": "1 point: -3."
+          },
+          "bank_item_id": "ALG1-U1-Q109",
+          "teacher_question_id": "Q109"
+        },
+        {
+          "family_id": "U1-MG03-IC01-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Choose a Complete Multi-Occurrence Substitution",
+          "family_purpose": "Check that every occurrence of a variable is replaced consistently.",
+          "evidence_job": "identify complete substitution across repeated variable occurrences",
+          "student_action": "Choose the setup that replaces every x with the same given value.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "expression choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "expression choices -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Check that every occurrence of a variable is replaced consistently.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Which setup correctly evaluates {expression} when x={value}?",
+            "parameters": {
+              "expression": "contains x more than once",
+              "value": "integer"
+            },
+            "constraints": [
+              "exactly one choice replaces every occurrence correctly"
+            ],
+            "answer_rule": "Replace every x by the given value.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which setup correctly evaluates \\(2x^2-x\\) when \\(x=-3\\)?</p><ol class=\"choices\"><li>\\(2(-3)^2-(-3)\\)</li><li>\\(2(-3)^2-x\\)</li><li>\\(2(3)^2-(-3)\\)</li><li>\\(2(-3^2)-3\\)</li></ol>",
+            "answer": "A. 2(-3)^2-(-3)",
+            "solution": "Both occurrences of x must be replaced by -3.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q110",
+          "teacher_question_id": "Q110"
+        },
+        {
+          "family_id": "U1-MG03-IC01-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Substitute a value for a variable.",
+          "family_name": "Explain a Partial-Substitution Error",
+          "family_purpose": "Diagnose a student who replaces only one occurrence of a variable.",
+          "evidence_job": "diagnose incomplete substitution",
+          "student_action": "Explain that every occurrence of the variable must be replaced and correct the setup.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked error",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked error -> evidence for Substitute a value for a variable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Substitute a value for a variable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Diagnose a student who replaces only one occurrence of a variable.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Substitute a value for a variable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student substitutes {value} into {expression} but writes {incorrect}. Explain the error and correct the setup.",
+            "parameters": {
+              "expression": "contains repeated variable",
+              "incorrect": "only one occurrence replaced"
+            },
+            "constraints": [
+              "error is incomplete substitution, not arithmetic"
+            ],
+            "answer_rule": "Every variable occurrence must be replaced by the given value.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(3x+x^2\\) when \\(x=2\\), a student writes \\(3(2)+x^2\\). Explain the error and correct the setup.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "The second x was not replaced. The correct setup is 3(2)+2^2.",
+            "solution": "Substitution replaces every occurrence of x.",
+            "scoring_guidance": "2 points: identifies the missing substitution and gives a correct setup."
+          },
+          "bank_item_id": "ALG1-U1-Q111",
+          "teacher_question_id": "Q111"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC02",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Use order of operations correctly.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC02-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Identify the First Operation",
+          "family_purpose": "Recognize the first required operation before calculating.",
+          "evidence_job": "identify the first step in order of operations",
+          "student_action": "Name or compute the operation that must be done first.",
+          "question_structure_id": "PROC-SELECT-STRATEGY-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "numeric expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Recognize the first required operation before calculating.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "What should you do first in {expression}?",
+            "parameters": {
+              "expression": "mixed-operation expression with one clear innermost grouping"
+            },
+            "constraints": [
+              "one unambiguous first operation"
+            ],
+            "answer_rule": "Do the innermost grouped operation first.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>What should you do first in \\(18-3(4+2)^2\\)?</p><div class=\"response-surface\">First step: _____</div>",
+            "answer": "Add 4+2.",
+            "solution": "Parentheses are evaluated before exponents, multiplication, and subtraction.",
+            "scoring_guidance": "1 point: identifies 4+2."
+          },
+          "bank_item_id": "ALG1-U1-Q112",
+          "teacher_question_id": "Q112"
+        },
+        {
+          "family_id": "U1-MG03-IC02-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Choose the Correct Expression Value",
+          "family_purpose": "Evaluate a mixed-operation expression in selected-response form.",
+          "evidence_job": "evaluate using order of operations",
+          "student_action": "Select the correct final value.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "numeric expression + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression + choices -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Evaluate a mixed-operation expression in selected-response form.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression}.",
+            "parameters": {
+              "expression": "mixed-operation expression"
+            },
+            "constraints": [
+              "distractors reflect common order mistakes"
+            ],
+            "answer_rule": "Apply grouping, exponents, multiply/divide, then add/subtract.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(20-2(3^2)+4\\).</p><ol class=\"choices\"><li>6</li><li>58</li><li>22</li><li>40</li></ol>",
+            "answer": "A. 6",
+            "solution": "3^2=9, then 2(9)=18, so 20-18+4=6.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q113",
+          "teacher_question_id": "Q113"
+        },
+        {
+          "family_id": "U1-MG03-IC02-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Complete the Next Simplified Step",
+          "family_purpose": "Practice one correct next step instead of the entire computation.",
+          "evidence_job": "write a valid next step in order of operations",
+          "student_action": "Fill the simplified expression after completing the first grouped operation.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "expression -> next expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "expression -> next expression -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Practice one correct next step instead of the entire computation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "After simplifying the parentheses in {expression}, what expression remains?",
+            "parameters": {
+              "expression": "contains one parenthetical expression plus other operations"
+            },
+            "constraints": [
+              "only the parenthetical value changes"
+            ],
+            "answer_rule": "Replace the grouped expression by its value and preserve all other operations.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>After simplifying the parentheses in \\( (8-3)^2+6\\div2\\), what expression remains?</p><div class=\"response-surface\">Next expression: _____</div>",
+            "answer": "5^2+6÷2",
+            "solution": "8-3=5; everything else stays in place.",
+            "scoring_guidance": "1 point: equivalent next expression."
+          },
+          "bank_item_id": "ALG1-U1-Q114",
+          "teacher_question_id": "Q114"
+        },
+        {
+          "family_id": "U1-MG03-IC02-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Choose the Correct First Step",
+          "family_purpose": "Distinguish a legal first step from common order mistakes.",
+          "evidence_job": "select a correct first step",
+          "student_action": "Choose the line that correctly begins the evaluation.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "worked-step choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked-step choices -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Distinguish a legal first step from common order mistakes.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Which is a correct first step for {expression}?",
+            "parameters": {
+              "expression": "mixed operation expression"
+            },
+            "constraints": [
+              "one choice performs the required first operation"
+            ],
+            "answer_rule": "Choose the step consistent with order of operations.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which is a correct first step for \\(7+2(5-1)\\)?</p><ol class=\"choices\"><li>\\(7+2(4)\\)</li><li>\\(9(5-1)\\)</li><li>\\(7+10-1\\)</li><li>\\(14(5-1)\\)</li></ol>",
+            "answer": "A. 7+2(4)",
+            "solution": "Evaluate 5-1 first.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q115",
+          "teacher_question_id": "Q115"
+        },
+        {
+          "family_id": "U1-MG03-IC02-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Evaluate Grouping with an Exponent",
+          "family_purpose": "Combine grouping and exponent work in a compact direct item.",
+          "evidence_job": "evaluate an expression with grouped operations and an exponent",
+          "student_action": "Evaluate the expression completely.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "numeric expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Combine grouping and exponent work in a compact direct item.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression}.",
+            "parameters": {
+              "expression": "grouped mixed-operation expression with exponent"
+            },
+            "constraints": [
+              "reasonable integer result"
+            ],
+            "answer_rule": "Follow order of operations.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(3[2^2+(7-5)]\\).</p><div class=\"response-surface\">Value: _____</div>",
+            "answer": "18",
+            "solution": "2^2=4 and 7-5=2; 3(4+2)=18.",
+            "scoring_guidance": "1 point: 18."
+          },
+          "bank_item_id": "ALG1-U1-Q116",
+          "teacher_question_id": "Q116"
+        },
+        {
+          "family_id": "U1-MG03-IC02-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Use Left-to-Right for Equal-Priority Operations",
+          "family_purpose": "Check multiplication/division left-to-right rather than a false multiplication-first rule.",
+          "evidence_job": "apply left-to-right order to equal-priority operations",
+          "student_action": "Evaluate a short chain of multiplication/division in order.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "numeric expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Check multiplication/division left-to-right rather than a false multiplication-first rule.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression} from left to right.",
+            "parameters": {
+              "expression": "multiplication/division chain"
+            },
+            "constraints": [
+              "operations have equal priority"
+            ],
+            "answer_rule": "Perform multiplication/division from left to right.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(24\\div3\\cdot2\\) from left to right.</p><div class=\"response-surface\">Value: _____</div>",
+            "answer": "16",
+            "solution": "24÷3=8, then 8·2=16.",
+            "scoring_guidance": "1 point: 16."
+          },
+          "bank_item_id": "ALG1-U1-Q117",
+          "teacher_question_id": "Q117"
+        },
+        {
+          "family_id": "U1-MG03-IC02-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use order of operations correctly.",
+          "family_name": "Explain an Exponent-Order Error",
+          "family_purpose": "Diagnose multiplication being combined with a base before the exponent is applied.",
+          "evidence_job": "diagnose an order-of-operations error involving an exponent",
+          "student_action": "Identify the first invalid step and give the correct value.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked solution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked solution -> evidence for Use order of operations correctly."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use order of operations correctly.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Diagnose multiplication being combined with a base before the exponent is applied.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use order of operations correctly.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student evaluates {expression} as {incorrect_work}. Explain the first error and give the correct value.",
+            "parameters": {
+              "expression": "coefficient times grouped power",
+              "incorrect_work": "multiplies coefficient into base before exponent"
+            },
+            "constraints": [
+              "one targeted order error"
+            ],
+            "answer_rule": "Evaluate grouping/exponent before outside multiplication.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student evaluates \\(2(3+1)^2\\) as \\(8^2=64\\). Explain the first error and give the correct value.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "After 3+1=4, the exponent applies to 4 before multiplying by 2: 2(4^2)=32.",
+            "solution": "The outside coefficient is not part of the squared base.",
+            "scoring_guidance": "2 points: identifies the exponent-order error and gives 32."
+          },
+          "bank_item_id": "ALG1-U1-Q118",
+          "teacher_question_id": "Q118"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC03",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Evaluate expressions with positive and negative numbers.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC03-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Choose the Value of a Signed Expression",
+          "family_purpose": "Evaluate signed-number arithmetic in selected response.",
+          "evidence_job": "evaluate a signed-number expression",
+          "student_action": "Select the correct value after combining signed terms.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "numeric expression + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression + choices -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Evaluate signed-number arithmetic in selected response.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression}.",
+            "parameters": {
+              "expression": "signed-number expression"
+            },
+            "constraints": [
+              "distractors target sign errors"
+            ],
+            "answer_rule": "Evaluate signed operations correctly.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(-7+3(-4)\\).</p><ol class=\"choices\"><li>-19</li><li>19</li><li>5</li><li>-5</li></ol>",
+            "answer": "A. -19",
+            "solution": "3(-4)=-12; -7+(-12)=-19.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q119",
+          "teacher_question_id": "Q119"
+        },
+        {
+          "family_id": "U1-MG03-IC03-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Complete a Subtract-Negative Rewrite",
+          "family_purpose": "Make subtraction of a negative explicit as addition.",
+          "evidence_job": "rewrite subtraction of a negative correctly",
+          "student_action": "Fill the operation sign that makes the equivalent expression.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "symbolic rewrite",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic rewrite -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Make subtraction of a negative explicit as addition.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Complete the equivalent rewrite: {a}-({negative_b}) = {a} _____ {b}.",
+            "parameters": {
+              "a": "integer",
+              "b": "positive integer"
+            },
+            "constraints": [
+              "single operation-sign blank"
+            ],
+            "answer_rule": "Subtracting a negative becomes addition.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Complete the rewrite:</p><p>\\(-6-(-8)=-6\\;\\square\\;8\\)</p>",
+            "answer": "+",
+            "solution": "Subtracting a negative is the same as adding the positive.",
+            "scoring_guidance": "1 point: +."
+          },
+          "bank_item_id": "ALG1-U1-Q120",
+          "teacher_question_id": "Q120"
+        },
+        {
+          "family_id": "U1-MG03-IC03-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Compare Two Signed Expressions",
+          "family_purpose": "Use signed-number evaluation to compare two results.",
+          "evidence_job": "compare values of signed expressions",
+          "student_action": "Evaluate enough to decide which expression is greater.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "two numeric expressions",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "two numeric expressions -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use signed-number evaluation to compare two results.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Which is greater: {expr1} or {expr2}?",
+            "parameters": {
+              "expr1": "signed product/expression",
+              "expr2": "signed product/expression"
+            },
+            "constraints": [
+              "results are distinct"
+            ],
+            "answer_rule": "Evaluate both and compare values on the number line.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Which is greater: \\(-3(4)\\) or \\(3(-5)\\)?</p><div class=\"response-surface\">Greater expression: _____</div>",
+            "answer": "-3(4), because -12 > -15.",
+            "solution": "-12 is to the right of -15 on the number line.",
+            "scoring_guidance": "1 point: identifies -3(4) or -12."
+          },
+          "bank_item_id": "ALG1-U1-Q121",
+          "teacher_question_id": "Q121"
+        },
+        {
+          "family_id": "U1-MG03-IC03-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Evaluate a Negative Input with a Power",
+          "family_purpose": "Combine negative substitution and exponent scope.",
+          "evidence_job": "evaluate an expression with a negative input and exponent",
+          "student_action": "Substitute a negative value and apply exponent/sign rules correctly.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "symbolic substitution",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "symbolic substitution -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Combine negative substitution and exponent scope.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {expression} when x={value}.",
+            "parameters": {
+              "expression": "coefficient times x squared",
+              "value": "negative integer"
+            },
+            "constraints": [
+              "negative input must be grouped before exponent"
+            ],
+            "answer_rule": "Substitute with parentheses, square the input, then apply outside coefficient.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(-2x^2\\) when \\(x=-3\\).</p><div class=\"response-surface\">Value: _____</div>",
+            "answer": "-18",
+            "solution": "-2(-3)^2=-2(9)=-18.",
+            "scoring_guidance": "1 point: -18."
+          },
+          "bank_item_id": "ALG1-U1-Q122",
+          "teacher_question_id": "Q122"
+        },
+        {
+          "family_id": "U1-MG03-IC03-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Choose the Result of Subtracting a Negative",
+          "family_purpose": "Directly check a common signed-number misconception.",
+          "evidence_job": "evaluate subtraction of a negative",
+          "student_action": "Select the correct result.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "numeric expression + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression + choices -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Directly check a common signed-number misconception.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Evaluate {a}-({negative_b}).",
+            "parameters": {
+              "a": "integer",
+              "negative_b": "negative integer"
+            },
+            "constraints": [
+              "four choices include add/subtract sign errors"
+            ],
+            "answer_rule": "Subtracting a negative becomes addition.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Evaluate \\(5-(-7)\\).</p><ol class=\"choices\"><li>12</li><li>-2</li><li>2</li><li>-12</li></ol>",
+            "answer": "A. 12",
+            "solution": "5-(-7)=5+7=12.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q123",
+          "teacher_question_id": "Q123"
+        },
+        {
+          "family_id": "U1-MG03-IC03-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Predict the Sign, Then Evaluate",
+          "family_purpose": "Use sign reasoning before exact signed-number computation.",
+          "evidence_job": "predict sign and evaluate a signed expression",
+          "student_action": "State whether the result should be positive or negative, then calculate.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "numeric expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use sign reasoning before exact signed-number computation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Before calculating, predict whether {expression} is positive or negative. Then evaluate it.",
+            "parameters": {
+              "expression": "signed products/sums with unambiguous sign"
+            },
+            "constraints": [
+              "prediction is meaningfully useful"
+            ],
+            "answer_rule": "Give correct sign prediction and exact value.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Before calculating, predict whether \\((-4)(-6)+(-5)\\) is positive or negative. Then evaluate it.</p><div class=\"response-surface\">Prediction + value:</div>",
+            "answer": "Positive; 19.",
+            "solution": "(-4)(-6)=24, then 24-5=19.",
+            "scoring_guidance": "2 points: positive and 19."
+          },
+          "bank_item_id": "ALG1-U1-Q124",
+          "teacher_question_id": "Q124"
+        },
+        {
+          "family_id": "U1-MG03-IC03-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Evaluate expressions with positive and negative numbers.",
+          "family_name": "Explain a Double-Negative Error",
+          "family_purpose": "Diagnose failure to reverse the sign of a negative quantity.",
+          "evidence_job": "diagnose a double-negative sign error",
+          "student_action": "Explain why the sign changes and give the correct value.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "worked claim -> evidence for Evaluate expressions with positive and negative numbers."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Evaluate expressions with positive and negative numbers.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Diagnose failure to reverse the sign of a negative quantity.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Evaluate expressions with positive and negative numbers.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student says {expression}={wrong}. Explain the sign error and give the correct value.",
+            "parameters": {
+              "expression": "negative of a negative value",
+              "wrong": "keeps negative sign"
+            },
+            "constraints": [
+              "single sign misconception"
+            ],
+            "answer_rule": "The opposite of a negative value is positive.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student says \\(-(-9)=-9\\). Explain the sign error and give the correct value.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "-(-9) means the opposite of -9, so it equals 9.",
+            "solution": "Two negatives here produce a positive value.",
+            "scoring_guidance": "2 points: explains the sign reversal and gives 9."
+          },
+          "bank_item_id": "ALG1-U1-Q125",
+          "teacher_question_id": "Q125"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG03-IC04",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Check whether an answer is reasonable.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG03-IC04-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Choose a Reasonable Magnitude",
+          "family_purpose": "Use estimation to select a plausible order of magnitude.",
+          "evidence_job": "judge numerical reasonableness by magnitude",
+          "student_action": "Estimate and choose the plausible result.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "expression + magnitude choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "expression + magnitude choices -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use estimation to select a plausible order of magnitude.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Without calculating exactly, which is a reasonable value for {expression}?",
+            "parameters": {
+              "expression": "decimal product or quotient",
+              "choices": "values separated by powers of ten"
+            },
+            "constraints": [
+              "one clearly plausible magnitude"
+            ],
+            "answer_rule": "Estimate with nearby compatible numbers and choose the matching magnitude.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Without calculating exactly, which is a reasonable value for \\(51.2(3.9)\\)?</p><ol class=\"choices\"><li>20</li><li>200</li><li>2,000</li><li>20,000</li></ol>",
+            "answer": "B. 200",
+            "solution": "51.2≈50 and 3.9≈4, so 50·4≈200.",
+            "scoring_guidance": "1 point: selects B."
+          },
+          "bank_item_id": "ALG1-U1-Q126",
+          "teacher_question_id": "Q126"
+        },
+        {
+          "family_id": "U1-MG03-IC04-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Estimate Before Accepting a Result",
+          "family_purpose": "Generate a quick benchmark before judging an exact-looking answer.",
+          "evidence_job": "produce a reasonable estimate",
+          "student_action": "Round to friendly numbers and estimate.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "numeric expression",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric expression -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Generate a quick benchmark before judging an exact-looking answer.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Estimate {expression} using friendly numbers.",
+            "parameters": {
+              "expression": "decimal computation"
+            },
+            "constraints": [
+              "estimate can be done mentally"
+            ],
+            "answer_rule": "Use nearby values to produce a reasonable benchmark.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Estimate \\(29.7(6.2)+15\\) using friendly numbers.</p><div class=\"response-surface\">Estimate: _____</div>",
+            "answer": "About 195-200; for example 30·6+15=195.",
+            "solution": "A quick benchmark near 200 makes later exact answers easy to judge.",
+            "scoring_guidance": "1 point: reasonable estimate near 195-200."
+          },
+          "bank_item_id": "ALG1-U1-Q127",
+          "teacher_question_id": "Q127"
+        },
+        {
+          "family_id": "U1-MG03-IC04-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Explain a Decimal-Place Reasonableness Error",
+          "family_purpose": "Reject a product whose decimal place creates an impossible magnitude.",
+          "evidence_job": "diagnose an unreasonable decimal product",
+          "student_action": "Use an estimate to explain why the reported value is far too large or small.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "reported result + estimate",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "reported result + estimate -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Reject a product whose decimal place creates an impossible magnitude.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student reports {expression}={claim}. Explain why the result is not reasonable using an estimate.",
+            "parameters": {
+              "expression": "decimal product",
+              "claim": "decimal-place error"
+            },
+            "constraints": [
+              "estimate clearly contradicts claim"
+            ],
+            "answer_rule": "Use nearby whole numbers to show the expected magnitude.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student reports \\(4.8(2.1)=100.8\\). Explain why this is not reasonable using an estimate.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "4.8≈5 and 2.1≈2, so the product should be about 10, not about 100.",
+            "solution": "The claim is about ten times too large.",
+            "scoring_guidance": "1 point: gives a valid estimate showing the claim is too large."
+          },
+          "bank_item_id": "ALG1-U1-Q128",
+          "teacher_question_id": "Q128"
+        },
+        {
+          "family_id": "U1-MG03-IC04-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Choose the More Reasonable Result",
+          "family_purpose": "Compare two proposed answers against a benchmark.",
+          "evidence_job": "select the more reasonable of two numerical results",
+          "student_action": "Estimate and choose which proposed answer is plausible.",
+          "question_structure_id": "COMPARE-COMPETING-METHODS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "expression + two proposed results",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "expression + two proposed results -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Compare two proposed answers against a benchmark.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Two students get {a} and {b} for {expression}. Which answer is more reasonable? Explain with an estimate.",
+            "parameters": {
+              "a": "plausible result",
+              "b": "order-of-magnitude error"
+            },
+            "constraints": [
+              "one result clearly matches estimate"
+            ],
+            "answer_rule": "Estimate and select the value near the benchmark.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Two students get 49.75 and 497.5 for \\(398\\div8\\). Which answer is more reasonable? Explain with an estimate.</p><div class=\"response-surface\">Answer:</div>",
+            "answer": "49.75, because 400÷8≈50.",
+            "solution": "497.5 is about ten times too large.",
+            "scoring_guidance": "2 points: chooses 49.75 and supports it with a reasonable estimate."
+          },
+          "bank_item_id": "ALG1-U1-Q129",
+          "teacher_question_id": "Q129"
+        },
+        {
+          "family_id": "U1-MG03-IC04-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Use the Expected Sign to Check an Answer",
+          "family_purpose": "Use positive/negative structure as a fast reasonableness check.",
+          "evidence_job": "reject an answer with an impossible sign",
+          "student_action": "Predict the sign and compare it to a reported result.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "signed expression + reported answer",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "signed expression + reported answer -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use positive/negative structure as a fast reasonableness check.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student says {expression}={claim}. Is the sign reasonable? Explain.",
+            "parameters": {
+              "expression": "signed expression",
+              "claim": "wrong-sign result"
+            },
+            "constraints": [
+              "sign can be predicted without exact arithmetic"
+            ],
+            "answer_rule": "Use operation signs to determine expected sign and reject an inconsistent claim.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student says \\(-12+3(-8)=36\\). Is the sign reasonable? Explain.</p><div class=\"response-surface\">Answer:</div>",
+            "answer": "No. Both terms are negative, so the sum must be negative; the exact value is -36.",
+            "solution": "-12+(-24) cannot be positive.",
+            "scoring_guidance": "1 point: explains why a positive result is impossible."
+          },
+          "bank_item_id": "ALG1-U1-Q130",
+          "teacher_question_id": "Q130"
+        },
+        {
+          "family_id": "U1-MG03-IC04-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Use Bounds to Check a Context Total",
+          "family_purpose": "Use simple lower and upper bounds to test a context answer.",
+          "evidence_job": "check reasonableness using bounds",
+          "student_action": "Find a range for the possible total and compare a claim to it.",
+          "question_structure_id": "VERIFY-REASONABLENESS-01",
+          "response_mode": "constructed response",
+          "representation_mode": "context bounds",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "context bounds -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use simple lower and upper bounds to test a context answer.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Each of {n} items costs between {low} and {high}. Could the total be {claim}? Explain with bounds.",
+            "parameters": {
+              "n": "positive integer",
+              "low": "lower unit cost",
+              "high": "upper unit cost",
+              "claim": "candidate total"
+            },
+            "constraints": [
+              "claim lies clearly outside or inside bounds"
+            ],
+            "answer_rule": "Total must lie between n*low and n*high.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Seven items each cost between $4 and $5. Could the total be $52? Explain with bounds.</p><div class=\"response-surface\">Answer:</div>",
+            "answer": "No. The total must be between $28 and $35.",
+            "solution": "7·4=28 and 7·5=35.",
+            "scoring_guidance": "2 points: gives correct bounds and judgment."
+          },
+          "bank_item_id": "ALG1-U1-Q131",
+          "teacher_question_id": "Q131"
+        },
+        {
+          "family_id": "U1-MG03-IC04-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG03",
+          "mastery_goal_title": "Evaluate Expressions",
+          "mastery_goal_exact_text": "Evaluate numerical and algebraic expressions using substitution and order of operations.",
+          "i_can_id": "U1-MG03-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Check whether an answer is reasonable.",
+          "family_name": "Estimate a Quotient with Compatible Numbers",
+          "family_purpose": "Use compatible numbers to check the scale of a quotient.",
+          "evidence_job": "estimate a quotient for reasonableness",
+          "student_action": "Replace values with nearby compatible numbers and state the approximate quotient.",
+          "question_structure_id": "ESTIMATE-BEFORE-COMPUTE-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "numeric quotient",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "numeric quotient -> evidence for Check whether an answer is reasonable."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Check whether an answer is reasonable.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use compatible numbers to check the scale of a quotient.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Check whether an answer is reasonable.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use compatible numbers: {a}≈{a2} and {b}≈{b2}, so the quotient is about _____.",
+            "parameters": {
+              "a": "decimal numerator",
+              "a2": "nearby compatible numerator",
+              "b": "decimal divisor",
+              "b2": "nearby compatible divisor"
+            },
+            "constraints": [
+              "compatible quotient is simple"
+            ],
+            "answer_rule": "Estimate a2/b2.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use compatible numbers: \\(63.1\\approx64\\) and \\(7.9\\approx8\\), so \\(63.1\\div7.9\\) is about <b>_____</b>.</p>",
+            "answer": "8",
+            "solution": "64÷8=8.",
+            "scoring_guidance": "1 point: 8."
+          },
+          "bank_item_id": "ALG1-U1-Q132",
+          "teacher_question_id": "Q132"
+        }
+      ]
+    }
+  ]
+}

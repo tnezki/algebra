@@ -1,0 +1,1950 @@
+{
+  "schema_version": "family-bank-extension/1.0",
+  "unit": 1,
+  "mastery_goal": {
+    "goal_id": "U1-MG04",
+    "title": "Input / Output Rules",
+    "exact_text": "Use an input-output rule to find values, ordered pairs, and patterns."
+  },
+  "status": "DRAFT_REVIEW",
+  "review_note": "Families D-J are newly expanded for teacher review and are not eligible for downstream runtime use until approved.",
+  "i_cans": [
+    {
+      "i_can_id": "U1-MG04-IC01",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Use input/output language and ordered pairs.",
+      "authoritative_order": 1,
+      "families": [
+        {
+          "family_id": "U1-MG04-IC01-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Choose the Ordered Pair from a Table Row",
+          "family_purpose": "Recognize (input, output) order from a visible table row.",
+          "evidence_job": "identify the ordered pair for a table row",
+          "student_action": "Select the pair that lists input first and output second.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "table -> ordered-pair choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table -> ordered-pair choices -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Recognize (input, output) order from a visible table row.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use the table. Which ordered pair matches input {input}?",
+            "parameters": {
+              "table": "input/output table",
+              "input": "one displayed input"
+            },
+            "constraints": [
+              "four choices",
+              "one correct pair"
+            ],
+            "answer_rule": "Write (input, output).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use the table. Which ordered pair matches input 3?</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>3</td><td>11</td></tr><tr><td>5</td><td>17</td></tr></table><ol class=\"choices\"><li>\\((3,11)\\)</li><li>\\((11,3)\\)</li><li>\\((3,5)\\)</li><li>\\((5,17)\\)</li></ol>",
+            "answer": "A. (3,11)",
+            "solution": "Ordered pairs use (input, output).",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q133",
+          "teacher_question_id": "Q133"
+        },
+        {
+          "family_id": "U1-MG04-IC01-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Read Input and Output from an Ordered Pair",
+          "family_purpose": "Reverse the direction: ordered pair to input/output language.",
+          "evidence_job": "identify input and output from an ordered pair",
+          "student_action": "State which coordinate is the input and which is the output.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "ordered pair -> verbal labels",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "ordered pair -> verbal labels -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Reverse the direction: ordered pair to input/output language.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For the ordered pair {pair}, what is the input and what is the output?",
+            "parameters": {
+              "pair": "ordered pair"
+            },
+            "constraints": [
+              "two short blanks"
+            ],
+            "answer_rule": "input = first coordinate; output = second coordinate.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For the ordered pair \\((-4,9)\\), what is the input and what is the output?</p><div class=\"response-surface\">Input: _____ &nbsp; Output: _____</div>",
+            "answer": "Input = -4; output = 9.",
+            "solution": "The first coordinate is the input.",
+            "scoring_guidance": "2 points: both values."
+          },
+          "bank_item_id": "ALG1-U1-Q134",
+          "teacher_question_id": "Q134"
+        },
+        {
+          "family_id": "U1-MG04-IC01-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Complete an Input-Output Ordered Pair",
+          "family_purpose": "Translate stated input/output values directly into ordered-pair notation.",
+          "evidence_job": "write an ordered pair from named input and output",
+          "student_action": "Fill the two coordinates in the correct order.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "verbal values -> ordered pair",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal values -> ordered pair -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Translate stated input/output values directly into ordered-pair notation.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Input = {input}; output = {output}. Ordered pair = (_____, _____).",
+            "parameters": {
+              "input": "number",
+              "output": "number"
+            },
+            "constraints": [
+              "two blanks"
+            ],
+            "answer_rule": "first blank input, second blank output.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Input = -2; output = 7.</p><p>Ordered pair = ( <b>_____</b> , <b>_____</b> )</p>",
+            "answer": "(-2,7)",
+            "solution": "Input is first; output is second.",
+            "scoring_guidance": "2 points: -2 then 7."
+          },
+          "bank_item_id": "ALG1-U1-Q135",
+          "teacher_question_id": "Q135"
+        },
+        {
+          "family_id": "U1-MG04-IC01-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Choose the Pair that Matches Input and Output",
+          "family_purpose": "Discriminate coordinate order from common reversals/distractors.",
+          "evidence_job": "match stated input/output to an ordered pair",
+          "student_action": "Select the pair with the stated first and second coordinates.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "verbal values + ordered-pair choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal values + ordered-pair choices -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Discriminate coordinate order from common reversals/distractors.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "The input is {input} and the output is {output}. Which ordered pair is correct?",
+            "parameters": {
+              "input": "number",
+              "output": "number"
+            },
+            "constraints": [
+              "one reversal distractor",
+              "four choices"
+            ],
+            "answer_rule": "(input, output).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>The input is -3 and the output is 8. Which ordered pair is correct?</p><ol class=\"choices\"><li>\\((-3,8)\\)</li><li>\\((8,-3)\\)</li><li>\\((3,8)\\)</li><li>\\((-8,3)\\)</li></ol>",
+            "answer": "A. (-3,8)",
+            "solution": "Input comes first.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q136",
+          "teacher_question_id": "Q136"
+        },
+        {
+          "family_id": "U1-MG04-IC01-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Identify the Input Coordinate",
+          "family_purpose": "Focus on the first-coordinate role in an ordered pair.",
+          "evidence_job": "identify input from an ordered pair",
+          "student_action": "Select or state the first coordinate.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "ordered pair",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "ordered pair -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Focus on the first-coordinate role in an ordered pair.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "In {pair}, what is the input?",
+            "parameters": {
+              "pair": "ordered pair"
+            },
+            "constraints": [
+              "single numeric answer"
+            ],
+            "answer_rule": "input = first coordinate.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>In \\((-6,4)\\), what is the input?</p><div class=\"response-surface\">Input: _____</div>",
+            "answer": "-6",
+            "solution": "The first coordinate is the input.",
+            "scoring_guidance": "1 point: -6."
+          },
+          "bank_item_id": "ALG1-U1-Q137",
+          "teacher_question_id": "Q137"
+        },
+        {
+          "family_id": "U1-MG04-IC01-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Write Two Ordered Pairs from a Table",
+          "family_purpose": "Create more than one pair from a compact input/output table.",
+          "evidence_job": "translate table rows to ordered pairs",
+          "student_action": "Write an ordered pair for each displayed row.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "table -> ordered pairs",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "table -> ordered pairs -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Create more than one pair from a compact input/output table.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Write the ordered pair for each row of the table.",
+            "parameters": {
+              "table": "two-row input/output table"
+            },
+            "constraints": [
+              "exactly two rows"
+            ],
+            "answer_rule": "Each row becomes (input, output).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Write the ordered pair for each row.</p><table class=\"data-table\"><tr><th>Input</th><th>Output</th></tr><tr><td>0</td><td>5</td></tr><tr><td>4</td><td>-1</td></tr></table><div class=\"response-surface\">Pairs: __________</div>",
+            "answer": "(0,5) and (4,-1)",
+            "solution": "Read each row as input first, output second.",
+            "scoring_guidance": "2 points: one per pair."
+          },
+          "bank_item_id": "ALG1-U1-Q138",
+          "teacher_question_id": "Q138"
+        },
+        {
+          "family_id": "U1-MG04-IC01-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC01",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use input/output language and ordered pairs.",
+          "family_name": "Explain a Reversed Pair Interpretation",
+          "family_purpose": "Diagnose an interpretation that swaps the meaning of the coordinates.",
+          "evidence_job": "diagnose reversed input/output interpretation",
+          "student_action": "Explain which coordinate is input/output and correct the statement.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "ordered pair + verbal claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "ordered pair + verbal claim -> evidence for Use input/output language and ordered pairs."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use input/output language and ordered pairs.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Diagnose an interpretation that swaps the meaning of the coordinates.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use input/output language and ordered pairs.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "A student says {pair} means input {second} and output {first}. Explain the error.",
+            "parameters": {
+              "pair": "ordered pair",
+              "first": "first coordinate",
+              "second": "second coordinate"
+            },
+            "constraints": [
+              "claim reverses meanings"
+            ],
+            "answer_rule": "First coordinate is input; second is output.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>A student says \\((7,2)\\) means input 2 and output 7. Explain the error.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "The coordinates were reversed. The input is 7 and the output is 2.",
+            "solution": "Ordered pairs are (input, output).",
+            "scoring_guidance": "2 points: identifies reversal and corrects both roles."
+          },
+          "bank_item_id": "ALG1-U1-Q139",
+          "teacher_question_id": "Q139"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG04-IC02",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Use a rule to find an output from an input.",
+      "authoritative_order": 2,
+      "families": [
+        {
+          "family_id": "U1-MG04-IC02-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Choose the Output from a Rule",
+          "family_purpose": "Evaluate a rule in selected-response form.",
+          "evidence_job": "find output from a given input",
+          "student_action": "Substitute the input and select the resulting output.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "rule + input + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + input + choices -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Evaluate a rule in selected-response form.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {rule}, what is the output when x={input}?",
+            "parameters": {
+              "rule": "simple linear rule",
+              "input": "integer"
+            },
+            "constraints": [
+              "four choices"
+            ],
+            "answer_rule": "Substitute input and evaluate.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(y=2x+1\\), what is the output when \\(x=4\\)?</p><ol class=\"choices\"><li>9</li><li>6</li><li>8</li><li>3</li></ol>",
+            "answer": "A. 9",
+            "solution": "2(4)+1=9.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q140",
+          "teacher_question_id": "Q140"
+        },
+        {
+          "family_id": "U1-MG04-IC02-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Find an Output for a Negative Input",
+          "family_purpose": "Apply a rule when the input is negative.",
+          "evidence_job": "evaluate a rule at a negative input",
+          "student_action": "Substitute a negative input and compute the output.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule/equation",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule/equation -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Apply a rule when the input is negative.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. Find the output when x={input}.",
+            "parameters": {
+              "rule": "linear rule",
+              "input": "negative integer"
+            },
+            "constraints": [
+              "reasonable arithmetic"
+            ],
+            "answer_rule": "Substitute input and evaluate.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=-3x+2\\). Find the output when \\(x=-2\\).</p><div class=\"response-surface\">Output: _____</div>",
+            "answer": "8",
+            "solution": "-3(-2)+2=6+2=8.",
+            "scoring_guidance": "1 point: 8."
+          },
+          "bank_item_id": "ALG1-U1-Q141",
+          "teacher_question_id": "Q141"
+        },
+        {
+          "family_id": "U1-MG04-IC02-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Complete the Rule Substitution and Output",
+          "family_purpose": "Separate substitution placement from arithmetic.",
+          "evidence_job": "complete a rule substitution",
+          "student_action": "Fill the input into the rule and then compute the output.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "rule -> substitution line",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule -> substitution line -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Separate substitution placement from arithmetic.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {rule} and x={input}, complete {substitution} and find y.",
+            "parameters": {
+              "substitution": "rule with input blank"
+            },
+            "constraints": [
+              "one substitution blank plus output"
+            ],
+            "answer_rule": "Blank = input; output follows rule.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(y=4x-5\\) and \\(x=6\\), complete the substitution and find y:</p><p>\\(y=4(\\square)-5=\\square\\)</p>",
+            "answer": "6; 19",
+            "solution": "4(6)-5=24-5=19.",
+            "scoring_guidance": "2 points: 6 and 19."
+          },
+          "bank_item_id": "ALG1-U1-Q142",
+          "teacher_question_id": "Q142"
+        },
+        {
+          "family_id": "U1-MG04-IC02-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Complete One Input-Output Table Row",
+          "family_purpose": "Use a rule to complete a single table row.",
+          "evidence_job": "find table output from rule and input",
+          "student_action": "Calculate the output that belongs with the given input.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + one-row table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + one-row table -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use a rule to complete a single table row.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to complete the table row.",
+            "parameters": {
+              "rule": "linear rule",
+              "input": "integer"
+            },
+            "constraints": [
+              "one missing output"
+            ],
+            "answer_rule": "Evaluate rule at the table input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=3x+1\\) to complete the table row.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>5</td><td>?</td></tr></table><div class=\"response-surface\">Output: _____</div>",
+            "answer": "16",
+            "solution": "3(5)+1=16.",
+            "scoring_guidance": "1 point: 16."
+          },
+          "bank_item_id": "ALG1-U1-Q143",
+          "teacher_question_id": "Q143"
+        },
+        {
+          "family_id": "U1-MG04-IC02-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Choose an Output from a Verbal Rule",
+          "family_purpose": "Use ordinary-language rule instructions to find an output.",
+          "evidence_job": "apply a verbal input-output rule",
+          "student_action": "Follow the stated operation sequence and select the output.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "verbal rule + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal rule + choices -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use ordinary-language rule instructions to find an output.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Rule: {verbal_rule}. What output comes from input {input}?",
+            "parameters": {
+              "verbal_rule": "two-step verbal rule",
+              "input": "integer"
+            },
+            "constraints": [
+              "operations and order are unambiguous"
+            ],
+            "answer_rule": "Apply rule operations in stated order.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Rule: Double the input, then add 3. What output comes from input 4?</p><ol class=\"choices\"><li>11</li><li>14</li><li>8</li><li>7</li></ol>",
+            "answer": "A. 11",
+            "solution": "2(4)+3=11.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q144",
+          "teacher_question_id": "Q144"
+        },
+        {
+          "family_id": "U1-MG04-IC02-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Find Two Outputs from One Rule",
+          "family_purpose": "Build fluency by using one rule for two different inputs.",
+          "evidence_job": "find multiple outputs from a rule",
+          "student_action": "Evaluate the same rule for two supplied inputs.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + input list",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + input list -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Build fluency by using one rule for two different inputs.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. Find the outputs for x={x1} and x={x2}.",
+            "parameters": {
+              "rule": "linear rule",
+              "x1": "integer",
+              "x2": "different integer"
+            },
+            "constraints": [
+              "two outputs"
+            ],
+            "answer_rule": "Evaluate rule separately for each input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=-2x+5\\). Find the outputs for \\(x=0\\) and \\(x=3\\).</p><div class=\"response-surface\">Outputs: _____ , _____</div>",
+            "answer": "5, -1",
+            "solution": "At x=0, y=5. At x=3, y=-6+5=-1.",
+            "scoring_guidance": "2 points: one per output."
+          },
+          "bank_item_id": "ALG1-U1-Q145",
+          "teacher_question_id": "Q145"
+        },
+        {
+          "family_id": "U1-MG04-IC02-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC02",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to find an output from an input.",
+          "family_name": "Explain a Rule-Evaluation Error",
+          "family_purpose": "Diagnose using addition instead of multiplication in a coefficient term.",
+          "evidence_job": "diagnose incorrect rule evaluation",
+          "student_action": "Identify the incorrect operation and compute the correct output.",
+          "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+          "response_mode": "constructed response",
+          "representation_mode": "rule + worked claim",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + worked claim -> evidence for Use a rule to find an output from an input."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to find an output from an input.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Diagnose using addition instead of multiplication in a coefficient term.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to find an output from an input.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {rule} and x={input}, a student writes {incorrect}. Explain the error and find the correct output.",
+            "parameters": {
+              "incorrect": "common operation error"
+            },
+            "constraints": [
+              "single clear evaluation misconception"
+            ],
+            "answer_rule": "Use the coefficient as multiplication before adding/subtracting constant.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(y=5x-2\\) and \\(x=3\\), a student writes \\(5+3-2=6\\). Explain the error and find the correct output.</p><div class=\"response-surface\">Explain:</div>",
+            "answer": "5x means 5 times x, not 5+x. The output is 5(3)-2=13.",
+            "solution": "The coefficient multiplies the input.",
+            "scoring_guidance": "2 points: identifies multiplication and gives 13."
+          },
+          "bank_item_id": "ALG1-U1-Q146",
+          "teacher_question_id": "Q146"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG04-IC03",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Find a missing input or output when enough information is given.",
+      "authoritative_order": 3,
+      "families": [
+        {
+          "family_id": "U1-MG04-IC03-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Choose a Missing Output",
+          "family_purpose": "Find a missing output in selected response.",
+          "evidence_job": "find output from rule",
+          "student_action": "Use the rule and input to select the missing output.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "rule + missing table value",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + missing table value -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Find a missing output in selected response.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. If x={input}, what is the missing output?",
+            "parameters": {
+              "rule": "simple rule",
+              "input": "integer"
+            },
+            "constraints": [
+              "four choices"
+            ],
+            "answer_rule": "Evaluate the rule.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=2x+3\\). If \\(x=5\\), what is the missing output?</p><ol class=\"choices\"><li>13</li><li>10</li><li>8</li><li>16</li></ol>",
+            "answer": "A. 13",
+            "solution": "2(5)+3=13.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q147",
+          "teacher_question_id": "Q147"
+        },
+        {
+          "family_id": "U1-MG04-IC03-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Choose a Missing Input",
+          "family_purpose": "Work backward from output to input in selected response.",
+          "evidence_job": "find input from output using a rule",
+          "student_action": "Solve the rule for the input that produces the stated output.",
+          "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+          "response_mode": "selected response",
+          "representation_mode": "rule + output + choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + output + choices -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Work backward from output to input in selected response.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {rule}, which input gives output {output}?",
+            "parameters": {
+              "rule": "simple linear rule",
+              "output": "reachable integer"
+            },
+            "constraints": [
+              "one correct input"
+            ],
+            "answer_rule": "Solve rule equation for x.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(y=3x-1\\), which input gives an output of 11?</p><ol class=\"choices\"><li>4</li><li>3</li><li>5</li><li>12</li></ol>",
+            "answer": "A. 4",
+            "solution": "3x-1=11, so 3x=12 and x=4.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q148",
+          "teacher_question_id": "Q148"
+        },
+        {
+          "family_id": "U1-MG04-IC03-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Fill a Missing Input in a Table",
+          "family_purpose": "Use a rule and known output to complete an x-value.",
+          "evidence_job": "find missing table input",
+          "student_action": "Work backward from table output using the rule.",
+          "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + table -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use a rule and known output to complete an x-value.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to find the missing x-value in the table.",
+            "parameters": {
+              "rule": "linear rule",
+              "output": "table y-value"
+            },
+            "constraints": [
+              "one missing input"
+            ],
+            "answer_rule": "Solve y=rule(x) for x.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=4x+2\\) to find the missing x-value.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>?</td><td>18</td></tr></table><div class=\"response-surface\">x = _____</div>",
+            "answer": "4",
+            "solution": "4x+2=18 -> 4x=16 -> x=4.",
+            "scoring_guidance": "1 point: 4."
+          },
+          "bank_item_id": "ALG1-U1-Q149",
+          "teacher_question_id": "Q149"
+        },
+        {
+          "family_id": "U1-MG04-IC03-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Fill a Missing Output in a Table",
+          "family_purpose": "Use a rule and known input to complete a y-value.",
+          "evidence_job": "find missing table output",
+          "student_action": "Evaluate the rule for the table input.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + table -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use a rule and known input to complete a y-value.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to find the missing y-value in the table.",
+            "parameters": {
+              "rule": "linear rule",
+              "input": "table x-value"
+            },
+            "constraints": [
+              "one missing output"
+            ],
+            "answer_rule": "Evaluate y=rule(input).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=-2x+5\\) to find the missing y-value.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-3</td><td>?</td></tr></table><div class=\"response-surface\">y = _____</div>",
+            "answer": "11",
+            "solution": "-2(-3)+5=6+5=11.",
+            "scoring_guidance": "1 point: 11."
+          },
+          "bank_item_id": "ALG1-U1-Q150",
+          "teacher_question_id": "Q150"
+        },
+        {
+          "family_id": "U1-MG04-IC03-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Work Backward from a Verbal Rule",
+          "family_purpose": "Find a missing input from a verbal rule and output.",
+          "evidence_job": "find input by reversing a verbal rule",
+          "student_action": "Undo the rule operations in reverse order.",
+          "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "verbal rule",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal rule -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Find a missing input from a verbal rule and output.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Rule: {rule}. The output is {output}. What was the input?",
+            "parameters": {
+              "rule": "two-step invertible verbal rule",
+              "output": "integer"
+            },
+            "constraints": [
+              "unique integer input"
+            ],
+            "answer_rule": "Undo operations in reverse order.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Rule: Triple the input, then add 1. The output is 16. What was the input?</p><div class=\"response-surface\">Input: _____</div>",
+            "answer": "5",
+            "solution": "Undo +1: 15, then divide by 3: 5.",
+            "scoring_guidance": "1 point: 5."
+          },
+          "bank_item_id": "ALG1-U1-Q151",
+          "teacher_question_id": "Q151"
+        },
+        {
+          "family_id": "U1-MG04-IC03-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Find an Input with a Fractional Rule",
+          "family_purpose": "Extend inverse thinking to a simple fractional coefficient.",
+          "evidence_job": "find input from output using a fractional rule",
+          "student_action": "Solve a simple one-variable equation for the input.",
+          "question_structure_id": "INVERSE-GIVEN-OUTPUT-FIND-INPUT-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "equation rule",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "equation rule -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Extend inverse thinking to a simple fractional coefficient.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "For {rule}, what input gives output {output}?",
+            "parameters": {
+              "rule": "simple fractional linear rule",
+              "output": "chosen for integer input"
+            },
+            "constraints": [
+              "inverse arithmetic is accessible"
+            ],
+            "answer_rule": "Solve the rule equation for x.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>For \\(y=\\frac{x}{2}+4\\), what input gives an output of 7?</p><div class=\"response-surface\">Input: _____</div>",
+            "answer": "6",
+            "solution": "7=x/2+4 -> 3=x/2 -> x=6.",
+            "scoring_guidance": "1 point: 6."
+          },
+          "bank_item_id": "ALG1-U1-Q152",
+          "teacher_question_id": "Q152"
+        },
+        {
+          "family_id": "U1-MG04-IC03-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC03",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Find a missing input or output when enough information is given.",
+          "family_name": "Find One Output and One Input from the Same Rule",
+          "family_purpose": "Practice the rule in both forward and reverse directions.",
+          "evidence_job": "find a missing output and a missing input",
+          "student_action": "Use the same rule once forward and once backward.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "rule + two prompts",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + two prompts -> evidence for Find a missing input or output when enough information is given."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Find a missing input or output when enough information is given.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Practice the rule in both forward and reverse directions.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Find a missing input or output when enough information is given.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}: when x={x}, y=_____; when y={y}, x=_____.",
+            "parameters": {
+              "rule": "simple linear rule",
+              "x": "integer",
+              "y": "reachable output"
+            },
+            "constraints": [
+              "two independent blanks"
+            ],
+            "answer_rule": "First evaluate forward; second solve backward.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=2x-1\\):</p><p>When \\(x=4\\), \\(y=\\) <b>_____</b>.<br>When \\(y=13\\), \\(x=\\) <b>_____</b>.</p>",
+            "answer": "7; 7",
+            "solution": "2(4)-1=7; and 13=2x-1 gives x=7.",
+            "scoring_guidance": "2 points: 7 and 7."
+          },
+          "bank_item_id": "ALG1-U1-Q153",
+          "teacher_question_id": "Q153"
+        }
+      ]
+    },
+    {
+      "i_can_id": "U1-MG04-IC04",
+      "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+      "exact_text": "Use a rule to build or extend a table.",
+      "authoritative_order": 4,
+      "families": [
+        {
+          "family_id": "U1-MG04-IC04-D",
+          "family_label": "D",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Complete One Table Row from a Rule",
+          "family_purpose": "Use a rule to fill one missing table output.",
+          "evidence_job": "complete a table row from a rule",
+          "student_action": "Evaluate the rule for the given table input.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule -> table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule -> table -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use a rule to fill one missing table output.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to complete the row for x={input}.",
+            "parameters": {
+              "rule": "input-output rule",
+              "input": "integer"
+            },
+            "constraints": [
+              "one row"
+            ],
+            "answer_rule": "output = rule(input).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=2x+4\\) to complete the row for \\(x=3\\).</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>3</td><td>?</td></tr></table>",
+            "answer": "10",
+            "solution": "2(3)+4=10.",
+            "scoring_guidance": "1 point: 10."
+          },
+          "bank_item_id": "ALG1-U1-Q154",
+          "teacher_question_id": "Q154"
+        },
+        {
+          "family_id": "U1-MG04-IC04-E",
+          "family_label": "E",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Extend a Table to the Next Input",
+          "family_purpose": "Apply the same rule to continue a table pattern.",
+          "evidence_job": "extend a table using a stated rule",
+          "student_action": "Find the output for the next listed input.",
+          "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + table extension",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + table extension -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Apply the same rule to continue a table pattern.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to complete the next row of the table.",
+            "parameters": {
+              "rule": "linear rule",
+              "table": "ordered inputs with final output blank"
+            },
+            "constraints": [
+              "rule is stated explicitly"
+            ],
+            "answer_rule": "Evaluate rule at the final input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=3x+4\\) to complete the next row.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>0</td><td>4</td></tr><tr><td>1</td><td>7</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>?</td></tr></table>",
+            "answer": "13",
+            "solution": "3(3)+4=13.",
+            "scoring_guidance": "1 point: 13."
+          },
+          "bank_item_id": "ALG1-U1-Q155",
+          "teacher_question_id": "Q155"
+        },
+        {
+          "family_id": "U1-MG04-IC04-F",
+          "family_label": "F",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Choose the Next Table Row",
+          "family_purpose": "Recognize the next correct input-output pair for a rule.",
+          "evidence_job": "select a correct table extension",
+          "student_action": "Evaluate the next input and select the matching row.",
+          "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+          "response_mode": "selected response",
+          "representation_mode": "rule + ordered-pair choices",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + ordered-pair choices -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Recognize the next correct input-output pair for a rule.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "The table follows {rule}. Which row should come next for x={input}?",
+            "parameters": {
+              "rule": "simple linear rule",
+              "input": "next integer"
+            },
+            "constraints": [
+              "four row choices"
+            ],
+            "answer_rule": "Choose (input, rule(input)).",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>The table follows \\(y=2x-3\\). Which row should come next for \\(x=4\\)?</p><ol class=\"choices\"><li>\\((4,5)\\)</li><li>\\((4,8)\\)</li><li>\\((5,4)\\)</li><li>\\((4,-5)\\)</li></ol>",
+            "answer": "A. (4,5)",
+            "solution": "2(4)-3=5.",
+            "scoring_guidance": "1 point: selects A."
+          },
+          "bank_item_id": "ALG1-U1-Q156",
+          "teacher_question_id": "Q156"
+        },
+        {
+          "family_id": "U1-MG04-IC04-G",
+          "family_label": "G",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Fill Two Outputs in a Rule Table",
+          "family_purpose": "Use one rule to complete two table cells.",
+          "evidence_job": "compute multiple table outputs from a rule",
+          "student_action": "Evaluate the rule for two supplied inputs.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "fill in blank",
+          "representation_mode": "rule -> two-cell table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule -> two-cell table -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use one rule to complete two table cells.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule} to fill both missing outputs.",
+            "parameters": {
+              "rule": "simple rule",
+              "inputs": "two integers"
+            },
+            "constraints": [
+              "two output blanks"
+            ],
+            "answer_rule": "Evaluate rule at each input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=4-x\\) to fill both outputs.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>-1</td><td>?</td></tr><tr><td>3</td><td>?</td></tr></table>",
+            "answer": "5; 1",
+            "solution": "4-(-1)=5 and 4-3=1.",
+            "scoring_guidance": "2 points: 5 and 1."
+          },
+          "bank_item_id": "ALG1-U1-Q157",
+          "teacher_question_id": "Q157"
+        },
+        {
+          "family_id": "U1-MG04-IC04-H",
+          "family_label": "H",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Build a Table from a Verbal Rule",
+          "family_purpose": "Translate a verbal rule while constructing multiple input-output rows.",
+          "evidence_job": "build a table from a verbal input-output rule",
+          "student_action": "Apply the verbal rule to each listed input.",
+          "question_structure_id": "REPTRANS-TRANSLATE-VERBAL-SYMBOLIC-01",
+          "response_mode": "constructed response",
+          "representation_mode": "verbal rule -> table",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "verbal rule -> table -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Translate a verbal rule while constructing multiple input-output rows.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Rule: {verbal_rule}. Complete the table for the listed inputs.",
+            "parameters": {
+              "verbal_rule": "simple two-step rule",
+              "inputs": "three integers"
+            },
+            "constraints": [
+              "three outputs"
+            ],
+            "answer_rule": "Apply the verbal rule to each input.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Rule: Subtract 2 from twice the input. Complete the table.</p><table class=\"data-table\"><tr><th>x</th><th>-1</th><th>0</th><th>2</th></tr><tr><th>y</th><td>?</td><td>?</td><td>?</td></tr></table>",
+            "answer": "-4, -2, 2",
+            "solution": "y=2x-2.",
+            "scoring_guidance": "3 points: one per output."
+          },
+          "bank_item_id": "ALG1-U1-Q158",
+          "teacher_question_id": "Q158"
+        },
+        {
+          "family_id": "U1-MG04-IC04-I",
+          "family_label": "I",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Choose Inputs and Build Two Rows",
+          "family_purpose": "Let students construct valid table rows rather than only fill teacher-selected inputs.",
+          "evidence_job": "build table rows that satisfy a rule",
+          "student_action": "Choose two different inputs and compute their matching outputs.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "constructed response",
+          "representation_mode": "rule -> student-built table rows",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule -> student-built table rows -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Let students construct valid table rows rather than only fill teacher-selected inputs.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. Choose two different integer inputs and write two correct input-output rows.",
+            "parameters": {
+              "rule": "simple input-output rule"
+            },
+            "constraints": [
+              "inputs must be different integers",
+              "both outputs must match rule"
+            ],
+            "answer_rule": "Any two valid (input, output) rows satisfying the rule.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=x+3\\). Choose two different integer inputs and write two correct input-output rows.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>_____</td><td>_____</td></tr><tr><td>_____</td><td>_____</td></tr></table>",
+            "answer": "Answers vary; for example (0,3) and (2,5).",
+            "solution": "Each output must be 3 more than its input.",
+            "scoring_guidance": "2 points: two distinct valid rows."
+          },
+          "bank_item_id": "ALG1-U1-Q159",
+          "teacher_question_id": "Q159"
+        },
+        {
+          "family_id": "U1-MG04-IC04-J",
+          "family_label": "J",
+          "unit": 1,
+          "mastery_goal_id": "U1-MG04",
+          "mastery_goal_title": "Input / Output Rules",
+          "mastery_goal_exact_text": "Use an input-output rule to find values, ordered pairs, and patterns.",
+          "i_can_id": "U1-MG04-IC04",
+          "i_can_id_source": "derived_from_goal_id_and_authoritative_order",
+          "i_can_exact_text": "Use a rule to build or extend a table.",
+          "family_name": "Extend a Table Forward and Backward",
+          "family_purpose": "Use a rule to add values on both sides of an existing table.",
+          "evidence_job": "extend a table using a rule in more than one direction",
+          "student_action": "Compute outputs for an input before and after the displayed range.",
+          "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+          "response_mode": "short constructed response",
+          "representation_mode": "rule + table extension",
+          "representation_need": "required when it carries evidence; otherwise no decorative representation",
+          "representation_routes": [
+            {
+              "type": "rule + table extension -> evidence for Use a rule to build or extend a table."
+            }
+          ],
+          "difficulty_intent": "purpose-fit evidence; not an Intro/Review/Mastery stage label",
+          "invariant": "Student evidence must directly demonstrate: Use a rule to build or extend a table.",
+          "variation_axes": [
+            "change values while preserving the same evidence job",
+            "vary signs/ordering when mathematically useful"
+          ],
+          "forbidden_variations": [
+            "changing the evidence job",
+            "cosmetic name/number changes that alter no meaningful parameter"
+          ],
+          "allowed_destinations": [
+            "Practice"
+          ],
+          "product_eligibility": [
+            "Practice",
+            "Practice Builder",
+            "Review"
+          ],
+          "best_use": "Use a rule to add values on both sides of an existing table.",
+          "avoid_uses": "Avoid when the evidence target is not exactly: Use a rule to build or extend a table.",
+          "fresh_instance_rule": "Instantiate the locked template with fresh values/choices while preserving the evidence architecture and response mode.",
+          "approval_status": "DRAFT_REVIEW",
+          "family_revision": 1,
+          "superseded_by": null,
+          "template_contract": {
+            "prompt_template": "Use {rule}. Add the rows for x={before} and x={after}.",
+            "parameters": {
+              "rule": "linear rule",
+              "before": "input below displayed range",
+              "after": "input above displayed range"
+            },
+            "constraints": [
+              "two new rows"
+            ],
+            "answer_rule": "Evaluate rule at both new inputs.",
+            "wording_locked": true
+          },
+          "exemplar": {
+            "student_html": "<p>Use \\(y=-2x+6\\). Add the rows for \\(x=0\\) and \\(x=4\\).</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>1</td><td>4</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>0</td></tr></table><div class=\"response-surface\">New rows:</div>",
+            "answer": "(0,6) and (4,-2)",
+            "solution": "At x=0, y=6; at x=4, y=-2.",
+            "scoring_guidance": "2 points: both rows."
+          },
+          "bank_item_id": "ALG1-U1-Q160",
+          "teacher_question_id": "Q160"
+        }
+      ]
+    }
+  ]
+}
