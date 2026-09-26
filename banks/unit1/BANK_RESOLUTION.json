@@ -14,20 +14,22 @@
   },
   "extension_mastery_goal_files": {
     "U1-MG01": "mastery_goal_extensions/U1-MG01.json",
-    "U1-MG02": "mastery_goal_extensions/U1-MG02.json"
+    "U1-MG02": "mastery_goal_extensions/U1-MG02.json",
+    "U1-MG03": "mastery_goal_extensions/U1-MG03.json",
+    "U1-MG04": "mastery_goal_extensions/U1-MG04.json"
   },
   "merge_order": [
     "base",
     "extension",
     "revision_overlay"
   ],
-  "eligibility_rule": "Resolve base + extension + revision overlay first. Only the resolved current family is eligible for new products; approval_status must be APPROVED and superseded_by must be null.",
+  "eligibility_rule": "Resolve base + extension + revision overlay first. Only the resolved current family is eligible for new products; approval_status must be APPROVED and superseded_by must be null. DRAFT_REVIEW families are visible for teacher review but are not runtime-eligible.",
   "runtime_authoring_rule": "Question structure and wording are fixed by family template. Runtime may only instantiate declared parameters/number swaps and approved representation rendering. It may not invent or paraphrase a new question.",
   "question_structure_authority": [
     "memories/_question_structure/QUESTION_STRUCTURE_CORE.md",
     "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md"
   ],
-  "graph_rule": "Cartesian graphs use the approved graph tool / graph rendering contract; do not invent decorative graphs.",
+  "graph_rule": "Cartesian graphs normally use the approved graph tool / graph rendering contract. Teacher-directed local graph exceptions must be explicit in the family representation route.",
   "viewer_pages": {
     "U1-MG01": "mg01.html",
     "U1-MG02": "mg02.html",

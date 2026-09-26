@@ -1,23 +1,28 @@
 {
-  "schema_version": "bank-expansion-provenance/1.0",
+  "schema_version": "bank-expansion-provenance/1.1",
   "course": "Algebra 1",
   "unit": 1,
-  "date": "2026-09-23",
+  "date": "2026-09-26",
   "scope": [
-    "MG01 focused page",
-    "MG02 focused page",
-    "MG03 focused page",
-    "MG04 focused page",
-    "MG01/MG02 family expansion"
+    "MG02 teacher-directed family revisions",
+    "remove family-level Intro/Review/Mastery viewer badges",
+    "MG03 D-J family expansion for teacher review",
+    "MG04 D-J family expansion for teacher review"
   ],
+  "pins": {
+    "memories": "67c283d30f84594c43910cf851aeb7cec1352202",
+    "algebra": "76cab3018673cd416e01df6923e537f5b040ce35"
+  },
   "authorities": [
-    "existing algebra/banks/unit1 family bank",
+    "memories/Curriculum_Philosophy.txt",
     "memories/_question_structure/QUESTION_STRUCTURE_CORE.md",
     "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-    "memories/_question_structure/catalogs/math_course_family_map_algebra1.json"
+    "memories/frameworks/Algebra_1/FRAMEWORK.txt",
+    "algebra/banks/unit1 current resolved family bank"
   ],
   "closed_source_only": true,
   "web_search_used": false,
   "public_web_used": false,
-  "note": "Existing A-C family files are not rewritten. Extensions are merged through BANK_RESOLUTION.json so approved prior content remains byte-stable."
+  "teacher_review_gate": "New MG03/MG04 D-J families are DRAFT_REVIEW and are intentionally not runtime-eligible until approved.",
+  "note": "Existing A-C base family files remain unchanged. MG02 content edits resolve through FAMILY_REVISIONS.json; MG03/MG04 expansion is stored in new extension files."
 }

@@ -6,7 +6,7 @@
   "resolution_rule": "Load base families, append extension families, then deep-merge each matching override. The override is the current approved revision for new products and Bank viewers; older source text remains historical only.",
   "deep_merge_rule": "Top-level fields are replaced by override values. template_contract and exemplar are merged by key. Arrays supplied in an override replace the prior array.",
   "question_structure_authority": "memories/_question_structure/library/Universal_Question_Structure_Library_v2.md",
-  "revision_count": 34,
+  "revision_count": 48,
   "revisions": [
     {
       "family_id": "U1-MG01-IC01-C",
@@ -847,24 +847,54 @@
     {
       "family_id": "U1-MG02-IC01-E",
       "teacher_question_id": "Q078",
-      "revision": 2,
-      "reason": "Shorten the slope-estimate directions",
+      "revision": 3,
+      "reason": "Teacher requested a multiple-choice visual slope estimate with magnitude and sign distractors.",
       "override": {
+        "family_name": "Estimate Slope from a Graph",
+        "family_purpose": "Estimate slope from a visible line using both steepness and sign.",
+        "evidence_job": "select a reasonable slope estimate from a graph",
+        "student_action": "Choose the slope whose sign and magnitude best match the graphed line.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "graph + numerical choices",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "Cartesian line -> slope estimate",
+            "asset": "figures/u1_mg02_ic01_e_estimate.svg",
+            "local_exception": "Teacher-approved clean no-grid estimate graph."
+          }
+        ],
+        "difficulty_intent": "visual estimation",
+        "variation_axes": [
+          "vary line sign",
+          "vary simple fractional/integer slope magnitude",
+          "use two obviously wrong-magnitude distractors and one wrong-sign same-magnitude distractor"
+        ],
+        "forbidden_variations": [
+          "more than one visually plausible correct choice",
+          "requiring exact point reading before answering"
+        ],
         "template_contract": {
-          "prompt_template": "Before calculating: is the slope positive, negative, or zero? Is |m| < 1, = 1, or > 1? Then find m.",
-          "parameters": {},
+          "prompt_template": "Which is the best estimate of the slope of the line?",
+          "parameters": {
+            "correct_slope": "simple integer or fraction",
+            "choices": "four slopes: correct; opposite sign same magnitude; too large positive; too large negative"
+          },
           "constraints": [
-            "graph must make sign and steepness visually discernible"
+            "four answer choices",
+            "exactly one matches both sign and magnitude"
           ],
-          "answer_rule": "Classify sign and magnitude, then calculate rise/run.",
+          "answer_rule": "Choose the option matching the line direction and approximate steepness.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>Before calculating: is the slope positive, negative, or zero? Is \\(|m|<1\\), \\(|m|=1\\), or \\(|m|>1\\)? Then find \\(m\\).</p><img class=\"graph\" src=\"figures/u1_mg02_slope_b.png\" alt=\"Descending line with slope negative one half\"><div class=\"response-surface\">Prediction + m:</div>",
-          "answer": "Negative; |m|<1; m=-1/2.",
-          "solution": "The line falls gently; rise/run gives -2/4=-1/2."
+          "student_html": "<p>Which is the best estimate of the slope of the line?</p><img class=\"graph\" src=\"figures/u1_mg02_ic01_e_estimate.svg\" alt=\"A gently rising line\"><ol class=\"choices\"><li>\\(4\\)</li><li>\\(-4\\)</li><li>\\(\\frac{1}{2}\\)</li><li>\\(-\\frac{1}{2}\\)</li></ol>",
+          "answer": "C. 1/2",
+          "solution": "The line rises, so the slope is positive, and it rises about 1 unit for every 2 units to the right.",
+          "scoring_guidance": "1 point: selects C."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -902,27 +932,38 @@
     {
       "family_id": "U1-MG02-IC03-G",
       "teacher_question_id": "Q094",
-      "revision": 2,
-      "reason": "Shorten the sign-error critique",
+      "revision": 3,
+      "reason": "Teacher requested the rise/run fraction idea as multiple choice.",
       "override": {
+        "family_name": "Choose Rise and Run from a Fractional Slope",
+        "family_purpose": "Recognize the correct rise/run pair for a slope fraction.",
+        "evidence_job": "select rise and run that match a fractional slope",
+        "student_action": "Choose the numerator/denominator orientation and sign that matches slope.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "slope fraction + rise/run choices",
+        "difficulty_intent": "direct slope meaning selected response",
         "template_contract": {
-          "prompt_template": "A student rewrites {original} as {incorrect_rewrite}. What is the error?",
+          "prompt_template": "The slope is {m}. Which rise and run match this slope?",
           "parameters": {
-            "original": "linear equation",
-            "incorrect_rewrite": "one-sign-error rewrite"
+            "m": "reduced fraction",
+            "choices": "four rise/run pairs"
           },
           "constraints": [
-            "exactly one algebraic sign error"
+            "one correct pair",
+            "distractors include reciprocal and sign errors",
+            "use positive run convention"
           ],
-          "answer_rule": "Identify the incorrect sign change and state the correct slope.",
+          "answer_rule": "rise = numerator; run = denominator with slope sign assigned to rise.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>A student rewrites \\(y+4=3x\\) as \\(y=-3x-4\\). What is the error?</p><div class=\"response-surface\">Answer:</div>",
-          "answer": "The 3x term should stay positive; slope = 3.",
-          "solution": "Subtracting 4 gives y=3x-4."
+          "student_html": "<p>The slope is \\(\\frac{2}{5}\\). Which rise and run match this slope?</p><ol class=\"choices\"><li>rise 2, run 5</li><li>rise 5, run 2</li><li>rise -2, run 5</li><li>rise 2, run -5</li></ol>",
+          "answer": "A. rise 2, run 5",
+          "solution": "Slope = rise/run = 2/5.",
+          "scoring_guidance": "1 point: selects A."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -930,30 +971,36 @@
     {
       "family_id": "U1-MG02-IC04-G",
       "teacher_question_id": "Q101",
-      "revision": 2,
-      "reason": "Shorten the rate-units critique",
+      "revision": 3,
+      "reason": "Teacher requested a vocabulary-support family for common rate words such as per, each, and every.",
       "override": {
+        "family_name": "Identify Rate-of-Change Words",
+        "family_purpose": "Recognize common words that signal a per-one rate relationship in context.",
+        "evidence_job": "identify language that commonly signals a rate of change",
+        "student_action": "Choose the rate words from a small word bank.",
+        "question_structure_id": "VOCAB-CONCEPT-TO-TERM-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "word bank -> rate vocabulary",
+        "difficulty_intent": "vocabulary support for context rates",
         "template_contract": {
-          "prompt_template": "{output_change} {output_units} in {input_change} {input_units}. A student writes the rate in {reversed_units}. Are the units correct?",
+          "prompt_template": "Use the word bank. Which three words often signal a rate of change? Word bank: {words}.",
           "parameters": {
-            "output_change": "numeric change",
-            "output_units": "output units",
-            "input_change": "numeric change",
-            "input_units": "input units",
-            "reversed_units": "input units per output unit"
+            "words": "per, each, every, total in varied order"
           },
           "constraints": [
-            "rate value and units must correspond to output/input"
+            "exactly three intended rate cue words",
+            "include one non-rate distractor"
           ],
-          "answer_rule": "No when units are reversed; use output_units per input_units.",
+          "answer_rule": "per, each, every.",
           "wording_locked": true
         },
         "exemplar": {
-          "student_html": "<p>A car travels 180 miles in 3 hours. A student writes 60 hours per mile. Are the units correct?</p><div class=\"response-surface\">Answer:</div>",
-          "answer": "No; 60 miles per hour.",
-          "solution": "Rate is output miles divided by input hours."
+          "student_html": "<p><b>Word bank:</b> total, per, each, every</p><p>Which three words often signal a rate of change?</p><div class=\"response-surface\">Words: __________</div>",
+          "answer": "per, each, every",
+          "solution": "Phrases such as dollars per hour, 4 miles each minute, or 6 points every game describe a change per one unit.",
+          "scoring_guidance": "1 point for identifying all three rate words."
         },
-        "family_revision": 2,
+        "family_revision": 3,
         "approval_status": "APPROVED",
         "superseded_by": null
       }
@@ -1435,6 +1482,575 @@
           "answer": "x-axis",
           "solution": "By definition, the x-intercept is where the graph crosses the x-axis.",
           "scoring_guidance": "1 point: x-axis."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC01-C",
+      "teacher_question_id": "Q015",
+      "revision": 2,
+      "reason": "Teacher requested a simpler graph-sign misconception: positive line, incorrect negative slope, explain how the graph disproves the sign.",
+      "override": {
+        "family_name": "Explain a Slope-Sign Error",
+        "family_purpose": "Use the direction of a graphed line to reject an impossible slope sign.",
+        "evidence_job": "explain why a negative slope claim is inconsistent with a rising graph",
+        "student_action": "Use left-to-right graph behavior to explain why the stated negative slope is wrong.",
+        "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph + incorrect slope claim",
+        "representation_need": "required; the line direction is the evidence source",
+        "representation_routes": [
+          {
+            "type": "gridless Cartesian line -> slope-sign reasoning",
+            "asset": "figures/u1_mg02_ic01_c_positive_sign.svg",
+            "local_exception": "Teacher requested a clean line without gridlines for this family."
+          }
+        ],
+        "difficulty_intent": "direct conceptual slope-sign check",
+        "variation_axes": [
+          "vary positive line steepness",
+          "vary the incorrect negative slope value"
+        ],
+        "forbidden_variations": [
+          "using a descending line",
+          "adding a rise/run calculation that distracts from the sign idea"
+        ],
+        "template_contract": {
+          "prompt_template": "A student says the slope of this line is {negative_claim}. How do you know this is wrong?",
+          "parameters": {
+            "negative_claim": "negative integer or simple negative fraction",
+            "graph": "positive-slope line"
+          },
+          "constraints": [
+            "line rises from left to right",
+            "claim is negative",
+            "no rise/run calculation is required"
+          ],
+          "answer_rule": "Explain that a line rising left to right has positive slope, so a negative slope is impossible.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A student says the slope of this line is \\(-\\frac{1}{2}\\). How do you know this is wrong?</p><img class=\"graph\" src=\"figures/u1_mg02_ic01_c_positive_sign.svg\" alt=\"A line that rises from left to right\"><div class=\"response-surface\">Explain:</div>",
+          "answer": "The line rises from left to right, so its slope must be positive. A negative slope cannot match this graph.",
+          "solution": "Positive slope means y increases as x increases.",
+          "scoring_guidance": "1 point: explains that the line rises left to right, so the slope is positive."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC01-G",
+      "teacher_question_id": "Q080",
+      "revision": 2,
+      "reason": "Teacher requested an easier direct graph-slope family with two marked points shown on the line.",
+      "override": {
+        "family_name": "Find Slope from Two Marked Graph Points",
+        "family_purpose": "Make graph slope calculation more accessible by marking the two points to use.",
+        "evidence_job": "find slope from two marked points on a graph",
+        "student_action": "Read the two marked points and calculate rise over run.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "graph with two marked points",
+        "representation_need": "required",
+        "representation_routes": [
+          {
+            "type": "Cartesian line + two marked points -> slope",
+            "asset": "figures/u1_mg02_ic01_g_marked_points.svg",
+            "local_exception": "Teacher requested marked points without point-name labels."
+          }
+        ],
+        "difficulty_intent": "supported direct graph slope",
+        "variation_axes": [
+          "vary two lattice points",
+          "vary positive or negative simple slope"
+        ],
+        "forbidden_variations": [
+          "printing coordinate labels next to the points",
+          "making students choose which points to use"
+        ],
+        "template_contract": {
+          "prompt_template": "Use the two marked points on the graph. Find the slope of the line.",
+          "parameters": {
+            "points": "two visible lattice points on the line"
+          },
+          "constraints": [
+            "exactly two points are emphasized",
+            "points are not named A/B",
+            "coordinates can be read from the axes"
+          ],
+          "answer_rule": "m = change in y / change in x using the two marked points.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the two marked points on the graph. Find the slope of the line.</p><img class=\"graph\" src=\"figures/u1_mg02_ic01_g_marked_points.svg\" alt=\"A rising line with two marked points\"><div class=\"response-surface\">Slope: _____</div>",
+          "answer": "1",
+          "solution": "The marked points are (-2,-1) and (2,3): rise = 4 and run = 4, so m=1.",
+          "scoring_guidance": "1 point: 1."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC02-D",
+      "teacher_question_id": "Q084",
+      "revision": 2,
+      "reason": "Teacher requested a simpler two-row positive-number table with x changing by 1.",
+      "override": {
+        "family_name": "Find Slope from Two Simple Table Rows",
+        "family_purpose": "Find table slope with minimal row-selection burden.",
+        "evidence_job": "find slope from two simple table rows",
+        "student_action": "Use two positive-value rows with a one-unit x change to find slope.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "two-row table",
+        "difficulty_intent": "supported direct table slope",
+        "template_contract": {
+          "prompt_template": "Use the two rows in the table. Find the slope.",
+          "parameters": {
+            "x1": "positive integer",
+            "x2": "x1+1",
+            "y1": "positive integer",
+            "y2": "positive integer"
+          },
+          "constraints": [
+            "exactly two data rows",
+            "x changes by 1",
+            "all displayed values are positive"
+          ],
+          "answer_rule": "m=(y2-y1)/(x2-x1).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Use the two rows in the table. Find the slope.</p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>11</td></tr></table><div class=\"response-surface\">Slope: _____</div>",
+          "answer": "4",
+          "solution": "y increases by 4 while x increases by 1, so slope = 4/1 = 4.",
+          "scoring_guidance": "1 point: 4."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC02-G",
+      "teacher_question_id": "Q087",
+      "revision": 2,
+      "reason": "Teacher requested a simple slope-from-two-points version.",
+      "override": {
+        "family_name": "Find Slope from Two Points",
+        "family_purpose": "Compute slope directly from two ordered pairs without a larger table.",
+        "evidence_job": "find slope from two data points",
+        "student_action": "Use two ordered pairs to calculate change in y over change in x.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "two ordered pairs",
+        "difficulty_intent": "direct slope calculation",
+        "template_contract": {
+          "prompt_template": "Find the slope through the points {p1} and {p2}.",
+          "parameters": {
+            "p1": "ordered pair",
+            "p2": "ordered pair with nonzero x change"
+          },
+          "constraints": [
+            "simple integer coordinates",
+            "slope is integer or simple fraction"
+          ],
+          "answer_rule": "m=(y2-y1)/(x2-x1).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Find the slope through the points \\( (2,5) \\) and \\( (6,13) \\).</p><div class=\"response-surface\">Slope: _____</div>",
+          "answer": "2",
+          "solution": "m=(13-5)/(6-2)=8/4=2.",
+          "scoring_guidance": "1 point: 2."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC02-H",
+      "teacher_question_id": "Q088",
+      "revision": 2,
+      "reason": "Teacher requested the existing change statement but a direct slope/rate question rather than a critique.",
+      "override": {
+        "family_name": "Find Rate from Stated Table Changes",
+        "family_purpose": "Use stated x- and y-changes to compute slope directly.",
+        "evidence_job": "find slope from stated changes between table values",
+        "student_action": "Divide the y-change by the x-change.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "verbalized table change",
+        "difficulty_intent": "direct rate calculation",
+        "template_contract": {
+          "prompt_template": "From x={x1} to x={x2}, y changes from {y1} to {y2}. What is the slope or rate of change?",
+          "parameters": {
+            "x1": "integer",
+            "x2": "different integer",
+            "y1": "integer",
+            "y2": "integer"
+          },
+          "constraints": [
+            "nonzero x change",
+            "simple resulting slope"
+          ],
+          "answer_rule": "(y2-y1)/(x2-x1).",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>From x=2 to x=5, y changes from 11 to 20. What is the slope or rate of change?</p><div class=\"response-surface\">Slope: _____</div>",
+          "answer": "3",
+          "solution": "The y-change is 9 and the x-change is 3, so slope = 9/3 = 3.",
+          "scoring_guidance": "1 point: 3."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC02-I",
+      "teacher_question_id": "Q089",
+      "revision": 2,
+      "reason": "Teacher requested actual tables and a constant-rate classification with explanation.",
+      "override": {
+        "family_name": "Identify a Constant-Rate Table",
+        "family_purpose": "Compare visible tables and identify which one has a constant rate of change.",
+        "evidence_job": "determine whether a table has constant rate of change",
+        "student_action": "Compare successive changes in two tables and explain which rate stays constant.",
+        "question_structure_id": "CONDITION-CLASSIFY-CASE-01",
+        "response_mode": "constructed response",
+        "representation_mode": "two semantic tables",
+        "difficulty_intent": "table-rate reasoning",
+        "template_contract": {
+          "prompt_template": "Which table has a constant rate of change? Explain.",
+          "parameters": {
+            "table_A": "3+ rows with constant rate",
+            "table_B": "3+ rows with nonconstant rate"
+          },
+          "constraints": [
+            "render both as actual HTML tables",
+            "x intervals are comparable within each table"
+          ],
+          "answer_rule": "Identify the table whose delta y / delta x is the same across intervals and cite the repeated rate.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Which table has a constant rate of change? Explain.</p><p><b>Table A</b></p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>8</td></tr></table><p><b>Table B</b></p><table class=\"data-table\"><tr><th>x</th><th>y</th></tr><tr><td>0</td><td>2</td></tr><tr><td>1</td><td>5</td></tr><tr><td>2</td><td>9</td></tr></table><div class=\"response-surface\">Table + explanation:</div>",
+          "answer": "Table A. Its y-values increase by 3 each time x increases by 1; Table B changes by 3 and then 4.",
+          "solution": "Constant rate requires the same y-change for equal x-changes.",
+          "scoring_guidance": "2 points: identifies Table A and gives a correct change/rate explanation."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-C",
+      "teacher_question_id": "Q021",
+      "revision": 2,
+      "reason": "Teacher requested an intercept-first equation and a student who mistakes b for slope.",
+      "override": {
+        "family_name": "Explain Slope vs. Intercept in an Intercept-First Equation",
+        "family_purpose": "Distinguish the x-coefficient from the constant term even when the equation is written with b first.",
+        "evidence_job": "explain why the constant term is not the slope",
+        "student_action": "Identify the coefficient of x as slope and explain the role of the constant term.",
+        "question_structure_id": "ERROR-DIAGNOSE-WORKED-SOLUTION-01",
+        "response_mode": "constructed response",
+        "representation_mode": "equation + misconception claim",
+        "difficulty_intent": "slope/intercept misconception",
+        "template_contract": {
+          "prompt_template": "A student says the slope of {equation} is {b} because {b} comes first. Explain the error and state the slope.",
+          "parameters": {
+            "equation": "linear equation written y=b+mx or y=b-mx",
+            "b": "constant term"
+          },
+          "constraints": [
+            "constant term is written before the x-term",
+            "x coefficient is visibly different from b"
+          ],
+          "answer_rule": "Slope is the coefficient of x; b is the y-intercept.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A student says the slope of \\(y=8-3x\\) is \\(8\\) because 8 comes first. Explain the error and state the slope.</p><div class=\"response-surface\">Explain:</div>",
+          "answer": "The slope is -3. The number 8 is the y-intercept; slope is the coefficient of x.",
+          "solution": "Rewrite mentally as y=-3x+8.",
+          "scoring_guidance": "2 points: identifies -3 as slope and 8 as the y-intercept/constant term."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-E",
+      "teacher_question_id": "Q092",
+      "revision": 2,
+      "reason": "Teacher requested a selected-response equation whose correct answer is written with the intercept first.",
+      "override": {
+        "family_name": "Choose an Intercept-First Equation with a Given Slope",
+        "family_purpose": "Recognize slope as the x-coefficient when the constant term is written first.",
+        "evidence_job": "match a target slope to an intercept-first linear equation",
+        "student_action": "Select the equation whose x-term has the target coefficient.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "equation choices",
+        "difficulty_intent": "equation slope recognition",
+        "template_contract": {
+          "prompt_template": "Which equation has slope {m}?",
+          "parameters": {
+            "m": "integer or simple fraction",
+            "choices": "four equations, with correct equation written y=b+mx or y=b-mx"
+          },
+          "constraints": [
+            "exactly one equation has target x coefficient",
+            "correct answer places constant term before x-term"
+          ],
+          "answer_rule": "Choose the equation whose x coefficient equals m.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Which equation has slope \\(-2\\)?</p><ol class=\"choices\"><li>\\(y=7-2x\\)</li><li>\\(y=-2+7x\\)</li><li>\\(y=7+2x\\)</li><li>\\(y=-7+2x\\)</li></ol>",
+          "answer": "A. y=7-2x",
+          "solution": "The coefficient of x is -2.",
+          "scoring_guidance": "1 point: selects A."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-F",
+      "teacher_question_id": "Q093",
+      "revision": 2,
+      "reason": "Teacher requested a direct fraction-slope to rise/run family.",
+      "override": {
+        "family_name": "Name Rise and Run from a Fractional Slope",
+        "family_purpose": "Connect the numerator and denominator of slope to rise and run.",
+        "evidence_job": "identify rise and run from a fractional slope",
+        "student_action": "State the signed rise and positive run represented by a slope fraction.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "slope fraction -> rise/run",
+        "difficulty_intent": "direct slope meaning",
+        "template_contract": {
+          "prompt_template": "The slope is {m}. What are the rise and run?",
+          "parameters": {
+            "m": "reduced integer fraction"
+          },
+          "constraints": [
+            "use positive run convention",
+            "negative sign belongs to rise when slope is negative"
+          ],
+          "answer_rule": "rise = signed numerator; run = positive denominator.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>The slope is \\(-\\frac{3}{4}\\). What are the rise and run?</p><div class=\"response-surface\">Rise: _____ &nbsp; Run: _____</div>",
+          "answer": "Rise = -3; run = 4.",
+          "solution": "Slope = rise/run, so -3/4 means down 3 and right 4.",
+          "scoring_guidance": "2 points: rise -3 and run 4."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-H",
+      "teacher_question_id": "Q095",
+      "revision": 2,
+      "reason": "Teacher requested rise/run identification from a fraction appearing as the x-coefficient in y=mx+b.",
+      "override": {
+        "family_name": "Read Rise and Run from an Equation",
+        "family_purpose": "Connect a fractional x-coefficient in slope-intercept form to rise and run.",
+        "evidence_job": "identify rise and run from the slope in an equation",
+        "student_action": "Read the slope coefficient and state its rise and run.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "equation -> slope fraction -> rise/run",
+        "difficulty_intent": "equation-to-rise/run connection",
+        "template_contract": {
+          "prompt_template": "For {equation}, what are the rise and run?",
+          "parameters": {
+            "equation": "y=(p/q)x+b with reduced fraction p/q"
+          },
+          "constraints": [
+            "use positive run convention"
+          ],
+          "answer_rule": "rise = signed numerator of x coefficient; run = positive denominator.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For \\(y=-\\frac{4}{3}x+6\\), what are the rise and run?</p><div class=\"response-surface\">Rise: _____ &nbsp; Run: _____</div>",
+          "answer": "Rise = -4; run = 3.",
+          "solution": "The slope is -4/3.",
+          "scoring_guidance": "2 points: rise -4 and run 3."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-I",
+      "teacher_question_id": "Q096",
+      "revision": 2,
+      "reason": "Teacher requested the fraction-to-rise/run idea as fill-in-the-blank.",
+      "override": {
+        "family_name": "Complete Rise and Run Blanks",
+        "family_purpose": "Use slope = rise/run to fill the two values directly.",
+        "evidence_job": "fill in rise and run from a given slope fraction",
+        "student_action": "Enter the signed numerator as rise and positive denominator as run.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "fraction + fill-in blanks",
+        "difficulty_intent": "supported direct slope meaning",
+        "template_contract": {
+          "prompt_template": "Slope = {m}. Rise = _____ and run = _____.",
+          "parameters": {
+            "m": "reduced integer fraction"
+          },
+          "constraints": [
+            "use positive run convention"
+          ],
+          "answer_rule": "rise = signed numerator; run = positive denominator.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>Slope = \\(-\\frac{5}{2}\\).</p><p>Rise = <b>_____</b> and run = <b>_____</b>.</p>",
+          "answer": "-5; 2",
+          "solution": "Slope is rise/run.",
+          "scoring_guidance": "2 points: -5 and 2."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC03-J",
+      "teacher_question_id": "Q097",
+      "revision": 2,
+      "reason": "Teacher requested fill-in rise/run work for slopes 1, -1, and an integer coefficient.",
+      "override": {
+        "family_name": "Fill Rise and Run from Integer-Slope Equations",
+        "family_purpose": "Connect x-coefficients 1, -1, and other integers to rise/run.",
+        "evidence_job": "identify rise and run for integer slopes from equations",
+        "student_action": "Fill in rise and run for several slope-intercept equations.",
+        "question_structure_id": "PROC-DIRECT-VARIATION-SET-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "equation set -> rise/run table",
+        "difficulty_intent": "integer slope fluency",
+        "template_contract": {
+          "prompt_template": "For each equation, fill in a rise and run that match its slope.",
+          "parameters": {
+            "equations": "three y=mx+b equations including m=1, m=-1, and another nonzero integer"
+          },
+          "constraints": [
+            "use run = 1 for integer-slope exemplar",
+            "three equations"
+          ],
+          "answer_rule": "For integer m, rise=m and run=1.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>For each equation, fill in a rise and run that match its slope.</p><table class=\"data-table\"><tr><th>Equation</th><th>Rise</th><th>Run</th></tr><tr><td>\\(y=x+4\\)</td><td>_____</td><td>_____</td></tr><tr><td>\\(y=-x+2\\)</td><td>_____</td><td>_____</td></tr><tr><td>\\(y=3x-5\\)</td><td>_____</td><td>_____</td></tr></table>",
+          "answer": "(1,1); (-1,1); (3,1)",
+          "solution": "The x-coefficients are 1, -1, and 3; each integer can be written over 1.",
+          "scoring_guidance": "6 blanks, 1 point per correct rise/run entry or equivalent teacher scoring."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC04-F",
+      "teacher_question_id": "Q100",
+      "revision": 2,
+      "reason": "Teacher rejected the prior distractors; replace with meaningful rate choices tied to common arithmetic errors.",
+      "override": {
+        "family_name": "Choose the Context Rate",
+        "family_purpose": "Choose the correct unit rate from a short context with plausible numerical distractors.",
+        "evidence_job": "identify the rate of change from a context",
+        "student_action": "Compute a unit rate and select the matching statement.",
+        "question_structure_id": "SELRESP-SINGLE-MISCONCEPTION-CHECK-01",
+        "response_mode": "selected response",
+        "representation_mode": "context + numerical rate choices",
+        "difficulty_intent": "direct context rate",
+        "template_contract": {
+          "prompt_template": "{output} changes by {amount} in {time}. Which rate is correct?",
+          "parameters": {
+            "amount": "positive amount",
+            "time": "positive time",
+            "unit_rate": "amount/time"
+          },
+          "constraints": [
+            "four choices",
+            "distractors are plausible arithmetic alternatives, not nonsense unit reversals"
+          ],
+          "answer_rule": "unit rate = change in output / change in input with correct units.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A printer makes 24 pages in 3 minutes at a constant rate. Which rate is correct?</p><ol class=\"choices\"><li>8 pages per minute</li><li>3 pages per minute</li><li>21 pages per minute</li><li>72 pages per minute</li></ol>",
+          "answer": "A. 8 pages per minute",
+          "solution": "24 pages / 3 minutes = 8 pages per minute.",
+          "scoring_guidance": "1 point: selects A."
+        },
+        "family_revision": 2,
+        "approval_status": "APPROVED",
+        "superseded_by": null
+      }
+    },
+    {
+      "family_id": "U1-MG02-IC04-J",
+      "teacher_question_id": "Q104",
+      "revision": 2,
+      "reason": "Teacher requested a direct find-the-rate task rather than verification of a claim.",
+      "override": {
+        "family_name": "Find Rate of Change from Two Context Measurements",
+        "family_purpose": "Compute rate of change directly from two measurements in context.",
+        "evidence_job": "find rate of change from two context measurements",
+        "student_action": "Compute change in output divided by change in input and include units.",
+        "question_structure_id": "PROC-DIRECT-EXECUTE-01",
+        "response_mode": "short constructed response",
+        "representation_mode": "context measurements",
+        "difficulty_intent": "direct context rate",
+        "template_contract": {
+          "prompt_template": "At {x1} {input_units}, the value is {y1} {output_units}. At {x2} {input_units}, it is {y2} {output_units}. Find the rate of change.",
+          "parameters": {
+            "x1": "number",
+            "x2": "different number",
+            "y1": "number",
+            "y2": "number",
+            "input_units": "input units",
+            "output_units": "output units"
+          },
+          "constraints": [
+            "constant-rate context or two-point rate requested",
+            "units are unambiguous"
+          ],
+          "answer_rule": "(y2-y1)/(x2-x1) output_units per input_unit.",
+          "wording_locked": true
+        },
+        "exemplar": {
+          "student_html": "<p>A tank contains 42 L at 2 minutes and 78 L at 5 minutes. Find the rate of change.</p><div class=\"response-surface\">Rate: _____ L/min</div>",
+          "answer": "12 L/min",
+          "solution": "(78-42)/(5-2)=36/3=12 L/min.",
+          "scoring_guidance": "1 point: 12 L/min."
         },
         "family_revision": 2,
         "approval_status": "APPROVED",

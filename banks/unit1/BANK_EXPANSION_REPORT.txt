@@ -1,27 +1,39 @@
-ALGEBRA 1 UNIT 1 BANK EXPANSION REPORT
-====================================
+ALGEBRA 1 UNIT 1 BANK EXPANSION / REVISION REPORT
+==============================================
 
 Scope
 -----
-- Added focused MG01, MG02, MG03, and MG04 Bank pages.
-- Expanded the eight I Cans in MG01 and MG02 from 3 to 10 strong families each (A-J).
-- MG03/MG04 remain at their current 3 families per I Can and now have focused pages.
-- Added 56 new APPROVED families. Unit 1 total: 104 families.
+- Revised the teacher-selected U1-MG02 families in IC01-IC04.
+- Removed misleading Intro / Review / Mastery badges from the shared Mastery-Goal Bank viewer.
+- Expanded U1-MG03 and U1-MG04 from 3 to 10 families per I Can (A-J).
+- New MG03/MG04 D-J families are DRAFT_REVIEW so the teacher can inspect them before downstream use.
+- Existing stable Q001-Q104 identifiers remain fixed; new review families append as Q105-Q160.
+- Unit 1 now exposes 160 total family records: 104 prior families + 56 teacher-review expansion families.
 
-Question structure authority
-----------------------------
-New families intentionally use the current canonical structures from the District Worksheet Builder / _question_structure library, including selected-response misconception checks, graph construction from constraints, feature identification, critique-a-claim, compare methods, missing information, verify reasonableness, case classification, table reconstruction, strategy selection, parameter variation, predict/extrapolate, and context rate comparison.
+MG02 revision highlights
+------------------------
+- Graph slope: simpler sign-error reasoning, visual slope estimation, and marked-point slope reading.
+- Table slope: simpler two-row work, direct two-point slope, direct rate calculation, and actual constant-rate tables.
+- Equation slope: intercept-first forms and a rise/run progression from fraction -> multiple choice -> equation -> fill-in -> integer slopes.
+- Context rate: meaningful rate choices, rate cue words (per/each/every), and direct rate finding.
 
-Locked-template rule
---------------------
-Every new family includes a template_contract. Routine builders may instantiate only declared parameters/number swaps and approved representation rendering. They may not paraphrase the prompt into a new structure.
+Stage-label cleanup
+-------------------
+The Bank viewer no longer displays Intro / Review / Mastery badges on individual families. Those labels belong to the Algebra curriculum spiral, not to individual Bank-family difficulty. Family cards retain the Family label, evidence role, response mode, representation, routing, and approval status.
+
+Teacher-review gate
+-------------------
+MG03/MG04 D-J families have approval_status=DRAFT_REVIEW. BANK_RESOLUTION.json permits runtime use only for APPROVED, non-superseded families, so these additions are visible in the Bank pages but cannot be selected by downstream builders until explicitly approved.
 
 Stable IDs
 ----------
-- Existing A-C family IDs are frozen as Q001-Q048.
-- New D-J families are Q049-Q104.
-- New items append; existing Q numbers never renumber because of sorting or insertion.
+- Q001-Q104 remain stable.
+- Q105-Q132: U1-MG03 D-J expansion.
+- Q133-Q160: U1-MG04 D-J expansion.
 
-Composite resolution
---------------------
-BANK_RESOLUTION.json is authoritative for merging existing base A-C files with the new MG01/MG02 extension files. Downstream builders must resolve through that contract and ignore superseded/non-approved families.
+Source / QA
+-----------
+- Closed project sources only.
+- Pinned memories commit: 67c283d30f84594c43910cf851aeb7cec1352202
+- Pinned algebra commit: 76cab3018673cd416e01df6923e537f5b040ce35
+- Question Structure authority: current canonical Core + Universal Question Structure Library v2.
