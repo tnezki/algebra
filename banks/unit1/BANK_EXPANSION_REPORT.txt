@@ -5,27 +5,23 @@ Scope
 -----
 - Preserves the current teacher-approved MG01/MG02 revisions and removal of family-level Intro / Review / Mastery viewer badges.
 - Preserves the MG03 D-J teacher-review expansion.
-- Preserves the teacher's second review pass to U1-MG04 and applies IC01 feedback round 3.
-- Expands U1-MG04-IC04 to Family K, so Unit 1 now exposes 161 total family records.
-- Q001-Q160 remain stable; the new IC04-K family appends as Q161.
+- Preserves MG04 feedback rounds 2-3 and applies the round-4 bad-question scan.
+- Unit 1 remains at 161 total family records with stable Q001-Q161 IDs.
 
-MG04 teacher revisions
-----------------------
-- IC01: larger tables with negative outputs; clearer sentence-based input/output notation; equation-based input/output identification; two graph connections.
-- IC02: retained as reviewed.
-- IC03: quadratic forward evaluation, supplied-equation inverse work, cleaner corresponding-output wording, ordered-pair inverse form, and a simple linear story output.
-- IC04: repair-only table correction, two-row extension, rule-matching ordered pair, decreasing-rule constraint y=b-mx, and a new consecutive-row family K.
+MG04 round-4 fixes
+------------------
+- Q137 / IC01-H: replaced weak throwaway multiple-choice distractors with plausible variable-role and coefficient/constant misconceptions.
+- Q138 / IC01-I: replaced the tautological graph labeled Input/Output with a contextual graph labeled Students and Number of Buses; students identify which quantity is input and which is output.
+- Q139 / IC01-J: the graph is now necessary evidence. The prompt gives only a student count, and students must read the bus count from the graph before writing the ordered pair.
+- Q161 / IC04-K: changed from a simple next-row continuation to an interior missing-row task. The exemplar shows (-2,-3), (1,9), (2,13), and (4,21) under y=4x+5; students add the missing row (3,17) between inputs 2 and 4.
 
-MG04 IC01 feedback round 3
----------------------------
-- Q037 / Family A: the requested input value also appears in the Output column of a different row, so students must use the column meaning rather than scan for the only matching number. The table remains larger and still includes a negative output.
-- Q133 / Family D: the same anti-shortcut rule is now locked into the selected-response table family.
-- Q135 / Family F: sentence order is intentionally output first, input second; students must translate to (input, output) rather than copy the given order.
-- Audit: all MG04 families were checked for the same specified-input table-lookup shortcut. Q037 and Q133 are the two row-identification families to which this constraint applies.
+Bad-question scan
+-----------------
+All resolved MG04 families A-K were reviewed for giveaway wording, decorative representations, answer values stated in the prompt, implausible selected-response distractors, and table tasks solvable by visual scanning rather than input/output meaning. The four families above were the clear failures and were repaired. Previously corrected anti-shortcut behavior in Q037/Q133 and output-first wording in Q135 remain intact.
 
 Teacher-review gate
 -------------------
-MG03 D-J and MG04 D-K remain approval_status=DRAFT_REVIEW. They are visible in the Bank pages but remain unavailable to downstream runtime builders until the teacher explicitly approves them. Existing base A-C families remain APPROVED; teacher-directed revisions to those base families resolve through FAMILY_REVISIONS.json.
+MG03 D-J and MG04 D-K remain approval_status=DRAFT_REVIEW. They are visible in the Bank pages but remain unavailable to downstream runtime builders until the teacher explicitly approves them. Existing base A-C families remain APPROVED.
 
 Stable IDs
 ----------
@@ -38,5 +34,5 @@ Source / QA
 -----------
 - Closed project sources only.
 - Pinned memories commit: 67c283d30f84594c43910cf851aeb7cec1352202
-- Pinned algebra commit: 2920c3c836754d75a4e3f609a42cade7d11a6287
+- Pinned algebra commit: 48c3e972683c147daa0c69018f818906b1c1a760
 - Question Structure authority: current canonical Core + Universal Question Structure Library v2.
