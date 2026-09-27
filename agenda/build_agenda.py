@@ -26,6 +26,7 @@ CONTENT_COLS = [3, 5, 7, 9, 11]  # C, E, G, I, K
 
 RESOURCE_LINKS = [
     ("Overview", "https://tnezki.github.io/algebra/misc/overview.html"),
+    ("Practice Builder", "https://tnezki.github.io/algebra/practice_builder___p7r4x/student_practice_builder.html"),
     ("Agenda", "https://tnezki.github.io/algebra/agenda/index.html"),
     ("Web Site", "https://tnezki.github.io/algebra/"),
     ("Textbook", "https://tnezki.github.io/textbooks/algebra/index.html"),
