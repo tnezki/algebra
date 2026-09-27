@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algebra 1 Planner 2026-2027 — Layout Mockup</title>
+<style>
+:root {
+  --navy:#173f6d;
+  --navy-2:#214d7e;
+  --gold:#e0bd4f;
+  --gold-light:#fff0b8;
+  --gold-pale:#fff8df;
+  --current-a:#fffaf0;
+  --current-b:#fff1bd;
+  --ink:#1f2937;
+  --muted:#64748b;
+  --line:#cfd4da;
+  --past:#3f4650;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:#fff;
+}
+.wrapper {
+  width:min(1760px, calc(100% - 32px));
+  margin:16px auto 44px;
+}
+.titlebar {
+  background:var(--navy);
+  color:#fff;
+  padding:11px 16px;
+  border-radius:18px 18px 0 0;
+  text-align:center;
+}
+.titlebar h1 {
+  margin:0;
+  font-size:1.65rem;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.resources {
+  border:1px solid var(--gold);
+  border-top:0;
+  padding:20px 18px 22px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  background:#fff9e9;
+}
+.resources a {
+  text-decoration:none;
+  color:var(--navy);
+  background:#fff;
+  border:1.5px solid #e3b43d;
+  border-radius:999px;
+  padding:12px 20px;
+  font-size:1.05rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+.resources a:hover,
+.resources a:focus-visible {
+  background:var(--gold-light);
+  border-color:var(--navy);
+}
+.mock-note {
+  margin:0;
+  padding:8px 14px;
+  text-align:center;
+  font-size:.82rem;
+  font-weight:700;
+  color:#425466;
+  background:#f5f7fa;
+  border:1px solid #d7dde4;
+  border-top:0;
+}
+.calendar-wrap {
+  overflow-x:auto;
+  border:1px solid #c8b675;
+  border-top:0;
+}
+table {
+  border-collapse:collapse;
+  width:100%;
+  min-width:1100px;
+  table-layout:fixed;
+}
+th, td {
+  width:20%;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  text-align:center;
+  vertical-align:middle;
+}
+tr > *:last-child { border-right:0; }
+select {
+  width:calc(100% - 14px);
+  min-height:38px;
+  margin:6px 7px;
+  padding:7px 34px 7px 10px;
+  color:var(--navy);
+  background:#fff;
+  border:1px solid #c6cdd5;
+  border-radius:8px;
+  font:inherit;
+  font-weight:800;
+  text-align:center;
+  text-align-last:center;
+  cursor:pointer;
+}
+select:focus-visible {
+  outline:3px solid rgba(23,63,109,.22);
+  outline-offset:1px;
+  border-color:var(--navy);
+}
+.day-control td {
+  background:#eef1f4;
+  border-top:5px solid #20242a;
+  padding:0;
+}
+.day-control select {
+  min-height:32px;
+  margin:5px 7px;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-size:.82rem;
+  color:#38424d;
+  background:#f8fafc;
+}
+.week-head th {
+  background:var(--navy);
+  color:#fff;
+  text-align:left;
+  padding:12px 12px;
+}
+.week-head .dow {
+  font-size:1.13rem;
+  font-weight:900;
+}
+.week-head .date {
+  margin-left:8px;
+  font-size:1.05rem;
+  font-weight:900;
+}
+.section-row td {
+  background:var(--current-a);
+  padding:0;
+}
+.section-row select {
+  min-height:45px;
+  font-size:1.03rem;
+  background:#fffdf6;
+  border-color:#dec36e;
+}
+.slot-row td {
+  min-height:46px;
+  padding:0;
+  background:var(--current-a);
+}
+.slot-row.alt td { background:var(--current-b); }
+.slot-row select {
+  min-height:42px;
+  font-size:.98rem;
+  border:0;
+  background:transparent;
+  border-radius:0;
+  margin:0;
+  width:100%;
+}
+.slot-row select:hover,
+.slot-row select:focus-visible {
+  background:rgba(255,255,255,.55);
+}
+.previous-weeks-divider td {
+  background:var(--navy);
+  color:#fff;
+  font-size:1rem;
+  font-weight:900;
+  padding:10px;
+}
+.week-block.compact .day-control td {
+  border-top:5px solid #20242a;
+}
+.week-block.compact .week-head th {
+  background:var(--past);
+  padding:9px 11px;
+}
+.week-block.compact .week-head .dow { display:none; }
+.week-block.compact .week-head .date {
+  margin-left:0;
+  font-size:.95rem;
+  color:#f2f4f6;
+}
+.week-block.compact .section-row td,
+.week-block.compact .slot-row td {
+  background:#fff;
+}
+.week-block.compact .slot-row.alt td { background:#f3f4f6; }
+.week-block.compact select {
+  min-height:34px;
+  margin:3px 5px;
+  width:calc(100% - 10px);
+  font-size:.86rem;
+  color:#334155;
+}
+.week-block.current-reference .day-control td {
+  background:#f6e7a3;
+  border-top:5px solid var(--navy);
+}
+.week-block.current-reference .week-head th {
+  background:var(--gold);
+  color:var(--navy);
+  border-top:0;
+}
+.week-block.current-reference .week-head .date { color:var(--navy); }
+.week-block.current-reference .section-row td,
+.week-block.current-reference .slot-row td { background:var(--current-a); }
+.week-block.current-reference .slot-row.alt td { background:var(--current-b); }
+.week-block.current-reference .day-control select,
+.week-block.current-reference .section-row select {
+  border-color:#d8b84d;
+}
+.legend {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  color:#5c6773;
+  font-size:.8rem;
+}
+.legend strong { color:var(--navy); }
+@media (max-width:900px) {
+  .wrapper { width:100%; margin:0; }
+  .titlebar { border-radius:0; }
+  .titlebar h1 { font-size:1.2rem; }
+  .resources { padding:12px 10px; gap:8px; }
+  .resources a { font-size:.82rem; padding:8px 11px; }
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header class="titlebar">
+    <h1>Algebra 1 – Planner 2026-2027</h1>
+  </header>
+
+  <nav class="resources" aria-label="Student resources">
+    <a href="https://tnezki.github.io/algebra/misc/overview.html" target="_blank" rel="noopener">Overview</a>
+    <a href="https://tnezki.github.io/algebra/practice_builder___p7r4x/student_practice_builder.html" target="_blank" rel="noopener">Practice Builder</a>
+    <a href="https://tnezki.github.io/algebra/agenda/index.html" target="_blank" rel="noopener">Agenda</a>
+    <a href="https://tnezki.github.io/algebra/" target="_blank" rel="noopener">Web Site</a>
+    <a href="https://tnezki.github.io/textbooks/algebra/index.html" target="_blank" rel="noopener">Textbook</a>
+    <a href="https://technology.cpm.org/general/tiles/" target="_blank" rel="noopener">Virtual Tools</a>
+    <a href="https://videoanalysis.app/" target="_blank" rel="noopener">Vernier</a>
+    <a href="https://docs.google.com/document/d/1GihYf2MAXI7G2eIRL6x_J330focOVzB3dFdayrFiMR0/edit?usp=sharing" target="_blank" rel="noopener">Vernier Hints</a>
+    <a href="https://tnezki.github.io/algebra/misc/printables/aaagallery_index.html" target="_blank" rel="noopener">Printables</a>
+    <a href="https://drive.google.com/drive/folders/1DwDKsvsAHMFefLMderdK8PI3MBcvXAxu?usp=sharing" target="_blank" rel="noopener">Upload Spot</a>
+    <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos</a>
+    <a href="https://mariners.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+    <a href="https://www.geogebra.org/m/EzCuXRvT" target="_blank" rel="noopener">Line Graph Practice</a>
+    <a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener">GeoGebra</a>
+  </nav>
+
+  <p class="mock-note">Layout mockup only — dropdowns are for testing the Planner layout and do not save yet.</p>
+
+  <div class="calendar-wrap">
+    <table aria-label="Algebra 1 Planner mockup">
+      <tbody class="week-block featured">
+        <tr class="day-control">
+          <td><select aria-label="Monday day control"><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option><option>No School</option><option>Assembly Schedule</option><option>Testing</option><option>Sub Assignment</option></select></td>
+          <td><select aria-label="Tuesday day control"><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option><option>No School</option><option>Assembly Schedule</option><option>Testing</option><option>Sub Assignment</option></select></td>
+          <td><select aria-label="Wednesday day control"><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option><option>No School</option><option>Assembly Schedule</option><option>Testing</option><option>Sub Assignment</option></select></td>
+          <td><select aria-label="Thursday day control"><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option><option>No School</option><option>Assembly Schedule</option><option>Testing</option><option>Sub Assignment</option></select></td>
+          <td><select aria-label="Friday day control"><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option><option>No School</option><option>Assembly Schedule</option><option>Testing</option><option>Sub Assignment</option></select></td>
+        </tr>
+        <tr class="week-head">
+          <th><span class="dow">Monday</span><span class="date">9/28</span></th>
+          <th><span class="dow">Tuesday</span><span class="date">9/29</span></th>
+          <th><span class="dow">Wednesday</span><span class="date">9/30</span></th>
+          <th><span class="dow">Thursday</span><span class="date">10/1</span></th>
+          <th><span class="dow">Friday</span><span class="date">10/2</span></th>
+        </tr>
+        <tr class="section-row">
+          <td><select aria-label="Monday section"><option>1.2: I/O &amp; Functions</option><option selected>1.3: Fn Families</option><option>1.4: Exprs &amp; Struct.</option><option>2.1: Equations</option></select></td>
+          <td><select aria-label="Tuesday section"><option>1.2: I/O &amp; Functions</option><option selected>1.3: Fn Families</option><option>1.4: Exprs &amp; Struct.</option><option>2.1: Equations</option></select></td>
+          <td><select aria-label="Wednesday section"><option>1.3: Fn Families</option><option selected>1.4: Exprs &amp; Struct.</option><option>2.1: Equations</option></select></td>
+          <td><select aria-label="Thursday section"><option>1.3: Fn Families</option><option selected>1.4: Exprs &amp; Struct.</option><option>2.1: Equations</option></select></td>
+          <td><select aria-label="Friday section"><option>1.3: Fn Families</option><option selected>1.4: Exprs &amp; Struct.</option><option>2.1: Equations</option></select></td>
+        </tr>
+        <tr class="slot-row alt">
+          <td><select aria-label="Monday resource slot 1"><option>- Empty -</option><option selected>Warm Up</option><option>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td>
+          <td><select aria-label="Tuesday resource slot 1"><option>- Empty -</option><option selected>Warm Up</option><option>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td>
+          <td><select aria-label="Wednesday resource slot 1"><option>- Empty -</option><option selected>Warm Up</option><option>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td>
+          <td><select aria-label="Thursday resource slot 1"><option>- Empty -</option><option selected>Warm Up</option><option>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td>
+          <td><select aria-label="Friday resource slot 1"><option>- Empty -</option><option selected>Warm Up</option><option>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td>
+        </tr>
+        <tr class="slot-row"><td><select><option>- Empty -</option><option>Warm Up</option><option>Notes</option><option selected>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option>Warm Up</option><option>Notes</option><option>Investigation</option><option selected>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option>Warm Up</option><option selected>Notes</option><option>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option>Warm Up</option><option>Notes</option><option selected>Investigation</option><option>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option>Warm Up</option><option>Notes</option><option>Investigation</option><option selected>Activity</option><option>Demo</option><option>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option>- Empty -</option><option selected>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Practice Set</option><option>Extra Practice</option><option>Quick Check</option><option>Exit Ticket</option><option>CYU</option><option>Progress</option><option>Review</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option><option>Extra Practice</option><option>Quick Check</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Extra Practice</option><option>Quick Check</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Extra Practice</option><option>Quick Check</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Extra Practice</option><option>Quick Check</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Extra Practice</option><option>Quick Check</option><option>CYU</option><option>Progress</option><option>Review</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option selected>- Empty -</option><option>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>CYU</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>CYU</option><option>Progress</option><option>Review</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option><option>Progress</option><option>Review</option></select></td><td><select><option selected>- Empty -</option><option>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Progress</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Progress</option><option>Review</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option><option>Review</option></select></td><td><select><option selected>- Empty -</option><option>Review</option></select></td><td><select><option>- Empty -</option><option selected>Review</option></select></td><td><select><option>- Empty -</option><option selected>Review</option></select></td><td><select><option>- Empty -</option><option selected>Review</option></select></td></tr>
+      </tbody>
+
+      <tbody class="previous-weeks-divider"><tr><td colspan="5">ALL WEEKS</td></tr></tbody>
+
+      <tbody class="week-block compact">
+        <tr class="day-control"><td><select><option selected>P.D.</option><option>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Sub Assignment</option><option>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td></tr>
+        <tr class="week-head"><th><span class="date">9/21</span></th><th><span class="date">9/22</span></th><th><span class="date">9/23</span></th><th><span class="date">9/24</span></th><th><span class="date">9/25</span></th></tr>
+        <tr class="section-row"><td><select><option selected>- No Section -</option></select></td><td><select><option selected>- No Section -</option></select></td><td><select><option selected>1.2: I/O &amp; Functions</option></select></td><td><select><option selected>1.2: I/O &amp; Functions</option></select></td><td><select><option selected>1.3: Fn Families</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Activity</option></select></td><td><select><option selected>Activity</option></select></td><td><select><option selected>Notes</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>- Empty -</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Quick Check</option></select></td></tr>
+      </tbody>
+
+      <tbody class="week-block compact current-reference">
+        <tr class="day-control"><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td></tr>
+        <tr class="week-head"><th><span class="date">9/28</span></th><th><span class="date">9/29</span></th><th><span class="date">9/30</span></th><th><span class="date">10/1</span></th><th><span class="date">10/2</span></th></tr>
+        <tr class="section-row"><td><select><option selected>1.3: Fn Families</option></select></td><td><select><option selected>1.3: Fn Families</option></select></td><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>Investigation</option></select></td><td><select><option selected>Activity</option></select></td><td><select><option selected>Notes</option></select></td><td><select><option selected>Investigation</option></select></td><td><select><option selected>Activity</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>- Empty -</option></select></td><td><select><option selected>- Empty -</option></select></td><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td></tr>
+      </tbody>
+
+      <tbody class="week-block compact">
+        <tr class="day-control"><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td><td><select><option selected>Regular Day</option><option>Snow Day</option><option>Insert Day</option><option>P.D.</option><option>1/2 Day</option><option>Break</option></select></td></tr>
+        <tr class="week-head"><th><span class="date">10/5</span></th><th><span class="date">10/6</span></th><th><span class="date">10/7</span></th><th><span class="date">10/8</span></th><th><span class="date">10/9</span></th></tr>
+        <tr class="section-row"><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td><td><select><option selected>1.4: Exprs &amp; Struct.</option></select></td><td><select><option selected>1.5: Equations</option></select></td><td><select><option selected>1.5: Equations</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td><td><select><option selected>Warm Up</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>Notes</option></select></td><td><select><option selected>Activity</option></select></td><td><select><option selected>Investigation</option></select></td><td><select><option selected>Notes</option></select></td><td><select><option selected>Activity</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td><td><select><option selected>Practice Set</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td><td><select><option selected>Extra Practice</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td><td><select><option selected>CYU</option></select></td></tr>
+        <tr class="slot-row"><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td><td><select><option selected>Progress</option></select></td></tr>
+        <tr class="slot-row alt"><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td><td><select><option selected>Review</option></select></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legend"><strong>Mockup behavior:</strong> day controls, section choices, and seven resource slots per day are visible; nothing is wired to registries or persistence yet.</div>
+</div>
+</body>
+</html>
