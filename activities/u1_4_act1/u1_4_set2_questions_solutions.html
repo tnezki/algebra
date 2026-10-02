@@ -3,86 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Unit 1 Section 1.4 Activity Set 2 Round Worksheets</title>
+<title>Unit 1 Section 1.4 Activity Set 2 Projector Questions</title>
 <link rel="stylesheet" href="../../css/base.css">
 <style>
-@page{size:letter portrait;margin:.32in}
 *{box-sizing:border-box}
-body{margin:0;background:#eef2f6;color:#111;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:10.25pt;line-height:1.22;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.worksheet-wrap{max-width:8.5in;margin:0 auto;padding:.20in 0}
-.round-sheet{width:7.86in;min-height:10.28in;margin:0 auto .24in;background:#fff;border:1.5px solid #111;padding:.18in .22in .16in;page-break-after:always;break-after:page;display:flex;flex-direction:column}
-.round-sheet:last-child{page-break-after:auto;break-after:auto}
-.sheet-head{border-bottom:3px solid #00003d;padding:0 0 .08in;margin-bottom:.10in}
-.sheet-topline{display:flex;justify-content:space-between;align-items:baseline;gap:.2in}
-.sheet-kicker{font-size:9.3pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#555}
-.sheet-title{font-size:19pt;line-height:1.02;font-weight:900;color:#00003d;margin:.02in 0 .05in}
-.sheet-fields{display:grid;grid-template-columns:1.25fr 1fr;gap:.22in;font-size:10.3pt;font-weight:700}
-.field-line{display:inline-block;min-width:2.2in;border-bottom:1px solid #222;height:.15in;vertical-align:bottom}
-.partner-line{min-width:1.75in}
-.round-grid{display:grid;grid-template-columns:1fr 1fr;gap:.09in .12in;align-content:start;flex:1}
-.problem-card{border:1.2px solid #777;border-radius:6px;padding:.085in .105in;background:#fff;break-inside:avoid;page-break-inside:avoid;display:flex;flex-direction:column;min-height:1.24in}
-.problem-card p{margin:0 0 .04in}
-.problem-card table{margin:.04in auto;width:auto;border-collapse:collapse;font-size:9.2pt}
-.problem-card th,.problem-card td{border:1px solid #777;padding:.035in .10in;text-align:center;vertical-align:middle}
-.problem-card th{background:#eaf1fb;color:#00003d;font-weight:800}
-.two-tables{display:grid;grid-template-columns:1fr 1fr;gap:.10in;align-items:start}
-.work-lines{margin-top:auto;height:.34in;background:repeating-linear-gradient(to bottom,transparent 0,transparent 16px,#d0d4da 17px)}
-.graph-card{grid-column:1 / -1;display:grid;grid-template-columns:1.23fr 1fr;gap:.12in;align-items:start;min-height:2.45in}
-.graph-card .graph-block{margin:0;text-align:center}
-.graph-card .graph-block img{width:2.28in!important;max-width:2.28in!important;max-height:2.28in!important;height:auto!important;object-fit:contain}
-.graph-card .work-lines{height:.44in}
-.round-1 .problem-card:not(.graph-card){min-height:1.45in}
-.round-2 .problem-card:not(.graph-card){min-height:1.28in}
-.round-2 .graph-card{min-height:2.20in}
-.round-2 .graph-card .graph-block img{width:2.05in!important;max-width:2.05in!important;max-height:2.05in!important}
-.round-2 .graph-card .work-lines{height:.30in}
-.round-3 .problem-card:not(.graph-card){min-height:1.45in}
-.sheet-footer{font-size:8pt;color:#666;text-align:right;margin-top:.05in}
-@media screen and (max-width:800px){body{background:#fff}.worksheet-wrap{padding:0}.round-sheet{width:auto;min-height:auto;margin:0;border:0;border-bottom:10px solid #eef2f6}.round-grid{grid-template-columns:1fr}.graph-card{grid-column:auto;display:block}.graph-card .graph-block{margin:.08in auto}.two-tables{grid-template-columns:1fr}}
-@media print{body{background:#fff}.worksheet-wrap{max-width:none;padding:0}.round-sheet{width:auto;min-height:10.28in;margin:0;border:1.5px solid #111}.sheet-footer{display:block}}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;background:#e9edf2}
+body{margin:0;background:#e9edf2;color:#111;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;overflow-y:auto;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.projector-deck{margin:0;padding:0}
+.projector-slide{height:100vh;min-height:100vh;padding:1.4vh 1.2vw;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center}
+.slide-card{width:min(97vw,1500px);height:min(95vh,940px);background:#fff;border:2px solid #111;padding:clamp(16px,2.2vh,30px) clamp(22px,2.6vw,44px);display:flex;flex-direction:column;overflow:hidden}
+.slide-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-bottom:4px solid #00003d;padding-bottom:clamp(8px,1.1vh,14px);margin-bottom:clamp(16px,2.2vh,28px);font-size:clamp(16px,1.3vw,23px);font-weight:800;color:#333}
+.problem-content{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;font-size:clamp(28px,2.35vw,44px);line-height:1.28}
+.problem-content p{margin:0 0 clamp(16px,2vh,28px)}
+.problem-content strong{font-size:1.08em;color:#00003d}
+.problem-content table{width:auto;margin:clamp(10px,1.5vh,22px) auto;border-collapse:collapse;font-size:clamp(23px,1.9vw,36px)}
+.problem-content th,.problem-content td{border:2px solid #777;padding:clamp(8px,1.1vh,14px) clamp(20px,2vw,34px);text-align:center;vertical-align:middle}
+.problem-content th{background:#eaf1fb;color:#00003d;font-weight:800}
+.two-tables{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:start;justify-items:center;width:100%}
+.graph-block{flex:1;min-height:0;width:100%;display:flex;align-items:center;justify-content:center;margin:0 auto}
+.graph-block img{width:auto!important;height:auto!important;max-width:min(78vw,1100px)!important;max-height:62vh!important;object-fit:contain!important;border:0!important;background:#fff}
+.graph-slide .problem-content{font-size:clamp(25px,2vw,38px)}
+.graph-slide .problem-content p{margin-bottom:clamp(8px,1vh,14px)}
+@media (max-aspect-ratio:4/3){.problem-content{font-size:clamp(24px,3vw,38px)}.graph-block img{max-height:54vh!important}.slide-head{font-size:clamp(14px,1.8vw,20px)}}
+@media print{@page{size:letter landscape;margin:.35in}html{scroll-snap-type:none;background:#fff}body{background:#fff}.projector-slide{height:auto;min-height:7.7in;padding:0;page-break-after:always;break-after:page}.projector-slide:last-child{page-break-after:auto}.slide-card{width:100%;height:7.7in;border:1.5px solid #111;box-shadow:none}.problem-content{font-size:22pt}.graph-block img{max-height:4.8in!important}.slide-head{font-size:12pt}}
 </style>
 <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]],processEscapes:true}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<main class="worksheet-wrap">
-
-<section class="round-sheet round-1" data-round="1">
-<header class="sheet-head"><div class="sheet-topline"><div><div class="sheet-kicker">Unit 1 • Section 1.4 • Set 2</div><div class="sheet-title">Round 1</div></div><div class="sheet-kicker">Partner Practice</div></div><div class="sheet-fields"><div>Name: <span class="field-line"></span></div><div>Partner: <span class="field-line partner-line"></span></div></div></header>
-<div class="round-grid">
-<article class="problem-card graph-card" data-question-key="U1-S14-ACTSET2-01" data-family-id="U1-MG02-IC01-E" data-i-can="Find slope from a graph."><div class="problem-content"><p><strong>1.</strong> Before calculating, is the slope positive or negative, and is \(|m|\) less than 1, equal to 1, or greater than 1? Then find the exact slope.</p><div class="graph-block"><img src="figures/u1_4_set2_q01_slope_graph.png" alt="Line decreasing from left to right through lattice points"></div></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-02" data-family-id="U1-MG02-IC02-D" data-i-can="Find slope from a table."><div class="problem-content"><p><strong>2.</strong> Choose any two rows that make the slope easy to compute, then find the slope.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-2</td><td>11</td></tr><tr><td>1</td><td>5</td></tr><tr><td>4</td><td>-1</td></tr><tr><td>7</td><td>-7</td></tr></table></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-03" data-family-id="U1-MG02-IC03-D" data-i-can="Find slope from an equation."><div class="problem-content"><p><strong>3.</strong> Rewrite \(3x+2y=12\) in \(y=mx+b\) form. Then state the slope.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-04" data-family-id="U1-MG03-IC01-E" data-i-can="Substitute a value for a variable."><div class="problem-content"><p><strong>4.</strong> Evaluate \(2a-3b\) when \(a=-4\) and \(b=5\). Write the substituted expression first.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-05" data-family-id="U1-MG03-IC02-D" data-i-can="Use order of operations correctly."><div class="problem-content"><p><strong>5.</strong> What should you do first in \(24-2(7-3)^2\)? Name the first operation, then evaluate.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-06" data-family-id="U1-MG03-IC03-E" data-i-can="Evaluate expressions with positive and negative numbers."><div class="problem-content"><p><strong>6.</strong> Complete the equivalent rewrite and then evaluate: \(-9-(-14)=-9\;\square\;14\).</p></div><div class="work-lines" aria-hidden="true"></div></article>
-</div><div class="sheet-footer">Round 1 • 6 questions</div>
+<main class="projector-deck">
+<section class="projector-slide graph-slide" id="q1" data-question-key="U1-S14-ACTSET2-01" data-family-id="U1-MG02-IC01-E" data-i-can="Find slope from a graph.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 1</span><span>Question 1 of 18</span></header>
+    <div class="problem-content"><p><strong>1.</strong> Before calculating, is the slope positive or negative, and is \(|m|\) less than 1, equal to 1, or greater than 1? Then find the exact slope.</p><div class="graph-block"><img src="figures/u1_4_set2_q01_slope_graph.png" alt="Line decreasing from left to right through lattice points"></div></div>
+  </div>
 </section>
-
-<section class="round-sheet round-2" data-round="2">
-<header class="sheet-head"><div class="sheet-topline"><div><div class="sheet-kicker">Unit 1 • Section 1.4 • Set 2</div><div class="sheet-title">Round 2</div></div><div class="sheet-kicker">Partner Practice</div></div><div class="sheet-fields"><div>Name: <span class="field-line"></span></div><div>Partner: <span class="field-line partner-line"></span></div></div></header>
-<div class="round-grid">
-<article class="problem-card graph-card" data-question-key="U1-S14-ACTSET2-07" data-family-id="U1-MG02-IC01-F" data-i-can="Find slope from a graph."><div class="problem-content"><p><strong>7.</strong> On this line, Student A uses rise/run \(2/3\). Student B uses \(4/6\). Are both slope triangles valid for the same line? Explain.</p><div class="graph-block"><img src="figures/u1_4_set2_q07_slope_graph.png" alt="Increasing line through several lattice points"></div></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-08" data-family-id="U1-MG02-IC02-E" data-i-can="Find slope from a table."><div class="problem-content"><p><strong>8.</strong> The table has slope \(-2\). Find the missing \(y\)-value.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-1</td><td>8</td></tr><tr><td>2</td><td>2</td></tr><tr><td>5</td><td>?</td></tr></table></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-09" data-family-id="U1-MG02-IC03-F" data-i-can="Find slope from an equation."><div class="problem-content"><p><strong>9.</strong> Compare \(y=4x-7\) and \(2y=8x+6\). Do the equations have the same slope? Show how you know.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-10" data-family-id="U1-MG03-IC01-H" data-i-can="Substitute a value for a variable."><div class="problem-content"><p><strong>10.</strong> A student changes \(5x-2\) into \(5(-6)-2\). What value was substituted for \(x\)? Explain how you know.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card graph-card" data-question-key="U1-S14-ACTSET2-11" data-family-id="U1-MG02-IC01-H" data-i-can="Find slope from a graph."><div class="problem-content"><p><strong>11.</strong> A student says the slope is \(\frac{2}{3}\) because the run is 2 and the rise is 3. Critique the claim and give the correct slope.</p><div class="graph-block"><img src="figures/u1_4_set2_q11_slope_graph.png" alt="Increasing line with slope three halves through lattice points"></div></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-12" data-family-id="U1-MG02-IC02-G" data-i-can="Find slope from a table."><div class="problem-content"><p><strong>12.</strong> Compare Table A and Table B. Do they have the same slope? Explain.</p><div class="two-tables"><table><tr><th colspan="2">Table A</th></tr><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>7</td></tr><tr><td>5</td><td>16</td></tr></table><table><tr><th colspan="2">Table B</th></tr><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>1</td><td>-4</td></tr><tr><td>3</td><td>2</td></tr><tr><td>6</td><td>11</td></tr></table></div></div><div class="work-lines" aria-hidden="true"></div></article>
-</div><div class="sheet-footer">Round 2 • 6 questions</div>
+<section class="projector-slide" id="q2" data-question-key="U1-S14-ACTSET2-02" data-family-id="U1-MG02-IC02-D" data-i-can="Find slope from a table.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 2</span><span>Question 2 of 18</span></header>
+    <div class="problem-content"><p><strong>2.</strong> Choose any two rows that make the slope easy to compute, then find the slope.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-2</td><td>11</td></tr><tr><td>1</td><td>5</td></tr><tr><td>4</td><td>-1</td></tr><tr><td>7</td><td>-7</td></tr></table></div>
+  </div>
 </section>
-
-<section class="round-sheet round-3" data-round="3">
-<header class="sheet-head"><div class="sheet-topline"><div><div class="sheet-kicker">Unit 1 • Section 1.4 • Set 2</div><div class="sheet-title">Round 3</div></div><div class="sheet-kicker">Partner Practice</div></div><div class="sheet-fields"><div>Name: <span class="field-line"></span></div><div>Partner: <span class="field-line partner-line"></span></div></div></header>
-<div class="round-grid">
-<article class="problem-card graph-card" data-question-key="U1-S14-ACTSET2-13" data-family-id="U1-MG02-IC01-J" data-i-can="Find slope from a graph."><div class="problem-content"><p><strong>13.</strong> A student claims the line has slope \(-\frac{2}{3}\). Verify or reject the claim using two points from the graph.</p><div class="graph-block"><img src="figures/u1_4_set2_q13_slope_graph.png" alt="Decreasing line through lattice points"></div></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-14" data-family-id="U1-MG02-IC02-H" data-i-can="Find slope from a table."><div class="problem-content"><p><strong>14.</strong> A student uses the table and writes \(m=\frac{3}{-6}=-\frac12\). Explain the error and find the correct slope.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-2</td><td>9</td></tr><tr><td>1</td><td>3</td></tr><tr><td>4</td><td>-3</td></tr></table></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-15" data-family-id="U1-MG02-IC03-G" data-i-can="Find slope from an equation."><div class="problem-content"><p><strong>15.</strong> For \(4x-2y=10\), a student says the slope is \(-2\). Identify the sign error, rewrite the equation, and state the correct slope.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-16" data-family-id="U1-MG03-IC01-J" data-i-can="Substitute a value for a variable."><div class="problem-content"><p><strong>16.</strong> For \(4x+x^2\) when \(x=-3\), a student writes \(4(-3)+x^2\). Explain the substitution error, correct the setup, and evaluate.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-17" data-family-id="U1-MG03-IC02-J" data-i-can="Use order of operations correctly."><div class="problem-content"><p><strong>17.</strong> A student evaluates \(3(2+2)^2\) as \(12^2=144\). Explain the first error and give the correct value.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-<article class="problem-card" data-question-key="U1-S14-ACTSET2-18" data-family-id="U1-MG03-IC03-I" data-i-can="Evaluate expressions with positive and negative numbers."><div class="problem-content"><p><strong>18.</strong> Before calculating, predict whether \((-7)(-3)+(-8)\) is positive or negative. Then evaluate it.</p></div><div class="work-lines" aria-hidden="true"></div></article>
-</div><div class="sheet-footer">Round 3 • 6 questions</div>
+<section class="projector-slide" id="q3" data-question-key="U1-S14-ACTSET2-03" data-family-id="U1-MG02-IC03-D" data-i-can="Find slope from an equation.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 3</span><span>Question 3 of 18</span></header>
+    <div class="problem-content"><p><strong>3.</strong> Rewrite \(3x+2y=12\) in \(y=mx+b\) form. Then state the slope.</p></div>
+  </div>
 </section>
-
+<section class="projector-slide" id="q4" data-question-key="U1-S14-ACTSET2-04" data-family-id="U1-MG03-IC01-E" data-i-can="Substitute a value for a variable.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 4</span><span>Question 4 of 18</span></header>
+    <div class="problem-content"><p><strong>4.</strong> Evaluate \(2a-3b\) when \(a=-4\) and \(b=5\). Write the substituted expression first.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q5" data-question-key="U1-S14-ACTSET2-05" data-family-id="U1-MG03-IC02-D" data-i-can="Use order of operations correctly.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 5</span><span>Question 5 of 18</span></header>
+    <div class="problem-content"><p><strong>5.</strong> What should you do first in \(24-2(7-3)^2\)? Name the first operation, then evaluate.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q6" data-question-key="U1-S14-ACTSET2-06" data-family-id="U1-MG03-IC03-E" data-i-can="Evaluate expressions with positive and negative numbers.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 6</span><span>Question 6 of 18</span></header>
+    <div class="problem-content"><p><strong>6.</strong> Complete the equivalent rewrite and then evaluate: \(-9-(-14)=-9\;\square\;14\).</p></div>
+  </div>
+</section>
+<section class="projector-slide graph-slide" id="q7" data-question-key="U1-S14-ACTSET2-07" data-family-id="U1-MG02-IC01-F" data-i-can="Find slope from a graph.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 7</span><span>Question 7 of 18</span></header>
+    <div class="problem-content"><p><strong>7.</strong> On this line, Student A uses rise/run \(2/3\). Student B uses \(4/6\). Are both slope triangles valid for the same line? Explain.</p><div class="graph-block"><img src="figures/u1_4_set2_q07_slope_graph.png" alt="Increasing line through several lattice points"></div></div>
+  </div>
+</section>
+<section class="projector-slide" id="q8" data-question-key="U1-S14-ACTSET2-08" data-family-id="U1-MG02-IC02-E" data-i-can="Find slope from a table.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 8</span><span>Question 8 of 18</span></header>
+    <div class="problem-content"><p><strong>8.</strong> The table has slope \(-2\). Find the missing \(y\)-value.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-1</td><td>8</td></tr><tr><td>2</td><td>2</td></tr><tr><td>5</td><td>?</td></tr></table></div>
+  </div>
+</section>
+<section class="projector-slide" id="q9" data-question-key="U1-S14-ACTSET2-09" data-family-id="U1-MG02-IC03-F" data-i-can="Find slope from an equation.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 9</span><span>Question 9 of 18</span></header>
+    <div class="problem-content"><p><strong>9.</strong> Compare \(y=4x-7\) and \(2y=8x+6\). Do the equations have the same slope? Show how you know.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q10" data-question-key="U1-S14-ACTSET2-10" data-family-id="U1-MG03-IC01-H" data-i-can="Substitute a value for a variable.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 10</span><span>Question 10 of 18</span></header>
+    <div class="problem-content"><p><strong>10.</strong> A student changes \(5x-2\) into \(5(-6)-2\). What value was substituted for \(x\)? Explain how you know.</p></div>
+  </div>
+</section>
+<section class="projector-slide graph-slide" id="q11" data-question-key="U1-S14-ACTSET2-11" data-family-id="U1-MG02-IC01-H" data-i-can="Find slope from a graph.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 11</span><span>Question 11 of 18</span></header>
+    <div class="problem-content"><p><strong>11.</strong> A student says the slope is \(\frac{2}{3}\) because the run is 2 and the rise is 3. Critique the claim and give the correct slope.</p><div class="graph-block"><img src="figures/u1_4_set2_q11_slope_graph.png" alt="Increasing line with slope three halves through lattice points"></div></div>
+  </div>
+</section>
+<section class="projector-slide" id="q12" data-question-key="U1-S14-ACTSET2-12" data-family-id="U1-MG02-IC02-G" data-i-can="Find slope from a table.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 12</span><span>Question 12 of 18</span></header>
+    <div class="problem-content"><p><strong>12.</strong> Compare Table A and Table B. Do they have the same slope? Explain.</p><div class="two-tables"><table><tr><th colspan="2">Table A</th></tr><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>0</td><td>1</td></tr><tr><td>2</td><td>7</td></tr><tr><td>5</td><td>16</td></tr></table><table><tr><th colspan="2">Table B</th></tr><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>1</td><td>-4</td></tr><tr><td>3</td><td>2</td></tr><tr><td>6</td><td>11</td></tr></table></div></div>
+  </div>
+</section>
+<section class="projector-slide graph-slide" id="q13" data-question-key="U1-S14-ACTSET2-13" data-family-id="U1-MG02-IC01-J" data-i-can="Find slope from a graph.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 13</span><span>Question 13 of 18</span></header>
+    <div class="problem-content"><p><strong>13.</strong> A student claims the line has slope \(-\frac{2}{3}\). Verify or reject the claim using two points from the graph.</p><div class="graph-block"><img src="figures/u1_4_set2_q13_slope_graph.png" alt="Decreasing line through lattice points"></div></div>
+  </div>
+</section>
+<section class="projector-slide" id="q14" data-question-key="U1-S14-ACTSET2-14" data-family-id="U1-MG02-IC02-H" data-i-can="Find slope from a table.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 14</span><span>Question 14 of 18</span></header>
+    <div class="problem-content"><p><strong>14.</strong> A student uses the table and writes \(m=\frac{3}{-6}=-\frac12\). Explain the error and find the correct slope.</p><table><tr><th>\(x\)</th><th>\(y\)</th></tr><tr><td>-2</td><td>9</td></tr><tr><td>1</td><td>3</td></tr><tr><td>4</td><td>-3</td></tr></table></div>
+  </div>
+</section>
+<section class="projector-slide" id="q15" data-question-key="U1-S14-ACTSET2-15" data-family-id="U1-MG02-IC03-G" data-i-can="Find slope from an equation.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 15</span><span>Question 15 of 18</span></header>
+    <div class="problem-content"><p><strong>15.</strong> For \(4x-2y=10\), a student says the slope is \(-2\). Identify the sign error, rewrite the equation, and state the correct slope.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q16" data-question-key="U1-S14-ACTSET2-16" data-family-id="U1-MG03-IC01-J" data-i-can="Substitute a value for a variable.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 16</span><span>Question 16 of 18</span></header>
+    <div class="problem-content"><p><strong>16.</strong> For \(4x+x^2\) when \(x=-3\), a student writes \(4(-3)+x^2\). Explain the substitution error, correct the setup, and evaluate.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q17" data-question-key="U1-S14-ACTSET2-17" data-family-id="U1-MG03-IC02-J" data-i-can="Use order of operations correctly.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 17</span><span>Question 17 of 18</span></header>
+    <div class="problem-content"><p><strong>17.</strong> A student evaluates \(3(2+2)^2\) as \(12^2=144\). Explain the first error and give the correct value.</p></div>
+  </div>
+</section>
+<section class="projector-slide" id="q18" data-question-key="U1-S14-ACTSET2-18" data-family-id="U1-MG03-IC03-I" data-i-can="Evaluate expressions with positive and negative numbers.">
+  <div class="slide-card">
+    <header class="slide-head"><span>Unit 1 • Section 1.4 • Set 2 • Problem 18</span><span>Question 18 of 18</span></header>
+    <div class="problem-content"><p><strong>18.</strong> Before calculating, predict whether \((-7)(-3)+(-8)\) is positive or negative. Then evaluate it.</p></div>
+  </div>
+</section>
 </main>
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.projector-slide')];
+  function go(delta){
+    const y=window.scrollY;
+    let index=0;
+    for(let i=0;i<slides.length;i++){if(slides[i].offsetTop<=y+window.innerHeight*0.5) index=i;}
+    const next=Math.max(0,Math.min(slides.length-1,index+delta));
+    slides[next].scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  window.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(1);}
+    else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(-1);}
+    else if(e.key==='Home'){e.preventDefault();slides[0].scrollIntoView({behavior:'smooth'});}
+    else if(e.key==='End'){e.preventDefault();slides[slides.length-1].scrollIntoView({behavior:'smooth'});}
+  });
+})();
+</script>
 </body>
 </html>
