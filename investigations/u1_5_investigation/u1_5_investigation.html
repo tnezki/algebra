@@ -20,11 +20,17 @@
 .speed-note{font-size:8.8pt;color:var(--muted);margin:.035in 0 .10in}
 .post-test{margin:.12in 0 .08in;padding:.10in .12in;border-top:2px solid var(--navy);background:#fbfcfd}
 .post-test h3{margin:0 0 .05in;font-size:12pt}
-.formula-card{border:1.3px solid var(--line-strong);border-radius:5px;padding:.09in .11in;margin:.06in 0 .08in;background:#fff}
-.formula-row{display:grid;grid-template-columns:1.45fr 1fr;gap:.08in;align-items:center}
-.formula{font-size:13pt;font-weight:800;color:var(--navy);text-align:center;padding:.04in}
+.formula-card{border:1.3px solid var(--line-strong);border-radius:5px;padding:.075in .09in;margin:.05in 0 .06in;background:#fff}
+.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.065in;margin:.04in 0 .06in}
+.rate-card{border:1px solid var(--line);border-radius:4px;padding:.055in .065in;min-height:1.12in;background:#fff}
+.rate-card strong{color:var(--navy);font-size:9.5pt}
+.formula{font-size:10.7pt;font-weight:800;color:var(--navy);text-align:center;padding:.025in 0}
+.rate-work{height:.34in;border:1px solid #d7dfe4;border-radius:3px;background:#fff;margin:.025in 0 .03in}
+.rate-answer{font-size:9.2pt;margin:.02in 0}
+.compare-box{border-top:1px solid var(--line);padding-top:.05in;margin-top:.035in;font-size:9.2pt}
+.compare-box p{margin:.025in 0}
+.use-rate{margin:.045in 0 0;padding:.045in .06in;background:var(--accent-soft);border-left:3px solid var(--accent);font-size:9.4pt}
 .answer-blank{display:inline-block;min-width:1.2in;border-bottom:1.3px solid #555;height:.16in;vertical-align:bottom}
-.interview-work{height:.70in;border:1px solid #d7dfe4;border-radius:4px;background:#fff;margin:.06in 0 .05in}
 .analysis-page p,.analysis-page td,.analysis-page th{font-size:9.5pt}
 .analysis-page .phase{margin:.08in 0 .06in}
 .analysis-page .phase-label{font-size:8.6pt}
@@ -64,7 +70,7 @@
 <div class="directions"><strong>How the test works:</strong> Use the separate Minion production sheet. Work in number order, starting with Minion 1. A Minion counts only when all major open regions are colored with your two-color scheme. When your teacher calls <strong>1 minute, 2 minutes, and 3 minutes</strong>, quickly record your total below and keep working. Stop when your teacher calls <strong>4 minutes</strong>.</div>
 <table class="timer-table"><thead><tr><th>Time since start</th><th>0 min</th><th>1 min</th><th>2 min</th><th>3 min</th><th>4 min</th></tr></thead><tbody><tr><th>Total finished Minions</th><td><strong>0</strong></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 <p class="speed-note"><strong>Do not begin until your teacher says GO.</strong> Keep the same two-color scheme for every finished Minion.</p>
-<div class="post-test"><h3>Step 1 — Find your average rate of change.</h3><div class="formula-card"><div class="formula-row"><div><p>Use your values at <strong>0 minutes</strong> and <strong>4 minutes</strong>. Show your substitution.</p></div><div class="formula">r = (M₄ − M₀) ÷ (4 − 0)</div></div><div class="interview-work"></div><p>My average production rate is <span class="answer-blank"></span> <strong>Minions per minute.</strong></p><p>In words, this means <span class="answer-blank" style="min-width:4.8in"></span></p></div></div>
+<div class="post-test"><h3>Step 1 — Find and compare average rates of change.</h3><div class="formula-card"><p style="margin:.01in 0 .035in;font-size:9.4pt">Use your interview table to calculate each rate. <strong>Show your substitution.</strong></p><div class="rate-grid"><div class="rate-card"><strong>From 1 to 2 minutes</strong><div class="formula">r = (M₂ − M₁) ÷ (2 − 1)</div><div class="rate-work"></div><p class="rate-answer">r = <span class="answer-blank" style="min-width:.72in"></span> Minions/min</p></div><div class="rate-card"><strong>From 3 to 4 minutes</strong><div class="formula">r = (M₄ − M₃) ÷ (4 − 3)</div><div class="rate-work"></div><p class="rate-answer">r = <span class="answer-blank" style="min-width:.72in"></span> Minions/min</p></div><div class="rate-card"><strong>From 0 to 4 minutes</strong><div class="formula">r = (M₄ − M₀) ÷ (4 − 0)</div><div class="rate-work"></div><p class="rate-answer">r = <span class="answer-blank" style="min-width:.72in"></span> Minions/min</p></div></div><div class="compare-box"><p><strong>Compare:</strong> Are your three rates close? &nbsp; Yes / No &nbsp;&nbsp; What do you notice?</p><p><span class="answer-blank" style="min-width:6.55in"></span></p></div><p class="use-rate"><strong>For the rest of the investigation, use your 0-to-4-minute average rate:</strong> <span class="answer-blank" style="min-width:.85in"></span> Minions per minute.</p></div></div>
 <div class="footer-note"><span>Section 1.5</span><span>Job Interview · Production Data</span></div></section>
 
 <section class="student-page analysis-page">
