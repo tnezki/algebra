@@ -192,7 +192,60 @@ body.student-practice-builder-document #practicePages .sheet-heading{margin-bott
   body.student-practice-builder-document #practicePages{position:static!important;left:auto!important;top:auto!important;visibility:visible!important;width:8.5in!important;margin:0!important}
   body.student-practice-builder-document #practicePages>.paper{margin:0!important}
 }
-</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose the I Can statements you want to practice. Create a new set or regenerate another version. This builder does not collect names, grades, or student information.</p><div id="skillOptions" class="skill-choices"></div><div class="links" style="align-items:center;margin-top:15px"><label for="count">Questions per I Can:</label><select id="count" style="padding:9px"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create">Create Practice</button><button id="redo" disabled>Regenerate</button><button id="printWorksheet" onclick="printStudentWorksheet()" disabled>Print Worksheet</button></div><p id="status" class="muted" aria-live="polite">Loading teacher-approved question bank…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
+
+
+/* Student-facing controls: large touch targets and a focused LG selector. */
+body.student-practice-builder-document main.builder-ui{max-width:1080px}
+body.student-practice-builder-document main.builder-ui>.card{padding:25px 28px}
+body.student-practice-builder-document .builder-ui h1{font-size:clamp(27px,3vw,35px);line-height:1.16;margin:0 0 13px}
+body.student-practice-builder-document .builder-ui .muted{font-size:17px;line-height:1.55}
+body.student-practice-builder-document .goal-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 15px}
+body.student-practice-builder-document .goal-tab{background:#fff;color:#1b496c;border:2px solid #bfd3e1;font-size:17px;min-height:48px;padding:9px 17px}
+body.student-practice-builder-document .goal-tab[aria-pressed="true"]{background:#205b80;color:#fff;border-color:#205b80}
+body.student-practice-builder-document .goal-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 11px}
+body.student-practice-builder-document .goal-search-label{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;flex:1;min-width:220px}
+body.student-practice-builder-document #skillSearch{font:inherit;font-weight:400;min-height:48px;min-width:130px;flex:1;border:2px solid #bacddb;border-radius:8px;padding:9px 13px}
+body.student-practice-builder-document #clearSkills{background:#e8f0f5;color:#1d4c6e;font-size:16px;min-height:46px}
+body.student-practice-builder-document #selectionSummary{font:700 17px/1.4 Arial,Helvetica,sans-serif;color:#24526f;margin:9px 0 13px}
+body.student-practice-builder-document .skill-choices{max-height:none;overflow:visible;grid-template-columns:1fr;gap:9px}
+body.student-practice-builder-document .skill-check{padding:13px 16px;border:2px solid #d2e2ec;align-items:center;gap:14px;cursor:pointer}
+body.student-practice-builder-document .skill-check:has(input:checked){background:#edf6fc;border-color:#35749b}
+body.student-practice-builder-document .skill-check input{width:25px;height:25px;accent-color:#205b80}
+body.student-practice-builder-document .skill-check strong{font-size:19px;line-height:1.4}
+body.student-practice-builder-document .skill-check small{font-size:14px;font-weight:700}
+body.student-practice-builder-document .builder-actions{align-items:center;gap:10px;margin-top:18px}
+body.student-practice-builder-document .builder-actions label{font-size:17px;font-weight:700}
+body.student-practice-builder-document .builder-actions select{font-size:18px;min-height:45px}
+body.student-practice-builder-document .builder-actions button{font-size:16px;min-height:49px;padding:10px 16px}
+body.student-practice-builder-document .builder-actions button:disabled{opacity:.45;cursor:not-allowed}
+body.student-practice-builder-document #questions .card{padding:25px 28px}
+body.student-practice-builder-document #questions h2{font-size:23px;line-height:1.35}
+body.student-practice-builder-document #questions .q{padding:20px 0}
+body.student-practice-builder-document #questions .q-head{align-items:center;gap:12px;flex-wrap:wrap;font-size:19px}
+body.student-practice-builder-document #questions .question-actions{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto}
+body.student-practice-builder-document #questions .question-actions button{font-size:16px;min-height:44px}
+body.student-practice-builder-document #questions .problem{font-size:20px;line-height:1.65}
+body.student-practice-builder-document #questions .problem p{margin:11px 0}
+body.student-practice-builder-document #questions mjx-container{font-size:1em}
+body.student-practice-builder-document #questions .data-table th,
+body.student-practice-builder-document #questions .data-table td{font-size:18px;padding:9px 15px}
+body.student-practice-builder-document #notabilityHelp{font-size:18px;line-height:1.5}
+body.student-practice-builder-document #notabilityHelp h2{font-size:24px;margin:0}
+body.student-practice-builder-document #notabilityHelp ol{padding-left:24px}
+body.student-practice-builder-document #notabilityHelp li{margin:11px 0}
+@media(max-width:650px){
+ body.student-practice-builder-document main.builder-ui>.card,
+ body.student-practice-builder-document #questions .card{padding:18px 16px}
+ body.student-practice-builder-document .goal-tabs{gap:7px}
+ body.student-practice-builder-document .goal-tab{flex:1 1 43%;padding:7px 9px}
+ body.student-practice-builder-document .goal-search-label{flex-basis:100%}
+ body.student-practice-builder-document .skill-check strong{font-size:18px}
+ body.student-practice-builder-document #questions .problem{font-size:19px}
+}
+@media print{
+ body.student-practice-builder-document #notabilityHelp{display:none!important}
+}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose the I Can statements you want to practice. Create a new set or regenerate another version. This builder does not collect names, grades, or student information.</p><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="showNotabilityHelp()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading teacher-approved question bank…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
 async function showSolution(id){
  const row=document.getElementById('q'+id);
  const answer=document.getElementById('s'+id);
@@ -478,12 +531,74 @@ async function printStudentWorksheet(){
    status.textContent='Cannot print safely: '+String(error?.message||error)+'. No clipped worksheet was printed.';
  }finally{studentPracticePrinting=false;button.disabled=false;}
 }
-</script><script>
-let pool=null;const host=document.getElementById('skillOptions'),status=document.getElementById('status');
+</script><dialog id="notabilityHelp" aria-labelledby="notabilityTitle"><div class="dialog-head"><h2 id="notabilityTitle">Send this worksheet to Notability</h2><button type="button" class="dialog-close" onclick="document.getElementById('notabilityHelp').close()">Close</button></div><div class="dialog-body"><p>The worksheet you created will be paginated with your current questions.</p><ol><li>Tap <b>Open Print / PDF Preview</b> below.</li><li><b>On iPad:</b> Expand a page in the Print preview to open the PDF. Tap Share and choose Notability. If Notability is missing, save to Files and import it from Notability.</li><li><b>On Mac:</b> In Print, choose PDF → Save as PDF, then import that PDF into Notability.</li></ol><button id="openNotabilityPrint" type="button" onclick="document.getElementById('notabilityHelp').close();printStudentWorksheet()">Open Print / PDF Preview</button><p class="muted">This uses your device’s PDF / Print sharing and does not upload your work or collect student information.</p></div></dialog><script>
+let pool=null,activeGoal='LG 01';
+const host=document.getElementById('skillOptions'),status=document.getElementById('status');
+const tabs=document.getElementById('goalTabs'),summary=document.getElementById('selectionSummary');
+const selectedSkills=new Set();
 function pick(list,n){let a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a.slice(0,n)}
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-async function load(){try{const r=await fetch('./question_pool.json');if(!r.ok)throw Error('Question pool not found');pool=await r.json();const entries=Object.entries(pool.skills).filter(([id,v])=>v.questions.length);host.innerHTML=entries.map(([id,v],i)=>'<label class="skill-check"><input type="checkbox" value="'+escapeHTML(id)+'" '+(!i?'checked':'')+'><span><small>'+escapeHTML(id)+'</small><strong>'+escapeHTML(v.label)+'</strong></span></label>').join('');host.querySelectorAll('input').forEach(input=>input.onchange=()=>{const ids=selected();if(ids.length>5){input.checked=false;status.textContent='Choose up to five I Cans at a time.';}});status.textContent='Ready. Choose up to five skills and create practice.'}catch(e){status.textContent='Unavailable: '+e.message}}
-function selected(){return [...host.querySelectorAll('input:checked')].map(x=>x.value)}
-function render(){if(!pool)return;const ids=selected();if(!ids.length){status.textContent='Choose at least one I Can.';return;}const count=Number(document.getElementById('count').value);let number=0;document.getElementById('questions').innerHTML=ids.map(id=>{const q=pick(pool.skills[id].questions,count);return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{const i=++number;return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-family-id="'+escapeHTML(item.id)+'"><div class="q-head"><b>Question '+i+'</b><button class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>'}).join('')+'</section>'}).join('');document.getElementById('redo').disabled=false;document.getElementById('printWorksheet').disabled=false;status.textContent='New '+number+'-question version created. Use New Version beside any question for another example.';if(window.MathJax?.typesetPromise)MathJax.typesetPromise([document.getElementById('questions')]).catch(()=>{});}
-document.getElementById('create').onclick=render;document.getElementById('redo').onclick=render;load();
+function allSkills(){return Object.entries(pool?.skills||{}).filter(([,value])=>value.questions.length)}
+function selected(){return allSkills().map(([id])=>id).filter(id=>selectedSkills.has(id))}
+function goalOf(id){return id.split('-')[0]}
+function showGoal(goal){activeGoal=goal;document.getElementById('skillSearch').value='';renderSelector()}
+function renderSelector(){
+ if(!pool)return;
+ const groups=[...new Set(allSkills().map(([id])=>goalOf(id)))];
+ tabs.innerHTML=[...groups,'All LGs'].map(goal=>{
+   const n=goal==='All LGs'?selectedSkills.size:selected().filter(id=>goalOf(id)===goal).length;
+   const label=goal==='All LGs'?'All LGs':goal;
+   return '<button type="button" class="goal-tab" aria-pressed="'+(goal===activeGoal)+'" data-goal="'+escapeHTML(goal)+'">'+escapeHTML(label)+(n?' ('+n+')':'')+'</button>';
+ }).join('');
+ tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>showGoal(b.dataset.goal));
+ const term=document.getElementById('skillSearch').value.trim().toLowerCase();
+ const entries=allSkills().filter(([id,v])=>
+   (term || activeGoal==='All LGs' || goalOf(id)===activeGoal) &&
+   (!term || (id+' '+v.label).toLowerCase().includes(term)));
+ host.innerHTML=entries.map(([id,v])=>'<label class="skill-check"><input type="checkbox" value="'+escapeHTML(id)+'" '+(selectedSkills.has(id)?'checked':'')+'><span><small>'+escapeHTML(id)+'</small><strong>'+escapeHTML(v.label)+'</strong></span></label>').join('') || '<p class="muted">No matching I Can statements.</p>';
+ host.querySelectorAll('input').forEach(input=>input.onchange=()=>{
+   if(input.checked){
+     if(selectedSkills.size>=5){input.checked=false;status.textContent='Choose up to five I Cans at a time.';return;}
+     selectedSkills.add(input.value);
+   }else selectedSkills.delete(input.value);
+   renderSelector();
+ });
+ const n=selectedSkills.size;
+ summary.textContent=n+' of 5 selected'+(n?' · '+selected().join(' · '):' · Choose an I Can to begin.');
+}
+async function load(){
+ try{
+   const r=await fetch('./question_pool.json');if(!r.ok)throw Error('Question pool not found');
+   pool=await r.json();const first=allSkills()[0]?.[0];
+   if(!first)throw Error('No approved I Can questions are available');
+   activeGoal=goalOf(first);selectedSkills.add(first);
+   renderSelector();status.textContent='Ready. Choose up to five I Cans and create practice.';
+ }catch(e){status.textContent='Unavailable: '+e.message}
+}
+function render(){
+ if(!pool)return;const ids=selected();if(!ids.length){status.textContent='Choose at least one I Can.';return;}
+ const count=Number(document.getElementById('count').value);let number=0;
+ document.getElementById('questions').innerHTML=ids.map(id=>{
+   const q=pick(pool.skills[id].questions,count);
+   return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{
+     const i=++number;
+     return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-family-id="'+escapeHTML(item.id)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>'
+   }).join('')+'</section>';
+ }).join('');
+ document.getElementById('redo').disabled=false;
+ document.getElementById('printWorksheet').disabled=false;
+ document.getElementById('notability').disabled=false;
+ document.getElementById('practicePages').replaceChildren();
+ status.textContent='New '+number+'-question version created. Use New Version beside any question for another example.';
+ if(window.MathJax?.typesetPromise)MathJax.typesetPromise([document.getElementById('questions')]).catch(()=>{});
+}
+function showNotabilityHelp(){
+ if(!document.querySelector('#questions .q')){status.textContent='Create a practice set first.';return;}
+ document.getElementById('notabilityHelp').showModal();
+}
+document.getElementById('skillSearch').oninput=renderSelector;
+document.getElementById('clearSkills').onclick=()=>{selectedSkills.clear();renderSelector()};
+document.getElementById('create').onclick=render;
+document.getElementById('redo').onclick=render;
+load();
 </script></body></html>

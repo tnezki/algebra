@@ -1,8 +1,10 @@
 /* Student-only practice interactions. Never saves answers, names or evidence. */
 (function(){
   'use strict';
-  const poolURL = document.body.classList.contains('personal-practice-document')
-    ? '../../../student_practice_builder/question_pool.json' : './question_pool.json';
+  // The same script is embedded by reference in the public Builder and in
+  // deeply nested assigned practice pages. Resolve the bank alongside the
+  // SCRIPT, never relative to the page or a body class (v140 regression).
+  const poolURL = new URL('question_pool.json', document.currentScript.src).href;
   let poolPromise;
   const cursors = new Map();
   const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
