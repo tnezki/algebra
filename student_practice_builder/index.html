@@ -184,7 +184,11 @@ body.student-practice-builder-document{background:#f2f6fa}
 body.student-practice-builder-document main.builder-ui{max-width:920px;margin:24px auto;padding:0 16px}
 body.student-practice-builder-document #practicePages{position:absolute;left:-12000px;top:0;visibility:hidden;width:8.5in}
 body.student-practice-builder-document #practicePages .practice-unpaged{width:7.3in;max-width:none;margin:0;padding:0;background:#fff}
-body.student-practice-builder-document #practicePages .sheet-heading{margin-bottom:14pt}
+body.student-practice-builder-document #practicePages .sheet-heading{margin-bottom:9pt}
+body.student-practice-builder-document #practicePages .question-workspace{height:96pt}
+body.student-practice-builder-document #practicePages .question-card{padding:3pt 0 5pt;margin:2pt 0 4pt}
+body.student-practice-builder-document #practicePages .lesson-section-divider{margin:4pt 0 5pt!important}
+body.student-practice-builder-document #practicePages .question-top .question-skill{font-size:8.5pt}
 @media print{
   body.student-practice-builder-document main.builder-ui{max-width:none;margin:0;padding:0}
   body.student-practice-builder-document main.builder-ui>.card,
@@ -199,7 +203,10 @@ body.student-practice-builder-document main.builder-ui{max-width:1080px}
 body.student-practice-builder-document main.builder-ui>.card{padding:25px 28px}
 body.student-practice-builder-document .builder-ui h1{font-size:clamp(27px,3vw,35px);line-height:1.16;margin:0 0 13px}
 body.student-practice-builder-document .builder-ui .muted{font-size:17px;line-height:1.55}
-body.student-practice-builder-document .goal-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 15px}
+body.student-practice-builder-document .plan-tools{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin:20px 0 9px;font-size:17px}
+body.student-practice-builder-document .plan-tools label{font-weight:800}
+body.student-practice-builder-document #assessmentPlan{font:700 18px Arial,Helvetica,sans-serif;border:2px solid #bfd3e1;border-radius:9px;padding:11px 12px;background:#fff;color:#193f60;min-width:min(100%,300px)}
+body.student-practice-builder-document .goal-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 15px}
 body.student-practice-builder-document .goal-tab{background:#fff;color:#1b496c;border:2px solid #bfd3e1;font-size:17px;min-height:48px;padding:9px 17px}
 body.student-practice-builder-document .goal-tab[aria-pressed="true"]{background:#205b80;color:#fff;border-color:#205b80}
 body.student-practice-builder-document .goal-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 11px}
@@ -229,10 +236,6 @@ body.student-practice-builder-document #questions .problem p{margin:11px 0}
 body.student-practice-builder-document #questions mjx-container{font-size:1em}
 body.student-practice-builder-document #questions .data-table th,
 body.student-practice-builder-document #questions .data-table td{font-size:18px;padding:9px 15px}
-body.student-practice-builder-document #notabilityHelp{font-size:18px;line-height:1.5}
-body.student-practice-builder-document #notabilityHelp h2{font-size:24px;margin:0}
-body.student-practice-builder-document #notabilityHelp ol{padding-left:24px}
-body.student-practice-builder-document #notabilityHelp li{margin:11px 0}
 @media(max-width:650px){
  body.student-practice-builder-document main.builder-ui>.card,
  body.student-practice-builder-document #questions .card{padding:18px 16px}
@@ -243,9 +246,8 @@ body.student-practice-builder-document #notabilityHelp li{margin:11px 0}
  body.student-practice-builder-document #questions .problem{font-size:19px}
 }
 @media print{
- body.student-practice-builder-document #notabilityHelp{display:none!important}
 }
-</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose the I Can statements you want to practice. Create a new set or regenerate another version. This builder does not collect names, grades, or student information.</p><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="showNotabilityHelp()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading teacher-approved question bank…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script><script defer src="./student_pdf_share.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose the I Can statements you want to practice. Create a new set or regenerate another version. This builder does not collect names, grades, or student information.</p><div class="plan-tools"><label for="assessmentPlan">Assessment Plan</label><select id="assessmentPlan" aria-label="Assessment Plan" disabled><option>Loading available plans…</option></select></div><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="shareStudentWorksheet()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading teacher-approved question bank…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
 async function showSolution(id){
  const row=document.getElementById('q'+id);
  const answer=document.getElementById('s'+id);
@@ -473,10 +475,10 @@ window.CPMPageFlow=Object.freeze({overflow,assertPages,ready,flowUnits,makePageF
 // Printed questions are reconstructed from the original prompt templates so
 // MathJax never clones detached SVG glyph definitions from screen fragments.
 let studentPracticePrinting=false;
-async function printStudentWorksheet(){
+async function prepareStudentWorksheet(){
  if(studentPracticePrinting)return;
  const rows=[...document.querySelectorAll('#questions .q')];
- if(!rows.length){status.textContent='Create a practice set before printing.';return;}
+ if(!rows.length){status.textContent='Create a practice set before printing.';return false;}
  const root=document.getElementById('practicePages');
  const button=document.getElementById('printWorksheet');
  studentPracticePrinting=true;button.disabled=true;
@@ -501,7 +503,7 @@ async function printStudentWorksheet(){
        lastSkill=skill;
      }
      const prompt=document.getElementById('rawPrompt'+(index+1))?.innerHTML||row.querySelector('.problem')?.innerHTML||'';
-     blocks.push('<article class="print-card question-card"><div class="question-top"><strong>'+(index+1)+'.</strong><span class="question-skill">'+escapeHTML(label)+'</span></div><div class="print-card-body question figure-lesson-size"><div class="problem">'+prompt+'</div></div><div class="question-workspace workspace" style="height:228pt"></div></article>');
+     blocks.push('<article class="print-card question-card"><div class="question-top"><strong>'+(index+1)+'.</strong><span class="question-skill">'+escapeHTML(label)+'</span></div><div class="print-card-body question figure-lesson-size"><div class="problem">'+prompt+'</div></div><div class="question-workspace workspace" style="height:96pt"></div></article>');
    });
    source.innerHTML=blocks.join('');root.append(source);
    await window.MathJax.typesetPromise([source]);
@@ -525,17 +527,24 @@ async function printStudentWorksheet(){
    window.CPMPageFlow.assertPages(root);
    for(const paper of root.querySelectorAll(':scope > .paper'))paper.querySelector('.sheet-footer').textContent+=' of '+pageNo;
    status.textContent='Worksheet ready: '+rows.length+' questions on '+pageNo+' page'+(pageNo===1?'':'s')+'.';
-   window.print();
+   return true;
  }catch(error){
    root.replaceChildren();
    status.textContent='Cannot print safely: '+String(error?.message||error)+'. No clipped worksheet was printed.';
- }finally{studentPracticePrinting=false;button.disabled=false;}
+   return false;
+  }finally{studentPracticePrinting=false;button.disabled=false;}
 }
-</script><dialog id="notabilityHelp" aria-labelledby="notabilityTitle"><div class="dialog-head"><h2 id="notabilityTitle">Send this worksheet to Notability</h2><button type="button" class="dialog-close" onclick="document.getElementById('notabilityHelp').close()">Close</button></div><div class="dialog-body"><p>The worksheet you created will be paginated with your current questions.</p><ol><li>Tap <b>Open Print / PDF Preview</b> below.</li><li><b>On iPad:</b> Expand a page in the Print preview to open the PDF. Tap Share and choose Notability. If Notability is missing, save to Files and import it from Notability.</li><li><b>On Mac:</b> In Print, choose PDF → Save as PDF, then import that PDF into Notability.</li></ol><button id="openNotabilityPrint" type="button" onclick="document.getElementById('notabilityHelp').close();printStudentWorksheet()">Open Print / PDF Preview</button><p class="muted">This uses your device’s PDF / Print sharing and does not upload your work or collect student information.</p></div></dialog><script>
-let pool=null,activeGoal='LG 01';
+async function printStudentWorksheet(){
+ if(window.waitForSharePreparation)await window.waitForSharePreparation();
+ const ready=await prepareStudentWorksheet();
+ if(ready)window.print();
+}
+</script><script>
+let pool=null,activeGoal='All LGs',activePlanFile='question_pool.json',availablePlans=[];
 const host=document.getElementById('skillOptions'),status=document.getElementById('status');
 const tabs=document.getElementById('goalTabs'),summary=document.getElementById('selectionSummary');
 const selectedSkills=new Set();
+const planPicker=document.getElementById('assessmentPlan');
 function pick(list,n){let a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a.slice(0,n)}
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function allSkills(){return Object.entries(pool?.skills||{}).filter(([,value])=>value.questions.length)}
@@ -545,6 +554,7 @@ function showGoal(goal){activeGoal=goal;document.getElementById('skillSearch').v
 function renderSelector(){
  if(!pool)return;
  const groups=[...new Set(allSkills().map(([id])=>goalOf(id)))];
+ if(activeGoal!=='All LGs'&&!groups.includes(activeGoal))activeGoal='All LGs';
  tabs.innerHTML=[...groups,'All LGs'].map(goal=>{
    const n=goal==='All LGs'?selectedSkills.size:selected().filter(id=>goalOf(id)===goal).length;
    const label=goal==='All LGs'?'All LGs':goal;
@@ -566,15 +576,37 @@ function renderSelector(){
  const n=selectedSkills.size;
  summary.textContent=n+' of 5 selected'+(n?' · '+selected().join(' · '):' · Choose an I Can to begin.');
 }
+async function loadPlan(file){
+ if(!/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(file))throw Error('Unrecognized assessment plan pool.');
+ const r=await fetch('./'+file,{cache:'no-store'});if(!r.ok)throw Error('Approved plan pool unavailable');
+ const next=await r.json();if(next.schema!=='cpm-public-practice-bank/1'||!next.skills||!Object.keys(next.skills).length)throw Error('Invalid approved plan question pool.');
+ pool=next;activePlanFile=file;selectedSkills.clear();activeGoal='All LGs';
+ document.getElementById('questions').replaceChildren();
+ document.getElementById('practicePages').replaceChildren();
+ document.getElementById('redo').disabled=true;
+ document.getElementById('printWorksheet').disabled=true;
+ document.getElementById('notability').disabled=true;
+ if(window.invalidatePracticeShare)window.invalidatePracticeShare();
+ if(!allSkills().length)throw Error('No approved I Can questions are available');
+ renderSelector();status.textContent='Choose the I Cans you want to practice. None are selected yet.';
+}
 async function load(){
  try{
-   const r=await fetch('./question_pool.json');if(!r.ok)throw Error('Question pool not found');
-   pool=await r.json();const first=allSkills()[0]?.[0];
-   if(!first)throw Error('No approved I Can questions are available');
-   activeGoal=goalOf(first);selectedSkills.add(first);
-   renderSelector();status.textContent='Ready. Choose up to five I Cans and create practice.';
+  const r=await fetch('./assessment_plans.json',{cache:'no-store'});
+  if(!r.ok)throw Error('Assessment plan list unavailable');
+  const manifest=await r.json();
+  if(manifest.schema!=='cpm-public-practice-plans/1'||!Array.isArray(manifest.plans))throw Error('Invalid assessment plan list');
+  availablePlans=manifest.plans.filter(p=>/^AP[1-9][0-9]*$/.test(p.id)&&/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(p.pool));
+  if(!availablePlans.length)throw Error('No approved assessment plans are published');
+  planPicker.innerHTML=availablePlans.map(p=>'<option value="'+escapeHTML(p.id)+'">'+escapeHTML(p.label)+'</option>').join('');
+  planPicker.disabled=false;
+  await loadPlan(availablePlans[0].pool);
  }catch(e){status.textContent='Unavailable: '+e.message}
 }
+planPicker.onchange=async()=>{
+ try{const choice=availablePlans.find(p=>p.id===planPicker.value);if(!choice)throw Error('Invalid plan');await loadPlan(choice.pool)}
+ catch(e){status.textContent='Cannot load assessment plan: '+e.message}
+};
 function render(){
  if(!pool)return;const ids=selected();if(!ids.length){status.textContent='Choose at least one I Can.';return;}
  const count=Number(document.getElementById('count').value);let number=0;
@@ -582,19 +614,20 @@ function render(){
    const q=pick(pool.skills[id].questions,count);
    return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{
      const i=++number;
-     return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-family-id="'+escapeHTML(item.id)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>'
+     return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-practice-pool="'+escapeHTML(activePlanFile)+'" data-family-id="'+escapeHTML(item.id)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>'
    }).join('')+'</section>';
  }).join('');
  document.getElementById('redo').disabled=false;
  document.getElementById('printWorksheet').disabled=false;
  document.getElementById('notability').disabled=false;
  document.getElementById('practicePages').replaceChildren();
+ if(window.scheduleStudentSharePDF)window.scheduleStudentSharePDF();
  status.textContent='New '+number+'-question version created. Use New Version beside any question for another example.';
  if(window.MathJax?.typesetPromise)MathJax.typesetPromise([document.getElementById('questions')]).catch(()=>{});
 }
-function showNotabilityHelp(){
- if(!document.querySelector('#questions .q')){status.textContent='Create a practice set first.';return;}
- document.getElementById('notabilityHelp').showModal();
+function shareStudentWorksheet(){
+ if(window.sharePracticePDF)window.sharePracticePDF();
+ else {status.textContent='PDF sharing is unavailable. Opening the device print/PDF screen.';printStudentWorksheet();}
 }
 document.getElementById('skillSearch').oninput=renderSelector;
 document.getElementById('clearSkills').onclick=()=>{selectedSkills.clear();renderSelector()};

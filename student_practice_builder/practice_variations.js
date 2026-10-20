@@ -5,12 +5,17 @@
   // deeply nested assigned practice pages. Resolve the bank alongside the
   // SCRIPT, never relative to the page or a body class (v140 regression).
   const poolURL = new URL('question_pool.json', document.currentScript.src).href;
-  let poolPromise;
+  const poolPromises=new Map();
   const cursors = new Map();
   const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function pool(){
-    if(!poolPromise) poolPromise=fetch(poolURL).then(r=>{if(!r.ok)throw Error('Approved practice pool unavailable');return r.json();});
-    return poolPromise;
+  function pool(file='question_pool.json'){
+    if(!/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(file))
+      return Promise.reject(Error('Unrecognized approved question pool'));
+    const url=new URL(file,poolURL);
+    if(!poolPromises.has(file))poolPromises.set(file,fetch(url.href).then(r=>{
+      if(!r.ok)throw Error('Approved practice pool unavailable');return r.json();
+    }).catch(err=>{poolPromises.delete(file);throw err;}));
+    return poolPromises.get(file);
   }
   async function newQuestion(id){
     const row=document.getElementById('q'+id);
@@ -18,7 +23,7 @@
     if(!row||!button) return;
     button.disabled=true;
     try {
-      const data=await pool();
+      const data=await pool(row.dataset.practicePool||'question_pool.json');
       const iid=row.dataset.practiceICan;
       const candidates=data.skills?.[iid]?.questions||[];
       if(!candidates.length)throw Error('No approved examples for this skill');
@@ -42,6 +47,7 @@
       if(status){status.hidden=false;status.textContent='New on-screen question ready. The Notability PDF remains the originally assigned worksheet.';}
       const builderStatus=document.getElementById('status');
       if(builderStatus)builderStatus.textContent='Question '+id+' updated. Answer and worked solution match this version.';
+      if(window.scheduleStudentSharePDF)window.scheduleStudentSharePDF();
     }catch(error){
       const status=document.getElementById('practiceStatus')||document.getElementById('status');
       if(status){status.hidden=false;status.textContent='Could not load another question: '+error.message;}
