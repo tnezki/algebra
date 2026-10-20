@@ -191,8 +191,9 @@
  }
  function sharePracticePDF(){
    if(currentFile&&navigator.share&&navigator.canShare?.({files:[currentFile]})){
+     // Share only the PDF File: iPad recipients may treat share text/title as an extra note.
      // No awaits: Apple Web Share must be invoked directly inside the tap.
-     navigator.share({files:[currentFile],title:'Algebra 1 Practice',text:'Practice worksheet'})
+     navigator.share({files:[currentFile]})
        .catch(err=>{if(err?.name!=='AbortError')note('Share failed. Please use Print Worksheet.');});
    }else{
      // Native Print/PDF is the safe fallback; never share a link in place of a PDF.
