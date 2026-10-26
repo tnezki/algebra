@@ -1,0 +1,490 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Algebra 1 Practice</title><style>*{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;line-height:1.48;background:#f2f6fa;color:#1b3950;margin:0}main{max-width:920px;margin:24px auto;padding:0 16px}.card{background:white;border:1px solid #d1e0e9;border-radius:12px;padding:22px;margin:14px 0}.header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.muted{color:#526a7b}.links{display:flex;gap:12px;flex-wrap:wrap}a,button{color:#1d5c81}a{font-weight:600}button,.action{background:#215b80;color:white;border:0;border-radius:8px;padding:10px 15px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none}.q{border-top:1px solid #d5e3ea;padding:16px 0;break-inside:avoid}.problem{font-size:16px}.problem p{margin:8px 0}.solution-button{margin-top:8px}.topic{font-size:18px;color:#254b66}.data-table{border-collapse:collapse;margin:8px auto}.data-table th,.data-table td{border:1px solid #9cafbb;padding:6px 10px;text-align:center}img.graph,img.bank-graph,img.bank-tiles{max-width:100%;height:auto;display:block;margin:12px auto;max-height:340px}.skill-choices{max-height:390px;overflow:auto;display:grid;gap:5px}.skill-check{display:flex;align-items:flex-start;gap:11px;padding:9px;border:1px solid #d8e5ec;border-radius:8px}.skill-check input{width:18px;height:18px;flex-shrink:0}.skill-check span{display:grid;gap:2px}.skill-check small{font-size:11px;color:#587289}.skill-check strong{font-size:14px}dialog{width:min(760px,calc(100% - 24px));max-height:85vh;border:1px solid #aac0d2;border-radius:12px;box-shadow:0 10px 55px #2345;padding:0}dialog::backdrop{background:#1529389e}#questions .q-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}#questions .q-head .solution-button{margin:0;flex:0 0 auto}.dialog-head{position:sticky;top:0;background:white;border-bottom:1px solid #ddd;padding:15px 18px;display:flex;align-items:center;justify-content:space-between}.dialog-body{padding:15px 20px;max-height:70vh;overflow-y:auto}.dialog-close{background:#eef2f7;color:#1d4666}.list{padding:0;list-style:none}.list li{padding:14px 0;border-top:1px solid #dae4ea}@media print{body{background:white;color:black}main{max-width:none;margin:0;padding:0}.card{border:0;padding:0;margin:0}.nav,.solution-button,dialog,.no-print{display:none!important}.q{padding:10px 0}h1{font-size:21px}h2{font-size:17px}}
+/* Algebra 1 worksheet typography authority.
+   Match notes_alg.css: body Times New Roman 16px/1.5, headings Arial,
+   MathJax CommonHTML. Other UI CSS does not own worksheet typography.
+   CPM source TeX / MathML is re-typeset, never a copied MathJax SVG.
+*/
+.pages .paper .print-card,
+.pages .paper .print-card-body,
+.pages .paper .print-card-body :is(p,li,ol,ul,div,span,td,th,blockquote,em,strong,b,i):not(mjx-container *) {
+  font-family:"Times New Roman",Times,serif!important;
+}
+.pages .paper .print-card{font-size:12pt;line-height:1.5;color:#202020}
+.pages .paper .print-card-body p{line-height:1.5;margin:.45em 0}
+.pages .paper :is(.lesson-print-heading,.lesson-section-divider,.card-display-title,.lesson-print-kicker,.source-problem-label,.teacher-guide-print h2,.subpart-label) {
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+/* MathJax handles math fonts independently. It must not inherit text overrides. */
+.pages .paper mjx-container[jax="CHTML"]{font-size:1em;margin:0 .03em}
+.pages .paper mjx-container[jax="SVG"] svg{display:inline!important;width:auto!important;height:auto!important;max-height:none!important;margin:0!important}
+.pages .paper .print-card-body math{font-family:math;display:inline}
+/* Only original alphabetic lists are lettered; numbered instructions stay numbered. */
+.pages .paper .print-card-body ol[type="a" s]{list-style-type:lower-alpha!important}
+.pages .paper .print-card-body ol[type="A" s]{list-style-type:upper-alpha!important}
+.pages .paper .print-card-body ol[type="i" s]{list-style-type:lower-roman!important}
+.pages .paper .print-card-body ol[type="I" s]{list-style-type:upper-roman!important}
+.pages .paper .print-card-body ol[type="1"],
+.pages .paper .print-card-body ol:not([type]){list-style-type:decimal!important}
+.pages .paper .print-card-body ol{padding-left:.3em;margin:.48em 0 .35em 1.65em}
+.pages .paper .print-card-body ol>li{padding-left:.2em;margin:.28em 0}
+.pages .paper .print-card-body ul.plain:empty{display:none!important}
+/* Preserve CC3's compact colored section bars. */
+.pages .paper .lesson-section-divider{
+ background:#eaf3f9!important;color:#1d557d!important;
+ border:0!important;border-left:4pt solid #143960!important;
+ border-bottom:1pt solid #bad0e0!important;
+ padding:6pt 9pt!important;margin:13pt 0 9pt!important;
+ font:800 11pt/1.28 Arial,Helvetica,sans-serif!important;
+ text-transform:uppercase;letter-spacing:.035em;break-after:avoid;
+ -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+.pages .paper .print-card.pagination-fragment{break-inside:auto!important;page-break-inside:auto!important}
+.pages .paper .print-card-body :is(img,svg,math,table){break-inside:avoid;page-break-inside:avoid}
+.rich-editable{font-family:"Times New Roman",Times,serif!important;font-size:16px;line-height:1.5}
+@media print{.pages .paper{box-shadow:none}.pages .paper .lesson-section-divider{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* Source and teacher-created value tables: center content consistently.
+   Keep this in worksheet_print.css for preview, offline HTML and saved PDF. */
+.pages .paper .print-card-body table :is(th,td),
+.pages .paper .print-card-body table :is(th,td) :is(p,div,span) {
+  text-align:center!important;vertical-align:middle!important;
+}
+/* Consistent CPM table baseline (Assessment, Lesson, and Activities):
+   centered content, readable spacing, matching border tone. */
+.pages .paper .print-card-body table{border-collapse:collapse;max-width:100%}
+.pages .paper .print-card-body table :is(th,td){
+  border:1px solid #8d9eac;padding:5px;
+  text-align:center!important;vertical-align:middle!important;
+}
+
+
+/* CPM original tile tables are rendered as vector squares, with no visible
+   screen-reader labels and no dependency on captured cell-border CSS. */
+.pages .paper .print-card-body svg.cpm-tile-diagram{
+ display:block;max-width:100%;height:auto;margin:3pt auto 1pt;
+ break-inside:avoid;page-break-inside:avoid;
+}
+.pages .paper .print-card-body div:has(> div > svg.cpm-tile-diagram){
+ display:flex;flex-wrap:wrap;justify-content:space-around;align-items:flex-end;gap:9pt;
+}
+.pages .paper .print-card-body div:has(> div > svg.cpm-tile-diagram)>div{
+ flex:0 1 auto;text-align:center;break-inside:avoid;
+}
+
+/* CPM tile patterns: match the textbook's three bottom-aligned figures,
+   never a full rectangular grid. Keep the links legible in saved HTML/PDF. */
+.pages .paper .print-card-body .cpm-tile-group,
+.pages .paper .print-card-body div:has(> div > svg.cpm-tile-diagram){
+ display:flex;flex-wrap:wrap;justify-content:space-around;align-items:flex-end;
+ gap:9pt;width:100%;margin:8pt auto 6pt;
+}
+.pages .paper .print-card-body .cpm-tile-group>.cpm-tile-panel,
+.pages .paper .print-card-body div:has(> div > svg.cpm-tile-diagram)>div{
+ flex:0 0 auto;max-width:100%;text-align:center;
+ break-inside:avoid;page-break-inside:avoid;
+}
+.pages .paper .print-card-body .cpm-tile-panel svg.cpm-tile-diagram,
+.pages .paper .print-card-body div:has(> div > svg.cpm-tile-diagram)>div>svg.cpm-tile-diagram{
+ display:block;width:auto;max-width:100%;height:auto;max-height:none;
+ margin:0 auto 3pt;
+}
+.pages .paper .print-card-body .cpm-tile-panel>p{margin:2pt 0 0!important;text-align:center!important;}
+.pages .paper .print-card-body a[href]{color:#185ba5!important;text-decoration:underline!important;}
+
+/* The former directions textarea is now an ordinary movable teacher-only card.
+   Render it in the teacher HTML/PDF, never in student documents. */
+.pages .paper .printable-kind-teacher-directions{
+ border:1.5pt solid #bfd2e3;border-left:3pt solid #24577e;
+ background:#f3f7fa;border-radius:5pt;padding:9pt 11pt;margin:8pt 0 13pt;
+ break-inside:avoid-page;
+}
+.pages .paper .printable-kind-teacher-directions .card-display-title{
+ color:#173f66;font-size:11pt!important;margin:0 0 6pt!important;
+}
+.pages .paper .printable-kind-teacher-directions .print-card-body p{
+ font-size:9.7pt;line-height:1.35;margin:1pt 0!important;
+}
+
+/* v88 teacher-approved readable value table, single formatting authority.
+   Applies to editor, bank preview, all five assessment types and all shared
+   builder previews, offline student/teacher HTML, and flattened PDFs.
+   Keep geometric tile SVGs and MathJax diagrams outside these selectors. */
+.pages .paper .print-card-body table,
+.pages .paper .question table,
+.assessment-export-stage .paper .question table,
+.rich-editable table,
+.question .data-table {
+  width:auto!important;max-width:100%!important;border-collapse:collapse!important;
+  font:12pt/1.35 Georgia,"Times New Roman",serif!important;
+  margin:8pt 0 10pt!important;
+  break-inside:avoid!important;page-break-inside:avoid!important;
+}
+.pages .paper .print-card-body table :is(th,td),
+.pages .paper .question table :is(th,td),
+.assessment-export-stage .paper .question table :is(th,td),
+.rich-editable table :is(th,td),
+.question .data-table :is(th,td){
+  text-align:center!important;vertical-align:middle!important;
+  border:1px solid #8d9eac!important;
+  padding:7pt 10pt!important;min-width:30pt;
+  font:inherit!important;line-height:1.35!important;
+}
+.pages .paper .print-card-body table :is(th,td) :is(p,div,span),
+.pages .paper .question table :is(th,td) :is(p,div,span),
+.assessment-export-stage .paper .question table :is(th,td) :is(p,div,span),
+.rich-editable table :is(th,td) :is(p,div,span){text-align:center!important;vertical-align:middle!important;font:inherit!important}
+.pages .paper .print-card-body table th,
+.pages .paper .question table th,
+.assessment-export-stage .paper .question table th,
+.rich-editable table th,
+.question .data-table th{background:#eef2f6!important;font-weight:700!important}
+
+
+@page{size:letter;margin:0}
+body.personal-practice-document{background:#dfe6ec;color:#202020}
+body.personal-practice-document .practice-toolbar{max-width:8.5in;margin:14px auto;display:flex;align-items:center;gap:15px;flex-wrap:wrap;font:700 14px Arial,Helvetica,sans-serif}
+body.personal-practice-document .practice-toolbar button{font-size:13px;padding:8px 13px}
+body.personal-practice-document main.pages{display:block;max-width:none;margin:0;padding:0}
+body.personal-practice-document .pages>.paper{position:relative;background:#fff;width:8.5in;height:11in;max-width:100%;margin:0 auto 18px;box-shadow:0 3px 14px #193d5524;overflow:hidden;page-break-after:always;break-after:page}
+body.personal-practice-document .pages>.paper:last-child{page-break-after:auto;break-after:auto}
+body.personal-practice-document .paper>.paper-inner{position:absolute;inset:.57in .58in .55in;overflow:hidden}
+body.personal-practice-document .sheet-heading{font:10pt/1.3 Arial,Helvetica,sans-serif;color:#203d56;border-bottom:2pt solid #315977;padding-bottom:8pt;margin-bottom:14pt}
+body.personal-practice-document .sheet-heading .sheet-kicker{font-weight:800;color:#143b61;letter-spacing:.045em}
+body.personal-practice-document .sheet-heading .sheet-title{font-size:17pt;font-weight:800;margin:5pt 0 3pt}
+body.personal-practice-document .sheet-heading .sheet-meta{font-size:9.5pt;color:#4d6275}
+body.personal-practice-document .sheet-heading.continued{display:flex;justify-content:space-between;gap:8pt;padding-bottom:5pt;margin-bottom:10pt}
+body.personal-practice-document .paper>.sheet-footer{position:absolute;bottom:.22in;right:.55in;color:#6b7884;font:8pt Arial,Helvetica,sans-serif}
+body.personal-practice-document .pages .lesson-section-divider{break-after:avoid-page;margin:5pt 0 8pt!important}
+body.personal-practice-document .pages .print-card.question-card{font:12pt/1.5 'Times New Roman',Times,serif;color:#202020;padding:5pt 0 8pt;margin:3pt 0 7pt;border-bottom:1px solid #dfe6ea;break-inside:avoid-page}
+body.personal-practice-document .pages .question-top{display:flex;align-items:baseline;gap:12pt;font:9pt Arial,Helvetica,sans-serif;color:#4f6476;margin:0 0 5pt}
+body.personal-practice-document .pages .question-top strong{font:800 13pt Arial,Helvetica,sans-serif;color:#153f67;white-space:nowrap}
+body.personal-practice-document .pages .question-top .question-skill{font-size:9pt}
+/* Solution belongs at the question heading, never below 3+ inches of workspace. */
+body.personal-practice-document .pages .question-top .question-skill{flex:1;min-width:0}
+body.personal-practice-document .pages .question-top .solution-button{flex:0 0 auto;align-self:flex-start;margin:0;padding:5pt 9pt;font:700 10pt Arial,Helvetica,sans-serif}
+body.personal-practice-document .pages .question-top .new-version-button{flex:0 0 auto;align-self:flex-start;margin:0 0 0 auto;padding:5pt 9pt;font:700 10pt Arial,Helvetica,sans-serif}
+body.personal-practice-document .pages .question-top{flex-wrap:wrap}
+body.personal-practice-document .pages .print-card-body.question{font:12pt/1.5 'Times New Roman',Times,serif;overflow:visible;margin:0 0 3pt}
+body.personal-practice-document .pages .print-card-body.question p{margin:5pt 0}
+body.personal-practice-document .pages .print-card-body.question :is(img,svg):not(mjx-container svg){width:auto;max-width:60%!important;height:auto;max-height:3.8in;object-fit:contain;display:block;margin:8pt auto}
+body.personal-practice-document .pages .print-card-body.question mjx-container[jax='SVG'] svg{width:auto!important;max-width:none!important;max-height:none!important;display:inline!important;margin:0!important}
+body.personal-practice-document .pages .print-card-body.question mjx-container[display='true'] svg{display:block!important;margin:auto!important}
+body.personal-practice-document .pages .question-workspace{width:100%;height:228pt;position:relative;break-inside:avoid;margin-top:5pt}
+/* Keep the shared button hidden on printed pages; no workspace is consumed. */
+body.personal-practice-document .practice-unpaged{max-width:7.3in;margin:25px auto;background:#fff;padding:18pt;color:#202020}
+body.personal-practice-document .practice-status{font:11pt Arial,sans-serif;color:#a02525;margin:10px auto;max-width:7.2in}
+@media print{html,body.personal-practice-document{margin:0;padding:0;background:white!important}
+body.personal-practice-document .practice-toolbar,body.personal-practice-document .solution-button,body.personal-practice-document .new-version-button,body.personal-practice-document dialog{display:none!important}
+body.personal-practice-document .pages>.paper{width:8.5in;max-width:none;height:11in;margin:0;box-shadow:none!important;border:0}
+body.personal-practice-document .pages .print-card.question-card{border-bottom:1pt solid #e1e6ea}
+}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="../../../student_practice_builder/tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="../../../student_practice_builder/practice_variations.js"></script></head><body class="personal-practice-document" data-practice-date="2026-10-26" data-practice-count="8"><nav class="practice-toolbar no-print"><a href="../index.html">← My Practice Sets</a><button onclick="window.print()">Print</button><button type="button" id="practiceSharePDF" disabled>Preparing PDF…</button></nav><div id="practiceStatus" class="practice-status" hidden></div><main class="pages" id="practicePages"><div class="practice-unpaged" id="practiceUnpaged"><div class="lesson-section-divider">I can distinguish functions from relationships that are not functions.</div><article class="print-card question-card" id="q1" data-practice-i-can="LG 02-ican-2" data-family-id="ALG1-AP1-1-2-4-S01"><div class="question-top"><strong>1.</strong><span class="question-skill">I can distinguish functions from relationships that are not functions.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(1)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(1)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p class="skill-direction"><strong>Function or not?</strong></p><p>\((0,1),(2,3),(0,4)\)</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt1"><p class="skill-direction"><strong>Function or not?</strong></p><p>\((0,1),(2,3),(0,4)\)</p></template><div id="s1" hidden><b>Answer:</b> Not a function.<p><b>Worked solution:</b> Not a function.</p></div></article><article class="print-card question-card" id="q2" data-practice-i-can="LG 02-ican-2" data-family-id="ALG1-AP1-1-2-4-P02"><div class="question-top"><strong>2.</strong><span class="question-skill">I can distinguish functions from relationships that are not functions.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(2)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(2)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p>Does \(\{(1,2),(1,3),(2,4)\}\) represent a function? Explain.</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt2"><p>Does \(\{(1,2),(1,3),(2,4)\}\) represent a function? Explain.</p></template><div id="s2" hidden><b>Answer:</b> No; input 1 has two different outputs.<p><b>Worked solution:</b> No; input 1 has two different outputs.</p></div></article><article class="print-card question-card" id="q3" data-practice-i-can="LG 02-ican-2" data-family-id="ALG1-AP1-1-2-4-R01"><div class="question-top"><strong>3.</strong><span class="question-skill">I can distinguish functions from relationships that are not functions.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(3)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(3)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p>The pairs are \((1,4),(2,6),(1,7)\). Is this relation a function? Explain.</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt3"><p>The pairs are \((1,4),(2,6),(1,7)\). Is this relation a function? Explain.</p></template><div id="s3" hidden><b>Answer:</b> No; input 1 has two outputs.<p><b>Worked solution:</b> No; input 1 has two outputs.</p></div></article><article class="print-card question-card" id="q4" data-practice-i-can="LG 02-ican-2" data-family-id="ALG1-AP1-1-2-4-R02"><div class="question-top"><strong>4.</strong><span class="question-skill">I can distinguish functions from relationships that are not functions.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(4)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(4)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p>Pairs \((1,5),(2,5),(3,5)\) all have output 5. Is this a function? Explain.</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt4"><p>Pairs \((1,5),(2,5),(3,5)\) all have output 5. Is this a function? Explain.</p></template><div id="s4" hidden><b>Answer:</b> Yes; repeated outputs are allowed, but each input has exactly one output.<p><b>Worked solution:</b> Yes; repeated outputs are allowed, but each input has exactly one output.</p></div></article><div class="lesson-section-divider">I can write and interpret linear equations in slope-intercept form.</div><article class="print-card question-card" id="q5" data-practice-i-can="LG 03-ican-2" data-family-id="ALG1-AP1-2-1-4-S02"><div class="question-top"><strong>5.</strong><span class="question-skill">I can write and interpret linear equations in slope-intercept form.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(5)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(5)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p class="skill-direction"><strong>Find the y-intercept.</strong></p><p>\(y=5x−7\)</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt5"><p class="skill-direction"><strong>Find the y-intercept.</strong></p><p>\(y=5x−7\)</p></template><div id="s5" hidden><b>Answer:</b> −7<p><b>Worked solution:</b> −7</p></div></article><article class="print-card question-card" id="q6" data-practice-i-can="LG 03-ican-2" data-family-id="ALG1-AP1-2-1-4-S03"><div class="question-top"><strong>6.</strong><span class="question-skill">I can write and interpret linear equations in slope-intercept form.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(6)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(6)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p class="skill-direction"><strong>Find the slope.</strong></p><p>\(y=−\tfrac12 x+6\)</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt6"><p class="skill-direction"><strong>Find the slope.</strong></p><p>\(y=−\tfrac12 x+6\)</p></template><div id="s6" hidden><b>Answer:</b> −1/2<p><b>Worked solution:</b> −1/2</p></div></article><article class="print-card question-card" id="q7" data-practice-i-can="LG 03-ican-2" data-family-id="ALG1-AP1-2-1-4-S01"><div class="question-top"><strong>7.</strong><span class="question-skill">I can write and interpret linear equations in slope-intercept form.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(7)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(7)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p class="skill-direction"><strong>Write an equation.</strong></p><p>Slope \(−3\), intercept \(4\).</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt7"><p class="skill-direction"><strong>Write an equation.</strong></p><p>Slope \(−3\), intercept \(4\).</p></template><div id="s7" hidden><b>Answer:</b> \(y=−3x+4\)<p><b>Worked solution:</b> \(y=−3x+4\)</p></div></article><article class="print-card question-card" id="q8" data-practice-i-can="LG 03-ican-2" data-family-id="ALG1-AP1-2-1-4-P01"><div class="question-top"><strong>8.</strong><span class="question-skill">I can write and interpret linear equations in slope-intercept form.</span><button class="new-version-button no-print" type="button" onclick="CPMStudentPractice.newQuestion(8)">New Version</button><button class="solution-button no-print" type="button" onclick="showSolution(8)">Solution</button></div><div class="print-card-body question figure-lesson-size"><div class="problem"><p>Write an equation with slope 2 and intercept −5. Decide if \((0,1),(1,4),(0,2)\) is a function.</p></div></div><div class="question-workspace workspace" style="height:228pt"></div><template id="rawPrompt8"><p>Write an equation with slope 2 and intercept −5. Decide if \((0,1),(1,4),(0,2)\) is a function.</p></template><div id="s8" hidden><b>Answer:</b> y=2x−5; not a function.<p><b>Worked solution:</b> y=2x−5; not a function.</p></div></article></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
+async function showSolution(id){
+ const row=document.getElementById('q'+id);
+ const answer=document.getElementById('s'+id);
+ const source=document.getElementById('rawPrompt'+id);
+ if(!row||!answer)return;
+ const content=document.getElementById('workedContent');
+ // Recreate from original TeX, not cloned MathJax SVG/HTML. Some SVG glyphs
+ // depend on definitions belonging to the original page fragment.
+ if(window.MathJax?.typesetClear)window.MathJax.typesetClear([content]);
+ const prompt=source?.innerHTML||row.querySelector('.problem')?.innerHTML||'';
+ content.innerHTML='<div class="problem">'+prompt+'</div><hr>'+answer.innerHTML;
+ document.getElementById('worked').showModal();
+ // MathJax may still be initializing on an iPad when a student taps Solution.
+ if(!window.MathJax?.typesetPromise)return;
+ try{await window.MathJax.startup.promise;await window.MathJax.typesetPromise([content]);}
+ catch(_){/* leave the original text available if the browser's math renderer fails */}
+}
+</script><script>/* CPM Tools shared physical-page flow primitives.
+   One source for content measurement, rich block fragmentation and guardrails.
+   Lesson/Activities and Assessments consume the same functions. */
+(()=>{'use strict';
+function overflow(inner){
+ if(!inner || inner.clientHeight < 20)return true;
+ const edge=inner.getBoundingClientRect().bottom;
+ const last=[...inner.children].at(-1);
+ // scrollHeight catches layout overflow, bottom catches transformed/margin overflow.
+ return inner.scrollHeight>inner.clientHeight+2 ||
+   (last && last.getBoundingClientRect().bottom>edge+2 &&
+    getComputedStyle(last).position!=='absolute');
+}
+function assertPages(container){
+ const bad=[];
+ for(const sheet of container.querySelectorAll(':scope > .paper')){
+  if(sheet.classList.contains('duplex-blank'))continue;
+  const inside=sheet.querySelector(':scope > .paper-inner');
+  if(overflow(inside))bad.push(`${sheet.dataset.form||'0'}:${sheet.dataset.page||'?'} (${inside.scrollHeight}/${inside.clientHeight}px)`);
+ }
+ if(bad.length)throw Error('A printed page would clip content: '+bad.slice(0,10).join(', ')+'. Adjust its visual or workspace; document was not saved.');
+}
+async function ready(root){
+ await Promise.all([...root.querySelectorAll('img')].map(async img=>{
+  img.loading='eager';
+  if(img.decode)await img.decode().catch(()=>{});
+  else if(!img.complete)await new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});});
+ }));
+ if(document.fonts?.ready)await document.fonts.ready;
+}
+function flowUnits(body){
+ const out=[];
+ const containerTags=new Set(['DIV','SECTION','ARTICLE','OL','UL','DL','TABLE','TBODY','THEAD','TFOOT']);
+ const blockTags=new Set(['P','LI','DIV','SECTION','ARTICLE','OL','UL','DL','DT','DD','H1','H2','H3','H4','H5','H6','TABLE','TR','THEAD','TBODY','FIGURE','BLOCKQUOTE','IMG','SVG','HR']);
+ function walk(parent,trail=[]){
+  for(const child of parent.childNodes){
+   if(child.nodeType===Node.TEXT_NODE){if(child.textContent.trim())out.push({trail,node:child});continue;}
+   if(child.nodeType!==Node.ELEMENT_NODE)continue;
+   const tag=child.tagName;
+   const children=[...child.children];
+   const hasBlocks=children.some(e=>blockTags.has(e.tagName));
+   if(containerTags.has(tag)&&hasBlocks){
+    // A source may use individual <ol type="a" start="2"> elements. Track
+    // every list start so a split never changes a,b,c into 1,1,1.
+    if(tag==='OL'){
+     let seq=Number(child.getAttribute('start')||1);
+     for(const entry of child.childNodes){
+      if(entry.nodeType!==Node.ELEMENT_NODE||entry.tagName!=='LI'){
+       if(entry.nodeType===Node.TEXT_NODE&&!entry.textContent.trim())continue;
+       out.push({trail:[...trail,child],node:entry});
+       continue;
+      }
+      const copy=entry.cloneNode(true);
+      const explicit=entry.getAttribute('value');
+      if(explicit!==null&&Number.isFinite(Number(explicit)))seq=Number(explicit);
+      const shell=child.cloneNode(false);shell.setAttribute('start',String(seq));
+      out.push({trail:[...trail,shell],node:copy});seq++;
+     }
+    }else walk(child,[...trail,child]);
+   }else out.push({trail,node:child});
+  }
+ }
+ walk(body);
+ return out;
+}
+function makePageFragment(card,units,continued=false,withTail=false){
+ const out=card.cloneNode(false);
+ out.classList.add('pagination-fragment');
+ const body=card.querySelector(':scope > .print-card-body');
+ if(!body)return card.cloneNode(true);
+ if(!continued){
+  for(const child of card.children){if(child===body)break;out.append(child.cloneNode(true));}
+ }else{
+  const n=document.createElement('div');n.className='continuation-label';
+  const label=card.querySelector('.source-problem-label')?.textContent||card.querySelector('.card-display-title')?.textContent||card.querySelector('.question-top strong')?.textContent||'Content';
+  n.textContent=label+' (continued)';out.append(n);
+ }
+ const piece=body.cloneNode(false);out.append(piece);
+ const memo=new Map();
+ for(const unit of units){
+  let here=piece;
+  for(const sourceWrapper of unit.trail){
+   let map=memo.get(here);if(!map){map=new Map();memo.set(here,map);}
+   let wrapper=map.get(sourceWrapper);
+   if(!wrapper){wrapper=sourceWrapper.cloneNode(false);here.append(wrapper);map.set(sourceWrapper,wrapper);}
+   here=wrapper;
+  }
+  here.append(unit.node.cloneNode(true));
+ }
+ if(withTail){
+  let seen=false;
+  for(const child of card.children){if(seen)out.append(child.cloneNode(true));if(child===body)seen=true;}
+  out.classList.add('pagination-last');
+ }
+ return out;
+}
+// As an emergency fallback, split a genuinely page-long paragraph at word
+// boundaries without discarding its inline markup or its mathematical nodes.
+// Range.cloneContents preserves formatted spans, SVG and MathML in each part.
+function divideLargeParagraph(unit){
+ const tag=unit.node.tagName;
+ if(!['P','LI','BLOCKQUOTE'].includes(tag))return null;
+ const clone=unit.node.cloneNode(true);
+ const walker=document.createTreeWalker(clone,NodeFilter.SHOW_TEXT);
+ const texts=[];while(walker.nextNode())if(walker.currentNode.textContent.trim())texts.push(walker.currentNode);
+ if(!texts.length)return null;
+ const stops=[];
+ for(const node of texts){
+  const matches=[...node.textContent.matchAll(/\s+/g)];
+  for(const m of matches)stops.push({node,end:m.index+m[0].length});
+ }
+ // Avoid needlessly splitting short paragraphs, and make sizable portions.
+ if(stops.length<16)return null;
+ const boundaries=[{node:texts[0],end:0}];
+ for(let i=45;i<stops.length;i+=45)boundaries.push(stops[i]);
+ boundaries.push({node:texts.at(-1),end:texts.at(-1).textContent.length});
+ if(boundaries.length<3)return null;
+ const result=[];
+ for(let i=0;i<boundaries.length-1;i++){
+  const r=document.createRange();r.setStart(boundaries[i].node,boundaries[i].end);r.setEnd(boundaries[i+1].node,boundaries[i+1].end);
+  const piece=clone.cloneNode(false);piece.append(r.cloneContents());
+  if(piece.textContent.trim()||piece.querySelector('img,svg,math,mjx-container'))result.push({trail:unit.trail,node:piece});
+ }
+ return result.length>1?result:null;
+}
+
+function paginatePieces(pieces, createPage){
+ let page=createPage(false), count=0;
+ const startNext=()=>{page=createPage(true);count=0;};
+ const fits=()=>!overflow(page.inner);
+ function scaleTooLarge(fragment,unit){
+  const media=[...fragment.querySelectorAll('.print-card-body img,.print-card-body svg')].filter(n=>!n.closest('mjx-container'));
+  if(!media.length)return false;
+  const largest=media.reduce((a,b)=>b.getBoundingClientRect().height>a.getBoundingClientRect().height?b:a);
+  const rect=largest.getBoundingClientRect();
+  const top=fragment.getBoundingClientRect().top;
+  const free=page.inner.getBoundingClientRect().bottom-top-(fragment.getBoundingClientRect().height-rect.height)-20;
+  if(free<60||rect.height<free+2||rect.width<1)return false;
+  const factor=Math.max(.1,Math.min(.98,free/rect.height));
+  const figures=unit.node.nodeType===Node.ELEMENT_NODE?[...unit.node.querySelectorAll('img,svg')]:[];
+  if(unit.node.nodeType===Node.ELEMENT_NODE && unit.node.matches('img,svg'))figures.unshift(unit.node);
+  const target=figures.find(n=>!n.closest('mjx-container'));
+  if(!target)return false;
+  target.style.setProperty('width',Math.max(1,Math.floor(rect.width*factor))+'px','important');
+  target.style.setProperty('height','auto','important');
+  target.style.setProperty('max-height',Math.max(1,Math.floor(free))+'px','important');
+  return true;
+ }
+ function split(card){
+  const body=card.querySelector(':scope > .print-card-body');
+  if(!body)throw Error('Oversized unbreakable assessment item.');
+  let queue=flowUnits(body), accepted=[],continued=false,tries=0;
+  const resized=new WeakSet();
+  if(!queue.length)throw Error('Oversized assessment card has no divisible content.');
+  let fragment=makePageFragment(card,[],continued,false);
+  page.inner.append(fragment);
+  while(queue.length){
+   if(++tries>Math.max(160,queue.length*15))throw Error('Page-flow safety limit: unusually long or malformed question.');
+   const unit=queue.shift();
+   const candidate=makePageFragment(card,[...accepted,unit],continued,false);
+   fragment.replaceWith(candidate);fragment=candidate;
+   if(fits()){accepted.push(unit);continue;}
+   if(accepted.length){
+    fragment.replaceWith(makePageFragment(card,accepted,continued,false));
+    count++;startNext();continued=true;accepted=[];
+    fragment=makePageFragment(card,[],continued,false);page.inner.append(fragment);
+    queue.unshift(unit);continue;
+   }
+   // Move to a fresh physical page before splitting a short block.
+   if(count){fragment.remove();startNext();continued=true;
+    fragment=makePageFragment(card,[],continued,false);page.inner.append(fragment);queue.unshift(unit);continue;}
+   const divided=divideLargeParagraph(unit);
+   if(divided){fragment.replaceWith(makePageFragment(card,[],continued,false));fragment=page.inner.lastElementChild;
+    queue.unshift(...divided);continue;}
+   if(!resized.has(unit.node)&&scaleTooLarge(fragment,unit)){
+    resized.add(unit.node);fragment.replaceWith(makePageFragment(card,[],continued,false));
+    fragment=page.inner.lastElementChild;queue.unshift(unit);continue;
+   }
+   throw Error('An unbreakable graph/table does not fit on a physical sheet; lower its figure size.');
+  }
+  fragment.replaceWith(makePageFragment(card,accepted,continued,true));
+  if(!fits()){
+   fragment=page.inner.lastElementChild;
+   fragment.replaceWith(makePageFragment(card,accepted,continued,false));
+   count++;startNext();
+   page.inner.append(makePageFragment(card,[],true,true));
+   if(!fits())throw Error('Question answer/workspace cannot fit on a sheet.');
+  }
+  count++;
+ }
+ for(const part of pieces){
+  page.inner.append(part);
+  if(fits()){count++;continue;}
+  part.remove();
+  if(count){
+   startNext();page.inner.append(part);
+   if(fits()){count++;continue;}
+   part.remove();
+  }
+  split(part);
+ }
+ return page;
+}
+window.CPMPageFlow=Object.freeze({overflow,assertPages,ready,flowUnits,makePageFragment,divideLargeParagraph,paginatePieces});
+})();
+</script>
+<script>
+// Pages and fragment boundaries are measured by CPMPageFlow, the same module
+// used by the installed Assessment Builder. This wrapper only supplies its
+// page header, Notability workspace and standalone-document lifecycle.
+window.__practiceReady=false;
+window.__practiceError='';
+async function paginatePractice(){
+ const root=document.getElementById('practicePages');
+ const source=document.getElementById('practiceUnpaged');
+ if(!root||!source||!window.CPMPageFlow)throw Error('Shared assessment pagination is unavailable');
+ // CDN fallback is asynchronous if the local script is unavailable in a private
+ // PDF render. Wait for the established MathJax engine instead of racing it.
+ for(let tries=0;tries<150 && !window.MathJax?.typesetPromise;tries++)
+   await new Promise(resolve=>setTimeout(resolve,100));
+ if(!window.MathJax?.startup?.promise || !window.MathJax?.typesetPromise)
+   throw Error('Mathematics renderer unavailable; the document was not printed with raw formulas');
+ await window.MathJax.startup.promise;
+ await window.MathJax.typesetPromise([source]);
+ await window.CPMPageFlow.ready(source);
+ const pieces=[...source.children].map(n=>n.cloneNode(true));
+ let pageNo=0;
+ function nextPage(continued){
+   pageNo++;
+   const paper=document.createElement('section');paper.className='paper';
+   paper.dataset.page=String(pageNo);
+   const inner=document.createElement('div');inner.className='paper-inner';
+   const header=document.createElement('header');header.className='sheet-heading'+(continued?' continued':'');
+   header.innerHTML=continued?'<span class="sheet-kicker">ALGEBRA 1 · PERSONALIZED PRACTICE</span><span>Continued</span>':
+     '<div class="sheet-kicker">ALGEBRA 1 · PERSONALIZED PRACTICE</div><div class="sheet-title">Math Practice</div><div class="sheet-meta">'+document.body.dataset.practiceDate+' · '+document.body.dataset.practiceCount+' questions</div>';
+   inner.append(header);paper.append(inner);
+   const footer=document.createElement('span');footer.className='sheet-footer';footer.textContent='Page '+pageNo;paper.append(footer);
+   root.append(paper);return {paper,inner};
+ }
+ window.CPMPageFlow.paginatePieces(pieces,nextPage);
+ source.remove();
+ window.CPMPageFlow.assertPages(root);
+ for(const p of root.querySelectorAll(':scope > .paper'))p.querySelector('.sheet-footer').textContent+=' of '+pageNo;
+ window.__practiceReady=true;
+}
+function beginPracticePagination(){paginatePractice().catch(err=>{
+  window.__practiceError=String(err?.message||err);
+  const status=document.getElementById('practiceStatus');
+  if(status){status.hidden=false;status.textContent='Practice layout unavailable: '+window.__practiceError;}
+});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',beginPracticePagination,{once:true});
+else beginPracticePagination();
+</script>
+<script>
+(function(){
+ const button=document.getElementById('practiceSharePDF');
+ if(!button)return;
+ const pdfURL=new URL(location.href);
+ if(!/\.html$/i.test(pdfURL.pathname)){button.hidden=true;return;}
+ pdfURL.pathname=pdfURL.pathname.replace(/\.html$/i,'.pdf');
+ pdfURL.search='';pdfURL.hash='';
+ let pdfFile=null;
+ function fileShareAvailable(){
+   try{return !!(pdfFile&&navigator.share&&navigator.canShare&&navigator.canShare({files:[pdfFile]}));}
+   catch(_){return false;}
+ }
+ // Fetch before the tap. iPad Safari requires navigator.share to be invoked
+ // during the actual user gesture, not after awaiting a PDF download.
+ async function prepare(){
+   try{
+     const response=await fetch(pdfURL.href,{cache:'default'});
+     if(!response.ok)throw Error('No published PDF');
+     const blob=await response.blob();
+     if(blob.size<850||((await blob.slice(0,5).text())!=='%PDF-'))throw Error('Invalid PDF');
+     pdfFile=new File([blob],'Algebra_1_Practice.pdf',{type:'application/pdf'});
+     button.disabled=false;
+     button.textContent=fileShareAvailable()?'Notability':'Open PDF';
+     button.title=fileShareAvailable()?'Share the practice PDF and select Notability':'Open the PDF, then use Share to send it to Notability';
+   }catch(_){button.hidden=true;}
+ }
+ button.addEventListener('click',function(){
+   if(!pdfFile)return;
+   if(fileShareAvailable()){
+     // Do not await any task before opening the native share sheet.
+     navigator.share({files:[pdfFile],title:'Algebra 1 Practice'})
+       .catch(function(error){if(error?.name!=='AbortError')button.title='Share did not open; use your browser PDF viewer instead.';});
+   }else window.open(pdfURL.href,'_blank','noopener');
+ });
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',prepare,{once:true});
+ else prepare();
+})();
+</script></body></html>
