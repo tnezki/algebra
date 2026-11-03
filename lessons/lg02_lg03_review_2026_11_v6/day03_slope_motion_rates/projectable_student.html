@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Projectable | Slope, Motion &amp; Comparing Rates | student</title><style>
+@page { size: letter; margin: 0; }
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{background:#edf2f8;color:#1c3046;font-family:Arial,Helvetica,sans-serif;font-size:11.1pt;line-height:1.38}
+.screenbar{padding:12px 20px;background:#173a61;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:0;z-index:8;font-size:11px}.screenbar a,.screenbar button{color:#fff}.screenbar a{margin-left:8px}.screenbar button{background:#fff;color:#173a61;border:0;border-radius:7px;padding:7px 12px;cursor:pointer;font-weight:700}
+.sheet{width:8.5in;height:11in;overflow:hidden;background:#fff;margin:20px auto;padding:0.52in 0.62in 0.62in;position:relative;break-after:page;page-break-after:always;box-shadow:0 3px 12px #a9b8c8;font-size:11pt}
+.sheet:last-child{break-after:auto;page-break-after:auto}.kicker{font-weight:800;letter-spacing:.11em;color:#24619b;text-transform:uppercase;font-size:8.5pt}.title{font-size:20pt;letter-spacing:-.025em;margin:5px 0 6px;color:#163658;line-height:1.14}.sub{font-size:10pt;color:#5e7287;margin:0 0 11px}.rule{height:3px;background:#285b91;margin:10px 0 14px}.studentline{display:flex;justify-content:space-between;gap:10px;font-size:9.3pt;margin-bottom:11px;color:#39566e}.pill{border:1px solid #bed3e5;background:#eef5fb;border-radius:99px;padding:4px 10px;font-size:8.5pt;font-weight:800;color:#27567c}.footer{position:absolute;bottom:.3in;left:.62in;right:.62in;border-top:1px solid #d9e2ea;padding-top:7px;display:flex;justify-content:space-between;color:#718095;font-size:8pt}
+h2{font-size:13pt;color:#153f66;margin:12px 0 7px;line-height:1.2}h3{font-size:11pt;margin:6px 0;color:#1f517e}.lead{font-size:10.6pt;margin:8px 0 10px}.muted{color:#697f93}.caption{font-size:8.6pt;color:#647b90}.card{border:1px solid #cddce9;border-radius:8px;padding:12px;background:#fafdff;margin:10px 0}.focus{padding:13px 15px;background:#edf5fc;border-left:4px solid #2367a5;border-radius:5px;font-size:10pt}.focus p{margin:4px 0}.vocab{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}.vocab .term{padding:10px 11px;background:#f6f9fc;border:1px solid #dee7ee;border-radius:7px;font-size:10.4pt;line-height:1.4}.term b{display:block;color:#174f7a;margin-bottom:4px;font-size:10.7pt}.methods{padding:12px 14px;border:1px solid #c4dbe9;background:#f1f8fb;border-radius:7px;font-size:10.4pt;margin-top:7px}.methods p{margin:5px 0}.eq{font-size:16pt;line-height:1.5;margin:10px 0}.warm{height:4.1in;border:1px solid #d3e1ef;padding:14px 16px;border-radius:10px;margin:14px 0;overflow:hidden;position:relative}.warm p{font-size:11pt}.warm .eq{font-size:19pt}.diamond-box{display:flex;justify-content:center;align-items:center;gap:32px;margin-top:0}.diamond{width:2.5in;height:2.3in}.lined{background:repeating-linear-gradient(to bottom,transparent 0px,transparent 34px,#dae5ed 35px,#dae5ed 36px);margin-top:10px;min-height:80px}.workspace{height:1.5in}.huge-workspace{height:2.35in}.small-workspace{height:.76in}.warm .lined{margin-top:8px}.data{border-collapse:collapse;text-align:center;font-size:10.5pt;margin:7px 0;max-width:100%}.data th{background:#e9f2fa;color:#214c70}.data th,.data td{border:1px solid #90a7ba;padding:7px 12px;min-width:60px}.data td{height:30px}.two-col{display:grid;grid-template-columns:1fr 1.05fr;gap:17px;align-items:start}.three-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:10px 0}.three-cases>div{background:#f7fafd;padding:8px;border-radius:6px;text-align:center}.three-cases .data{font-size:9pt}.three-cases .data td,.three-cases .data th{padding:4px 8px;min-width:35px}.plot{width:100%;max-height:2.45in}.hint{font-size:9.3pt;color:#5e7389}.formula-call{border:1px solid #cbdbea;background:#f7fbfe;border-radius:6px;margin:8px 0;padding:10px;text-align:center;font-weight:700}.question{border-top:1px solid #d4e1ec;padding:10px 0 5px;min-height:2.55in}.qtext{font-size:11pt;margin:3px 0 5px}.question b.n{display:inline-block;background:#e8f1f8;color:#1d5b89;padding:4px 9px;border-radius:6px;margin-right:5px}.question .lined{height:1.45in}.prompt-num{font-weight:700;color:#23547d}.key{font-size:9.3pt;color:#526d84}.steps{margin:10px 0}.steps li{padding:4px 0;font-size:10pt}.ansbox{border:1px solid #9fbcd1;border-radius:8px;padding:10px 12px;background:#f7fafc}.launchq{margin:13px 0 0;padding:12px 14px;border-top:1px solid #d2e1ed}.launchq p{margin:7px 0}.launchq .lined{height:1.15in}.lookfor{background:#f6faf7;border:1px solid #c5dacc;border-radius:7px;padding:9px 12px;font-size:9.4pt;margin-top:8px}.answer{border-left:3px solid #3e8a65;padding:7px 10px;background:#f1f8f4;margin:6px 0;font-size:9.2pt}.keypage{font-size:9.3pt}.keypage h3{margin:12px 0 3px}.keypage ol{margin:5px 0 12px;padding-left:20px}.keypage li{margin:5px 0}.keypage .methods{font-size:9.2pt}
+@media print{body{background:#fff}.screenbar{display:none!important}.sheet{margin:0;box-shadow:none;border:0}.sheet:last-child{break-after:auto}}
+
+/* revised lesson PDF-safe visuals and teacher model workspace */
+.diamond-box{display:flex;justify-content:center;align-items:center;margin:7px 0 0;gap:16px}
+.diamond-canonical{width:2.38in;height:2.38in;object-fit:contain;display:block}
+.diamond-directions{font-size:10pt;color:#576b7f;max-width:2.5in}
+.example-work{height:2.18in;min-height:2.18in}
+.modelspace .lined{background:repeating-linear-gradient(to bottom,transparent 0,transparent 34px,#d8e4ef 35px,#d8e4ef 36px)}
+.example-work,.try-work{padding:5px 6px}
+.mjx-container{display:inline-block;white-space:nowrap;vertical-align:middle}
+.mjx-container svg{max-width:100%}
+.teacher .sheet{outline:0 solid transparent}
+.teacher .kicker{color:#794a16}
+.teacher .rule{background:#ac7733}
+.teacher .warm .lined,.teacher .example-work,.teacher .try-work,.teacher .question .lined,.teacher .launchq .lined{background:none}
+.teacher-fill{font-size:9.5pt;line-height:1.38;color:#14512e;background:#f2f9f3;border-left:3px solid #40885b;padding:7px 9px;max-height:100%;overflow:hidden}
+.teacher-fill b{font-size:8pt;letter-spacing:.04em;color:#287347}
+.teacher-fill p{margin:3px 0}
+.teacher .teacher-only-banner{display:block;color:#965a19;font-weight:bold;border-bottom:1px dotted #bc9b6a;margin-bottom:5px}
+.teacher .warm .teacher-fill{font-size:11pt}
+.teacher .question .teacher-fill{font-size:9.3pt}
+.teacher .launchq .teacher-fill{font-size:8.9pt}
+@media print {.mjx-container{print-color-adjust:exact;-webkit-print-color-adjust:exact}.diamond-canonical{image-rendering:auto}}
+
+/* v3: PDF and Notability handwriting spaces must be white, never gradients. */
+.lined,.modelspace .lined,.warm .lined,.question .lined,.launchq .lined,
+.teacher .warm .lined,.teacher .question .lined,.teacher .launchq .lined{
+  background:#ffffff !important;
+  background-image:none !important;
+  position:relative;
+}
+.lined .paper-line {position:absolute;left:1px;right:1px;display:block;
+ border-top:.6px solid #d5e0ea;height:0;pointer-events:none}
+.teacher .lined .paper-line{display:none!important}
+.kicker{font-size:7.9pt;letter-spacing:.065em}
+.title{font-size:18pt;letter-spacing:-.02em;margin:5px 0 4px}
+.sub{font-size:9.5pt;margin:0 0 7px}
+.rule{margin:9px 0 12px}
+.warm{margin:10px 0;padding:13px 16px}
+.diamond-box{margin:0;gap:0;justify-content:center}
+.diamond-canonical{width:2.28in;height:2.28in}
+.warm h2{margin-top:5px}
+@media print{.lined,.modelspace .lined,.teacher .lined{background:#fff !important;background-image:none !important;print-color-adjust:exact}}
+
+/* v4: clean, consistent title -> rule -> section header on all pages. */
+.sheet .kicker {display:none!important}
+.sheet>.title{font-size:19pt;line-height:1.2;letter-spacing:-.018em;margin:0 0 9px;color:#163658}
+.sheet>.rule{height:2px;background:#285b91;margin:0 0 13px}
+.section-name{font-weight:800;letter-spacing:.075em;color:#235888;font-size:11.5pt;line-height:1.2;margin:0 0 17px}
+.teacher .section-name{color:#895e28}
+.teacher .sheet>.rule{background:#ac7733}
+.sheet>.sub{display:none!important}
+.sheet h2.lesson-activity{font-size:13pt;color:#163f66;margin:0 0 10px}
+.modelspace>b,.two-col>div>b{font-size:10.4pt;line-height:1.35;display:block}
+.vocab .term b{color:#174f7a}
+@media print { .sheet>.title{margin-top:0} .section-name{margin-bottom:17px} }
+</style><style>
+/* Lesson v5 projectable half-page layout. Exactly two half-sheet cards per page. */
+.projected-pair{display:block;position:absolute;top:.50in;bottom:.56in;left:.60in;right:.60in;width:auto;min-width:0}
+.projected-half{height:50%;width:100%;max-width:100%;min-width:0;padding:14pt 13pt 9pt;position:relative;overflow:hidden;border:1.1pt solid #d3dfe9;background:#fff;display:block}
+.projected-half:first-child{border-radius:7pt 7pt 0 0;border-bottom:1.1pt dashed #acbbc9}
+.projected-half:last-child{border-radius:0 0 7pt 7pt;border-top:0}
+.projected-topline{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:7pt;border-bottom:1.5pt solid #2a5b88;color:#22547f;text-transform:uppercase;font-weight:800;letter-spacing:.045em;font-size:9pt}
+.projected-half.solution .projected-topline{color:#6f4c1c;border-color:#ae7c39}
+.projected-half .projected-title{margin:10pt 0 6pt;font-size:16pt;font-weight:800;line-height:1.16;color:#183657}
+.projected-half .projected-content{font-size:15pt;line-height:1.38;color:#1a2d42;overflow-wrap:break-word}
+.projected-half .projected-content mjx-container{font-size:1.05em!important}
+.projected-half .projected-content p{margin:8pt 0}
+.projected-half .projected-content ul{margin:5pt 0}
+.projected-half .projected-label{position:absolute;bottom:10pt;right:12pt;color:#728498;font-size:8pt}
+.projected-half.solution .projected-content{font-size:14pt}
+.projected-half.solution .projected-title{color:#795323}
+.projected-half .projected-copy{font-size:9pt;color:#66809a;margin-top:5pt}
+.projected-part{font-weight:800;color:#204f7d}
+@media screen {
+.projected-half{background-color:#fff}
+.projection-only .sheet{box-shadow:0 6px 18px #9cb1c6}
+.projected-half[data-card]{scroll-margin-top:65px}
+.projection-only .screenbar{position:sticky}
+}
+@media print {
+.projected-half{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style><style>@media print{.projection-nav{display:none!important}.projected-sheet{break-after:page!important}.projected-sheet:last-of-type{break-after:auto!important}}</style></head><body class="projection-only "><nav class="screenbar"><strong>Slope, Motion &amp; Comparing Rates | Projection Set</strong><span><a href="student.html">Back to lesson</a><button onclick="window.print()">Print / PDF</button></span></nav><div class="screenbar projection-nav no-print" style="justify-content:center;gap:16px;"><button onclick="step(-1)" type="button">Previous card</button><span id="card-status">Panel 1</span><button onclick="step(1)" type="button">Next card</button></div><section class="sheet projected-sheet" id="proj-1"><div class="projected-pair"><div class="projected-half question" data-card="1"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q1  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> Position goes from 32 m at 0 s to 14 m at 6 s. Calculate average rate of change with units.</div><div class="projected-label">1 / 6  •  Same question as Review &amp; Preview</div></div><div class="projected-half question" data-card="2"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q2  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> Find the slope between (-2,7) and (4,-5). Show Δy and Δx.</div><div class="projected-label">2 / 6  •  Same question as Review &amp; Preview</div></div></div></section><section class="sheet projected-sheet" id="proj-2"><div class="projected-pair"><div class="projected-half question" data-card="3"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q3  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> Two cyclists travel 30 m in 5 s and 42 m in 7 s. Compare their average rates.</div><div class="projected-label">3 / 6  •  Same question as Review &amp; Preview</div></div><div class="projected-half question" data-card="4"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q4  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> A tank starts at 70 gallons and loses 4 gallons per minute. Interpret the starting value and rate.</div><div class="projected-label">4 / 6  •  Same question as Review &amp; Preview</div></div></div></section><section class="sheet projected-sheet" id="proj-3"><div class="projected-pair"><div class="projected-half question" data-card="5"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q5  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> Spiral: For {(0,5),(2,5),(2,7)}, is it a function? List domain/range.</div><div class="projected-label">5 / 6  •  Same question as Review &amp; Preview</div></div><div class="projected-half question" data-card="6"><div class="projected-topline"><span>ALGEBRA 1  |  PROJECTABLE QUESTION</span><span>Q6  |  DAY 3</span></div><div class="projected-title">Slope, Motion &amp; Comparing Rates</div><div class="projected-content"> Preview: A scooter is 12 meters from a marker at time 0 and its position increases by 3 meters each second. Write an equation for position p after t seconds.</div><div class="projected-label">6 / 6  •  Same question as Review &amp; Preview</div></div></div></section><script>let activeCard=0;const cards=Array.from(document.querySelectorAll('.projected-half'));function step(dir){activeCard=Math.max(0,Math.min(cards.length-1,activeCard+dir));cards[activeCard].scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('card-status').textContent='Panel '+(activeCard+1)+' of '+cards.length;}document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')step(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')step(-1)})</script></body></html>
