@@ -11,18 +11,353 @@
 @media(max-width:980px){.layout{grid-template-columns:1fr}.side{height:auto;position:static;padding:15px 19px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}.side .brand{margin:0 15px 0 0;padding:0;border:0}.side .side-title,.side .chapters-nav,.side .side-footer{display:none}.side a{padding:8px}.main{padding:0 22px 55px}.hero{margin:0 -22px 26px;padding:35px 22px}.kpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.principle-grid,.two-col{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kpi{padding:14px}.kpi-num{font-size:24px}.toolbar{align-items:stretch}.action{flex:1}.goal-card summary{padding:14px 12px;gap:9px}.goal-body{padding:15px 14px}.chapter-heading h3{font-size:16px}.chapter-count{display:none}.grades th,.grades td{padding:9px}.crosswalk td,.crosswalk th{padding:8px;font-size:12px}}
 @media print{*{print-color-adjust:exact;-webkit-print-color-adjust:exact}body{background:#fff;color:#172b3a;font-size:10pt}.layout{display:block}.side,.toolbar,.search-status,.footer .screen-only{display:none!important}.main{max-width:none;padding:0 0 10px}.hero{margin:0;padding:18px 20px;border-bottom:3px solid #193d5d;background:#173f5d!important;color:white!important}.hero h1{font-size:28px}.hero p{font-size:12px}.section{margin:19px 0}.kpis{grid-template-columns:repeat(4,1fr);margin:12px 0}.kpi{padding:9px}.kpi-num{font-size:20px}.principle-grid{gap:7px}.principle{padding:10px}.principle p{font-size:10px}.panel{padding:10px}.grade-panel{padding:0}.grades td,.grades th{padding:6px}.chapter-section{break-before:page}.chapter-section:first-of-type{break-before:auto}.goal-card{break-inside:avoid;box-shadow:none}.goal-card summary{padding:9px 12px}.goal-body{display:block!important;padding:9px 12px 9px 58px}.goal-hint,.chevron{display:none}.skills-list{gap:4px}.skills-list li{font-size:10px}.note.small{font-size:9px}.chapter-heading h3{font-size:16px}.chapter-subtitle{font-size:10px}.crosswalk td,.crosswalk th{padding:6px}.footer{margin-top:15px}.archive{break-inside:avoid}}
+
+/* Instructional pacing panels and navigation */
+.main{padding-top:26px}
+.pace-side-controls{display:grid;gap:8px;margin:0 0 20px}
+.side a.pace-open{display:flex;gap:10px;align-items:center;background:#22435d;border:1px solid #5a7890;color:#fff;padding:11px 10px;border-radius:10px;font-weight:800;font-size:13px;line-height:1.2;box-shadow:0 1px 0 #ffffff09}
+.side a.pace-open[aria-current=location]{background:#315d79;border-color:#dfb676}.side a.pace-open:hover,.side a.pace-open:focus-visible{background:#315d79;border-color:#dfb676}
+.pace-open small{display:block;color:#c1d4e2;font-weight:450;margin-top:4px;font-size:10px}
+.pace-icon{flex:none;display:grid;place-items:center;width:30px;height:30px;background:#caa066;color:#142f44;border-radius:7px;font-size:11px;font-weight:850}
+.pacing-section{padding-bottom:8px;border-bottom:1px solid #d9e4ec}
+.pacing-section .section-title h2{color:#123a58}
+.pace-subtle{font-size:12px;color:#597486;font-weight:650}
+.pacing-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.pacing-strip>div{display:flex;flex-direction:column;gap:5px;padding:16px;background:white;border-radius:12px;border:1px solid var(--line)}
+.pacing-strip strong{font-size:23px;line-height:1.2;color:#215c80}
+.pacing-strip span{font-size:11px;color:#5c7386;line-height:1.4}
+.pacing-notice{background:#f3f7fa;color:#39586c;padding:14px 17px;border:1px solid #d6e3eb;border-radius:11px;margin:14px 0;font-size:13px}
+.pace-day-legend{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 19px}
+.pace-day-legend span{border:1px solid #d0dfe8;background:#fff;padding:6px 9px;border-radius:7px;font-size:11px;color:#496479}
+.pace-chapter{background:white;border:1px solid #d6e1ea;border-radius:12px;margin:11px 0;overflow:hidden}
+.pace-chapter>summary{display:flex;align-items:center;gap:12px;list-style:none;padding:14px 17px;cursor:pointer}
+.pace-chapter>summary::-webkit-details-marker{display:none}
+.pace-chapter[open]>summary{background:#eaf2f8;border-bottom:1px solid #d6e1ea}
+.pace-chapter summary:hover{background:#f2f7fa}
+.pace-ch-number{display:grid;place-items:center;flex:none;width:37px;height:37px;border-radius:9px;background:#e0edf6;color:#1f6085;font-weight:850}
+.pace-ch-name{flex:1;min-width:0;display:grid;gap:2px;line-height:1.4}
+.pace-ch-name small{color:#667d8e;font-size:11px}
+.pace-ch-stat{color:#496a7e;font-size:11px;white-space:nowrap}
+.pace-table-scroll{overflow-x:auto;width:100%}
+.pacing-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.55}
+.pacing-table th{background:#eaf1f6;color:#22546f;text-align:left;font-size:11px;letter-spacing:.2px;padding:11px 13px;white-space:nowrap}
+.pacing-table td{padding:9px 13px;border-bottom:1px solid #e8edf2;vertical-align:top}
+.pacing-table tr:last-child td{border-bottom:0}
+.pacing-table td small{display:block;color:#7a8d9b;font-size:10px;line-height:1.4;margin-top:3px}
+.pacing-table td.day-num{font-variant-numeric:tabular-nums;color:#44657b;font-weight:750;white-space:nowrap}
+.pacing-opener td,.pacing-close td{background:#f4f8fb;color:#31546b}
+.pacing-blank td{height:24px;background:#fff}
+.pacing-table td a{text-decoration:none;font-weight:700}
+.pacing-table td a:hover{text-decoration:underline}
+.warmup-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.warmup-rule{border:1px solid var(--line);border-radius:12px;padding:15px;background:white}
+.warmup-rule>span{font-weight:850;font-size:11px;background:#e1eef7;padding:5px 8px;display:inline-block;color:#1a5d82;border-radius:6px;margin-bottom:8px}
+.warmup-rule strong{display:block;font-size:13px;line-height:1.4}
+.warmup-rule p{margin:7px 0 0;color:#546e81;font-size:12px}
+.pace-minor-heading{font-size:17px;margin:22px 0 10px}
+@media(max-width:980px){.main{padding-top:20px}.side .pace-sidebar-title{display:block;flex-basis:100%;padding:0}.pace-side-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));flex:1 1 100%;margin:0}.side .pace-side-controls a{padding:9px 7px}.side .pace-side-controls small{display:none}.pacing-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.warmup-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.pace-side-controls{grid-template-columns:1fr}.pacing-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.pacing-strip strong{font-size:19px}.pace-ch-stat{display:none}.warmup-grid{grid-template-columns:1fr}.pacing-table td,.pacing-table th{padding:7px 8px}.pacing-section .section-title{display:block}.pacing-section .section-title h2{font-size:22px}.pace-day-legend{display:grid}}
+@media print{.main{padding:0}.pacing-section{break-before:page}.pacing-section .pace-table-scroll{overflow:visible}.pace-chapter{break-inside:avoid;box-shadow:none}.pace-chapter>summary{padding:7px}.pacing-table{font-size:8pt}.pacing-table th,.pacing-table td{padding:4px 6px}.pacing-strip{margin:8px 0}.pacing-strip>div{padding:8px}.warmup-grid{grid-template-columns:repeat(4,1fr)}.warmup-rule{padding:8px}}
 </style></head>
 <body><a class="skip" href="#main">Skip to content</a><div class="layout">
 <aside class="side" aria-label="Document navigation"><div class="brand"><div class="logo" aria-hidden="true">A1</div><div><div class="brand-name">Algebra 1</div><div class="brand-sub">Teacher Reference</div></div></div>
+<div class="side-title pace-sidebar-title">Instructional pacing</div>
+<div class="pace-side-controls" aria-label="Open a pacing section">
+<a class="pace-open" href="#lesson-pacing"><span class="pace-icon" aria-hidden="true">01</span><span>Lesson Pacing<small>CPM chapter sequence</small></span></a>
+<a class="pace-open" href="#warmup-pacing"><span class="pace-icon" aria-hidden="true">02</span><span>Warm-Up Pacing<small>Daily spiral routine</small></span></a>
+<a class="pace-open" href="#monday-pacing"><span class="pace-icon" aria-hidden="true">03</span><span>Monday Pacing<small>Four Views &amp; modeling</small></span></a>
+</div><div class="side-title">Reference</div>
 <a href="#principles">Framework and decisions</a><a href="#grading">Grade language</a><a href="#reporting">Reporting and ladders</a><a href="#goals">Section Learning Goals</a><a href="#crosswalk">Chapter 12 crosswalk</a>
 <div class="side-title chapters-nav">Course chapters</div><div class="chapters-nav"><a class="chapter-nav" href="#chapter-1">01 <span class="nav-sub">Functions</span></a><a class="chapter-nav" href="#chapter-2">02 <span class="nav-sub">Linear Relationships</span></a><a class="chapter-nav" href="#chapter-3">03 <span class="nav-sub">Simplifying and Solving</span></a><a class="chapter-nav" href="#chapter-4">04 <span class="nav-sub">Systems of Equations</span></a><a class="chapter-nav" href="#chapter-5">05 <span class="nav-sub">Sequences</span></a><a class="chapter-nav" href="#chapter-6">06 <span class="nav-sub">Relocated</span></a><a class="chapter-nav" href="#chapter-7">07 <span class="nav-sub">Exponential Functions</span></a><a class="chapter-nav" href="#chapter-8">08 <span class="nav-sub">Quadratic Functions</span></a><a class="chapter-nav" href="#chapter-9">09 <span class="nav-sub">Solving Quadratics and Inequalities</span></a><a class="chapter-nav" href="#chapter-10">10 <span class="nav-sub">Solving Complex Equations</span></a><a class="chapter-nav" href="#chapter-11">11 <span class="nav-sub">Functions and Data</span></a><a class="chapter-nav" href="#chapter-12">12 <span class="nav-sub">Statistics and Data Modeling</span></a></div>
 <div class="side-footer">Working draft &middot; November 9, 2026<br>CPM-first / no duplicate reporting</div></aside>
-<main id="main" class="main"><header class="hero"><div class="eyebrow">Curriculum, assessment and student reporting</div><h1>Algebra 1<br>Learning Goals &amp; Grading</h1>
-<p>A teacher-friendly reference to the section-based plan: one goal, one evolving grade, one growth bar, and a separate long-term learning ladder.</p>
-<div class="hero-tags"><span class="hero-tag">CPM is the instructional authority</span><span class="hero-tag">Section-based reporting</span><span class="hero-tag">Working Learning Goals v1</span><span class="hero-tag">Updated November 9, 2026</span></div></header>
+<main id="main" class="main">
 <div class="toolbar"><label class="search-wrap"><span class="search-symbol" aria-hidden="true">&#8981;</span><input id="search" type="search" placeholder="Find a goal, section or skill..." aria-label="Search section goals and skills"></label>
 <button type="button" class="action" id="expand">Expand skills</button><button type="button" class="action" id="collapse">Collapse skills</button><button type="button" class="action" id="print">Print reference</button></div><div class="search-status" id="search-status" aria-live="polite"></div>
 <section class="kpis" aria-label="Overview"><div class="kpi"><div class="kpi-num">30</div><div class="kpi-label">Reportable section goals</div></div><div class="kpi"><div class="kpi-num">5</div><div class="kpi-label">Squares per goal bar</div></div><div class="kpi"><div class="kpi-num">14</div><div class="kpi-label">CPM lessons moved to Chapter 12</div></div><div class="kpi"><div class="kpi-num">1</div><div class="kpi-label">Evolving grade per goal</div></div></section>
+<section class="section pacing-section" id="lesson-pacing" aria-labelledby="lesson-pacing-heading">
+<div class="section-title"><h2 id="lesson-pacing-heading">Lesson Pacing</h2><span class="pace-subtle">102 authentic CPM lessons · 11 teaching chapters</span></div>
+<p class="section-intro">The working sequence follows original CPM chapter order, with data lessons regrouped at the end as Chapter 12. Each chapter offers a <strong>20-day planning grid</strong>; unused cells are intentionally left blank, not assigned as filler days. Open a chapter to see exact lesson numbers, titles, and a suggested instructional rhythm.</p>
+<div class="pacing-strip"><div><strong>102</strong><span>Original CPM lessons, once each</span></div><div><strong>14</strong><span>Moved to Chapter 12</span></div><div><strong>124</strong><span>Baseline lesson + chapter opening/closure slots</span></div><div><strong>20</strong><span>Available grid days per chapter, not mandatory</span></div></div>
+<div class="pacing-notice">Chapter 6 is <strong>not a separate teaching block</strong>. Its nine original lessons are in Chapter 12, as are 10.1.1, 11.2.1–11.2.3 and 11.3.1. The lesson identifiers below remain the canonical CPM identifiers. A day label is a planning slot, <em>not</em> a calendar date or a guaranteed single-day completion.</div>
+<div class="pace-day-legend"><span><b>Notes / Methods</b> + Try-It + Review &amp; Preview</span><span><b>Launch / Explore</b> + Review &amp; Preview</span><span><b>Activity / Practice</b> + Review &amp; Preview</span></div>
+
+<details class="pace-chapter" id="pace-chapter-1" open><summary><span class="pace-ch-number">01</span><span class="pace-ch-name"><strong>Functions</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">8 lessons · 10 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>1.1.1</strong> &nbsp; Solving Puzzles in Teams</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>1.1.2</strong> &nbsp; Investigating the Growth of Patterns</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>1.1.3</strong> &nbsp; Investigating the Graphs of Quadratic Functions</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>1.2.1</strong> &nbsp; Describing a Graph</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>1.2.2</strong> &nbsp; Cube Root and Absolute Value Functions</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>1.2.3</strong> &nbsp; Function Machines</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>1.2.4</strong> &nbsp; Functions</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.2</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>1.2.5</strong> &nbsp; Domain and Range</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-1">1.2</a></td></tr>
+<tr class="pacing-close"><td class="day-num">10</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">11</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-2"><summary><span class="pace-ch-number">02</span><span class="pace-ch-name"><strong>Linear Relationships</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">9 lessons · 11 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>2.1.1</strong> &nbsp; Seeing Growth in Linear Representations</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>2.1.2</strong> &nbsp; Slope</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>2.1.3</strong> &nbsp; Comparing Δ y and Δ x</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>2.1.4</strong> &nbsp; y = mx + b and More on Slope</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.1</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>2.2.1</strong> &nbsp; Slope as Motion</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>2.2.2</strong> &nbsp; Rate of Change</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>2.2.3</strong> &nbsp; Equations of Lines in Situations</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.2</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>2.3.1</strong> &nbsp; Finding an Equation Given a Slope and a Point</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>2.3.2</strong> &nbsp; Finding the Equation of a Line through Two Points</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-2">2.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">11</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-3"><summary><span class="pace-ch-number">03</span><span class="pace-ch-name"><strong>Simplifying and Solving</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">9 lessons · 11 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>3.1.1</strong> &nbsp; Simplifying Exponential Expressions</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>3.1.2</strong> &nbsp; Zero and Negative Exponents</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>3.2.1</strong> &nbsp; Equations ↔ Algebra Tiles</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.2</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>3.2.2</strong> &nbsp; Exploring an Area Model</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>3.2.3</strong> &nbsp; Multiplying Binomials and the Distributive Property</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>3.2.4</strong> &nbsp; Using Generic Rectangles to Multiply</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>3.3.1</strong> &nbsp; Solving Equations With Multiplication and Absolute Value</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.3</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>3.3.2</strong> &nbsp; Working With Multi-Variable Equations</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>3.3.3</strong> &nbsp; Summary of Solving Equations</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-3">3.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">11</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-4"><summary><span class="pace-ch-number">04</span><span class="pace-ch-name"><strong>Systems of Equations</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">8 lessons · 10 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>4.1.1</strong> &nbsp; Solving Word Problems by Writing Equations</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>4.1.2</strong> &nbsp; One Equation or Two?</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>4.2.1</strong> &nbsp; Solving Systems of Equations Using Substitution</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.2</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>4.2.2</strong> &nbsp; Making Connections: Systems, Solutions, and Graphs</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>4.2.3</strong> &nbsp; Solving Systems Using Elimination</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>4.2.4</strong> &nbsp; More Elimination</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>4.2.5</strong> &nbsp; Choosing a Strategy for Solving Systems</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.2</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>4.3.1</strong> &nbsp; Pulling it all Together</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-4">4.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">10</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">11</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-5"><summary><span class="pace-ch-number">05</span><span class="pace-ch-name"><strong>Sequences</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">9 lessons · 11 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>5.1.1</strong> &nbsp; Representing Exponential Growth</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>5.1.2</strong> &nbsp; Rebound Ratios</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>5.1.3</strong> &nbsp; The Bouncing Ball and Exponential Decay</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>5.2.1</strong> &nbsp; Generating and Investigating Sequences</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>5.2.2</strong> &nbsp; Generalizing Arithmetic Sequences</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>5.2.3</strong> &nbsp; Recursive Sequences</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>5.3.1</strong> &nbsp; Patterns of Growth in Tables and Graphs</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.3</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>5.3.2</strong> &nbsp; Using Multipliers to Solve Problems</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>5.3.3</strong> &nbsp; Comparing Sequences to Functions</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-5">5.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">11</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-7"><summary><span class="pace-ch-number">07</span><span class="pace-ch-name"><strong>Exponential Functions</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">9 lessons · 11 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>7.1.1</strong> &nbsp; Investigating y = b x</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>7.1.2</strong> &nbsp; Multiple Representations of Exponential Functions</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>7.1.3</strong> &nbsp; More Applications of Exponential Growth</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>7.1.4</strong> &nbsp; Exponential Decay</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>7.1.5</strong> &nbsp; Graph → Equation</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>7.1.6</strong> &nbsp; Completing the Multiple Representations Web</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.1</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>7.2.1</strong> &nbsp; Curve Fitting and Fractional Exponents</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.2</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>7.2.2</strong> &nbsp; More Curve Fitting</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.2</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>7.2.3</strong> &nbsp; Solving a System of Exponential Functions Graphically</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-7">7.2</a></td></tr>
+<tr class="pacing-close"><td class="day-num">11</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-8"><summary><span class="pace-ch-number">08</span><span class="pace-ch-name"><strong>Quadratic Functions</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">10 lessons · 12 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>8.1.1</strong> &nbsp; Introduction to Factoring Quadratics</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>8.1.2</strong> &nbsp; Factoring with Generic Rectangles</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>8.1.3</strong> &nbsp; Factoring with Special Cases</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>8.1.4</strong> &nbsp; Factoring Completely</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.1</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>8.1.5</strong> &nbsp; Factoring Shortcuts</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.1</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>8.2.1</strong> &nbsp; Multiple Representations for Quadratics</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>8.2.2</strong> &nbsp; Zero Product Property</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.2</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>8.2.3</strong> &nbsp; More Ways To Find the x -Intercepts</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.2</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>8.2.4</strong> &nbsp; Completing the Quadratic Web</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.2</a></td></tr>
+<tr><td class="day-num">11</td><td><strong>8.2.5</strong> &nbsp; Completing the Square</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-8">8.2</a></td></tr>
+<tr class="pacing-close"><td class="day-num">12</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-9"><summary><span class="pace-ch-number">09</span><span class="pace-ch-name"><strong>Solving Quadratics and Inequalities</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">11 lessons · 13 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>9.1.1</strong> &nbsp; Solving Quadratic Equations</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>9.1.2</strong> &nbsp; Introduction to the Quadratic Formula</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>9.1.3</strong> &nbsp; More Solving Quadratic Equations</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>9.1.4</strong> &nbsp; Choosing a Strategy</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.1</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>9.2.1</strong> &nbsp; Solving Linear, One-Variable Inequalities</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>9.2.2</strong> &nbsp; More Solving Inequalities</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>9.3.1</strong> &nbsp; Graphing Two-Variable Inequalities</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.3</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>9.3.2</strong> &nbsp; Graphing Linear and Non-Linear Inequalities</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>9.4.1</strong> &nbsp; Systems of Inequalities</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.4</a></td></tr>
+<tr><td class="day-num">11</td><td><strong>9.4.2</strong> &nbsp; More Systems of Inequalities</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.4</a></td></tr>
+<tr><td class="day-num">12</td><td><strong>9.4.3</strong> &nbsp; Applying Inequalities to Solve Problems</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-9">9.4</a></td></tr>
+<tr class="pacing-close"><td class="day-num">13</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-10"><summary><span class="pace-ch-number">10</span><span class="pace-ch-name"><strong>Solving Complex Equations</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">9 lessons · 11 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>10.2.1</strong> &nbsp; Solving by Rewriting</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>10.2.2</strong> &nbsp; Fraction Busters</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>10.2.3</strong> &nbsp; Multiple Methods for Solving Equations</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>10.2.4</strong> &nbsp; Determining the Number of Solutions</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>10.2.5</strong> &nbsp; Deriving the Quadratic Formula and the Number System</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>10.2.6</strong> &nbsp; More Solving and an Application</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.2</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>10.3.1</strong> &nbsp; Intersection of Two Functions</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.3</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>10.3.2</strong> &nbsp; Number of Parabola Intersections</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>10.3.3</strong> &nbsp; Solving Quadratic and Absolute Value Inequalities</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-10">10.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">11</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-11"><summary><span class="pace-ch-number">11</span><span class="pace-ch-name"><strong>Functions and Data</strong><small>Original CPM chapter sequence, without relocated lessons</small></span><span class="pace-ch-stat">6 lessons · 8 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>11.1.1</strong> &nbsp; Transforming Functions</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>11.1.2</strong> &nbsp; Inverse Functions</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>11.3.2</strong> &nbsp; Relation Treasure Hunt</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.3</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>11.3.3</strong> &nbsp; Investigating a Complex Function</td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.3</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>11.3.4</strong> &nbsp; Using Algebra to Find a Maximum</td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.3</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>11.3.5</strong> &nbsp; Exponential Functions and Linear Inequalities</td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-11">11.3</a></td></tr>
+<tr class="pacing-close"><td class="day-num">08</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">09</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">10</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">11</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">12</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">13</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">14</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">15</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">16</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<details class="pace-chapter" id="pace-chapter-12"><summary><span class="pace-ch-number">12</span><span class="pace-ch-name"><strong>Statistics and Data Modeling</strong><small>Teacher-organized final unit; no renumbering of CPM source lessons</small></span><span class="pace-ch-stat">14 lessons · 16 baseline slots</span><span class="chevron" aria-hidden="true"></span></summary><div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Day</th><th>Lesson / purpose</th><th>Instructional rhythm</th><th>Section goal</th></tr></thead><tbody>
+<tr class="pacing-opener"><td class="day-num">01</td><td><strong>Chapter opening</strong><small>Activate prior understanding; preview chapter focus</small></td><td>Intro / diagnostic</td><td>—</td></tr>
+<tr><td class="day-num">02</td><td><strong>11.2.1</strong> &nbsp; Investigating Data Representations<small>Original CPM number retained · relocated</small></td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.1</a></td></tr>
+<tr><td class="day-num">03</td><td><strong>11.2.2</strong> &nbsp; Comparing Data<small>Original CPM number retained · relocated</small></td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.1</a></td></tr>
+<tr><td class="day-num">04</td><td><strong>11.2.3</strong> &nbsp; Standard Deviation<small>Original CPM number retained · relocated</small></td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.1</a></td></tr>
+<tr><td class="day-num">05</td><td><strong>10.1.1</strong> &nbsp; Association in Two-Way Tables<small>Original CPM number retained · relocated</small></td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.2</a></td></tr>
+<tr><td class="day-num">06</td><td><strong>6.1.1</strong> &nbsp; Line of Best Fit<small>Original CPM number retained · relocated</small></td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.3</a></td></tr>
+<tr><td class="day-num">07</td><td><strong>6.1.2</strong> &nbsp; Residuals<small>Original CPM number retained · relocated</small></td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.3</a></td></tr>
+<tr><td class="day-num">08</td><td><strong>6.1.3</strong> &nbsp; Upper and Lower Bounds<small>Original CPM number retained · relocated</small></td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.3</a></td></tr>
+<tr><td class="day-num">09</td><td><strong>6.1.4</strong> &nbsp; Least Squares Regression Line<small>Original CPM number retained · relocated</small></td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.3</a></td></tr>
+<tr><td class="day-num">10</td><td><strong>6.2.1</strong> &nbsp; Residual Plots<small>Original CPM number retained · relocated</small></td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr><td class="day-num">11</td><td><strong>6.2.2</strong> &nbsp; Correlation<small>Original CPM number retained · relocated</small></td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr><td class="day-num">12</td><td><strong>6.2.3</strong> &nbsp; Association is Not Causation<small>Original CPM number retained · relocated</small></td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr><td class="day-num">13</td><td><strong>6.2.4</strong> &nbsp; Interpreting Correlation in Context<small>Original CPM number retained · relocated</small></td><td>Structured activity + practice<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr><td class="day-num">14</td><td><strong>6.2.5</strong> &nbsp; Curved Best-Fit Models<small>Original CPM number retained · relocated</small></td><td>Notes / Methods + Try-It<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr><td class="day-num">15</td><td><strong>11.3.1</strong> &nbsp; Using a Best-Fit Line to Make a Prediction<small>Original CPM number retained · relocated</small></td><td>Launch / Explore<small>Review &amp; Preview</small></td><td><a href="#chapter-12">12.4</a></td></tr>
+<tr class="pacing-close"><td class="day-num">16</td><td><strong>Review / check / closure</strong><small>Adjust to actual evidence; can include assessment</small></td><td>Quick Check / summative / feedback</td><td>Chapter review</td></tr>
+<tr class="pacing-blank"><td class="day-num">17</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">18</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">19</td><td></td><td></td><td></td></tr>
+<tr class="pacing-blank"><td class="day-num">20</td><td></td><td></td><td></td></tr>
+</tbody></table></div></details>
+<p class="source-foot" style="margin-top:13px">Scope: chapter opener/closure slots are teacher planning placeholders; in Chapter 12 they are not claimed as published CPM chapter assets. The three-part rhythm is a flexible instructional pattern, not a prescription to override any CPM investigation. No old AP1–AP8 deadlines, invented 2.4.1, or appendix lessons are added to the 102.</p></section>
+<section class="section pacing-section" id="warmup-pacing" aria-labelledby="warmup-pacing-heading"><div class="section-title"><h2 id="warmup-pacing-heading">Warm-Up Pacing</h2><span class="pace-subtle">Every non-test day · five numbered sets per cycle</span></div>
+<p class="section-intro">The warm-up sequence is a <strong>separate spiral from the chapter lesson calendar</strong>. Use a numbered 1–5 cycle, rather than treating the set number as a weekday. Keep four questions: one equation, one diamond/factoring/graph fluency task, and two retrieval items drawn only from previously taught work.</p>
+<div class="warmup-grid"><div class="warmup-rule"><span>Q1</span><strong>Solve</strong><p>One equation; move from one-step to variables on both sides, distribution, fractions and checking. Keep old skills alive.</p></div><div class="warmup-rule"><span>Q2</span><strong>Diamond → factoring → graphing</strong><p>One visually clear diamond problem; progress into factors, zeros and their graph relationships.</p></div><div class="warmup-rule"><span>Q3</span><strong>Spiral A</strong><p>Previously taught representation or concept, with table / equation / graph variation.</p></div><div class="warmup-rule"><span>Q4</span><strong>Spiral B</strong><p>Independent retrieval or explanation from a different earlier section.</p></div></div>
+<div class="pacing-notice">On days when the Monday Four Views task is the main lesson, the warm-up still follows this same four-question pattern. Assessment days can replace the routine. Do not introduce a brand-new topic as spiral review before it has been taught.</div>
+<div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>Chapter window</th><th>Q1 solving progression</th><th>Q2 diamond / factoring progression</th><th>Q3 retrieval</th><th>Q4 retrieval</th></tr></thead><tbody>
+<tr><td><a href="#pace-chapter-1"><strong>Ch 1</strong></a><small>Functions</small></td><td>Solve basic equations; begin variables on both sides</td><td>Numeric diamond product/sum</td><td>Patterns, graph stories</td><td>Function rules, domain and range</td></tr>
+<tr><td><a href="#pace-chapter-2"><strong>Ch 2</strong></a><small>Linear relationships</small></td><td>Two-sided equations, negative values, distributive steps</td><td>Signed diamonds; additive/multiplicative reasoning</td><td>Slope, rise/run, initial value</td><td>Tables, graphs, equations in context</td></tr>
+<tr><td><a href="#pace-chapter-3"><strong>Ch 3</strong></a><small>Algebraic structure</small></td><td>Distribution, combining terms and multi-step equations</td><td>Diamonds into x² + bx + c factoring</td><td>Exponent properties; zero/negative powers</td><td>Area models and equation checks</td></tr>
+<tr><td><a href="#pace-chapter-4"><strong>Ch 4</strong></a><small>Systems</small></td><td>Two-sided equations; substitutions and equivalent forms</td><td>Polynomial/factor reasoning, maintain fluency</td><td>Systems: graph, substitution and elimination</td><td>Reasonable solutions and interpretation</td></tr>
+<tr><td><a href="#pace-chapter-5"><strong>Ch 5</strong></a><small>Sequences</small></td><td>Maintain equation-solving difficulty and accuracy</td><td>Diamonds and growing patterns</td><td>Recursive versus explicit sequences</td><td>Linear vs. exponential growth/decay</td></tr>
+<tr><td><a href="#pace-chapter-7"><strong>Ch 7</strong></a><small>Exponential models</small></td><td>Mixed linear equations and formulas</td><td>Factorable expressions; connect to roots</td><td>Growth factors, decay rates and graphs</td><td>Representations and fitted curves</td></tr>
+<tr><td><a href="#pace-chapter-8"><strong>Ch 8</strong></a><small>Quadratics</small></td><td>Mixed equations and rearranging</td><td>Factoring including leading coefficients</td><td>Factored / standard / visual quadratic views</td><td>Roots, intercepts, symmetry and zeros</td></tr>
+<tr><td><a href="#pace-chapter-9"><strong>Ch 9</strong></a><small>Quadratics &amp; inequalities</small></td><td>Linear inequalities and solving equations</td><td>Fluency in factoring for quadratic solving</td><td>Quadratic formula and method choice</td><td>Graph shaded regions; constraints</td></tr>
+<tr><td><a href="#pace-chapter-10"><strong>Ch 10</strong></a><small>Complex equations</small></td><td>Fraction equations, clearing denominators and checking</td><td>Review factoring/graphing of quadratics</td><td>Number of solutions and intersections</td><td>Valid solutions; nonlinear inequalities</td></tr>
+<tr><td><a href="#pace-chapter-11"><strong>Ch 11</strong></a><small>Function analysis</small></td><td>Cumulative multi-step solving</td><td>Diamond/factor/roots retrieval</td><td>Transformations and inverses</td><td>Connections across function types</td></tr>
+<tr><td><a href="#pace-chapter-12"><strong>Ch 12</strong></a><small>Statistics &amp; modeling</small></td><td>Cumulative equation solving, retaining both-side fluency</td><td>Cumulative diamonds/factoring and graph interpretation</td><td>Distributions, two-way tables</td><td>Residuals, correlation, prediction / model choice</td></tr>
+</tbody></table></div><h3 class="pace-minor-heading">How to rotate the five numbered sets</h3><div class="panel"><table class="pacing-table"><thead><tr><th>Set</th><th>Spiral emphasis</th><th>Evidence to notice</th></tr></thead><tbody><tr><td>01</td><td>Most recent prior goal + familiar equation/diamond entry</td><td>Independent start</td></tr><tr><td>02</td><td>Previous chapter skill</td><td>Procedural accuracy</td></tr><tr><td>03</td><td>Alternative representation (context / table / equation / graph)</td><td>Representation transfer</td></tr><tr><td>04</td><td>Mixed retrieval from two earlier goals</td><td>Durability and connections</td></tr><tr><td>05</td><td>Cumulative mixed spiral and optional short check</td><td>Trend evidence for existing goals</td></tr></tbody></table></div>
+<p class="source-foot" style="margin-top:13px">The chapter-window focus is a working progression based on the approved warm-up format and CPM sequence. It does not impose dates; update focus when actual class pacing changes. The single equation in Q1 supersedes the earlier two-equation mini-set.</p></section>
+<section class="section pacing-section" id="monday-pacing" aria-labelledby="monday-pacing-heading"><div class="section-title"><h2 id="monday-pacing-heading">Monday Pacing</h2><span class="pace-subtle">Four Views / modeling · flexible review weeks</span></div><p class="section-intro">Mondays are reserved for the <strong>Four Views modeling routine</strong> when appropriate, with purposeful exceptions for pre-assessment review or post-assessment feedback. Rotate the starting representation among <strong>context, table, equation, and graph</strong>. Students complete and connect the other three.</p>
+<div class="pacing-strip four-views"><div><strong>1</strong><span>Given representation</span></div><div><strong>3</strong><span>Views students create</span></div><div><strong>4</strong><span>Representations connected</span></div><div><strong>Mon</strong><span>Default modeling / review slot</span></div></div>
+<div class="pacing-notice">Example weekly rotation: <strong>Week A</strong> context given, <strong>Week B</strong> table given, <strong>Week C</strong> equation given, <strong>Week D</strong> graph given; then repeat at greater depth. A pre/post-test Monday may be used for reviewing evidence instead. The chapter prompts below are <em>planning topics, not claims that worksheets already exist</em>.</div>
+<div class="pace-table-scroll"><table class="pacing-table"><thead><tr><th>CPM chapter window</th><th>Possible Four Views task</th><th>Starting view</th><th>Conceptual target</th></tr></thead><tbody>
+<tr><td><a href="#pace-chapter-1">Ch 1</a></td><td><strong>Patterns and function stories</strong></td><td>Graph</td><td>Interpreting a graphical story; compare plausible contexts</td></tr>
+<tr><td><a href="#pace-chapter-2">Ch 2</a></td><td><strong>Linear rates and starting values</strong></td><td>Context</td><td>Rate / initial value from a situation into table, equation and graph</td></tr>
+<tr><td><a href="#pace-chapter-3">Ch 3</a></td><td><strong>Algebraic structure in a growing model</strong></td><td>Equation</td><td>Interpret and visualize an algebraic rule before manipulating it</td></tr>
+<tr><td><a href="#pace-chapter-4">Ch 4</a></td><td><strong>Comparing two plans or prices</strong></td><td>Table</td><td>Two relationships; where do the solutions meet?</td></tr>
+<tr><td><a href="#pace-chapter-5">Ch 5</a></td><td><strong>Tilapia / penny growth model</strong></td><td>Context</td><td>Compare repeated percent growth with constant increases</td></tr>
+<tr><td><a href="#pace-chapter-7">Ch 7</a></td><td><strong>Exponential growth versus decay</strong></td><td>Equation</td><td>Connect initial value and multiplier across representations</td></tr>
+<tr><td><a href="#pace-chapter-8">Ch 8</a></td><td><strong>A quadratic relationship</strong></td><td>Graph</td><td>Roots, turning point and matching table/equation/context</td></tr>
+<tr><td><a href="#pace-chapter-9">Ch 9</a></td><td><strong>Quadratic choices and constraints</strong></td><td>Table</td><td>Compare choices, constraints, and meaningful solutions</td></tr>
+<tr><td><a href="#pace-chapter-10">Ch 10</a></td><td><strong>Intersections and solution validity</strong></td><td>Graph</td><td>When do two relationships agree? Check algebraic solutions</td></tr>
+<tr><td><a href="#pace-chapter-11">Ch 11</a></td><td><strong>Function transformation</strong></td><td>Equation</td><td>Describe changes between parent and transformed function</td></tr>
+<tr><td><a href="#pace-chapter-12">Ch 12</a></td><td><strong>Data model and prediction</strong></td><td>Table</td><td>Choose a model; explain how well it supports predictions</td></tr>
+</tbody></table></div><div class="two-col" style="margin-top:14px"><div class="concept"><div class="concept-kicker">Modeling Monday</div><h3>Four Views</h3><p>Give one representation and ask students to complete, label and explain the other three. Use tasks appropriate to what students have already learned.</p></div><div class="concept"><div class="concept-kicker">Assessment Monday</div><h3>Before or after a summative</h3><p>Use review, corrections, conferencing or rechecking important evidence. Do not add a second, duplicate Learning Goal grade.</p></div></div><p class="source-foot" style="margin-top:13px">These chapter windows are adaptable; no fixed Monday dates are implied. The old AP1–AP8 boundaries are not used for Monday scheduling.</p></section>
 <section class="section" id="principles"><div class="section-title"><h2>The governing framework</h2></div><p class="section-intro">CPM curriculum &rarr; section Learning Goals &rarr; assessment evidence and progress reports &rarr; long-term Essential Standards and learning ladders. The section is the everyday reporting unit.</p>
 <div class="principle-grid"><div class="principle"><div class="principle-title"><span class="number-chip">01</span>Keep the textbook in charge</div><p>Use CPM concepts and its instructional progression. Do not invent a parallel sequence to satisfy a standards map.</p></div>
 <div class="principle"><div class="principle-title"><span class="number-chip">02</span>One Learning Goal per taught section</div><p>Each goal has one evolving PowerSchool grade, one five-square growth bar, and expandable supporting skills.</p></div>
@@ -343,6 +678,7 @@
  sections.forEach(section=>{const matching=section.querySelectorAll('.goal-card:not([hidden])').length;section.hidden=Boolean(term)&&matching===0;});
  status.textContent=term?`${count} goal${count===1?'':'s'} matching "${search.value}"`:'';
  });
- let openBeforePrint=[];window.addEventListener('beforeprint',()=>{openBeforePrint=details.filter(d=>d.open);details.forEach(d=>{d.hidden=false;d.open=true});sections.forEach(s=>s.hidden=false)});
- window.addEventListener('afterprint',()=>{details.forEach(d=>d.open=openBeforePrint.includes(d));search.dispatchEvent(new Event('input'))});
+ document.querySelectorAll('.pace-open').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.pace-open').forEach(b=>b.removeAttribute('aria-current'));a.setAttribute('aria-current','location')}));
+ const paceChapters=Array.from(document.querySelectorAll('.pace-chapter'));let paceOpenBeforePrint=[];let openBeforePrint=[];window.addEventListener('beforeprint',()=>{paceOpenBeforePrint=paceChapters.filter(d=>d.open);paceChapters.forEach(d=>d.open=true);openBeforePrint=details.filter(d=>d.open);details.forEach(d=>{d.hidden=false;d.open=true});sections.forEach(s=>s.hidden=false)});
+ window.addEventListener('afterprint',()=>{paceChapters.forEach(d=>d.open=paceOpenBeforePrint.includes(d));details.forEach(d=>d.open=openBeforePrint.includes(d));search.dispatchEvent(new Event('input'))});
 })();</script></body></html>
