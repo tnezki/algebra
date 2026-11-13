@@ -139,6 +139,11 @@
 .rich-editable table th,
 .question .data-table th{background:#eef2f6!important;font-weight:700!important}
 
+/* Algebra 1 source-card readability; mirrors native course formatting only. */
+:is(.print-card-body,.pick-preview,.card-preview) .row.source-prose-stack{display:block!important;width:100%!important;max-width:100%!important}
+:is(.print-card-body,.pick-preview,.card-preview) .row.source-prose-stack > [class*="col-"]{display:block!important;float:none!important;flex:0 0 100%!important;max-width:100%!important;width:100%!important;padding-left:0!important;padding-right:0!important;margin-bottom:.4em}
+:is(.print-card-body,.pick-preview,.card-preview) ol>li,:is(.print-card-body,.pick-preview,.card-preview) ul>li{overflow-wrap:break-word;word-break:normal}
+
 
 @page{size:letter;margin:0}
 body.personal-practice-document{background:#dfe6ec;color:#202020}
