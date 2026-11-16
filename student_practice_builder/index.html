@@ -252,7 +252,7 @@ body.student-practice-builder-document #questions .data-table td{font-size:18px;
 }
 @media print{
 }
-</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script><script defer src="./student_pdf_share.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose the I Can statements you want to practice. Create a new set or regenerate another version. This builder does not collect names, grades, or student information.</p><div class="plan-tools"><label for="assessmentPlan">Assessment Plan</label><select id="assessmentPlan" aria-label="Assessment Plan" disabled><option>Loading available plans…</option></select></div><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="shareStudentWorksheet()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading teacher-approved question bank…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script><script defer src="./student_pdf_share.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose a Chapter 1–3 learning goal and supporting I Can. Create practice from approved questions, then print or save to Notability. This builder does not collect names, grades, or student information.</p><div class="plan-tools"><label for="assessmentPlan">Chapter</label><select id="assessmentPlan" aria-label="Assessment Plan" disabled><option>Loading available plans…</option></select></div><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="shareStudentWorksheet()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading approved Chapter 1–3 question banks…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
 async function showSolution(id){
  const row=document.getElementById('q'+id);
  const answer=document.getElementById('s'+id);
@@ -545,98 +545,82 @@ async function printStudentWorksheet(){
  if(ready)window.print();
 }
 </script><script>
-let pool=null,activeGoal='All LGs',activePlanFile='question_pool.json',availablePlans=[];
+let pool=null,activeGoal='All LGs',activePlanFile='question_pool_ch3.json',availablePlans=[];
 const host=document.getElementById('skillOptions'),status=document.getElementById('status');
 const tabs=document.getElementById('goalTabs'),summary=document.getElementById('selectionSummary');
-const selectedSkills=new Set();
-const planPicker=document.getElementById('assessmentPlan');
+const selectedSkills=new Set();const planPicker=document.getElementById('assessmentPlan');
 function pick(list,n){let a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a.slice(0,n)}
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function allSkills(){return Object.entries(pool?.skills||{}).filter(([,value])=>value.questions.length)}
 function selected(){return allSkills().map(([id])=>id).filter(id=>selectedSkills.has(id))}
-function goalOf(id){return id.split('-')[0]}
+function goalOf(id){return pool?.skills?.[id]?.goal_id||''}
 function showGoal(goal){activeGoal=goal;document.getElementById('skillSearch').value='';renderSelector()}
 function renderSelector(){
  if(!pool)return;
- const groups=[...new Set(allSkills().map(([id])=>goalOf(id)))];
- if(activeGoal!=='All LGs'&&!groups.includes(activeGoal))activeGoal='All LGs';
- tabs.innerHTML=[...groups,'All LGs'].map(goal=>{
-   const n=goal==='All LGs'?selectedSkills.size:selected().filter(id=>goalOf(id)===goal).length;
-   const label=goal==='All LGs'?'All LGs':goal;
-   return '<button type="button" class="goal-tab" aria-pressed="'+(goal===activeGoal)+'" data-goal="'+escapeHTML(goal)+'">'+escapeHTML(label)+(n?' ('+n+')':'')+'</button>';
+ const groups=(pool.goals||[]).filter(g=>allSkills().some(([id])=>goalOf(id)===g.id));
+ if(activeGoal!=='All LGs'&&!groups.some(g=>g.id===activeGoal))activeGoal='All LGs';
+ tabs.innerHTML=[...groups.map(g=>({id:g.id,label:g.label})),{id:'All LGs',label:'All Goals'}].map(g=>{
+  const n=g.id==='All LGs'?selectedSkills.size:selected().filter(id=>goalOf(id)===g.id).length;
+  return '<button type="button" class="goal-tab" aria-pressed="'+(g.id===activeGoal)+'" data-goal="'+escapeHTML(g.id)+'" title="'+escapeHTML((pool.goals||[]).find(x=>x.id===g.id)?.text||'All Chapter Goals')+'">'+escapeHTML(g.label)+(n?' ('+n+')':'')+'</button>';
  }).join('');
  tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>showGoal(b.dataset.goal));
  const term=document.getElementById('skillSearch').value.trim().toLowerCase();
- const entries=allSkills().filter(([id,v])=>
-   (term || activeGoal==='All LGs' || goalOf(id)===activeGoal) &&
-   (!term || (id+' '+v.label).toLowerCase().includes(term)));
- host.innerHTML=entries.map(([id,v])=>'<label class="skill-check"><input type="checkbox" value="'+escapeHTML(id)+'" '+(selectedSkills.has(id)?'checked':'')+'><span><small>'+escapeHTML(id)+'</small><strong>'+escapeHTML(v.label)+'</strong></span></label>').join('') || '<p class="muted">No matching I Can statements.</p>';
+ const entries=allSkills().filter(([id,v])=>(term||activeGoal==='All LGs'||goalOf(id)===activeGoal)&&(!term||(id+' '+v.label).toLowerCase().includes(term)));
+ host.innerHTML=entries.map(([id,v])=>'<label class="skill-check"><input type="checkbox" value="'+escapeHTML(id)+'" '+(selectedSkills.has(id)?'checked':'')+'><span><small>'+escapeHTML((pool.goals||[]).find(g=>g.id===v.goal_id)?.label||'Learning Goal')+' · '+escapeHTML(id)+'</small><strong>I can '+escapeHTML(v.label.replace(/^I can\s+/i,''))+'.</strong></span></label>').join('')||'<p class="muted">No matching I Cans.</p>';
  host.querySelectorAll('input').forEach(input=>input.onchange=()=>{
-   if(input.checked){
-     if(selectedSkills.size>=5){input.checked=false;status.textContent='Choose up to five I Cans at a time.';return;}
-     selectedSkills.add(input.value);
-   }else selectedSkills.delete(input.value);
-   renderSelector();
+  if(input.checked){if(selectedSkills.size>=5){input.checked=false;status.textContent='Choose up to five I Cans at a time.';return;}selectedSkills.add(input.value)}
+  else selectedSkills.delete(input.value);renderSelector();
  });
  const n=selectedSkills.size;
- summary.textContent=n+' of 5 selected'+(n?' · '+selected().join(' · '):' · Choose an I Can to begin.');
+ summary.textContent=n+' of 5 selected'+(n?' · '+selected().map(id=>pool.skills[id].label).join(' · '):' · Choose an I Can to begin.');
 }
 async function loadPlan(file){
- if(!/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(file))throw Error('Unrecognized assessment plan pool.');
- const r=await fetch('./'+file,{cache:'no-store'});if(!r.ok)throw Error('Approved plan pool unavailable');
- const next=await r.json();if(next.schema!=='cpm-public-practice-bank/1'||!next.skills||!Object.keys(next.skills).length)throw Error('Invalid approved plan question pool.');
+ if(!/^question_pool_ch[123]\.json$/.test(file))throw Error('Unrecognized approved Chapter bank.');
+ const r=await fetch('./'+file,{cache:'no-store'});if(!r.ok)throw Error('Approved Chapter bank unavailable');
+ const next=await r.json();if(next.schema!=='cpm-public-practice-bank/1'||!next.skills||!Object.keys(next.skills).length||!next.source_bank_sha256)throw Error('Invalid approved Chapter bank.');
  pool=next;activePlanFile=file;selectedSkills.clear();activeGoal='All LGs';
- document.getElementById('questions').replaceChildren();
- document.getElementById('practicePages').replaceChildren();
- document.getElementById('redo').disabled=true;
- document.getElementById('printWorksheet').disabled=true;
- document.getElementById('notability').disabled=true;
+ document.getElementById('questions').replaceChildren();document.getElementById('practicePages').replaceChildren();
+ document.getElementById('redo').disabled=true;document.getElementById('printWorksheet').disabled=true;document.getElementById('notability').disabled=true;
  if(window.invalidatePracticeShare)window.invalidatePracticeShare();
- if(!allSkills().length)throw Error('No approved I Can questions are available');
- renderSelector();status.textContent='Choose the I Cans you want to practice. None are selected yet.';
+ renderSelector();status.textContent='Chapter '+next.chapter+' ready. Choose an I Can, then Create Practice.';
 }
 async function load(){
  try{
-  const r=await fetch('./assessment_plans.json',{cache:'no-store'});
-  if(!r.ok)throw Error('Assessment plan list unavailable');
-  const manifest=await r.json();
-  if(manifest.schema!=='cpm-public-practice-plans/1'||!Array.isArray(manifest.plans))throw Error('Invalid assessment plan list');
-  availablePlans=manifest.plans.filter(p=>/^AP[1-9][0-9]*$/.test(p.id)&&/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(p.pool));
-  if(!availablePlans.length)throw Error('No approved assessment plans are published');
-  planPicker.innerHTML=availablePlans.map(p=>'<option value="'+escapeHTML(p.id)+'">'+escapeHTML(p.label)+'</option>').join('');
+  availablePlans=[{id:'CH1',label:'Chapter 1',pool:'question_pool_ch1.json'},
+   {id:'CH2',label:'Chapter 2',pool:'question_pool_ch2.json'},
+   {id:'CH3',label:'Chapter 3',pool:'question_pool_ch3.json'}];
+  planPicker.innerHTML=availablePlans.map(p=>'<option value="'+p.id+'">'+p.label+'</option>').join('');
   planPicker.disabled=false;
-  await loadPlan(availablePlans[0].pool);
- }catch(e){status.textContent='Unavailable: '+e.message}
+  const requested=new URLSearchParams(location.search).get('chapter');
+  planPicker.value=/^[123]$/.test(requested||'')?'CH'+requested:'CH3';
+  await loadPlan(availablePlans.find(p=>p.id===planPicker.value).pool);
+ }catch(e){status.textContent='Unavailable: '+e.message;status.className='muted';}
 }
-planPicker.onchange=async()=>{
- try{const choice=availablePlans.find(p=>p.id===planPicker.value);if(!choice)throw Error('Invalid plan');await loadPlan(choice.pool)}
- catch(e){status.textContent='Cannot load assessment plan: '+e.message}
-};
+planPicker.onchange=async()=>{try{const choice=availablePlans.find(p=>p.id===planPicker.value);if(!choice)throw Error('Invalid chapter');await loadPlan(choice.pool)}catch(e){status.textContent='Cannot load chapter: '+e.message}};
+function chooseSkillQuestions(id,n){
+ // Sample distinct question families before multiple variants from a family.
+ const groups=new Map();for(const q of pool.skills[id].questions){if(!groups.has(q.family))groups.set(q.family,[]);groups.get(q.family).push(q)}
+ const shuffled=pick([...groups.values()],groups.size),chosen=[];for(const grp of shuffled){if(chosen.length>=n)break;chosen.push(pick(grp,1)[0])}
+ const used=new Set(chosen.map(q=>q.id));if(chosen.length<n){const rest=pool.skills[id].questions.filter(q=>!used.has(q.id));chosen.push(...pick(rest,n-chosen.length))}
+ return chosen;
+}
 function render(){
  if(!pool)return;const ids=selected();if(!ids.length){status.textContent='Choose at least one I Can.';return;}
  const count=Number(document.getElementById('count').value);let number=0;
  document.getElementById('questions').innerHTML=ids.map(id=>{
-   const q=pick(pool.skills[id].questions,count);
-   return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{
-     const i=++number;
-     return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-practice-pool="'+escapeHTML(activePlanFile)+'" data-family-id="'+escapeHTML(item.id)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>'
-   }).join('')+'</section>';
+  const q=chooseSkillQuestions(id,count);
+  return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{
+   const i=++number;return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-practice-pool="'+escapeHTML(activePlanFile)+'" data-family-id="'+escapeHTML(item.id)+'" data-practice-family="'+escapeHTML(item.family)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>';
+  }).join('')+'</section>';
  }).join('');
- document.getElementById('redo').disabled=false;
- document.getElementById('printWorksheet').disabled=false;
- document.getElementById('notability').disabled=false;
- document.getElementById('practicePages').replaceChildren();
- if(window.scheduleStudentSharePDF)window.scheduleStudentSharePDF();
- status.textContent='New '+number+'-question version created. Use New Version beside any question for another example.';
+ document.getElementById('redo').disabled=false;document.getElementById('printWorksheet').disabled=false;document.getElementById('notability').disabled=false;
+ document.getElementById('practicePages').replaceChildren();if(window.scheduleStudentSharePDF)window.scheduleStudentSharePDF();
+ status.textContent='New '+number+'-question version from the approved Chapter '+pool.chapter+' bank. Print or save for Notability.';
  if(window.MathJax?.typesetPromise)MathJax.typesetPromise([document.getElementById('questions')]).catch(()=>{});
 }
-function shareStudentWorksheet(){
- if(window.sharePracticePDF)window.sharePracticePDF();
- else {status.textContent='PDF sharing is unavailable. Opening the device print/PDF screen.';printStudentWorksheet();}
-}
+function shareStudentWorksheet(){if(window.sharePracticePDF)window.sharePracticePDF();else{status.textContent='PDF sharing unavailable. Opening print/PDF screen.';printStudentWorksheet();}}
 document.getElementById('skillSearch').oninput=renderSelector;
 document.getElementById('clearSkills').onclick=()=>{selectedSkills.clear();renderSelector()};
-document.getElementById('create').onclick=render;
-document.getElementById('redo').onclick=render;
+document.getElementById('create').onclick=render;document.getElementById('redo').onclick=render;
 load();
 </script></body></html>

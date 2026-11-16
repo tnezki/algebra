@@ -9,7 +9,7 @@
   const cursors = new Map();
   const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function pool(file='question_pool.json'){
-    if(!/^(?:question_pool\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(file))
+    if(!/^(?:question_pool\.json|question_pool_ch[123]\.json|question_pool_ap(?:[2-9]|[1-9][0-9]+)\.json)$/.test(file))
       return Promise.reject(Error('Unrecognized approved question pool'));
     const url=new URL(file,poolURL);
     if(!poolPromises.has(file))poolPromises.set(file,fetch(url.href).then(r=>{
@@ -28,7 +28,7 @@
       const candidates=data.skills?.[iid]?.questions||[];
       if(!candidates.length)throw Error('No approved examples for this skill');
       const family=candidates.find(q=>q.id===row.dataset.familyId);
-      const sequence=family?.variants?.length ? family.variants : candidates;
+      const sequence=data.family_variants?.[row.dataset.practiceFamily] || (family?.variants?.length ? family.variants : candidates);
       const key=id+':'+row.dataset.familyId;
       const cursor=cursors.get(key)||0;
       const next=sequence[cursor % sequence.length];
@@ -41,7 +41,7 @@
       problem.innerHTML=next.prompt;
       original.innerHTML=next.prompt;
       solution.innerHTML='<b>Answer:</b> '+escapeHTML(next.answer)+'<p><b>Worked solution:</b> '+escapeHTML(next.solution)+'</p>';
-      if(!family?.variants?.length){row.dataset.familyId=next.id;}
+      if(!data.family_variants?.[row.dataset.practiceFamily] && !family?.variants?.length){row.dataset.familyId=next.id;}
       if(window.MathJax?.typesetPromise)await window.MathJax.typesetPromise([problem]);
       const status=document.getElementById('practiceStatus');
       if(status){status.hidden=false;status.textContent='New on-screen question ready. The Notability PDF remains the originally assigned worksheet.';}
