@@ -252,7 +252,44 @@ body.student-practice-builder-document #questions .data-table td{font-size:18px;
 }
 @media print{
 }
-</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script><script defer src="./student_pdf_share.js"></script></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose a Chapter 1–3 learning goal and supporting I Can. Create practice from approved questions, then print or save to Notability. This builder does not collect names, grades, or student information.</p><div class="plan-tools"><label for="assessmentPlan">Chapter</label><select id="assessmentPlan" aria-label="Assessment Plan" disabled><option>Loading available plans…</option></select></div><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="shareStudentWorksheet()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading approved Chapter 1–3 question banks…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="./tex-mml-svg.js" onerror="if(!window.__practiceMathFallback){window.__practiceMathFallback=1;var m=document.createElement('script');m.src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';document.head.append(m);}"></script><script defer src="./practice_variations.js"></script><script defer src="./student_pdf_share.js"></script><style id="portfolio-practice-question-visual-fix">
+/* Student Practice Builder uses the same question-card header as assigned practice.
+   These are screen-only presentation refinements, never bank mutations. */
+body.student-practice-builder-document #questions .q,#questions .q{
+ border-top:0!important;border-bottom:0!important;padding:0 0 22px!important;
+ margin:18px 0 24px!important;break-inside:avoid}
+body.student-practice-builder-document #questions .q-head,#questions .q-head{
+ display:flex!important;flex-wrap:nowrap!important;align-items:center!important;
+ justify-content:space-between!important;gap:12px!important;
+ background:#173a60!important;color:white!important;
+ padding:8px 12px!important;min-height:46px!important;
+ border:0!important;border-radius:6px!important;margin:0 0 14px!important;
+ font-size:16px!important;line-height:1.25!important}
+#questions .q-head>b{color:white!important;font-size:16px!important}
+body.student-practice-builder-document #questions .question-actions,#questions .question-actions{
+ display:flex!important;gap:6px!important;flex:0 0 auto!important;margin:0!important}
+body.student-practice-builder-document #questions .question-actions button,#questions .question-actions button{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ width:34px!important;height:32px!important;min-height:32px!important;
+ padding:5px!important;font-size:0!important;line-height:1!important;
+ border:1px solid #b9d4e7!important;border-radius:5px!important;
+ background:#fff!important;color:#173a60!important;box-shadow:none!important}
+#questions .question-actions button svg{width:18px;height:18px;display:block;stroke:currentColor}
+#questions .q .problem figure.bank-figure,
+#questions .q .problem figure.ch3-graph,
+#questions .q .problem figure.ch03-graph{display:block!important;width:min(100%,350px)!important;
+ max-width:350px!important;margin:12px auto!important;padding:0!important}
+#questions .q .problem figure.bank-figure>svg,
+#questions .q .problem figure.ch3-graph>svg,
+#questions .q .problem figure.ch03-graph>svg,
+#questions .q .problem svg.ch03-bw-graph{
+ display:block!important;width:100%!important;max-width:350px!important;
+ height:auto!important;max-height:350px!important;margin:0 auto!important}
+#questions .q .problem figure.bank-figure img,
+#questions .q .problem figure.ch3-graph img{display:block!important;width:100%!important;max-width:350px!important;height:auto!important;margin:auto!important}
+@media print{#questions .q{margin:12px 0!important;padding-bottom:13px!important}
+ #questions .q-head{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style></head><body class="personal-practice-document student-practice-builder-document"><main class="builder-ui"><section class="card no-print"><h1>Algebra 1 · Student Practice Builder</h1><p class="muted">Choose a Chapter 1–3 learning goal and supporting I Can. Create practice from approved questions, then print or save to Notability. This builder does not collect names, grades, or student information.</p><div class="plan-tools"><label for="assessmentPlan">Chapter</label><select id="assessmentPlan" aria-label="Assessment Plan" disabled><option>Loading available plans…</option></select></div><div class="goal-tabs" id="goalTabs" role="group" aria-label="Choose learning goal"></div><div class="goal-tools"><label class="goal-search-label" for="skillSearch">Find an I Can <input id="skillSearch" type="search" placeholder="Search skills or I Can number" autocomplete="off"></label><button id="clearSkills" type="button">Clear selections</button></div><p id="selectionSummary" aria-live="polite">Select up to five I Cans.</p><div id="skillOptions" class="skill-choices"></div><div class="links builder-actions"><label for="count">Questions per I Can:</label><select id="count"><option>1</option><option>2</option><option>3</option><option selected>4</option></select><button id="create" type="button">Create Practice</button><button id="redo" type="button" disabled>Regenerate</button><button id="printWorksheet" type="button" onclick="printStudentWorksheet()" disabled>Print Worksheet</button><button id="notability" type="button" onclick="shareStudentWorksheet()" disabled>Notability</button></div><p id="status" class="muted" aria-live="polite">Loading approved Chapter 1–3 question banks…</p></section><div id="questions"></div><div id="practicePages" class="pages" aria-hidden="true"></div></main><dialog id="worked"><div class="dialog-head"><b>Worked Solution</b><button class="dialog-close" type="button" onclick="document.getElementById('worked').close()">Close</button></div><div id="workedContent" class="dialog-body"></div></dialog><script>
 async function showSolution(id){
  const row=document.getElementById('q'+id);
  const answer=document.getElementById('s'+id);
@@ -610,7 +647,7 @@ function render(){
  document.getElementById('questions').innerHTML=ids.map(id=>{
   const q=chooseSkillQuestions(id,count);
   return '<section class="card"><h2>'+escapeHTML(pool.skills[id].label)+'</h2>'+q.map(item=>{
-   const i=++number;return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-practice-pool="'+escapeHTML(activePlanFile)+'" data-family-id="'+escapeHTML(item.id)+'" data-practice-family="'+escapeHTML(item.family)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" onclick="CPMStudentPractice.newQuestion('+i+')">New Version</button><button type="button" class="solution-button no-print" onclick="showSolution('+i+')">Solution</button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>';
+   const i=++number;return '<div class="q" id="q'+i+'" data-practice-i-can="'+escapeHTML(id)+'" data-practice-pool="'+escapeHTML(activePlanFile)+'" data-family-id="'+escapeHTML(item.id)+'" data-practice-family="'+escapeHTML(item.family)+'"><div class="q-head"><b>Question '+i+'</b><div class="question-actions"><button type="button" class="new-version-button no-print" aria-label="New Version" title="New Version" onclick="CPMStudentPractice.newQuestion('+i+')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14-5L4 8M4 4v4h4M4 13a8 8 0 0 0 14 5l2-2M16 16h4v4"/></svg></button><button type="button" class="solution-button no-print" aria-label="Solution" title="Show Solution" onclick="showSolution('+i+')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.4 9a2.7 2.7 0 0 1 5.2 1M12 14v.3M12 17h.01"/></svg></button></div></div><div class="problem">'+item.prompt+'</div><template id="rawPrompt'+i+'">'+item.prompt+'</template><div id="s'+i+'" hidden><b>Answer:</b> '+escapeHTML(item.answer)+'<p><b>Worked solution:</b> '+escapeHTML(item.solution)+'</p></div></div>';
   }).join('')+'</section>';
  }).join('');
  document.getElementById('redo').disabled=false;document.getElementById('printWorksheet').disabled=false;document.getElementById('notability').disabled=false;
