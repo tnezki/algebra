@@ -1,0 +1,64 @@
+/* Portfolio personalized practice: same I Can + question layout across every worksheet. */
+body.portfolio-practice{font:15px/1.5 Arial,Helvetica,sans-serif}
+.print-bar{background:#173a60;color:#fff;padding:12px;text-align:center;position:sticky;top:0}
+.print-bar button{background:#fff;color:#173a60;border:0;border-radius:6px;padding:10px 18px;font:bold 14px Arial;cursor:pointer}
+.print-bar span{font-size:12px;margin-left:12px}
+.worksheet{width:8.5in;margin:16px auto;padding:.48in .55in;min-height:10in}
+.worksheet h1{font-size:22px;margin:4px 0 8px}
+.student{font-size:14px;font-weight:bold;border-bottom:1px solid #c2d2df;padding-bottom:10px}
+.instructions{font-size:13px;color:#466a81;margin:12px 0 25px}
+.ican-banner{background:#e9f4fb;border-left:10px solid #173a60;border-bottom:1px solid #adcce1;padding:13px 18px;color:#225b82;
+ font:800 17px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.045em;text-transform:uppercase;margin:24px 0 20px;break-after:avoid-page}
+.ican-banner:first-of-type{margin-top:8px}
+.practice-item{break-inside:avoid;margin:0 0 22px;border-top:5px solid #315b7a;padding:0 0 6px}
+.practice-item-head{display:flex;align-items:flex-start;gap:14px;margin:0 0 14px;padding:14px 0 7px;background:#fff}
+.practice-number{flex:0 0 auto;font:800 22px/1.2 Arial,Helvetica,sans-serif;color:#173a60}
+.practice-question-title{flex:1;padding-top:2px;font:15px/1.4 Arial,Helvetica,sans-serif}
+.practice-q-controls{display:flex;align-items:center;gap:8px;margin-left:auto;flex:0 0 auto}
+.practice-q-controls button{display:inline-flex;align-items:center;justify-content:center;width:38px;height:37px;
+ border:1px solid #9cbbd0;background:#fff;color:#173a60;border-radius:7px;padding:6px;cursor:pointer}
+.practice-q-controls button svg{width:22px;height:22px;display:block}
+.practice-q-controls button:hover,.practice-q-controls button:focus-visible{background:#e7f1f9}
+.practice-q-controls button[aria-pressed="true"]{background:#dcebf6}
+.practice-q-controls button:disabled{opacity:.45;cursor:not-allowed}
+.practice-question-html{font:17px/1.55 'Times New Roman',Times,serif;color:#242424}
+.practice-question-html p{margin:8px 0}
+.practice-item img,.practice-item svg:not(.practice-q-controls svg){max-width:100%;height:auto}
+.practice-question-html figure.ch3-graph,.practice-question-html figure.graph-tool-window,.practice-question-html figure.graph-tool-plotted{max-width:350px!important;margin:12px auto!important}
+.practice-question-html figure.ch3-graph>svg,.practice-question-html figure.ch3-graph img,
+.practice-question-html figure.graph-tool-window img,.practice-question-html figure.graph-tool-plotted img{display:block;width:min(100%,340px)!important;height:auto!important;max-height:350px!important;margin:0 auto!important}
+.practice-solution:not([hidden]){margin:10px 0;padding:10px 15px;border-left:4px solid #6395b6;background:#f2f8fc}
+.practice-solution[hidden]{display:none!important}
+.work-space{min-height:125px;background:repeating-linear-gradient(to bottom,transparent 0 36px,#e8eef3 36px 37px)}
+.work-space-multipart{min-height:16px;background:none}
+.no-practice{color:#5c7485}
+/* Approved CPM multipart prompt layouts: one vertical writing row per part. */
+.ch03-rp-source{max-width:100%}
+.ch03-rp-source>.rp-grid,.practice-item .ch03-rp-source .rp-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+.ch03-rp-source .rp-cell{min-width:0;min-height:112px;padding:12px 2px 44px;border:0;break-inside:avoid}
+.ch03-rp-source .ch3-rp-part{display:flex;align-items:flex-start;gap:10px;min-width:0}
+.ch03-rp-source .ch3-rp-part-letter{flex:0 0 26px;font-weight:bold;line-height:1.7}
+.ch03-rp-source .ch3-rp-part-content{flex:1;min-width:0;overflow-wrap:anywhere}
+.practice-item p.rp-parts{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;margin:10px 0!important;padding:0!important}
+.practice-item p.rp-parts>span{display:block!important;min-width:0;min-height:83px;padding:9px 4px 46px;border:0;break-inside:avoid}
+.practice-item.practice-multipart-solve p.rp-parts>span{min-height:113px;padding-bottom:70px}
+.practice-item p.rp-parts>span>strong{display:inline-block;min-width:34px;color:#173a60}
+.practice-item.practice-multipart-solve .ch03-rp-source .rp-cell{min-height:113px}
+@media(max-width:640px){.worksheet{width:auto}.practice-item-head{flex-wrap:wrap}.practice-q-controls{margin-left:auto}.practice-question-title{font-size:14px}}
+@media print{
+ body.portfolio-practice{background:#fff}.print-bar,.practice-q-controls,.practice-solution{display:none!important}
+ .worksheet{width:auto;min-height:0;padding:0;margin:0;box-shadow:none}
+ .practice-item{break-inside:avoid}
+ .ican-banner{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .ch03-rp-source .rp-cell{break-inside:avoid}
+ .practice-multipart{break-inside:auto}
+}
+/* Teacher-private multi-student PDF uses these exact shared styles, not a copied template. */
+.practice-sheet{break-after:page;font-family:Arial,sans-serif;color:#193c56}
+.practice-sheet:last-of-type{break-after:auto}
+.practice-sheet>h2{font-size:14pt}
+.practice-sheet .practice-q-controls,.practice-sheet .practice-solution{display:none!important}
+.practice-sheet .practice-item{break-inside:avoid;margin:14px 0}
+.practice-sheet .work-space{min-height:75px}
+.toolbar{padding:12px;background:#e9f3f8}
+@media print{.toolbar{display:none!important}}

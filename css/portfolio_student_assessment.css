@@ -1,0 +1,25 @@
+/* Portfolio student assessment feedback: question title + signal, no displayed scores. */
+body.portfolio-assessment{font:16px/1.5 Arial,Helvetica,sans-serif}
+.document ul{padding-left:24px}.document li{margin:12px 0}
+.question{padding:10px 0 24px;margin:8px 0 12px;break-inside:avoid}
+.question-head{display:flex;align-items:center;gap:14px;margin:0 0 17px;padding:13px 0 14px;border-bottom:5px solid #315b7a}
+.question-head h2{flex:0 0 auto;font:800 22px/1.2 Arial,Helvetica,sans-serif;color:#173a60;margin:0}
+.question-prompt{flex:1;padding-top:1px}
+.question-credit{display:flex;align-items:center;margin-left:auto;flex:0 0 auto;justify-content:flex-end}
+.traffic-status{display:inline-flex;align-items:center;justify-content:center}
+.traffic-lights{display:inline-flex;align-items:center;gap:7px;background:#f8fafc;border:1px solid #bdcdd7;border-radius:9px;padding:6px 8px}
+.traffic-lights .light{display:block;width:17px;height:17px;border-radius:50%;background:#dce4e9;border:1px solid #aebfc9;box-shadow:inset 0 1px 2px #14304710}
+.traffic-status[data-status="wrong"] .light.red{background:#b93b36;border-color:#9e302c;box-shadow:0 0 0 2px #f6d5d4}
+.traffic-status[data-status="partial"] .light.yellow{background:#e1ad39;border-color:#b78419;box-shadow:0 0 0 2px #fff0c7}
+.traffic-status[data-status="correct"] .light.green{background:#258774;border-color:#1b7564;box-shadow:0 0 0 2px #c5e9dd}
+.traffic-status[data-status="unscored"] .traffic-lights{opacity:.6}
+.paper-question{font:17px/1.6 'Times New Roman',Times,serif;color:#202020}
+.paper-question .paper-instruction{font:17px/1.55 'Times New Roman',Times,serif}
+.paper-question h4{font-size:16px;margin:0 0 9px;color:#173a60}
+.paper-question p{margin:6px 0}
+.paper-math{font-size:17px;line-height:1.9;padding:4px 8px}
+.paper-part{display:inline-block;min-width:30px}
+.qc-copy{margin:12px 0 0;padding:13px 17px;border-left:4px solid #c5d8e6;background:#f4f8fb;font:15px/1.55 Arial,Helvetica,sans-serif}
+.qc-copy b{color:#235579}.qc-copy p{margin:9px 0 0}
+@media(max-width:560px){.question-head{flex-wrap:wrap;gap:8px}.question-prompt{min-width:170px}.question-credit{margin-left:auto}}
+@media print{.question{break-inside:avoid-page}.question-head{break-after:avoid-page}.traffic-lights,.light,.qc-copy{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
